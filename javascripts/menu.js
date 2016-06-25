@@ -1,6 +1,6 @@
 var menu = [
 	['就两个网页',
-	['study/HTML5/6-11/cai.html','猜拳'],
+	['demo/6-11/cai.html','猜拳'],
 	['study/HTML5/6-11/baidu.html', 'copy百度'],
 	]
 ];

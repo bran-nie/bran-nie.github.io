@@ -1,0 +1,28 @@
+body{
+	background-color:#3299cc;
+}
+
+#tishi{
+	border: 1px;
+	font-size: 30px;
+	color: blue;
+	text-align: center;
+
+}
+#biaoyu{
+	font-size: 20px;
+	color: red;
+	text-align: left;
+}
+#xuanpai{
+	text-align:center;
+	border: 2px ;
+}
+#chupai{
+	text-align:center;
+	border: 2px;
+	width: 140;
+
+}
+#reprate{
+}
