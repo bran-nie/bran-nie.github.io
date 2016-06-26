@@ -1,0 +1,95 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url("https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/skin/120.jpg");
+	background-size: cover;
+
+}
+
+#top-1{
+	height: 25px;
+	background: rgba(35, 35, 142, 0.3);
+}
+.top-font {
+	color: white;
+	font-size: 13px ;
+	margin: 10px;
+}
+#top-right{
+	float: right;
+}
+#baidu-box{
+	position: relative;
+}
+#b-left{
+	float: left;
+	width: 180px;
+	height: 300px;
+}
+#b-center{
+	position: absolute;;
+	top: 80px;
+	left: 180px;
+	right: 200px;
+	height: 200px;
+
+	display: table-cell; 
+	vertical-align:middle; 
+	text-align:center; 
+	margin: 0 auto;
+	
+}
+#b-right{
+	float: right;
+	width: 180px;
+	height: 300px;
+}
+#baidu-box img {  
+	vertical-align:middle; 
+	height: 129px;
+	width: 270px;
+	font-size: 0px;
+} 
+/*#b-form{
+	height: 40px;
+	width: 641px;
+	text-align: center;
+}*/
+#b-text{
+	height: 34px;
+	width: 537px;
+	font-size: 18px;
+}
+
+#b-su{
+	width: 104px;
+	height: 40px;
+	background:#dfdfdf;
+	cursor:pointer;
+}
+/*https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_fe6da1ec.png*/
+/*#baidu-box{ 
+	/*非IE的主流浏览器识别的垂直居中的方法 
+	display: table-cell; 
+	vertical-align:middle; 
+	/*设置水平居中
+	text-align:center; 
+	/* 针对IE的Hack 
+
+	width:500px; 
+	height:300px; 
+	border: 1px solid #000000; 
+	margin: 0 auto;
+
+} */
+
+
+/*#hehe{
+	margin: 0 auto;
+	border: 1px solid #000;
+	width: width:expression(window.screen.width - (border ) - (scroll width ) );
+	height: 300px;
+	text-align: center;
+}

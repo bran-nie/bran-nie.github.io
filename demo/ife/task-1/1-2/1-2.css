@@ -26,18 +26,18 @@ header ul li {
     text-align: center;
 	width:80px;
     display:block;
-    float:left;
+    float:left;		/**/
     padding:20px 10px;
 }
 header ul li a{
-    text-decoration:none;
+    text-decoration:none;/* 去掉链接默认的下划线 */
     color:white;
     font-size:12px;
 }
 header ul li:hover{
-	border-bottom: 1px solid red;
+	border-bottom: 1px solid red;  /*1px值的红色下划线*/
     background: #474747;
-	border-radius: 3px;
+	border-radius: 3px;/*圆角*/
 
 }
 
@@ -46,10 +46,10 @@ header ul li:hover{
 /* 主体样式 */
 div,aside{
 	display: block;
-	margin: 30px;
+	margin: 30px;		/**/
 	padding: 20px;
 	background-color: white;
-	box-shadow: 1px 1px 2px 1px #848484;
+	box-shadow: 1px 1px 2px 1px #848484;	/**/
 }
 div h2{
 	padding: 5px 0;

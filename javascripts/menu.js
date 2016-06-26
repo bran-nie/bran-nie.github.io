@@ -1,8 +1,9 @@
 var menu = [
 	['就两个网页',
-	['demo/6-11/cai.html','猜拳'],
-	['study/HTML5/6-11/baidu.html', 'copy百度'],
-    ['demo/ife/task-1/1-2/1-2.html', '网页布局']
+	['demo/learn/6-11/cai.html','猜拳'],
+	['demo/learn/6-14/baidu.html', 'copy百度'],
+    ['demo/ife/task-1/1-2/1-2.html', '网页布局'],
+    ['demo/ife/task-1/1-3/1-3.html', '三栏分局']
 	]
 ];
 var list = "";

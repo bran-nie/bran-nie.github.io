@@ -1,0 +1,60 @@
+body{
+	padding: 20px;
+}
+
+img{
+	height: 80px;
+	width: 80px;
+}
+h1, h2{
+	margin: 0px;
+}
+p{
+	text-indent: 2em;
+	line-height: 150%;
+}
+.main_wrapper{
+  margin: 0 auto;
+  padding: 20px;
+  background: #eee;
+  border: 1px solid #999;
+  overflow: auto;
+  min-width: 600px;
+}
+.d_left{
+	float: left;
+	padding: 20px;
+	width: 160px;
+	background-color: white;
+	border: 1px solid #999;
+}
+.team_logo{
+	float: left;
+}
+.team_name{
+	display: block;
+	width: 180px;
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+.d_right{
+	width: 120px;
+	float: right;
+	background-color: white;
+	border:1px solid #999;
+}
+.preson_1{
+	display: block;
+	margin: 20px;
+	background-color: white;
+	border: 1px solid #999;
+}
+
+.d_center{
+	padding: 20px;
+	margin-left: 220px;
+	margin-right: 140px; 
+	background-color: white;
+	border:1px solid #999;
+}
