@@ -5,7 +5,7 @@ var menu = [
     ['demo/ife/task-1/1-2/1-2.html', '1.网页布局'],
     ['demo/ife/task-1/1-3/1-3.html', '2.三栏分局'],
     ['demo/ife/task-1/1-4/1-4.html', '3.定位居中'],
-    ['demo/ife/task-1/1-5/1-5.html', '5.网页布局2']
+    ['demo/ife/task-1/1-5/1-5.html', '4.网页布局2']
 	]
 ];
 var list = "";
@@ -21,5 +21,5 @@ for (var i = 0; i < menu.length; i++) {
 }
 list = '<div class="menu"><dl>' + list + '</dl></div>';
 window.onload = function () {
-    document.body.innerHTML = list;
+    document.div.innerHTML = list;
 }
