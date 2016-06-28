@@ -21,5 +21,5 @@ for (var i = 0; i < menu.length; i++) {
 }
 list = '<div class="menu"><dl>' + list + '</dl></div>';
 window.onload = function () {
-    document.div.innerHTML = list;
+    document.body.innerHTML = list;
 }
