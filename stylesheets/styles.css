@@ -4,6 +4,10 @@ html, body, dl, dt, dd {
 body {
     background: #f3f5f6;
 }
+div{
+    width: 50%;
+    height: 50%;
+}
 @media only screen and (max-width: 768px){
     .menu{
         margin:0;
