@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.article{
+	width: 960px;
+	margin: 0 auto;
+	height: 800px;
+	padding: 40px;
+	font: 18px/1.5 'Microsoft YaHei';
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+}
+.section1{
+	background-image: url("lu.jpeg");
+}
+.section2{
+	background-image: url( lu1.png);
+}
+.section3{
+	background-image: url( lu.jpeg);
+}
+.title{
+	font: 32px/1.5 '微软雅黑';
+	position: relative;
+	top: 360px;
+}
+.content{
+	position: relative;
+	top: 380px;
+	color: #777;
+}
+.section1 .title{
+	color: white;
+}
+.section2 .title{
+	color: #FF8500;
+}
+.section3 .title{
+	color: #747474;
+}
