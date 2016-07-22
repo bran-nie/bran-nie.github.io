@@ -1,0 +1,56 @@
+	.dm {
+	  margin: 20px;
+	  text-align: center;
+	}
+	
+	.dm_screen {
+	  border: 1px solid rgb(229, 229, 229);
+	}
+	
+	.dm .dm_screen .dm_mask {
+	  width: 100%;
+	  height: 380px;
+	}
+	
+	.dm .dm_screen .dm_show div {
+	  font-size: 22px;
+	  line-height: 36px;
+	  font-weight: 500;
+	  color: #fff;
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	}
+	.s_txt {
+	  width: 388px;
+	  height: 34px;
+	  border-radius: 3px;
+	  border: 1px solid rgb(204, 204, 204);
+	  padding-left: 10px;
+	}
+	
+	.s_sub {
+	  border: 1px solid rgb(230, 80, 30);
+	  color: rgb(230, 80, 0);
+	  border-radius: 3px;
+	  text-align: center;
+	  padding: 0;
+	  height: 35px;
+	  line-height: 35px;
+	  font-size: 14px;
+	  width: 159px;
+	  background-color: white;
+	}
+	
+	.s_del {
+	  border: 1px solid rgb(176, 168, 165);
+	  color: rgb(176, 168, 165);
+	  border-radius: 3px;
+	  text-align: center;
+	  padding: 0;
+	  height: 35px;
+	  line-height: 35px;
+	  font-size: 14px;
+	  width: 159px;
+	  background-color: white;
+	}
