@@ -1,0 +1,48 @@
+  body{
+  	
+  }
+  .new{
+	padding: 30px;
+	margin: 100px 30% 10px;
+	min-width: 400px;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 0 20px #001;
+  }
+  
+  .new .a1:before{
+  	content: "🤗  ";
+  }
+  .new .a1{
+  	font-size: 20px;
+  	font-weight: bold;
+  	line-height: 1.4em;
+  	text-align: center;
+  }
+
+
+  .new .a2:before{
+  	content: "--  ";
+  }
+  .new .a2{
+  	font-size: 16px;
+  	text-align: right;
+  }
+
+  .btn-right{
+  	float: right;
+  }
+
+
+
+
+  .about-me{
+  	text-align: center;
+  	color: white;
+  }
+  .about-me a{
+  	text-decoration:none;
+  	color: white;
+  }
+
+
