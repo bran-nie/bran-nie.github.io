@@ -1,5 +1,64 @@
-body{
+  *{
+  	padding: 0;
+  	margin: 0;
+  }
+  body{
+	text-align: center;
+	color: white;
+	font-size: 25px;
 	background-color: #111;
 	background-repeat: no-repeat;
 	background-position: center;
-}
+  }
+
+  li{
+  	list-style-type: none;
+  }
+
+  .weather{
+   	margin: 80px 100px 0;
+  	background-color: rgba(44,44,44,0.7);
+  	box-shadow: 0 0 1px #111;
+  }
+  
+  .w-city{
+  	float: left;
+  	width: 300px;
+  	font-size: 40px;
+  }
+  .w-day{
+  	float: left;
+  	font-size: 25px;
+  }
+  
+  .w-info{
+  	float: right;
+  }
+  
+
+  .w-life{
+  	text-align: left;
+  	clear: both;
+    color: #007fff;
+  }
+  .w-future{
+    font-size: 30px;
+  }
+
+  .w-future-ul-li{
+    font-size: 15px;
+  	margin-left:50px;
+  	float: left;
+  }
+  .w-future ul li ul li{}
+  .no2{
+  	clear: both;
+  }
+
+
+
+
+
+
+
+
