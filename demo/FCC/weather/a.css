@@ -54,7 +54,15 @@
   .no2{
   	clear: both;
   }
-
+  hr{
+    width: 70%;
+    margin-left: 15%;
+    color: #111;
+  }
+  a{
+    color: white;
+    text-decoration:none;
+  }
 
 
 
