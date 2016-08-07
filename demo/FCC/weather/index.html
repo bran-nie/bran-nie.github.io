@@ -4,38 +4,58 @@
 	<title>Weather NPC</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="a.css">
+	<link rel="stylesheet" href="nav.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+
 	
 	<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
 	<script src='http://pv.sohu.com/cityjson?ie=utf-8'></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
     <script type="text/javascript" src='a.js'></script>
 </head>
-<body>
+<body class="no-js">
+  <nav id="topNav">
+        	<ul>
+            	<li><a href="http://zhinian.info" title="Home">Home</a></li>
+            	<li><a href="#" title="Meau">Meau</a></li>
+            	<li><a href="#" title="about" id="about">About</a></li>
+          		<li><a href="#" title="animate" id="line">本页面动画</a>
+                	<ul>
+                    	<li id="line1">life的动画</li>
+                        <li id="line2">city的动画</li>
+                        <li id="line3">风吹动画3</li>
+                        <li id="line4">抖动动画4</li>
+                    </ul>        
+                </li>
+          </ul>
+        </nav>
+
   <div id="today-weather" class="weather">
     <p>Today's Weather</p> 
 	<div id="city" class="w-city">	所在城市	</div>
 	<div id="day" class="w-day">
 		<ul>
-			<li id="day1">2016-08-05</li>
-			<li id="day2">七月初三</li>
-			<li id="day3">星期五</li>
+			<li id="day1">今天时间</li>
+			<li id="day2">农历</li>
+			<li id="day3">星期*</li>
 		</ul>
 	</div>
 	<div id="w-info" class="w-info">
 	    <ul>
-	    		<li id="w-info1">西南风 2级</li>
-	    		<li id="w-info2">湿度: 68%</li>
-	    		<li id="w-info3">多云</li>
-	    		<li id="w-info4">30&#8451</li>
-	    		<li id="w-info5">空气质量: 优</li>
-	    		<li id="w-info6">最新发布18:00:00</li>
+	    		<li id="w-info1">风向及风力</li>
+	    		<li id="w-info2">湿度</li>
+	    		<li id="w-info3">天气</li>
+	    		<li id="w-info4">温度</li>
+	    		<li id="w-info5">空气质量</li>
+	    		<li id="w-info6">最新发布时间</li>
 	    </ul>
 	</div>
-	<div class="no1"></div>
+	<div class="clear"></div>
 	<div id="life" class="w-life">
-		life
-		<ul>
+	    <p class="life-p">life</p>
+		<ul id="life-ul">
 			<li id="life-yi">穿衣:</li>
 			<li id="life-kt">空调:</li>
 			<li id="life-yd">运动:</li>
@@ -50,13 +70,9 @@
 		</ul>
 	</div>
 
-	<div class="no2"></div>
-	<br><br>
-	<hr>
-	<br>
-	<p>By  &nbsp&nbsp <a href="http://zhinian.info">执念</a></p>
-
-
+	<div class="clear"></div>	<br>	<br>
+	<hr>	<br>
+	<p>By  &nbsp&nbsp <a href="http://zhinian.info">执念</a></p><br>
 
   </div>
   
