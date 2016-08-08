@@ -11,7 +11,7 @@
 
     //本js所用的获取ip地址, 用的是新浪的API: http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js  
     //获取ip地址所在的城市, 且把请求到的json数据赋值给httpJuhedata,  
-    var httpJuheData = "http://op.juhe.cn/onebox/weather/query?cityname=" + remote_ip_info.city + "&dtype=&key=5d412953f54ff67054afd1e1f165dbf5";
+    var httpJuheData = "http://op.juhe.cn/onebox/weather/query?cityname=" + remote_ip_info.city + "&dtype=&key=5d412953f54ff67054afd1e1f165dbf5&callback=?";
 
     //读取从服务器获取的json数据, 
   	$.getJSON(httpJuheData, function(json){
