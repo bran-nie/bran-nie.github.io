@@ -29,7 +29,7 @@
   .w-city{
   	float: left;       /* 浮动, 使几个div 在同一行, */
   	width: 150px;
-  	font-size: 40px;
+  	font-size: 5px;
     position:absolute;   /* 为了jquery 中的 $(selector).animate({params},speed,callback);*/
   }
   .w-day{
