@@ -9,8 +9,9 @@
     ];
     var num = ["一","二","三","四","五","六","七","八","九","十"];
 
-    var str = "";
+/*    
 
+    var str = "";
     var aqiData1 = aqiData.filter(function(val){
       return val[1] >60;            //val[1] 是指的 aqiData[][1]的值;
                     //filter方法, filter 方法用来迭代一个数组，并且按给出的条件过滤出符合的元素。
@@ -28,7 +29,9 @@
       str += "<li>第" + num[i] + "名： " + aqiData1[i][0] + ", " + aqiData1[i][1] + "</li>";
     }
     document.getElementById("aqi-list").innerHTML = str;
+*/
  /* 
+    //简写方式
     var str = "";
 
     aqiData.filter(function(val){return val[1] > 60 })
@@ -38,13 +41,21 @@
            });
     document.getElementById("aqi-list").innerHTML = str;
 */
-
-
-
-
-
-
-
+        var arr1 = [];
+        for ( var i = 0; i < aqiData.length; i++) {
+          if(aqiData[i][1]>60){
+            arr1.push(aqiData[i]);
+          }
+        }
+        arr1.sort(function(a,b){
+            return b[1] - a[1];
+        });
+        var str = "";
+        for (var j = 0; j < arr1.length; j++) {
+          str += "<li>第" + num[j] + "名： " + arr1[j][0] + ", " + arr1[j][1] + "</li>";
+        }
+        
+        document.getElementById("aqi-list").innerHTML = str;
 
 
   }

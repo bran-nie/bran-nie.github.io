@@ -1,7 +1,10 @@
 body{
 	background-color:#3299cc;
 }
-
+img{
+	width: 168px;
+	height: 133px;
+}
 #tishi{
 	border: 1px;
 	font-size: 30px;

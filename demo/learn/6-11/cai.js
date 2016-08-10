@@ -115,8 +115,8 @@ window.onload=function(){
 	function ciShu(){
 		var ci = document.getElementById("cishu");
 		var CI = document.getElementById("CISHU");
-		cishu.innerText = wincishu;
-		CI.innerText = allcishu;
+		cishu.innerHTML = wincishu;
+		CI.innerHTML = allcishu;
 	}
 	var r = document.getElementById("repeate");
 	r.onclick = function(){
