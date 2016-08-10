@@ -1,7 +1,7 @@
 window.onload=function(){
 
 	var wincishu=0;
-	var allcishu=1;
+	var allcishu=0;
 
 	var jiandao = document.getElementById('jiandao');
 	jiandao.onclick=function() {
@@ -9,8 +9,9 @@ window.onload=function(){
 		"https://raw.githubusercontent.com/baidu-ife/ife/master/2015_summer/asset/jiandao.jpg";
 		xuanze(suiji());
 		setSpan(panduan());
-		ciShu();
 		allcishu+=1;
+		ciShu();
+		
 
 	}
 
@@ -19,9 +20,9 @@ window.onload=function(){
 		document.getElementById("my-result").src = 
 		"https://raw.githubusercontent.com/baidu-ife/ife/master/2015_summer/asset/shitou.jpg";
 		xuanze(suiji());
-		setSpan(panduan());
-		ciShu();
+		setSpan(panduan());		
 		allcishu+=1;
+		ciShu();
 	}
 
 	var bu = document.getElementById('bu');
@@ -30,8 +31,8 @@ window.onload=function(){
 		"https://raw.githubusercontent.com/baidu-ife/ife/master/2015_summer/asset/bu.jpg";
 		xuanze(suiji());
 		setSpan(panduan());
-		ciShu();
 		allcishu+=1;
+		ciShu();
 	}
 
 	function suiji(){
@@ -121,7 +122,7 @@ window.onload=function(){
 	var r = document.getElementById("repeate");
 	r.onclick = function(){
 		wincishu=0;
-		allcishu=1;
+		allcishu=0;
 		ciShu();
 	}
 }
