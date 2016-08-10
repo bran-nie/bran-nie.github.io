@@ -27,10 +27,8 @@
     for (var i = 0; i < aqiData1.length; i++) {
       str += "<li>第" + num[i] + "名： " + aqiData1[i][0] + ", " + aqiData1[i][1] + "</li>";
     }
-
-
- /*   document.getElementById("aqi-list").innerHTML = str;
-  
+    document.getElementById("aqi-list").innerHTML = str;
+ /* 
     var str = "";
 
     aqiData.filter(function(val){return val[1] > 60 })
