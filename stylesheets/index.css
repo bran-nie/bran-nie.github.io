@@ -11,6 +11,11 @@
   	border-radius: 50%;
   	margin-left: 10px;
   }
+  header nav .day{
+    margin-left: 300px;
+    color: #9932cd;
+    font-size: 20px;
+  }
   header nav ul{
     position:absolute; /* 相对定位 */
     top:0;
@@ -52,16 +57,16 @@
   }
 
   .section1{
-	background-image: url("images/lu.jpeg");
+	background-image: url("http://zhinian.info/images/lu.jpeg");
   }
   .section2{
-	background-image: url( images/pc.jpg);
+	background-image: url( "http://zhinian.info/images/pc.jpg");
   }
   .section3{
-  	background-image:url(images/future.jpeg);
+  	background-image:url(http://zhinian.info/images/future.jpeg);
   }
   .section4{
-	background-image: url(images/bir.jpg);
+	background-image: url(http://zhinian.info/images/bir.jpg);
   }
 
   .title{
@@ -99,7 +104,7 @@
 	font-size: 40px;
   }
   .section2 .c-2{
-    margin-left: 20px; 	
+    margin-left: 0px; 	
     top: 80px;
   }
  
@@ -111,13 +116,16 @@
 
 /*  ---------work 部分---------------*/
   .my-work-all{
-  	margin: 20px 50px 0 0;
+    margin: 30px 0 0 0;
+    width: 100%;
   	position: absolute;
+    padding: 0;
   }
   .my-works{
   	display:inline-block;
   	position: relative;
-  	margin: 10px 10px;
+  	margin: 5px 0 5px -20px ;
+    opacity: 0.6;
   }
   .my-work-mask {   /* 相当于是一个遮罩层 */
     width: 320px;
