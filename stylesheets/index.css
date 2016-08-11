@@ -52,16 +52,16 @@
   }
 
   .section1{
-	background-image: url("lu.jpeg");
+	background-image: url("images/lu.jpeg");
   }
   .section2{
-	background-image: url( pc.jpg);
+	background-image: url( images/pc.jpg);
   }
   .section3{
-  	background-image:url(future.jpeg);
+  	background-image:url(images/future.jpeg);
   }
   .section4{
-	background-image: url(bir.jpg);
+	background-image: url(images/bir.jpg);
   }
 
   .title{
