@@ -51,7 +51,7 @@
     padding: 80px;
     font: 18px/1.5 'Microsoft YaHei';
     background-repeat: no-repeat;       /* 背景图片不重复 */
-            /* 相对固定 */
+    /*background-attachment: fixed;        /* 相对固定 */
     background-position: center center;   /* 对称 */
     background-size: cover;           /* 平铺 */
   }
@@ -74,7 +74,7 @@
   position: relative;
   top: 100px;
   text-align: center; 
-    text-shadow: 2px 2px 10px #000;
+  text-shadow: 2px 2px 10px #000;
   }
   .content{
   position: relative;
@@ -167,14 +167,13 @@
     padding: 12px;
   }
 
-  .help{
-    background-color: #3299cc;  
+  .help{  
     color: #32cd32;
     font-size: 16px;
     text-align: center;
 
   }
-/*底部***************************************************************************************/
+/*************************底部************************************************/
 
 footer{
     width:100%;
