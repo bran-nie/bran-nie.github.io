@@ -14,8 +14,7 @@ window.onload = function() {
         var context = canvas.getContext("2d");    
         context.drawImage(image, 0, 0);    
         var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);    
-        alert(canvasData.width.toString());    
-        alert(canvasData.height.toString());    
+           
             
         // gray filter    
         for ( var x = 0; x < canvasData.width; x++) {    
@@ -28,7 +27,7 @@ window.onload = function() {
                 var b = canvasData.data[idx + 2];    
                     
                 // calculate gray scale value    
-                var gray = .299 * r + .587 * g + .114 * b;    
+                var gray = (r*30 + g*59 +b*11 +50)/100;    
                     
                 // assign gray scale value    
                 canvasData.data[idx + 0] = gray; // Red channel    
@@ -37,12 +36,13 @@ window.onload = function() {
                 canvasData.data[idx + 3] = 255; // Alpha channel    
                     
                 // add black border    
-                if(x < 8 || y < 8 || x > (canvasData.width - 8) || y > (canvasData.height - 8))     
+               /* if(x < 8 || y < 8 || x > (canvasData.width - 8) || y > (canvasData.height - 8))     
                 {    
                     canvasData.data[idx + 0] = 0;    
                     canvasData.data[idx + 1] = 0;    
                     canvasData.data[idx + 2] = 0;    
-                }    
+                }
+                */    
             }    
         }    
         context.putImageData(canvasData, 0, 0); // at coords 0,0    
