@@ -11,7 +11,7 @@
     var imgData = ctx.getImageData(0, 0, c.width, c.height);
     for (var i = 0; i < imgData.data.length; i+=4) {
     	imgData.data[i] = 255 - imgData[i];
-    	imgData.data[i+1] = 255 - imgData[+1];
+    	imgData.data[i+1] = 255 - imgData[i+1];
     	imgData.data[i+2] = 255 - imgData[i+2];
     	imgData.data[i+3] = 255;
     }
