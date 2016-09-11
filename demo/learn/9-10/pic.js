@@ -10,12 +10,12 @@
 
     var imgData = ctx.getImageData(0, 0, c.width, c.height);
     for (var i = 0; i < imgData.data.length; i+=4) {
-    	var r = imgData[i];
-      var g = imgData[i+1];
-      var b = imgData[i+2];
+    	var r = imgData.data[i];
+      var g = imgData.data[i+1];
+      var b = imgData.data[i+2];
       var gray = (r*30 + g*59 +b*11 +50)/100;
-      imgData[i] = imgData[i+1] = imgData[i+2] = gray;
-      imgData[i+3] = 255;
+      imgData.data[i] = imgData.data[i+1] = imgData.data[i+2] = gray;
+      imgData.data[i+3] = 255;
     }
 
     ctx.putImageData(imgData, 0, 0);

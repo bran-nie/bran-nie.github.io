@@ -12,7 +12,7 @@ window.onload = function() {
             
         // get 2D render object    
         var context = canvas.getContext("2d");    
-        context.drawImage(image, 0, 0);    
+        context.drawImage(image, 0, 0, canvas.width, canvas.height);    
         var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);    
            
             
