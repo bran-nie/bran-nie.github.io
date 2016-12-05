@@ -6,56 +6,41 @@
     <entry>
       <title><![CDATA[Fcc]]></title>
       <url>http://yoursite.com/2016/12/05/Fcc-1/</url>
-      <content type="html"><![CDATA[<h1 id="第二个Fcc的"><a href="#第二个Fcc的" class="headerlink" title="第二个Fcc的"></a>第二个Fcc的</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params">sort</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">0</span>;</div><div class="line">  a=<span class="number">111</span>;</div><div class="line">  <span class="keyword">return</span> a;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-]]></content>
+      <content type="html"><![CDATA[第二个Fcc的]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[Write]]></title>
       <url>http://yoursite.com/2016/12/04/Writing/</url>
-      <content type="html"><![CDATA[<h1 id="Hexo的坑还是蛮多蛮多的"><a href="#Hexo的坑还是蛮多蛮多的" class="headerlink" title="Hexo的坑还是蛮多蛮多的"></a>Hexo的坑还是蛮多蛮多的</h1><p>markdown</p>
-]]></content>
+      <content type="html"><![CDATA[Hexo的坑还是蛮多蛮多的markdown]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[Fcc]]></title>
       <url>http://yoursite.com/2016/12/04/Fcc/</url>
-      <content type="html"><![CDATA[<h1 id="这是一个"><a href="#这是一个" class="headerlink" title="这是一个"></a>这是一个</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"Fcc"</span></div></pre></td></tr></table></figure>
-]]></content>
+      <content type="html"><![CDATA[这是一个]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[Hello World]]></title>
       <url>http://yoursite.com/2016/12/04/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
+      <content type="html"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post More info: Writing Run server More info: Server Generate static files More info: Generating Deploy to remote sites More info: Deployment]]></content>
     </entry>
     
   
   
-    
-    <entry>
-      <title><![CDATA[三大究极问题之一:  我是谁?]]></title>
-      <url>http://yoursite.com/about/index.html</url>
-
-      <content type="html"><![CDATA[路还长着呢Learn hexo 标题?]]></content>
-
-    </entry>
     
     <entry>
       <title></title>
       <url>http://yoursite.com/README.html</url>
-
       <content type="html"><![CDATA[欢迎点击查看我的博客]]></content>
+
+    </entry>
+    
+    <entry>
+      <title><![CDATA[三大究极问题之一:  我是谁?]]></title>
+      <url>http://yoursite.com/about/index.html</url>
+      <content type="html"><![CDATA[路还长着呢Learn hexo 标题?]]></content>
 
     </entry>
     
