@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>zhinian_Blog</title>
+  <subtitle>初行翼翼, 欲展翅飞翔</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-12-05T09:18:30.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>鹏程</name>
+    <email>1185367347@qq.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fcc</title>
+    <link href="http://yoursite.com/2016/12/05/Fcc-1/"/>
+    <id>http://yoursite.com/2016/12/05/Fcc-1/</id>
+    <published>2016-12-04T16:07:01.000Z</published>
+    <updated>2016-12-05T09:18:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="第二个Fcc的"><a href="#第二个Fcc的" class="headerlink" title="第二个Fcc的"></a>第二个Fcc的</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params">sort</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">0</span>;</div><div class="line">  a=<span class="number">111</span>;</div><div class="line">  <span class="keyword">return</span> a;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;第二个Fcc的&quot;&gt;&lt;a href=&quot;#第二个Fcc的&quot; class=&quot;headerlink&quot; title=&quot;第二个Fcc的&quot;&gt;&lt;/a&gt;第二个Fcc的&lt;/h1&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c
+    
+    </summary>
+    
+      <category term="Fcc" scheme="http://yoursite.com/categories/Fcc/"/>
+    
+    
+      <category term="Fcc 闯关" scheme="http://yoursite.com/tags/Fcc-%E9%97%AF%E5%85%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Write</title>
+    <link href="http://yoursite.com/2016/12/04/Writing/"/>
+    <id>http://yoursite.com/2016/12/04/Writing/</id>
+    <published>2016-12-04T15:56:22.000Z</published>
+    <updated>2016-12-04T16:03:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Hexo的坑还是蛮多蛮多的"><a href="#Hexo的坑还是蛮多蛮多的" class="headerlink" title="Hexo的坑还是蛮多蛮多的"></a>Hexo的坑还是蛮多蛮多的</h1><p>markdown</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Hexo的坑还是蛮多蛮多的&quot;&gt;&lt;a href=&quot;#Hexo的坑还是蛮多蛮多的&quot; class=&quot;headerlink&quot; title=&quot;Hexo的坑还是蛮多蛮多的&quot;&gt;&lt;/a&gt;Hexo的坑还是蛮多蛮多的&lt;/h1&gt;&lt;p&gt;markdown&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fcc 须知</title>
+    <link href="http://yoursite.com/2016/12/04/Fcc/"/>
+    <id>http://yoursite.com/2016/12/04/Fcc/</id>
+    <published>2016-12-04T15:06:15.000Z</published>
+    <updated>2016-12-05T09:22:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="这是一个"><a href="#这是一个" class="headerlink" title="这是一个"></a>这是一个</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"Fcc"</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;这是一个&quot;&gt;&lt;a href=&quot;#这是一个&quot; class=&quot;headerlink&quot; title=&quot;这是一个&quot;&gt;&lt;/a&gt;这是一个&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre
+    
+    </summary>
+    
+      <category term="Fcc" scheme="http://yoursite.com/categories/Fcc/"/>
+    
+    
+      <category term="Fcc 闯关" scheme="http://yoursite.com/tags/Fcc-%E9%97%AF%E5%85%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2016/12/04/hello-world/"/>
+    <id>http://yoursite.com/2016/12/04/hello-world/</id>
+    <published>2016-12-04T07:57:31.000Z</published>
+    <updated>2016-12-05T04:55:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
