@@ -1,0 +1,1 @@
+[欢迎点击查看我的博客](http://blog.zhinian.info)

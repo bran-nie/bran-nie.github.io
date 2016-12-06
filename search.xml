@@ -31,13 +31,6 @@
   
     
     <entry>
-      <title></title>
-      <url>http://blog.zhinian.info/README.html</url>
-      <content type="html"><![CDATA[欢迎点击查看我的博客]]></content>
-
-    </entry>
-    
-    <entry>
       <title><![CDATA[404 Not Found: 该网页无法显示]]></title>
       <url>http://blog.zhinian.info//404.html</url>
       <content type="html"><![CDATA[找不到啦 点击左侧头像吧]]></content>
@@ -45,16 +38,16 @@
     </entry>
     
     <entry>
-      <title><![CDATA[三大究极问题之一:  我是谁?]]></title>
-      <url>http://blog.zhinian.info/about/index.html</url>
-      <content type="html"><![CDATA[路还长着呢Learn hexo 标题?]]></content>
+      <title><![CDATA[tags]]></title>
+      <url>http://blog.zhinian.info/tags/index.html</url>
+      <content type="html"></content>
 
     </entry>
     
     <entry>
-      <title><![CDATA[tags]]></title>
-      <url>http://blog.zhinian.info/tags/index.html</url>
-      <content type="html"></content>
+      <title><![CDATA[三大究极问题之一:  我是谁?]]></title>
+      <url>http://blog.zhinian.info/about/index.html</url>
+      <content type="html"><![CDATA[路还长着呢Learn hexo 标题?]]></content>
 
     </entry>
     
