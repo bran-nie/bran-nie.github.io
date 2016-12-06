@@ -5,25 +5,25 @@
     
     <entry>
       <title><![CDATA[Fcc]]></title>
-      <url>http://yoursite.com/2016/12/05/Fcc-1/</url>
+      <url>http://blog.zhinian.info/2016/12/05/Fcc-1/</url>
       <content type="html"><![CDATA[第二个Fcc的]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[Write]]></title>
-      <url>http://yoursite.com/2016/12/04/Writing/</url>
+      <url>http://blog.zhinian.info/2016/12/04/Writing/</url>
       <content type="html"><![CDATA[Hexo的坑还是蛮多蛮多的markdown]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[Fcc 须知]]></title>
-      <url>http://yoursite.com/2016/12/04/Fcc/</url>
-      <content type="html"><![CDATA[这是一个]]></content>
+      <url>http://blog.zhinian.info/2016/12/04/Fcc/</url>
+      <content type="html"><![CDATA[欢迎来到Fcc 闯关题 解析这里有什么 (⊙o⊙)哦 AAA啊 AAA]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>http://yoursite.com/2016/12/04/hello-world/</url>
+      <url>http://blog.zhinian.info/2016/12/04/hello-world/</url>
       <content type="html"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post More info: Writing Run server More info: Server Generate static files More info: Generating Deploy to remote sites More info: Deployment]]></content>
     </entry>
     
@@ -32,15 +32,22 @@
     
     <entry>
       <title></title>
-      <url>http://yoursite.com/README.html</url>
+      <url>http://blog.zhinian.info/README.html</url>
       <content type="html"><![CDATA[欢迎点击查看我的博客]]></content>
 
     </entry>
     
     <entry>
       <title><![CDATA[三大究极问题之一:  我是谁?]]></title>
-      <url>http://yoursite.com/about/index.html</url>
+      <url>http://blog.zhinian.info/about/index.html</url>
       <content type="html"><![CDATA[路还长着呢Learn hexo 标题?]]></content>
+
+    </entry>
+    
+    <entry>
+      <title><![CDATA[404 Not Found: 该网页无法显示]]></title>
+      <url>http://blog.zhinian.info//404.html</url>
+      <content type="html"><![CDATA[找不到啦 点击左侧头像吧]]></content>
 
     </entry>
     
