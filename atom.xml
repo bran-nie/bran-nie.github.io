@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.zhinian.info/"/>
-  <updated>2016-12-05T09:18:30.000Z</updated>
+  <updated>2016-12-06T09:52:52.000Z</updated>
   <id>http://blog.zhinian.info/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.zhinian.info/2016/12/05/Fcc-1/"/>
     <id>http://blog.zhinian.info/2016/12/05/Fcc-1/</id>
     <published>2016-12-04T16:07:01.000Z</published>
-    <updated>2016-12-05T09:18:30.000Z</updated>
+    <updated>2016-12-06T09:52:52.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="第二个Fcc的"><a href="#第二个Fcc的" class="headerlink" title="第二个Fcc的"></a>第二个Fcc的</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params">sort</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">0</span>;</div><div class="line">  a=<span class="number">111</span>;</div><div class="line">  <span class="keyword">return</span> a;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 ]]></content>
@@ -43,7 +43,7 @@
     <link href="http://blog.zhinian.info/2016/12/04/Writing/"/>
     <id>http://blog.zhinian.info/2016/12/04/Writing/</id>
     <published>2016-12-04T15:56:22.000Z</published>
-    <updated>2016-12-04T16:03:03.000Z</updated>
+    <updated>2016-12-06T09:38:49.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Hexo的坑还是蛮多蛮多的"><a href="#Hexo的坑还是蛮多蛮多的" class="headerlink" title="Hexo的坑还是蛮多蛮多的"></a>Hexo的坑还是蛮多蛮多的</h1><p>markdown</p>
 ]]></content>
@@ -65,7 +65,7 @@
     <link href="http://blog.zhinian.info/2016/12/04/Fcc/"/>
     <id>http://blog.zhinian.info/2016/12/04/Fcc/</id>
     <published>2016-12-04T15:06:15.000Z</published>
-    <updated>2016-12-06T01:24:14.000Z</updated>
+    <updated>2016-12-06T09:34:18.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="欢迎来到Fcc-闯关题-解析"><a href="#欢迎来到Fcc-闯关题-解析" class="headerlink" title="欢迎来到Fcc 闯关题 解析"></a>欢迎来到Fcc 闯关题 解析</h1><h2 id="这里有什么"><a href="#这里有什么" class="headerlink" title="这里有什么"></a>这里有什么</h2><blockquote>
 <p>(⊙o⊙)哦</p>
