@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.zhinian.info/"/>
-  <updated>2016-12-06T09:52:52.000Z</updated>
+  <updated>2016-12-07T06:21:55.000Z</updated>
   <id>http://blog.zhinian.info/</id>
   
   <author>
@@ -16,18 +16,47 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Fcc</title>
+    <title>Fcc --- Steamroller</title>
     <link href="http://blog.zhinian.info/2016/12/05/Fcc-1/"/>
     <id>http://blog.zhinian.info/2016/12/05/Fcc-1/</id>
     <published>2016-12-04T16:07:01.000Z</published>
-    <updated>2016-12-06T09:52:52.000Z</updated>
+    <updated>2016-12-07T06:21:55.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="第二个Fcc的"><a href="#第二个Fcc的" class="headerlink" title="第二个Fcc的"></a>第二个Fcc的</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params">sort</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">0</span>;</div><div class="line">  a=<span class="number">111</span>;</div><div class="line">  <span class="keyword">return</span> a;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
+<p>对嵌套的数组进行<code>扁平化处理</code>。你必须考虑到不同层级的嵌套。如果你被卡住了，</p>
+<p>​     记得开大招 <code>Read-Search-Ask</code>。尝试与他人结伴编程、编写你自己的代码。</p>
+<p>提供的资源: </p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="external">Array.isArray()</a></p>
+</blockquote>
+<h1 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h1><a id="more"></a>
+<h2 id="理解题意"><a href="#理解题意" class="headerlink" title="理解题意"></a>理解题意</h2><blockquote>
+<p>何为扁平化处理.   </p>
+<ul>
+<li>如<code>steamroller([[[&quot;a&quot;]], [[&quot;b&quot;]]])</code> 应该返回 <code>[&quot;a&quot;, &quot;b&quot;]</code>  就是把数组中空的值, 嵌套的值等等最终返回一个只有一层的数组.   既完成了Fcc的挑战. </li>
+</ul>
+</blockquote>
+<h2 id="前期思考"><a href="#前期思考" class="headerlink" title="前期思考"></a>前期思考</h2><ol>
+<li><code>数组遍历</code>,   需要使用什么方法.  不止一个哦.   除了<code>for循环</code></li>
+<li><code>数组判断</code>,<ul>
+<li>是数组,  要继续扁平化</li>
+<li>不是数组, 添加到结果中</li>
+</ul>
+</li>
+<li>​</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> newArr = [];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">steamroller</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;arr.length; i++)&#123;</div><div class="line">  	<span class="keyword">if</span>(<span class="built_in">Array</span>.isArray(arr[i]))</div><div class="line">      steamroller(arr[i]);</div><div class="line">    <span class="keyword">else</span></div><div class="line">      newArr.push(arr[i]);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> newArr;</div><div class="line">&#125;</div><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">steamroller</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="comment">// I'm a steamroller, baby</span></div><div class="line">  <span class="keyword">var</span> result = [];</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">steam</span>(<span class="params">ifArr</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="built_in">Array</span>.isArray(ifArr)) </div><div class="line">      <span class="keyword">return</span> ifArr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> steam(val);</div><div class="line">      &#125;);</div><div class="line">    result.push(ifArr);</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  steam(arr);</div><div class="line">  </div><div class="line">  </div><div class="line">  <span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"></div><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div><div class="line">steamroller([[[<span class="string">"a"</span>]], [[<span class="string">"b"</span>]]]);</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;第二个Fcc的&quot;&gt;&lt;a href=&quot;#第二个Fcc的&quot; class=&quot;headerlink&quot; title=&quot;第二个Fcc的&quot;&gt;&lt;/a&gt;第二个Fcc的&lt;/h1&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c
+      &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;对嵌套的数组进行&lt;code&gt;扁平化处理&lt;/code&gt;。你必须考虑到不同层级的嵌套。如果你被卡住了，&lt;/p&gt;
+&lt;p&gt;​     记得开大招 &lt;code&gt;Read-Search-Ask&lt;/code&gt;。尝试与他人结伴编程、编写你自己的代码。&lt;/p&gt;
+&lt;p&gt;提供的资源: &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray&quot;&gt;Array.isArray()&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;题目解析&quot;&gt;&lt;a href=&quot;#题目解析&quot; class=&quot;headerlink&quot; title=&quot;题目解析&quot;&gt;&lt;/a&gt;题目解析&lt;/h1&gt;
     
     </summary>
     
@@ -65,17 +94,72 @@
     <link href="http://blog.zhinian.info/2016/12/04/Fcc/"/>
     <id>http://blog.zhinian.info/2016/12/04/Fcc/</id>
     <published>2016-12-04T15:06:15.000Z</published>
-    <updated>2016-12-06T09:34:18.000Z</updated>
+    <updated>2016-12-07T06:19:39.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="欢迎来到Fcc-闯关题-解析"><a href="#欢迎来到Fcc-闯关题-解析" class="headerlink" title="欢迎来到Fcc 闯关题 解析"></a>欢迎来到Fcc 闯关题 解析</h1><h2 id="这里有什么"><a href="#这里有什么" class="headerlink" title="这里有什么"></a>这里有什么</h2><blockquote>
-<p>(⊙o⊙)哦</p>
+    <content type="html"><![CDATA[<h1 id="欢迎来到Fcc-闯关题-解析"><a href="#欢迎来到Fcc-闯关题-解析" class="headerlink" title="欢迎来到Fcc 闯关题 解析"></a>欢迎来到Fcc 闯关题 解析</h1><h2 id="关于Fcc-以及它是何方神圣-gt-lt"><a href="#关于Fcc-以及它是何方神圣-gt-lt" class="headerlink" title="关于Fcc 以及它是何方神圣          &gt;.&lt;"></a>关于Fcc 以及它是何方神圣          &gt;.&lt;</h2><blockquote>
+<p>FreeCodeCamp 即是它的全称,  </p>
+<p>官方英文网址: <a href="https://www.freecodecamp.com/" target="_blank" rel="external">https://www.freecodecamp.com/</a>    </p>
+<p>中文翻译官网: <a href="https://www.freecodecamp.cn/" target="_blank" rel="external">https://www.freecodecamp.cn/</a></p>
 </blockquote>
-<p>AAA啊 </p>
-<h3 id="AAA"><a href="#AAA" class="headerlink" title="AAA"></a>AAA</h3>]]></content>
+<a id="more"></a>
+<ol>
+<li>FreeCodeCamp 是什么?<ul>
+<li>我们是一个帮助你学习编程的开源社区。</li>
+</ul>
+</li>
+<li>FreeCodeCamp如何帮助我学习编程？<ul>
+<li>你可以通过我们的自学编程挑战，构建项目，获得证书，还可以参加在线下活动。</li>
+</ul>
+</li>
+<li>FreeCodeCamp 可以帮我获得一份软件工程师的工作吗？<ul>
+<li>可以，数以百计的人在完成我们的编程挑战后获得了软件工程师的工作。</li>
+</ul>
+</li>
+<li>FreeCodeCamp 可以提供什么证书<ul>
+<li>FreeCodeCamp 提供4个认证证书，它们是：前端开发认证、数据可视化认证、后端开发认证、全栈开发认证。</li>
+</ul>
+</li>
+<li>FreeCodeCamp 彻底免费吗？<ul>
+<li>是的，我们的课程、项目、证书全都是免费的。</li>
+</ul>
+</li>
+</ol>
+<p>以上信息来源于   <a href="https://www.freecodecamp.cn/about#common-question" target="_blank" rel="external">FCC常见问题</a></p>
+<p>我只是搬运工 :)   还只搬了一部分, 详情点上面链接.   捂脸</p>
+<h2 id="这里有什么"><a href="#这里有什么" class="headerlink" title="这里有什么"></a>这里有什么</h2><blockquote>
+<p>(⊙o⊙)    🤗</p>
+</blockquote>
+<ol>
+<li>这里是有一些<a href="https://www.freecodecamp.cn" target="_blank" rel="external">FCC</a>上的题目解析, 有我当时遇到的问题, 也有其他FCC同学遇到的问题. 而这里, 我集中的放在一起, 是为了<code>有需求查看时, 更好更快的search</code>.</li>
+<li>不敢说是多好的,  毕竟我也是前端小白一个.   只能说<code>大家一起学习, 一起进步</code>.   对于前端, 无论是工作需求还是兴趣爱好, 都是一个有趣, 有成就, 有收获的事情.</li>
+</ol>
+<h2 id="如何使用这个FCC闯关题-解析"><a href="#如何使用这个FCC闯关题-解析" class="headerlink" title="如何使用这个FCC闯关题 解析"></a>如何使用这个FCC闯关题 解析</h2><blockquote>
+<ol>
+<li>​    首先, 自己要有 <code>思考</code> 过准备search的题,  确实发现自己的思路还没有头绪,  或者, 是觉得自己的思路并不是最好的,  review 一下别的伙伴们的想法. 进而提升自己. </li>
+</ol>
+<p>​</p>
+<ol>
+<li>​        其次, 我也尽量用自己的语言组织好, 引导好,     <code>授人以鱼不如授人以渔</code>.   我更希望的是, 当你看完以后,  举一反三都不是问题~   找到比我的解法还要好,   十分欢迎,  你可以通过点击左边侧栏的github, 进入issues提交, 以及左侧边栏的邮箱,  QQ , 都是可以联系我, 我将会更新那道题的最优方案~     并注明你的署名与版权.</li>
+</ol>
+<p>​</p>
+<ol>
+<li>​       如果在查看解析的时候, 还是遇到了问题, 除了上面 <code>2</code> 中联系方式, 还可以在文章<code>最下面评论</code>即可.  </li>
+</ol>
+<p>​</p>
+<ol>
+<li>更有热心者,  你也可以自己完成一篇  Fcc算法题中常见的有人提问 的闯关题解析.  并以邮件. github issues.  或者qq  发给我,     格式可以为<code>纯文本</code>,  也可以是txt文件,  最好的格式是<code>md</code> 文件,  既markdown文件.  我会整理至博客中.  并注明你的署名与版权.</li>
+</ol>
+</blockquote>
+<h2 id="How-to-do-better"><a href="#How-to-do-better" class="headerlink" title="How to do better"></a>How to do better</h2><p>走心啊</p>
+<h2 id="over"><a href="#over" class="headerlink" title="over"></a>over</h2>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;欢迎来到Fcc-闯关题-解析&quot;&gt;&lt;a href=&quot;#欢迎来到Fcc-闯关题-解析&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到Fcc 闯关题 解析&quot;&gt;&lt;/a&gt;欢迎来到Fcc 闯关题 解析&lt;/h1&gt;&lt;h2 id=&quot;这里有什么&quot;&gt;&lt;a href=&quot;#
+      &lt;h1 id=&quot;欢迎来到Fcc-闯关题-解析&quot;&gt;&lt;a href=&quot;#欢迎来到Fcc-闯关题-解析&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到Fcc 闯关题 解析&quot;&gt;&lt;/a&gt;欢迎来到Fcc 闯关题 解析&lt;/h1&gt;&lt;h2 id=&quot;关于Fcc-以及它是何方神圣-gt-lt&quot;&gt;&lt;a href=&quot;#关于Fcc-以及它是何方神圣-gt-lt&quot; class=&quot;headerlink&quot; title=&quot;关于Fcc 以及它是何方神圣          &amp;gt;.&amp;lt;&quot;&gt;&lt;/a&gt;关于Fcc 以及它是何方神圣          &amp;gt;.&amp;lt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;FreeCodeCamp 即是它的全称,  &lt;/p&gt;
+&lt;p&gt;官方英文网址: &lt;a href=&quot;https://www.freecodecamp.com/&quot;&gt;https://www.freecodecamp.com/&lt;/a&gt;    &lt;/p&gt;
+&lt;p&gt;中文翻译官网: &lt;a href=&quot;https://www.freecodecamp.cn/&quot;&gt;https://www.freecodecamp.cn/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     

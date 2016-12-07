@@ -15,16 +15,34 @@
 
 
 
-<meta name="description" content="第二个Fcc的12345function(sort)&amp;#123;  var a = 0;  a=111;  return a;&amp;#125;">
+<meta name="description" content="题目描述
+对嵌套的数组进行扁平化处理。你必须考虑到不同层级的嵌套。如果你被卡住了，
+​     记得开大招 Read-Search-Ask。尝试与他人结伴编程、编写你自己的代码。
+提供的资源: 
+Array.isArray()
+
+题目解析">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Fcc">
+<meta property="og:title" content="Fcc --- Steamroller">
 <meta property="og:url" content="http://blog.zhinian.info/2016/12/05/Fcc-1/index.html">
 <meta property="og:site_name" content="zhinian_Blog">
-<meta property="og:description" content="第二个Fcc的12345function(sort)&amp;#123;  var a = 0;  a=111;  return a;&amp;#125;">
-<meta property="og:updated_time" content="2016-12-06T09:52:52.000Z">
+<meta property="og:description" content="题目描述
+对嵌套的数组进行扁平化处理。你必须考虑到不同层级的嵌套。如果你被卡住了，
+​     记得开大招 Read-Search-Ask。尝试与他人结伴编程、编写你自己的代码。
+提供的资源: 
+Array.isArray()
+
+题目解析">
+<meta property="og:updated_time" content="2016-12-07T06:21:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fcc">
-<meta name="twitter:description" content="第二个Fcc的12345function(sort)&amp;#123;  var a = 0;  a=111;  return a;&amp;#125;">
+<meta name="twitter:title" content="Fcc --- Steamroller">
+<meta name="twitter:description" content="题目描述
+对嵌套的数组进行扁平化处理。你必须考虑到不同层级的嵌套。如果你被卡住了，
+​     记得开大招 Read-Search-Ask。尝试与他人结伴编程、编写你自己的代码。
+提供的资源: 
+Array.isArray()
+
+题目解析">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +74,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Fcc | zhinian_Blog</title>
+<title>Fcc --- Steamroller | zhinian_Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -96,7 +114,7 @@
 <div class="intrude-less">
     <header id="header" class="inner">
         <a href="/" class="profilepic">
-            <img src="http://www.zhinian.info/images/logo.jpeg" class="animated zoomIn">
+            <img src="/logo.jpeg" class="animated zoomIn">
         </a>
         <hgroup>
           <h1 class="header-author"><a href="/">鹏程</a></h1>
@@ -234,7 +252,7 @@
     <div class="intrude-less">
         <header id="header" class="inner">
             <a href="/" class="profilepic">
-                <img src="http://www.zhinian.info/images/logo.jpeg" class="animated zoomIn">
+                <img src="/logo.jpeg" class="animated zoomIn">
             </a>
             <hgroup>
               <h1 class="header-author"><a href="/" title="回到主页">鹏程</a></h1>
@@ -294,7 +312,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Fcc
+      Fcc --- Steamroller
     </h1>
   
 
@@ -319,7 +337,30 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="第二个Fcc的"><a href="#第二个Fcc的" class="headerlink" title="第二个Fcc的"></a>第二个Fcc的</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params">sort</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">0</span>;</div><div class="line">  a=<span class="number">111</span>;</div><div class="line">  <span class="keyword">return</span> a;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
+<p>对嵌套的数组进行<code>扁平化处理</code>。你必须考虑到不同层级的嵌套。如果你被卡住了，</p>
+<p>​     记得开大招 <code>Read-Search-Ask</code>。尝试与他人结伴编程、编写你自己的代码。</p>
+<p>提供的资源: </p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="external">Array.isArray()</a></p>
+</blockquote>
+<h1 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h1><a id="more"></a>
+<h2 id="理解题意"><a href="#理解题意" class="headerlink" title="理解题意"></a>理解题意</h2><blockquote>
+<p>何为扁平化处理.   </p>
+<ul>
+<li>如<code>steamroller([[[&quot;a&quot;]], [[&quot;b&quot;]]])</code> 应该返回 <code>[&quot;a&quot;, &quot;b&quot;]</code>  就是把数组中空的值, 嵌套的值等等最终返回一个只有一层的数组.   既完成了Fcc的挑战. </li>
+</ul>
+</blockquote>
+<h2 id="前期思考"><a href="#前期思考" class="headerlink" title="前期思考"></a>前期思考</h2><ol>
+<li><code>数组遍历</code>,   需要使用什么方法.  不止一个哦.   除了<code>for循环</code></li>
+<li><code>数组判断</code>,<ul>
+<li>是数组,  要继续扁平化</li>
+<li>不是数组, 添加到结果中</li>
+</ul>
+</li>
+<li>​</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> newArr = [];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">steamroller</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;arr.length; i++)&#123;</div><div class="line">  	<span class="keyword">if</span>(<span class="built_in">Array</span>.isArray(arr[i]))</div><div class="line">      steamroller(arr[i]);</div><div class="line">    <span class="keyword">else</span></div><div class="line">      newArr.push(arr[i]);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> newArr;</div><div class="line">&#125;</div><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">steamroller</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="comment">// I'm a steamroller, baby</span></div><div class="line">  <span class="keyword">var</span> result = [];</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">steam</span>(<span class="params">ifArr</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="built_in">Array</span>.isArray(ifArr)) </div><div class="line">      <span class="keyword">return</span> ifArr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> steam(val);</div><div class="line">      &#125;);</div><div class="line">    result.push(ifArr);</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  steam(arr);</div><div class="line">  </div><div class="line">  </div><div class="line">  <span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"></div><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div><div class="line">steamroller([[[<span class="string">"a"</span>]], [[<span class="string">"b"</span>]]]);</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -328,12 +369,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/12/05/Fcc-1/">Fcc</a></p>
+        <p><span>本文标题:</span><a href="/2016/12/05/Fcc-1/">Fcc --- Steamroller</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">鹏程</a></p>
         <p><span>发布时间:</span>2016-12-05, 00:07:01</p>
-        <p><span>最后更新:</span>2016-12-06, 17:52:52</p>
+        <p><span>最后更新:</span>2016-12-07, 14:21:55</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/12/05/Fcc-1/" title="Fcc">http://blog.zhinian.info/2016/12/05/Fcc-1/</a>
+            <span>原始链接:</span><a class="post-url" href="/2016/12/05/Fcc-1/" title="Fcc --- Steamroller">http://blog.zhinian.info/2016/12/05/Fcc-1/</a>
             <span class="copy-path" data-clipboard-text="原文: http://blog.zhinian.info/2016/12/05/Fcc-1/　　作者: 鹏程" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -361,7 +402,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第二个Fcc的"><span class="toc-number">1.</span> <span class="toc-text">第二个Fcc的</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#题目解析"><span class="toc-number">2.</span> <span class="toc-text">题目解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#理解题意"><span class="toc-number">2.1.</span> <span class="toc-text">理解题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前期思考"><span class="toc-number">2.2.</span> <span class="toc-text">前期思考</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -397,7 +438,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Fcc　| zhinian_Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Fcc --- Steamroller　| zhinian_Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -413,7 +454,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/05/Fcc-1/" data-title="Fcc" data-url="http://blog.zhinian.info/2016/12/05/Fcc-1/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/05/Fcc-1/" data-title="Fcc --- Steamroller" data-url="http://blog.zhinian.info/2016/12/05/Fcc-1/"></div>
     <script>
         var duoshuoQuery = {short_name:"zhinian95"};
         var loadComment = function(){
@@ -448,7 +489,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/05/Fcc-1/">Fcc</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Writing/">Write</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Fcc/">Fcc 须知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/05/Fcc-1/">Fcc --- Steamroller</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Writing/">Write</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Fcc/">Fcc 须知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/hello-world/">Hello World</a></li></ul>
 
 
 

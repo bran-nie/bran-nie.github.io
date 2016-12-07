@@ -2097,7 +2097,7 @@ aside.comment-bar:active {
 }
 .article-entry pre,
 .article-entry .highlight {
-  background: rgba(249,249,249,0.5);
+  background: #333;
   margin: auto;
   padding: 0.35em 1.5em;
   border-style: solid;
