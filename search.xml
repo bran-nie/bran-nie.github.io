@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[Fcc --- Steamroller]]></title>
       <url>http://blog.zhinian.info/2016/12/05/Fcc-1/</url>
-      <content type="html"><![CDATA[题目描述 对嵌套的数组进行扁平化处理。你必须考虑到不同层级的嵌套。如果你被卡住了， ​ 记得开大招 Read-Search-Ask。尝试与他人结伴编程、编写你自己的代码。 提供的资源: Array.isArray() 题目解析 理解题意 何为扁平化处理. 如steamroller([[[&quot;a&quot;]], [[&quot;b&quot;]]]) 应该返回 [&quot;a&quot;, &quot;b&quot;] 就是把数组中空的值, 嵌套的值等等最终返回一个只有一层的数组. 既完成了Fcc的挑战. 前期思考 数组遍历, 需要使用什么方法. 不止一个哦. 除了for循环 数组判断, 是数组, 要继续扁平化 不是数组, 添加到结果中 ​]]></content>
+      <content type="html"><![CDATA[题目描述 对嵌套的数组进行扁平化处理。你必须考虑到不同层级的嵌套。如果你被卡住了， ​ 记得开大招 Read-Search-Ask。尝试与他人结伴编程、编写你自己的代码。 提供的资源: Array.isArray() 题目解析理解题意 何为扁平化处理. 如steamroller([[[&quot;a&quot;]], [[&quot;b&quot;]]]) 应该返回 [&quot;a&quot;, &quot;b&quot;] 就是把数组中空的值, 嵌套的值等等最终返回一个只有一层的数组. 既完成了Fcc的挑战. 前期思考 数组遍历, 需要使用什么方法. 不止一个哦. 除了for循环 数组判断, 是数组, 要继续扁平化 不是数组, 添加到结果中 ​]]></content>
     </entry>
     
     <entry>
