@@ -25,12 +25,14 @@
 <meta property="og:description" content="题目描述
 对嵌套的数组进行扁平化处理。你必须考虑到不同层级的嵌套。如果你被卡住了，
 ​     记得开大招 Read-Search-Ask。尝试与他人结伴编程、编写你自己的代码。">
-<meta property="og:updated_time" content="2016-12-07T06:31:26.000Z">
+<meta property="og:image" content="http://blog.zhinian.info/img/pass.jpeg">
+<meta property="og:updated_time" content="2016-12-08T08:30:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fcc --- Steamroller">
 <meta name="twitter:description" content="题目描述
 对嵌套的数组进行扁平化处理。你必须考虑到不同层级的嵌套。如果你被卡住了，
 ​     记得开大招 Read-Search-Ask。尝试与他人结伴编程、编写你自己的代码。">
+<meta name="twitter:image" content="http://blog.zhinian.info/img/pass.jpeg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -341,16 +343,42 @@
 </ul>
 </blockquote>
 <h2 id="前期思考"><a href="#前期思考" class="headerlink" title="前期思考"></a>前期思考</h2><ol>
-<li><code>数组遍历</code>,   需要使用什么方法.  不止一个哦.   除了<code>for循环</code></li>
-<li><code>数组判断</code>,<ul>
-<li>是数组,  要继续扁平化</li>
-<li>不是数组, 添加到结果中</li>
+<li><code>数组遍历</code>,   需要使用什么方法.  不止一个哦.   除了<code>for循环</code><ul>
+<li>检查这个元素,  做判断嘛.</li>
 </ul>
 </li>
+<li><code>数组判断</code>,<ul>
+<li>是数组,  要继续扁平化, 可以跳到<code>思考 1</code> 需要用到<code>递归</code>或者另一种多维度数组的处理方法.</li>
+<li>不是数组, 添加到结果数组中.   *这里的结果数组需要在函数内定义还是全局定义呢?  见下面同学示例.</li>
+</ul>
+</li>
+<li><code>编写代码</code> ,  想好了, 那就实践吧, 即使出现了bug.<ul>
 <li>​</li>
+</ul>
+</li>
 </ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> newArr = [];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">steamroller</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;arr.length; i++)&#123;</div><div class="line">  	<span class="keyword">if</span>(<span class="built_in">Array</span>.isArray(arr[i]))</div><div class="line">      steamroller(arr[i]);</div><div class="line">    <span class="keyword">else</span></div><div class="line">      newArr.push(arr[i]);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> newArr;</div><div class="line">&#125;</div><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">steamroller</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="comment">// I'm a steamroller, baby</span></div><div class="line">  <span class="keyword">var</span> result = [];</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">steam</span>(<span class="params">ifArr</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="built_in">Array</span>.isArray(ifArr)) </div><div class="line">      <span class="keyword">return</span> ifArr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> steam(val);</div><div class="line">      &#125;);</div><div class="line">    result.push(ifArr);</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  steam(arr);</div><div class="line">  </div><div class="line">  </div><div class="line">  <span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"></div><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div><div class="line">steamroller([[[<span class="string">"a"</span>]], [[<span class="string">"b"</span>]]]);</div></pre></td></tr></table></figure>
+<h2 id="代码示范"><a href="#代码示范" class="headerlink" title="代码示范"></a>代码示范</h2><h4 id="一个同学的代码示例"><a href="#一个同学的代码示例" class="headerlink" title="一个同学的代码示例"></a>一个同学的代码示例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> newArr = [];     <span class="comment">//定义全局结果数组</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">steamroller</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;arr.length; i++)&#123;	<span class="comment">// 循环遍历`当前传入数组`元素   注意是当前传入数组袄</span></div><div class="line">  	<span class="keyword">if</span>(<span class="built_in">Array</span>.isArray(arr[i]))   <span class="comment">// 如果是元素是数组而不是值,  那就条件为真</span></div><div class="line">      steamroller(arr[i]);   <span class="comment">// 这里用了递归的方法 循环调用</span></div><div class="line">    <span class="keyword">else</span></div><div class="line">      newArr.push(arr[i]);  <span class="comment">//不是数组, 就push到结果数组里</span></div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> newArr;</div><div class="line">&#125;</div><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div></pre></td></tr></table></figure>
+<p>返回结果是</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[1,2,3,4]</div></pre></td></tr></table></figure>
+<p>但并没有通过这道题.   为什么呢?</p>
+<p>在题中调用两次steamroller后, </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div><div class="line">steamroller([[[<span class="string">"a"</span>]], [[<span class="string">"b"</span>]]]);</div></pre></td></tr></table></figure>
+<p>结果却不是我们想要的 <code>[&quot;a&quot;, &quot;b&quot;]</code> 而是<code>[1,2,3,4,&quot;a&quot;, &quot;b&quot;]</code>    为什么会把上一次调用的结果也push到了 结果数组中了?</p>
+<h4 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h4><p>原因就是,    在上面那个同学的代码中,  他的结果数组: <code>newArr</code>是在<code>全局定义</code>的!   这也就导致,  他的结果数组保存着所有的调用steamroller函数的值.   所以这样当然不会通过测试啦~</p>
+<p>那机智如你会想到把结果数组<code>定义到函数内</code>, 但是当我们要扁平化的是<code>多维数组</code>时, 它就出现了只有<code>第一个元素</code>的尴尬现象.</p>
+<p>What the hall???</p>
+<p>so, 这个时候, 你可以了解  javascript的<a href="http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html" target="_blank" rel="external"><code>闭包函数</code></a>了,  同学们点击左侧链接, 跳转, 查看什么是<code>闭包及其原理和应用</code>.</p>
+<p>一定去看袄. </p>
+<p>以及,  这一题我也用了闭包, 在看完阮一峰老师的闭包讲解后, 可以先尝试着修改代码.    也可以查看我的, 分析示例. 我有写注释.    据说代码写注释是一个好习惯,   请问这个据说对不对  &gt;.&lt;  ~~~</p>
+<h4 id="我的代码示例"><a href="#我的代码示例" class="headerlink" title="我的代码示例"></a>我的代码示例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">steamroller</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="comment">// I'm a steamroller, baby</span></div><div class="line">  <span class="keyword">var</span> result = [];    <span class="comment">//定义结果数组</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">steam</span>(<span class="params">ifArr</span>) </span>&#123;   <span class="comment">// 定义内部函数.  </span></div><div class="line">    <span class="keyword">if</span>(<span class="built_in">Array</span>.isArray(ifArr))&#123; </div><div class="line">      <span class="keyword">return</span> ifArr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>&#123;   <span class="comment">//我这里用了forEach 循环数组, 想知道它的详情, 下面有链接.</span></div><div class="line">        <span class="keyword">return</span> steam(val);			<span class="comment">// 递归调用 steam函数. </span></div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">    	result.push(ifArr);</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  steam(arr);   <span class="comment">//调用函数, </span></div><div class="line">  </div><div class="line">  <span class="keyword">return</span> result; <span class="comment">// 返回结果数组</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div><div class="line">steamroller([[[<span class="string">"a"</span>]], [[<span class="string">"b"</span>]]]);</div></pre></td></tr></table></figure>
+<p>这样, 就算我在代码中调用了两次steamroller函数.  还是只有最后一次调用的结果.  </p>
+<p>这就是闭包的魅力</p>
+<h2 id="资源汇总"><a href="#资源汇总" class="headerlink" title="资源汇总"></a>资源汇总</h2><p> 题目提供的判断是否为数组的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="external">Array.isArray()</a></p>
+<p>代码中涉及到的 递归   <a href="http://www.ruanyifeng.com/blog/2015/04/tail-call.html" target="_blank" rel="external">递归</a>        PS: 这里还对递归的缺点进行了讲解, 优化.</p>
+<p>代码中涉及到的 闭包  <a href="http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html" target="_blank" rel="external"><code>闭包函数</code></a>  o_o</p>
+<p>原题中文版链接 <a href="https://www.freecodecamp.cn/challenges/steamroller" target="_blank" rel="external">https://www.freecodecamp.cn/challenges/steamroller</a></p>
+<p>原题英文版链接 <a href="https://www.freecodecamp.com/challenges/steamroller" target="_blank" rel="external">https://www.freecodecamp.com/challenges/steamroller</a> </p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><img src="img/pass.jpeg" alt="Pass"></p>
 
       
     </div>
@@ -362,7 +390,7 @@
         <p><span>本文标题:</span><a href="/2016/12/05/Fcc-1/">Fcc --- Steamroller</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">鹏程</a></p>
         <p><span>发布时间:</span>2016-12-05, 00:07:01</p>
-        <p><span>最后更新:</span>2016-12-07, 14:31:26</p>
+        <p><span>最后更新:</span>2016-12-08, 16:30:11</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/12/05/Fcc-1/" title="Fcc --- Steamroller">http://blog.zhinian.info/2016/12/05/Fcc-1/</a>
             <span class="copy-path" data-clipboard-text="原文: http://blog.zhinian.info/2016/12/05/Fcc-1/　　作者: 鹏程" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -392,7 +420,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#题目解析"><span class="toc-number">2.</span> <span class="toc-text">题目解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#理解题意"><span class="toc-number">2.1.</span> <span class="toc-text">理解题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前期思考"><span class="toc-number">2.2.</span> <span class="toc-text">前期思考</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#题目解析"><span class="toc-number">2.</span> <span class="toc-text">题目解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#理解题意"><span class="toc-number">2.1.</span> <span class="toc-text">理解题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前期思考"><span class="toc-number">2.2.</span> <span class="toc-text">前期思考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码示范"><span class="toc-number">2.3.</span> <span class="toc-text">代码示范</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一个同学的代码示例"><span class="toc-number">2.3.0.1.</span> <span class="toc-text">一个同学的代码示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码分析"><span class="toc-number">2.3.0.2.</span> <span class="toc-text">代码分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#我的代码示例"><span class="toc-number">2.3.0.3.</span> <span class="toc-text">我的代码示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#资源汇总"><span class="toc-number">2.4.</span> <span class="toc-text">资源汇总</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后"><span class="toc-number">2.5.</span> <span class="toc-text">最后</span></a></li></ol></li></ol>
         
     </div>
     <style>
