@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.zhinian.info/2016/12/12/night/</loc>
+    
+    <lastmod>2016-12-12T03:11:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zhinian.info/2016/12/04/Writing/</loc>
+    
+    <lastmod>2016-12-12T02:54:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.zhinian.info/2016/12/08/Github-1/</loc>
     
     <lastmod>2016-12-08T18:27:54.000Z</lastmod>
@@ -26,13 +40,6 @@
     <loc>http://blog.zhinian.info//404.html</loc>
     
     <lastmod>2016-12-07T03:46:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.zhinian.info/2016/12/04/Writing/</loc>
-    
-    <lastmod>2016-12-06T09:38:49.000Z</lastmod>
     
   </url>
   
