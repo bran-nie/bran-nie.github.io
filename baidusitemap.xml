@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://blog.zhinian.info/2016/12/08/Github-1/</loc>
+    <lastmod>2016-12-15T06:33:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>Github 的注册与使用教程以及github page</title>
+        <pubTime>2016-12-08T14:47:16.000Z</pubTime>
+        
+        <tag>github</tag>
+         
+        <tag>github page</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="http://blog.zhinian.info/categories/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.zhinian.info/2016/12/12/night/</loc>
     <lastmod>2016-12-12T03:11:44.000Z</lastmod>
     <data>
@@ -37,28 +59,6 @@
            
              
               <breadCrumb title="随笔" url="http://blog.zhinian.info/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.zhinian.info/2016/12/08/Github-1/</loc>
-    <lastmod>2016-12-08T18:27:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>Github 的注册与使用教程以及github page</title>
-        <pubTime>2016-12-08T14:47:16.000Z</pubTime>
-        
-        <tag>github</tag>
-         
-        <tag>github page</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="http://blog.zhinian.info/categories/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
