@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.zhinian.info/"/>
-  <updated>2016-12-12T03:11:44.000Z</updated>
+  <updated>2016-12-16T11:58:21.000Z</updated>
   <id>http://blog.zhinian.info/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>这个blog 你需要知道的</title>
+    <link href="http://blog.zhinian.info/2016/12/16/blog/"/>
+    <id>http://blog.zhinian.info/2016/12/16/blog/</id>
+    <published>2016-12-16T11:32:14.000Z</published>
+    <updated>2016-12-16T11:58:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="欢迎来到这里-😊"><a href="#欢迎来到这里-😊" class="headerlink" title="欢迎来到这里 😊"></a>欢迎来到这里 😊</h1><h2 id="此处是何方神圣"><a href="#此处是何方神圣" class="headerlink" title="此处是何方神圣?"></a>此处是何方神圣?</h2><p>&emsp;&emsp;╮(╯▽╰)╭   此处只是一个前端小白自学之路的一个记录之地.  于2016年12月开启. 有一朝没一夕的更新着, 有着自己在FreeCodeCamp上学习的笔记,  有着自己收集的干货,  有着自己写的一些浅显易懂的教程.   还有一些随笔随记…</p>
+<a id="more"></a>
+<h3 id="关于Freecodecamp"><a href="#关于Freecodecamp" class="headerlink" title="关于Freecodecamp"></a>关于Freecodecamp</h3><p>  简称<strong>FCC</strong>, 官方英文网址: <a href="https://www.freecodecamp.com/" target="_blank" rel="external">https://www.freecodecamp.com/</a> 官方中文网址: <a href="https://www.freecodecamp.cn/" target="_blank" rel="external">https://www.freecodecamp.cn/</a> 是一个闯关模式, 从基础开始学习前端的网站.  <a href="http://blog.zhinian.info/2016/12/04/Fcc/">详情点击这里</a>.  Fcc须知.</p>
+<h3 id="关于干货"><a href="#关于干货" class="headerlink" title="关于干货"></a>关于干货</h3><p>  正在编译中…..</p>
+<h3 id="关于教程"><a href="#关于教程" class="headerlink" title="关于教程"></a>关于教程</h3><p>  我本着读者零基础看教程的心态,  尽量给每个步骤都配图, 配文字, 并且把我能知道的坑, 简单明了的说一遍, 然后你可以选择踩或不踩.</p>
+<h1 id="待续…"><a href="#待续…" class="headerlink" title="待续…."></a>待续….</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;欢迎来到这里-😊&quot;&gt;&lt;a href=&quot;#欢迎来到这里-😊&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到这里 😊&quot;&gt;&lt;/a&gt;欢迎来到这里 😊&lt;/h1&gt;&lt;h2 id=&quot;此处是何方神圣&quot;&gt;&lt;a href=&quot;#此处是何方神圣&quot; class=&quot;headerlink&quot; title=&quot;此处是何方神圣?&quot;&gt;&lt;/a&gt;此处是何方神圣?&lt;/h2&gt;&lt;p&gt;&amp;emsp;&amp;emsp;╮(╯▽╰)╭   此处只是一个前端小白自学之路的一个记录之地.  于2016年12月开启. 有一朝没一夕的更新着, 有着自己在FreeCodeCamp上学习的笔记,  有着自己收集的干货,  有着自己写的一些浅显易懂的教程.   还有一些随笔随记…&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Known" scheme="http://blog.zhinian.info/categories/Known/"/>
+    
+    
+      <category term="top" scheme="http://blog.zhinian.info/tags/top/"/>
+    
+  </entry>
   
   <entry>
     <title>一次晚归夜宿与早起日出</title>
@@ -148,10 +175,10 @@
   
   <entry>
     <title>Fcc --- Steamroller</title>
-    <link href="http://blog.zhinian.info/2016/12/05/Fcc-1/"/>
-    <id>http://blog.zhinian.info/2016/12/05/Fcc-1/</id>
+    <link href="http://blog.zhinian.info/2016/12/05/steamroller/"/>
+    <id>http://blog.zhinian.info/2016/12/05/steamroller/</id>
     <published>2016-12-04T16:07:01.000Z</published>
-    <updated>2016-12-08T08:49:25.000Z</updated>
+    <updated>2016-12-16T12:02:30.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
 <p>对嵌套的数组进行<code>扁平化处理</code>。你必须考虑到不同层级的嵌套。如果你被卡住了，</p>
@@ -162,7 +189,7 @@
 <p>提供的资源: </p>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="external">Array.isArray()</a></p>
 </blockquote>
-<h1 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h1><h2 id="理解题意"><a href="#理解题意" class="headerlink" title="理解题意"></a>理解题意</h2><blockquote>
+<h1 id="往下继续之前-希望你花两分钟看看这个Fcc-须知"><a href="#往下继续之前-希望你花两分钟看看这个Fcc-须知" class="headerlink" title="往下继续之前, 希望你花两分钟看看这个Fcc 须知"></a>往下继续之前, 希望你花两分钟看看这个<a href="http://blog.zhinian.info/2016/12/04/Fcc/">Fcc 须知</a></h1><h1 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h1><h2 id="理解题意"><a href="#理解题意" class="headerlink" title="理解题意"></a>理解题意</h2><blockquote>
 <p>何为扁平化处理.   </p>
 <ul>
 <li>如<code>steamroller([[[&quot;a&quot;]], [[&quot;b&quot;]]])</code> 应该返回 <code>[&quot;a&quot;, &quot;b&quot;]</code>  就是把数组中空的值, 嵌套的值等等最终返回一个只有一层的数组.   既完成了Fcc的挑战. </li>
@@ -204,7 +231,7 @@
 <p>代码中涉及到的 闭包  <a href="http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html" target="_blank" rel="external">闭包函数</a>  o_o</p>
 <p>原题中文版链接 <a href="https://www.freecodecamp.cn/challenges/steamroller" target="_blank" rel="external">https://www.freecodecamp.cn/challenges/steamroller</a></p>
 <p>原题英文版链接 <a href="https://www.freecodecamp.com/challenges/steamroller" target="_blank" rel="external">https://www.freecodecamp.com/challenges/steamroller</a> </p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><img src="http://blog.zhinian.info/imgs/Fcc/pass.webp" alt="Pass"></p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><img src="http://blog.zhinian.info/imgs/Fcc/pass.jpg" alt="Pass"></p>
 ]]></content>
     
     <summary type="html">
@@ -244,75 +271,6 @@
     
     
       <category term="生活" scheme="http://blog.zhinian.info/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fcc 须知</title>
-    <link href="http://blog.zhinian.info/2016/12/04/Fcc/"/>
-    <id>http://blog.zhinian.info/2016/12/04/Fcc/</id>
-    <published>2016-12-04T15:06:15.000Z</published>
-    <updated>2016-12-07T14:52:23.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="欢迎来到Fcc-闯关题-解析"><a href="#欢迎来到Fcc-闯关题-解析" class="headerlink" title="欢迎来到Fcc 闯关题 解析"></a>欢迎来到Fcc 闯关题 解析</h1><h2 id="关于Fcc-以及它是何方神圣-gt-lt"><a href="#关于Fcc-以及它是何方神圣-gt-lt" class="headerlink" title="关于Fcc 以及它是何方神圣          &gt;.&lt;"></a>关于Fcc 以及它是何方神圣          &gt;.&lt;</h2><blockquote>
-<p>FreeCodeCamp 即是它的全称,  </p>
-<p>官方英文网址: <a href="https://www.freecodecamp.com/" target="_blank" rel="external">https://www.freecodecamp.com/</a><br><a id="more"></a></p>
-<p>中文翻译官网: <a href="https://www.freecodecamp.cn/" target="_blank" rel="external">https://www.freecodecamp.cn/</a></p>
-</blockquote>
-<ol>
-<li>FreeCodeCamp 是什么?<ul>
-<li>我们是一个帮助你学习编程的开源社区。</li>
-</ul>
-</li>
-<li>FreeCodeCamp如何帮助我学习编程？<ul>
-<li>你可以通过我们的自学编程挑战，构建项目，获得证书，还可以参加在线下活动。</li>
-</ul>
-</li>
-<li>FreeCodeCamp 可以帮我获得一份软件工程师的工作吗？<ul>
-<li>可以，数以百计的人在完成我们的编程挑战后获得了软件工程师的工作。</li>
-</ul>
-</li>
-<li>FreeCodeCamp 可以提供什么证书<ul>
-<li>FreeCodeCamp 提供4个认证证书，它们是：前端开发认证、数据可视化认证、后端开发认证、全栈开发认证。</li>
-</ul>
-</li>
-<li>FreeCodeCamp 彻底免费吗？<ul>
-<li>是的，我们的课程、项目、证书全都是免费的。</li>
-</ul>
-</li>
-</ol>
-<p>以上信息来源于   <a href="https://www.freecodecamp.cn/about#common-question" target="_blank" rel="external">FCC常见问题</a></p>
-<p>我只是搬运工 :)   还只搬了一部分, 详情点上面链接.   捂脸</p>
-<h2 id="这里有什么"><a href="#这里有什么" class="headerlink" title="这里有什么"></a>这里有什么</h2><blockquote>
-<p>(⊙o⊙)    🤗</p>
-</blockquote>
-<ol>
-<li>这里是有一些<a href="https://www.freecodecamp.cn" target="_blank" rel="external">FCC</a>上的题目解析, 有我当时遇到的问题, 也有其他FCC同学遇到的问题. 而这里, 我集中的放在一起, 是为了<code>有需求查看时, 更好更快的search</code>.</li>
-<li>不敢说是多好的,  毕竟我也是前端小白一个.   只能说<code>大家一起学习, 一起进步</code>.   对于前端, 无论是工作需求还是兴趣爱好, 都是一个有趣, 有成就, 有收获的事情.</li>
-</ol>
-<h2 id="如何使用这个FCC闯关题-解析"><a href="#如何使用这个FCC闯关题-解析" class="headerlink" title="如何使用这个FCC闯关题 解析"></a>如何使用这个FCC闯关题 解析</h2><blockquote>
-<ol>
-<li>​    首先, 自己要有 <code>思考</code> 过准备search的题,  确实发现自己的思路还没有头绪,  或者, 是觉得自己的思路并不是最好的,  review 一下别的伙伴们的想法. 进而提升自己. <br></li>
-<li>其次, 我也尽量用自己的语言组织好, 引导好,     <code>授人以鱼不如授人以渔</code>.   我更希望的是, 当你看完以后,  举一反三都不是问题~   找到比我的解法还要好,   十分欢迎,  你可以通过点击左边侧栏的github, 进入issues提交, 以及左侧边栏的邮箱,  QQ , 都是可以联系我, 我将会更新那道题的最优方案~     并注明你的署名与版权.<br></li>
-<li>如果在查看解析的时候, 还是遇到了问题, 除了上面 <code>2</code> 中联系方式, 还可以在文章<code>最下面评论</code>即可.  <br></li>
-<li>更有热心者,  你也可以自己完成一篇  Fcc算法题中常见的有人提问 的闯关题解析.  并以邮件. github issues.  或者qq  发给我,     格式可以为<code>纯文本</code>,  也可以是txt文件,  最好的格式是<code>md</code> 文件,  既markdown文件.  我会整理至博客中.  并注明你的署名与版权.​</li>
-</ol>
-</blockquote>
-<h2 id="How-to-do-better"><a href="#How-to-do-better" class="headerlink" title="How to do better"></a>How to do better</h2><p>走心啊</p>
-<h2 id="over"><a href="#over" class="headerlink" title="over"></a>over</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;欢迎来到Fcc-闯关题-解析&quot;&gt;&lt;a href=&quot;#欢迎来到Fcc-闯关题-解析&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到Fcc 闯关题 解析&quot;&gt;&lt;/a&gt;欢迎来到Fcc 闯关题 解析&lt;/h1&gt;&lt;h2 id=&quot;关于Fcc-以及它是何方神圣-gt-lt&quot;&gt;&lt;a href=&quot;#关于Fcc-以及它是何方神圣-gt-lt&quot; class=&quot;headerlink&quot; title=&quot;关于Fcc 以及它是何方神圣          &amp;gt;.&amp;lt;&quot;&gt;&lt;/a&gt;关于Fcc 以及它是何方神圣          &amp;gt;.&amp;lt;&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;FreeCodeCamp 即是它的全称,  &lt;/p&gt;
-&lt;p&gt;官方英文网址: &lt;a href=&quot;https://www.freecodecamp.com/&quot;&gt;https://www.freecodecamp.com/&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Fcc" scheme="http://blog.zhinian.info/categories/Fcc/"/>
-    
-    
-      <category term="Fcc 闯关" scheme="http://blog.zhinian.info/tags/Fcc-%E9%97%AF%E5%85%B3/"/>
     
   </entry>
   
