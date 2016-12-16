@@ -84,11 +84,105 @@
   </entry>
   
   <entry>
-    <title>Github 的注册与使用教程以及github page</title>
+    <title>Github 的注册与使用教程以及github page (二)</title>
+    <link href="http://blog.zhinian.info/2016/12/08/Github-2/"/>
+    <id>http://blog.zhinian.info/2016/12/08/Github-2/</id>
+    <published>2016-12-08T14:47:16.000Z</published>
+    <updated>2016-12-16T13:24:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>须知: </p>
+<ol>
+<li>本文图片较多, 所以我用了<a href="https://isux.tencent.com/introduction-of-webp.html" target="_blank" rel="external">webp格式</a>的图来加载, 以防止出现网速不好者, 要等待一会~ 还有就是图片作用就是让你确认你的界面应该是怎么样的.  我也有文字说明的. </li>
+<li>(新加)   难过,  移动端暂时不支持webp格式的图片,  我在找到解决的方法之前, 还是先用jpg格式的.</li>
+<li>本文是从小白开始的教程, 大牛勿喷. 再说. 这是我第一次写, 难免过于幼稚.  体谅哈~</li>
+<li>左侧有目录, 可以跳转查看.  </li>
+</ol>
+</blockquote>
+<h1 id="使用Github来托管你的代码"><a href="#使用Github来托管你的代码" class="headerlink" title="使用Github来托管你的代码"></a>使用Github来托管你的代码</h1><a id="more"></a>
+<blockquote>
+<p><strong>第一部分</strong> <a href="http://blog.zhinian.info/2016/12/08/Github-1/">认识Github和Github Page (一)</a></p>
+<p>  在第一部分中,  我简单的写了Github的注册, 建仓库,  初次使用Github page. 还是用的网页上的<strong>create new file</strong> 在实际生产中, 我们肯定不可能是那样的写文件吧, 所以. 这个博文就是教你如何上传代码文件的</p>
+</blockquote>
+<h1 id="Github-的客户端使用"><a href="#Github-的客户端使用" class="headerlink" title="Github 的客户端使用"></a>Github 的客户端使用</h1><p>  当今盛行的代码托管服务平台.  而我们作为一个程序员, 岂有弃之不用之理~  好绕哈哈.    下面我就直接进入主题  客户端的使用.  分别有Mac端 和 windows端 的使用.</p>
+<blockquote>
+<p>客户端是简单的操作, 适合新手. </p>
+</blockquote>
+<h2 id="Mac客户端下载与使用"><a href="#Mac客户端下载与使用" class="headerlink" title="Mac客户端下载与使用"></a>Mac客户端下载与使用</h2><ul>
+<li>官网下载地址: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
+<li>如果网速慢, 可以在我的网盘下载. 链接: <a href="http://pan.baidu.com/s/1i4B4tzZ" target="_blank" rel="external">http://pan.baidu.com/s/1i4B4tzZ</a> 密码: gjpy</li>
+</ul>
+<h3 id="安装并登录客户端"><a href="#安装并登录客户端" class="headerlink" title="安装并登录客户端"></a>安装并登录客户端</h3><ul>
+<li>快捷键 <code>command</code> + <code>,</code> 打开客户端的设置.  </li>
+<li>点击 <strong>Accounts</strong>  然后  sign in 你的Github账号.</li>
+</ul>
+<h3 id="克隆仓库"><a href="#克隆仓库" class="headerlink" title="克隆仓库"></a>克隆仓库</h3><ul>
+<li>登陆成功后, 在客户端的左上角点击 <strong><em>+</em></strong>  图标, 在弹出来的框框中,  有三个选项: Add  Create  Clone,  这里我们需要点击Clone. </li>
+<li>这时会出来你Github账号上,  所有的仓库.  你需要clone哪个, 就点击仓库名字, 右下角的按钮就亮了.   click it</li>
+<li>弹出clone选项, 你选择好文件夹就可以了.</li>
+</ul>
+<h3 id="写代码咯"><a href="#写代码咯" class="headerlink" title="写代码咯"></a>写代码咯</h3><p>  你想托管在Github平台的代码放在你克隆到本地的仓库下面就好了,  然后接着下一步, push你的代码吧.</p>
+<blockquote>
+<p>这里</p>
+</blockquote>
+<h3 id="提交代码到Github"><a href="#提交代码到Github" class="headerlink" title="提交代码到Github"></a>提交代码到Github</h3><ol>
+<li><p>打开客户端.  点击左侧你要同步的仓库</p>
+</li>
+<li><p>当你本地的代码与网页上的相比, 有变动的时候, 会显示有多少个 changes . </p>
+</li>
+<li><p>在changes下,  在你的头像旁边, 有一个输入框, summary(描述)  输入你为这一次提交的说明.       </p>
+<ul>
+<li>这个是必须的</li>
+<li>你的说明, 如果出现空格,  请用 <strong>“”</strong> 把说明包含起来</li>
+</ul>
+<p>​</p>
+</li>
+<li><p>输入完上述的summary后,  下面的 <code>Commit to master</code> 就可以点击了     click it</p>
+</li>
+<li><p>这时候你已经完成了90%了,  最后一步就是点击右上角黑色框中的  Sync  . 等待上传成功吧.</p>
+</li>
+<li><p>去Github官网上,  登录你的账号, 查看你的代码吧.  啊哈~ </p>
+</li>
+</ol>
+<h2 id="Windows客户端下载与使用"><a href="#Windows客户端下载与使用" class="headerlink" title="Windows客户端下载与使用"></a>Windows客户端下载与使用</h2><ul>
+<li>官网下载地址: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
+<li>如果网速慢, 可以在我的网盘下载.  链接: </li>
+</ul>
+<h1 id="命令行的使用-Git"><a href="#命令行的使用-Git" class="headerlink" title="命令行的使用  Git"></a>命令行的使用  Git</h1><blockquote>
+<p>命令行是轻松方便的一个方法,  它舍去了鼠标的点来点去, 舍去了UI界面,  用最简单的一行行命令轻松完成clone  commit  push 等等, 将你的代码从本地托管到Github上</p>
+</blockquote>
+<h2 id="Mac下的git命令行"><a href="#Mac下的git命令行" class="headerlink" title="Mac下的git命令行"></a>Mac下的git命令行</h2><h3 id="终端"><a href="#终端" class="headerlink" title="终端"></a>终端</h3><h2 id="Windows下的git命令行"><a href="#Windows下的git命令行" class="headerlink" title="Windows下的git命令行"></a>Windows下的git命令行</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;须知: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;本文图片较多, 所以我用了&lt;a href=&quot;https://isux.tencent.com/introduction-of-webp.html&quot;&gt;webp格式&lt;/a&gt;的图来加载, 以防止出现网速不好者, 要等待一会~ 还有就是图片作用就是让你确认你的界面应该是怎么样的.  我也有文字说明的. &lt;/li&gt;
+&lt;li&gt;(新加)   难过,  移动端暂时不支持webp格式的图片,  我在找到解决的方法之前, 还是先用jpg格式的.&lt;/li&gt;
+&lt;li&gt;本文是从小白开始的教程, 大牛勿喷. 再说. 这是我第一次写, 难免过于幼稚.  体谅哈~&lt;/li&gt;
+&lt;li&gt;左侧有目录, 可以跳转查看.  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;使用Github来托管你的代码&quot;&gt;&lt;a href=&quot;#使用Github来托管你的代码&quot; class=&quot;headerlink&quot; title=&quot;使用Github来托管你的代码&quot;&gt;&lt;/a&gt;使用Github来托管你的代码&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="http://blog.zhinian.info/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="github" scheme="http://blog.zhinian.info/tags/github/"/>
+    
+      <category term="github page" scheme="http://blog.zhinian.info/tags/github-page/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github 的注册与使用教程以及github page (一)</title>
     <link href="http://blog.zhinian.info/2016/12/08/Github-1/"/>
     <id>http://blog.zhinian.info/2016/12/08/Github-1/</id>
     <published>2016-12-08T14:47:16.000Z</published>
-    <updated>2016-12-15T06:33:11.000Z</updated>
+    <updated>2016-12-16T12:20:47.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>须知: </p>
@@ -247,30 +341,6 @@
     
     
       <category term="Fcc 闯关" scheme="http://blog.zhinian.info/tags/Fcc-%E9%97%AF%E5%85%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Write</title>
-    <link href="http://blog.zhinian.info/2016/12/04/Writing/"/>
-    <id>http://blog.zhinian.info/2016/12/04/Writing/</id>
-    <published>2016-12-04T15:56:22.000Z</published>
-    <updated>2016-12-12T02:54:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Hexo的坑还是蛮多蛮多的"><a href="#Hexo的坑还是蛮多蛮多的" class="headerlink" title="Hexo的坑还是蛮多蛮多的"></a>Hexo的坑还是蛮多蛮多的</h1><p>markdown</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Hexo的坑还是蛮多蛮多的&quot;&gt;&lt;a href=&quot;#Hexo的坑还是蛮多蛮多的&quot; class=&quot;headerlink&quot; title=&quot;Hexo的坑还是蛮多蛮多的&quot;&gt;&lt;/a&gt;Hexo的坑还是蛮多蛮多的&lt;/h1&gt;&lt;p&gt;markdown&lt;/p&gt;
-
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://blog.zhinian.info/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="生活" scheme="http://blog.zhinian.info/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   

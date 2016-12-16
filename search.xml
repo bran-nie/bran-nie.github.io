@@ -16,7 +16,13 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Github 的注册与使用教程以及github page]]></title>
+      <title><![CDATA[Github 的注册与使用教程以及github page (二)]]></title>
+      <url>http://blog.zhinian.info/2016/12/08/Github-2/</url>
+      <content type="html"><![CDATA[须知: 本文图片较多, 所以我用了webp格式的图来加载, 以防止出现网速不好者, 要等待一会~ 还有就是图片作用就是让你确认你的界面应该是怎么样的. 我也有文字说明的. (新加) 难过, 移动端暂时不支持webp格式的图片, 我在找到解决的方法之前, 还是先用jpg格式的. 本文是从小白开始的教程, 大牛勿喷. 再说. 这是我第一次写, 难免过于幼稚. 体谅哈~ 左侧有目录, 可以跳转查看. 使用Github来托管你的代码 第一部分 认识Github和Github Page (一) 在第一部分中, 我简单的写了Github的注册, 建仓库, 初次使用Github page. 还是用的网页上的create new file 在实际生产中, 我们肯定不可能是那样的写文件吧, 所以. 这个博文就是教你如何上传代码文件的 Github 的客户端使用 当今盛行的代码托管服务平台. 而我们作为一个程序员, 岂有弃之不用之理~ 好绕哈哈. 下面我就直接进入主题 客户端的使用. 分别有Mac端 和 windows端 的使用. 客户端是简单的操作, 适合新手. Mac客户端下载与使用 官网下载地址: https://desktop.github.com/ 如果网速慢, 可以在我的网盘下载. 链接: http://pan.baidu.com/s/1i4B4tzZ 密码: gjpy 安装并登录客户端 快捷键 command + , 打开客户端的设置. 点击 Accounts 然后 sign in 你的Github账号. 克隆仓库 登陆成功后, 在客户端的左上角点击 + 图标, 在弹出来的框框中, 有三个选项: Add Create Clone, 这里我们需要点击Clone. 这时会出来你Github账号上, 所有的仓库. 你需要clone哪个, 就点击仓库名字, 右下角的按钮就亮了. click it 弹出clone选项, 你选择好文件夹就可以了. 写代码咯 你想托管在Github平台的代码放在你克隆到本地的仓库下面就好了, 然后接着下一步, push你的代码吧. 这里 提交代码到Github 打开客户端. 点击左侧你要同步的仓库 当你本地的代码与网页上的相比, 有变动的时候, 会显示有多少个 changes . 在changes下, 在你的头像旁边, 有一个输入框, summary(描述) 输入你为这一次提交的说明. 这个是必须的 你的说明, 如果出现空格, 请用 “” 把说明包含起来 ​ 输入完上述的summary后, 下面的 Commit to master 就可以点击了 click it 这时候你已经完成了90%了, 最后一步就是点击右上角黑色框中的 Sync . 等待上传成功吧. 去Github官网上, 登录你的账号, 查看你的代码吧. 啊哈~ Windows客户端下载与使用 官网下载地址: https://desktop.github.com/ 如果网速慢, 可以在我的网盘下载. 链接: 命令行的使用 Git 命令行是轻松方便的一个方法, 它舍去了鼠标的点来点去, 舍去了UI界面, 用最简单的一行行命令轻松完成clone commit push 等等, 将你的代码从本地托管到Github上 Mac下的git命令行终端Windows下的git命令行]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Github 的注册与使用教程以及github page (一)]]></title>
       <url>http://blog.zhinian.info/2016/12/08/Github-1/</url>
       <content type="html"><![CDATA[须知: 本文图片较多, 所以我用了webp格式的图来加载, 以防止出现网速不好者, 要等待一会~ 还有就是图片作用就是让你确认你的界面应该是怎么样的. 我也有文字说明的. (新加) 难过, 移动端暂时不支持webp格式的图片, 我在找到解决的方法之前, 还是先用jpg格式的. 本文是从小白开始的教程, 大牛勿喷. 再说. 这是我第一次写, 难免过于幼稚. 体谅哈~ 左侧有目录, 可以跳转查看. 认识Github和Github Page 啰嗦的第一段, 已经了解的可以左侧目录栏跳过啦~ GitHub是一个通过Git进行版本控制的软件源代码托管服务，由GitHub公司开发并运营. 截止到2015年，GitHub已经有超过九百万注册用户和2110万代码库。事实上已经成为了世界上最大的代码存放网站和开源社区。 GitHub同时提供付费账户和免费账户。这两种账户都可以创建公开的代码仓库，但是付费账户还可以创建私有的代码仓库。 Github还有一个github page功能. 从而建立一个属于你自己的网站. 并且, 它是免费又快速的. Github Page还可以自定义域名, 从而让你更加的与众不同. 出色于你的努力. Are you ready? Github 注册 首先, 我们应该打开github官网袄~ https://github.com/ 当然, 已经注册过的 可以跳过往下看~ 注册页面网址: https://github.com/join?source=header 第一步 填写用户名, 注册邮箱(邮箱要正确,且你要知道密码袄, 因为后面需要验证), 填写登录密码. 第二步 选择你的套餐 第三步 填写你的信息(这个是可选的) 你也可以跳过. 验证邮箱 接着上一步, 第三步ok后, 点击 start a project. 它会让你验证邮箱. 然后发送一个邮件到你的邮箱里, 你去邮箱验证就好啦~ 后期你还可以在右上角你的头像那里点击, 弹出的下拉菜单倒数第二个 setting 菜单. 这个是设置你的github功能的,里面你还可以添加邮箱啦, 更改密码啦, 更改信息啦. 创建仓库第一步点击右上角的 + , 在弹出的下拉菜单里, 点击 new repository . 仓库的名字一定要看清,填好袄~ 还有, 有个需要打钩的地方, 也顺手打了吧, 这样会方便以后, 尽管后面你还可以自己创建. 我这里为了下面的演示Pages 所以就创建了一个.github.io格式的仓库. 第二步 (可选)体验github page的魅力吧! 点击 create new file , 进入后, 注意创建的文件的名字! 注意创建的文件的名字! 注意创建的文件的名字! 内容你可以仿照我的敲一下, 也可以把你自己写过的静态单个html文件的内容复制粘贴过来. PS: 单个html的意思是指你页面中的js啊,css啊,都在一个.html里面, 这样网页才完整. 不然就有些样式和脚本就不会出现啦~. ok后, 在页面的最下方, 除了点击那个绿色的按钮 commit new file 其他什么都不要点, 不用填, 就可以了. 好了, 现在深呼吸一下(好累的), 在浏览器里打开一个新的标签页. 输入地址: https://你的用户名.github.io 回车后, 见证你自己的奇迹吧~ 如果有人真的很相信我, 就在地址栏输入https://你的用户名.github.io , 那我是冷漠呢还是高兴呢. 好难选诶]]></content>
     </entry>
@@ -49,16 +55,16 @@
   
     
     <entry>
-      <title><![CDATA[三大究极问题之一:  我是谁?]]></title>
-      <url>http://blog.zhinian.info/about/index.html</url>
-      <content type="html"><![CDATA[路还长着呢Learn hexo 标题?]]></content>
+      <title><![CDATA[404 Not Found: 该网页无法显示]]></title>
+      <url>http://blog.zhinian.info//404.html</url>
+      <content type="html"></content>
 
     </entry>
     
     <entry>
-      <title><![CDATA[404 Not Found: 该网页无法显示]]></title>
-      <url>http://blog.zhinian.info//404.html</url>
-      <content type="html"></content>
+      <title><![CDATA[三大究极问题之一:  我是谁?]]></title>
+      <url>http://blog.zhinian.info/about/index.html</url>
+      <content type="html"><![CDATA[路还长着呢Learn hexo 标题?]]></content>
 
     </entry>
     
