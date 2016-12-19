@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.zhinian.info/"/>
-  <updated>2016-12-19T10:13:52.000Z</updated>
+  <updated>2016-12-19T10:15:38.000Z</updated>
   <id>http://blog.zhinian.info/</id>
   
   <author>
@@ -20,12 +20,13 @@
     <link href="http://blog.zhinian.info/2016/12/19/css01/"/>
     <id>http://blog.zhinian.info/2016/12/19/css01/</id>
     <published>2016-12-19T05:52:14.000Z</published>
-    <updated>2016-12-19T10:13:52.000Z</updated>
+    <updated>2016-12-19T10:15:38.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>这篇博客出现的css样式,  及其顺序,  和 我的这个静态页面是同步的.   <a href="http://www.zhinian.info/demo/learn/12-19/index.html" target="_blank" rel="external">在这里, 请点击,对应样式查看</a></p>
 </blockquote>
 <h1 id="几个有趣的样式"><a href="#几个有趣的样式" class="headerlink" title="几个有趣的样式"></a>几个有趣的样式</h1><h2 id="模糊"><a href="#模糊" class="headerlink" title="模糊"></a>模糊</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">h1</span>&#123;</div><div class="line">  <span class="attribute">color</span>: transparent;</div><div class="line">  <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">4px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="图片变黑白"><a href="#图片变黑白" class="headerlink" title="图片变黑白"></a>图片变黑白</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">img&#123;</div><div class="line">  filter:grayscale(100%);</div><div class="line">  //浏览器的兼容性问题</div><div class="line">  -webkit-filter: grayscale(100%);  </div><div class="line">  -moz-filter: grayscale(100%);</div><div class="line">  -ms-filter: grayscale(100%);</div><div class="line">  -o-filter: grayscale(100%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="calc-的使用"><a href="#calc-的使用" class="headerlink" title="calc()的使用"></a>calc()的使用</h2><p>calc()用法类似 函数,  能够给元素设置动态的值.  比如  width: calc(100% - 100px);</p>
 <p><strong><em>PS</em></strong> 如果用 +   -  操作符,  要记得以空格分开, 不然不起作用.我是被坑过的.  但 * / 就不用, 不过, 我们还是保持着用calc的时候, 都用空格符分隔吧</p>
@@ -57,7 +58,9 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;这篇博客出现的css样式,  及其顺序,  和 我的这个静态页面是同步的.   &lt;a href=&quot;http://www.zhinian.info/demo/learn/12-19/index.html&quot; target=&quot;_blank&quot; rel=&quot;e
+&lt;p&gt;这篇博客出现的css样式,  及其顺序,  和 我的这个静态页面是同步的.   &lt;a href=&quot;http://www.zhinian.info/demo/learn/12-19/index.html&quot;&gt;在这里, 请点击,对应样式查看&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;几个有趣的样式&quot;&gt;&lt;a href=&quot;#几个有趣的样式&quot; class=&quot;headerlink&quot; title=&quot;几个有趣的样式&quot;&gt;&lt;/a&gt;几个有趣的样式&lt;/h1&gt;&lt;h2 id=&quot;模糊&quot;&gt;&lt;a href=&quot;#模糊&quot; class=&quot;headerlink&quot; title=&quot;模糊&quot;&gt;&lt;/a&gt;模糊&lt;/h2&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;h1&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;color&lt;/span&gt;: transparent;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;text-shadow&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;4px&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;rgba&lt;/span&gt;(0, 0, 0, 0.5);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

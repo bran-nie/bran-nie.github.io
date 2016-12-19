@@ -382,37 +382,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <blockquote>
-<p>这篇博客出现的css样式,  及其顺序,  和 我的这个静态页面是同步的.   <a href="http://www.zhinian.info/demo/learn/12-19/index.html" target="_blank" rel="external">在这里, 请点击,对应样式查看</a></p>
+              <blockquote>
+<p>这篇博客出现的css样式,  及其顺序,  和 我的这个静态页面是同步的.   <a href="http://www.zhinian.info/demo/learn/12-19/index.html">在这里, 请点击,对应样式查看</a></p>
 </blockquote>
 <h1 id="几个有趣的样式"><a href="#几个有趣的样式" class="headerlink" title="几个有趣的样式"></a>几个有趣的样式</h1><h2 id="模糊"><a href="#模糊" class="headerlink" title="模糊"></a>模糊</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">h1</span>&#123;</div><div class="line">  <span class="attribute">color</span>: transparent;</div><div class="line">  <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">4px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="图片变黑白"><a href="#图片变黑白" class="headerlink" title="图片变黑白"></a>图片变黑白</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">img&#123;</div><div class="line">  filter:grayscale(100%);</div><div class="line">  //浏览器的兼容性问题</div><div class="line">  -webkit-filter: grayscale(100%);  </div><div class="line">  -moz-filter: grayscale(100%);</div><div class="line">  -ms-filter: grayscale(100%);</div><div class="line">  -o-filter: grayscale(100%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="calc-的使用"><a href="#calc-的使用" class="headerlink" title="calc()的使用"></a>calc()的使用</h2><p>calc()用法类似 函数,  能够给元素设置动态的值.  比如  width: calc(100% - 100px);</p>
-<p><strong><em>PS</em></strong> 如果用 +   -  操作符,  要记得以空格分开, 不然不起作用.我是被坑过的.  但 * / 就不用, 不过, 我们还是保持着用calc的时候, 都用空格符分隔吧</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.calc</span>&#123;</div><div class="line">  	<span class="attribute">width</span>:<span class="number">200px</span>;	<span class="attribute">height</span>:<span class="number">300px</span>;</div><div class="line"> <span class="attribute">border</span>:<span class="number">1px</span> solid red;</div><div class="line">  &#125;</div><div class="line">  <span class="selector-class">.calc</span> <span class="selector-class">.b</span>&#123;</div><div class="line">  	<span class="attribute">height</span>:<span class="number">100px</span>;	<span class="attribute">background-color</span>: orange;</div><div class="line">  &#125;</div><div class="line">  <span class="selector-class">.calc</span> <span class="selector-class">.c</span>&#123;</div><div class="line">  	<span class="attribute">height</span>: <span class="built_in">calc</span>(100% - 100px);  	<span class="attribute">background-color</span>: green;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<h2 id="用css的-border-画三角"><a href="#用css的-border-画三角" class="headerlink" title="用css的 border 画三角"></a>用css的 border 画三角</h2><p> 利用border,  四个边框,  设置边框的宽度,  然后三个 是透明,      css代码</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.triangle</span>&#123;</div><div class="line">  	<span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">  	<span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">  	<span class="attribute">border-width</span>: <span class="number">40px</span>;</div><div class="line">  	<span class="attribute">border-style</span>: solid;</div><div class="line">  	<span class="attribute">border-color</span>: transparent transparent red transparent;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<h1 id="渐变-径向和线性"><a href="#渐变-径向和线性" class="headerlink" title="渐变  径向和线性"></a>渐变  径向和线性</h1><p>html</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"grandient"</span>&gt;</span></div><div class="line"> 文字线性渐变  </div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>css代码</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.grandient</span>&#123;</div><div class="line">  <span class="attribute">background-image</span>: <span class="built_in">-webkit-gradient</span>(linear, 0 0 ,0 bottom, from(rgba(0,128,0,1)), <span class="built_in">to</span>(rgba(51,51,51,0.6)));</div><div class="line">  <span class="attribute">-webkit-background-clip</span>:text;</div><div class="line">  <span class="attribute">-webkit-text-fill-color</span>:transparent;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>一个空div的径向渐变   等间距色标     css代码     </p>
-<blockquote>
-<p>以下的css代码均只改变了background部分,   有几个是改了宽高, 所以就只写了background部分的变化</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;</div><div class="line">  <span class="attribute">width</span>:<span class="number">100px</span>; <span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">radial-gradient</span>(red, yellow, rhba(30, 144, 255, 0.6));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>指定间距色标  css 代码</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background</span>: <span class="selector-tag">radial-gradient</span>(<span class="selector-tag">red</span> 5%, <span class="selector-tag">yellow</span> 25%, <span class="selector-id">#1E90FF</span> 50%);</div></pre></td></tr></table></figure>
-<p><strong>大小</strong> 是径向渐变和线性渐变不一样的地方. 你可以用一个尺寸值来指定定义圆形或者椭圆形的大小的点.      css代码</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background</span>: <span class="selector-tag">radial-gradient</span>(<span class="selector-tag">ellipse</span> <span class="selector-tag">closest-side</span>, <span class="selector-tag">red</span>, <span class="selector-tag">yellow</span> 10%, <span class="selector-id">#1E90FF</span> 50%, <span class="selector-tag">white</span>);</div></pre></td></tr></table></figure>
-<p>其中 它的大小也可以换成 <strong>farthest-corner</strong> 渐变的尺寸为起始点到封闭盒模型最远端的起始点的距离。</p>
-<h2 id="重复的渐变"><a href="#重复的渐变" class="headerlink" title="重复的渐变"></a>重复的渐变</h2><p><strong>linear-grandient</strong> 和 <strong>radial-grandient</strong> 不支持自动重复的色标,  然而,  <code>repeating-linear-grandient</code> 和 <code>repeating-radial-grandient</code> 可以实现这个功能. </p>
-<p>重复的线性渐变    css 代码</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background</span>: <span class="selector-tag">repeating-linear-gradient</span>(<span class="selector-tag">-45deg</span>, <span class="selector-tag">red</span>, <span class="selector-tag">red</span> 5<span class="selector-tag">px</span>, <span class="selector-tag">white</span> 5<span class="selector-tag">px</span>, <span class="selector-tag">white</span> 10<span class="selector-tag">px</span>);</div></pre></td></tr></table></figure>
-<p>重复的径向渐变    css 代码</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background</span>: <span class="selector-tag">repeating-radial-gradient</span>(<span class="selector-tag">black</span>, <span class="selector-tag">black</span> 5<span class="selector-tag">px</span>, <span class="selector-tag">white</span> 5<span class="selector-tag">px</span>, <span class="selector-tag">white</span> 10<span class="selector-tag">px</span>);</div></pre></td></tr></table></figure>
-<p> 可扩展的查看 菜鸟教程: <a href="http://www.runoob.com/css3/css3-gradients.html" target="_blank" rel="external">http://www.runoob.com/css3/css3-gradients.html</a></p>
-
+          
       
     </div>
     
@@ -429,6 +403,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2016/12/19/css01/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
