@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://blog.zhinian.info/2016/12/08/Github-2/</loc>
-    <lastmod>2016-12-16T13:24:17.000Z</lastmod>
+    <loc>http://blog.zhinian.info/2016/12/18/Github-2/</loc>
+    <lastmod>2016-12-19T05:23:21.000Z</lastmod>
     <data>
         <display>
         <title>Github 的注册与使用教程以及github page (二)</title>
-        <pubTime>2016-12-08T14:47:16.000Z</pubTime>
+        <pubTime>2016-12-18T14:47:16.000Z</pubTime>
         
         <tag>github</tag>
          
@@ -26,8 +26,28 @@
 
     
   <url>
+    <loc>http://blog.zhinian.info/2016/12/16/blog/</loc>
+    <lastmod>2016-12-17T08:31:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>这个blog 你需要知道的</title>
+        <pubTime>2016-12-16T11:32:14.000Z</pubTime>
+        
+        <tag>top</tag>
+         
+         
+           
+             
+              <breadCrumb title="Known" url="http://blog.zhinian.info/categories/Known/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.zhinian.info/2016/12/08/Github-1/</loc>
-    <lastmod>2016-12-16T12:20:47.000Z</lastmod>
+    <lastmod>2016-12-17T08:22:59.000Z</lastmod>
     <data>
         <display>
         <title>Github 的注册与使用教程以及github page (一)</title>
@@ -61,26 +81,6 @@
            
              
               <breadCrumb title="Fcc" url="http://blog.zhinian.info/categories/Fcc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.zhinian.info/2016/12/16/blog/</loc>
-    <lastmod>2016-12-16T11:58:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>这个blog 你需要知道的</title>
-        <pubTime>2016-12-16T11:32:14.000Z</pubTime>
-        
-        <tag>top</tag>
-         
-         
-           
-             
-              <breadCrumb title="Known" url="http://blog.zhinian.info/categories/Known/"/>
           
         </display>
     </data>

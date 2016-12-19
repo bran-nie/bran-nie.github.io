@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="鹏程" />
+
+
+
+<meta name="description" content="使用Github来托管你的代码须知 
+
+
+写在前面的话:         如果你自认为是做技术的,  我强烈推荐你  学会翻墙,  好处不用多说,  讲道理某度搜索真的会误人! ! ! 
+关于使用客户端还是命令行     两个都可以上传你的代码,  就是看你喜欢哪种风格了.   
+善于使用左侧目录跳转     这篇文章比较长, 我把客户端和命令行放在一起了.   所以请读者合理使用左侧目录跳转,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github 的注册与使用教程以及github page (二)">
+<meta property="og:url" content="http://blog.zhinian.info/2016/12/18/Github-2/index.html">
+<meta property="og:site_name" content="zhinian_Blog">
+<meta property="og:description" content="使用Github来托管你的代码须知 
+
+
+写在前面的话:         如果你自认为是做技术的,  我强烈推荐你  学会翻墙,  好处不用多说,  讲道理某度搜索真的会误人! ! ! 
+关于使用客户端还是命令行     两个都可以上传你的代码,  就是看你喜欢哪种风格了.   
+善于使用左侧目录跳转     这篇文章比较长, 我把客户端和命令行放在一起了.   所以请读者合理使用左侧目录跳转,">
+<meta property="og:updated_time" content="2016-12-19T05:23:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Github 的注册与使用教程以及github page (二)">
+<meta name="twitter:description" content="使用Github来托管你的代码须知 
+
+
+写在前面的话:         如果你自认为是做技术的,  我强烈推荐你  学会翻墙,  好处不用多说,  讲道理某度搜索真的会误人! ! ! 
+关于使用客户端还是命令行     两个都可以上传你的代码,  就是看你喜欢哪种风格了.   
+善于使用左侧目录跳转     这篇文章比较长, 我把客户端和命令行放在一起了.   所以请读者合理使用左侧目录跳转,">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="zhinian_Blog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Github 的注册与使用教程以及github page (二) | zhinian_Blog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/logo.jpeg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">鹏程</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">初行翼翼, 欲展翅飞翔</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa GitHub" href="https://github.com/HeiPeter/HeiPeter.github.io" title="GitHub"></a>
+                            
+                                <a class="fa 知乎" href="https://www.zhihu.com/people/zhinian-pc/activities" title="知乎"></a>
+                            
+                                <a class="fa Email" href="mailto:pengcheng1995@gmail.com" title="Email"></a>
+                            
+                                <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=1185367347&site=qq&menu=yes" title="QQ"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fcc-闯关/">Fcc 闯关</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-page/">github page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/top/">top</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">这个主题好强大呐</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">鹏程</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/logo.jpeg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">鹏程</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">初行翼翼, 欲展翅飞翔</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/HeiPeter/HeiPeter.github.io" title="GitHub"></a>
+                            
+                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/zhinian-pc/activities" title="知乎"></a>
+                            
+                                <a class="fa Email" target="_blank" href="mailto:pengcheng1995@gmail.com" title="Email"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1185367347&site=qq&menu=yes" title="QQ"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-Github-2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/18/Github-2/" class="article-date">
+      <time datetime="2016-12-18T14:47:16.000Z" itemprop="datePublished">2016-12-18</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Github 的注册与使用教程以及github page (二)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/教程/">教程</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github-page/">github page</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="使用Github来托管你的代码"><a href="#使用Github来托管你的代码" class="headerlink" title="使用Github来托管你的代码"></a>使用Github来托管你的代码</h1><p><strong><em>须知</em></strong> </p>
+<blockquote>
+<ol>
+<li><strong><code>写在前面的话:</code></strong>         如果你自认为是做技术的,  我强烈推荐你  <strong>学会翻墙</strong>,  好处不用多说,  讲道理某度搜索真的会误人! ! ! </li>
+<li><strong><code>关于使用客户端还是命令行</code></strong>     两个都可以上传你的代码,  就是看你喜欢哪种风格了.   </li>
+<li><strong><code>善于使用左侧目录跳转</code></strong>     这篇文章比较长, 我把客户端和命令行放在一起了.   所以请读者合理使用左侧目录跳转, 以节省时间. </li>
+<li>本文是从小白开始的教程, 大牛勿喷. 再说. 这是我第一次写, 难免过于幼稚.  体谅哈~</li>
+</ol>
+</blockquote>
+<a id="more"></a>
+<p><strong><em>相关</em></strong>  </p>
+<blockquote>
+<p><strong>第一部分</strong> <a href="http://blog.zhinian.info/2016/12/08/Github-1/">认识Github和Github Page</a></p>
+<p>  在第一部分中,  我简单的写了Github的注册, 建仓库,  初次使用Github page. 还是用的网页上的<strong>create new file</strong> 在实际生产中, 我们肯定不可能是那样的写文件吧, 所以. 这个博文就是教你如何上传代码文件的</p>
+<p><strong>第二部分</strong> <a href="http://blog.zhinian.info/2016/12/08/Github-2/">使用客户端或命令行上传你的代码</a></p>
+<p>​      本文讲述了如何上传 本地的代码 到 Github上.  常见的方式有 <strong><code>客户端</code></strong> 和 <strong><code>终端命令行</code></strong>  这两种. 我在这里用文字加图片的方法, 讲述一下Github的上传代码的事情. </p>
+</blockquote>
+<h1 id="Github-的客户端使用"><a href="#Github-的客户端使用" class="headerlink" title="Github 的客户端使用"></a>Github 的客户端使用</h1><p>  当今盛行的代码托管服务平台.  而我们作为一个程序员, 岂有弃之不用之理~  好绕哈哈.    下面我就直接进入主题  客户端的使用.  分别有Mac端 和 windows端 的使用.</p>
+<blockquote>
+<p>客户端是简单的操作, 适合新手. </p>
+</blockquote>
+<h2 id="Mac客户端下载与使用"><a href="#Mac客户端下载与使用" class="headerlink" title="Mac客户端下载与使用"></a>Mac客户端下载与使用</h2><h3 id="1-下载与安装"><a href="#1-下载与安装" class="headerlink" title="1. 下载与安装"></a>1. 下载与安装</h3><ul>
+<li>官网下载地址: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
+<li>如果网速慢, 可以在我的网盘下载. 链接: <a href="http://pan.baidu.com/s/1i4B4tzZ" target="_blank" rel="external">http://pan.baidu.com/s/1i4B4tzZ</a> 密码: gjpy</li>
+</ul>
+<h3 id="2-登录客户端"><a href="#2-登录客户端" class="headerlink" title="2. 登录客户端"></a>2. 登录客户端</h3><ul>
+<li>快捷键 <code>command</code> + <code>,</code> 打开客户端的设置.  </li>
+<li>点击 <strong>Accounts</strong>  然后  sign in 你的Github账号.</li>
+</ul>
+<h3 id="3-克隆仓库"><a href="#3-克隆仓库" class="headerlink" title="3. 克隆仓库"></a>3. 克隆仓库</h3><ul>
+<li>登陆成功后, 在客户端的左上角点击 <strong><em>+</em></strong>  图标, 在弹出来的框框中,  有三个选项: Add  Create  Clone,  这里我们需要点击Clone. </li>
+<li>这时会出来你Github账号上,  所有的仓库.  你需要clone哪个, 就点击仓库名字, 右下角的按钮就亮了.   click it</li>
+<li>弹出clone选项, 你选择好文件夹就可以了.</li>
+</ul>
+<h3 id="4-写代码咯"><a href="#4-写代码咯" class="headerlink" title="4. 写代码咯"></a>4. 写代码咯</h3><p>  你想托管在Github平台的代码放在你克隆到本地的仓库下面就好了,  然后接着下一步, push你的代码吧.</p>
+<blockquote>
+<p>这里上面的几个步骤,  是你第一次使用Github提交代码的顺序,  在接下来的时间里,  在你已经克隆过本地仓库后, 你要是需要提交代码到Github上,  那直接走 <a href="#5-提交代码到Github上">提交代码到Github上</a> 这一步就好了</p>
+</blockquote>
+<h3 id="5-提交代码到Github上"><a href="#5-提交代码到Github上" class="headerlink" title="5. 提交代码到Github上"></a>5. 提交代码到Github上</h3><ol>
+<li><p>打开客户端.  点击左侧你要同步的仓库</p>
+</li>
+<li><p>当你本地的代码与网页上的相比, 有变动的时候, 会显示有多少个 changes . </p>
+</li>
+<li><p>在changes下,  在你的头像旁边, 有一个输入框, summary(描述)  输入你为这一次提交的说明.       </p>
+<ul>
+<li>这个是必须的</li>
+<li>你的说明, 如果出现空格,  请用 <strong>“”</strong> 把说明包含起来</li>
+</ul>
+<p>​</p>
+</li>
+<li><p>输入完上述的summary后,  下面的 <code>Commit to master</code> 就可以点击了     click it</p>
+</li>
+<li><p>这时候你已经完成了90%了,  最后一步就是点击右上角黑色框中的  Sync  . 等待上传成功吧.</p>
+</li>
+<li><p>去Github官网上,  登录你的账号, 查看你刚刚提交的代码吧.  啊哈~ </p>
+</li>
+</ol>
+<h3 id="6-常见问题"><a href="#6-常见问题" class="headerlink" title="6. 常见问题"></a>6. 常见问题</h3><p>  收集中….</p>
+<h2 id="Windows客户端下载与使用"><a href="#Windows客户端下载与使用" class="headerlink" title="Windows客户端下载与使用"></a>Windows客户端下载与使用</h2><h3 id="1-下载与安装-1"><a href="#1-下载与安装-1" class="headerlink" title="1. 下载与安装"></a>1. 下载与安装</h3><ul>
+<li>官网下载地址: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
+<li>如果网速慢, 可以在我的网盘下载.  链接: </li>
+</ul>
+<h3 id="2-登录客户端-1"><a href="#2-登录客户端-1" class="headerlink" title="2. 登录客户端"></a>2. 登录客户端</h3><h3 id="3-克隆仓库-1"><a href="#3-克隆仓库-1" class="headerlink" title="3. 克隆仓库"></a>3. 克隆仓库</h3><h3 id="4-写代码咯-1"><a href="#4-写代码咯-1" class="headerlink" title="4. 写代码咯"></a>4. 写代码咯</h3><h3 id="5-提交代码到Github上-1"><a href="#5-提交代码到Github上-1" class="headerlink" title="5. 提交代码到Github上"></a>5. 提交代码到Github上</h3><h3 id="6-常见问题-1"><a href="#6-常见问题-1" class="headerlink" title="6. 常见问题"></a>6. 常见问题</h3><h1 id="命令行的使用-Git"><a href="#命令行的使用-Git" class="headerlink" title="命令行的使用  Git"></a>命令行的使用  Git</h1><blockquote>
+<p>命令行是轻松方便的一个方法,  它舍去了鼠标的点来点去, 舍去了UI界面,  用最简单的一行行命令轻松完成clone  commit  push 等等, 将你的代码从本地托管到Github上</p>
+</blockquote>
+<h2 id="Mac下的git命令行"><a href="#Mac下的git命令行" class="headerlink" title="Mac下的git命令行"></a>Mac下的git命令行</h2><h3 id="1-终端的介绍与使用"><a href="#1-终端的介绍与使用" class="headerlink" title="1. 终端的介绍与使用"></a>1. 终端的介绍与使用</h3><ol>
+<li><strong>终端是什么?</strong><ul>
+<li>是以<code>执行命令的方式</code><strong>来完成</strong><code>一些操作</code>的工具,  比如查看某个文件夹下的文件, 你可以在GUI界面, 打开Finder查看对应的文件.   也可以在终端里通过 cd  ls 等命令查看文件. </li>
+<li>详情请自行谷歌<a href="https://www.google.com/" target="_blank" rel="external">https://www.google.com/</a> 或者 必应<a href="http://cn.bing.com/" target="_blank" rel="external">http://cn.bing.com/</a></li>
+<li><strong>PS:</strong> 如果你自认为是做技术的,  我强烈推荐你  <strong>学会翻墙</strong>  好处不用多说,  讲道理某度搜索真的会误人! ! ! </li>
+</ul>
+</li>
+<li><strong>Mac 系统下终端在哪里? 还需要下载吗?</strong><ul>
+<li>Mac系统下,  已经有终端软件 Terminal , 可以在Spotlight 中, 输入 Terminal查找,   然后打开.  也可以在Launchpad中,  有个实用工具程序文件夹, 终端就在里面, 点击打开就好了. </li>
+<li>Mac系统自带的有Terminal,  我觉得它的<strong>功能方面</strong>, 不如我现在用的 <code>iTerm</code>  就像是记事本和Sublime之间的区别. - 如有感兴趣的可以谷歌搜索, 了解了解. 这里就不详细讲述了.</li>
+</ul>
+</li>
+<li><strong>终端如何使用?</strong><ul>
+<li>打开终端后, 输入命令, 回车执行.  </li>
+<li>输入命令时,  如有命令加文件的,   记得要用空格分隔开,   比如 cd work 中间有空格的,  而不是cdwork</li>
+</ul>
+</li>
+<li><strong>终端常用的一些命令</strong><ul>
+<li>ls  —— 显示当前路径下的文件  ls -a可以显示隐藏文件. ls -l可以显示文件信息. ls -al 组合两个功能了</li>
+<li>cd  —— cd + 文件名   打开文件. 比如 当前路径下有个work文件夹,  我想在终端中打开,  那就是 cd work 回车执行</li>
+<li>chmod —— 改变文件权限   这个命令可能会经常用到, 详情 请谷歌吧, 挺长的….   偷个懒</li>
+<li>mkdir —— mkdir + 文件名,  这个命令是新建目录,  mkdir work   就是新建了一个work文件夹,  中文名和带空格符的 ,  要用””符号  如  mkdir “learn mkdir”</li>
+<li>cp —— 复制文件命令, copy嘛, 使用方法是  cp 参数 源文件 目标文件   示例: 把work下的text.txt文件 cp到home目录下,   cp -R /work/text.txt /home/ 这样就好了  <strong>PS:注意空格,    另外我只是演示, 这个路径要写完整, 从根目录开始.</strong></li>
+<li>rm —— 删除文件  remove的缩写咯,    示例:  rm text.txt  删除了text文件. </li>
+<li>还有 mv 移动文件  move的缩写.     等等….     命令行的命令太多了, 感兴趣的可以自行搜索…    </li>
+</ul>
+</li>
+</ol>
+<h3 id="2-公钥密钥的介绍与生成"><a href="#2-公钥密钥的介绍与生成" class="headerlink" title="2. 公钥密钥的介绍与生成"></a>2. 公钥密钥的介绍与生成</h3><ol>
+<li><p><strong>ssh, (Secure Shell)</strong>  </p>
+<ul>
+<li>是一种  创建在应用层和传输层 基础上的安全协议. </li>
+<li>基于<strong>密钥</strong>的安全验证    </li>
+<li>Github 支持ssh密钥</li>
+</ul>
+</li>
+<li><p><strong>本地生成ssh</strong></p>
+<ol>
+<li><p>如果是第一次使用, 那你的本地应该没有一对密钥的.   不过以防万一还是检查一下吧.  </p>
+<ul>
+<li>打开终端,  输入命令</li>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ~/.ssh</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果返回’…No such file or directory …’  就说明没有创建过密钥.  那就进行下一步 2 , 生成你的密钥.  如果有,  你确定这个rsa是你的Github注册邮箱吗?  确定 那就跳到 <a href="#3-上传公钥到Github">3. 上传公钥到Github</a></p>
+</li>
+</ul>
+</li>
+<li><p><strong>生成新的key</strong> </p>
+<ul>
+<li><p>输入命令   这里 <strong>“”</strong> 内输入的是你Github账号<strong>绑定的邮箱</strong>.    千万要输入正确袄…       其中 在命令中,  github_rsa   是指的  给新建的密钥 <strong>命名</strong> 为github_rsa , 你也可以更改. 我下文都是用的github_rsa, 如果更改, 注意替换袄. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen <span class="_">-f</span> github_rsa -C <span class="string">"your_email@youremail.com"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>然后回车两次,  就生成完毕了,        其中第一次回车是问 passphrase , 这个它会在你每次进行版本控制(提交文件)时,  让你输入, 我个人没有使用, 所以就回车了,  第二次是让你输密码, 然后每次提交也要输密码, 所以为了懒, 我也回车了,  当然你觉得有用, 你可以加上. </p>
+</li>
+<li><code>ls</code> 一下.  会有<code>github_rsa</code> 和 <code>github_rsa.pub</code> 这两个文件,  在下一步中, 我们把公钥上传到github. </li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="3-上传公钥到Github"><a href="#3-上传公钥到Github" class="headerlink" title="3. 上传公钥到Github"></a>3. <strong>上传公钥到Github</strong></h3><blockquote>
+<p>这时, 你已经有了文件.ssh 以及有了你注册Github账号时, 所用的邮箱生成的 一对密钥了.  </p>
+</blockquote>
+<ul>
+<li>  Mac 有个命令是copy文件到剪贴板.      那我们把上一步生成的公钥复制进去吧  注意命令空格</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pbcopy &lt; ~/.ssh/github_rsa.pub</div></pre></td></tr></table></figure>
+<p>OK 输入完回车.      里面的内容已经十分乖巧的复制到剪贴板里面了</p>
+<ul>
+<li>打开Github <a href="https://github.com/" target="_blank" rel="external">https://github.com/</a> 登陆你的账号, </li>
+<li>打开这个链接 : <a href="https://github.com/settings/keys" target="_blank" rel="external">https://github.com/settings/keys</a>  </li>
+<li>现在打开的页面是设置ssh的.    请点击页面上, 右上角区域的 <strong><code>New SSH key</code></strong> </li>
+<li>在出现的两个输入框,  第一个输入你给ssh key 的命名, 比如 <code>github_id</code>    第二个输入框,  选中后, <code>command</code> + <code>v</code>  粘贴你刚刚复制的公钥. </li>
+<li>点击 <code>Add SSH key</code> 就完成了这一步. </li>
+</ul>
+<h3 id="4-检查SSH链接"><a href="#4-检查SSH链接" class="headerlink" title="4. 检查SSH链接"></a>4. <strong>检查SSH链接</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure>
+<p>如果显示 : Are you sure you want continue connecting (yes/no)?    输入yes      没有这个也没事</p>
+<p>最终显示:  Hi  yourusername! You’re ………  就ok了 </p>
+<p>参考链接: <a href="http://www.jianshu.com/p/0d7038102cd6" target="_blank" rel="external">http://www.jianshu.com/p/0d7038102cd6</a>  详情可点击查看. </p>
+<h3 id="5-使用命令上传代码吧"><a href="#5-使用命令上传代码吧" class="headerlink" title="5. 使用命令上传代码吧 !"></a>5. <strong>使用命令上传代码吧 !</strong></h3><blockquote>
+<ul>
+<li>git status   // 检查状态.   一般用于查看本地仓库有无改动. </li>
+<li>git add .   // 更新改动. </li>
+<li>git commit -m “first commit”  // 提交更新到暂存区并注释是”first commit”     <strong>PS</strong> 这个-m后面 一定要有<code>&quot;String&quot;</code> 不然会多麻烦的. </li>
+<li>git push // 提交到Github</li>
+</ul>
+</blockquote>
+<h3 id="6-常见问题-2"><a href="#6-常见问题-2" class="headerlink" title="6. 常见问题"></a>6. <strong>常见问题</strong></h3><p>  收集中…….</p>
+<h2 id="Windows下的git命令行"><a href="#Windows下的git命令行" class="headerlink" title="Windows下的git命令行"></a>Windows下的git命令行</h2><h3 id="1-Git-shell介绍"><a href="#1-Git-shell介绍" class="headerlink" title="1. Git shell介绍"></a>1. <strong>Git shell介绍</strong></h3><h3 id="2-密钥生成"><a href="#2-密钥生成" class="headerlink" title="2. 密钥生成"></a>2. <strong>密钥生成</strong></h3><h3 id="3-上传公钥到Github-1"><a href="#3-上传公钥到Github-1" class="headerlink" title="3. 上传公钥到Github"></a>3. <strong>上传公钥到Github</strong></h3><h3 id="4-检查SSH连接"><a href="#4-检查SSH连接" class="headerlink" title="4. 检查SSH连接"></a>4. <strong>检查SSH连接</strong></h3><h3 id="5-使用命令上传"><a href="#5-使用命令上传" class="headerlink" title="5. 使用命令上传"></a>5. <strong>使用命令上传</strong></h3><h3 id="6-常见问题-3"><a href="#6-常见问题-3" class="headerlink" title="6. 常见问题"></a>6. <strong>常见问题</strong></h3><p>​        </p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/12/18/Github-2/">Github 的注册与使用教程以及github page (二)</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">鹏程</a></p>
+        <p><span>发布时间:</span>2016-12-18, 22:47:16</p>
+        <p><span>最后更新:</span>2016-12-19, 13:23:21</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/12/18/Github-2/" title="Github 的注册与使用教程以及github page (二)">http://blog.zhinian.info/2016/12/18/Github-2/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.zhinian.info/2016/12/18/Github-2/　　作者: 鹏程" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/12/16/blog/">
+                    这个blog 你需要知道的
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用Github来托管你的代码"><span class="toc-number">1.</span> <span class="toc-text">使用Github来托管你的代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Github-的客户端使用"><span class="toc-number">2.</span> <span class="toc-text">Github 的客户端使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac客户端下载与使用"><span class="toc-number">2.1.</span> <span class="toc-text">Mac客户端下载与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-下载与安装"><span class="toc-number">2.1.1.</span> <span class="toc-text">1. 下载与安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-登录客户端"><span class="toc-number">2.1.2.</span> <span class="toc-text">2. 登录客户端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-克隆仓库"><span class="toc-number">2.1.3.</span> <span class="toc-text">3. 克隆仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-写代码咯"><span class="toc-number">2.1.4.</span> <span class="toc-text">4. 写代码咯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-提交代码到Github上"><span class="toc-number">2.1.5.</span> <span class="toc-text">5. 提交代码到Github上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-常见问题"><span class="toc-number">2.1.6.</span> <span class="toc-text">6. 常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows客户端下载与使用"><span class="toc-number">2.2.</span> <span class="toc-text">Windows客户端下载与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-下载与安装-1"><span class="toc-number">2.2.1.</span> <span class="toc-text">1. 下载与安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-登录客户端-1"><span class="toc-number">2.2.2.</span> <span class="toc-text">2. 登录客户端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-克隆仓库-1"><span class="toc-number">2.2.3.</span> <span class="toc-text">3. 克隆仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-写代码咯-1"><span class="toc-number">2.2.4.</span> <span class="toc-text">4. 写代码咯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-提交代码到Github上-1"><span class="toc-number">2.2.5.</span> <span class="toc-text">5. 提交代码到Github上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-常见问题-1"><span class="toc-number">2.2.6.</span> <span class="toc-text">6. 常见问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#命令行的使用-Git"><span class="toc-number">3.</span> <span class="toc-text">命令行的使用  Git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac下的git命令行"><span class="toc-number">3.1.</span> <span class="toc-text">Mac下的git命令行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-终端的介绍与使用"><span class="toc-number">3.1.1.</span> <span class="toc-text">1. 终端的介绍与使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-公钥密钥的介绍与生成"><span class="toc-number">3.1.2.</span> <span class="toc-text">2. 公钥密钥的介绍与生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-上传公钥到Github"><span class="toc-number">3.1.3.</span> <span class="toc-text">3. 上传公钥到Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-检查SSH链接"><span class="toc-number">3.1.4.</span> <span class="toc-text">4. 检查SSH链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-使用命令上传代码吧"><span class="toc-number">3.1.5.</span> <span class="toc-text">5. 使用命令上传代码吧 !</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-常见问题-2"><span class="toc-number">3.1.6.</span> <span class="toc-text">6. 常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows下的git命令行"><span class="toc-number">3.2.</span> <span class="toc-text">Windows下的git命令行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git-shell介绍"><span class="toc-number">3.2.1.</span> <span class="toc-text">1. Git shell介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-密钥生成"><span class="toc-number">3.2.2.</span> <span class="toc-text">2. 密钥生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-上传公钥到Github-1"><span class="toc-number">3.2.3.</span> <span class="toc-text">3. 上传公钥到Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-检查SSH连接"><span class="toc-number">3.2.4.</span> <span class="toc-text">4. 检查SSH连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-使用命令上传"><span class="toc-number">3.2.5.</span> <span class="toc-text">5. 使用命令上传</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-常见问题-3"><span class="toc-number">3.2.6.</span> <span class="toc-text">6. 常见问题</span></a></li></ol></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Github 的注册与使用教程以及github page (二)　| zhinian_Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/18/Github-2/" data-title="Github 的注册与使用教程以及github page (二)" data-url="http://blog.zhinian.info/2016/12/18/Github-2/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"zhinian95"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = "http://blog.zhinian.info/js/embed.js";
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/12/16/blog/" title="下一篇: 这个blog 你需要知道的">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/18/Github-2/">Github 的注册与使用教程以及github page (二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/16/blog/">这个blog 你需要知道的</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/night/">一次晚归夜宿与早起日出</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/08/Github-1/">Github 的注册与使用教程以及github page (一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/05/steamroller/">Fcc --- Steamroller</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Writing/">Write</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Fcc/">Fcc 须知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 鹏程
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

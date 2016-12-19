@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.zhinian.info/"/>
-  <updated>2016-12-16T11:58:21.000Z</updated>
+  <updated>2016-12-19T05:23:21.000Z</updated>
   <id>http://blog.zhinian.info/</id>
   
   <author>
@@ -16,17 +16,205 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Github 的注册与使用教程以及github page (二)</title>
+    <link href="http://blog.zhinian.info/2016/12/18/Github-2/"/>
+    <id>http://blog.zhinian.info/2016/12/18/Github-2/</id>
+    <published>2016-12-18T14:47:16.000Z</published>
+    <updated>2016-12-19T05:23:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="使用Github来托管你的代码"><a href="#使用Github来托管你的代码" class="headerlink" title="使用Github来托管你的代码"></a>使用Github来托管你的代码</h1><p><strong><em>须知</em></strong> </p>
+<blockquote>
+<ol>
+<li><strong><code>写在前面的话:</code></strong>         如果你自认为是做技术的,  我强烈推荐你  <strong>学会翻墙</strong>,  好处不用多说,  讲道理某度搜索真的会误人! ! ! </li>
+<li><strong><code>关于使用客户端还是命令行</code></strong>     两个都可以上传你的代码,  就是看你喜欢哪种风格了.   </li>
+<li><strong><code>善于使用左侧目录跳转</code></strong>     这篇文章比较长, 我把客户端和命令行放在一起了.   所以请读者合理使用左侧目录跳转, 以节省时间. </li>
+<li>本文是从小白开始的教程, 大牛勿喷. 再说. 这是我第一次写, 难免过于幼稚.  体谅哈~</li>
+</ol>
+</blockquote>
+<a id="more"></a>
+<p><strong><em>相关</em></strong>  </p>
+<blockquote>
+<p><strong>第一部分</strong> <a href="http://blog.zhinian.info/2016/12/08/Github-1/">认识Github和Github Page</a></p>
+<p>  在第一部分中,  我简单的写了Github的注册, 建仓库,  初次使用Github page. 还是用的网页上的<strong>create new file</strong> 在实际生产中, 我们肯定不可能是那样的写文件吧, 所以. 这个博文就是教你如何上传代码文件的</p>
+<p><strong>第二部分</strong> <a href="http://blog.zhinian.info/2016/12/08/Github-2/">使用客户端或命令行上传你的代码</a></p>
+<p>​      本文讲述了如何上传 本地的代码 到 Github上.  常见的方式有 <strong><code>客户端</code></strong> 和 <strong><code>终端命令行</code></strong>  这两种. 我在这里用文字加图片的方法, 讲述一下Github的上传代码的事情. </p>
+</blockquote>
+<h1 id="Github-的客户端使用"><a href="#Github-的客户端使用" class="headerlink" title="Github 的客户端使用"></a>Github 的客户端使用</h1><p>  当今盛行的代码托管服务平台.  而我们作为一个程序员, 岂有弃之不用之理~  好绕哈哈.    下面我就直接进入主题  客户端的使用.  分别有Mac端 和 windows端 的使用.</p>
+<blockquote>
+<p>客户端是简单的操作, 适合新手. </p>
+</blockquote>
+<h2 id="Mac客户端下载与使用"><a href="#Mac客户端下载与使用" class="headerlink" title="Mac客户端下载与使用"></a>Mac客户端下载与使用</h2><h3 id="1-下载与安装"><a href="#1-下载与安装" class="headerlink" title="1. 下载与安装"></a>1. 下载与安装</h3><ul>
+<li>官网下载地址: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
+<li>如果网速慢, 可以在我的网盘下载. 链接: <a href="http://pan.baidu.com/s/1i4B4tzZ" target="_blank" rel="external">http://pan.baidu.com/s/1i4B4tzZ</a> 密码: gjpy</li>
+</ul>
+<h3 id="2-登录客户端"><a href="#2-登录客户端" class="headerlink" title="2. 登录客户端"></a>2. 登录客户端</h3><ul>
+<li>快捷键 <code>command</code> + <code>,</code> 打开客户端的设置.  </li>
+<li>点击 <strong>Accounts</strong>  然后  sign in 你的Github账号.</li>
+</ul>
+<h3 id="3-克隆仓库"><a href="#3-克隆仓库" class="headerlink" title="3. 克隆仓库"></a>3. 克隆仓库</h3><ul>
+<li>登陆成功后, 在客户端的左上角点击 <strong><em>+</em></strong>  图标, 在弹出来的框框中,  有三个选项: Add  Create  Clone,  这里我们需要点击Clone. </li>
+<li>这时会出来你Github账号上,  所有的仓库.  你需要clone哪个, 就点击仓库名字, 右下角的按钮就亮了.   click it</li>
+<li>弹出clone选项, 你选择好文件夹就可以了.</li>
+</ul>
+<h3 id="4-写代码咯"><a href="#4-写代码咯" class="headerlink" title="4. 写代码咯"></a>4. 写代码咯</h3><p>  你想托管在Github平台的代码放在你克隆到本地的仓库下面就好了,  然后接着下一步, push你的代码吧.</p>
+<blockquote>
+<p>这里上面的几个步骤,  是你第一次使用Github提交代码的顺序,  在接下来的时间里,  在你已经克隆过本地仓库后, 你要是需要提交代码到Github上,  那直接走 <a href="#5-提交代码到Github上">提交代码到Github上</a> 这一步就好了</p>
+</blockquote>
+<h3 id="5-提交代码到Github上"><a href="#5-提交代码到Github上" class="headerlink" title="5. 提交代码到Github上"></a>5. 提交代码到Github上</h3><ol>
+<li><p>打开客户端.  点击左侧你要同步的仓库</p>
+</li>
+<li><p>当你本地的代码与网页上的相比, 有变动的时候, 会显示有多少个 changes . </p>
+</li>
+<li><p>在changes下,  在你的头像旁边, 有一个输入框, summary(描述)  输入你为这一次提交的说明.       </p>
+<ul>
+<li>这个是必须的</li>
+<li>你的说明, 如果出现空格,  请用 <strong>“”</strong> 把说明包含起来</li>
+</ul>
+<p>​</p>
+</li>
+<li><p>输入完上述的summary后,  下面的 <code>Commit to master</code> 就可以点击了     click it</p>
+</li>
+<li><p>这时候你已经完成了90%了,  最后一步就是点击右上角黑色框中的  Sync  . 等待上传成功吧.</p>
+</li>
+<li><p>去Github官网上,  登录你的账号, 查看你刚刚提交的代码吧.  啊哈~ </p>
+</li>
+</ol>
+<h3 id="6-常见问题"><a href="#6-常见问题" class="headerlink" title="6. 常见问题"></a>6. 常见问题</h3><p>  收集中….</p>
+<h2 id="Windows客户端下载与使用"><a href="#Windows客户端下载与使用" class="headerlink" title="Windows客户端下载与使用"></a>Windows客户端下载与使用</h2><h3 id="1-下载与安装-1"><a href="#1-下载与安装-1" class="headerlink" title="1. 下载与安装"></a>1. 下载与安装</h3><ul>
+<li>官网下载地址: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
+<li>如果网速慢, 可以在我的网盘下载.  链接: </li>
+</ul>
+<h3 id="2-登录客户端-1"><a href="#2-登录客户端-1" class="headerlink" title="2. 登录客户端"></a>2. 登录客户端</h3><h3 id="3-克隆仓库-1"><a href="#3-克隆仓库-1" class="headerlink" title="3. 克隆仓库"></a>3. 克隆仓库</h3><h3 id="4-写代码咯-1"><a href="#4-写代码咯-1" class="headerlink" title="4. 写代码咯"></a>4. 写代码咯</h3><h3 id="5-提交代码到Github上-1"><a href="#5-提交代码到Github上-1" class="headerlink" title="5. 提交代码到Github上"></a>5. 提交代码到Github上</h3><h3 id="6-常见问题-1"><a href="#6-常见问题-1" class="headerlink" title="6. 常见问题"></a>6. 常见问题</h3><h1 id="命令行的使用-Git"><a href="#命令行的使用-Git" class="headerlink" title="命令行的使用  Git"></a>命令行的使用  Git</h1><blockquote>
+<p>命令行是轻松方便的一个方法,  它舍去了鼠标的点来点去, 舍去了UI界面,  用最简单的一行行命令轻松完成clone  commit  push 等等, 将你的代码从本地托管到Github上</p>
+</blockquote>
+<h2 id="Mac下的git命令行"><a href="#Mac下的git命令行" class="headerlink" title="Mac下的git命令行"></a>Mac下的git命令行</h2><h3 id="1-终端的介绍与使用"><a href="#1-终端的介绍与使用" class="headerlink" title="1. 终端的介绍与使用"></a>1. 终端的介绍与使用</h3><ol>
+<li><strong>终端是什么?</strong><ul>
+<li>是以<code>执行命令的方式</code><strong>来完成</strong><code>一些操作</code>的工具,  比如查看某个文件夹下的文件, 你可以在GUI界面, 打开Finder查看对应的文件.   也可以在终端里通过 cd  ls 等命令查看文件. </li>
+<li>详情请自行谷歌<a href="https://www.google.com/" target="_blank" rel="external">https://www.google.com/</a> 或者 必应<a href="http://cn.bing.com/" target="_blank" rel="external">http://cn.bing.com/</a></li>
+<li><strong>PS:</strong> 如果你自认为是做技术的,  我强烈推荐你  <strong>学会翻墙</strong>  好处不用多说,  讲道理某度搜索真的会误人! ! ! </li>
+</ul>
+</li>
+<li><strong>Mac 系统下终端在哪里? 还需要下载吗?</strong><ul>
+<li>Mac系统下,  已经有终端软件 Terminal , 可以在Spotlight 中, 输入 Terminal查找,   然后打开.  也可以在Launchpad中,  有个实用工具程序文件夹, 终端就在里面, 点击打开就好了. </li>
+<li>Mac系统自带的有Terminal,  我觉得它的<strong>功能方面</strong>, 不如我现在用的 <code>iTerm</code>  就像是记事本和Sublime之间的区别. - 如有感兴趣的可以谷歌搜索, 了解了解. 这里就不详细讲述了.</li>
+</ul>
+</li>
+<li><strong>终端如何使用?</strong><ul>
+<li>打开终端后, 输入命令, 回车执行.  </li>
+<li>输入命令时,  如有命令加文件的,   记得要用空格分隔开,   比如 cd work 中间有空格的,  而不是cdwork</li>
+</ul>
+</li>
+<li><strong>终端常用的一些命令</strong><ul>
+<li>ls  —— 显示当前路径下的文件  ls -a可以显示隐藏文件. ls -l可以显示文件信息. ls -al 组合两个功能了</li>
+<li>cd  —— cd + 文件名   打开文件. 比如 当前路径下有个work文件夹,  我想在终端中打开,  那就是 cd work 回车执行</li>
+<li>chmod —— 改变文件权限   这个命令可能会经常用到, 详情 请谷歌吧, 挺长的….   偷个懒</li>
+<li>mkdir —— mkdir + 文件名,  这个命令是新建目录,  mkdir work   就是新建了一个work文件夹,  中文名和带空格符的 ,  要用””符号  如  mkdir “learn mkdir”</li>
+<li>cp —— 复制文件命令, copy嘛, 使用方法是  cp 参数 源文件 目标文件   示例: 把work下的text.txt文件 cp到home目录下,   cp -R /work/text.txt /home/ 这样就好了  <strong>PS:注意空格,    另外我只是演示, 这个路径要写完整, 从根目录开始.</strong></li>
+<li>rm —— 删除文件  remove的缩写咯,    示例:  rm text.txt  删除了text文件. </li>
+<li>还有 mv 移动文件  move的缩写.     等等….     命令行的命令太多了, 感兴趣的可以自行搜索…    </li>
+</ul>
+</li>
+</ol>
+<h3 id="2-公钥密钥的介绍与生成"><a href="#2-公钥密钥的介绍与生成" class="headerlink" title="2. 公钥密钥的介绍与生成"></a>2. 公钥密钥的介绍与生成</h3><ol>
+<li><p><strong>ssh, (Secure Shell)</strong>  </p>
+<ul>
+<li>是一种  创建在应用层和传输层 基础上的安全协议. </li>
+<li>基于<strong>密钥</strong>的安全验证    </li>
+<li>Github 支持ssh密钥</li>
+</ul>
+</li>
+<li><p><strong>本地生成ssh</strong></p>
+<ol>
+<li><p>如果是第一次使用, 那你的本地应该没有一对密钥的.   不过以防万一还是检查一下吧.  </p>
+<ul>
+<li>打开终端,  输入命令</li>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ~/.ssh</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果返回’…No such file or directory …’  就说明没有创建过密钥.  那就进行下一步 2 , 生成你的密钥.  如果有,  你确定这个rsa是你的Github注册邮箱吗?  确定 那就跳到 <a href="#3-上传公钥到Github">3. 上传公钥到Github</a></p>
+</li>
+</ul>
+</li>
+<li><p><strong>生成新的key</strong> </p>
+<ul>
+<li><p>输入命令   这里 <strong>“”</strong> 内输入的是你Github账号<strong>绑定的邮箱</strong>.    千万要输入正确袄…       其中 在命令中,  github_rsa   是指的  给新建的密钥 <strong>命名</strong> 为github_rsa , 你也可以更改. 我下文都是用的github_rsa, 如果更改, 注意替换袄. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen <span class="_">-f</span> github_rsa -C <span class="string">"your_email@youremail.com"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>然后回车两次,  就生成完毕了,        其中第一次回车是问 passphrase , 这个它会在你每次进行版本控制(提交文件)时,  让你输入, 我个人没有使用, 所以就回车了,  第二次是让你输密码, 然后每次提交也要输密码, 所以为了懒, 我也回车了,  当然你觉得有用, 你可以加上. </p>
+</li>
+<li><code>ls</code> 一下.  会有<code>github_rsa</code> 和 <code>github_rsa.pub</code> 这两个文件,  在下一步中, 我们把公钥上传到github. </li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="3-上传公钥到Github"><a href="#3-上传公钥到Github" class="headerlink" title="3. 上传公钥到Github"></a>3. <strong>上传公钥到Github</strong></h3><blockquote>
+<p>这时, 你已经有了文件.ssh 以及有了你注册Github账号时, 所用的邮箱生成的 一对密钥了.  </p>
+</blockquote>
+<ul>
+<li>  Mac 有个命令是copy文件到剪贴板.      那我们把上一步生成的公钥复制进去吧  注意命令空格</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pbcopy &lt; ~/.ssh/github_rsa.pub</div></pre></td></tr></table></figure>
+<p>OK 输入完回车.      里面的内容已经十分乖巧的复制到剪贴板里面了</p>
+<ul>
+<li>打开Github <a href="https://github.com/" target="_blank" rel="external">https://github.com/</a> 登陆你的账号, </li>
+<li>打开这个链接 : <a href="https://github.com/settings/keys" target="_blank" rel="external">https://github.com/settings/keys</a>  </li>
+<li>现在打开的页面是设置ssh的.    请点击页面上, 右上角区域的 <strong><code>New SSH key</code></strong> </li>
+<li>在出现的两个输入框,  第一个输入你给ssh key 的命名, 比如 <code>github_id</code>    第二个输入框,  选中后, <code>command</code> + <code>v</code>  粘贴你刚刚复制的公钥. </li>
+<li>点击 <code>Add SSH key</code> 就完成了这一步. </li>
+</ul>
+<h3 id="4-检查SSH链接"><a href="#4-检查SSH链接" class="headerlink" title="4. 检查SSH链接"></a>4. <strong>检查SSH链接</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure>
+<p>如果显示 : Are you sure you want continue connecting (yes/no)?    输入yes      没有这个也没事</p>
+<p>最终显示:  Hi  yourusername! You’re ………  就ok了 </p>
+<p>参考链接: <a href="http://www.jianshu.com/p/0d7038102cd6" target="_blank" rel="external">http://www.jianshu.com/p/0d7038102cd6</a>  详情可点击查看. </p>
+<h3 id="5-使用命令上传代码吧"><a href="#5-使用命令上传代码吧" class="headerlink" title="5. 使用命令上传代码吧 !"></a>5. <strong>使用命令上传代码吧 !</strong></h3><blockquote>
+<ul>
+<li>git status   // 检查状态.   一般用于查看本地仓库有无改动. </li>
+<li>git add .   // 更新改动. </li>
+<li>git commit -m “first commit”  // 提交更新到暂存区并注释是”first commit”     <strong>PS</strong> 这个-m后面 一定要有<code>&quot;String&quot;</code> 不然会多麻烦的. </li>
+<li>git push // 提交到Github</li>
+</ul>
+</blockquote>
+<h3 id="6-常见问题-2"><a href="#6-常见问题-2" class="headerlink" title="6. 常见问题"></a>6. <strong>常见问题</strong></h3><p>  收集中…….</p>
+<h2 id="Windows下的git命令行"><a href="#Windows下的git命令行" class="headerlink" title="Windows下的git命令行"></a>Windows下的git命令行</h2><h3 id="1-Git-shell介绍"><a href="#1-Git-shell介绍" class="headerlink" title="1. Git shell介绍"></a>1. <strong>Git shell介绍</strong></h3><h3 id="2-密钥生成"><a href="#2-密钥生成" class="headerlink" title="2. 密钥生成"></a>2. <strong>密钥生成</strong></h3><h3 id="3-上传公钥到Github-1"><a href="#3-上传公钥到Github-1" class="headerlink" title="3. 上传公钥到Github"></a>3. <strong>上传公钥到Github</strong></h3><h3 id="4-检查SSH连接"><a href="#4-检查SSH连接" class="headerlink" title="4. 检查SSH连接"></a>4. <strong>检查SSH连接</strong></h3><h3 id="5-使用命令上传"><a href="#5-使用命令上传" class="headerlink" title="5. 使用命令上传"></a>5. <strong>使用命令上传</strong></h3><h3 id="6-常见问题-3"><a href="#6-常见问题-3" class="headerlink" title="6. 常见问题"></a>6. <strong>常见问题</strong></h3><p>​        </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;使用Github来托管你的代码&quot;&gt;&lt;a href=&quot;#使用Github来托管你的代码&quot; class=&quot;headerlink&quot; title=&quot;使用Github来托管你的代码&quot;&gt;&lt;/a&gt;使用Github来托管你的代码&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;须知&lt;/em&gt;&lt;/strong&gt; &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;写在前面的话:&lt;/code&gt;&lt;/strong&gt;         如果你自认为是做技术的,  我强烈推荐你  &lt;strong&gt;学会翻墙&lt;/strong&gt;,  好处不用多说,  讲道理某度搜索真的会误人! ! ! &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;关于使用客户端还是命令行&lt;/code&gt;&lt;/strong&gt;     两个都可以上传你的代码,  就是看你喜欢哪种风格了.   &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;善于使用左侧目录跳转&lt;/code&gt;&lt;/strong&gt;     这篇文章比较长, 我把客户端和命令行放在一起了.   所以请读者合理使用左侧目录跳转, 以节省时间. &lt;/li&gt;
+&lt;li&gt;本文是从小白开始的教程, 大牛勿喷. 再说. 这是我第一次写, 难免过于幼稚.  体谅哈~&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="http://blog.zhinian.info/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="github" scheme="http://blog.zhinian.info/tags/github/"/>
+    
+      <category term="github page" scheme="http://blog.zhinian.info/tags/github-page/"/>
+    
+  </entry>
+  
+  <entry>
     <title>这个blog 你需要知道的</title>
     <link href="http://blog.zhinian.info/2016/12/16/blog/"/>
     <id>http://blog.zhinian.info/2016/12/16/blog/</id>
     <published>2016-12-16T11:32:14.000Z</published>
-    <updated>2016-12-16T11:58:21.000Z</updated>
+    <updated>2016-12-17T08:31:10.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="欢迎来到这里-😊"><a href="#欢迎来到这里-😊" class="headerlink" title="欢迎来到这里 😊"></a>欢迎来到这里 😊</h1><h2 id="此处是何方神圣"><a href="#此处是何方神圣" class="headerlink" title="此处是何方神圣?"></a>此处是何方神圣?</h2><p>&emsp;&emsp;╮(╯▽╰)╭   此处只是一个前端小白自学之路的一个记录之地.  于2016年12月开启. 有一朝没一夕的更新着, 有着自己在FreeCodeCamp上学习的笔记,  有着自己收集的干货,  有着自己写的一些浅显易懂的教程.   还有一些随笔随记…</p>
 <a id="more"></a>
 <h3 id="关于Freecodecamp"><a href="#关于Freecodecamp" class="headerlink" title="关于Freecodecamp"></a>关于Freecodecamp</h3><p>  简称<strong>FCC</strong>, 官方英文网址: <a href="https://www.freecodecamp.com/" target="_blank" rel="external">https://www.freecodecamp.com/</a> 官方中文网址: <a href="https://www.freecodecamp.cn/" target="_blank" rel="external">https://www.freecodecamp.cn/</a> 是一个闯关模式, 从基础开始学习前端的网站.  <a href="http://blog.zhinian.info/2016/12/04/Fcc/">详情点击这里</a>.  Fcc须知.</p>
 <h3 id="关于干货"><a href="#关于干货" class="headerlink" title="关于干货"></a>关于干货</h3><p>  正在编译中…..</p>
 <h3 id="关于教程"><a href="#关于教程" class="headerlink" title="关于教程"></a>关于教程</h3><p>  我本着读者零基础看教程的心态,  尽量给每个步骤都配图, 配文字, 并且把我能知道的坑, 简单明了的说一遍, 然后你可以选择踩或不踩.</p>
+<h2 id="如何使用这个博客"><a href="#如何使用这个博客" class="headerlink" title="如何使用这个博客"></a>如何使用这个博客</h2><h3 id="使用标签云功能"><a href="#使用标签云功能" class="headerlink" title="使用标签云功能"></a>使用标签云功能</h3><p>&emsp;&emsp;博客首页左侧有标签云那个链接, 打开后会出现我所有的文章, 它们所属的标签, 你可以点击其中某个以查看.</p>
+<h3 id="使用搜索功能"><a href="#使用搜索功能" class="headerlink" title="使用搜索功能"></a>使用搜索功能</h3><p>&emsp;&emsp;博客左侧边栏有一个 search 的搜索栏, 输入关键字在此博客查找</p>
 <h1 id="待续…"><a href="#待续…" class="headerlink" title="待续…."></a>待续….</h1>]]></content>
     
     <summary type="html">
@@ -84,11 +272,11 @@
   </entry>
   
   <entry>
-    <title>Github 的注册与使用教程以及github page (二)</title>
-    <link href="http://blog.zhinian.info/2016/12/08/Github-2/"/>
-    <id>http://blog.zhinian.info/2016/12/08/Github-2/</id>
+    <title>Github 的注册与使用教程以及github page (一)</title>
+    <link href="http://blog.zhinian.info/2016/12/08/Github-1/"/>
+    <id>http://blog.zhinian.info/2016/12/08/Github-1/</id>
     <published>2016-12-08T14:47:16.000Z</published>
-    <updated>2016-12-16T13:24:17.000Z</updated>
+    <updated>2016-12-17T08:22:59.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>须知: </p>
@@ -101,100 +289,12 @@
 </blockquote>
 <h1 id="使用Github来托管你的代码"><a href="#使用Github来托管你的代码" class="headerlink" title="使用Github来托管你的代码"></a>使用Github来托管你的代码</h1><a id="more"></a>
 <blockquote>
-<p><strong>第一部分</strong> <a href="http://blog.zhinian.info/2016/12/08/Github-1/">认识Github和Github Page (一)</a></p>
+<p><strong>第一部分</strong> <a href="http://blog.zhinian.info/2016/12/08/Github-1/">认识Github和Github Page</a></p>
 <p>  在第一部分中,  我简单的写了Github的注册, 建仓库,  初次使用Github page. 还是用的网页上的<strong>create new file</strong> 在实际生产中, 我们肯定不可能是那样的写文件吧, 所以. 这个博文就是教你如何上传代码文件的</p>
+<p><strong>第二部分</strong> <a href="http://blog.zhinian.info/2016/12/08/Github-2/">运用客户端或命令行上传你的代码</a></p>
+<p>  本文讲述了如何上传 本地的代码 到 Github上.  常见的方式有 <strong>客户端</strong> 和 <strong>终端命令行</strong>  这两种. 我在这里用文字加图片的方法, 讲述一下Github的上传代码的事情. </p>
 </blockquote>
-<h1 id="Github-的客户端使用"><a href="#Github-的客户端使用" class="headerlink" title="Github 的客户端使用"></a>Github 的客户端使用</h1><p>  当今盛行的代码托管服务平台.  而我们作为一个程序员, 岂有弃之不用之理~  好绕哈哈.    下面我就直接进入主题  客户端的使用.  分别有Mac端 和 windows端 的使用.</p>
-<blockquote>
-<p>客户端是简单的操作, 适合新手. </p>
-</blockquote>
-<h2 id="Mac客户端下载与使用"><a href="#Mac客户端下载与使用" class="headerlink" title="Mac客户端下载与使用"></a>Mac客户端下载与使用</h2><ul>
-<li>官网下载地址: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
-<li>如果网速慢, 可以在我的网盘下载. 链接: <a href="http://pan.baidu.com/s/1i4B4tzZ" target="_blank" rel="external">http://pan.baidu.com/s/1i4B4tzZ</a> 密码: gjpy</li>
-</ul>
-<h3 id="安装并登录客户端"><a href="#安装并登录客户端" class="headerlink" title="安装并登录客户端"></a>安装并登录客户端</h3><ul>
-<li>快捷键 <code>command</code> + <code>,</code> 打开客户端的设置.  </li>
-<li>点击 <strong>Accounts</strong>  然后  sign in 你的Github账号.</li>
-</ul>
-<h3 id="克隆仓库"><a href="#克隆仓库" class="headerlink" title="克隆仓库"></a>克隆仓库</h3><ul>
-<li>登陆成功后, 在客户端的左上角点击 <strong><em>+</em></strong>  图标, 在弹出来的框框中,  有三个选项: Add  Create  Clone,  这里我们需要点击Clone. </li>
-<li>这时会出来你Github账号上,  所有的仓库.  你需要clone哪个, 就点击仓库名字, 右下角的按钮就亮了.   click it</li>
-<li>弹出clone选项, 你选择好文件夹就可以了.</li>
-</ul>
-<h3 id="写代码咯"><a href="#写代码咯" class="headerlink" title="写代码咯"></a>写代码咯</h3><p>  你想托管在Github平台的代码放在你克隆到本地的仓库下面就好了,  然后接着下一步, push你的代码吧.</p>
-<blockquote>
-<p>这里</p>
-</blockquote>
-<h3 id="提交代码到Github"><a href="#提交代码到Github" class="headerlink" title="提交代码到Github"></a>提交代码到Github</h3><ol>
-<li><p>打开客户端.  点击左侧你要同步的仓库</p>
-</li>
-<li><p>当你本地的代码与网页上的相比, 有变动的时候, 会显示有多少个 changes . </p>
-</li>
-<li><p>在changes下,  在你的头像旁边, 有一个输入框, summary(描述)  输入你为这一次提交的说明.       </p>
-<ul>
-<li>这个是必须的</li>
-<li>你的说明, 如果出现空格,  请用 <strong>“”</strong> 把说明包含起来</li>
-</ul>
-<p>​</p>
-</li>
-<li><p>输入完上述的summary后,  下面的 <code>Commit to master</code> 就可以点击了     click it</p>
-</li>
-<li><p>这时候你已经完成了90%了,  最后一步就是点击右上角黑色框中的  Sync  . 等待上传成功吧.</p>
-</li>
-<li><p>去Github官网上,  登录你的账号, 查看你的代码吧.  啊哈~ </p>
-</li>
-</ol>
-<h2 id="Windows客户端下载与使用"><a href="#Windows客户端下载与使用" class="headerlink" title="Windows客户端下载与使用"></a>Windows客户端下载与使用</h2><ul>
-<li>官网下载地址: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
-<li>如果网速慢, 可以在我的网盘下载.  链接: </li>
-</ul>
-<h1 id="命令行的使用-Git"><a href="#命令行的使用-Git" class="headerlink" title="命令行的使用  Git"></a>命令行的使用  Git</h1><blockquote>
-<p>命令行是轻松方便的一个方法,  它舍去了鼠标的点来点去, 舍去了UI界面,  用最简单的一行行命令轻松完成clone  commit  push 等等, 将你的代码从本地托管到Github上</p>
-</blockquote>
-<h2 id="Mac下的git命令行"><a href="#Mac下的git命令行" class="headerlink" title="Mac下的git命令行"></a>Mac下的git命令行</h2><h3 id="终端"><a href="#终端" class="headerlink" title="终端"></a>终端</h3><h2 id="Windows下的git命令行"><a href="#Windows下的git命令行" class="headerlink" title="Windows下的git命令行"></a>Windows下的git命令行</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;须知: &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;本文图片较多, 所以我用了&lt;a href=&quot;https://isux.tencent.com/introduction-of-webp.html&quot;&gt;webp格式&lt;/a&gt;的图来加载, 以防止出现网速不好者, 要等待一会~ 还有就是图片作用就是让你确认你的界面应该是怎么样的.  我也有文字说明的. &lt;/li&gt;
-&lt;li&gt;(新加)   难过,  移动端暂时不支持webp格式的图片,  我在找到解决的方法之前, 还是先用jpg格式的.&lt;/li&gt;
-&lt;li&gt;本文是从小白开始的教程, 大牛勿喷. 再说. 这是我第一次写, 难免过于幼稚.  体谅哈~&lt;/li&gt;
-&lt;li&gt;左侧有目录, 可以跳转查看.  &lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;使用Github来托管你的代码&quot;&gt;&lt;a href=&quot;#使用Github来托管你的代码&quot; class=&quot;headerlink&quot; title=&quot;使用Github来托管你的代码&quot;&gt;&lt;/a&gt;使用Github来托管你的代码&lt;/h1&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="http://blog.zhinian.info/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="github" scheme="http://blog.zhinian.info/tags/github/"/>
-    
-      <category term="github page" scheme="http://blog.zhinian.info/tags/github-page/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github 的注册与使用教程以及github page (一)</title>
-    <link href="http://blog.zhinian.info/2016/12/08/Github-1/"/>
-    <id>http://blog.zhinian.info/2016/12/08/Github-1/</id>
-    <published>2016-12-08T14:47:16.000Z</published>
-    <updated>2016-12-16T12:20:47.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>须知: </p>
-<ol>
-<li>本文图片较多, 所以我用了<a href="https://isux.tencent.com/introduction-of-webp.html" target="_blank" rel="external">webp格式</a>的图来加载, 以防止出现网速不好者, 要等待一会~ 还有就是图片作用就是让你确认你的界面应该是怎么样的.  我也有文字说明的. </li>
-<li>(新加)   难过,  移动端暂时不支持webp格式的图片,  我在找到解决的方法之前, 还是先用jpg格式的.</li>
-<li>本文是从小白开始的教程, 大牛勿喷. 再说. 这是我第一次写, 难免过于幼稚.  体谅哈~</li>
-<li>左侧有目录, 可以跳转查看.  </li>
-</ol>
-</blockquote>
-<h1 id="认识Github和Github-Page"><a href="#认识Github和Github-Page" class="headerlink" title="认识Github和Github Page"></a>认识Github和Github Page</h1><a id="more"></a>
-<blockquote>
+<h1 id="认识Github和Github-Page"><a href="#认识Github和Github-Page" class="headerlink" title="认识Github和Github Page"></a>认识Github和Github Page</h1><blockquote>
 <p>啰嗦的第一段, 已经了解的可以左侧目录栏跳过啦~</p>
 </blockquote>
 <ol>
@@ -254,7 +354,7 @@
 &lt;li&gt;左侧有目录, 可以跳转查看.  &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&quot;认识Github和Github-Page&quot;&gt;&lt;a href=&quot;#认识Github和Github-Page&quot; class=&quot;headerlink&quot; title=&quot;认识Github和Github Page&quot;&gt;&lt;/a&gt;认识Github和Github Page&lt;/h1&gt;
+&lt;h1 id=&quot;使用Github来托管你的代码&quot;&gt;&lt;a href=&quot;#使用Github来托管你的代码&quot; class=&quot;headerlink&quot; title=&quot;使用Github来托管你的代码&quot;&gt;&lt;/a&gt;使用Github来托管你的代码&lt;/h1&gt;
     
     </summary>
     
