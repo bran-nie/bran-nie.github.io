@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.zhinian.info/"/>
-  <updated>2017-03-04T14:26:30.000Z</updated>
+  <updated>2017-03-04T14:31:42.000Z</updated>
   <id>http://blog.zhinian.info/</id>
   
   <author>
@@ -20,12 +20,13 @@
     <link href="http://blog.zhinian.info/2017/03/04/ife-phantomjs/"/>
     <id>http://blog.zhinian.info/2017/03/04/ife-phantomjs/</id>
     <published>2017-03-04T07:32:07.000Z</published>
-    <updated>2017-03-04T14:26:30.000Z</updated>
+    <updated>2017-03-04T14:31:42.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂"><a href="#今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂" class="headerlink" title="今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂"></a>今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂</h1><blockquote>
 <p>排着队，一个一个来🙈</p>
 </blockquote>
-<h3 id="下载压缩包"><a href="#下载压缩包" class="headerlink" title="下载压缩包"></a>下载压缩包</h3><p><a href="http://phantomjs.org/download.html" target="_blank" rel="external">http://phantomjs.org/download.html</a> 常见的系统都有压缩包.</p>
+<h3 id="下载压缩包"><a href="#下载压缩包" class="headerlink" title="下载压缩包"></a>下载压缩包</h3><a id="more"></a>
+<p><a href="http://phantomjs.org/download.html" target="_blank" rel="external">http://phantomjs.org/download.html</a> 常见的系统都有压缩包.</p>
 <p>下载后解压, 有bin、examples、等等文件，其中在bin中打开phantomjs后 各个系统进入的界面大同小异: </p>
 <h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows:"></a>Windows:</h3><ol>
 <li>会有带这个<code>phantomjs&gt;</code> 的命令行, 可以输入语句, enter执行, 但是这样不能执行js文件.   </li>
@@ -57,7 +58,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂&quot;&gt;&lt;a href=&quot;#今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂&quot; class=&quot;headerlink&quot; title=&quot;今天在看百度ife糯米学院的题，遇到了一个问
+      &lt;h1 id=&quot;今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂&quot;&gt;&lt;a href=&quot;#今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂&quot; class=&quot;headerlink&quot; title=&quot;今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂&quot;&gt;&lt;/a&gt;今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;排着队，一个一个来🙈&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;下载压缩包&quot;&gt;&lt;a href=&quot;#下载压缩包&quot; class=&quot;headerlink&quot; title=&quot;下载压缩包&quot;&gt;&lt;/a&gt;下载压缩包&lt;/h3&gt;
     
     </summary>
     
