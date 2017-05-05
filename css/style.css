@@ -2104,7 +2104,7 @@ aside.comment-bar:active {
   border-color: #ddd;
   border-width: 1px;
   overflow: auto;
-  color: #4d4d4c;
+  color: #3e999f;
   line-height: 1.3rem;
 }
 .article-entry .highlight .gutter pre,
@@ -2121,7 +2121,7 @@ aside.comment-bar:active {
   text-shadow: none;
   padding: 0;
   background: none;
-  color: #4d4d4c;
+  color: #3e999f;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -3092,4 +3092,43 @@ p.no-result {
   color: #808080;
   font-family: Times, Georgia serif;
   border-bottom: 2px solid #d3d3d3;
+}
+body {
+  background: #d3d3d3;
+}
+#container .left-col {
+  background: #fff;
+}
+.article {
+  background: #fff;
+}
+.article .article-inner {
+  margin-bottom: 1em;
+}
+.article .article-more-link a {
+  opacity: 0.9;
+}
+.tagcloud a {
+  opacity: 0.9;
+}
+#header .header-nav .social li {
+  opacity: 0.8;
+}
+.archives-wrap {
+  background: #fff;
+}
+.scroll a .fa {
+  color: #fff;
+}
+.post-nav-button {
+  background: #ececec;
+}
+#post-nav-button a {
+  background: rgba(215,216,215,0.5);
+}
+.post-list {
+  background: #fff;
+}
+#article-nav {
+  background: rgba(158,188,226,0.9);
 }

@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.zhinian.info/2017/05/05/browerMETA/</loc>
+    
+    <lastmod>2017-05-05T15:02:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zhinian.info/2017/03/16/MyWebroad/</loc>
+    
+    <lastmod>2017-03-17T03:40:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.zhinian.info/2017/03/04/ife-phantomjs/</loc>
     
     <lastmod>2017-03-04T14:34:18.000Z</lastmod>
@@ -16,7 +30,7 @@
   </url>
   
   <url>
-    <loc>http://blog.zhinian.info/2016/12/18/Github-2/</loc>
+    <loc>http://blog.zhinian.info/2016/12/18/Github_2/</loc>
     
     <lastmod>2016-12-19T05:23:21.000Z</lastmod>
     
@@ -30,7 +44,7 @@
   </url>
   
   <url>
-    <loc>http://blog.zhinian.info/2016/12/08/Github-1/</loc>
+    <loc>http://blog.zhinian.info/2016/12/08/Github_1/</loc>
     
     <lastmod>2016-12-17T08:22:59.000Z</lastmod>
     

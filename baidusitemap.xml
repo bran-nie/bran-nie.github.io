@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>http://blog.zhinian.info/2017/05/05/browerMETA/</loc>
+    <lastmod>2017-05-05T15:02:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>360浏览器、QQ浏览器等 <meta>标签选择webkit内核问题</title>
+        <pubTime>2017-05-05T10:47:16.000Z</pubTime>
+        
+        <tag>Brower</tag>
+         
+        <tag>HTML5标签</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://blog.zhinian.info/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zhinian.info/2017/03/16/MyWebroad/</loc>
+    <lastmod>2017-03-17T03:40:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>MyWebRoad</title>
+        <pubTime>2017-03-16T15:50:04.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://blog.zhinian.info/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.zhinian.info/2017/03/04/ife-phantomjs/</loc>
     <lastmod>2017-03-04T14:34:18.000Z</lastmod>
     <data>
@@ -11,9 +53,9 @@
         <title>phantomjs———刷IFE琐记</title>
         <pubTime>2017-03-04T07:32:07.000Z</pubTime>
         
-        <tag>ife</tag>
-         
         <tag>Phantomjs</tag>
+         
+        <tag>ife</tag>
          
          
            
@@ -46,7 +88,7 @@
 
     
   <url>
-    <loc>http://blog.zhinian.info/2016/12/18/Github-2/</loc>
+    <loc>http://blog.zhinian.info/2016/12/18/Github_2/</loc>
     <lastmod>2016-12-19T05:23:21.000Z</lastmod>
     <data>
         <display>
@@ -88,7 +130,7 @@
 
     
   <url>
-    <loc>http://blog.zhinian.info/2016/12/08/Github-1/</loc>
+    <loc>http://blog.zhinian.info/2016/12/08/Github_1/</loc>
     <lastmod>2016-12-17T08:22:59.000Z</lastmod>
     <data>
         <display>

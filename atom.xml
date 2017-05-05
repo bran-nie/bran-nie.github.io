@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.zhinian.info/"/>
-  <updated>2017-03-04T14:34:18.000Z</updated>
+  <updated>2017-05-05T15:02:36.000Z</updated>
   <id>http://blog.zhinian.info/</id>
   
   <author>
@@ -14,6 +14,83 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>360浏览器、QQ浏览器等 &lt;meta&gt;标签选择webkit内核问题</title>
+    <link href="http://blog.zhinian.info/2017/05/05/browerMETA/"/>
+    <id>http://blog.zhinian.info/2017/05/05/browerMETA/</id>
+    <published>2017-05-05T10:47:16.000Z</published>
+    <updated>2017-05-05T15:02:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="忽略IE吧-8-！"><a href="#忽略IE吧-8-！" class="headerlink" title="忽略IE吧(8)！"></a>忽略IE吧(8)！</h1><p>先上一张图，很有趣。</p>
+<a id="more"></a>
+<p><img src="http://upload-images.jianshu.io/upload_images/4422141-4bd7629fb523b9ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="哈哈哈哈   标配"></p>
+<h1 id="但是leader并不会让你这样做"><a href="#但是leader并不会让你这样做" class="headerlink" title="但是leader并不会让你这样做"></a>但是leader并不会让你这样做</h1><blockquote>
+<p>于是乎你和leader促膝长谈一晚上，得到了这样一个结果：<code>那用户打开360浏览器、QQ浏览器等国内双核的浏览器商，就要正常显示</code></p>
+</blockquote>
+<p>谷歌一下，呀这个好办。一搜索，两大把。。<br>如图<br><img src="http://upload-images.jianshu.io/upload_images/4422141-4b804c8db9517c5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="360浏览器 meta"></p>
+<p>兴致勃勃的打开几个页面，看看资料。哦好简单啊，就是添加一个meta标签就可以了。<br>于是在head里面，眼疾手快的加了一行<br><code>&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;</code><br>保存，刷新。<br>似乎没有用。  冷漠。。<br>又看到一篇文章，是这样说：<br><code>&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot; /&gt;</code><br>ok，我再改。。<br>然并卵。。</p>
+<h1 id="下面听好了，坑在这里"><a href="#下面听好了，坑在这里" class="headerlink" title="下面听好了，坑在这里"></a>下面听好了，坑在这里</h1><blockquote>
+<p>meta标签并不支持 以 ip地址访问 的查询修改内核使用。    来自360社区的产品答疑师回复。。。</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/4422141-1c6ac96fca2307f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="产品答疑师"></p>
+<h1 id="最后，如果你是和我一样的情况"><a href="#最后，如果你是和我一样的情况" class="headerlink" title="最后，如果你是和我一样的情况"></a>最后，如果你是和我一样的情况</h1><blockquote>
+<ul>
+<li>使用Mac做开发，</li>
+<li>不需要兼容ie8，但又需要顾及到国内非chrome浏览器用户</li>
+<li>需要在上线前进行测试啊测试</li>
+</ul>
+</blockquote>
+<p>那么可以选择的方法有一个是：<br>使用meta标签。<br>使用局域网，用Windows电脑上的非chrome浏览器做测试。</p>
+<blockquote>
+<p>这里使用局域网，就是拿到你Mac的ip地址，在Windows上，修改hosts，将ip地址重定向为一个域名。再在浏览器里打开。因为meta标签不支持 以ip地址访问 的查询修改内核使用嘛。</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;忽略IE吧-8-！&quot;&gt;&lt;a href=&quot;#忽略IE吧-8-！&quot; class=&quot;headerlink&quot; title=&quot;忽略IE吧(8)！&quot;&gt;&lt;/a&gt;忽略IE吧(8)！&lt;/h1&gt;&lt;p&gt;先上一张图，很有趣。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://blog.zhinian.info/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Brower" scheme="http://blog.zhinian.info/tags/Brower/"/>
+    
+      <category term="HTML5标签" scheme="http://blog.zhinian.info/tags/HTML5%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MyWebRoad</title>
+    <link href="http://blog.zhinian.info/2017/03/16/MyWebroad/"/>
+    <id>http://blog.zhinian.info/2017/03/16/MyWebroad/</id>
+    <published>2017-03-16T15:50:04.000Z</published>
+    <updated>2017-03-17T03:40:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="我的前端之路-前望后顾"><a href="#我的前端之路-前望后顾" class="headerlink" title="我的前端之路 - - - 前望后顾"></a>我的前端之路 - - - <span style="color:#a6e859">前望后顾</span></h1><blockquote>
+<p>你一定要努力   但不要着急到慌张</p>
+</blockquote>
+<p>这段时间的面试, 有几次会遇到一个值得思考的问题.<br><a id="more"></a></p>
+<h3 id="你为什么想学前端的"><a href="#你为什么想学前端的" class="headerlink" title="你为什么想学前端的?"></a><em><span style="color:#ffc107">你为什么想学前端的?</span></em></h3><p>我是怎么想着学习前端的呢？<br>好玩<br>现在是不是这样，我不能准确的表达，但我可以肯定的有：<code>开始是因为很好玩</code>和 <code>现在觉得它很精彩</code></p>
+<h3 id="后顾"><a href="#后顾" class="headerlink" title="后顾"></a>后顾</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;我的前端之路-前望后顾&quot;&gt;&lt;a href=&quot;#我的前端之路-前望后顾&quot; class=&quot;headerlink&quot; title=&quot;我的前端之路 - - - 前望后顾&quot;&gt;&lt;/a&gt;我的前端之路 - - - &lt;span style=&quot;color:#a6e859&quot;&gt;前望后顾&lt;/span&gt;&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;你一定要努力   但不要着急到慌张&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这段时间的面试, 有几次会遇到一个值得思考的问题.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://blog.zhinian.info/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Web" scheme="http://blog.zhinian.info/tags/Web/"/>
+    
+  </entry>
   
   <entry>
     <title>phantomjs———刷IFE琐记</title>
@@ -68,9 +145,9 @@
       <category term="教程" scheme="http://blog.zhinian.info/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="ife" scheme="http://blog.zhinian.info/tags/ife/"/>
-    
       <category term="Phantomjs" scheme="http://blog.zhinian.info/tags/Phantomjs/"/>
+    
+      <category term="ife" scheme="http://blog.zhinian.info/tags/ife/"/>
     
   </entry>
   
@@ -132,8 +209,8 @@
   
   <entry>
     <title>Github 的注册与使用教程以及github page (二)</title>
-    <link href="http://blog.zhinian.info/2016/12/18/Github-2/"/>
-    <id>http://blog.zhinian.info/2016/12/18/Github-2/</id>
+    <link href="http://blog.zhinian.info/2016/12/18/Github_2/"/>
+    <id>http://blog.zhinian.info/2016/12/18/Github_2/</id>
     <published>2016-12-18T14:47:16.000Z</published>
     <updated>2016-12-19T05:23:21.000Z</updated>
     
@@ -313,76 +390,6 @@
       <category term="github" scheme="http://blog.zhinian.info/tags/github/"/>
     
       <category term="github page" scheme="http://blog.zhinian.info/tags/github-page/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>这个blog 你需要知道的</title>
-    <link href="http://blog.zhinian.info/2016/12/16/blog/"/>
-    <id>http://blog.zhinian.info/2016/12/16/blog/</id>
-    <published>2016-12-16T11:32:14.000Z</published>
-    <updated>2016-12-17T08:31:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="欢迎来到这里-😊"><a href="#欢迎来到这里-😊" class="headerlink" title="欢迎来到这里 😊"></a>欢迎来到这里 😊</h1><h2 id="此处是何方神圣"><a href="#此处是何方神圣" class="headerlink" title="此处是何方神圣?"></a>此处是何方神圣?</h2><p>&emsp;&emsp;╮(╯▽╰)╭   此处只是一个前端小白自学之路的一个记录之地.  于2016年12月开启. 有一朝没一夕的更新着, 有着自己在FreeCodeCamp上学习的笔记,  有着自己收集的干货,  有着自己写的一些浅显易懂的教程.   还有一些随笔随记…</p>
-<a id="more"></a>
-<h3 id="关于Freecodecamp"><a href="#关于Freecodecamp" class="headerlink" title="关于Freecodecamp"></a>关于Freecodecamp</h3><p>  简称<strong>FCC</strong>, 官方英文网址: <a href="https://www.freecodecamp.com/" target="_blank" rel="external">https://www.freecodecamp.com/</a> 官方中文网址: <a href="https://www.freecodecamp.cn/" target="_blank" rel="external">https://www.freecodecamp.cn/</a> 是一个闯关模式, 从基础开始学习前端的网站.  <a href="http://blog.zhinian.info/2016/12/04/Fcc/">详情点击这里</a>.  Fcc须知.</p>
-<h3 id="关于干货"><a href="#关于干货" class="headerlink" title="关于干货"></a>关于干货</h3><p>  正在编译中…..</p>
-<h3 id="关于教程"><a href="#关于教程" class="headerlink" title="关于教程"></a>关于教程</h3><p>  我本着读者零基础看教程的心态,  尽量给每个步骤都配图, 配文字, 并且把我能知道的坑, 简单明了的说一遍, 然后你可以选择踩或不踩.</p>
-<h2 id="如何使用这个博客"><a href="#如何使用这个博客" class="headerlink" title="如何使用这个博客"></a>如何使用这个博客</h2><h3 id="使用标签云功能"><a href="#使用标签云功能" class="headerlink" title="使用标签云功能"></a>使用标签云功能</h3><p>&emsp;&emsp;博客首页左侧有标签云那个链接, 打开后会出现我所有的文章, 它们所属的标签, 你可以点击其中某个以查看.</p>
-<h3 id="使用搜索功能"><a href="#使用搜索功能" class="headerlink" title="使用搜索功能"></a>使用搜索功能</h3><p>&emsp;&emsp;博客左侧边栏有一个 search 的搜索栏, 输入关键字在此博客查找</p>
-<h1 id="待续…"><a href="#待续…" class="headerlink" title="待续…."></a>待续….</h1>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;欢迎来到这里-😊&quot;&gt;&lt;a href=&quot;#欢迎来到这里-😊&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到这里 😊&quot;&gt;&lt;/a&gt;欢迎来到这里 😊&lt;/h1&gt;&lt;h2 id=&quot;此处是何方神圣&quot;&gt;&lt;a href=&quot;#此处是何方神圣&quot; class=&quot;headerlink&quot; title=&quot;此处是何方神圣?&quot;&gt;&lt;/a&gt;此处是何方神圣?&lt;/h2&gt;&lt;p&gt;&amp;emsp;&amp;emsp;╮(╯▽╰)╭   此处只是一个前端小白自学之路的一个记录之地.  于2016年12月开启. 有一朝没一夕的更新着, 有着自己在FreeCodeCamp上学习的笔记,  有着自己收集的干货,  有着自己写的一些浅显易懂的教程.   还有一些随笔随记…&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Known" scheme="http://blog.zhinian.info/categories/Known/"/>
-    
-    
-      <category term="top" scheme="http://blog.zhinian.info/tags/top/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一次晚归夜宿与早起日出</title>
-    <link href="http://blog.zhinian.info/2016/12/12/night/"/>
-    <id>http://blog.zhinian.info/2016/12/12/night/</id>
-    <published>2016-12-12T02:52:07.000Z</published>
-    <updated>2016-12-12T03:11:44.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>&emsp;&emsp;出了地铁站，时间已是23：23分，回到宿舍的14分钟被缩减一半。也是好饿，又闻到周围飘来的饭香，心一横，翻个墙回去吧！</p>
-<blockquote>
-<p>下午去练车，科目三，九点的时候教练说去看考场，与另外两个学员拼车去了。地点实在是感人，位处深圳湾旁边。到了地方就已经近九点四十了，看考场，ok后到地铁站时候，就已经十点四十了。</p>
-</blockquote>
-<p>宿舍， 翻墙这两个名词联系起来检索，我能想到的就是我班里一个80+kg的同学，他说过的一句话：“<strong>翻墙啊~  如履平地</strong>”     顿时被我铭记在心。<br><a id="more"></a><br> 宵夜麻辣烫啊，夜里搭配。</p>
-<p>&emsp;&emsp;吃饱了，走回宿舍楼下，十二点十几分，本欲“如履平地”，却发现宿管还没走，这就尴尬了。没事，我等。<br>&emsp;&emsp;&emsp;&emsp;&emsp;十二点四十，我等。<br>&emsp;&emsp;&emsp;&emsp;&emsp;一点十分，我等。</p>
-<p>&emsp;&emsp;此时的状态，好困，好渴，又有冷风吹。让室友送下来一杯热水，一口气喝完，给个枕头我能在长椅上睡着。就不管蚊子咬了<br>我想宿管也是蛮拼的，一点半总要走了吧，毕竟守了两个小时了。</p>
-<p>一点半，我等。<br>等个啥…    一个朋友说，<strong><em>这宿管他夜班！夜班！班！</em></strong><br>感情我刚刚就是自演自作。嗯……</p>
-<p>&emsp;朋友支个招，教学楼有教师休息室，门不关，里面有床，下楼顺便把身份证也给我了……</p>
-<p>我看了一眼两个聊天聊的特别嗨的宿管，面无表情的走了，当然，他们是没看见我的。</p>
-<p>&emsp;&emsp;北5教室休息室，门关着，换个姿势再开一次，嗯还是关着，刚走两步，里面出来人了，被告知已经有人了。      Biu biu biu<br>这时特么灵机一动，学校搞对称，南边应该也有，嗯果然有，但全是椅子，凑合着吧~   毕竟两点了。毕竟穷，没一百五睡一晚。毕竟不喜欢烟味，没去网吧。当然，那是因为有这个休息室。</p>
-<p>夜里辗转反侧好几次，夜里好像打死蚊子一只，然而这一只 只是一群蚊子里面的一个罢了。</p>
-<p>六点半闹钟，起来，离开教学楼，刚好看到日出。    真的挺美的。<br>也是因为早起的一次日出，促成了一口气写完这个晚归夜宿与早起日出的经历。</p>
-<p>&emsp;&emsp;生活应当多彩, 就像是   你所看到的美好的部分和失落的世界.  交替循环. </p>
-<p>&emsp;&emsp;而且,  在你越是忽视的时候,  越是令人惊讶.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;emsp;&amp;emsp;出了地铁站，时间已是23：23分，回到宿舍的14分钟被缩减一半。也是好饿，又闻到周围飘来的饭香，心一横，翻个墙回去吧！&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;下午去练车，科目三，九点的时候教练说去看考场，与另外两个学员拼车去了。地点实在是感人，位处深圳湾旁边。到了地方就已经近九点四十了，看考场，ok后到地铁站时候，就已经十点四十了。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;宿舍， 翻墙这两个名词联系起来检索，我能想到的就是我班里一个80+kg的同学，他说过的一句话：“&lt;strong&gt;翻墙啊~  如履平地&lt;/strong&gt;”     顿时被我铭记在心。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://blog.zhinian.info/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="生活" scheme="http://blog.zhinian.info/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
