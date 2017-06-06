@@ -4,9 +4,9 @@
   <subtitle>初行翼翼, 欲展翅飞翔</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://petergooo.github.io/blog/"/>
+  <link href="https://petergooo.github.io/"/>
   <updated>2017-05-05T15:02:36.000Z</updated>
-  <id>https://petergooo.github.io/blog/</id>
+  <id>https://petergooo.github.io/</id>
   
   <author>
     <name>鹏程</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>360浏览器、QQ浏览器等 &lt;meta&gt;标签选择webkit内核问题</title>
-    <link href="https://petergooo.github.io/blog/2017/05/05/browerMETA/"/>
-    <id>https://petergooo.github.io/blog/2017/05/05/browerMETA/</id>
+    <link href="https://petergooo.github.io/2017/05/05/browerMETA/"/>
+    <id>https://petergooo.github.io/2017/05/05/browerMETA/</id>
     <published>2017-05-05T10:47:16.000Z</published>
     <updated>2017-05-05T15:02:36.000Z</updated>
     
@@ -53,19 +53,19 @@
     
     </summary>
     
-      <category term="前端" scheme="https://petergooo.github.io/blog/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://petergooo.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Brower" scheme="https://petergooo.github.io/blog/tags/Brower/"/>
+      <category term="Brower" scheme="https://petergooo.github.io/tags/Brower/"/>
     
-      <category term="HTML5标签" scheme="https://petergooo.github.io/blog/tags/HTML5%E6%A0%87%E7%AD%BE/"/>
+      <category term="HTML5标签" scheme="https://petergooo.github.io/tags/HTML5%E6%A0%87%E7%AD%BE/"/>
     
   </entry>
   
   <entry>
     <title>MyWebRoad</title>
-    <link href="https://petergooo.github.io/blog/2017/03/16/MyWebroad/"/>
-    <id>https://petergooo.github.io/blog/2017/03/16/MyWebroad/</id>
+    <link href="https://petergooo.github.io/2017/03/16/MyWebroad/"/>
+    <id>https://petergooo.github.io/2017/03/16/MyWebroad/</id>
     <published>2017-03-16T15:50:04.000Z</published>
     <updated>2017-03-17T03:40:28.000Z</updated>
     
@@ -85,17 +85,17 @@
     
     </summary>
     
-      <category term="前端" scheme="https://petergooo.github.io/blog/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://petergooo.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Web" scheme="https://petergooo.github.io/blog/tags/Web/"/>
+      <category term="Web" scheme="https://petergooo.github.io/tags/Web/"/>
     
   </entry>
   
   <entry>
     <title>phantomjs———刷IFE琐记</title>
-    <link href="https://petergooo.github.io/blog/2017/03/04/ife-phantomjs/"/>
-    <id>https://petergooo.github.io/blog/2017/03/04/ife-phantomjs/</id>
+    <link href="https://petergooo.github.io/2017/03/04/ife-phantomjs/"/>
+    <id>https://petergooo.github.io/2017/03/04/ife-phantomjs/</id>
     <published>2017-03-04T07:32:07.000Z</published>
     <updated>2017-03-04T14:34:18.000Z</updated>
     
@@ -142,19 +142,19 @@
     
     </summary>
     
-      <category term="教程" scheme="https://petergooo.github.io/blog/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://petergooo.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Phantomjs" scheme="https://petergooo.github.io/blog/tags/Phantomjs/"/>
+      <category term="Phantomjs" scheme="https://petergooo.github.io/tags/Phantomjs/"/>
     
-      <category term="ife" scheme="https://petergooo.github.io/blog/tags/ife/"/>
+      <category term="ife" scheme="https://petergooo.github.io/tags/ife/"/>
     
   </entry>
   
   <entry>
     <title>css3 一些样式</title>
-    <link href="https://petergooo.github.io/blog/2016/12/19/css01/"/>
-    <id>https://petergooo.github.io/blog/2016/12/19/css01/</id>
+    <link href="https://petergooo.github.io/2016/12/19/css01/"/>
+    <id>https://petergooo.github.io/2016/12/19/css01/</id>
     <published>2016-12-19T05:52:14.000Z</published>
     <updated>2017-06-05T14:12:42.000Z</updated>
     
@@ -200,17 +200,17 @@
     
     </summary>
     
-      <category term="前端" scheme="https://petergooo.github.io/blog/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://petergooo.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="CSS" scheme="https://petergooo.github.io/blog/tags/CSS/"/>
+      <category term="CSS" scheme="https://petergooo.github.io/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>Github 的注册与使用教程以及github page (二)</title>
-    <link href="https://petergooo.github.io/blog/2016/12/18/Github_2/"/>
-    <id>https://petergooo.github.io/blog/2016/12/18/Github_2/</id>
+    <link href="https://petergooo.github.io/2016/12/18/Github_2/"/>
+    <id>https://petergooo.github.io/2016/12/18/Github_2/</id>
     <published>2016-12-18T14:47:16.000Z</published>
     <updated>2017-06-05T14:16:02.000Z</updated>
     
@@ -384,12 +384,12 @@
     
     </summary>
     
-      <category term="教程" scheme="https://petergooo.github.io/blog/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://petergooo.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="github" scheme="https://petergooo.github.io/blog/tags/github/"/>
+      <category term="github" scheme="https://petergooo.github.io/tags/github/"/>
     
-      <category term="github page" scheme="https://petergooo.github.io/blog/tags/github-page/"/>
+      <category term="github page" scheme="https://petergooo.github.io/tags/github-page/"/>
     
   </entry>
   
