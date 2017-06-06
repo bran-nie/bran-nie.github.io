@@ -1,21 +1,15 @@
+
+
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head>
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="21年的时光, 目前爱好于前端~">
+    <title>css3 一些样式 | zhinian_Blog</title>
 
-    <!--[if lt IE 9]>
-        <style>body {display: none; background: none !important} </style>
-        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
-    <![endif]-->
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="鹏程" />
-
-
-
-<meta name="description" content="这篇博客出现的css样式,  及其顺序,  和 我的这个静态页面是同步的.   在这里, 请点击,对应样式查看
+    <!-- Open Graph -->
+    <meta name="description" content="这篇博客出现的css样式,  及其顺序,  和 我的这个静态页面是同步的.   在这里, 请点击,对应样式查看
 
 几个有趣的样式模糊1234h1&amp;#123;  color: transparent;  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);&amp;#125;">
 <meta property="og:type" content="article">
@@ -32,544 +26,280 @@
 
 几个有趣的样式模糊1234h1&amp;#123;  color: transparent;  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);&amp;#125;">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
-
-
-    <link rel="alternate" href="/atom.xml" title="zhinian_Blog" type="application/atom+xml">
-
-
-
-    <link rel="shortcut icon" href="/favicon.ico">
-
-
-
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
-
-
-    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-
-
-
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-
-<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-
-<title>css3 一些样式 | zhinian_Blog</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-<script>
-    var yiliaConfig = {
-        fancybox: true,
-        animate: true,
-        isHome: false,
-        isPost: true,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: true
-    }
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:1185367347@qq.com",
+  "image": "undefined",
+  "name": "鹏程",
+  "url": "https://petergooo.github.io"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
 </script>
 
+    
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
-
-
-
-    <script> yiliaConfig.rootUrl = "\/";</script>
-
-
-
-
-
+    
+    
+        
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
 
 </head>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="/logo.jpeg" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">鹏程</a></h1>
-        </hgroup>
+<body id="body" style="margin-bottom: 0;" class="pushable">
 
-        
-        <p class="header-subtitle">初行翼翼, 欲展翅飞翔</p>
-        
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+    </div>
 
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
-        
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
 
-
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>zhinian_Blog</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">鹏程</a>
                     
                 </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
+                <div class="extra content">
+                    <div class="ui list">
                         
                         
-                        <li>关于我</li>
+                        <div class="item">
+                            <i class="mail icon" style="float: left"></i>
+                            <div class="content">
+                                <a href="mailto:1185367347@qq.com">1185367347@qq.com</a>
+                            </div>
+                        </div>
                         
-                    </ul>
+                    </div>
+
                 </div>
-            </div>
-        
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
+                <div class="extra content">
+                    <div class="ui list">
                         
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/archives/">所有文章</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" href="https://github.com/HeiPeter/HeiPeter.github.io" title="GitHub"></a>
-                            
-                                <a class="fa 知乎" href="https://www.zhihu.com/people/zhinian-pc/activities" title="知乎"></a>
-                            
-                                <a class="fa Email" href="mailto:pengcheng1995@gmail.com" title="Email"></a>
-                            
-                                <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=1185367347&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Brower/">Brower</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fcc-闯关/">Fcc 闯关</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5标签/">HTML5标签</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Phantomjs/">Phantomjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-page/">github page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ife/">ife</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/top/">top</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
                     </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
-                    
-                    </div>
-                </section>
-                
-
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">这个主题好强大呐</div>
-                </section>
-                
+                </div>
             </div>
         </div>
-    </header>                
+    </div>
+
+
 </div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">鹏程</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="/logo.jpeg" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">鹏程</a></h1>
-            </hgroup>
-            
-            <p class="header-subtitle">初行翼翼, 欲展翅飞翔</p>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" target="_blank" href="https://github.com/HeiPeter/HeiPeter.github.io" title="GitHub"></a>
-                            
-                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/zhinian-pc/activities" title="知乎"></a>
-                            
-                                <a class="fa Email" target="_blank" href="mailto:pengcheng1995@gmail.com" title="Email"></a>
-                            
-                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1185367347&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-            </nav>
-        </header>                
-    </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
-</nav>
-      <div class="body-wrap"><article id="post-css01" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/12/19/css01/" class="article-date">
-      <time datetime="2016-12-19T05:52:14.000Z" itemprop="datePublished">2016-12-19</time>
-</a>
 
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      css3 一些样式
-    </h1>
-  
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/前端/">前端</a>
-    </div>
-
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
     
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <blockquote>
-<p>这篇博客出现的css样式,  及其顺序,  和 我的这个静态页面是同步的.   <a href="https://petergooo.github.io/demo/learn/12-19/index.html">在这里, 请点击,对应样式查看</a></p>
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-css01" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    css3 一些样式
+</h1>
+
+
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <blockquote>
+<p>&#x8FD9;&#x7BC7;&#x535A;&#x5BA2;&#x51FA;&#x73B0;&#x7684;css&#x6837;&#x5F0F;,  &#x53CA;&#x5176;&#x987A;&#x5E8F;,  &#x548C; &#x6211;&#x7684;&#x8FD9;&#x4E2A;&#x9759;&#x6001;&#x9875;&#x9762;&#x662F;&#x540C;&#x6B65;&#x7684;.   <a href="https://petergooo.github.io/demo/learn/12-19/index.html">&#x5728;&#x8FD9;&#x91CC;, &#x8BF7;&#x70B9;&#x51FB;,&#x5BF9;&#x5E94;&#x6837;&#x5F0F;&#x67E5;&#x770B;</a></p>
 </blockquote>
-<h1 id="几个有趣的样式"><a href="#几个有趣的样式" class="headerlink" title="几个有趣的样式"></a>几个有趣的样式</h1><h2 id="模糊"><a href="#模糊" class="headerlink" title="模糊"></a>模糊</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">h1</span>&#123;</div><div class="line">  <span class="attribute">color</span>: transparent;</div><div class="line">  <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">4px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="&#x51E0;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x6837;&#x5F0F;"><a href="#&#x51E0;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x6837;&#x5F0F;" class="headerlink" title="&#x51E0;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x6837;&#x5F0F;"></a>&#x51E0;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x6837;&#x5F0F;</h1><h2 id="&#x6A21;&#x7CCA;"><a href="#&#x6A21;&#x7CCA;" class="headerlink" title="&#x6A21;&#x7CCA;"></a>&#x6A21;&#x7CCA;</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">h1</span>{</div><div class="line">  <span class="attribute">color</span>: transparent;</div><div class="line">  <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">4px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.5);</div><div class="line">}</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<h2 id="图片变黑白"><a href="#图片变黑白" class="headerlink" title="图片变黑白"></a>图片变黑白</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">img&#123;</div><div class="line">  filter:grayscale(100%);</div><div class="line">  //浏览器的兼容性问题</div><div class="line">  -webkit-filter: grayscale(100%);  </div><div class="line">  -moz-filter: grayscale(100%);</div><div class="line">  -ms-filter: grayscale(100%);</div><div class="line">  -o-filter: grayscale(100%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="calc-的使用"><a href="#calc-的使用" class="headerlink" title="calc()的使用"></a>calc()的使用</h2><p>calc()用法类似 函数,  能够给元素设置动态的值.  比如  width: calc(100% - 100px);</p>
-<p><strong><em>PS</em></strong> 如果用 +   -  操作符,  要记得以空格分开, 不然不起作用.我是被坑过的.  但 * / 就不用, 不过, 我们还是保持着用calc的时候, 都用空格符分隔吧</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.calc</span>&#123;</div><div class="line">  	<span class="attribute">width</span>:<span class="number">200px</span>;	<span class="attribute">height</span>:<span class="number">300px</span>;</div><div class="line"> <span class="attribute">border</span>:<span class="number">1px</span> solid red;</div><div class="line">  &#125;</div><div class="line">  <span class="selector-class">.calc</span> <span class="selector-class">.b</span>&#123;</div><div class="line">  	<span class="attribute">height</span>:<span class="number">100px</span>;	<span class="attribute">background-color</span>: orange;</div><div class="line">  &#125;</div><div class="line">  <span class="selector-class">.calc</span> <span class="selector-class">.c</span>&#123;</div><div class="line">  	<span class="attribute">height</span>: <span class="built_in">calc</span>(100% - 100px);  	<span class="attribute">background-color</span>: green;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<h2 id="用css的-border-画三角"><a href="#用css的-border-画三角" class="headerlink" title="用css的 border 画三角"></a>用css的 border 画三角</h2><p> 利用border,  四个边框,  设置边框的宽度,  然后三个 是透明,      css代码</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.triangle</span>&#123;</div><div class="line">  	<span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">  	<span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">  	<span class="attribute">border-width</span>: <span class="number">40px</span>;</div><div class="line">  	<span class="attribute">border-style</span>: solid;</div><div class="line">  	<span class="attribute">border-color</span>: transparent transparent red transparent;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<h1 id="渐变-径向和线性"><a href="#渐变-径向和线性" class="headerlink" title="渐变  径向和线性"></a>渐变  径向和线性</h1><p>html</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"grandient"</span>&gt;</span></div><div class="line"> 文字线性渐变  </div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>css代码</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.grandient</span>&#123;</div><div class="line">  <span class="attribute">background-image</span>: <span class="built_in">-webkit-gradient</span>(linear, 0 0 ,0 bottom, from(rgba(0,128,0,1)), <span class="built_in">to</span>(rgba(51,51,51,0.6)));</div><div class="line">  <span class="attribute">-webkit-background-clip</span>:text;</div><div class="line">  <span class="attribute">-webkit-text-fill-color</span>:transparent;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>一个空div的径向渐变   等间距色标     css代码     </p>
+<h2 id="&#x56FE;&#x7247;&#x53D8;&#x9ED1;&#x767D;"><a href="#&#x56FE;&#x7247;&#x53D8;&#x9ED1;&#x767D;" class="headerlink" title="&#x56FE;&#x7247;&#x53D8;&#x9ED1;&#x767D;"></a>&#x56FE;&#x7247;&#x53D8;&#x9ED1;&#x767D;</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">img{</div><div class="line">  filter:grayscale(100%);</div><div class="line">  //&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x517C;&#x5BB9;&#x6027;&#x95EE;&#x9898;</div><div class="line">  -webkit-filter: grayscale(100%);  </div><div class="line">  -moz-filter: grayscale(100%);</div><div class="line">  -ms-filter: grayscale(100%);</div><div class="line">  -o-filter: grayscale(100%);</div><div class="line">}</div></pre></td></tr></table></figure>
+<h2 id="calc-&#x7684;&#x4F7F;&#x7528;"><a href="#calc-&#x7684;&#x4F7F;&#x7528;" class="headerlink" title="calc()&#x7684;&#x4F7F;&#x7528;"></a>calc()&#x7684;&#x4F7F;&#x7528;</h2><p>calc()&#x7528;&#x6CD5;&#x7C7B;&#x4F3C; &#x51FD;&#x6570;,  &#x80FD;&#x591F;&#x7ED9;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;&#x52A8;&#x6001;&#x7684;&#x503C;.  &#x6BD4;&#x5982;  width: calc(100% - 100px);</p>
+<p><strong><em>PS</em></strong> &#x5982;&#x679C;&#x7528; +   -  &#x64CD;&#x4F5C;&#x7B26;,  &#x8981;&#x8BB0;&#x5F97;&#x4EE5;&#x7A7A;&#x683C;&#x5206;&#x5F00;, &#x4E0D;&#x7136;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;.&#x6211;&#x662F;&#x88AB;&#x5751;&#x8FC7;&#x7684;.  &#x4F46; * / &#x5C31;&#x4E0D;&#x7528;, &#x4E0D;&#x8FC7;, &#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x4FDD;&#x6301;&#x7740;&#x7528;calc&#x7684;&#x65F6;&#x5019;, &#x90FD;&#x7528;&#x7A7A;&#x683C;&#x7B26;&#x5206;&#x9694;&#x5427;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.calc</span>{</div><div class="line">  	<span class="attribute">width</span>:<span class="number">200px</span>;	<span class="attribute">height</span>:<span class="number">300px</span>;</div><div class="line"> <span class="attribute">border</span>:<span class="number">1px</span> solid red;</div><div class="line">  }</div><div class="line">  <span class="selector-class">.calc</span> <span class="selector-class">.b</span>{</div><div class="line">  	<span class="attribute">height</span>:<span class="number">100px</span>;	<span class="attribute">background-color</span>: orange;</div><div class="line">  }</div><div class="line">  <span class="selector-class">.calc</span> <span class="selector-class">.c</span>{</div><div class="line">  	<span class="attribute">height</span>: <span class="built_in">calc</span>(100% - 100px);  	<span class="attribute">background-color</span>: green;</div><div class="line">  }</div></pre></td></tr></table></figure>
+<h2 id="&#x7528;css&#x7684;-border-&#x753B;&#x4E09;&#x89D2;"><a href="#&#x7528;css&#x7684;-border-&#x753B;&#x4E09;&#x89D2;" class="headerlink" title="&#x7528;css&#x7684; border &#x753B;&#x4E09;&#x89D2;"></a>&#x7528;css&#x7684; border &#x753B;&#x4E09;&#x89D2;</h2><p> &#x5229;&#x7528;border,  &#x56DB;&#x4E2A;&#x8FB9;&#x6846;,  &#x8BBE;&#x7F6E;&#x8FB9;&#x6846;&#x7684;&#x5BBD;&#x5EA6;,  &#x7136;&#x540E;&#x4E09;&#x4E2A; &#x662F;&#x900F;&#x660E;,      css&#x4EE3;&#x7801;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.triangle</span>{</div><div class="line">  	<span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">  	<span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">  	<span class="attribute">border-width</span>: <span class="number">40px</span>;</div><div class="line">  	<span class="attribute">border-style</span>: solid;</div><div class="line">  	<span class="attribute">border-color</span>: transparent transparent red transparent;</div><div class="line">  }</div></pre></td></tr></table></figure>
+<h1 id="&#x6E10;&#x53D8;-&#x5F84;&#x5411;&#x548C;&#x7EBF;&#x6027;"><a href="#&#x6E10;&#x53D8;-&#x5F84;&#x5411;&#x548C;&#x7EBF;&#x6027;" class="headerlink" title="&#x6E10;&#x53D8;  &#x5F84;&#x5411;&#x548C;&#x7EBF;&#x6027;"></a>&#x6E10;&#x53D8;  &#x5F84;&#x5411;&#x548C;&#x7EBF;&#x6027;</h1><p>html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;grandient&quot;</span>&gt;</span></div><div class="line"> &#x6587;&#x5B57;&#x7EBF;&#x6027;&#x6E10;&#x53D8;  </div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>css&#x4EE3;&#x7801;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.grandient</span>{</div><div class="line">  <span class="attribute">background-image</span>: <span class="built_in">-webkit-gradient</span>(linear, 0 0 ,0 bottom, from(rgba(0,128,0,1)), <span class="built_in">to</span>(rgba(51,51,51,0.6)));</div><div class="line">  <span class="attribute">-webkit-background-clip</span>:text;</div><div class="line">  <span class="attribute">-webkit-text-fill-color</span>:transparent;</div><div class="line">}</div></pre></td></tr></table></figure>
+<p>&#x4E00;&#x4E2A;&#x7A7A;div&#x7684;&#x5F84;&#x5411;&#x6E10;&#x53D8;   &#x7B49;&#x95F4;&#x8DDD;&#x8272;&#x6807;     css&#x4EE3;&#x7801;     </p>
 <blockquote>
-<p>以下的css代码均只改变了background部分,   有几个是改了宽高, 所以就只写了background部分的变化</p>
+<p>&#x4EE5;&#x4E0B;&#x7684;css&#x4EE3;&#x7801;&#x5747;&#x53EA;&#x6539;&#x53D8;&#x4E86;background&#x90E8;&#x5206;,   &#x6709;&#x51E0;&#x4E2A;&#x662F;&#x6539;&#x4E86;&#x5BBD;&#x9AD8;, &#x6240;&#x4EE5;&#x5C31;&#x53EA;&#x5199;&#x4E86;background&#x90E8;&#x5206;&#x7684;&#x53D8;&#x5316;</p>
 </blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;</div><div class="line">  <span class="attribute">width</span>:<span class="number">100px</span>; <span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">radial-gradient</span>(red, yellow, rhba(30, 144, 255, 0.6));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>指定间距色标  css 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>{</div><div class="line">  <span class="attribute">width</span>:<span class="number">100px</span>; <span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">radial-gradient</span>(red, yellow, rhba(30, 144, 255, 0.6));</div><div class="line">}</div></pre></td></tr></table></figure>
+<p>&#x6307;&#x5B9A;&#x95F4;&#x8DDD;&#x8272;&#x6807;  css &#x4EE3;&#x7801;</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background</span>: <span class="selector-tag">radial-gradient</span>(<span class="selector-tag">red</span> 5%, <span class="selector-tag">yellow</span> 25%, <span class="selector-id">#1E90FF</span> 50%);</div></pre></td></tr></table></figure>
-<p><strong>大小</strong> 是径向渐变和线性渐变不一样的地方. 你可以用一个尺寸值来指定定义圆形或者椭圆形的大小的点.      css代码</p>
+<p><strong>&#x5927;&#x5C0F;</strong> &#x662F;&#x5F84;&#x5411;&#x6E10;&#x53D8;&#x548C;&#x7EBF;&#x6027;&#x6E10;&#x53D8;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x5730;&#x65B9;. &#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x5C3A;&#x5BF8;&#x503C;&#x6765;&#x6307;&#x5B9A;&#x5B9A;&#x4E49;&#x5706;&#x5F62;&#x6216;&#x8005;&#x692D;&#x5706;&#x5F62;&#x7684;&#x5927;&#x5C0F;&#x7684;&#x70B9;.      css&#x4EE3;&#x7801;</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background</span>: <span class="selector-tag">radial-gradient</span>(<span class="selector-tag">ellipse</span> <span class="selector-tag">closest-side</span>, <span class="selector-tag">red</span>, <span class="selector-tag">yellow</span> 10%, <span class="selector-id">#1E90FF</span> 50%, <span class="selector-tag">white</span>);</div></pre></td></tr></table></figure>
-<p>其中 它的大小也可以换成 <strong>farthest-corner</strong> 渐变的尺寸为起始点到封闭盒模型最远端的起始点的距离。</p>
-<h2 id="重复的渐变"><a href="#重复的渐变" class="headerlink" title="重复的渐变"></a>重复的渐变</h2><p><strong>linear-grandient</strong> 和 <strong>radial-grandient</strong> 不支持自动重复的色标,  然而,  <code>repeating-linear-grandient</code> 和 <code>repeating-radial-grandient</code> 可以实现这个功能.</p>
-<p>重复的线性渐变    css 代码</p>
+<p>&#x5176;&#x4E2D; &#x5B83;&#x7684;&#x5927;&#x5C0F;&#x4E5F;&#x53EF;&#x4EE5;&#x6362;&#x6210; <strong>farthest-corner</strong> &#x6E10;&#x53D8;&#x7684;&#x5C3A;&#x5BF8;&#x4E3A;&#x8D77;&#x59CB;&#x70B9;&#x5230;&#x5C01;&#x95ED;&#x76D2;&#x6A21;&#x578B;&#x6700;&#x8FDC;&#x7AEF;&#x7684;&#x8D77;&#x59CB;&#x70B9;&#x7684;&#x8DDD;&#x79BB;&#x3002;</p>
+<h2 id="&#x91CD;&#x590D;&#x7684;&#x6E10;&#x53D8;"><a href="#&#x91CD;&#x590D;&#x7684;&#x6E10;&#x53D8;" class="headerlink" title="&#x91CD;&#x590D;&#x7684;&#x6E10;&#x53D8;"></a>&#x91CD;&#x590D;&#x7684;&#x6E10;&#x53D8;</h2><p><strong>linear-grandient</strong> &#x548C; <strong>radial-grandient</strong> &#x4E0D;&#x652F;&#x6301;&#x81EA;&#x52A8;&#x91CD;&#x590D;&#x7684;&#x8272;&#x6807;,  &#x7136;&#x800C;,  <code>repeating-linear-grandient</code> &#x548C; <code>repeating-radial-grandient</code> &#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;.</p>
+<p>&#x91CD;&#x590D;&#x7684;&#x7EBF;&#x6027;&#x6E10;&#x53D8;    css &#x4EE3;&#x7801;</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background</span>: <span class="selector-tag">repeating-linear-gradient</span>(<span class="selector-tag">-45deg</span>, <span class="selector-tag">red</span>, <span class="selector-tag">red</span> 5<span class="selector-tag">px</span>, <span class="selector-tag">white</span> 5<span class="selector-tag">px</span>, <span class="selector-tag">white</span> 10<span class="selector-tag">px</span>);</div></pre></td></tr></table></figure>
-<p>重复的径向渐变    css 代码</p>
+<p>&#x91CD;&#x590D;&#x7684;&#x5F84;&#x5411;&#x6E10;&#x53D8;    css &#x4EE3;&#x7801;</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background</span>: <span class="selector-tag">repeating-radial-gradient</span>(<span class="selector-tag">black</span>, <span class="selector-tag">black</span> 5<span class="selector-tag">px</span>, <span class="selector-tag">white</span> 5<span class="selector-tag">px</span>, <span class="selector-tag">white</span> 10<span class="selector-tag">px</span>);</div></pre></td></tr></table></figure>
-<p> 可扩展的查看 菜鸟教程: <a href="http://www.runoob.com/css3/css3-gradients.html" target="_blank" rel="external">http://www.runoob.com/css3/css3-gradients.html</a></p>
+<p> &#x53EF;&#x6269;&#x5C55;&#x7684;&#x67E5;&#x770B; &#x83DC;&#x9E1F;&#x6559;&#x7A0B;: <a href="http://www.runoob.com/css3/css3-gradients.html" target="_blank" rel="external">http://www.runoob.com/css3/css3-gradients.html</a></p>
 
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/12/19/css01/">css3 一些样式</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">鹏程</a></p>
-        <p><span>发布时间:</span>2016-12-19, 13:52:14</p>
-        <p><span>最后更新:</span>2017-06-05, 22:12:42</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/12/19/css01/" title="css3 一些样式">https://petergooo.github.io/2016/12/19/css01/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://petergooo.github.io/2016/12/19/css01/　　作者: 鹏程" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
+                        
+                    </div>
 
+                    
+                    
+                    
 
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2016-12-19T05:52:14.000Z" itemprop="datePublished">2016-12-19</time>
 
-    <nav id="article-nav">
+    </span>
+    <span class="post-description-item">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/03/04/ife-phantomjs/">
+
+    <span>
+        <i class="tags icon"></i>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/CSS/">CSS</a>
+    </span>
+
+    
+
+    </span>
+</div>
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a href="/2017/03/04/ife-phantomjs/" class="ui tiny button">
+
+                    <i class="angle left icon"></i>
+                    
                     phantomjs———刷IFE琐记
+                    
+
                 </a>
+
+                
             </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/12/18/Github_2/">
+            <div class="column nav-right">
+                
+
+                <a href="/2016/12/18/Github_2/" class="ui tiny button">
+                    
                     Github 的注册与使用教程以及github page (二)
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#几个有趣的样式"><span class="toc-number">1.</span> <span class="toc-text">几个有趣的样式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#模糊"><span class="toc-number">1.1.</span> <span class="toc-text">模糊</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片变黑白"><span class="toc-number">1.2.</span> <span class="toc-text">图片变黑白</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#calc-的使用"><span class="toc-number">1.3.</span> <span class="toc-text">calc()的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用css的-border-画三角"><span class="toc-number">1.4.</span> <span class="toc-text">用css的 border 画三角</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#渐变-径向和线性"><span class="toc-number">2.</span> <span class="toc-text">渐变  径向和线性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#重复的渐变"><span class="toc-number">2.1.</span> <span class="toc-text">重复的渐变</span></a></li></ol></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
-        </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"css3 一些样式　| zhinian_Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
-
-
-
-
-
-    
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/19/css01/" data-title="css3 一些样式" data-url="https://petergooo.github.io/2016/12/19/css01/"></div>
-    <script>
-        var duoshuoQuery = {short_name:"zhinian95"};
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = "http://blog.zhinian.info/js/embed.js";
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
-        }
-
-        
-    </script>
-    
-    <script> loadComment(); </script>
-
-</div>
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2017/03/04/ife-phantomjs/" title="上一篇: phantomjs———刷IFE琐记">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2016/12/18/Github_2/" title="下一篇: Github 的注册与使用教程以及github page (二)">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/05/browerMETA/">360浏览器、QQ浏览器等 <meta>标签选择webkit内核问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/16/MyWebroad/">MyWebRoad</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/04/ife-phantomjs/">phantomjs———刷IFE琐记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/19/css01/">css3 一些样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/18/Github_2/">Github 的注册与使用教程以及github page (二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/16/blog/">这个blog 你需要知道的</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/night/">一次晚归夜宿与早起日出</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/08/Github_1/">Github 的注册与使用教程以及github page (一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/05/steamroller/">Fcc --- Steamroller</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Writing/">Write</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Fcc/">Fcc 须知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/hello-world/">Hello World</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2016-2017 鹏程
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                    
+                    <i class="angle right icon"></i></a>
+                
             </div>
         </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
+    </div>
+
+</div>
                 
             </div>
-        
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#几个有趣的样式"><span>几个有趣的样式</span></a><ol><li><a href="#模糊"><span>模糊</span></a></li><li><a href="#图片变黑白"><span>图片变黑白</span></a></li><li><a href="#calc-的使用"><span>calc()的使用</span></a></li><li><a href="#用css的-border-画三角"><span>用css的 border 画三角</span></a></li></ol></li><li><a href="#渐变-径向和线性"><span>渐变  径向和线性</span></a><ol><li><a href="#重复的渐变"><span>重复的渐变</span></a></li></ol></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
     </div>
-</footer>
-    </div>
-    
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
-<script>
-    // Open in New Window
-    
-        var oOpenInNew = {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-             friends: "#js-friends a", 
-             socail: ".social a" 
-        }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
-    
-</script>
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-  </div>
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2017 <a href="/">鹏程</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
+
+    </div>
+
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
+
+
+
 </body>
 </html>

@@ -1,21 +1,15 @@
+
+
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head>
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="21年的时光, 目前爱好于前端~">
+    <title>Fcc 须知 | zhinian_Blog</title>
 
-    <!--[if lt IE 9]>
-        <style>body {display: none; background: none !important} </style>
-        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
-    <![endif]-->
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="鹏程" />
-
-
-
-<meta name="description" content="欢迎来到Fcc 闯关题 解析关于Fcc 以及它是何方神圣          &amp;gt;.&amp;lt;
+    <!-- Open Graph -->
+    <meta name="description" content="欢迎来到Fcc 闯关题 解析关于Fcc 以及它是何方神圣          &amp;gt;.&amp;lt;
 FreeCodeCamp 即是它的全称,  
 官方英文网址: https://www.freecodecamp.com/">
 <meta property="og:type" content="article">
@@ -32,558 +26,294 @@ FreeCodeCamp 即是它的全称,
 FreeCodeCamp 即是它的全称,  
 官方英文网址: https://www.freecodecamp.com/">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
-
-
-    <link rel="alternate" href="/atom.xml" title="zhinian_Blog" type="application/atom+xml">
-
-
-
-    <link rel="shortcut icon" href="/favicon.ico">
-
-
-
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
-
-
-    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-
-
-
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-
-<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-
-<title>Fcc 须知 | zhinian_Blog</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-<script>
-    var yiliaConfig = {
-        fancybox: true,
-        animate: true,
-        isHome: false,
-        isPost: true,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: true
-    }
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:1185367347@qq.com",
+  "image": "undefined",
+  "name": "鹏程",
+  "url": "https://petergooo.github.io"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
 </script>
 
+    
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
-
-
-
-    <script> yiliaConfig.rootUrl = "\/";</script>
-
-
-
-
-
+    
+    
+        
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
 
 </head>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="/logo.jpeg" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">鹏程</a></h1>
-        </hgroup>
+<body id="body" style="margin-bottom: 0;" class="pushable">
 
-        
-        <p class="header-subtitle">初行翼翼, 欲展翅飞翔</p>
-        
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+    </div>
 
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
-        
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
 
-
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>zhinian_Blog</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">鹏程</a>
                     
                 </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
+                <div class="extra content">
+                    <div class="ui list">
                         
                         
-                        <li>关于我</li>
+                        <div class="item">
+                            <i class="mail icon" style="float: left"></i>
+                            <div class="content">
+                                <a href="mailto:1185367347@qq.com">1185367347@qq.com</a>
+                            </div>
+                        </div>
                         
-                    </ul>
+                    </div>
+
                 </div>
-            </div>
-        
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
+                <div class="extra content">
+                    <div class="ui list">
                         
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/archives/">所有文章</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" href="https://github.com/HeiPeter/HeiPeter.github.io" title="GitHub"></a>
-                            
-                                <a class="fa 知乎" href="https://www.zhihu.com/people/zhinian-pc/activities" title="知乎"></a>
-                            
-                                <a class="fa Email" href="mailto:pengcheng1995@gmail.com" title="Email"></a>
-                            
-                                <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=1185367347&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Brower/">Brower</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fcc-闯关/">Fcc 闯关</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5标签/">HTML5标签</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Phantomjs/">Phantomjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-page/">github page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ife/">ife</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/top/">top</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
                     </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
-                    
-                    </div>
-                </section>
-                
-
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">这个主题好强大呐</div>
-                </section>
-                
+                </div>
             </div>
         </div>
-    </header>                
+    </div>
+
+
 </div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">鹏程</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="/logo.jpeg" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">鹏程</a></h1>
-            </hgroup>
-            
-            <p class="header-subtitle">初行翼翼, 欲展翅飞翔</p>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" target="_blank" href="https://github.com/HeiPeter/HeiPeter.github.io" title="GitHub"></a>
-                            
-                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/zhinian-pc/activities" title="知乎"></a>
-                            
-                                <a class="fa Email" target="_blank" href="mailto:pengcheng1995@gmail.com" title="Email"></a>
-                            
-                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1185367347&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-            </nav>
-        </header>                
-    </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
-</nav>
-      <div class="body-wrap"><article id="post-Fcc" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/12/04/Fcc/" class="article-date">
-      <time datetime="2016-12-04T15:06:15.000Z" itemprop="datePublished">2016-12-04</time>
-</a>
 
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Fcc 须知
-    </h1>
-  
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Fcc/">Fcc</a>
-    </div>
-
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Fcc-闯关/">Fcc 闯关</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
     
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="欢迎来到Fcc-闯关题-解析"><a href="#欢迎来到Fcc-闯关题-解析" class="headerlink" title="欢迎来到Fcc 闯关题 解析"></a>欢迎来到Fcc 闯关题 解析</h1><h2 id="关于Fcc-以及它是何方神圣-gt-lt"><a href="#关于Fcc-以及它是何方神圣-gt-lt" class="headerlink" title="关于Fcc 以及它是何方神圣          &gt;.&lt;"></a>关于Fcc 以及它是何方神圣          &gt;.&lt;</h2><blockquote>
-<p>FreeCodeCamp 即是它的全称,  </p>
-<p>官方英文网址: <a href="https://www.freecodecamp.com/" target="_blank" rel="external">https://www.freecodecamp.com/</a><br><a id="more"></a></p>
-<p>中文翻译官网: <a href="https://www.freecodecamp.cn/" target="_blank" rel="external">https://www.freecodecamp.cn/</a></p>
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-Fcc" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    Fcc 须知
+</h1>
+
+
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <h1 id="&#x6B22;&#x8FCE;&#x6765;&#x5230;Fcc-&#x95EF;&#x5173;&#x9898;-&#x89E3;&#x6790;"><a href="#&#x6B22;&#x8FCE;&#x6765;&#x5230;Fcc-&#x95EF;&#x5173;&#x9898;-&#x89E3;&#x6790;" class="headerlink" title="&#x6B22;&#x8FCE;&#x6765;&#x5230;Fcc &#x95EF;&#x5173;&#x9898; &#x89E3;&#x6790;"></a>&#x6B22;&#x8FCE;&#x6765;&#x5230;Fcc &#x95EF;&#x5173;&#x9898; &#x89E3;&#x6790;</h1><h2 id="&#x5173;&#x4E8E;Fcc-&#x4EE5;&#x53CA;&#x5B83;&#x662F;&#x4F55;&#x65B9;&#x795E;&#x5723;-gt-lt"><a href="#&#x5173;&#x4E8E;Fcc-&#x4EE5;&#x53CA;&#x5B83;&#x662F;&#x4F55;&#x65B9;&#x795E;&#x5723;-gt-lt" class="headerlink" title="&#x5173;&#x4E8E;Fcc &#x4EE5;&#x53CA;&#x5B83;&#x662F;&#x4F55;&#x65B9;&#x795E;&#x5723;          &gt;.&lt;"></a>&#x5173;&#x4E8E;Fcc &#x4EE5;&#x53CA;&#x5B83;&#x662F;&#x4F55;&#x65B9;&#x795E;&#x5723;          &gt;.&lt;</h2><blockquote>
+<p>FreeCodeCamp &#x5373;&#x662F;&#x5B83;&#x7684;&#x5168;&#x79F0;,  </p>
+<p>&#x5B98;&#x65B9;&#x82F1;&#x6587;&#x7F51;&#x5740;: <a href="https://www.freecodecamp.com/" target="_blank" rel="external">https://www.freecodecamp.com/</a><br><a id="more"></a></p>
+<p>&#x4E2D;&#x6587;&#x7FFB;&#x8BD1;&#x5B98;&#x7F51;: <a href="https://www.freecodecamp.cn/" target="_blank" rel="external">https://www.freecodecamp.cn/</a></p>
 </blockquote>
-<ol>
-<li>FreeCodeCamp 是什么?<ul>
-<li>我们是一个帮助你学习编程的开源社区。</li>
+<ol class="ui list">
+<li>FreeCodeCamp &#x662F;&#x4EC0;&#x4E48;?<ul>
+<li>&#x6211;&#x4EEC;&#x662F;&#x4E00;&#x4E2A;&#x5E2E;&#x52A9;&#x4F60;&#x5B66;&#x4E60;&#x7F16;&#x7A0B;&#x7684;&#x5F00;&#x6E90;&#x793E;&#x533A;&#x3002;</li>
 </ul>
 </li>
-<li>FreeCodeCamp如何帮助我学习编程？<ul>
-<li>你可以通过我们的自学编程挑战，构建项目，获得证书，还可以参加在线下活动。</li>
+<li>FreeCodeCamp&#x5982;&#x4F55;&#x5E2E;&#x52A9;&#x6211;&#x5B66;&#x4E60;&#x7F16;&#x7A0B;&#xFF1F;<ul>
+<li>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6211;&#x4EEC;&#x7684;&#x81EA;&#x5B66;&#x7F16;&#x7A0B;&#x6311;&#x6218;&#xFF0C;&#x6784;&#x5EFA;&#x9879;&#x76EE;&#xFF0C;&#x83B7;&#x5F97;&#x8BC1;&#x4E66;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x53C2;&#x52A0;&#x5728;&#x7EBF;&#x4E0B;&#x6D3B;&#x52A8;&#x3002;</li>
 </ul>
 </li>
-<li>FreeCodeCamp 可以帮我获得一份软件工程师的工作吗？<ul>
-<li>可以，数以百计的人在完成我们的编程挑战后获得了软件工程师的工作。</li>
+<li>FreeCodeCamp &#x53EF;&#x4EE5;&#x5E2E;&#x6211;&#x83B7;&#x5F97;&#x4E00;&#x4EFD;&#x8F6F;&#x4EF6;&#x5DE5;&#x7A0B;&#x5E08;&#x7684;&#x5DE5;&#x4F5C;&#x5417;&#xFF1F;<ul>
+<li>&#x53EF;&#x4EE5;&#xFF0C;&#x6570;&#x4EE5;&#x767E;&#x8BA1;&#x7684;&#x4EBA;&#x5728;&#x5B8C;&#x6210;&#x6211;&#x4EEC;&#x7684;&#x7F16;&#x7A0B;&#x6311;&#x6218;&#x540E;&#x83B7;&#x5F97;&#x4E86;&#x8F6F;&#x4EF6;&#x5DE5;&#x7A0B;&#x5E08;&#x7684;&#x5DE5;&#x4F5C;&#x3002;</li>
 </ul>
 </li>
-<li>FreeCodeCamp 可以提供什么证书<ul>
-<li>FreeCodeCamp 提供4个认证证书，它们是：前端开发认证、数据可视化认证、后端开发认证、全栈开发认证。</li>
+<li>FreeCodeCamp &#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4EC0;&#x4E48;&#x8BC1;&#x4E66;<ul>
+<li>FreeCodeCamp &#x63D0;&#x4F9B;4&#x4E2A;&#x8BA4;&#x8BC1;&#x8BC1;&#x4E66;&#xFF0C;&#x5B83;&#x4EEC;&#x662F;&#xFF1A;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x8BA4;&#x8BC1;&#x3001;&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;&#x8BA4;&#x8BC1;&#x3001;&#x540E;&#x7AEF;&#x5F00;&#x53D1;&#x8BA4;&#x8BC1;&#x3001;&#x5168;&#x6808;&#x5F00;&#x53D1;&#x8BA4;&#x8BC1;&#x3002;</li>
 </ul>
 </li>
-<li>FreeCodeCamp 彻底免费吗？<ul>
-<li>是的，我们的课程、项目、证书全都是免费的。</li>
+<li>FreeCodeCamp &#x5F7B;&#x5E95;&#x514D;&#x8D39;&#x5417;&#xFF1F;<ul>
+<li>&#x662F;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x8BFE;&#x7A0B;&#x3001;&#x9879;&#x76EE;&#x3001;&#x8BC1;&#x4E66;&#x5168;&#x90FD;&#x662F;&#x514D;&#x8D39;&#x7684;&#x3002;</li>
 </ul>
 </li>
 </ol>
-<p>以上信息来源于   <a href="https://www.freecodecamp.cn/about#common-question" target="_blank" rel="external">FCC常见问题</a></p>
-<p>我只是搬运工 :)   还只搬了一部分, 详情点上面链接.   捂脸</p>
-<h2 id="这里有什么"><a href="#这里有什么" class="headerlink" title="这里有什么"></a>这里有什么</h2><blockquote>
-<p>(⊙o⊙)    🤗</p>
+<p>&#x4EE5;&#x4E0A;&#x4FE1;&#x606F;&#x6765;&#x6E90;&#x4E8E;   <a href="https://www.freecodecamp.cn/about#common-question" target="_blank" rel="external">FCC&#x5E38;&#x89C1;&#x95EE;&#x9898;</a></p>
+<p>&#x6211;&#x53EA;&#x662F;&#x642C;&#x8FD0;&#x5DE5; :)   &#x8FD8;&#x53EA;&#x642C;&#x4E86;&#x4E00;&#x90E8;&#x5206;, &#x8BE6;&#x60C5;&#x70B9;&#x4E0A;&#x9762;&#x94FE;&#x63A5;.   &#x6342;&#x8138;</p>
+<h2 id="&#x8FD9;&#x91CC;&#x6709;&#x4EC0;&#x4E48;"><a href="#&#x8FD9;&#x91CC;&#x6709;&#x4EC0;&#x4E48;" class="headerlink" title="&#x8FD9;&#x91CC;&#x6709;&#x4EC0;&#x4E48;"></a>&#x8FD9;&#x91CC;&#x6709;&#x4EC0;&#x4E48;</h2><blockquote>
+<p>(&#x2299;o&#x2299;)    &#x1F917;</p>
 </blockquote>
-<ol>
-<li>这里是有一些<a href="https://www.freecodecamp.cn" target="_blank" rel="external">FCC</a>上的题目解析, 有我当时遇到的问题, 也有其他FCC同学遇到的问题. 而这里, 我集中的放在一起, 是为了<code>有需求查看时, 更好更快的search</code>.</li>
-<li>不敢说是多好的,  毕竟我也是前端小白一个.   只能说<code>大家一起学习, 一起进步</code>.   对于前端, 无论是工作需求还是兴趣爱好, 都是一个有趣, 有成就, 有收获的事情.</li>
+<ol class="ui list">
+<li>&#x8FD9;&#x91CC;&#x662F;&#x6709;&#x4E00;&#x4E9B;<a href="https://www.freecodecamp.cn" target="_blank" rel="external">FCC</a>&#x4E0A;&#x7684;&#x9898;&#x76EE;&#x89E3;&#x6790;, &#x6709;&#x6211;&#x5F53;&#x65F6;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;, &#x4E5F;&#x6709;&#x5176;&#x4ED6;FCC&#x540C;&#x5B66;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;. &#x800C;&#x8FD9;&#x91CC;, &#x6211;&#x96C6;&#x4E2D;&#x7684;&#x653E;&#x5728;&#x4E00;&#x8D77;, &#x662F;&#x4E3A;&#x4E86;<code>&#x6709;&#x9700;&#x6C42;&#x67E5;&#x770B;&#x65F6;, &#x66F4;&#x597D;&#x66F4;&#x5FEB;&#x7684;search</code>.</li>
+<li>&#x4E0D;&#x6562;&#x8BF4;&#x662F;&#x591A;&#x597D;&#x7684;,  &#x6BD5;&#x7ADF;&#x6211;&#x4E5F;&#x662F;&#x524D;&#x7AEF;&#x5C0F;&#x767D;&#x4E00;&#x4E2A;.   &#x53EA;&#x80FD;&#x8BF4;<code>&#x5927;&#x5BB6;&#x4E00;&#x8D77;&#x5B66;&#x4E60;, &#x4E00;&#x8D77;&#x8FDB;&#x6B65;</code>.   &#x5BF9;&#x4E8E;&#x524D;&#x7AEF;, &#x65E0;&#x8BBA;&#x662F;&#x5DE5;&#x4F5C;&#x9700;&#x6C42;&#x8FD8;&#x662F;&#x5174;&#x8DA3;&#x7231;&#x597D;, &#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x6709;&#x8DA3;, &#x6709;&#x6210;&#x5C31;, &#x6709;&#x6536;&#x83B7;&#x7684;&#x4E8B;&#x60C5;.</li>
 </ol>
-<h2 id="如何使用这个FCC闯关题-解析"><a href="#如何使用这个FCC闯关题-解析" class="headerlink" title="如何使用这个FCC闯关题 解析"></a>如何使用这个FCC闯关题 解析</h2><blockquote>
-<ol>
-<li>​    首先, 自己要有 <code>思考</code> 过准备search的题,  确实发现自己的思路还没有头绪,  或者, 是觉得自己的思路并不是最好的,  review 一下别的伙伴们的想法. 进而提升自己. <br></li>
-<li>其次, 我也尽量用自己的语言组织好, 引导好,     <code>授人以鱼不如授人以渔</code>.   我更希望的是, 当你看完以后,  举一反三都不是问题~   找到比我的解法还要好,   十分欢迎,  你可以通过点击左边侧栏的github, 进入issues提交, 以及左侧边栏的邮箱,  QQ , 都是可以联系我, 我将会更新那道题的最优方案~     并注明你的署名与版权.<br></li>
-<li>如果在查看解析的时候, 还是遇到了问题, 除了上面 <code>2</code> 中联系方式, 还可以在文章<code>最下面评论</code>即可.  <br></li>
-<li>更有热心者,  你也可以自己完成一篇  Fcc算法题中常见的有人提问 的闯关题解析.  并以邮件. github issues.  或者qq  发给我,     格式可以为<code>纯文本</code>,  也可以是txt文件,  最好的格式是<code>md</code> 文件,  既markdown文件.  我会整理至博客中.  并注明你的署名与版权.​</li>
+<h2 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;FCC&#x95EF;&#x5173;&#x9898;-&#x89E3;&#x6790;"><a href="#&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;FCC&#x95EF;&#x5173;&#x9898;-&#x89E3;&#x6790;" class="headerlink" title="&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;FCC&#x95EF;&#x5173;&#x9898; &#x89E3;&#x6790;"></a>&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;FCC&#x95EF;&#x5173;&#x9898; &#x89E3;&#x6790;</h2><blockquote>
+<ol class="ui list">
+<li>&#x200B;    &#x9996;&#x5148;, &#x81EA;&#x5DF1;&#x8981;&#x6709; <code>&#x601D;&#x8003;</code> &#x8FC7;&#x51C6;&#x5907;search&#x7684;&#x9898;,  &#x786E;&#x5B9E;&#x53D1;&#x73B0;&#x81EA;&#x5DF1;&#x7684;&#x601D;&#x8DEF;&#x8FD8;&#x6CA1;&#x6709;&#x5934;&#x7EEA;,  &#x6216;&#x8005;, &#x662F;&#x89C9;&#x5F97;&#x81EA;&#x5DF1;&#x7684;&#x601D;&#x8DEF;&#x5E76;&#x4E0D;&#x662F;&#x6700;&#x597D;&#x7684;,  review &#x4E00;&#x4E0B;&#x522B;&#x7684;&#x4F19;&#x4F34;&#x4EEC;&#x7684;&#x60F3;&#x6CD5;. &#x8FDB;&#x800C;&#x63D0;&#x5347;&#x81EA;&#x5DF1;. <br></li>
+<li>&#x5176;&#x6B21;, &#x6211;&#x4E5F;&#x5C3D;&#x91CF;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x8BED;&#x8A00;&#x7EC4;&#x7EC7;&#x597D;, &#x5F15;&#x5BFC;&#x597D;,     <code>&#x6388;&#x4EBA;&#x4EE5;&#x9C7C;&#x4E0D;&#x5982;&#x6388;&#x4EBA;&#x4EE5;&#x6E14;</code>.   &#x6211;&#x66F4;&#x5E0C;&#x671B;&#x7684;&#x662F;, &#x5F53;&#x4F60;&#x770B;&#x5B8C;&#x4EE5;&#x540E;,  &#x4E3E;&#x4E00;&#x53CD;&#x4E09;&#x90FD;&#x4E0D;&#x662F;&#x95EE;&#x9898;~   &#x627E;&#x5230;&#x6BD4;&#x6211;&#x7684;&#x89E3;&#x6CD5;&#x8FD8;&#x8981;&#x597D;,   &#x5341;&#x5206;&#x6B22;&#x8FCE;,  &#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x70B9;&#x51FB;&#x5DE6;&#x8FB9;&#x4FA7;&#x680F;&#x7684;github, &#x8FDB;&#x5165;issues&#x63D0;&#x4EA4;, &#x4EE5;&#x53CA;&#x5DE6;&#x4FA7;&#x8FB9;&#x680F;&#x7684;&#x90AE;&#x7BB1;,  QQ , &#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x8054;&#x7CFB;&#x6211;, &#x6211;&#x5C06;&#x4F1A;&#x66F4;&#x65B0;&#x90A3;&#x9053;&#x9898;&#x7684;&#x6700;&#x4F18;&#x65B9;&#x6848;~     &#x5E76;&#x6CE8;&#x660E;&#x4F60;&#x7684;&#x7F72;&#x540D;&#x4E0E;&#x7248;&#x6743;.<br></li>
+<li>&#x5982;&#x679C;&#x5728;&#x67E5;&#x770B;&#x89E3;&#x6790;&#x7684;&#x65F6;&#x5019;, &#x8FD8;&#x662F;&#x9047;&#x5230;&#x4E86;&#x95EE;&#x9898;, &#x9664;&#x4E86;&#x4E0A;&#x9762; <code>2</code> &#x4E2D;&#x8054;&#x7CFB;&#x65B9;&#x5F0F;, &#x8FD8;&#x53EF;&#x4EE5;&#x5728;&#x6587;&#x7AE0;<code>&#x6700;&#x4E0B;&#x9762;&#x8BC4;&#x8BBA;</code>&#x5373;&#x53EF;.  <br></li>
+<li>&#x66F4;&#x6709;&#x70ED;&#x5FC3;&#x8005;,  &#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5B8C;&#x6210;&#x4E00;&#x7BC7;  Fcc&#x7B97;&#x6CD5;&#x9898;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x6709;&#x4EBA;&#x63D0;&#x95EE; &#x7684;&#x95EF;&#x5173;&#x9898;&#x89E3;&#x6790;.  &#x5E76;&#x4EE5;&#x90AE;&#x4EF6;. github issues.  &#x6216;&#x8005;qq  &#x53D1;&#x7ED9;&#x6211;,     &#x683C;&#x5F0F;&#x53EF;&#x4EE5;&#x4E3A;<code>&#x7EAF;&#x6587;&#x672C;</code>,  &#x4E5F;&#x53EF;&#x4EE5;&#x662F;txt&#x6587;&#x4EF6;,  &#x6700;&#x597D;&#x7684;&#x683C;&#x5F0F;&#x662F;<code>md</code> &#x6587;&#x4EF6;,  &#x65E2;markdown&#x6587;&#x4EF6;.  &#x6211;&#x4F1A;&#x6574;&#x7406;&#x81F3;&#x535A;&#x5BA2;&#x4E2D;.  &#x5E76;&#x6CE8;&#x660E;&#x4F60;&#x7684;&#x7F72;&#x540D;&#x4E0E;&#x7248;&#x6743;.&#x200B;</li>
 </ol>
 </blockquote>
-<h2 id="How-to-do-better"><a href="#How-to-do-better" class="headerlink" title="How to do better"></a>How to do better</h2><p>走心啊</p>
+<h2 id="How-to-do-better"><a href="#How-to-do-better" class="headerlink" title="How to do better"></a>How to do better</h2><p>&#x8D70;&#x5FC3;&#x554A;</p>
 <h2 id="over"><a href="#over" class="headerlink" title="over"></a>over</h2>
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/12/04/Fcc/">Fcc 须知</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">鹏程</a></p>
-        <p><span>发布时间:</span>2016-12-04, 23:06:15</p>
-        <p><span>最后更新:</span>2016-12-16, 19:31:23</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/12/04/Fcc/" title="Fcc 须知">https://petergooo.github.io/2016/12/04/Fcc/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://petergooo.github.io/2016/12/04/Fcc/　　作者: 鹏程" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
+                        
+                    </div>
 
+                    
+                    
+                    
 
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2016-12-04T15:06:15.000Z" itemprop="datePublished">2016-12-04</time>
 
-    <nav id="article-nav">
+    </span>
+    <span class="post-description-item">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/12/04/Writing/">
+
+    <span>
+        <i class="tags icon"></i>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/Fcc-闯关/">Fcc 闯关</a>
+    </span>
+
+    
+
+    </span>
+</div>
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a href="/2016/12/04/Writing/" class="ui tiny button">
+
+                    <i class="angle left icon"></i>
+                    
                     Write
+                    
+
                 </a>
+
+                
             </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/12/04/hello-world/">
+            <div class="column nav-right">
+                
+
+                <a href="/2016/12/04/hello-world/" class="ui tiny button">
+                    
                     Hello World
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#欢迎来到Fcc-闯关题-解析"><span class="toc-number">1.</span> <span class="toc-text">欢迎来到Fcc 闯关题 解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于Fcc-以及它是何方神圣-gt-lt"><span class="toc-number">1.1.</span> <span class="toc-text">关于Fcc 以及它是何方神圣          >.<</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#这里有什么"><span class="toc-number">1.2.</span> <span class="toc-text">这里有什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何使用这个FCC闯关题-解析"><span class="toc-number">1.3.</span> <span class="toc-text">如何使用这个FCC闯关题 解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-do-better"><span class="toc-number">1.4.</span> <span class="toc-text">How to do better</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#over"><span class="toc-number">1.5.</span> <span class="toc-text">over</span></a></li></ol></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
-        </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Fcc 须知　| zhinian_Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
-
-
-
-
-
-    
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/04/Fcc/" data-title="Fcc 须知" data-url="https://petergooo.github.io/2016/12/04/Fcc/"></div>
-    <script>
-        var duoshuoQuery = {short_name:"zhinian95"};
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = "http://blog.zhinian.info/js/embed.js";
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
-        }
-
-        
-    </script>
-    
-    <script> loadComment(); </script>
-
-</div>
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2016/12/04/Writing/" title="上一篇: Write">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2016/12/04/hello-world/" title="下一篇: Hello World">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/05/browerMETA/">360浏览器、QQ浏览器等 <meta>标签选择webkit内核问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/16/MyWebroad/">MyWebRoad</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/04/ife-phantomjs/">phantomjs———刷IFE琐记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/19/css01/">css3 一些样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/18/Github_2/">Github 的注册与使用教程以及github page (二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/16/blog/">这个blog 你需要知道的</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/night/">一次晚归夜宿与早起日出</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/08/Github_1/">Github 的注册与使用教程以及github page (一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/05/steamroller/">Fcc --- Steamroller</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Writing/">Write</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Fcc/">Fcc 须知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/hello-world/">Hello World</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2016-2017 鹏程
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                    
+                    <i class="angle right icon"></i></a>
+                
             </div>
         </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
+    </div>
+
+</div>
                 
             </div>
-        
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#欢迎来到Fcc-闯关题-解析"><span>欢迎来到Fcc 闯关题 解析</span></a><ol><li><a href="#关于Fcc-以及它是何方神圣-gt-lt"><span>关于Fcc 以及它是何方神圣          >.<</span></a></li><li><a href="#这里有什么"><span>这里有什么</span></a></li><li><a href="#如何使用这个FCC闯关题-解析"><span>如何使用这个FCC闯关题 解析</span></a></li><li><a href="#How-to-do-better"><span>How to do better</span></a></li><li><a href="#over"><span>over</span></a></li></ol></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
     </div>
-</footer>
-    </div>
-    
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
-<script>
-    // Open in New Window
-    
-        var oOpenInNew = {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-             friends: "#js-friends a", 
-             socail: ".social a" 
-        }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
-    
-</script>
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-  </div>
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2017 <a href="/">鹏程</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
+
+    </div>
+
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
+
+
+
 </body>
 </html>

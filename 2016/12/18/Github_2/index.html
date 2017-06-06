@@ -1,21 +1,15 @@
+
+
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head>
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="21年的时光, 目前爱好于前端~">
+    <title>Github 的注册与使用教程以及github page (二) | zhinian_Blog</title>
 
-    <!--[if lt IE 9]>
-        <style>body {display: none; background: none !important} </style>
-        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
-    <![endif]-->
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="鹏程" />
-
-
-
-<meta name="description" content="使用Github来托管你的代码须知
+    <!-- Open Graph -->
+    <meta name="description" content="使用Github来托管你的代码须知
 
 
 写在前面的话:         如果你自认为是做技术的,  我强烈推荐你  学会翻墙,  好处不用多说,  讲道理某度搜索真的会误人! ! !
@@ -41,667 +35,408 @@
 关于使用客户端还是命令行     两个都可以上传你的代码,  就是看你喜欢哪种风格了.   
 善于使用左侧目录跳转     这篇文章比较长, 我把客户端和命令行放在一起了.   所以请读者合理使用左侧目录跳转, 以节">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
-
-
-    <link rel="alternate" href="/atom.xml" title="zhinian_Blog" type="application/atom+xml">
-
-
-
-    <link rel="shortcut icon" href="/favicon.ico">
-
-
-
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
-
-
-    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-
-
-
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-
-<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-
-<title>Github 的注册与使用教程以及github page (二) | zhinian_Blog</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-<script>
-    var yiliaConfig = {
-        fancybox: true,
-        animate: true,
-        isHome: false,
-        isPost: true,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: true
-    }
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:1185367347@qq.com",
+  "image": "undefined",
+  "name": "鹏程",
+  "url": "https://petergooo.github.io"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
 </script>
 
+    
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
-
-
-
-    <script> yiliaConfig.rootUrl = "\/";</script>
-
-
-
-
-
+    
+    
+        
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
 
 </head>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="/logo.jpeg" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">鹏程</a></h1>
-        </hgroup>
+<body id="body" style="margin-bottom: 0;" class="pushable">
 
-        
-        <p class="header-subtitle">初行翼翼, 欲展翅飞翔</p>
-        
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+    </div>
 
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
-        
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
 
-
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>zhinian_Blog</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">鹏程</a>
                     
                 </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
+                <div class="extra content">
+                    <div class="ui list">
                         
                         
-                        <li>关于我</li>
+                        <div class="item">
+                            <i class="mail icon" style="float: left"></i>
+                            <div class="content">
+                                <a href="mailto:1185367347@qq.com">1185367347@qq.com</a>
+                            </div>
+                        </div>
                         
-                    </ul>
+                    </div>
+
                 </div>
-            </div>
-        
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
+                <div class="extra content">
+                    <div class="ui list">
                         
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/archives/">所有文章</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" href="https://github.com/HeiPeter/HeiPeter.github.io" title="GitHub"></a>
-                            
-                                <a class="fa 知乎" href="https://www.zhihu.com/people/zhinian-pc/activities" title="知乎"></a>
-                            
-                                <a class="fa Email" href="mailto:pengcheng1995@gmail.com" title="Email"></a>
-                            
-                                <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=1185367347&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Brower/">Brower</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fcc-闯关/">Fcc 闯关</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5标签/">HTML5标签</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Phantomjs/">Phantomjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-page/">github page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ife/">ife</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/top/">top</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
                     </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
-                    
-                    </div>
-                </section>
-                
-
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">这个主题好强大呐</div>
-                </section>
-                
+                </div>
             </div>
         </div>
-    </header>                
+    </div>
+
+
 </div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">鹏程</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="/logo.jpeg" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">鹏程</a></h1>
-            </hgroup>
-            
-            <p class="header-subtitle">初行翼翼, 欲展翅飞翔</p>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" target="_blank" href="https://github.com/HeiPeter/HeiPeter.github.io" title="GitHub"></a>
-                            
-                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/zhinian-pc/activities" title="知乎"></a>
-                            
-                                <a class="fa Email" target="_blank" href="mailto:pengcheng1995@gmail.com" title="Email"></a>
-                            
-                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1185367347&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-            </nav>
-        </header>                
-    </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
-</nav>
-      <div class="body-wrap"><article id="post-Github_2" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/12/18/Github_2/" class="article-date">
-      <time datetime="2016-12-18T14:47:16.000Z" itemprop="datePublished">2016-12-18</time>
-</a>
 
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Github 的注册与使用教程以及github page (二)
-    </h1>
-  
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/教程/">教程</a>
-    </div>
-
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github-page/">github page</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
     
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="使用Github来托管你的代码"><a href="#使用Github来托管你的代码" class="headerlink" title="使用Github来托管你的代码"></a>使用Github来托管你的代码</h1><p><strong><em>须知</em></strong></p>
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-Github_2" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    Github 的注册与使用教程以及github page (二)
+</h1>
+
+
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <h1 id="&#x4F7F;&#x7528;Github&#x6765;&#x6258;&#x7BA1;&#x4F60;&#x7684;&#x4EE3;&#x7801;"><a href="#&#x4F7F;&#x7528;Github&#x6765;&#x6258;&#x7BA1;&#x4F60;&#x7684;&#x4EE3;&#x7801;" class="headerlink" title="&#x4F7F;&#x7528;Github&#x6765;&#x6258;&#x7BA1;&#x4F60;&#x7684;&#x4EE3;&#x7801;"></a>&#x4F7F;&#x7528;Github&#x6765;&#x6258;&#x7BA1;&#x4F60;&#x7684;&#x4EE3;&#x7801;</h1><p><strong><em>&#x987B;&#x77E5;</em></strong></p>
 <blockquote>
-<ol>
-<li><strong><code>写在前面的话:</code></strong>         如果你自认为是做技术的,  我强烈推荐你  <strong>学会翻墙</strong>,  好处不用多说,  讲道理某度搜索真的会误人! ! !</li>
-<li><strong><code>关于使用客户端还是命令行</code></strong>     两个都可以上传你的代码,  就是看你喜欢哪种风格了.   </li>
-<li><strong><code>善于使用左侧目录跳转</code></strong>     这篇文章比较长, 我把客户端和命令行放在一起了.   所以请读者合理使用左侧目录跳转, 以节省时间.</li>
-<li>本文是从小白开始的教程, 大牛勿喷. 再说. 这是我第一次写, 难免过于幼稚.  体谅哈~</li>
+<ol class="ui list">
+<li><strong><code>&#x5199;&#x5728;&#x524D;&#x9762;&#x7684;&#x8BDD;:</code></strong>       &#x2003;&#x2003;&#x5982;&#x679C;&#x4F60;&#x81EA;&#x8BA4;&#x4E3A;&#x662F;&#x505A;&#x6280;&#x672F;&#x7684;,  &#x6211;&#x5F3A;&#x70C8;&#x63A8;&#x8350;&#x4F60;  <strong>&#x5B66;&#x4F1A;&#x7FFB;&#x5899;</strong>,  &#x597D;&#x5904;&#x4E0D;&#x7528;&#x591A;&#x8BF4;,  &#x8BB2;&#x9053;&#x7406;&#x67D0;&#x5EA6;&#x641C;&#x7D22;&#x771F;&#x7684;&#x4F1A;&#x8BEF;&#x4EBA;! ! !</li>
+<li><strong><code>&#x5173;&#x4E8E;&#x4F7F;&#x7528;&#x5BA2;&#x6237;&#x7AEF;&#x8FD8;&#x662F;&#x547D;&#x4EE4;&#x884C;</code></strong>   &#x2003;&#x2003;&#x4E24;&#x4E2A;&#x90FD;&#x53EF;&#x4EE5;&#x4E0A;&#x4F20;&#x4F60;&#x7684;&#x4EE3;&#x7801;,  &#x5C31;&#x662F;&#x770B;&#x4F60;&#x559C;&#x6B22;&#x54EA;&#x79CD;&#x98CE;&#x683C;&#x4E86;.   </li>
+<li><strong><code>&#x5584;&#x4E8E;&#x4F7F;&#x7528;&#x5DE6;&#x4FA7;&#x76EE;&#x5F55;&#x8DF3;&#x8F6C;</code></strong> &#x2003;&#x2003;&#x2003;&#x2003;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x6BD4;&#x8F83;&#x957F;, &#x6211;&#x628A;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x547D;&#x4EE4;&#x884C;&#x653E;&#x5728;&#x4E00;&#x8D77;&#x4E86;.   &#x6240;&#x4EE5;&#x8BF7;&#x8BFB;&#x8005;&#x5408;&#x7406;&#x4F7F;&#x7528;&#x5DE6;&#x4FA7;&#x76EE;&#x5F55;&#x8DF3;&#x8F6C;, &#x4EE5;&#x8282;&#x7701;&#x65F6;&#x95F4;.</li>
+<li>&#x672C;&#x6587;&#x662F;&#x4ECE;&#x5C0F;&#x767D;&#x5F00;&#x59CB;&#x7684;&#x6559;&#x7A0B;, &#x5927;&#x725B;&#x52FF;&#x55B7;. &#x518D;&#x8BF4;. &#x8FD9;&#x662F;&#x6211;&#x7B2C;&#x4E00;&#x6B21;&#x5199;, &#x96BE;&#x514D;&#x8FC7;&#x4E8E;&#x5E7C;&#x7A1A;.  &#x4F53;&#x8C05;&#x54C8;~</li>
 </ol>
 </blockquote>
 <a id="more"></a>
-<p><strong><em>相关</em></strong>  </p>
+<p><strong><em>&#x76F8;&#x5173;</em></strong>  </p>
 <blockquote>
-<p><strong>第一部分</strong> <a href="https://petergooo.github.io/blog/2016/12/08/Github-1/">认识Github和Github Page</a></p>
-<p>  在第一部分中,  我简单的写了Github的注册, 建仓库,  初次使用Github page. 还是用的网页上的<strong>create new file</strong> 在实际生产中, 我们肯定不可能是那样的写文件吧, 所以. 这个博文就是教你如何上传代码文件的</p>
-<p><strong>第二部分</strong> <a href="https://petergooo.github.io/blog/2016/12/08/Github-2/">使用客户端或命令行上传你的代码</a></p>
-<p>​      本文讲述了如何上传 本地的代码 到 Github上.  常见的方式有 <strong><code>客户端</code></strong> 和 <strong><code>终端命令行</code></strong>  这两种. 我在这里用文字加图片的方法, 讲述一下Github的上传代码的事情.</p>
+<p><strong>&#x7B2C;&#x4E00;&#x90E8;&#x5206;</strong> <a href="https://petergooo.github.io/blog/2016/12/08/Github-1/">&#x8BA4;&#x8BC6;Github&#x548C;Github Page</a></p>
+<p>&#x2003;&#x2003;&#x5728;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x4E2D;,  &#x6211;&#x7B80;&#x5355;&#x7684;&#x5199;&#x4E86;Github&#x7684;&#x6CE8;&#x518C;, &#x5EFA;&#x4ED3;&#x5E93;,  &#x521D;&#x6B21;&#x4F7F;&#x7528;Github page. &#x8FD8;&#x662F;&#x7528;&#x7684;&#x7F51;&#x9875;&#x4E0A;&#x7684;<strong>create new file</strong> &#x5728;&#x5B9E;&#x9645;&#x751F;&#x4EA7;&#x4E2D;, &#x6211;&#x4EEC;&#x80AF;&#x5B9A;&#x4E0D;&#x53EF;&#x80FD;&#x662F;&#x90A3;&#x6837;&#x7684;&#x5199;&#x6587;&#x4EF6;&#x5427;, &#x6240;&#x4EE5;. &#x8FD9;&#x4E2A;&#x535A;&#x6587;&#x5C31;&#x662F;&#x6559;&#x4F60;&#x5982;&#x4F55;&#x4E0A;&#x4F20;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x7684;</p>
+<p><strong>&#x7B2C;&#x4E8C;&#x90E8;&#x5206;</strong> <a href="https://petergooo.github.io/blog/2016/12/08/Github-2/">&#x4F7F;&#x7528;&#x5BA2;&#x6237;&#x7AEF;&#x6216;&#x547D;&#x4EE4;&#x884C;&#x4E0A;&#x4F20;&#x4F60;&#x7684;&#x4EE3;&#x7801;</a></p>
+<p>&#x200B;    &#x2003;&#x2003;&#x672C;&#x6587;&#x8BB2;&#x8FF0;&#x4E86;&#x5982;&#x4F55;&#x4E0A;&#x4F20; &#x672C;&#x5730;&#x7684;&#x4EE3;&#x7801; &#x5230; Github&#x4E0A;.  &#x5E38;&#x89C1;&#x7684;&#x65B9;&#x5F0F;&#x6709; <strong><code>&#x5BA2;&#x6237;&#x7AEF;</code></strong> &#x548C; <strong><code>&#x7EC8;&#x7AEF;&#x547D;&#x4EE4;&#x884C;</code></strong>  &#x8FD9;&#x4E24;&#x79CD;. &#x6211;&#x5728;&#x8FD9;&#x91CC;&#x7528;&#x6587;&#x5B57;&#x52A0;&#x56FE;&#x7247;&#x7684;&#x65B9;&#x6CD5;, &#x8BB2;&#x8FF0;&#x4E00;&#x4E0B;Github&#x7684;&#x4E0A;&#x4F20;&#x4EE3;&#x7801;&#x7684;&#x4E8B;&#x60C5;.</p>
 </blockquote>
-<h1 id="Github-的客户端使用"><a href="#Github-的客户端使用" class="headerlink" title="Github 的客户端使用"></a>Github 的客户端使用</h1><p>  当今盛行的代码托管服务平台.  而我们作为一个程序员, 岂有弃之不用之理~  好绕哈哈.    下面我就直接进入主题  客户端的使用.  分别有Mac端 和 windows端 的使用.</p>
+<h1 id="Github-&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;"><a href="#Github-&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;" class="headerlink" title="Github &#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;"></a>Github &#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;</h1><p>&#x2003;&#x2003;&#x5F53;&#x4ECA;&#x76DB;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x6258;&#x7BA1;&#x670D;&#x52A1;&#x5E73;&#x53F0;.  &#x800C;&#x6211;&#x4EEC;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x5458;, &#x5C82;&#x6709;&#x5F03;&#x4E4B;&#x4E0D;&#x7528;&#x4E4B;&#x7406;~  &#x597D;&#x7ED5;&#x54C8;&#x54C8;.    &#x4E0B;&#x9762;&#x6211;&#x5C31;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x4E3B;&#x9898;  &#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x4F7F;&#x7528;.  &#x5206;&#x522B;&#x6709;Mac&#x7AEF; &#x548C; windows&#x7AEF; &#x7684;&#x4F7F;&#x7528;.</p>
 <blockquote>
-<p>客户端是简单的操作, 适合新手.</p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x662F;&#x7B80;&#x5355;&#x7684;&#x64CD;&#x4F5C;, &#x9002;&#x5408;&#x65B0;&#x624B;.</p>
 </blockquote>
-<h2 id="Mac客户端下载与使用"><a href="#Mac客户端下载与使用" class="headerlink" title="Mac客户端下载与使用"></a>Mac客户端下载与使用</h2><h3 id="1-下载与安装"><a href="#1-下载与安装" class="headerlink" title="1. 下载与安装"></a>1. 下载与安装</h3><ul>
-<li>官网下载地址: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
-<li>如果网速慢, 可以在我的网盘下载. 链接: <a href="http://pan.baidu.com/s/1i4B4tzZ" target="_blank" rel="external">http://pan.baidu.com/s/1i4B4tzZ</a> 密码: gjpy</li>
+<h2 id="Mac&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;"><a href="#Mac&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;" class="headerlink" title="Mac&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;"></a>Mac&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;</h2><h3 id="1-&#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;"><a href="#1-&#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;" class="headerlink" title="1. &#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;"></a>1. &#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;</h3><ul class="ui list">
+<li>&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x5730;&#x5740;: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
+<li>&#x5982;&#x679C;&#x7F51;&#x901F;&#x6162;, &#x53EF;&#x4EE5;&#x5728;&#x6211;&#x7684;&#x7F51;&#x76D8;&#x4E0B;&#x8F7D;. &#x94FE;&#x63A5;: <a href="http://pan.baidu.com/s/1i4B4tzZ" target="_blank" rel="external">http://pan.baidu.com/s/1i4B4tzZ</a> &#x5BC6;&#x7801;: gjpy</li>
 </ul>
-<h3 id="2-登录客户端"><a href="#2-登录客户端" class="headerlink" title="2. 登录客户端"></a>2. 登录客户端</h3><ul>
-<li>快捷键 <code>command</code> + <code>,</code> 打开客户端的设置.  </li>
-<li>点击 <strong>Accounts</strong>  然后  sign in 你的Github账号.</li>
+<h3 id="2-&#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;"><a href="#2-&#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;" class="headerlink" title="2. &#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;"></a>2. &#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;</h3><ul class="ui list">
+<li>&#x5FEB;&#x6377;&#x952E; <code>command</code> + <code>,</code> &#x6253;&#x5F00;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BBE;&#x7F6E;.  </li>
+<li>&#x70B9;&#x51FB; <strong>Accounts</strong>  &#x7136;&#x540E;  sign in &#x4F60;&#x7684;Github&#x8D26;&#x53F7;.</li>
 </ul>
-<h3 id="3-克隆仓库"><a href="#3-克隆仓库" class="headerlink" title="3. 克隆仓库"></a>3. 克隆仓库</h3><ul>
-<li>登陆成功后, 在客户端的左上角点击 <strong><em>+</em></strong>  图标, 在弹出来的框框中,  有三个选项: Add  Create  Clone,  这里我们需要点击Clone.</li>
-<li>这时会出来你Github账号上,  所有的仓库.  你需要clone哪个, 就点击仓库名字, 右下角的按钮就亮了.   click it</li>
-<li>弹出clone选项, 你选择好文件夹就可以了.</li>
+<h3 id="3-&#x514B;&#x9686;&#x4ED3;&#x5E93;"><a href="#3-&#x514B;&#x9686;&#x4ED3;&#x5E93;" class="headerlink" title="3. &#x514B;&#x9686;&#x4ED3;&#x5E93;"></a>3. &#x514B;&#x9686;&#x4ED3;&#x5E93;</h3><ul class="ui list">
+<li>&#x767B;&#x9646;&#x6210;&#x529F;&#x540E;, &#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x70B9;&#x51FB; <strong><em>+</em></strong>  &#x56FE;&#x6807;, &#x5728;&#x5F39;&#x51FA;&#x6765;&#x7684;&#x6846;&#x6846;&#x4E2D;,  &#x6709;&#x4E09;&#x4E2A;&#x9009;&#x9879;: Add  Create  Clone,  &#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x70B9;&#x51FB;Clone.</li>
+<li>&#x8FD9;&#x65F6;&#x4F1A;&#x51FA;&#x6765;&#x4F60;Github&#x8D26;&#x53F7;&#x4E0A;,  &#x6240;&#x6709;&#x7684;&#x4ED3;&#x5E93;.  &#x4F60;&#x9700;&#x8981;clone&#x54EA;&#x4E2A;, &#x5C31;&#x70B9;&#x51FB;&#x4ED3;&#x5E93;&#x540D;&#x5B57;, &#x53F3;&#x4E0B;&#x89D2;&#x7684;&#x6309;&#x94AE;&#x5C31;&#x4EAE;&#x4E86;.   click it</li>
+<li>&#x5F39;&#x51FA;clone&#x9009;&#x9879;, &#x4F60;&#x9009;&#x62E9;&#x597D;&#x6587;&#x4EF6;&#x5939;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;.</li>
 </ul>
-<h3 id="4-写代码咯"><a href="#4-写代码咯" class="headerlink" title="4. 写代码咯"></a>4. 写代码咯</h3><p>  你想托管在Github平台的代码放在你克隆到本地的仓库下面就好了,  然后接着下一步, push你的代码吧.</p>
+<h3 id="4-&#x5199;&#x4EE3;&#x7801;&#x54AF;"><a href="#4-&#x5199;&#x4EE3;&#x7801;&#x54AF;" class="headerlink" title="4. &#x5199;&#x4EE3;&#x7801;&#x54AF;"></a>4. &#x5199;&#x4EE3;&#x7801;&#x54AF;</h3><p>&#x2003;&#x2003;&#x4F60;&#x60F3;&#x6258;&#x7BA1;&#x5728;Github&#x5E73;&#x53F0;&#x7684;&#x4EE3;&#x7801;&#x653E;&#x5728;&#x4F60;&#x514B;&#x9686;&#x5230;&#x672C;&#x5730;&#x7684;&#x4ED3;&#x5E93;&#x4E0B;&#x9762;&#x5C31;&#x597D;&#x4E86;,  &#x7136;&#x540E;&#x63A5;&#x7740;&#x4E0B;&#x4E00;&#x6B65;, push&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x5427;.</p>
 <blockquote>
-<p>这里上面的几个步骤,  是你第一次使用Github提交代码的顺序,  在接下来的时间里,  在你已经克隆过本地仓库后, 你要是需要提交代码到Github上,  那直接走 <a href="#5-提交代码到Github上">提交代码到Github上</a> 这一步就好了</p>
+<p>&#x8FD9;&#x91CC;&#x4E0A;&#x9762;&#x7684;&#x51E0;&#x4E2A;&#x6B65;&#x9AA4;,  &#x662F;&#x4F60;&#x7B2C;&#x4E00;&#x6B21;&#x4F7F;&#x7528;Github&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x7684;&#x987A;&#x5E8F;,  &#x5728;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x65F6;&#x95F4;&#x91CC;,  &#x5728;&#x4F60;&#x5DF2;&#x7ECF;&#x514B;&#x9686;&#x8FC7;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x540E;, &#x4F60;&#x8981;&#x662F;&#x9700;&#x8981;&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;,  &#x90A3;&#x76F4;&#x63A5;&#x8D70; <a href="#5-&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;">&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;</a> &#x8FD9;&#x4E00;&#x6B65;&#x5C31;&#x597D;&#x4E86;</p>
 </blockquote>
-<h3 id="5-提交代码到Github上"><a href="#5-提交代码到Github上" class="headerlink" title="5. 提交代码到Github上"></a>5. 提交代码到Github上</h3><ol>
-<li><p>打开客户端.  点击左侧你要同步的仓库</p>
+<h3 id="5-&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;"><a href="#5-&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;" class="headerlink" title="5. &#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;"></a>5. &#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;</h3><ol class="ui list">
+<li><p>&#x6253;&#x5F00;&#x5BA2;&#x6237;&#x7AEF;.  &#x70B9;&#x51FB;&#x5DE6;&#x4FA7;&#x4F60;&#x8981;&#x540C;&#x6B65;&#x7684;&#x4ED3;&#x5E93;</p>
 </li>
-<li><p>当你本地的代码与网页上的相比, 有变动的时候, 会显示有多少个 changes .</p>
+<li><p>&#x5F53;&#x4F60;&#x672C;&#x5730;&#x7684;&#x4EE3;&#x7801;&#x4E0E;&#x7F51;&#x9875;&#x4E0A;&#x7684;&#x76F8;&#x6BD4;, &#x6709;&#x53D8;&#x52A8;&#x7684;&#x65F6;&#x5019;, &#x4F1A;&#x663E;&#x793A;&#x6709;&#x591A;&#x5C11;&#x4E2A; changes .</p>
 </li>
-<li><p>在changes下,  在你的头像旁边, 有一个输入框, summary(描述)  输入你为这一次提交的说明.       </p>
+<li><p>&#x5728;changes&#x4E0B;,  &#x5728;&#x4F60;&#x7684;&#x5934;&#x50CF;&#x65C1;&#x8FB9;, &#x6709;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x6846;, summary(&#x63CF;&#x8FF0;)  &#x8F93;&#x5165;&#x4F60;&#x4E3A;&#x8FD9;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x8BF4;&#x660E;.       </p>
 <ul>
-<li>这个是必须的</li>
-<li>你的说明, 如果出现空格,  请用 <strong>“”</strong> 把说明包含起来</li>
+<li>&#x8FD9;&#x4E2A;&#x662F;&#x5FC5;&#x987B;&#x7684;</li>
+<li>&#x4F60;&#x7684;&#x8BF4;&#x660E;, &#x5982;&#x679C;&#x51FA;&#x73B0;&#x7A7A;&#x683C;,  &#x8BF7;&#x7528; <strong>&#x201C;&#x201D;</strong> &#x628A;&#x8BF4;&#x660E;&#x5305;&#x542B;&#x8D77;&#x6765;</li>
 </ul>
-<p>​</p>
+<p>&#x200B;</p>
 </li>
-<li><p>输入完上述的summary后,  下面的 <code>Commit to master</code> 就可以点击了     click it</p>
+<li><p>&#x8F93;&#x5165;&#x5B8C;&#x4E0A;&#x8FF0;&#x7684;summary&#x540E;,  &#x4E0B;&#x9762;&#x7684; <code>Commit to master</code> &#x5C31;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x4E86;     click it</p>
 </li>
-<li><p>这时候你已经完成了90%了,  最后一步就是点击右上角黑色框中的  Sync  . 等待上传成功吧.</p>
+<li><p>&#x8FD9;&#x65F6;&#x5019;&#x4F60;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x4E86;90%&#x4E86;,  &#x6700;&#x540E;&#x4E00;&#x6B65;&#x5C31;&#x662F;&#x70B9;&#x51FB;&#x53F3;&#x4E0A;&#x89D2;&#x9ED1;&#x8272;&#x6846;&#x4E2D;&#x7684;  Sync  . &#x7B49;&#x5F85;&#x4E0A;&#x4F20;&#x6210;&#x529F;&#x5427;.</p>
 </li>
-<li><p>去Github官网上,  登录你的账号, 查看你刚刚提交的代码吧.  啊哈~</p>
+<li><p>&#x53BB;Github&#x5B98;&#x7F51;&#x4E0A;,  &#x767B;&#x5F55;&#x4F60;&#x7684;&#x8D26;&#x53F7;, &#x67E5;&#x770B;&#x4F60;&#x521A;&#x521A;&#x63D0;&#x4EA4;&#x7684;&#x4EE3;&#x7801;&#x5427;.  &#x554A;&#x54C8;~</p>
 </li>
 </ol>
-<h3 id="6-常见问题"><a href="#6-常见问题" class="headerlink" title="6. 常见问题"></a>6. 常见问题</h3><p>  收集中….</p>
-<h2 id="Windows客户端下载与使用"><a href="#Windows客户端下载与使用" class="headerlink" title="Windows客户端下载与使用"></a>Windows客户端下载与使用</h2><h3 id="1-下载与安装-1"><a href="#1-下载与安装-1" class="headerlink" title="1. 下载与安装"></a>1. 下载与安装</h3><ul>
-<li>官网下载地址: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
-<li>如果网速慢, 可以在我的网盘下载.  链接:</li>
+<h3 id="6-&#x5E38;&#x89C1;&#x95EE;&#x9898;"><a href="#6-&#x5E38;&#x89C1;&#x95EE;&#x9898;" class="headerlink" title="6. &#x5E38;&#x89C1;&#x95EE;&#x9898;"></a>6. &#x5E38;&#x89C1;&#x95EE;&#x9898;</h3><p>&#x2003;&#x2003;&#x6536;&#x96C6;&#x4E2D;&#x2026;.</p>
+<h2 id="Windows&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;"><a href="#Windows&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;" class="headerlink" title="Windows&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;"></a>Windows&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;</h2><h3 id="1-&#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;-1"><a href="#1-&#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;-1" class="headerlink" title="1. &#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;"></a>1. &#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;</h3><ul class="ui list">
+<li>&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x5730;&#x5740;: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
+<li>&#x5982;&#x679C;&#x7F51;&#x901F;&#x6162;, &#x53EF;&#x4EE5;&#x5728;&#x6211;&#x7684;&#x7F51;&#x76D8;&#x4E0B;&#x8F7D;.  &#x94FE;&#x63A5;:</li>
 </ul>
-<h3 id="2-登录客户端-1"><a href="#2-登录客户端-1" class="headerlink" title="2. 登录客户端"></a>2. 登录客户端</h3><h3 id="3-克隆仓库-1"><a href="#3-克隆仓库-1" class="headerlink" title="3. 克隆仓库"></a>3. 克隆仓库</h3><h3 id="4-写代码咯-1"><a href="#4-写代码咯-1" class="headerlink" title="4. 写代码咯"></a>4. 写代码咯</h3><h3 id="5-提交代码到Github上-1"><a href="#5-提交代码到Github上-1" class="headerlink" title="5. 提交代码到Github上"></a>5. 提交代码到Github上</h3><h3 id="6-常见问题-1"><a href="#6-常见问题-1" class="headerlink" title="6. 常见问题"></a>6. 常见问题</h3><h1 id="命令行的使用-Git"><a href="#命令行的使用-Git" class="headerlink" title="命令行的使用  Git"></a>命令行的使用  Git</h1><blockquote>
-<p>命令行是轻松方便的一个方法,  它舍去了鼠标的点来点去, 舍去了UI界面,  用最简单的一行行命令轻松完成clone  commit  push 等等, 将你的代码从本地托管到Github上</p>
+<h3 id="2-&#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;-1"><a href="#2-&#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;-1" class="headerlink" title="2. &#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;"></a>2. &#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;</h3><h3 id="3-&#x514B;&#x9686;&#x4ED3;&#x5E93;-1"><a href="#3-&#x514B;&#x9686;&#x4ED3;&#x5E93;-1" class="headerlink" title="3. &#x514B;&#x9686;&#x4ED3;&#x5E93;"></a>3. &#x514B;&#x9686;&#x4ED3;&#x5E93;</h3><h3 id="4-&#x5199;&#x4EE3;&#x7801;&#x54AF;-1"><a href="#4-&#x5199;&#x4EE3;&#x7801;&#x54AF;-1" class="headerlink" title="4. &#x5199;&#x4EE3;&#x7801;&#x54AF;"></a>4. &#x5199;&#x4EE3;&#x7801;&#x54AF;</h3><h3 id="5-&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;-1"><a href="#5-&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;-1" class="headerlink" title="5. &#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;"></a>5. &#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;</h3><h3 id="6-&#x5E38;&#x89C1;&#x95EE;&#x9898;-1"><a href="#6-&#x5E38;&#x89C1;&#x95EE;&#x9898;-1" class="headerlink" title="6. &#x5E38;&#x89C1;&#x95EE;&#x9898;"></a>6. &#x5E38;&#x89C1;&#x95EE;&#x9898;</h3><h1 id="&#x547D;&#x4EE4;&#x884C;&#x7684;&#x4F7F;&#x7528;-Git"><a href="#&#x547D;&#x4EE4;&#x884C;&#x7684;&#x4F7F;&#x7528;-Git" class="headerlink" title="&#x547D;&#x4EE4;&#x884C;&#x7684;&#x4F7F;&#x7528;  Git"></a>&#x547D;&#x4EE4;&#x884C;&#x7684;&#x4F7F;&#x7528;  Git</h1><blockquote>
+<p>&#x547D;&#x4EE4;&#x884C;&#x662F;&#x8F7B;&#x677E;&#x65B9;&#x4FBF;&#x7684;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;,  &#x5B83;&#x820D;&#x53BB;&#x4E86;&#x9F20;&#x6807;&#x7684;&#x70B9;&#x6765;&#x70B9;&#x53BB;, &#x820D;&#x53BB;&#x4E86;UI&#x754C;&#x9762;,  &#x7528;&#x6700;&#x7B80;&#x5355;&#x7684;&#x4E00;&#x884C;&#x884C;&#x547D;&#x4EE4;&#x8F7B;&#x677E;&#x5B8C;&#x6210;clone  commit  push &#x7B49;&#x7B49;, &#x5C06;&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x4ECE;&#x672C;&#x5730;&#x6258;&#x7BA1;&#x5230;Github&#x4E0A;</p>
 </blockquote>
-<h2 id="Mac下的git命令行"><a href="#Mac下的git命令行" class="headerlink" title="Mac下的git命令行"></a>Mac下的git命令行</h2><h3 id="1-终端的介绍与使用"><a href="#1-终端的介绍与使用" class="headerlink" title="1. 终端的介绍与使用"></a>1. 终端的介绍与使用</h3><ol>
-<li><strong>终端是什么?</strong><ul>
-<li>是以<code>执行命令的方式</code><strong>来完成</strong><code>一些操作</code>的工具,  比如查看某个文件夹下的文件, 你可以在GUI界面, 打开Finder查看对应的文件.   也可以在终端里通过 cd  ls 等命令查看文件.</li>
-<li>详情请自行谷歌<a href="https://www.google.com/" target="_blank" rel="external">https://www.google.com/</a> 或者 必应<a href="http://cn.bing.com/" target="_blank" rel="external">http://cn.bing.com/</a></li>
-<li><strong>PS:</strong> 如果你自认为是做技术的,  我强烈推荐你  <strong>学会翻墙</strong>  好处不用多说,  讲道理某度搜索真的会误人! ! !</li>
+<h2 id="Mac&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;"><a href="#Mac&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;" class="headerlink" title="Mac&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;"></a>Mac&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;</h2><h3 id="1-&#x7EC8;&#x7AEF;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x4F7F;&#x7528;"><a href="#1-&#x7EC8;&#x7AEF;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x4F7F;&#x7528;" class="headerlink" title="1. &#x7EC8;&#x7AEF;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x4F7F;&#x7528;"></a>1. &#x7EC8;&#x7AEF;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x4F7F;&#x7528;</h3><ol class="ui list">
+<li><strong>&#x7EC8;&#x7AEF;&#x662F;&#x4EC0;&#x4E48;?</strong><ul>
+<li>&#x662F;&#x4EE5;<code>&#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x65B9;&#x5F0F;</code><strong>&#x6765;&#x5B8C;&#x6210;</strong><code>&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;</code>&#x7684;&#x5DE5;&#x5177;,  &#x6BD4;&#x5982;&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x6587;&#x4EF6;, &#x4F60;&#x53EF;&#x4EE5;&#x5728;GUI&#x754C;&#x9762;, &#x6253;&#x5F00;Finder&#x67E5;&#x770B;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;.   &#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x7EC8;&#x7AEF;&#x91CC;&#x901A;&#x8FC7; cd  ls &#x7B49;&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x6587;&#x4EF6;.</li>
+<li>&#x8BE6;&#x60C5;&#x8BF7;&#x81EA;&#x884C;&#x8C37;&#x6B4C;<a href="https://www.google.com/" target="_blank" rel="external">https://www.google.com/</a> &#x6216;&#x8005; &#x5FC5;&#x5E94;<a href="http://cn.bing.com/" target="_blank" rel="external">http://cn.bing.com/</a></li>
+<li><strong>PS:</strong> &#x5982;&#x679C;&#x4F60;&#x81EA;&#x8BA4;&#x4E3A;&#x662F;&#x505A;&#x6280;&#x672F;&#x7684;,  &#x6211;&#x5F3A;&#x70C8;&#x63A8;&#x8350;&#x4F60;  <strong>&#x5B66;&#x4F1A;&#x7FFB;&#x5899;</strong>  &#x597D;&#x5904;&#x4E0D;&#x7528;&#x591A;&#x8BF4;,  &#x8BB2;&#x9053;&#x7406;&#x67D0;&#x5EA6;&#x641C;&#x7D22;&#x771F;&#x7684;&#x4F1A;&#x8BEF;&#x4EBA;! ! !</li>
 </ul>
 </li>
-<li><strong>Mac 系统下终端在哪里? 还需要下载吗?</strong><ul>
-<li>Mac系统下,  已经有终端软件 Terminal , 可以在Spotlight 中, 输入 Terminal查找,   然后打开.  也可以在Launchpad中,  有个实用工具程序文件夹, 终端就在里面, 点击打开就好了.</li>
-<li>Mac系统自带的有Terminal,  我觉得它的<strong>功能方面</strong>, 不如我现在用的 <code>iTerm</code>  就像是记事本和Sublime之间的区别. - 如有感兴趣的可以谷歌搜索, 了解了解. 这里就不详细讲述了.</li>
+<li><strong>Mac &#x7CFB;&#x7EDF;&#x4E0B;&#x7EC8;&#x7AEF;&#x5728;&#x54EA;&#x91CC;? &#x8FD8;&#x9700;&#x8981;&#x4E0B;&#x8F7D;&#x5417;?</strong><ul>
+<li>Mac&#x7CFB;&#x7EDF;&#x4E0B;,  &#x5DF2;&#x7ECF;&#x6709;&#x7EC8;&#x7AEF;&#x8F6F;&#x4EF6; Terminal , &#x53EF;&#x4EE5;&#x5728;Spotlight &#x4E2D;, &#x8F93;&#x5165; Terminal&#x67E5;&#x627E;,   &#x7136;&#x540E;&#x6253;&#x5F00;.  &#x4E5F;&#x53EF;&#x4EE5;&#x5728;Launchpad&#x4E2D;,  &#x6709;&#x4E2A;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x7A0B;&#x5E8F;&#x6587;&#x4EF6;&#x5939;, &#x7EC8;&#x7AEF;&#x5C31;&#x5728;&#x91CC;&#x9762;, &#x70B9;&#x51FB;&#x6253;&#x5F00;&#x5C31;&#x597D;&#x4E86;.</li>
+<li>Mac&#x7CFB;&#x7EDF;&#x81EA;&#x5E26;&#x7684;&#x6709;Terminal,  &#x6211;&#x89C9;&#x5F97;&#x5B83;&#x7684;<strong>&#x529F;&#x80FD;&#x65B9;&#x9762;</strong>, &#x4E0D;&#x5982;&#x6211;&#x73B0;&#x5728;&#x7528;&#x7684; <code>iTerm</code>  &#x5C31;&#x50CF;&#x662F;&#x8BB0;&#x4E8B;&#x672C;&#x548C;Sublime&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;. - &#x5982;&#x6709;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x53EF;&#x4EE5;&#x8C37;&#x6B4C;&#x641C;&#x7D22;, &#x4E86;&#x89E3;&#x4E86;&#x89E3;. &#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x8BE6;&#x7EC6;&#x8BB2;&#x8FF0;&#x4E86;.</li>
 </ul>
 </li>
-<li><strong>终端如何使用?</strong><ul>
-<li>打开终端后, 输入命令, 回车执行.  </li>
-<li>输入命令时,  如有命令加文件的,   记得要用空格分隔开,   比如 cd work 中间有空格的,  而不是cdwork</li>
+<li><strong>&#x7EC8;&#x7AEF;&#x5982;&#x4F55;&#x4F7F;&#x7528;?</strong><ul>
+<li>&#x6253;&#x5F00;&#x7EC8;&#x7AEF;&#x540E;, &#x8F93;&#x5165;&#x547D;&#x4EE4;, &#x56DE;&#x8F66;&#x6267;&#x884C;.  </li>
+<li>&#x8F93;&#x5165;&#x547D;&#x4EE4;&#x65F6;,  &#x5982;&#x6709;&#x547D;&#x4EE4;&#x52A0;&#x6587;&#x4EF6;&#x7684;,   &#x8BB0;&#x5F97;&#x8981;&#x7528;&#x7A7A;&#x683C;&#x5206;&#x9694;&#x5F00;,   &#x6BD4;&#x5982; cd work &#x4E2D;&#x95F4;&#x6709;&#x7A7A;&#x683C;&#x7684;,  &#x800C;&#x4E0D;&#x662F;cdwork</li>
 </ul>
 </li>
-<li><strong>终端常用的一些命令</strong><ul>
-<li>ls  —— 显示当前路径下的文件  ls -a可以显示隐藏文件. ls -l可以显示文件信息. ls -al 组合两个功能了</li>
-<li>cd  —— cd + 文件名   打开文件. 比如 当前路径下有个work文件夹,  我想在终端中打开,  那就是 cd work 回车执行</li>
-<li>chmod —— 改变文件权限   这个命令可能会经常用到, 详情 请谷歌吧, 挺长的….   偷个懒</li>
-<li>mkdir —— mkdir + 文件名,  这个命令是新建目录,  mkdir work   就是新建了一个work文件夹,  中文名和带空格符的 ,  要用””符号  如  mkdir “learn mkdir”</li>
-<li>cp —— 复制文件命令, copy嘛, 使用方法是  cp 参数 源文件 目标文件   示例: 把work下的text.txt文件 cp到home目录下,   cp -R /work/text.txt /home/ 这样就好了  <strong>PS:注意空格,    另外我只是演示, 这个路径要写完整, 从根目录开始.</strong></li>
-<li>rm —— 删除文件  remove的缩写咯,    示例:  rm text.txt  删除了text文件.</li>
-<li>还有 mv 移动文件  move的缩写.     等等….     命令行的命令太多了, 感兴趣的可以自行搜索…    </li>
+<li><strong>&#x7EC8;&#x7AEF;&#x5E38;&#x7528;&#x7684;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;</strong><ul>
+<li>ls  &#x2014;&#x2014; &#x663E;&#x793A;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;&#x6587;&#x4EF6;  ls -a&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x9690;&#x85CF;&#x6587;&#x4EF6;. ls -l&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x6587;&#x4EF6;&#x4FE1;&#x606F;. ls -al &#x7EC4;&#x5408;&#x4E24;&#x4E2A;&#x529F;&#x80FD;&#x4E86;</li>
+<li>cd  &#x2014;&#x2014; cd + &#x6587;&#x4EF6;&#x540D;   &#x6253;&#x5F00;&#x6587;&#x4EF6;. &#x6BD4;&#x5982; &#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x4E0B;&#x6709;&#x4E2A;work&#x6587;&#x4EF6;&#x5939;,  &#x6211;&#x60F3;&#x5728;&#x7EC8;&#x7AEF;&#x4E2D;&#x6253;&#x5F00;,  &#x90A3;&#x5C31;&#x662F; cd work &#x56DE;&#x8F66;&#x6267;&#x884C;</li>
+<li>chmod &#x2014;&#x2014; &#x6539;&#x53D8;&#x6587;&#x4EF6;&#x6743;&#x9650;   &#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x53EF;&#x80FD;&#x4F1A;&#x7ECF;&#x5E38;&#x7528;&#x5230;, &#x8BE6;&#x60C5; &#x8BF7;&#x8C37;&#x6B4C;&#x5427;, &#x633A;&#x957F;&#x7684;&#x2026;.   &#x5077;&#x4E2A;&#x61D2;</li>
+<li>mkdir &#x2014;&#x2014; mkdir + &#x6587;&#x4EF6;&#x540D;,  &#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x662F;&#x65B0;&#x5EFA;&#x76EE;&#x5F55;,  mkdir work   &#x5C31;&#x662F;&#x65B0;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;work&#x6587;&#x4EF6;&#x5939;,  &#x4E2D;&#x6587;&#x540D;&#x548C;&#x5E26;&#x7A7A;&#x683C;&#x7B26;&#x7684; ,  &#x8981;&#x7528;&#x201D;&#x201D;&#x7B26;&#x53F7;  &#x5982;  mkdir &#x201C;learn mkdir&#x201D;</li>
+<li>cp &#x2014;&#x2014; &#x590D;&#x5236;&#x6587;&#x4EF6;&#x547D;&#x4EE4;, copy&#x561B;, &#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x662F;  cp &#x53C2;&#x6570; &#x6E90;&#x6587;&#x4EF6; &#x76EE;&#x6807;&#x6587;&#x4EF6;   &#x793A;&#x4F8B;: &#x628A;work&#x4E0B;&#x7684;text.txt&#x6587;&#x4EF6; cp&#x5230;home&#x76EE;&#x5F55;&#x4E0B;,   cp -R /work/text.txt /home/ &#x8FD9;&#x6837;&#x5C31;&#x597D;&#x4E86;  <strong>PS:&#x6CE8;&#x610F;&#x7A7A;&#x683C;,    &#x53E6;&#x5916;&#x6211;&#x53EA;&#x662F;&#x6F14;&#x793A;, &#x8FD9;&#x4E2A;&#x8DEF;&#x5F84;&#x8981;&#x5199;&#x5B8C;&#x6574;, &#x4ECE;&#x6839;&#x76EE;&#x5F55;&#x5F00;&#x59CB;.</strong></li>
+<li>rm &#x2014;&#x2014; &#x5220;&#x9664;&#x6587;&#x4EF6;  remove&#x7684;&#x7F29;&#x5199;&#x54AF;,    &#x793A;&#x4F8B;:  rm text.txt  &#x5220;&#x9664;&#x4E86;text&#x6587;&#x4EF6;.</li>
+<li>&#x8FD8;&#x6709; mv &#x79FB;&#x52A8;&#x6587;&#x4EF6;  move&#x7684;&#x7F29;&#x5199;.     &#x7B49;&#x7B49;&#x2026;.     &#x547D;&#x4EE4;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x592A;&#x591A;&#x4E86;, &#x611F;&#x5174;&#x8DA3;&#x7684;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x641C;&#x7D22;&#x2026;    </li>
 </ul>
 </li>
 </ol>
-<h3 id="2-公钥密钥的介绍与生成"><a href="#2-公钥密钥的介绍与生成" class="headerlink" title="2. 公钥密钥的介绍与生成"></a>2. 公钥密钥的介绍与生成</h3><ol>
+<h3 id="2-&#x516C;&#x94A5;&#x5BC6;&#x94A5;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x751F;&#x6210;"><a href="#2-&#x516C;&#x94A5;&#x5BC6;&#x94A5;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x751F;&#x6210;" class="headerlink" title="2. &#x516C;&#x94A5;&#x5BC6;&#x94A5;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x751F;&#x6210;"></a>2. &#x516C;&#x94A5;&#x5BC6;&#x94A5;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x751F;&#x6210;</h3><ol class="ui list">
 <li><p><strong>ssh, (Secure Shell)</strong>  </p>
 <ul>
-<li>是一种  创建在应用层和传输层 基础上的安全协议.</li>
-<li>基于<strong>密钥</strong>的安全验证    </li>
-<li>Github 支持ssh密钥</li>
+<li>&#x662F;&#x4E00;&#x79CD;  &#x521B;&#x5EFA;&#x5728;&#x5E94;&#x7528;&#x5C42;&#x548C;&#x4F20;&#x8F93;&#x5C42; &#x57FA;&#x7840;&#x4E0A;&#x7684;&#x5B89;&#x5168;&#x534F;&#x8BAE;.</li>
+<li>&#x57FA;&#x4E8E;<strong>&#x5BC6;&#x94A5;</strong>&#x7684;&#x5B89;&#x5168;&#x9A8C;&#x8BC1;    </li>
+<li>Github &#x652F;&#x6301;ssh&#x5BC6;&#x94A5;</li>
 </ul>
 </li>
-<li><p><strong>本地生成ssh</strong></p>
+<li><p><strong>&#x672C;&#x5730;&#x751F;&#x6210;ssh</strong></p>
 <ol>
-<li><p>如果是第一次使用, 那你的本地应该没有一对密钥的.   不过以防万一还是检查一下吧.  </p>
+<li><p>&#x5982;&#x679C;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x4F7F;&#x7528;, &#x90A3;&#x4F60;&#x7684;&#x672C;&#x5730;&#x5E94;&#x8BE5;&#x6CA1;&#x6709;&#x4E00;&#x5BF9;&#x5BC6;&#x94A5;&#x7684;.   &#x4E0D;&#x8FC7;&#x4EE5;&#x9632;&#x4E07;&#x4E00;&#x8FD8;&#x662F;&#x68C0;&#x67E5;&#x4E00;&#x4E0B;&#x5427;.  </p>
 <ul>
-<li>打开终端,  输入命令</li>
+<li>&#x6253;&#x5F00;&#x7EC8;&#x7AEF;,  &#x8F93;&#x5165;&#x547D;&#x4EE4;</li>
 <li><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ~/.ssh</div></pre></td></tr></table></figure>
 </li>
-<li><p>如果返回’…No such file or directory …’  就说明没有创建过密钥.  那就进行下一步 2 , 生成你的密钥.  如果有,  你确定这个rsa是你的Github注册邮箱吗?  确定 那就跳到 <a href="#3-上传公钥到Github">3. 上传公钥到Github</a></p>
+<li><p>&#x5982;&#x679C;&#x8FD4;&#x56DE;&#x2019;&#x2026;No such file or directory &#x2026;&#x2019;  &#x5C31;&#x8BF4;&#x660E;&#x6CA1;&#x6709;&#x521B;&#x5EFA;&#x8FC7;&#x5BC6;&#x94A5;.  &#x90A3;&#x5C31;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x6B65; 2 , &#x751F;&#x6210;&#x4F60;&#x7684;&#x5BC6;&#x94A5;.  &#x5982;&#x679C;&#x6709;,  &#x4F60;&#x786E;&#x5B9A;&#x8FD9;&#x4E2A;rsa&#x662F;&#x4F60;&#x7684;Github&#x6CE8;&#x518C;&#x90AE;&#x7BB1;&#x5417;?  &#x786E;&#x5B9A; &#x90A3;&#x5C31;&#x8DF3;&#x5230; <a href="#3-&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github">3. &#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github</a></p>
 </li>
 </ul>
 </li>
-<li><p><strong>生成新的key</strong></p>
+<li><p><strong>&#x751F;&#x6210;&#x65B0;&#x7684;key</strong></p>
 <ul>
-<li><p>输入命令   这里 <strong>“”</strong> 内输入的是你Github账号<strong>绑定的邮箱</strong>.    千万要输入正确袄…       其中 在命令中,  github_rsa   是指的  给新建的密钥 <strong>命名</strong> 为github_rsa , 你也可以更改. 我下文都是用的github_rsa, 如果更改, 注意替换袄.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen <span class="_">-f</span> github_rsa -C <span class="string">"your_email@youremail.com"</span></div></pre></td></tr></table></figure>
+<li><p>&#x8F93;&#x5165;&#x547D;&#x4EE4;   &#x8FD9;&#x91CC; <strong>&#x201C;&#x201D;</strong> &#x5185;&#x8F93;&#x5165;&#x7684;&#x662F;&#x4F60;Github&#x8D26;&#x53F7;<strong>&#x7ED1;&#x5B9A;&#x7684;&#x90AE;&#x7BB1;</strong>.    &#x5343;&#x4E07;&#x8981;&#x8F93;&#x5165;&#x6B63;&#x786E;&#x8884;&#x2026;       &#x5176;&#x4E2D; &#x5728;&#x547D;&#x4EE4;&#x4E2D;,  github_rsa   &#x662F;&#x6307;&#x7684;  &#x7ED9;&#x65B0;&#x5EFA;&#x7684;&#x5BC6;&#x94A5; <strong>&#x547D;&#x540D;</strong> &#x4E3A;github_rsa , &#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x66F4;&#x6539;. &#x6211;&#x4E0B;&#x6587;&#x90FD;&#x662F;&#x7528;&#x7684;github_rsa, &#x5982;&#x679C;&#x66F4;&#x6539;, &#x6CE8;&#x610F;&#x66FF;&#x6362;&#x8884;.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen <span class="_">-f</span> github_rsa -C <span class="string">&quot;your_email@youremail.com&quot;</span></div></pre></td></tr></table></figure>
 </li>
-<li><p>然后回车两次,  就生成完毕了,        其中第一次回车是问 passphrase , 这个它会在你每次进行版本控制(提交文件)时,  让你输入, 我个人没有使用, 所以就回车了,  第二次是让你输密码, 然后每次提交也要输密码, 所以为了懒, 我也回车了,  当然你觉得有用, 你可以加上.</p>
+<li><p>&#x7136;&#x540E;&#x56DE;&#x8F66;&#x4E24;&#x6B21;,  &#x5C31;&#x751F;&#x6210;&#x5B8C;&#x6BD5;&#x4E86;,        &#x5176;&#x4E2D;&#x7B2C;&#x4E00;&#x6B21;&#x56DE;&#x8F66;&#x662F;&#x95EE; passphrase , &#x8FD9;&#x4E2A;&#x5B83;&#x4F1A;&#x5728;&#x4F60;&#x6BCF;&#x6B21;&#x8FDB;&#x884C;&#x7248;&#x672C;&#x63A7;&#x5236;(&#x63D0;&#x4EA4;&#x6587;&#x4EF6;)&#x65F6;,  &#x8BA9;&#x4F60;&#x8F93;&#x5165;, &#x6211;&#x4E2A;&#x4EBA;&#x6CA1;&#x6709;&#x4F7F;&#x7528;, &#x6240;&#x4EE5;&#x5C31;&#x56DE;&#x8F66;&#x4E86;,  &#x7B2C;&#x4E8C;&#x6B21;&#x662F;&#x8BA9;&#x4F60;&#x8F93;&#x5BC6;&#x7801;, &#x7136;&#x540E;&#x6BCF;&#x6B21;&#x63D0;&#x4EA4;&#x4E5F;&#x8981;&#x8F93;&#x5BC6;&#x7801;, &#x6240;&#x4EE5;&#x4E3A;&#x4E86;&#x61D2;, &#x6211;&#x4E5F;&#x56DE;&#x8F66;&#x4E86;,  &#x5F53;&#x7136;&#x4F60;&#x89C9;&#x5F97;&#x6709;&#x7528;, &#x4F60;&#x53EF;&#x4EE5;&#x52A0;&#x4E0A;.</p>
 </li>
-<li><code>ls</code> 一下.  会有<code>github_rsa</code> 和 <code>github_rsa.pub</code> 这两个文件,  在下一步中, 我们把公钥上传到github.</li>
+<li><code>ls</code> &#x4E00;&#x4E0B;.  &#x4F1A;&#x6709;<code>github_rsa</code> &#x548C; <code>github_rsa.pub</code> &#x8FD9;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;,  &#x5728;&#x4E0B;&#x4E00;&#x6B65;&#x4E2D;, &#x6211;&#x4EEC;&#x628A;&#x516C;&#x94A5;&#x4E0A;&#x4F20;&#x5230;github.</li>
 </ul>
 </li>
 </ol>
 </li>
 </ol>
-<h3 id="3-上传公钥到Github"><a href="#3-上传公钥到Github" class="headerlink" title="3. 上传公钥到Github"></a>3. <strong>上传公钥到Github</strong></h3><blockquote>
-<p>这时, 你已经有了文件.ssh 以及有了你注册Github账号时, 所用的邮箱生成的 一对密钥了.  </p>
+<h3 id="3-&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github"><a href="#3-&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github" class="headerlink" title="3. &#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github"></a>3. <strong>&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github</strong></h3><blockquote>
+<p>&#x8FD9;&#x65F6;, &#x4F60;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x6587;&#x4EF6;.ssh &#x4EE5;&#x53CA;&#x6709;&#x4E86;&#x4F60;&#x6CE8;&#x518C;Github&#x8D26;&#x53F7;&#x65F6;, &#x6240;&#x7528;&#x7684;&#x90AE;&#x7BB1;&#x751F;&#x6210;&#x7684; &#x4E00;&#x5BF9;&#x5BC6;&#x94A5;&#x4E86;.  </p>
 </blockquote>
-<ul>
-<li>  Mac 有个命令是copy文件到剪贴板.      那我们把上一步生成的公钥复制进去吧  注意命令空格</li>
+<ul class="ui list">
+<li>&#x2003;&#x2003;Mac &#x6709;&#x4E2A;&#x547D;&#x4EE4;&#x662F;copy&#x6587;&#x4EF6;&#x5230;&#x526A;&#x8D34;&#x677F;.      &#x90A3;&#x6211;&#x4EEC;&#x628A;&#x4E0A;&#x4E00;&#x6B65;&#x751F;&#x6210;&#x7684;&#x516C;&#x94A5;&#x590D;&#x5236;&#x8FDB;&#x53BB;&#x5427;  &#x6CE8;&#x610F;&#x547D;&#x4EE4;&#x7A7A;&#x683C;</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pbcopy &lt; ~/.ssh/github_rsa.pub</div></pre></td></tr></table></figure>
-<p>OK 输入完回车.      里面的内容已经十分乖巧的复制到剪贴板里面了</p>
-<ul>
-<li>打开Github <a href="https://github.com/" target="_blank" rel="external">https://github.com/</a> 登陆你的账号,</li>
-<li>打开这个链接 : <a href="https://github.com/settings/keys" target="_blank" rel="external">https://github.com/settings/keys</a>  </li>
-<li>现在打开的页面是设置ssh的.    请点击页面上, 右上角区域的 <strong><code>New SSH key</code></strong></li>
-<li>在出现的两个输入框,  第一个输入你给ssh key 的命名, 比如 <code>github_id</code>    第二个输入框,  选中后, <code>command</code> + <code>v</code>  粘贴你刚刚复制的公钥.</li>
-<li>点击 <code>Add SSH key</code> 就完成了这一步.</li>
+<p>OK &#x8F93;&#x5165;&#x5B8C;&#x56DE;&#x8F66;.      &#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x5DF2;&#x7ECF;&#x5341;&#x5206;&#x4E56;&#x5DE7;&#x7684;&#x590D;&#x5236;&#x5230;&#x526A;&#x8D34;&#x677F;&#x91CC;&#x9762;&#x4E86;</p>
+<ul class="ui list">
+<li>&#x6253;&#x5F00;Github <a href="https://github.com/" target="_blank" rel="external">https://github.com/</a> &#x767B;&#x9646;&#x4F60;&#x7684;&#x8D26;&#x53F7;,</li>
+<li>&#x6253;&#x5F00;&#x8FD9;&#x4E2A;&#x94FE;&#x63A5; : <a href="https://github.com/settings/keys" target="_blank" rel="external">https://github.com/settings/keys</a>  </li>
+<li>&#x73B0;&#x5728;&#x6253;&#x5F00;&#x7684;&#x9875;&#x9762;&#x662F;&#x8BBE;&#x7F6E;ssh&#x7684;.    &#x8BF7;&#x70B9;&#x51FB;&#x9875;&#x9762;&#x4E0A;, &#x53F3;&#x4E0A;&#x89D2;&#x533A;&#x57DF;&#x7684; <strong><code>New SSH key</code></strong></li>
+<li>&#x5728;&#x51FA;&#x73B0;&#x7684;&#x4E24;&#x4E2A;&#x8F93;&#x5165;&#x6846;,  &#x7B2C;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x4F60;&#x7ED9;ssh key &#x7684;&#x547D;&#x540D;, &#x6BD4;&#x5982; <code>github_id</code>    &#x7B2C;&#x4E8C;&#x4E2A;&#x8F93;&#x5165;&#x6846;,  &#x9009;&#x4E2D;&#x540E;, <code>command</code> + <code>v</code>  &#x7C98;&#x8D34;&#x4F60;&#x521A;&#x521A;&#x590D;&#x5236;&#x7684;&#x516C;&#x94A5;.</li>
+<li>&#x70B9;&#x51FB; <code>Add SSH key</code> &#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x8FD9;&#x4E00;&#x6B65;.</li>
 </ul>
-<h3 id="4-检查SSH链接"><a href="#4-检查SSH链接" class="headerlink" title="4. 检查SSH链接"></a>4. <strong>检查SSH链接</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure>
-<p>如果显示 : Are you sure you want continue connecting (yes/no)?    输入yes      没有这个也没事</p>
-<p>最终显示:  Hi  yourusername! You’re ………  就ok了</p>
-<p>参考链接: <a href="http://www.jianshu.com/p/0d7038102cd6" target="_blank" rel="external">http://www.jianshu.com/p/0d7038102cd6</a>  详情可点击查看.</p>
-<h3 id="5-使用命令上传代码吧"><a href="#5-使用命令上传代码吧" class="headerlink" title="5. 使用命令上传代码吧 !"></a>5. <strong>使用命令上传代码吧 !</strong></h3><blockquote>
-<ul>
-<li>git status   // 检查状态.   一般用于查看本地仓库有无改动.</li>
-<li>git add .   // 更新改动.</li>
-<li>git commit -m “first commit”  // 提交更新到暂存区并注释是”first commit”     <strong>PS</strong> 这个-m后面 一定要有<code>&quot;String&quot;</code> 不然会多麻烦的.</li>
-<li>git push // 提交到Github</li>
+<h3 id="4-&#x68C0;&#x67E5;SSH&#x94FE;&#x63A5;"><a href="#4-&#x68C0;&#x67E5;SSH&#x94FE;&#x63A5;" class="headerlink" title="4. &#x68C0;&#x67E5;SSH&#x94FE;&#x63A5;"></a>4. <strong>&#x68C0;&#x67E5;SSH&#x94FE;&#x63A5;</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure>
+<p>&#x5982;&#x679C;&#x663E;&#x793A; : Are you sure you want continue connecting (yes/no)?    &#x8F93;&#x5165;yes      &#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x4E5F;&#x6CA1;&#x4E8B;</p>
+<p>&#x6700;&#x7EC8;&#x663E;&#x793A;:  Hi  yourusername! You&#x2019;re &#x2026;&#x2026;&#x2026;  &#x5C31;ok&#x4E86;</p>
+<p>&#x53C2;&#x8003;&#x94FE;&#x63A5;: <a href="http://www.jianshu.com/p/0d7038102cd6" target="_blank" rel="external">http://www.jianshu.com/p/0d7038102cd6</a>  &#x8BE6;&#x60C5;&#x53EF;&#x70B9;&#x51FB;&#x67E5;&#x770B;.</p>
+<h3 id="5-&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;&#x4EE3;&#x7801;&#x5427;"><a href="#5-&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;&#x4EE3;&#x7801;&#x5427;" class="headerlink" title="5. &#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;&#x4EE3;&#x7801;&#x5427; !"></a>5. <strong>&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;&#x4EE3;&#x7801;&#x5427; !</strong></h3><blockquote>
+<ul class="ui list">
+<li>git status   // &#x68C0;&#x67E5;&#x72B6;&#x6001;.   &#x4E00;&#x822C;&#x7528;&#x4E8E;&#x67E5;&#x770B;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x6709;&#x65E0;&#x6539;&#x52A8;.</li>
+<li>git add .   // &#x66F4;&#x65B0;&#x6539;&#x52A8;.</li>
+<li>git commit -m &#x201C;first commit&#x201D;  // &#x63D0;&#x4EA4;&#x66F4;&#x65B0;&#x5230;&#x6682;&#x5B58;&#x533A;&#x5E76;&#x6CE8;&#x91CA;&#x662F;&#x201D;first commit&#x201D;     <strong>PS</strong> &#x8FD9;&#x4E2A;-m&#x540E;&#x9762; &#x4E00;&#x5B9A;&#x8981;&#x6709;<code>&quot;String&quot;</code> &#x4E0D;&#x7136;&#x4F1A;&#x591A;&#x9EBB;&#x70E6;&#x7684;.</li>
+<li>git push // &#x63D0;&#x4EA4;&#x5230;Github</li>
 </ul>
 </blockquote>
-<h3 id="6-常见问题-2"><a href="#6-常见问题-2" class="headerlink" title="6. 常见问题"></a>6. <strong>常见问题</strong></h3><p>  收集中…….</p>
-<h2 id="Windows下的git命令行"><a href="#Windows下的git命令行" class="headerlink" title="Windows下的git命令行"></a>Windows下的git命令行</h2><h3 id="1-Git-shell介绍"><a href="#1-Git-shell介绍" class="headerlink" title="1. Git shell介绍"></a>1. <strong>Git shell介绍</strong></h3><h3 id="2-密钥生成"><a href="#2-密钥生成" class="headerlink" title="2. 密钥生成"></a>2. <strong>密钥生成</strong></h3><h3 id="3-上传公钥到Github-1"><a href="#3-上传公钥到Github-1" class="headerlink" title="3. 上传公钥到Github"></a>3. <strong>上传公钥到Github</strong></h3><h3 id="4-检查SSH连接"><a href="#4-检查SSH连接" class="headerlink" title="4. 检查SSH连接"></a>4. <strong>检查SSH连接</strong></h3><h3 id="5-使用命令上传"><a href="#5-使用命令上传" class="headerlink" title="5. 使用命令上传"></a>5. <strong>使用命令上传</strong></h3><h3 id="6-常见问题-3"><a href="#6-常见问题-3" class="headerlink" title="6. 常见问题"></a>6. <strong>常见问题</strong></h3><p>​        </p>
+<h3 id="6-&#x5E38;&#x89C1;&#x95EE;&#x9898;-2"><a href="#6-&#x5E38;&#x89C1;&#x95EE;&#x9898;-2" class="headerlink" title="6. &#x5E38;&#x89C1;&#x95EE;&#x9898;"></a>6. <strong>&#x5E38;&#x89C1;&#x95EE;&#x9898;</strong></h3><p>&#x2003;&#x2003;&#x6536;&#x96C6;&#x4E2D;&#x2026;&#x2026;.</p>
+<h2 id="Windows&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;"><a href="#Windows&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;" class="headerlink" title="Windows&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;"></a>Windows&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;</h2><h3 id="1-Git-shell&#x4ECB;&#x7ECD;"><a href="#1-Git-shell&#x4ECB;&#x7ECD;" class="headerlink" title="1. Git shell&#x4ECB;&#x7ECD;"></a>1. <strong>Git shell&#x4ECB;&#x7ECD;</strong></h3><h3 id="2-&#x5BC6;&#x94A5;&#x751F;&#x6210;"><a href="#2-&#x5BC6;&#x94A5;&#x751F;&#x6210;" class="headerlink" title="2. &#x5BC6;&#x94A5;&#x751F;&#x6210;"></a>2. <strong>&#x5BC6;&#x94A5;&#x751F;&#x6210;</strong></h3><h3 id="3-&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github-1"><a href="#3-&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github-1" class="headerlink" title="3. &#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github"></a>3. <strong>&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github</strong></h3><h3 id="4-&#x68C0;&#x67E5;SSH&#x8FDE;&#x63A5;"><a href="#4-&#x68C0;&#x67E5;SSH&#x8FDE;&#x63A5;" class="headerlink" title="4. &#x68C0;&#x67E5;SSH&#x8FDE;&#x63A5;"></a>4. <strong>&#x68C0;&#x67E5;SSH&#x8FDE;&#x63A5;</strong></h3><h3 id="5-&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;"><a href="#5-&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;" class="headerlink" title="5. &#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;"></a>5. <strong>&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;</strong></h3><h3 id="6-&#x5E38;&#x89C1;&#x95EE;&#x9898;-3"><a href="#6-&#x5E38;&#x89C1;&#x95EE;&#x9898;-3" class="headerlink" title="6. &#x5E38;&#x89C1;&#x95EE;&#x9898;"></a>6. <strong>&#x5E38;&#x89C1;&#x95EE;&#x9898;</strong></h3><p>&#x200B;        </p>
 
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/12/18/Github_2/">Github 的注册与使用教程以及github page (二)</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">鹏程</a></p>
-        <p><span>发布时间:</span>2016-12-18, 22:47:16</p>
-        <p><span>最后更新:</span>2017-06-05, 22:16:02</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/12/18/Github_2/" title="Github 的注册与使用教程以及github page (二)">https://petergooo.github.io/2016/12/18/Github_2/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://petergooo.github.io/2016/12/18/Github_2/　　作者: 鹏程" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
+                        
+                    </div>
 
+                    
+                    
+                    
 
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2016-12-18T14:47:16.000Z" itemprop="datePublished">2016-12-18</time>
 
-    <nav id="article-nav">
+    </span>
+    <span class="post-description-item">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/12/19/css01/">
+
+    <span>
+        <i class="tags icon"></i>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/github/">github</a>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/github-page/">github page</a>
+    </span>
+
+    
+
+    </span>
+</div>
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a href="/2016/12/19/css01/" class="ui tiny button">
+
+                    <i class="angle left icon"></i>
+                    
                     css3 一些样式
+                    
+
                 </a>
+
+                
             </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/12/16/blog/">
+            <div class="column nav-right">
+                
+
+                <a href="/2016/12/16/blog/" class="ui tiny button">
+                    
                     这个blog 你需要知道的
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用Github来托管你的代码"><span class="toc-number">1.</span> <span class="toc-text">使用Github来托管你的代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Github-的客户端使用"><span class="toc-number">2.</span> <span class="toc-text">Github 的客户端使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac客户端下载与使用"><span class="toc-number">2.1.</span> <span class="toc-text">Mac客户端下载与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-下载与安装"><span class="toc-number">2.1.1.</span> <span class="toc-text">1. 下载与安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-登录客户端"><span class="toc-number">2.1.2.</span> <span class="toc-text">2. 登录客户端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-克隆仓库"><span class="toc-number">2.1.3.</span> <span class="toc-text">3. 克隆仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-写代码咯"><span class="toc-number">2.1.4.</span> <span class="toc-text">4. 写代码咯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-提交代码到Github上"><span class="toc-number">2.1.5.</span> <span class="toc-text">5. 提交代码到Github上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-常见问题"><span class="toc-number">2.1.6.</span> <span class="toc-text">6. 常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows客户端下载与使用"><span class="toc-number">2.2.</span> <span class="toc-text">Windows客户端下载与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-下载与安装-1"><span class="toc-number">2.2.1.</span> <span class="toc-text">1. 下载与安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-登录客户端-1"><span class="toc-number">2.2.2.</span> <span class="toc-text">2. 登录客户端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-克隆仓库-1"><span class="toc-number">2.2.3.</span> <span class="toc-text">3. 克隆仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-写代码咯-1"><span class="toc-number">2.2.4.</span> <span class="toc-text">4. 写代码咯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-提交代码到Github上-1"><span class="toc-number">2.2.5.</span> <span class="toc-text">5. 提交代码到Github上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-常见问题-1"><span class="toc-number">2.2.6.</span> <span class="toc-text">6. 常见问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#命令行的使用-Git"><span class="toc-number">3.</span> <span class="toc-text">命令行的使用  Git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac下的git命令行"><span class="toc-number">3.1.</span> <span class="toc-text">Mac下的git命令行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-终端的介绍与使用"><span class="toc-number">3.1.1.</span> <span class="toc-text">1. 终端的介绍与使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-公钥密钥的介绍与生成"><span class="toc-number">3.1.2.</span> <span class="toc-text">2. 公钥密钥的介绍与生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-上传公钥到Github"><span class="toc-number">3.1.3.</span> <span class="toc-text">3. 上传公钥到Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-检查SSH链接"><span class="toc-number">3.1.4.</span> <span class="toc-text">4. 检查SSH链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-使用命令上传代码吧"><span class="toc-number">3.1.5.</span> <span class="toc-text">5. 使用命令上传代码吧 !</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-常见问题-2"><span class="toc-number">3.1.6.</span> <span class="toc-text">6. 常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows下的git命令行"><span class="toc-number">3.2.</span> <span class="toc-text">Windows下的git命令行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git-shell介绍"><span class="toc-number">3.2.1.</span> <span class="toc-text">1. Git shell介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-密钥生成"><span class="toc-number">3.2.2.</span> <span class="toc-text">2. 密钥生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-上传公钥到Github-1"><span class="toc-number">3.2.3.</span> <span class="toc-text">3. 上传公钥到Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-检查SSH连接"><span class="toc-number">3.2.4.</span> <span class="toc-text">4. 检查SSH连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-使用命令上传"><span class="toc-number">3.2.5.</span> <span class="toc-text">5. 使用命令上传</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-常见问题-3"><span class="toc-number">3.2.6.</span> <span class="toc-text">6. 常见问题</span></a></li></ol></li></ol></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
-        </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Github 的注册与使用教程以及github page (二)　| zhinian_Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
-
-
-
-
-
-    
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/18/Github_2/" data-title="Github 的注册与使用教程以及github page (二)" data-url="https://petergooo.github.io/2016/12/18/Github_2/"></div>
-    <script>
-        var duoshuoQuery = {short_name:"zhinian95"};
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = "http://blog.zhinian.info/js/embed.js";
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
-        }
-
-        
-    </script>
-    
-    <script> loadComment(); </script>
-
-</div>
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2016/12/19/css01/" title="上一篇: css3 一些样式">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2016/12/16/blog/" title="下一篇: 这个blog 你需要知道的">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/05/browerMETA/">360浏览器、QQ浏览器等 <meta>标签选择webkit内核问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/16/MyWebroad/">MyWebRoad</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/04/ife-phantomjs/">phantomjs———刷IFE琐记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/19/css01/">css3 一些样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/18/Github_2/">Github 的注册与使用教程以及github page (二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/16/blog/">这个blog 你需要知道的</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/night/">一次晚归夜宿与早起日出</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/08/Github_1/">Github 的注册与使用教程以及github page (一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/05/steamroller/">Fcc --- Steamroller</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Writing/">Write</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Fcc/">Fcc 须知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/hello-world/">Hello World</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2016-2017 鹏程
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                    
+                    <i class="angle right icon"></i></a>
+                
             </div>
         </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
+    </div>
+
+</div>
                 
             </div>
-        
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#使用Github来托管你的代码"><span>使用Github来托管你的代码</span></a></li><li><a href="#Github-的客户端使用"><span>Github 的客户端使用</span></a><ol><li><a href="#Mac客户端下载与使用"><span>Mac客户端下载与使用</span></a><ol><li><a href="#1-下载与安装"><span>1. 下载与安装</span></a></li><li><a href="#2-登录客户端"><span>2. 登录客户端</span></a></li><li><a href="#3-克隆仓库"><span>3. 克隆仓库</span></a></li><li><a href="#4-写代码咯"><span>4. 写代码咯</span></a></li><li><a href="#5-提交代码到Github上"><span>5. 提交代码到Github上</span></a></li><li><a href="#6-常见问题"><span>6. 常见问题</span></a></li></ol></li><li><a href="#Windows客户端下载与使用"><span>Windows客户端下载与使用</span></a><ol><li><a href="#1-下载与安装-1"><span>1. 下载与安装</span></a></li><li><a href="#2-登录客户端-1"><span>2. 登录客户端</span></a></li><li><a href="#3-克隆仓库-1"><span>3. 克隆仓库</span></a></li><li><a href="#4-写代码咯-1"><span>4. 写代码咯</span></a></li><li><a href="#5-提交代码到Github上-1"><span>5. 提交代码到Github上</span></a></li><li><a href="#6-常见问题-1"><span>6. 常见问题</span></a></li></ol></li></ol></li><li><a href="#命令行的使用-Git"><span>命令行的使用  Git</span></a><ol><li><a href="#Mac下的git命令行"><span>Mac下的git命令行</span></a><ol><li><a href="#1-终端的介绍与使用"><span>1. 终端的介绍与使用</span></a></li><li><a href="#2-公钥密钥的介绍与生成"><span>2. 公钥密钥的介绍与生成</span></a></li><li><a href="#3-上传公钥到Github"><span>3. 上传公钥到Github</span></a></li><li><a href="#4-检查SSH链接"><span>4. 检查SSH链接</span></a></li><li><a href="#5-使用命令上传代码吧"><span>5. 使用命令上传代码吧 !</span></a></li><li><a href="#6-常见问题-2"><span>6. 常见问题</span></a></li></ol></li><li><a href="#Windows下的git命令行"><span>Windows下的git命令行</span></a><ol><li><a href="#1-Git-shell介绍"><span>1. Git shell介绍</span></a></li><li><a href="#2-密钥生成"><span>2. 密钥生成</span></a></li><li><a href="#3-上传公钥到Github-1"><span>3. 上传公钥到Github</span></a></li><li><a href="#4-检查SSH连接"><span>4. 检查SSH连接</span></a></li><li><a href="#5-使用命令上传"><span>5. 使用命令上传</span></a></li><li><a href="#6-常见问题-3"><span>6. 常见问题</span></a></li></ol></li></ol></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
     </div>
-</footer>
-    </div>
-    
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
-<script>
-    // Open in New Window
-    
-        var oOpenInNew = {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-             friends: "#js-friends a", 
-             socail: ".social a" 
-        }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
-    
-</script>
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-  </div>
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2017 <a href="/">鹏程</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
+
+    </div>
+
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
+
+
+
 </body>
 </html>

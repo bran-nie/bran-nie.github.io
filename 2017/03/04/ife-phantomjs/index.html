@@ -1,21 +1,15 @@
+
+
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head>
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="21年的时光, 目前爱好于前端~">
+    <title>phantomjs———刷IFE琐记 | zhinian_Blog</title>
 
-    <!--[if lt IE 9]>
-        <style>body {display: none; background: none !important} </style>
-        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
-    <![endif]-->
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="鹏程" />
-
-
-
-<meta name="description" content="今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂
+    <!-- Open Graph -->
+    <meta name="description" content="今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂
 排着队，一个一个来🙈
 
 下载压缩包">
@@ -35,545 +29,286 @@
 
 下载压缩包">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
-
-
-    <link rel="alternate" href="/atom.xml" title="zhinian_Blog" type="application/atom+xml">
-
-
-
-    <link rel="shortcut icon" href="/favicon.ico">
-
-
-
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
-
-
-    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-
-
-
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-
-<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-
-<title>phantomjs———刷IFE琐记 | zhinian_Blog</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-<script>
-    var yiliaConfig = {
-        fancybox: true,
-        animate: true,
-        isHome: false,
-        isPost: true,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: true
-    }
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:1185367347@qq.com",
+  "image": "undefined",
+  "name": "鹏程",
+  "url": "https://petergooo.github.io"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
 </script>
 
+    
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
-
-
-
-    <script> yiliaConfig.rootUrl = "\/";</script>
-
-
-
-
-
+    
+    
+        
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
 
 </head>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="/logo.jpeg" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">鹏程</a></h1>
-        </hgroup>
+<body id="body" style="margin-bottom: 0;" class="pushable">
 
-        
-        <p class="header-subtitle">初行翼翼, 欲展翅飞翔</p>
-        
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+    </div>
 
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
-        
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
 
-
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>zhinian_Blog</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">鹏程</a>
                     
                 </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
+                <div class="extra content">
+                    <div class="ui list">
                         
                         
-                        <li>关于我</li>
+                        <div class="item">
+                            <i class="mail icon" style="float: left"></i>
+                            <div class="content">
+                                <a href="mailto:1185367347@qq.com">1185367347@qq.com</a>
+                            </div>
+                        </div>
                         
-                    </ul>
+                    </div>
+
                 </div>
-            </div>
-        
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
+                <div class="extra content">
+                    <div class="ui list">
                         
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/archives/">所有文章</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" href="https://github.com/HeiPeter/HeiPeter.github.io" title="GitHub"></a>
-                            
-                                <a class="fa 知乎" href="https://www.zhihu.com/people/zhinian-pc/activities" title="知乎"></a>
-                            
-                                <a class="fa Email" href="mailto:pengcheng1995@gmail.com" title="Email"></a>
-                            
-                                <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=1185367347&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Brower/">Brower</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fcc-闯关/">Fcc 闯关</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5标签/">HTML5标签</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Phantomjs/">Phantomjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-page/">github page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ife/">ife</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/top/">top</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
                     </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
-                    
-                    </div>
-                </section>
-                
-
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">这个主题好强大呐</div>
-                </section>
-                
+                </div>
             </div>
         </div>
-    </header>                
+    </div>
+
+
 </div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">鹏程</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="/logo.jpeg" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">鹏程</a></h1>
-            </hgroup>
-            
-            <p class="header-subtitle">初行翼翼, 欲展翅飞翔</p>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" target="_blank" href="https://github.com/HeiPeter/HeiPeter.github.io" title="GitHub"></a>
-                            
-                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/zhinian-pc/activities" title="知乎"></a>
-                            
-                                <a class="fa Email" target="_blank" href="mailto:pengcheng1995@gmail.com" title="Email"></a>
-                            
-                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1185367347&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-            </nav>
-        </header>                
-    </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
-</nav>
-      <div class="body-wrap"><article id="post-ife-phantomjs" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/04/ife-phantomjs/" class="article-date">
-      <time datetime="2017-03-04T07:32:07.000Z" itemprop="datePublished">2017-03-04</time>
-</a>
 
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      phantomjs———刷IFE琐记
-    </h1>
-  
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/教程/">教程</a>
-    </div>
-
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Phantomjs/">Phantomjs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ife/">ife</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
     
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂"><a href="#今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂" class="headerlink" title="今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂"></a>今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂</h1><blockquote>
-<p>排着队，一个一个来🙈</p>
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-ife-phantomjs" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    phantomjs———刷IFE琐记
+</h1>
+
+
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <h1 id="&#x4ECA;&#x5929;&#x5728;&#x770B;&#x767E;&#x5EA6;ife&#x7CEF;&#x7C73;&#x5B66;&#x9662;&#x7684;&#x9898;&#xFF0C;&#x9047;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x89E3;&#x51B3;&#x540E;&#x5C31;&#x60F3;&#x62FF;&#x6765;&#x5199;&#x5199;&#x1F602;"><a href="#&#x4ECA;&#x5929;&#x5728;&#x770B;&#x767E;&#x5EA6;ife&#x7CEF;&#x7C73;&#x5B66;&#x9662;&#x7684;&#x9898;&#xFF0C;&#x9047;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x89E3;&#x51B3;&#x540E;&#x5C31;&#x60F3;&#x62FF;&#x6765;&#x5199;&#x5199;&#x1F602;" class="headerlink" title="&#x4ECA;&#x5929;&#x5728;&#x770B;&#x767E;&#x5EA6;ife&#x7CEF;&#x7C73;&#x5B66;&#x9662;&#x7684;&#x9898;&#xFF0C;&#x9047;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x89E3;&#x51B3;&#x540E;&#x5C31;&#x60F3;&#x62FF;&#x6765;&#x5199;&#x5199;&#x1F602;"></a>&#x4ECA;&#x5929;&#x5728;&#x770B;&#x767E;&#x5EA6;ife&#x7CEF;&#x7C73;&#x5B66;&#x9662;&#x7684;&#x9898;&#xFF0C;&#x9047;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x89E3;&#x51B3;&#x540E;&#x5C31;&#x60F3;&#x62FF;&#x6765;&#x5199;&#x5199;&#x1F602;</h1><blockquote>
+<p>&#x6392;&#x7740;&#x961F;&#xFF0C;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x6765;&#x1F648;</p>
 </blockquote>
-<h3 id="下载压缩包"><a href="#下载压缩包" class="headerlink" title="下载压缩包"></a>下载压缩包</h3><a id="more"></a>
-<p><a href="http://phantomjs.org/download.html" target="_blank" rel="external">http://phantomjs.org/download.html</a> 常见的系统都有压缩包.</p>
-<p>下载后解压, 有bin、examples、等等文件，其中在bin中打开phantomjs后 各个系统进入的界面大同小异: </p>
-<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows:"></a>Windows:</h3><ol>
-<li>会有带这个<code>phantomjs&gt;</code> 的命令行, 可以输入语句, enter执行, 但是这样不能执行js文件.   </li>
-<li>同时在cmd里面,  输入 phantoms –version  会报错.</li>
-<li>解决方法:  <strong>修改环境变量</strong><ol>
-<li>将压缩包解压到某个盘,  如我解压到D盘, 重命名文件夹为phantomjs,  </li>
-<li>打开&gt;我的电脑&gt;右键属性&gt;高级系统设置&gt;高级&gt;环境变量,  在出现的窗口里,  找到系统变量中的 Path, 点击编辑, 在弹出的页面, 点击编辑文本, 把上一步的路径添加上去.  格式:  <code>;D:\phantomjs\bin</code>  切记不要漏下  <strong>;</strong>   这个是各个环境变量的分隔符, 当然, 你编辑的时候发现前面有,那就不用加了. </li>
+<h3 id="&#x4E0B;&#x8F7D;&#x538B;&#x7F29;&#x5305;"><a href="#&#x4E0B;&#x8F7D;&#x538B;&#x7F29;&#x5305;" class="headerlink" title="&#x4E0B;&#x8F7D;&#x538B;&#x7F29;&#x5305;"></a>&#x4E0B;&#x8F7D;&#x538B;&#x7F29;&#x5305;</h3><a id="more"></a>
+<p><a href="http://phantomjs.org/download.html" target="_blank" rel="external">http://phantomjs.org/download.html</a> &#x5E38;&#x89C1;&#x7684;&#x7CFB;&#x7EDF;&#x90FD;&#x6709;&#x538B;&#x7F29;&#x5305;.</p>
+<p>&#x4E0B;&#x8F7D;&#x540E;&#x89E3;&#x538B;, &#x6709;bin&#x3001;examples&#x3001;&#x7B49;&#x7B49;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4E2D;&#x5728;bin&#x4E2D;&#x6253;&#x5F00;phantomjs&#x540E; &#x5404;&#x4E2A;&#x7CFB;&#x7EDF;&#x8FDB;&#x5165;&#x7684;&#x754C;&#x9762;&#x5927;&#x540C;&#x5C0F;&#x5F02;: </p>
+<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows:"></a>Windows:</h3><ol class="ui list">
+<li>&#x4F1A;&#x6709;&#x5E26;&#x8FD9;&#x4E2A;<code>phantomjs&gt;</code> &#x7684;&#x547D;&#x4EE4;&#x884C;, &#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x8BED;&#x53E5;, enter&#x6267;&#x884C;, &#x4F46;&#x662F;&#x8FD9;&#x6837;&#x4E0D;&#x80FD;&#x6267;&#x884C;js&#x6587;&#x4EF6;.   </li>
+<li>&#x540C;&#x65F6;&#x5728;cmd&#x91CC;&#x9762;,  &#x8F93;&#x5165; phantoms &#x2013;version  &#x4F1A;&#x62A5;&#x9519;.</li>
+<li>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;:  <strong>&#x4FEE;&#x6539;&#x73AF;&#x5883;&#x53D8;&#x91CF;</strong><ol>
+<li>&#x5C06;&#x538B;&#x7F29;&#x5305;&#x89E3;&#x538B;&#x5230;&#x67D0;&#x4E2A;&#x76D8;,  &#x5982;&#x6211;&#x89E3;&#x538B;&#x5230;D&#x76D8;, &#x91CD;&#x547D;&#x540D;&#x6587;&#x4EF6;&#x5939;&#x4E3A;phantomjs,  </li>
+<li>&#x6253;&#x5F00;&gt;&#x6211;&#x7684;&#x7535;&#x8111;&gt;&#x53F3;&#x952E;&#x5C5E;&#x6027;&gt;&#x9AD8;&#x7EA7;&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;&gt;&#x9AD8;&#x7EA7;&gt;&#x73AF;&#x5883;&#x53D8;&#x91CF;,  &#x5728;&#x51FA;&#x73B0;&#x7684;&#x7A97;&#x53E3;&#x91CC;,  &#x627E;&#x5230;&#x7CFB;&#x7EDF;&#x53D8;&#x91CF;&#x4E2D;&#x7684; Path, &#x70B9;&#x51FB;&#x7F16;&#x8F91;, &#x5728;&#x5F39;&#x51FA;&#x7684;&#x9875;&#x9762;, &#x70B9;&#x51FB;&#x7F16;&#x8F91;&#x6587;&#x672C;, &#x628A;&#x4E0A;&#x4E00;&#x6B65;&#x7684;&#x8DEF;&#x5F84;&#x6DFB;&#x52A0;&#x4E0A;&#x53BB;.  &#x683C;&#x5F0F;:  <code>;D:\phantomjs\bin</code>  &#x5207;&#x8BB0;&#x4E0D;&#x8981;&#x6F0F;&#x4E0B;  <strong>;</strong>   &#x8FD9;&#x4E2A;&#x662F;&#x5404;&#x4E2A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x5206;&#x9694;&#x7B26;, &#x5F53;&#x7136;, &#x4F60;&#x7F16;&#x8F91;&#x7684;&#x65F6;&#x5019;&#x53D1;&#x73B0;&#x524D;&#x9762;&#x6709;,&#x90A3;&#x5C31;&#x4E0D;&#x7528;&#x52A0;&#x4E86;. </li>
 </ol>
 </li>
-<li>现在已经ok了   <code>开始键</code> + <code>R</code> 输入cmd 打开命令提示符, 输入phantomjs –version就可以显示版本号了.  输入phantoms  (js文件, 不在命令提示符同一目录下, 需要加js文件的路径) 就可以执行js文件了. </li>
+<li>&#x73B0;&#x5728;&#x5DF2;&#x7ECF;ok&#x4E86;   <code>&#x5F00;&#x59CB;&#x952E;</code> + <code>R</code> &#x8F93;&#x5165;cmd &#x6253;&#x5F00;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;, &#x8F93;&#x5165;phantomjs &#x2013;version&#x5C31;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x7248;&#x672C;&#x53F7;&#x4E86;.  &#x8F93;&#x5165;phantoms  (js&#x6587;&#x4EF6;, &#x4E0D;&#x5728;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;&#x540C;&#x4E00;&#x76EE;&#x5F55;&#x4E0B;, &#x9700;&#x8981;&#x52A0;js&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;) &#x5C31;&#x53EF;&#x4EE5;&#x6267;&#x884C;js&#x6587;&#x4EF6;&#x4E86;. </li>
 </ol>
 <blockquote>
-<p>温馨小提示: </p>
-<p>在文件管理器的地址栏,  输入cmd  然后回车, 就可以快速的进入当前目录的命令提示符.</p>
+<p>&#x6E29;&#x99A8;&#x5C0F;&#x63D0;&#x793A;: </p>
+<p>&#x5728;&#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x5668;&#x7684;&#x5730;&#x5740;&#x680F;,  &#x8F93;&#x5165;cmd  &#x7136;&#x540E;&#x56DE;&#x8F66;, &#x5C31;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x7684;&#x8FDB;&#x5165;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x7684;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;.</p>
 </blockquote>
-<h3 id="Mac-OS-X"><a href="#Mac-OS-X" class="headerlink" title="Mac OS X:"></a>Mac OS X:</h3><ol>
-<li>报错信息同Windows</li>
-<li>解决方法:   <strong>使用绝对路径</strong> 和 <strong>修改环境变量</strong><ol>
-<li>将压缩包解压到某个文件夹下面.  重命名文件夹为 phantomjs</li>
-<li><strong>方法一:</strong>  在终端cd到这个文件目录下.  此时可以输入命令:  <code>bin/phantomjs  examples/hello.js</code>    回车, 就能看到 输出的hello world 了.     输入<code>bin/phantomjs --version</code>  可以查看版本,    这个方法简单, 且不用修改什么  </li>
-<li><strong>方法二:</strong> 在终端里设置PATH   一劳永逸.  命令:  <code>export PATH = &quot;$PATH:/Users/username/phantomjs/bin&quot;</code> 其中, 在/User/后, 就是你phantomjs解压后所在的文件夹了.   如我就是 <code>export PATH = &quot;$PATH:/Users/pengchengnie/work/phantomjs/bin&quot;</code>   修改环境变量以后, 在用户下次登陆时生效.    </li>
-<li>方法二参考链接及深入学习链接: <a href="http://www.2cto.com/os/201308/237281.html" target="_blank" rel="external">http://www.2cto.com/os/201308/237281.html</a></li>
+<h3 id="Mac-OS-X"><a href="#Mac-OS-X" class="headerlink" title="Mac OS X:"></a>Mac OS X:</h3><ol class="ui list">
+<li>&#x62A5;&#x9519;&#x4FE1;&#x606F;&#x540C;Windows</li>
+<li>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;:   <strong>&#x4F7F;&#x7528;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</strong> &#x548C; <strong>&#x4FEE;&#x6539;&#x73AF;&#x5883;&#x53D8;&#x91CF;</strong><ol>
+<li>&#x5C06;&#x538B;&#x7F29;&#x5305;&#x89E3;&#x538B;&#x5230;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x9762;.  &#x91CD;&#x547D;&#x540D;&#x6587;&#x4EF6;&#x5939;&#x4E3A; phantomjs</li>
+<li><strong>&#x65B9;&#x6CD5;&#x4E00;:</strong>  &#x5728;&#x7EC8;&#x7AEF;cd&#x5230;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x4E0B;.  &#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x547D;&#x4EE4;:  <code>bin/phantomjs  examples/hello.js</code>    &#x56DE;&#x8F66;, &#x5C31;&#x80FD;&#x770B;&#x5230; &#x8F93;&#x51FA;&#x7684;hello world &#x4E86;.     &#x8F93;&#x5165;<code>bin/phantomjs --version</code>  &#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x7248;&#x672C;,    &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7B80;&#x5355;, &#x4E14;&#x4E0D;&#x7528;&#x4FEE;&#x6539;&#x4EC0;&#x4E48;  </li>
+<li><strong>&#x65B9;&#x6CD5;&#x4E8C;:</strong> &#x5728;&#x7EC8;&#x7AEF;&#x91CC;&#x8BBE;&#x7F6E;PATH   &#x4E00;&#x52B3;&#x6C38;&#x9038;.  &#x547D;&#x4EE4;:  <code>export PATH = &quot;$PATH:/Users/username/phantomjs/bin&quot;</code> &#x5176;&#x4E2D;, &#x5728;/User/&#x540E;, &#x5C31;&#x662F;&#x4F60;phantomjs&#x89E3;&#x538B;&#x540E;&#x6240;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4E86;.   &#x5982;&#x6211;&#x5C31;&#x662F; <code>export PATH = &quot;$PATH:/Users/pengchengnie/work/phantomjs/bin&quot;</code>   &#x4FEE;&#x6539;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4EE5;&#x540E;, &#x5728;&#x7528;&#x6237;&#x4E0B;&#x6B21;&#x767B;&#x9646;&#x65F6;&#x751F;&#x6548;.    </li>
+<li>&#x65B9;&#x6CD5;&#x4E8C;&#x53C2;&#x8003;&#x94FE;&#x63A5;&#x53CA;&#x6DF1;&#x5165;&#x5B66;&#x4E60;&#x94FE;&#x63A5;: <a href="http://www.2cto.com/os/201308/237281.html" target="_blank" rel="external">http://www.2cto.com/os/201308/237281.html</a></li>
 </ol>
 </li>
 </ol>
-<h3 id="到这里-环境变量已经搭好了-可以开始学习😂"><a href="#到这里-环境变量已经搭好了-可以开始学习😂" class="headerlink" title="到这里, 环境变量已经搭好了, 可以开始学习😂"></a>到这里, 环境变量已经搭好了, 可以开始学习😂</h3><p>欢迎关注我的百度IFE 2017 题库.   链接在这里👉  <a href="https://github.com/PeterGooo/ife" target="_blank" rel="external">GitHub-ife</a>  求star</p>
+<h3 id="&#x5230;&#x8FD9;&#x91CC;-&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5DF2;&#x7ECF;&#x642D;&#x597D;&#x4E86;-&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x1F602;"><a href="#&#x5230;&#x8FD9;&#x91CC;-&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5DF2;&#x7ECF;&#x642D;&#x597D;&#x4E86;-&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x1F602;" class="headerlink" title="&#x5230;&#x8FD9;&#x91CC;, &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5DF2;&#x7ECF;&#x642D;&#x597D;&#x4E86;, &#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x1F602;"></a>&#x5230;&#x8FD9;&#x91CC;, &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5DF2;&#x7ECF;&#x642D;&#x597D;&#x4E86;, &#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x1F602;</h3><p>&#x6B22;&#x8FCE;&#x5173;&#x6CE8;&#x6211;&#x7684;&#x767E;&#x5EA6;IFE 2017 &#x9898;&#x5E93;.   &#x94FE;&#x63A5;&#x5728;&#x8FD9;&#x91CC;&#x1F449;  <a href="https://github.com/PeterGooo/ife" target="_blank" rel="external">GitHub-ife</a>  &#x6C42;star</p>
 <p>over</p>
 
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/03/04/ife-phantomjs/">phantomjs———刷IFE琐记</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">鹏程</a></p>
-        <p><span>发布时间:</span>2017-03-04, 15:32:07</p>
-        <p><span>最后更新:</span>2017-03-04, 22:34:18</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/03/04/ife-phantomjs/" title="phantomjs———刷IFE琐记">https://petergooo.github.io/2017/03/04/ife-phantomjs/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://petergooo.github.io/2017/03/04/ife-phantomjs/　　作者: 鹏程" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
+                        
+                    </div>
 
+                    
+                    
+                    
 
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2017-03-04T07:32:07.000Z" itemprop="datePublished">2017-03-04</time>
 
-    <nav id="article-nav">
+    </span>
+    <span class="post-description-item">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/03/16/MyWebroad/">
+
+    <span>
+        <i class="tags icon"></i>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/Phantomjs/">Phantomjs</a>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/ife/">ife</a>
+    </span>
+
+    
+
+    </span>
+</div>
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a href="/2017/03/16/MyWebroad/" class="ui tiny button">
+
+                    <i class="angle left icon"></i>
+                    
                     MyWebRoad
+                    
+
                 </a>
+
+                
             </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/12/19/css01/">
+            <div class="column nav-right">
+                
+
+                <a href="/2016/12/19/css01/" class="ui tiny button">
+                    
                     css3 一些样式
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂"><span class="toc-number">1.</span> <span class="toc-text">今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载压缩包"><span class="toc-number">1.0.1.</span> <span class="toc-text">下载压缩包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows"><span class="toc-number">1.0.2.</span> <span class="toc-text">Windows:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac-OS-X"><span class="toc-number">1.0.3.</span> <span class="toc-text">Mac OS X:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#到这里-环境变量已经搭好了-可以开始学习😂"><span class="toc-number">1.0.4.</span> <span class="toc-text">到这里, 环境变量已经搭好了, 可以开始学习😂</span></a></li></ol></li></ol></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
-        </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"phantomjs———刷IFE琐记　| zhinian_Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
-
-
-
-
-
-    
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/03/04/ife-phantomjs/" data-title="phantomjs———刷IFE琐记" data-url="https://petergooo.github.io/2017/03/04/ife-phantomjs/"></div>
-    <script>
-        var duoshuoQuery = {short_name:"zhinian95"};
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = "http://blog.zhinian.info/js/embed.js";
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
-        }
-
-        
-    </script>
-    
-    <script> loadComment(); </script>
-
-</div>
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2017/03/16/MyWebroad/" title="上一篇: MyWebRoad">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2016/12/19/css01/" title="下一篇: css3 一些样式">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/05/browerMETA/">360浏览器、QQ浏览器等 <meta>标签选择webkit内核问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/16/MyWebroad/">MyWebRoad</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/04/ife-phantomjs/">phantomjs———刷IFE琐记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/19/css01/">css3 一些样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/18/Github_2/">Github 的注册与使用教程以及github page (二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/16/blog/">这个blog 你需要知道的</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/night/">一次晚归夜宿与早起日出</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/08/Github_1/">Github 的注册与使用教程以及github page (一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/05/steamroller/">Fcc --- Steamroller</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Writing/">Write</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Fcc/">Fcc 须知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/hello-world/">Hello World</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2016-2017 鹏程
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                    
+                    <i class="angle right icon"></i></a>
+                
             </div>
         </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
+    </div>
+
+</div>
                 
             </div>
-        
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂"><span>今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂</span></a><ol><li><a href="#下载压缩包"><span>下载压缩包</span></a></li><li><a href="#Windows"><span>Windows:</span></a></li><li><a href="#Mac-OS-X"><span>Mac OS X:</span></a></li><li><a href="#到这里-环境变量已经搭好了-可以开始学习😂"><span>到这里, 环境变量已经搭好了, 可以开始学习😂</span></a></li></ol></li></ol></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
     </div>
-</footer>
-    </div>
-    
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
-<script>
-    // Open in New Window
-    
-        var oOpenInNew = {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-             friends: "#js-friends a", 
-             socail: ".social a" 
-        }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
-    
-</script>
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-  </div>
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2017 <a href="/">鹏程</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
+
+    </div>
+
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
+
+
+
 </body>
 </html>

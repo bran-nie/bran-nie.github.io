@@ -1,21 +1,15 @@
+
+
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head>
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="21年的时光, 目前爱好于前端~">
+    <title>360浏览器、QQ浏览器等 &lt;meta&gt;标签选择webkit内核问题 | zhinian_Blog</title>
 
-    <!--[if lt IE 9]>
-        <style>body {display: none; background: none !important} </style>
-        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
-    <![endif]-->
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="鹏程" />
-
-
-
-<meta name="description" content="忽略IE吧(8)！先上一张图，很有趣。">
+    <!-- Open Graph -->
+    <meta name="description" content="忽略IE吧(8)！先上一张图，很有趣。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="360浏览器、QQ浏览器等 <meta>标签选择webkit内核问题">
 <meta property="og:url" content="https://petergooo.github.io/2017/05/05/browerMETA/index.html">
@@ -30,528 +24,277 @@
 <meta name="twitter:description" content="忽略IE吧(8)！先上一张图，很有趣。">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4422141-4bd7629fb523b9ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
-
-
-    <link rel="alternate" href="/atom.xml" title="zhinian_Blog" type="application/atom+xml">
-
-
-
-    <link rel="shortcut icon" href="/favicon.ico">
-
-
-
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
-
-
-    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-
-
-
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-
-<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-
-<title>360浏览器、QQ浏览器等 &lt;meta&gt;标签选择webkit内核问题 | zhinian_Blog</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-<script>
-    var yiliaConfig = {
-        fancybox: true,
-        animate: true,
-        isHome: false,
-        isPost: true,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: true
-    }
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:1185367347@qq.com",
+  "image": "undefined",
+  "name": "鹏程",
+  "url": "https://petergooo.github.io"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
 </script>
 
+    
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
-
-
-
-    <script> yiliaConfig.rootUrl = "\/";</script>
-
-
-
-
-
+    
+    
+        
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
 
 </head>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="/logo.jpeg" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">鹏程</a></h1>
-        </hgroup>
+<body id="body" style="margin-bottom: 0;" class="pushable">
 
-        
-        <p class="header-subtitle">初行翼翼, 欲展翅飞翔</p>
-        
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+    </div>
 
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
-        
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
 
-
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>zhinian_Blog</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">鹏程</a>
                     
                 </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
+                <div class="extra content">
+                    <div class="ui list">
                         
                         
-                        <li>关于我</li>
+                        <div class="item">
+                            <i class="mail icon" style="float: left"></i>
+                            <div class="content">
+                                <a href="mailto:1185367347@qq.com">1185367347@qq.com</a>
+                            </div>
+                        </div>
                         
-                    </ul>
+                    </div>
+
                 </div>
-            </div>
-        
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
+                <div class="extra content">
+                    <div class="ui list">
                         
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/archives/">所有文章</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" href="https://github.com/HeiPeter/HeiPeter.github.io" title="GitHub"></a>
-                            
-                                <a class="fa 知乎" href="https://www.zhihu.com/people/zhinian-pc/activities" title="知乎"></a>
-                            
-                                <a class="fa Email" href="mailto:pengcheng1995@gmail.com" title="Email"></a>
-                            
-                                <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=1185367347&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Brower/">Brower</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fcc-闯关/">Fcc 闯关</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5标签/">HTML5标签</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Phantomjs/">Phantomjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-page/">github page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ife/">ife</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/top/">top</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
                     </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
-                    
-                    </div>
-                </section>
-                
-
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">这个主题好强大呐</div>
-                </section>
-                
+                </div>
             </div>
         </div>
-    </header>                
+    </div>
+
+
 </div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">鹏程</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="/logo.jpeg" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">鹏程</a></h1>
-            </hgroup>
-            
-            <p class="header-subtitle">初行翼翼, 欲展翅飞翔</p>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" target="_blank" href="https://github.com/HeiPeter/HeiPeter.github.io" title="GitHub"></a>
-                            
-                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/zhinian-pc/activities" title="知乎"></a>
-                            
-                                <a class="fa Email" target="_blank" href="mailto:pengcheng1995@gmail.com" title="Email"></a>
-                            
-                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1185367347&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-            </nav>
-        </header>                
-    </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
-</nav>
-      <div class="body-wrap"><article id="post-browerMETA" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/05/05/browerMETA/" class="article-date">
-      <time datetime="2017-05-05T10:47:16.000Z" itemprop="datePublished">2017-05-05</time>
-</a>
 
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      360浏览器、QQ浏览器等 &lt;meta&gt;标签选择webkit内核问题
-    </h1>
-  
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/前端/">前端</a>
-    </div>
-
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Brower/">Brower</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5标签/">HTML5标签</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
     
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="忽略IE吧-8-！"><a href="#忽略IE吧-8-！" class="headerlink" title="忽略IE吧(8)！"></a>忽略IE吧(8)！</h1><p>先上一张图，很有趣。</p>
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-browerMETA" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    360浏览器、QQ浏览器等 &lt;meta&gt;标签选择webkit内核问题
+</h1>
+
+
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <h1 id="&#x5FFD;&#x7565;IE&#x5427;-8-&#xFF01;"><a href="#&#x5FFD;&#x7565;IE&#x5427;-8-&#xFF01;" class="headerlink" title="&#x5FFD;&#x7565;IE&#x5427;(8)&#xFF01;"></a>&#x5FFD;&#x7565;IE&#x5427;(8)&#xFF01;</h1><p>&#x5148;&#x4E0A;&#x4E00;&#x5F20;&#x56FE;&#xFF0C;&#x5F88;&#x6709;&#x8DA3;&#x3002;</p>
 <a id="more"></a>
-<p><img src="http://upload-images.jianshu.io/upload_images/4422141-4bd7629fb523b9ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="哈哈哈哈   标配"></p>
-<h1 id="但是leader并不会让你这样做"><a href="#但是leader并不会让你这样做" class="headerlink" title="但是leader并不会让你这样做"></a>但是leader并不会让你这样做</h1><blockquote>
-<p>于是乎你和leader促膝长谈一晚上，得到了这样一个结果：<code>那用户打开360浏览器、QQ浏览器等国内双核的浏览器商，就要正常显示</code></p>
+<p><a class="magnific-img" href="http://upload-images.jianshu.io/upload_images/4422141-4bd7629fb523b9ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400"><img src="http://upload-images.jianshu.io/upload_images/4422141-4bd7629fb523b9ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="&#x54C8;&#x54C8;&#x54C8;&#x54C8;   &#x6807;&#x914D;" class="ui centered image"></a></p>
+<h1 id="&#x4F46;&#x662F;leader&#x5E76;&#x4E0D;&#x4F1A;&#x8BA9;&#x4F60;&#x8FD9;&#x6837;&#x505A;"><a href="#&#x4F46;&#x662F;leader&#x5E76;&#x4E0D;&#x4F1A;&#x8BA9;&#x4F60;&#x8FD9;&#x6837;&#x505A;" class="headerlink" title="&#x4F46;&#x662F;leader&#x5E76;&#x4E0D;&#x4F1A;&#x8BA9;&#x4F60;&#x8FD9;&#x6837;&#x505A;"></a>&#x4F46;&#x662F;leader&#x5E76;&#x4E0D;&#x4F1A;&#x8BA9;&#x4F60;&#x8FD9;&#x6837;&#x505A;</h1><blockquote>
+<p>&#x4E8E;&#x662F;&#x4E4E;&#x4F60;&#x548C;leader&#x4FC3;&#x819D;&#x957F;&#x8C08;&#x4E00;&#x665A;&#x4E0A;&#xFF0C;&#x5F97;&#x5230;&#x4E86;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#xFF1A;<code>&#x90A3;&#x7528;&#x6237;&#x6253;&#x5F00;360&#x6D4F;&#x89C8;&#x5668;&#x3001;QQ&#x6D4F;&#x89C8;&#x5668;&#x7B49;&#x56FD;&#x5185;&#x53CC;&#x6838;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x5546;&#xFF0C;&#x5C31;&#x8981;&#x6B63;&#x5E38;&#x663E;&#x793A;</code></p>
 </blockquote>
-<p>谷歌一下，呀这个好办。一搜索，两大把。。<br>如图<br><img src="http://upload-images.jianshu.io/upload_images/4422141-4b804c8db9517c5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="360浏览器 meta"></p>
-<p>兴致勃勃的打开几个页面，看看资料。哦好简单啊，就是添加一个meta标签就可以了。<br>于是在head里面，眼疾手快的加了一行<br><code>&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;</code><br>保存，刷新。<br>似乎没有用。  冷漠。。<br>又看到一篇文章，是这样说：<br><code>&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot; /&gt;</code><br>ok，我再改。。<br>然并卵。。</p>
-<h1 id="下面听好了，坑在这里"><a href="#下面听好了，坑在这里" class="headerlink" title="下面听好了，坑在这里"></a>下面听好了，坑在这里</h1><blockquote>
-<p>meta标签并不支持 以 ip地址访问 的查询修改内核使用。    来自360社区的产品答疑师回复。。。</p>
+<p>&#x8C37;&#x6B4C;&#x4E00;&#x4E0B;&#xFF0C;&#x5440;&#x8FD9;&#x4E2A;&#x597D;&#x529E;&#x3002;&#x4E00;&#x641C;&#x7D22;&#xFF0C;&#x4E24;&#x5927;&#x628A;&#x3002;&#x3002;<br>&#x5982;&#x56FE;<br><a class="magnific-img" href="http://upload-images.jianshu.io/upload_images/4422141-4b804c8db9517c5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400"><img src="http://upload-images.jianshu.io/upload_images/4422141-4b804c8db9517c5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="360&#x6D4F;&#x89C8;&#x5668; meta" class="ui centered image"></a></p>
+<p>&#x5174;&#x81F4;&#x52C3;&#x52C3;&#x7684;&#x6253;&#x5F00;&#x51E0;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x770B;&#x770B;&#x8D44;&#x6599;&#x3002;&#x54E6;&#x597D;&#x7B80;&#x5355;&#x554A;&#xFF0C;&#x5C31;&#x662F;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;meta&#x6807;&#x7B7E;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;<br>&#x4E8E;&#x662F;&#x5728;head&#x91CC;&#x9762;&#xFF0C;&#x773C;&#x75BE;&#x624B;&#x5FEB;&#x7684;&#x52A0;&#x4E86;&#x4E00;&#x884C;<br><code>&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;</code><br>&#x4FDD;&#x5B58;&#xFF0C;&#x5237;&#x65B0;&#x3002;<br>&#x4F3C;&#x4E4E;&#x6CA1;&#x6709;&#x7528;&#x3002;  &#x51B7;&#x6F20;&#x3002;&#x3002;<br>&#x53C8;&#x770B;&#x5230;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x662F;&#x8FD9;&#x6837;&#x8BF4;&#xFF1A;<br><code>&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot; /&gt;</code><br>ok&#xFF0C;&#x6211;&#x518D;&#x6539;&#x3002;&#x3002;<br>&#x7136;&#x5E76;&#x5375;&#x3002;&#x3002;</p>
+<h1 id="&#x4E0B;&#x9762;&#x542C;&#x597D;&#x4E86;&#xFF0C;&#x5751;&#x5728;&#x8FD9;&#x91CC;"><a href="#&#x4E0B;&#x9762;&#x542C;&#x597D;&#x4E86;&#xFF0C;&#x5751;&#x5728;&#x8FD9;&#x91CC;" class="headerlink" title="&#x4E0B;&#x9762;&#x542C;&#x597D;&#x4E86;&#xFF0C;&#x5751;&#x5728;&#x8FD9;&#x91CC;"></a>&#x4E0B;&#x9762;&#x542C;&#x597D;&#x4E86;&#xFF0C;&#x5751;&#x5728;&#x8FD9;&#x91CC;</h1><blockquote>
+<p>meta&#x6807;&#x7B7E;&#x5E76;&#x4E0D;&#x652F;&#x6301; &#x4EE5; ip&#x5730;&#x5740;&#x8BBF;&#x95EE; &#x7684;&#x67E5;&#x8BE2;&#x4FEE;&#x6539;&#x5185;&#x6838;&#x4F7F;&#x7528;&#x3002;    &#x6765;&#x81EA;360&#x793E;&#x533A;&#x7684;&#x4EA7;&#x54C1;&#x7B54;&#x7591;&#x5E08;&#x56DE;&#x590D;&#x3002;&#x3002;&#x3002;</p>
 </blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/4422141-1c6ac96fca2307f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="产品答疑师"></p>
-<h1 id="最后，如果你是和我一样的情况"><a href="#最后，如果你是和我一样的情况" class="headerlink" title="最后，如果你是和我一样的情况"></a>最后，如果你是和我一样的情况</h1><blockquote>
-<ul>
-<li>使用Mac做开发，</li>
-<li>不需要兼容ie8，但又需要顾及到国内非chrome浏览器用户</li>
-<li>需要在上线前进行测试啊测试</li>
+<p><a class="magnific-img" href="http://upload-images.jianshu.io/upload_images/4422141-1c6ac96fca2307f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"><img src="http://upload-images.jianshu.io/upload_images/4422141-1c6ac96fca2307f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&#x4EA7;&#x54C1;&#x7B54;&#x7591;&#x5E08;" class="ui centered image"></a></p>
+<h1 id="&#x6700;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x662F;&#x548C;&#x6211;&#x4E00;&#x6837;&#x7684;&#x60C5;&#x51B5;"><a href="#&#x6700;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x662F;&#x548C;&#x6211;&#x4E00;&#x6837;&#x7684;&#x60C5;&#x51B5;" class="headerlink" title="&#x6700;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x662F;&#x548C;&#x6211;&#x4E00;&#x6837;&#x7684;&#x60C5;&#x51B5;"></a>&#x6700;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x662F;&#x548C;&#x6211;&#x4E00;&#x6837;&#x7684;&#x60C5;&#x51B5;</h1><blockquote>
+<ul class="ui list">
+<li>&#x4F7F;&#x7528;Mac&#x505A;&#x5F00;&#x53D1;&#xFF0C;</li>
+<li>&#x4E0D;&#x9700;&#x8981;&#x517C;&#x5BB9;ie8&#xFF0C;&#x4F46;&#x53C8;&#x9700;&#x8981;&#x987E;&#x53CA;&#x5230;&#x56FD;&#x5185;&#x975E;chrome&#x6D4F;&#x89C8;&#x5668;&#x7528;&#x6237;</li>
+<li>&#x9700;&#x8981;&#x5728;&#x4E0A;&#x7EBF;&#x524D;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x554A;&#x6D4B;&#x8BD5;</li>
 </ul>
 </blockquote>
-<p>那么可以选择的方法有一个是：<br>使用meta标签。<br>使用局域网，用Windows电脑上的非chrome浏览器做测试。</p>
+<p>&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x7684;&#x65B9;&#x6CD5;&#x6709;&#x4E00;&#x4E2A;&#x662F;&#xFF1A;<br>&#x4F7F;&#x7528;meta&#x6807;&#x7B7E;&#x3002;<br>&#x4F7F;&#x7528;&#x5C40;&#x57DF;&#x7F51;&#xFF0C;&#x7528;Windows&#x7535;&#x8111;&#x4E0A;&#x7684;&#x975E;chrome&#x6D4F;&#x89C8;&#x5668;&#x505A;&#x6D4B;&#x8BD5;&#x3002;</p>
 <blockquote>
-<p>这里使用局域网，就是拿到你Mac的ip地址，在Windows上，修改hosts，将ip地址重定向为一个域名。再在浏览器里打开。因为meta标签不支持 以ip地址访问 的查询修改内核使用嘛。</p>
+<p>&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x5C40;&#x57DF;&#x7F51;&#xFF0C;&#x5C31;&#x662F;&#x62FF;&#x5230;&#x4F60;Mac&#x7684;ip&#x5730;&#x5740;&#xFF0C;&#x5728;Windows&#x4E0A;&#xFF0C;&#x4FEE;&#x6539;hosts&#xFF0C;&#x5C06;ip&#x5730;&#x5740;&#x91CD;&#x5B9A;&#x5411;&#x4E3A;&#x4E00;&#x4E2A;&#x57DF;&#x540D;&#x3002;&#x518D;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x91CC;&#x6253;&#x5F00;&#x3002;&#x56E0;&#x4E3A;meta&#x6807;&#x7B7E;&#x4E0D;&#x652F;&#x6301; &#x4EE5;ip&#x5730;&#x5740;&#x8BBF;&#x95EE; &#x7684;&#x67E5;&#x8BE2;&#x4FEE;&#x6539;&#x5185;&#x6838;&#x4F7F;&#x7528;&#x561B;&#x3002;</p>
 </blockquote>
 
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/05/05/browerMETA/">360浏览器、QQ浏览器等 &lt;meta&gt;标签选择webkit内核问题</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">鹏程</a></p>
-        <p><span>发布时间:</span>2017-05-05, 18:47:16</p>
-        <p><span>最后更新:</span>2017-05-05, 23:02:36</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/05/05/browerMETA/" title="360浏览器、QQ浏览器等 &lt;meta&gt;标签选择webkit内核问题">https://petergooo.github.io/2017/05/05/browerMETA/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://petergooo.github.io/2017/05/05/browerMETA/　　作者: 鹏程" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
+                        
+                    </div>
 
+                    
+                    
+                    
 
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2017-05-05T10:47:16.000Z" itemprop="datePublished">2017-05-05</time>
 
-    <nav id="article-nav">
+    </span>
+    <span class="post-description-item">
         
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/03/16/MyWebroad/">
-                    MyWebRoad
+
+    <span>
+        <i class="tags icon"></i>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/Brower/">Brower</a>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/HTML5标签/">HTML5标签</a>
+    </span>
+
+    
+
+    </span>
+</div>
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a href="/2017/06/06/git/" class="ui tiny button">
+
+                    <i class="angle left icon"></i>
+                    
+                    git
+                    
+
                 </a>
+
+                
             </div>
-        
-    </nav>
+            <div class="column nav-right">
+                
 
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#忽略IE吧-8-！"><span class="toc-number">1.</span> <span class="toc-text">忽略IE吧(8)！</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#但是leader并不会让你这样做"><span class="toc-number">2.</span> <span class="toc-text">但是leader并不会让你这样做</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#下面听好了，坑在这里"><span class="toc-number">3.</span> <span class="toc-text">下面听好了，坑在这里</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最后，如果你是和我一样的情况"><span class="toc-number">4.</span> <span class="toc-text">最后，如果你是和我一样的情况</span></a></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
-        </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"360浏览器、QQ浏览器等 <meta>标签选择webkit内核问题　| zhinian_Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
-
-
-
-
-
-    
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/05/05/browerMETA/" data-title="360浏览器、QQ浏览器等 &lt;meta&gt;标签选择webkit内核问题" data-url="https://petergooo.github.io/2017/05/05/browerMETA/"></div>
-    <script>
-        var duoshuoQuery = {short_name:"zhinian95"};
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = "http://blog.zhinian.info/js/embed.js";
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
-        }
-
-        
-    </script>
-    
-    <script> loadComment(); </script>
-
-</div>
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2017/03/16/MyWebroad/" title="下一篇: MyWebRoad">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/05/browerMETA/">360浏览器、QQ浏览器等 <meta>标签选择webkit内核问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/16/MyWebroad/">MyWebRoad</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/04/ife-phantomjs/">phantomjs———刷IFE琐记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/19/css01/">css3 一些样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/18/Github_2/">Github 的注册与使用教程以及github page (二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/16/blog/">这个blog 你需要知道的</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/night/">一次晚归夜宿与早起日出</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/08/Github_1/">Github 的注册与使用教程以及github page (一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/05/steamroller/">Fcc --- Steamroller</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Writing/">Write</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Fcc/">Fcc 须知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/hello-world/">Hello World</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2016-2017 鹏程
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="/2017/03/16/MyWebroad/" class="ui tiny button">
+                    
+                    MyWebRoad
+                    
+                    <i class="angle right icon"></i></a>
+                
             </div>
         </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
+    </div>
+
+</div>
                 
             </div>
-        
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#忽略IE吧-8-！"><span>忽略IE吧(8)！</span></a></li><li><a href="#但是leader并不会让你这样做"><span>但是leader并不会让你这样做</span></a></li><li><a href="#下面听好了，坑在这里"><span>下面听好了，坑在这里</span></a></li><li><a href="#最后，如果你是和我一样的情况"><span>最后，如果你是和我一样的情况</span></a></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
     </div>
-</footer>
-    </div>
-    
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
-<script>
-    // Open in New Window
-    
-        var oOpenInNew = {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-             friends: "#js-friends a", 
-             socail: ".social a" 
-        }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
-    
-</script>
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-  </div>
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2017 <a href="/">鹏程</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
+
+    </div>
+
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
+
+
+
 </body>
 </html>

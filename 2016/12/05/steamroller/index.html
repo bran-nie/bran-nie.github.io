@@ -1,21 +1,15 @@
+
+
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head>
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="21年的时光, 目前爱好于前端~">
+    <title>Fcc --- Steamroller | zhinian_Blog</title>
 
-    <!--[if lt IE 9]>
-        <style>body {display: none; background: none !important} </style>
-        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
-    <![endif]-->
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="鹏程" />
-
-
-
-<meta name="description" content="题目描述
+    <!-- Open Graph -->
+    <meta name="description" content="题目描述
 对嵌套的数组进行扁平化处理。你必须考虑到不同层级的嵌套。如果你被卡住了，
 ​     记得开大招 Read-Search-Ask。尝试与他人结伴编程、编写你自己的代码。">
 <meta property="og:type" content="article">
@@ -34,565 +28,301 @@
 ​     记得开大招 Read-Search-Ask。尝试与他人结伴编程、编写你自己的代码。">
 <meta name="twitter:image" content="https://petergooo.github.io/blog/imgs/Fcc/pass.jpg">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
-
-
-    <link rel="alternate" href="/atom.xml" title="zhinian_Blog" type="application/atom+xml">
-
-
-
-    <link rel="shortcut icon" href="/favicon.ico">
-
-
-
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
-
-
-    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-
-
-
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-
-<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-
-<title>Fcc --- Steamroller | zhinian_Blog</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-<script>
-    var yiliaConfig = {
-        fancybox: true,
-        animate: true,
-        isHome: false,
-        isPost: true,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: true
-    }
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:1185367347@qq.com",
+  "image": "undefined",
+  "name": "鹏程",
+  "url": "https://petergooo.github.io"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
 </script>
 
+    
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
-
-
-
-    <script> yiliaConfig.rootUrl = "\/";</script>
-
-
-
-
-
+    
+    
+        
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
 
 </head>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="/logo.jpeg" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">鹏程</a></h1>
-        </hgroup>
+<body id="body" style="margin-bottom: 0;" class="pushable">
 
-        
-        <p class="header-subtitle">初行翼翼, 欲展翅飞翔</p>
-        
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+    </div>
 
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
-        
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
 
-
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>zhinian_Blog</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">鹏程</a>
                     
                 </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
+                <div class="extra content">
+                    <div class="ui list">
                         
                         
-                        <li>关于我</li>
+                        <div class="item">
+                            <i class="mail icon" style="float: left"></i>
+                            <div class="content">
+                                <a href="mailto:1185367347@qq.com">1185367347@qq.com</a>
+                            </div>
+                        </div>
                         
-                    </ul>
+                    </div>
+
                 </div>
-            </div>
-        
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
+                <div class="extra content">
+                    <div class="ui list">
                         
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/archives/">所有文章</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" href="https://github.com/HeiPeter/HeiPeter.github.io" title="GitHub"></a>
-                            
-                                <a class="fa 知乎" href="https://www.zhihu.com/people/zhinian-pc/activities" title="知乎"></a>
-                            
-                                <a class="fa Email" href="mailto:pengcheng1995@gmail.com" title="Email"></a>
-                            
-                                <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=1185367347&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Brower/">Brower</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fcc-闯关/">Fcc 闯关</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5标签/">HTML5标签</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Phantomjs/">Phantomjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-page/">github page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ife/">ife</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/top/">top</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
                     </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
-                    
-                    </div>
-                </section>
-                
-
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">这个主题好强大呐</div>
-                </section>
-                
+                </div>
             </div>
         </div>
-    </header>                
+    </div>
+
+
 </div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">鹏程</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="/logo.jpeg" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">鹏程</a></h1>
-            </hgroup>
-            
-            <p class="header-subtitle">初行翼翼, 欲展翅飞翔</p>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa GitHub" target="_blank" href="https://github.com/HeiPeter/HeiPeter.github.io" title="GitHub"></a>
-                            
-                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/zhinian-pc/activities" title="知乎"></a>
-                            
-                                <a class="fa Email" target="_blank" href="mailto:pengcheng1995@gmail.com" title="Email"></a>
-                            
-                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1185367347&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-            </nav>
-        </header>                
-    </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
-</nav>
-      <div class="body-wrap"><article id="post-steamroller" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/12/05/steamroller/" class="article-date">
-      <time datetime="2016-12-04T16:07:01.000Z" itemprop="datePublished">2016-12-05</time>
-</a>
 
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Fcc --- Steamroller
-    </h1>
-  
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Fcc/">Fcc</a>
-    </div>
-
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Fcc-闯关/">Fcc 闯关</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
     
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
-<p>对嵌套的数组进行<code>扁平化处理</code>。你必须考虑到不同层级的嵌套。如果你被卡住了，</p>
-<p>​     记得开大招 <code>Read-Search-Ask</code>。尝试与他人结伴编程、编写你自己的代码。</p>
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-steamroller" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    Fcc --- Steamroller
+</h1>
+
+
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <h1 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;</h1><blockquote>
+<p>&#x5BF9;&#x5D4C;&#x5957;&#x7684;&#x6570;&#x7EC4;&#x8FDB;&#x884C;<code>&#x6241;&#x5E73;&#x5316;&#x5904;&#x7406;</code>&#x3002;&#x4F60;&#x5FC5;&#x987B;&#x8003;&#x8651;&#x5230;&#x4E0D;&#x540C;&#x5C42;&#x7EA7;&#x7684;&#x5D4C;&#x5957;&#x3002;&#x5982;&#x679C;&#x4F60;&#x88AB;&#x5361;&#x4F4F;&#x4E86;&#xFF0C;</p>
+<p>&#x200B;     &#x8BB0;&#x5F97;&#x5F00;&#x5927;&#x62DB; <code>Read-Search-Ask</code>&#x3002;&#x5C1D;&#x8BD5;&#x4E0E;&#x4ED6;&#x4EBA;&#x7ED3;&#x4F34;&#x7F16;&#x7A0B;&#x3001;&#x7F16;&#x5199;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
 </blockquote>
 <a id="more"></a>
 <blockquote>
-<p>提供的资源:</p>
+<p>&#x63D0;&#x4F9B;&#x7684;&#x8D44;&#x6E90;:</p>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="external">Array.isArray()</a></p>
 </blockquote>
-<h1 id="往下继续之前-希望你花两分钟看看这个Fcc-须知"><a href="#往下继续之前-希望你花两分钟看看这个Fcc-须知" class="headerlink" title="往下继续之前, 希望你花两分钟看看这个Fcc 须知"></a>往下继续之前, 希望你花两分钟看看这个<a href="https://petergooo.github.io/blog/2016/12/04/Fcc/">Fcc 须知</a></h1><h1 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h1><h2 id="理解题意"><a href="#理解题意" class="headerlink" title="理解题意"></a>理解题意</h2><blockquote>
-<p>何为扁平化处理.   </p>
-<ul>
-<li>如<code>steamroller([[[&quot;a&quot;]], [[&quot;b&quot;]]])</code> 应该返回 <code>[&quot;a&quot;, &quot;b&quot;]</code>  就是把数组中空的值, 嵌套的值等等最终返回一个只有一层的数组.   既完成了Fcc的挑战.</li>
+<h1 id="&#x5F80;&#x4E0B;&#x7EE7;&#x7EED;&#x4E4B;&#x524D;-&#x5E0C;&#x671B;&#x4F60;&#x82B1;&#x4E24;&#x5206;&#x949F;&#x770B;&#x770B;&#x8FD9;&#x4E2A;Fcc-&#x987B;&#x77E5;"><a href="#&#x5F80;&#x4E0B;&#x7EE7;&#x7EED;&#x4E4B;&#x524D;-&#x5E0C;&#x671B;&#x4F60;&#x82B1;&#x4E24;&#x5206;&#x949F;&#x770B;&#x770B;&#x8FD9;&#x4E2A;Fcc-&#x987B;&#x77E5;" class="headerlink" title="&#x5F80;&#x4E0B;&#x7EE7;&#x7EED;&#x4E4B;&#x524D;, &#x5E0C;&#x671B;&#x4F60;&#x82B1;&#x4E24;&#x5206;&#x949F;&#x770B;&#x770B;&#x8FD9;&#x4E2A;Fcc &#x987B;&#x77E5;"></a>&#x5F80;&#x4E0B;&#x7EE7;&#x7EED;&#x4E4B;&#x524D;, &#x5E0C;&#x671B;&#x4F60;&#x82B1;&#x4E24;&#x5206;&#x949F;&#x770B;&#x770B;&#x8FD9;&#x4E2A;<a href="https://petergooo.github.io/blog/2016/12/04/Fcc/">Fcc &#x987B;&#x77E5;</a></h1><h1 id="&#x9898;&#x76EE;&#x89E3;&#x6790;"><a href="#&#x9898;&#x76EE;&#x89E3;&#x6790;" class="headerlink" title="&#x9898;&#x76EE;&#x89E3;&#x6790;"></a>&#x9898;&#x76EE;&#x89E3;&#x6790;</h1><h2 id="&#x7406;&#x89E3;&#x9898;&#x610F;"><a href="#&#x7406;&#x89E3;&#x9898;&#x610F;" class="headerlink" title="&#x7406;&#x89E3;&#x9898;&#x610F;"></a>&#x7406;&#x89E3;&#x9898;&#x610F;</h2><blockquote>
+<p>&#x4F55;&#x4E3A;&#x6241;&#x5E73;&#x5316;&#x5904;&#x7406;.   </p>
+<ul class="ui list">
+<li>&#x5982;<code>steamroller([[[&quot;a&quot;]], [[&quot;b&quot;]]])</code> &#x5E94;&#x8BE5;&#x8FD4;&#x56DE; <code>[&quot;a&quot;, &quot;b&quot;]</code>  &#x5C31;&#x662F;&#x628A;&#x6570;&#x7EC4;&#x4E2D;&#x7A7A;&#x7684;&#x503C;, &#x5D4C;&#x5957;&#x7684;&#x503C;&#x7B49;&#x7B49;&#x6700;&#x7EC8;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53EA;&#x6709;&#x4E00;&#x5C42;&#x7684;&#x6570;&#x7EC4;.   &#x65E2;&#x5B8C;&#x6210;&#x4E86;Fcc&#x7684;&#x6311;&#x6218;.</li>
 </ul>
 </blockquote>
-<h2 id="前期思考"><a href="#前期思考" class="headerlink" title="前期思考"></a>前期思考</h2><ol>
-<li><code>数组遍历</code>,   需要使用什么方法.  不止一个哦.   除了<code>for循环</code><ul>
-<li>检查这个元素,  做判断嘛.</li>
+<h2 id="&#x524D;&#x671F;&#x601D;&#x8003;"><a href="#&#x524D;&#x671F;&#x601D;&#x8003;" class="headerlink" title="&#x524D;&#x671F;&#x601D;&#x8003;"></a>&#x524D;&#x671F;&#x601D;&#x8003;</h2><ol class="ui list">
+<li><code>&#x6570;&#x7EC4;&#x904D;&#x5386;</code>,   &#x9700;&#x8981;&#x4F7F;&#x7528;&#x4EC0;&#x4E48;&#x65B9;&#x6CD5;.  &#x4E0D;&#x6B62;&#x4E00;&#x4E2A;&#x54E6;.   &#x9664;&#x4E86;<code>for&#x5FAA;&#x73AF;</code><ul>
+<li>&#x68C0;&#x67E5;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;,  &#x505A;&#x5224;&#x65AD;&#x561B;.</li>
 </ul>
 </li>
-<li><code>数组判断</code>,<ul>
-<li>是数组,  要继续扁平化, 可以跳到<code>思考 1</code> 需要用到<code>递归</code>或者另一种多维度数组的处理方法.</li>
-<li>不是数组, 添加到结果数组中.   *这里的结果数组需要在函数内定义还是全局定义呢?  见下面同学示例.</li>
+<li><code>&#x6570;&#x7EC4;&#x5224;&#x65AD;</code>,<ul>
+<li>&#x662F;&#x6570;&#x7EC4;,  &#x8981;&#x7EE7;&#x7EED;&#x6241;&#x5E73;&#x5316;, &#x53EF;&#x4EE5;&#x8DF3;&#x5230;<code>&#x601D;&#x8003; 1</code> &#x9700;&#x8981;&#x7528;&#x5230;<code>&#x9012;&#x5F52;</code>&#x6216;&#x8005;&#x53E6;&#x4E00;&#x79CD;&#x591A;&#x7EF4;&#x5EA6;&#x6570;&#x7EC4;&#x7684;&#x5904;&#x7406;&#x65B9;&#x6CD5;.</li>
+<li>&#x4E0D;&#x662F;&#x6570;&#x7EC4;, &#x6DFB;&#x52A0;&#x5230;&#x7ED3;&#x679C;&#x6570;&#x7EC4;&#x4E2D;.   *&#x8FD9;&#x91CC;&#x7684;&#x7ED3;&#x679C;&#x6570;&#x7EC4;&#x9700;&#x8981;&#x5728;&#x51FD;&#x6570;&#x5185;&#x5B9A;&#x4E49;&#x8FD8;&#x662F;&#x5168;&#x5C40;&#x5B9A;&#x4E49;&#x5462;?  &#x89C1;&#x4E0B;&#x9762;&#x540C;&#x5B66;&#x793A;&#x4F8B;.</li>
 </ul>
 </li>
-<li><code>编写代码</code> ,  想好了, 那就实践吧, 即使出现了bug.<ul>
-<li>​</li>
+<li><code>&#x7F16;&#x5199;&#x4EE3;&#x7801;</code> ,  &#x60F3;&#x597D;&#x4E86;, &#x90A3;&#x5C31;&#x5B9E;&#x8DF5;&#x5427;, &#x5373;&#x4F7F;&#x51FA;&#x73B0;&#x4E86;bug.<ul>
+<li>&#x200B;</li>
 </ul>
 </li>
 </ol>
-<h2 id="代码示范"><a href="#代码示范" class="headerlink" title="代码示范"></a>代码示范</h2><h4 id="一个同学的代码示例"><a href="#一个同学的代码示例" class="headerlink" title="一个同学的代码示例"></a>一个同学的代码示例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> newArr = [];     <span class="comment">//定义全局结果数组</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">steamroller</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;arr.length; i++)&#123;	<span class="comment">// 循环遍历`当前传入数组`元素   注意是当前传入数组袄</span></div><div class="line">  	<span class="keyword">if</span>(<span class="built_in">Array</span>.isArray(arr[i]))   <span class="comment">// 如果是元素是数组而不是值,  那就条件为真</span></div><div class="line">      steamroller(arr[i]);   <span class="comment">// 这里用了递归的方法 循环调用</span></div><div class="line">    <span class="keyword">else</span></div><div class="line">      newArr.push(arr[i]);  <span class="comment">//不是数组, 就push到结果数组里</span></div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> newArr;</div><div class="line">&#125;</div><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div></pre></td></tr></table></figure>
-<p>返回结果是</p>
+<h2 id="&#x4EE3;&#x7801;&#x793A;&#x8303;"><a href="#&#x4EE3;&#x7801;&#x793A;&#x8303;" class="headerlink" title="&#x4EE3;&#x7801;&#x793A;&#x8303;"></a>&#x4EE3;&#x7801;&#x793A;&#x8303;</h2><h4 id="&#x4E00;&#x4E2A;&#x540C;&#x5B66;&#x7684;&#x4EE3;&#x7801;&#x793A;&#x4F8B;"><a href="#&#x4E00;&#x4E2A;&#x540C;&#x5B66;&#x7684;&#x4EE3;&#x7801;&#x793A;&#x4F8B;" class="headerlink" title="&#x4E00;&#x4E2A;&#x540C;&#x5B66;&#x7684;&#x4EE3;&#x7801;&#x793A;&#x4F8B;"></a>&#x4E00;&#x4E2A;&#x540C;&#x5B66;&#x7684;&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> newArr = [];     <span class="comment">//&#x5B9A;&#x4E49;&#x5168;&#x5C40;&#x7ED3;&#x679C;&#x6570;&#x7EC4;</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">steamroller</span>(<span class="params">arr</span>)</span>{</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;arr.length; i++){	<span class="comment">// &#x5FAA;&#x73AF;&#x904D;&#x5386;`&#x5F53;&#x524D;&#x4F20;&#x5165;&#x6570;&#x7EC4;`&#x5143;&#x7D20;   &#x6CE8;&#x610F;&#x662F;&#x5F53;&#x524D;&#x4F20;&#x5165;&#x6570;&#x7EC4;&#x8884;</span></div><div class="line">  	<span class="keyword">if</span>(<span class="built_in">Array</span>.isArray(arr[i]))   <span class="comment">// &#x5982;&#x679C;&#x662F;&#x5143;&#x7D20;&#x662F;&#x6570;&#x7EC4;&#x800C;&#x4E0D;&#x662F;&#x503C;,  &#x90A3;&#x5C31;&#x6761;&#x4EF6;&#x4E3A;&#x771F;</span></div><div class="line">      steamroller(arr[i]);   <span class="comment">// &#x8FD9;&#x91CC;&#x7528;&#x4E86;&#x9012;&#x5F52;&#x7684;&#x65B9;&#x6CD5; &#x5FAA;&#x73AF;&#x8C03;&#x7528;</span></div><div class="line">    <span class="keyword">else</span></div><div class="line">      newArr.push(arr[i]);  <span class="comment">//&#x4E0D;&#x662F;&#x6570;&#x7EC4;, &#x5C31;push&#x5230;&#x7ED3;&#x679C;&#x6570;&#x7EC4;&#x91CC;</span></div><div class="line">  }</div><div class="line">  <span class="keyword">return</span> newArr;</div><div class="line">}</div><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div></pre></td></tr></table></figure>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x662F;</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[1,2,3,4]</div></pre></td></tr></table></figure>
-<p>但并没有通过这道题.   为什么呢?</p>
-<p>在题中调用两次steamroller后,</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div><div class="line">steamroller([[[<span class="string">"a"</span>]], [[<span class="string">"b"</span>]]]);</div></pre></td></tr></table></figure>
-<p>结果却不是我们想要的 <code>[&quot;a&quot;, &quot;b&quot;]</code> 而是<code>[1,2,3,4,&quot;a&quot;, &quot;b&quot;]</code>    为什么会把上一次调用的结果也push到了 结果数组中了?</p>
-<h4 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h4><p>原因就是,    在上面那个同学的代码中,  他的结果数组: <code>newArr</code>是在<code>全局定义</code>的!   这也就导致,  他的结果数组保存着所有的调用steamroller函数的值.   所以这样当然不会通过测试啦~</p>
-<p>那机智如你会想到把结果数组<code>定义到函数内</code>, 但是当我们要扁平化的是<code>多维数组</code>时, 它就出现了只有<code>第一个元素</code>的尴尬现象.</p>
+<p>&#x4F46;&#x5E76;&#x6CA1;&#x6709;&#x901A;&#x8FC7;&#x8FD9;&#x9053;&#x9898;.   &#x4E3A;&#x4EC0;&#x4E48;&#x5462;?</p>
+<p>&#x5728;&#x9898;&#x4E2D;&#x8C03;&#x7528;&#x4E24;&#x6B21;steamroller&#x540E;,</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div><div class="line">steamroller([[[<span class="string">&quot;a&quot;</span>]], [[<span class="string">&quot;b&quot;</span>]]]);</div></pre></td></tr></table></figure>
+<p>&#x7ED3;&#x679C;&#x5374;&#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684; <code>[&quot;a&quot;, &quot;b&quot;]</code> &#x800C;&#x662F;<code>[1,2,3,4,&quot;a&quot;, &quot;b&quot;]</code>    &#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x628A;&#x4E0A;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x7ED3;&#x679C;&#x4E5F;push&#x5230;&#x4E86; &#x7ED3;&#x679C;&#x6570;&#x7EC4;&#x4E2D;&#x4E86;?</p>
+<h4 id="&#x4EE3;&#x7801;&#x5206;&#x6790;"><a href="#&#x4EE3;&#x7801;&#x5206;&#x6790;" class="headerlink" title="&#x4EE3;&#x7801;&#x5206;&#x6790;"></a>&#x4EE3;&#x7801;&#x5206;&#x6790;</h4><p>&#x539F;&#x56E0;&#x5C31;&#x662F;,    &#x5728;&#x4E0A;&#x9762;&#x90A3;&#x4E2A;&#x540C;&#x5B66;&#x7684;&#x4EE3;&#x7801;&#x4E2D;,  &#x4ED6;&#x7684;&#x7ED3;&#x679C;&#x6570;&#x7EC4;: <code>newArr</code>&#x662F;&#x5728;<code>&#x5168;&#x5C40;&#x5B9A;&#x4E49;</code>&#x7684;!   &#x8FD9;&#x4E5F;&#x5C31;&#x5BFC;&#x81F4;,  &#x4ED6;&#x7684;&#x7ED3;&#x679C;&#x6570;&#x7EC4;&#x4FDD;&#x5B58;&#x7740;&#x6240;&#x6709;&#x7684;&#x8C03;&#x7528;steamroller&#x51FD;&#x6570;&#x7684;&#x503C;.   &#x6240;&#x4EE5;&#x8FD9;&#x6837;&#x5F53;&#x7136;&#x4E0D;&#x4F1A;&#x901A;&#x8FC7;&#x6D4B;&#x8BD5;&#x5566;~</p>
+<p>&#x90A3;&#x673A;&#x667A;&#x5982;&#x4F60;&#x4F1A;&#x60F3;&#x5230;&#x628A;&#x7ED3;&#x679C;&#x6570;&#x7EC4;<code>&#x5B9A;&#x4E49;&#x5230;&#x51FD;&#x6570;&#x5185;</code>, &#x4F46;&#x662F;&#x5F53;&#x6211;&#x4EEC;&#x8981;&#x6241;&#x5E73;&#x5316;&#x7684;&#x662F;<code>&#x591A;&#x7EF4;&#x6570;&#x7EC4;</code>&#x65F6;, &#x5B83;&#x5C31;&#x51FA;&#x73B0;&#x4E86;&#x53EA;&#x6709;<code>&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</code>&#x7684;&#x5C34;&#x5C2C;&#x73B0;&#x8C61;.</p>
 <p>What the hall???</p>
-<p>so, 这个时候, 你可以了解  javascript的<a href="http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html" target="_blank" rel="external">闭包函数</a>了,  同学们点击左侧链接, 跳转, 查看什么是<code>闭包及其原理和应用</code>.</p>
-<p>一定去看袄.</p>
-<p>以及,  这一题我也用了闭包, 在看完阮一峰老师的闭包讲解后, 可以先尝试着修改代码.    也可以查看我的, 分析示例. 我有写注释.    据说代码写注释是一个好习惯,   请问这个据说对不对  &gt;.&lt;  ~~~</p>
-<h4 id="我的代码示例"><a href="#我的代码示例" class="headerlink" title="我的代码示例"></a>我的代码示例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">steamroller</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="comment">// I'm a steamroller, baby</span></div><div class="line">  <span class="keyword">var</span> result = [];    <span class="comment">//定义结果数组</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">steam</span>(<span class="params">ifArr</span>) </span>&#123;   <span class="comment">// 定义内部函数.  </span></div><div class="line">    <span class="keyword">if</span>(<span class="built_in">Array</span>.isArray(ifArr))&#123;</div><div class="line">      <span class="keyword">return</span> ifArr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>&#123;   <span class="comment">//我这里用了forEach 循环数组, 想知道它的详情, 下面有链接.</span></div><div class="line">        <span class="keyword">return</span> steam(val);			<span class="comment">// 递归调用 steam函数.</span></div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">    	result.push(ifArr);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  steam(arr);   <span class="comment">//调用函数,</span></div><div class="line"></div><div class="line">  <span class="keyword">return</span> result; <span class="comment">// 返回结果数组</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div><div class="line">steamroller([[[<span class="string">"a"</span>]], [[<span class="string">"b"</span>]]]);</div></pre></td></tr></table></figure>
-<p>这样, 就算我在代码中调用了两次steamroller函数.  还是只有最后一次调用的结果.  </p>
-<p>这就是闭包的魅力</p>
-<h2 id="资源汇总"><a href="#资源汇总" class="headerlink" title="资源汇总"></a>资源汇总</h2><p> 题目提供的判断是否为数组的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="external">Array.isArray()</a></p>
-<p>代码中涉及到的 递归   <a href="http://www.ruanyifeng.com/blog/2015/04/tail-call.html" target="_blank" rel="external">递归</a>        PS: 这里还对递归的缺点进行了讲解, 优化.</p>
-<p>代码中涉及到的 闭包  <a href="http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html" target="_blank" rel="external">闭包函数</a>  o_o</p>
-<p>原题中文版链接 <a href="https://www.freecodecamp.cn/challenges/steamroller" target="_blank" rel="external">https://www.freecodecamp.cn/challenges/steamroller</a></p>
-<p>原题英文版链接 <a href="https://www.freecodecamp.com/challenges/steamroller" target="_blank" rel="external">https://www.freecodecamp.com/challenges/steamroller</a></p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><img src="https://petergooo.github.io/blog/imgs/Fcc/pass.jpg" alt="Pass"></p>
+<p>so, &#x8FD9;&#x4E2A;&#x65F6;&#x5019;, &#x4F60;&#x53EF;&#x4EE5;&#x4E86;&#x89E3;  javascript&#x7684;<a href="http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html" target="_blank" rel="external">&#x95ED;&#x5305;&#x51FD;&#x6570;</a>&#x4E86;,  &#x540C;&#x5B66;&#x4EEC;&#x70B9;&#x51FB;&#x5DE6;&#x4FA7;&#x94FE;&#x63A5;, &#x8DF3;&#x8F6C;, &#x67E5;&#x770B;&#x4EC0;&#x4E48;&#x662F;<code>&#x95ED;&#x5305;&#x53CA;&#x5176;&#x539F;&#x7406;&#x548C;&#x5E94;&#x7528;</code>.</p>
+<p>&#x4E00;&#x5B9A;&#x53BB;&#x770B;&#x8884;.</p>
+<p>&#x4EE5;&#x53CA;,  &#x8FD9;&#x4E00;&#x9898;&#x6211;&#x4E5F;&#x7528;&#x4E86;&#x95ED;&#x5305;, &#x5728;&#x770B;&#x5B8C;&#x962E;&#x4E00;&#x5CF0;&#x8001;&#x5E08;&#x7684;&#x95ED;&#x5305;&#x8BB2;&#x89E3;&#x540E;, &#x53EF;&#x4EE5;&#x5148;&#x5C1D;&#x8BD5;&#x7740;&#x4FEE;&#x6539;&#x4EE3;&#x7801;.    &#x4E5F;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x6211;&#x7684;, &#x5206;&#x6790;&#x793A;&#x4F8B;. &#x6211;&#x6709;&#x5199;&#x6CE8;&#x91CA;.    &#x636E;&#x8BF4;&#x4EE3;&#x7801;&#x5199;&#x6CE8;&#x91CA;&#x662F;&#x4E00;&#x4E2A;&#x597D;&#x4E60;&#x60EF;,   &#x8BF7;&#x95EE;&#x8FD9;&#x4E2A;&#x636E;&#x8BF4;&#x5BF9;&#x4E0D;&#x5BF9;  &gt;.&lt;  ~~~</p>
+<h4 id="&#x6211;&#x7684;&#x4EE3;&#x7801;&#x793A;&#x4F8B;"><a href="#&#x6211;&#x7684;&#x4EE3;&#x7801;&#x793A;&#x4F8B;" class="headerlink" title="&#x6211;&#x7684;&#x4EE3;&#x7801;&#x793A;&#x4F8B;"></a>&#x6211;&#x7684;&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">steamroller</span>(<span class="params">arr</span>) </span>{</div><div class="line">  <span class="comment">// I&apos;m a steamroller, baby</span></div><div class="line">  <span class="keyword">var</span> result = [];    <span class="comment">//&#x5B9A;&#x4E49;&#x7ED3;&#x679C;&#x6570;&#x7EC4;</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">steam</span>(<span class="params">ifArr</span>) </span>{   <span class="comment">// &#x5B9A;&#x4E49;&#x5185;&#x90E8;&#x51FD;&#x6570;.  </span></div><div class="line">    <span class="keyword">if</span>(<span class="built_in">Array</span>.isArray(ifArr)){</div><div class="line">      <span class="keyword">return</span> ifArr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>{   <span class="comment">//&#x6211;&#x8FD9;&#x91CC;&#x7528;&#x4E86;forEach &#x5FAA;&#x73AF;&#x6570;&#x7EC4;, &#x60F3;&#x77E5;&#x9053;&#x5B83;&#x7684;&#x8BE6;&#x60C5;, &#x4E0B;&#x9762;&#x6709;&#x94FE;&#x63A5;.</span></div><div class="line">        <span class="keyword">return</span> steam(val);			<span class="comment">// &#x9012;&#x5F52;&#x8C03;&#x7528; steam&#x51FD;&#x6570;.</span></div><div class="line">      });</div><div class="line">    }</div><div class="line">    <span class="keyword">else</span></div><div class="line">    	result.push(ifArr);</div><div class="line">  }</div><div class="line"></div><div class="line">  steam(arr);   <span class="comment">//&#x8C03;&#x7528;&#x51FD;&#x6570;,</span></div><div class="line"></div><div class="line">  <span class="keyword">return</span> result; <span class="comment">// &#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x6570;&#x7EC4;</span></div><div class="line">}</div><div class="line"></div><div class="line">steamroller([<span class="number">1</span>, [<span class="number">2</span>], [<span class="number">3</span>, [[[<span class="number">4</span>]]]]]);</div><div class="line">steamroller([[[<span class="string">&quot;a&quot;</span>]], [[<span class="string">&quot;b&quot;</span>]]]);</div></pre></td></tr></table></figure>
+<p>&#x8FD9;&#x6837;, &#x5C31;&#x7B97;&#x6211;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x8C03;&#x7528;&#x4E86;&#x4E24;&#x6B21;steamroller&#x51FD;&#x6570;.  &#x8FD8;&#x662F;&#x53EA;&#x6709;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x7ED3;&#x679C;.  </p>
+<p>&#x8FD9;&#x5C31;&#x662F;&#x95ED;&#x5305;&#x7684;&#x9B45;&#x529B;</p>
+<h2 id="&#x8D44;&#x6E90;&#x6C47;&#x603B;"><a href="#&#x8D44;&#x6E90;&#x6C47;&#x603B;" class="headerlink" title="&#x8D44;&#x6E90;&#x6C47;&#x603B;"></a>&#x8D44;&#x6E90;&#x6C47;&#x603B;</h2><p> &#x9898;&#x76EE;&#x63D0;&#x4F9B;&#x7684;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x6570;&#x7EC4;&#x7684; <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="external">Array.isArray()</a></p>
+<p>&#x4EE3;&#x7801;&#x4E2D;&#x6D89;&#x53CA;&#x5230;&#x7684; &#x9012;&#x5F52;   <a href="http://www.ruanyifeng.com/blog/2015/04/tail-call.html" target="_blank" rel="external">&#x9012;&#x5F52;</a>        PS: &#x8FD9;&#x91CC;&#x8FD8;&#x5BF9;&#x9012;&#x5F52;&#x7684;&#x7F3A;&#x70B9;&#x8FDB;&#x884C;&#x4E86;&#x8BB2;&#x89E3;, &#x4F18;&#x5316;.</p>
+<p>&#x4EE3;&#x7801;&#x4E2D;&#x6D89;&#x53CA;&#x5230;&#x7684; &#x95ED;&#x5305;  <a href="http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html" target="_blank" rel="external">&#x95ED;&#x5305;&#x51FD;&#x6570;</a>  o_o</p>
+<p>&#x539F;&#x9898;&#x4E2D;&#x6587;&#x7248;&#x94FE;&#x63A5; <a href="https://www.freecodecamp.cn/challenges/steamroller" target="_blank" rel="external">https://www.freecodecamp.cn/challenges/steamroller</a></p>
+<p>&#x539F;&#x9898;&#x82F1;&#x6587;&#x7248;&#x94FE;&#x63A5; <a href="https://www.freecodecamp.com/challenges/steamroller" target="_blank" rel="external">https://www.freecodecamp.com/challenges/steamroller</a></p>
+<h2 id="&#x6700;&#x540E;"><a href="#&#x6700;&#x540E;" class="headerlink" title="&#x6700;&#x540E;"></a>&#x6700;&#x540E;</h2><p><a class="magnific-img" href="https://petergooo.github.io/blog/imgs/Fcc/pass.jpg"><img src="https://petergooo.github.io/blog/imgs/Fcc/pass.jpg" alt="Pass" class="ui centered image"></a></p>
 
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/12/05/steamroller/">Fcc --- Steamroller</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">鹏程</a></p>
-        <p><span>发布时间:</span>2016-12-05, 00:07:01</p>
-        <p><span>最后更新:</span>2017-06-05, 22:17:02</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/12/05/steamroller/" title="Fcc --- Steamroller">https://petergooo.github.io/2016/12/05/steamroller/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://petergooo.github.io/2016/12/05/steamroller/　　作者: 鹏程" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
+                        
+                    </div>
 
+                    
+                    
+                    
 
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2016-12-04T16:07:01.000Z" itemprop="datePublished">2016-12-05</time>
 
-    <nav id="article-nav">
+    </span>
+    <span class="post-description-item">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/12/08/Github_1/">
+
+    <span>
+        <i class="tags icon"></i>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/Fcc-闯关/">Fcc 闯关</a>
+    </span>
+
+    
+
+    </span>
+</div>
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a href="/2016/12/08/Github_1/" class="ui tiny button">
+
+                    <i class="angle left icon"></i>
+                    
                     Github 的注册与使用教程以及github page (一)
+                    
+
                 </a>
+
+                
             </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/12/04/Writing/">
+            <div class="column nav-right">
+                
+
+                <a href="/2016/12/04/Writing/" class="ui tiny button">
+                    
                     Write
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#往下继续之前-希望你花两分钟看看这个Fcc-须知"><span class="toc-number">2.</span> <span class="toc-text">往下继续之前, 希望你花两分钟看看这个Fcc 须知</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#题目解析"><span class="toc-number">3.</span> <span class="toc-text">题目解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#理解题意"><span class="toc-number">3.1.</span> <span class="toc-text">理解题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前期思考"><span class="toc-number">3.2.</span> <span class="toc-text">前期思考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码示范"><span class="toc-number">3.3.</span> <span class="toc-text">代码示范</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一个同学的代码示例"><span class="toc-number">3.3.0.1.</span> <span class="toc-text">一个同学的代码示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码分析"><span class="toc-number">3.3.0.2.</span> <span class="toc-text">代码分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#我的代码示例"><span class="toc-number">3.3.0.3.</span> <span class="toc-text">我的代码示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#资源汇总"><span class="toc-number">3.4.</span> <span class="toc-text">资源汇总</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后"><span class="toc-number">3.5.</span> <span class="toc-text">最后</span></a></li></ol></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
-        </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Fcc --- Steamroller　| zhinian_Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
-
-
-
-
-
-    
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/05/steamroller/" data-title="Fcc --- Steamroller" data-url="https://petergooo.github.io/2016/12/05/steamroller/"></div>
-    <script>
-        var duoshuoQuery = {short_name:"zhinian95"};
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = "http://blog.zhinian.info/js/embed.js";
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
-        }
-
-        
-    </script>
-    
-    <script> loadComment(); </script>
-
-</div>
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2016/12/08/Github_1/" title="上一篇: Github 的注册与使用教程以及github page (一)">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2016/12/04/Writing/" title="下一篇: Write">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/05/browerMETA/">360浏览器、QQ浏览器等 <meta>标签选择webkit内核问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/16/MyWebroad/">MyWebRoad</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/04/ife-phantomjs/">phantomjs———刷IFE琐记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/19/css01/">css3 一些样式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/18/Github_2/">Github 的注册与使用教程以及github page (二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/16/blog/">这个blog 你需要知道的</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/night/">一次晚归夜宿与早起日出</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/08/Github_1/">Github 的注册与使用教程以及github page (一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/05/steamroller/">Fcc --- Steamroller</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Writing/">Write</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Fcc/">Fcc 须知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/hello-world/">Hello World</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2016-2017 鹏程
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                    
+                    <i class="angle right icon"></i></a>
+                
             </div>
         </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
+    </div>
+
+</div>
                 
             </div>
-        
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#题目描述"><span>题目描述</span></a></li><li><a href="#往下继续之前-希望你花两分钟看看这个Fcc-须知"><span>往下继续之前, 希望你花两分钟看看这个Fcc 须知</span></a></li><li><a href="#题目解析"><span>题目解析</span></a><ol><li><a href="#理解题意"><span>理解题意</span></a></li><li><a href="#前期思考"><span>前期思考</span></a></li><li><a href="#代码示范"><span>代码示范</span></a><ol><li><a href="#一个同学的代码示例"><span>一个同学的代码示例</span></a></li><li><a href="#代码分析"><span>代码分析</span></a></li><li><a href="#我的代码示例"><span>我的代码示例</span></a></li></ol></li></ol></li><li><a href="#资源汇总"><span>资源汇总</span></a></li><li><a href="#最后"><span>最后</span></a></li></ol></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
     </div>
-</footer>
-    </div>
-    
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
-<script>
-    // Open in New Window
-    
-        var oOpenInNew = {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-             friends: "#js-friends a", 
-             socail: ".social a" 
-        }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
-    
-</script>
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-  </div>
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2017 <a href="/">鹏程</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
+
+    </div>
+
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
+
+
+
 </body>
 </html>
