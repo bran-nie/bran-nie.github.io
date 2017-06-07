@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://petergooo.github.io/2017/06/07/css-select/</loc>
+    
+    <lastmod>2017-06-07T15:39:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://petergooo.github.io/2017/06/06/git/</loc>
     
-    <lastmod>2017-06-06T13:15:56.000Z</lastmod>
+    <lastmod>2017-06-07T02:50:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://petergooo.github.io/2016/12/19/css01/</loc>
+    
+    <lastmod>2017-06-07T02:47:44.000Z</lastmod>
     
   </url>
   
@@ -26,13 +40,6 @@
     <loc>https://petergooo.github.io/2016/12/08/Github_1/</loc>
     
     <lastmod>2017-06-05T14:15:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://petergooo.github.io/2016/12/19/css01/</loc>
-    
-    <lastmod>2017-06-05T14:12:42.000Z</lastmod>
     
   </url>
   

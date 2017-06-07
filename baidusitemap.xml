@@ -4,15 +4,62 @@
 
     
   <url>
-    <loc>https://petergooo.github.io/2017/06/06/git/</loc>
-    <lastmod>2017-06-06T13:15:56.000Z</lastmod>
+    <loc>https://petergooo.github.io/2017/06/07/css-select/</loc>
+    <lastmod>2017-06-07T15:39:58.000Z</lastmod>
     <data>
         <display>
-        <title>git</title>
-        <pubTime>2017-06-06T13:15:56.000Z</pubTime>
+        <title>css_那些被忽略但有时又很强的选择器</title>
+        <pubTime>2017-06-07T04:38:00.000Z</pubTime>
         
+        <tag>CSS</tag>
+         
          
            
+             
+              <breadCrumb title="前端" url="https://petergooo.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://petergooo.github.io/2017/06/06/git/</loc>
+    <lastmod>2017-06-07T02:50:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>git_</title>
+        <pubTime>2017-06-06T13:15:56.000Z</pubTime>
+        
+        <tag>github</tag>
+         
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="https://petergooo.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://petergooo.github.io/2016/12/19/css01/</loc>
+    <lastmod>2017-06-07T02:47:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>css3 一些样式</title>
+        <pubTime>2016-12-19T05:52:14.000Z</pubTime>
+        
+        <tag>CSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="https://petergooo.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
         </display>
     </data>
     </url>
@@ -76,26 +123,6 @@
            
              
               <breadCrumb title="教程" url="https://petergooo.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://petergooo.github.io/2016/12/19/css01/</loc>
-    <lastmod>2017-06-05T14:12:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>css3 一些样式</title>
-        <pubTime>2016-12-19T05:52:14.000Z</pubTime>
-        
-        <tag>CSS</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端" url="https://petergooo.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
