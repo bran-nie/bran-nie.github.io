@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>zhinian_Blog</title>
+  <title>执念</title>
   <subtitle>初行翼翼, 欲展翅飞翔</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://petergooo.github.io/"/>
-  <updated>2018-08-01T08:37:37.461Z</updated>
+  <updated>2018-08-01T11:53:11.313Z</updated>
   <id>https://petergooo.github.io/</id>
   
   <author>
@@ -16,41 +16,17 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2018_start</title>
-    <link href="https://petergooo.github.io/2018/08/01/2018-start/"/>
-    <id>https://petergooo.github.io/2018/08/01/2018-start/</id>
-    <published>2018-08-01T07:39:31.000Z</published>
-    <updated>2018-08-01T08:37:37.461Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>&#x65B0;&#x7684;&#x5F00;&#x59CB;&#xFF1F;</p>
-<h4 id="&#x6D4B;&#x8BD5;Git&#x4F5C;&#x8005;"><a href="#&#x6D4B;&#x8BD5;Git&#x4F5C;&#x8005;" class="headerlink" title="&#x6D4B;&#x8BD5;Git&#x4F5C;&#x8005;"></a>&#x6D4B;&#x8BD5;Git&#x4F5C;&#x8005;</h4></blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;&amp;#x65B0;&amp;#x7684;&amp;#x5F00;&amp;#x59CB;&amp;#xFF1F;&lt;/p&gt;
-&lt;h4 id=&quot;&amp;#x6D4B;&amp;#x8BD5;Git&amp;#x4F5C;&amp;#x8005;&quot;&gt;&lt;a href=&quot;#&amp;#x6D4B;&amp;#x8BD5;Git&amp;#x4F
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>css_那些被忽略但有时又很强的选择器</title>
     <link href="https://petergooo.github.io/2017/06/07/css-select/"/>
     <id>https://petergooo.github.io/2017/06/07/css-select/</id>
     <published>2017-06-07T04:38:00.000Z</published>
-    <updated>2017-06-08T01:56:34.000Z</updated>
+    <updated>2018-08-01T11:53:11.313Z</updated>
     
     <content type="html"><![CDATA[<p style="text-align:right; color:#ccc;"><span>&#x5FD9;&#x91CC;&#x5077;&#x95F2;&#x7684;&#x5B66;&#x4E60;</span></p>
 
 <blockquote>
-<p>&#x5728;&#x5207;&#x9875;&#x9762;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x514D;&#x4E0D;&#x4E86;&#x8981;&#x548C;css&#x6253;&#x4EA4;&#x9053;&#xFF0C;&#x751A;&#x81F3;&#x8BF4;&#x662F;&#x9887;&#x6DF1;&#xFF0C;&#x5728;HTML&#x4E2D;&#xFF0C;&#x60F3;&#x8981;&#x5FEB;&#x901F;&#x7684;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#xFF0C;&#x9664;&#x4E86;&#x5E7F;&#x4E3A;&#x4EBA;&#x77E5;&#x7684;.class&#x3001;#id&#x3001;&#x901A;&#x914D;&#x7B26;*&#x3001;element&#x5143;&#x7D20;&#x7B49;&#x9009;&#x62E9;&#x5668;&#xFF0C;css&#x8FD8;&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x591A;&#x5728;&#x67D0;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#xFF0C;&#x6548;&#x7387;&#x66F4;&#x9AD8;&#x7684;&#x9009;&#x62E9;&#x5668;&#x3002;</p><p style="color:gold">&#x6240;&#x4EE5;&#xFF0C;&#x6700;&#x597D;&#x81EA;&#x5DF1;&#x4E5F;&#x5C1D;&#x8BD5;&#x4E00;&#x4E0B;&#xFF0C;&#x4E0D;&#x7136;&#x5C31;&#x7B97;&#x4F60;&#x770B;&#x8FC7;&#x8FD9;&#x7BC7;&#x968F;&#x624B;&#x8BB0;&#xFF0C;&#x4E5F;&#x51E0;&#x4E4E;&#x6CA1;&#x592A;&#x5927;&#x7528;&#x5904;&#x3002;<strong>&#x5373;&#x4FBF;&#x4E0D;&#x592A;&#x5BB9;&#x6613;&#x8BB0;&#x4F4F;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x7559;&#x4E2A;&#x5370;&#x8C61;&#xFF0C;&#x662F;&#x5427;~</strong></p><p></p>
-<p style="color:green"><strong>PS&#xFF1A;&#x661F;&#x661F;&#x8868;&#x793A;&#x6B64;&#x9009;&#x62E9;&#x5668;&#x5728;&#x672C;&#x6587;&#x4E2D;&#x7684;&#x5F3A;&#x8C03;&#x7A0B;&#x5EA6;&#x3002;&#x548C;&#x5E38;&#x89C1;&#x5EA6;&#x65E0;&#x5173;</strong> </p>
-
+<p>&#x5728;&#x5207;&#x9875;&#x9762;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x514D;&#x4E0D;&#x4E86;&#x8981;&#x548C;css&#x6253;&#x4EA4;&#x9053;&#xFF0C;&#x751A;&#x81F3;&#x8BF4;&#x662F;&#x9887;&#x6DF1;&#xFF0C;&#x5728;HTML&#x4E2D;&#xFF0C;&#x60F3;&#x8981;&#x5FEB;&#x901F;&#x7684;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#xFF0C;&#x9664;&#x4E86;&#x5E7F;&#x4E3A;&#x4EBA;&#x77E5;&#x7684;.class&#x3001;#id&#x3001;&#x901A;&#x914D;&#x7B26;*&#x3001;element&#x5143;&#x7D20;&#x7B49;&#x9009;&#x62E9;&#x5668;&#xFF0C;css&#x8FD8;&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x591A;&#x5728;&#x67D0;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#xFF0C;&#x6548;&#x7387;&#x66F4;&#x9AD8;&#x7684;&#x9009;&#x62E9;&#x5668;&#x3002;<br><a id="more"></a></p>
+<p style="color:gold">&#x6240;&#x4EE5;&#xFF0C;&#x6700;&#x597D;&#x81EA;&#x5DF1;&#x4E5F;&#x5C1D;&#x8BD5;&#x4E00;&#x4E0B;&#xFF0C;&#x4E0D;&#x7136;&#x5C31;&#x7B97;&#x4F60;&#x770B;&#x8FC7;&#x8FD9;&#x7BC7;&#x968F;&#x624B;&#x8BB0;&#xFF0C;&#x4E5F;&#x51E0;&#x4E4E;&#x6CA1;&#x592A;&#x5927;&#x7528;&#x5904;&#x3002;<strong>&#x5373;&#x4FBF;&#x4E0D;&#x592A;&#x5BB9;&#x6613;&#x8BB0;&#x4F4F;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x7559;&#x4E2A;&#x5370;&#x8C61;&#xFF0C;&#x662F;&#x5427;~</strong></p><br><p style="color:green"><strong>PS&#xFF1A;&#x661F;&#x661F;&#x8868;&#x793A;&#x6B64;&#x9009;&#x62E9;&#x5668;&#x5728;&#x672C;&#x6587;&#x4E2D;&#x7684;&#x5F3A;&#x8C03;&#x7A0B;&#x5EA6;&#x3002;&#x548C;&#x5E38;&#x89C1;&#x5EA6;&#x65E0;&#x5173;</strong> </p>
 
 </blockquote>
 <h2 id="CSS3&#x9009;&#x62E9;&#x5668;-&#x2014;&#x2014;-&#x5143;&#x7D20;&#x9009;&#x62E9;&#x5668;-element-&#xFF08;&#x2605;&#x2605;&#xFF09;"><a href="#CSS3&#x9009;&#x62E9;&#x5668;-&#x2014;&#x2014;-&#x5143;&#x7D20;&#x9009;&#x62E9;&#x5668;-element-&#xFF08;&#x2605;&#x2605;&#xFF09;" class="headerlink" title="CSS3&#x9009;&#x62E9;&#x5668; &#x2014;&#x2014; &#x5143;&#x7D20;&#x9009;&#x62E9;&#x5668; [element]  &#xFF08;&#x2605;&#x2605;&#xFF09;"></a>CSS3&#x9009;&#x62E9;&#x5668; &#x2014;&#x2014; &#x5143;&#x7D20;&#x9009;&#x62E9;&#x5668; <code>[element]</code>  &#xFF08;&#x2605;&#x2605;&#xFF09;</h2><ol class="ui list">
@@ -93,14 +69,14 @@
 <li>:hover &#x9F20;&#x6807;&#x79FB;&#x52A8;&#x5230;&#x4E0A;&#x9762;&#x7684;&#x6837;&#x5F0F;&#x3002;        &#x8FD9;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x662F;&#x7528;&#x4F5C;&#x906E;&#x7F69;&#x5C42;</li>
 <li>::before, ::after &#x5143;&#x7D20;&#x7684;&#x524D;&#x540E;&#x6837;&#x5F0F;&#x3002;            &#x8FD9;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x6709;&#xFF1A;&#x6E05;&#x9664;&#x6D6E;&#x52A8;&#x3001;&#x6DFB;&#x52A0;&#x7279;&#x5B9A;&#x7684;&#x6837;&#x5F0F;&#x3001;&#x7B49;&#x7B49;<ol>
 <li>PS&#xFF1A;&#x8FD9;&#x91CC;&#x662F;&#x7528;&#x4E86;&#x4E24;&#x4E2A;&#x5192;&#x53F7;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x662F;&#x4F2A;&#x5143;&#x7D20;&#xFF0C;&#x867D;&#x7136;&#x8BF4;&#x7528;&#x5355;&#x5192;&#x53F7;&#x4E5F;&#x80FD;&#x751F;&#x6548;&#xFF0C;&#x4F46;&#x662F;&#x4E3A;&#x4E86;&#x63A8;&#x52A8;css3&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x7EDF;&#x4E00;&#x7528;&#x53CC;&#x5192;&#x53F7;&#x54AF;&#x3002;</li>
-<li>&#x9644;&#x4E0A;&#x4E24;&#x7BC7;&#x6587;&#x7AE0;<a href="http://www.alloyteam.com/2016/05/summary-of-pseudo-classes-and-pseudo-elements/" target="_blank" rel="external">&#x603B;&#x7ED3;&#x4F2A;&#x7C7B;&#x548C;&#x4F2A;&#x5143;&#x7D20;</a> &#x2014;&#x2014;&#x2014;&#x2014; &#x2014;&#x2014;&#x2014;  <a href="https://segmentfault.com/a/1190000000484493" target="_blank" rel="external">&#x8BE6;&#x89E3; CSS &#x5C5E;&#x6027; - &#x4F2A;&#x7C7B;&#x548C;&#x4F2A;&#x5143;&#x7D20;&#x7684;&#x533A;&#x522B;</a> </li>
+<li>&#x9644;&#x4E0A;&#x4E24;&#x7BC7;&#x6587;&#x7AE0;<a href="http://www.alloyteam.com/2016/05/summary-of-pseudo-classes-and-pseudo-elements/" target="_blank" rel="external">&#x603B;&#x7ED3;&#x4F2A;&#x7C7B;&#x548C;&#x4F2A;&#x5143;&#x7D20;</a> &#x2014;&#x2014;&#x2014;&#x2014; &#x2014;&#x2014;&#x2014;  <a href="https://segmentfault.com/a/1190000000484493" target="_blank" rel="external">&#x8BE6;&#x89E3; CSS &#x5C5E;&#x6027; - &#x4F2A;&#x7C7B;&#x548C;&#x4F2A;&#x5143;&#x7D20;&#x7684;&#x533A;&#x522B;</a></li>
 </ol>
 </li>
 <li>:not(selector)   &#x7ED9;&#x975E;&#x6240;&#x9009;&#x5143;&#x7D20;&#x8BBE;&#x5B9A;&#x6837;&#x5F0F;</li>
 </ol>
 <h3 id="&#x8FD9;&#x91CC;&#x6709;&#x8DA3;&#x7684;&#x51E0;&#x4E2A;&#x6709;&#xFF1A;"><a href="#&#x8FD9;&#x91CC;&#x6709;&#x8DA3;&#x7684;&#x51E0;&#x4E2A;&#x6709;&#xFF1A;" class="headerlink" title="&#x8FD9;&#x91CC;&#x6709;&#x8DA3;&#x7684;&#x51E0;&#x4E2A;&#x6709;&#xFF1A;"></a>&#x8FD9;&#x91CC;&#x6709;&#x8DA3;&#x7684;&#x51E0;&#x4E2A;&#x6709;&#xFF1A;</h3><ol class="ui list">
 <li><p>::first-letter &#xFF1A; &#x7ED9;&#x6240;&#x9009;&#x5143;&#x7D20;&#x7684;&#x9996;&#x5B57;&#x6BCD;/&#x4E2D;&#x6587; &#x5E94;&#x7528;&#x6837;&#x5F0F;&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x62E9;&#x5668;&#x53EF;&#x4EE5;&#x505A;&#x9996;&#x5B57;&#x6BCD;&#x6548;&#x679C;&#x3002;&#x5F88;&#x65B9;&#x4FBF;&#xFF0C;&#x9884;&#x89C8;&#x5982;&#x4E0B;&#xFF1A;</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;a&quot;</span>&gt;</span>Oh my god, Look at the first letter<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;a&quot;</span>&gt;</span>&#x6211;&#x7684;&#x5929;&#xFF0C;&#x770B;&#x770B;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x5B57;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">  <span class="selector-class">.a</span><span class="selector-pseudo">::first-letter</span>{</div><div class="line">    <span class="attribute">font-size</span>:<span class="number">200%</span>;</div><div class="line">    <span class="attribute">color</span>:<span class="number">#8a2be2</span>;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;a&quot;</span>&gt;</span>Oh my god, Look at the first letter<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;a&quot;</span>&gt;</span>&#x6211;&#x7684;&#x5929;&#xFF0C;&#x770B;&#x770B;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x5B57;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">  .a::first-letter{</div><div class="line">    font-size:200%;</div><div class="line">    color:#8a2be2;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
 <p class="a">Oh my god, Look at the first letter </p><p class="a">&#x6211;&#x7684;&#x5929;&#xFF0C;&#x770B;&#x770B;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x5B57;</p>
 
 <style>.a::first-letter{font-size:200%;color:#8a2be2</style>
@@ -111,7 +87,7 @@
 <style>::selection{color:#ff0000;}::-moz-selection{color:#ff0000;}</style>
 </li>
 <li><p>:target  &#x8FD9;&#x4E2A;&#x5C31;&#x5F88;&#x6709;&#x8DA3;&#x4E86;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E0D;&#x652F;&#x6301;ie8&#x53CA;&#x4EE5;&#x4E0B;&#x3002;  &#x5F53;&#x524D;&#x9875;&#x9762;&#x6D3B;&#x52A8;&#x7684;&#x951A;&#x70B9;&#x7684;&#x6837;&#x5F0F;&#x3002;&#x4EE3;&#x7801;&#x793A;&#x4F8B;:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">  <span class="selector-pseudo">:target</span>{</div><div class="line">    <span class="attribute">border</span>:<span class="number">2px</span> solid <span class="number">#ccc</span>;</div><div class="line">    <span class="attribute">background-color</span>: <span class="number">#e5eecc</span>;</div><div class="line">  }</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#id1&quot;</span>&gt;</span>jump target1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#id2&quot;</span>&gt;</span>jump target2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;id1&quot;</span>&gt;</span>target1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;id2&quot;</span>&gt;</span>target2<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">  :target{</div><div class="line">    border:2px solid #ccc;</div><div class="line">    background-color: #e5eecc;</div><div class="line">  }</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#id1&quot;</span>&gt;</span>jump target1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#id2&quot;</span>&gt;</span>jump target2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;id1&quot;</span>&gt;</span>target1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;id2&quot;</span>&gt;</span>target2<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>&#x6548;&#x679C;&#x4F53;&#x9A8C;&#x5982;&#x4E0B;&#x3002;&#x70B9;&#x51FB;&#x4E24;&#x4E2A;&#x951A;&#x70B9;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;id&#x6D3B;&#x8DC3;&#x65F6;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6709;&#x80CC;&#x666F;&#x3002;</p>
 <p><a href="#id1">jump target1</a>   &#x2014;&#x2014;&#x2014;   <a href="#id2">jump target2</a></p>
 <p id="id1">target1</p><br><p id="id2">target2</p>
@@ -120,7 +96,7 @@
 </li>
 <li><p>&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5F53;&#x5C5E; :nth-child(n) &#x5566;</p>
 <p>&#x5C31;&#x50CF;&#x6211;&#x4E0A;&#x9762;&#x8BF4;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x9009;&#x62E9;&#x5668;&#x7528;&#x6765;&#x5FAA;&#x73AF;&#x9009;&#x62E9;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x7B80;&#x76F4;&#x4E0D;&#x8981;&#x592A;&#x723D;&#xFF01;</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span>&gt;</span>aaa<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span>&gt;</span>bbb<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span>&gt;</span>ccc<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">  <span class="selector-class">.c</span>{</div><div class="line">    <span class="attribute">display</span>:inline-block;</div><div class="line">    <span class="attribute">margin</span>:<span class="number">0</span>;</div><div class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#ccc</span>; </div><div class="line">    <span class="attribute">width</span>:<span class="number">33.33333%</span>;<span class="attribute">text-align</span>:center</div><div class="line">  }</div><div class="line">  <span class="selector-class">.c</span><span class="selector-pseudo">:nth-child(3n)</span>{</div><div class="line">    <span class="attribute">background-color</span>:green;</div><div class="line">  }</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span>&gt;</span>aaa<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span>&gt;</span>bbb<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span>&gt;</span>ccc<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">  .c{</div><div class="line">    display:inline-block;</div><div class="line">    margin:0;</div><div class="line">    border:1px solid #ccc;</div><div class="line">    width:33.33333%;text-align:center</div><div class="line">  }</div><div class="line">  .c:nth-child(3n){</div><div class="line">    background-color:green;</div><div class="line">  }</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
 <p><span class="c">aaa</span><span class="c">bbb</span><span class="c">ccc</span></p>
 <style>.c{display:inline-block;margin:0;border:1px solid #ccc; width:33.33333%;text-align:center}.c:nth-child(3n){background-color:green;}</style>
 
@@ -134,10 +110,10 @@
     
     <summary type="html">
     
-      &lt;p style=&quot;text-align:right; color:#ccc;&quot;&gt;&lt;span&gt;&amp;#x5FD9;&amp;#x91CC;&amp;#x5077;&amp;#x95F2;&amp;#x7684;&amp;#x5B66;&amp;#x4E60;&lt;/span&gt;&lt;/p&gt;
+      &lt;p style=&quot;text-align:right; color:#ccc;&quot;&gt;&lt;span&gt;忙里偷闲的学习&lt;/span&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;&amp;#x5728;
+&lt;p&gt;在切页面的时候，我们免不了要和css打交道，甚至说是颇深，在HTML中，想要快速的定位元素，除了广为人知的.class、#id、通配符*、element元素等选择器，css还为我们提供了更多在某些场景下，效率更高的选择器。&lt;br&gt;
     
     </summary>
     
@@ -149,31 +125,11 @@
   </entry>
   
   <entry>
-    <title>git_</title>
-    <link href="https://petergooo.github.io/2017/06/06/git/"/>
-    <id>https://petergooo.github.io/2017/06/06/git/</id>
-    <published>2017-06-06T13:15:56.000Z</published>
-    <updated>2017-06-07T02:50:38.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="教程" scheme="https://petergooo.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="github" scheme="https://petergooo.github.io/tags/github/"/>
-    
-      <category term="git" scheme="https://petergooo.github.io/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
     <title>360浏览器、QQ浏览器等 &lt;meta&gt;标签选择webkit内核问题</title>
-    <link href="https://petergooo.github.io/2017/05/05/browerMETA/"/>
-    <id>https://petergooo.github.io/2017/05/05/browerMETA/</id>
+    <link href="https://petergooo.github.io/2017/05/05/brower_meta/"/>
+    <id>https://petergooo.github.io/2017/05/05/brower_meta/</id>
     <published>2017-05-05T10:47:16.000Z</published>
-    <updated>2017-05-05T15:02:36.000Z</updated>
+    <updated>2018-08-01T11:28:35.496Z</updated>
     
     <content type="html"><![CDATA[<h1 id="&#x5FFD;&#x7565;IE&#x5427;-8-&#xFF01;"><a href="#&#x5FFD;&#x7565;IE&#x5427;-8-&#xFF01;" class="headerlink" title="&#x5FFD;&#x7565;IE&#x5427;(8)&#xFF01;"></a>&#x5FFD;&#x7565;IE&#x5427;(8)&#xFF01;</h1><p>&#x5148;&#x4E0A;&#x4E00;&#x5F20;&#x56FE;&#xFF0C;&#x5F88;&#x6709;&#x8DA3;&#x3002;</p>
 <a id="more"></a>
@@ -209,39 +165,310 @@
       <category term="前端" scheme="https://petergooo.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Brower" scheme="https://petergooo.github.io/tags/Brower/"/>
+      <category term="浏览器" scheme="https://petergooo.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     
       <category term="HTML5标签" scheme="https://petergooo.github.io/tags/HTML5%E6%A0%87%E7%AD%BE/"/>
     
   </entry>
   
   <entry>
-    <title>MyWebRoad</title>
-    <link href="https://petergooo.github.io/2017/03/16/MyWebroad/"/>
-    <id>https://petergooo.github.io/2017/03/16/MyWebroad/</id>
-    <published>2017-03-16T15:50:04.000Z</published>
-    <updated>2017-03-17T03:40:28.000Z</updated>
+    <title>phantomjs———刷IFE琐记</title>
+    <link href="https://petergooo.github.io/2017/03/04/ife-phantomjs/"/>
+    <id>https://petergooo.github.io/2017/03/04/ife-phantomjs/</id>
+    <published>2017-03-04T07:32:07.000Z</published>
+    <updated>2017-03-04T14:34:18.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="&#x6211;&#x7684;&#x524D;&#x7AEF;&#x4E4B;&#x8DEF;-&#x524D;&#x671B;&#x540E;&#x987E;"><a href="#&#x6211;&#x7684;&#x524D;&#x7AEF;&#x4E4B;&#x8DEF;-&#x524D;&#x671B;&#x540E;&#x987E;" class="headerlink" title="&#x6211;&#x7684;&#x524D;&#x7AEF;&#x4E4B;&#x8DEF; - - - &#x524D;&#x671B;&#x540E;&#x987E;"></a>&#x6211;&#x7684;&#x524D;&#x7AEF;&#x4E4B;&#x8DEF; - - - <span style="color:#a6e859">&#x524D;&#x671B;&#x540E;&#x987E;</span></h1><blockquote>
-<p>&#x4F60;&#x4E00;&#x5B9A;&#x8981;&#x52AA;&#x529B;   &#x4F46;&#x4E0D;&#x8981;&#x7740;&#x6025;&#x5230;&#x614C;&#x5F20;</p>
+    <content type="html"><![CDATA[<h1 id="&#x4ECA;&#x5929;&#x5728;&#x770B;&#x767E;&#x5EA6;ife&#x7CEF;&#x7C73;&#x5B66;&#x9662;&#x7684;&#x9898;&#xFF0C;&#x9047;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x89E3;&#x51B3;&#x540E;&#x5C31;&#x60F3;&#x62FF;&#x6765;&#x5199;&#x5199;&#x1F602;"><a href="#&#x4ECA;&#x5929;&#x5728;&#x770B;&#x767E;&#x5EA6;ife&#x7CEF;&#x7C73;&#x5B66;&#x9662;&#x7684;&#x9898;&#xFF0C;&#x9047;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x89E3;&#x51B3;&#x540E;&#x5C31;&#x60F3;&#x62FF;&#x6765;&#x5199;&#x5199;&#x1F602;" class="headerlink" title="&#x4ECA;&#x5929;&#x5728;&#x770B;&#x767E;&#x5EA6;ife&#x7CEF;&#x7C73;&#x5B66;&#x9662;&#x7684;&#x9898;&#xFF0C;&#x9047;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x89E3;&#x51B3;&#x540E;&#x5C31;&#x60F3;&#x62FF;&#x6765;&#x5199;&#x5199;&#x1F602;"></a>&#x4ECA;&#x5929;&#x5728;&#x770B;&#x767E;&#x5EA6;ife&#x7CEF;&#x7C73;&#x5B66;&#x9662;&#x7684;&#x9898;&#xFF0C;&#x9047;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x89E3;&#x51B3;&#x540E;&#x5C31;&#x60F3;&#x62FF;&#x6765;&#x5199;&#x5199;&#x1F602;</h1><blockquote>
+<p>&#x6392;&#x7740;&#x961F;&#xFF0C;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x6765;&#x1F648;</p>
 </blockquote>
-<p>&#x8FD9;&#x6BB5;&#x65F6;&#x95F4;&#x7684;&#x9762;&#x8BD5;, &#x6709;&#x51E0;&#x6B21;&#x4F1A;&#x9047;&#x5230;&#x4E00;&#x4E2A;&#x503C;&#x5F97;&#x601D;&#x8003;&#x7684;&#x95EE;&#x9898;.<br><a id="more"></a></p>
-<h3 id="&#x4F60;&#x4E3A;&#x4EC0;&#x4E48;&#x60F3;&#x5B66;&#x524D;&#x7AEF;&#x7684;"><a href="#&#x4F60;&#x4E3A;&#x4EC0;&#x4E48;&#x60F3;&#x5B66;&#x524D;&#x7AEF;&#x7684;" class="headerlink" title="&#x4F60;&#x4E3A;&#x4EC0;&#x4E48;&#x60F3;&#x5B66;&#x524D;&#x7AEF;&#x7684;?"></a><em><span style="color:#ffc107">&#x4F60;&#x4E3A;&#x4EC0;&#x4E48;&#x60F3;&#x5B66;&#x524D;&#x7AEF;&#x7684;?</span></em></h3><p>&#x6211;&#x662F;&#x600E;&#x4E48;&#x60F3;&#x7740;&#x5B66;&#x4E60;&#x524D;&#x7AEF;&#x7684;&#x5462;&#xFF1F;<br>&#x597D;&#x73A9;<br>&#x73B0;&#x5728;&#x662F;&#x4E0D;&#x662F;&#x8FD9;&#x6837;&#xFF0C;&#x6211;&#x4E0D;&#x80FD;&#x51C6;&#x786E;&#x7684;&#x8868;&#x8FBE;&#xFF0C;&#x4F46;&#x6211;&#x53EF;&#x4EE5;&#x80AF;&#x5B9A;&#x7684;&#x6709;&#xFF1A;<code>&#x5F00;&#x59CB;&#x662F;&#x56E0;&#x4E3A;&#x5F88;&#x597D;&#x73A9;</code>&#x548C; <code>&#x73B0;&#x5728;&#x89C9;&#x5F97;&#x5B83;&#x5F88;&#x7CBE;&#x5F69;</code></p>
-<h3 id="&#x540E;&#x987E;"><a href="#&#x540E;&#x987E;" class="headerlink" title="&#x540E;&#x987E;"></a>&#x540E;&#x987E;</h3>]]></content>
+<h3 id="&#x4E0B;&#x8F7D;&#x538B;&#x7F29;&#x5305;"><a href="#&#x4E0B;&#x8F7D;&#x538B;&#x7F29;&#x5305;" class="headerlink" title="&#x4E0B;&#x8F7D;&#x538B;&#x7F29;&#x5305;"></a>&#x4E0B;&#x8F7D;&#x538B;&#x7F29;&#x5305;</h3><a id="more"></a>
+<p><a href="http://phantomjs.org/download.html" target="_blank" rel="external">http://phantomjs.org/download.html</a> &#x5E38;&#x89C1;&#x7684;&#x7CFB;&#x7EDF;&#x90FD;&#x6709;&#x538B;&#x7F29;&#x5305;.</p>
+<p>&#x4E0B;&#x8F7D;&#x540E;&#x89E3;&#x538B;, &#x6709;bin&#x3001;examples&#x3001;&#x7B49;&#x7B49;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4E2D;&#x5728;bin&#x4E2D;&#x6253;&#x5F00;phantomjs&#x540E; &#x5404;&#x4E2A;&#x7CFB;&#x7EDF;&#x8FDB;&#x5165;&#x7684;&#x754C;&#x9762;&#x5927;&#x540C;&#x5C0F;&#x5F02;: </p>
+<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows:"></a>Windows:</h3><ol class="ui list">
+<li>&#x4F1A;&#x6709;&#x5E26;&#x8FD9;&#x4E2A;<code>phantomjs&gt;</code> &#x7684;&#x547D;&#x4EE4;&#x884C;, &#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x8BED;&#x53E5;, enter&#x6267;&#x884C;, &#x4F46;&#x662F;&#x8FD9;&#x6837;&#x4E0D;&#x80FD;&#x6267;&#x884C;js&#x6587;&#x4EF6;.   </li>
+<li>&#x540C;&#x65F6;&#x5728;cmd&#x91CC;&#x9762;,  &#x8F93;&#x5165; phantoms &#x2013;version  &#x4F1A;&#x62A5;&#x9519;.</li>
+<li>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;:  <strong>&#x4FEE;&#x6539;&#x73AF;&#x5883;&#x53D8;&#x91CF;</strong><ol>
+<li>&#x5C06;&#x538B;&#x7F29;&#x5305;&#x89E3;&#x538B;&#x5230;&#x67D0;&#x4E2A;&#x76D8;,  &#x5982;&#x6211;&#x89E3;&#x538B;&#x5230;D&#x76D8;, &#x91CD;&#x547D;&#x540D;&#x6587;&#x4EF6;&#x5939;&#x4E3A;phantomjs,  </li>
+<li>&#x6253;&#x5F00;&gt;&#x6211;&#x7684;&#x7535;&#x8111;&gt;&#x53F3;&#x952E;&#x5C5E;&#x6027;&gt;&#x9AD8;&#x7EA7;&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;&gt;&#x9AD8;&#x7EA7;&gt;&#x73AF;&#x5883;&#x53D8;&#x91CF;,  &#x5728;&#x51FA;&#x73B0;&#x7684;&#x7A97;&#x53E3;&#x91CC;,  &#x627E;&#x5230;&#x7CFB;&#x7EDF;&#x53D8;&#x91CF;&#x4E2D;&#x7684; Path, &#x70B9;&#x51FB;&#x7F16;&#x8F91;, &#x5728;&#x5F39;&#x51FA;&#x7684;&#x9875;&#x9762;, &#x70B9;&#x51FB;&#x7F16;&#x8F91;&#x6587;&#x672C;, &#x628A;&#x4E0A;&#x4E00;&#x6B65;&#x7684;&#x8DEF;&#x5F84;&#x6DFB;&#x52A0;&#x4E0A;&#x53BB;.  &#x683C;&#x5F0F;:  <code>;D:\phantomjs\bin</code>  &#x5207;&#x8BB0;&#x4E0D;&#x8981;&#x6F0F;&#x4E0B;  <strong>;</strong>   &#x8FD9;&#x4E2A;&#x662F;&#x5404;&#x4E2A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x5206;&#x9694;&#x7B26;, &#x5F53;&#x7136;, &#x4F60;&#x7F16;&#x8F91;&#x7684;&#x65F6;&#x5019;&#x53D1;&#x73B0;&#x524D;&#x9762;&#x6709;,&#x90A3;&#x5C31;&#x4E0D;&#x7528;&#x52A0;&#x4E86;. </li>
+</ol>
+</li>
+<li>&#x73B0;&#x5728;&#x5DF2;&#x7ECF;ok&#x4E86;   <code>&#x5F00;&#x59CB;&#x952E;</code> + <code>R</code> &#x8F93;&#x5165;cmd &#x6253;&#x5F00;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;, &#x8F93;&#x5165;phantomjs &#x2013;version&#x5C31;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x7248;&#x672C;&#x53F7;&#x4E86;.  &#x8F93;&#x5165;phantoms  (js&#x6587;&#x4EF6;, &#x4E0D;&#x5728;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;&#x540C;&#x4E00;&#x76EE;&#x5F55;&#x4E0B;, &#x9700;&#x8981;&#x52A0;js&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;) &#x5C31;&#x53EF;&#x4EE5;&#x6267;&#x884C;js&#x6587;&#x4EF6;&#x4E86;. </li>
+</ol>
+<blockquote>
+<p>&#x6E29;&#x99A8;&#x5C0F;&#x63D0;&#x793A;: </p>
+<p>&#x5728;&#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x5668;&#x7684;&#x5730;&#x5740;&#x680F;,  &#x8F93;&#x5165;cmd  &#x7136;&#x540E;&#x56DE;&#x8F66;, &#x5C31;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x7684;&#x8FDB;&#x5165;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x7684;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;.</p>
+</blockquote>
+<h3 id="Mac-OS-X"><a href="#Mac-OS-X" class="headerlink" title="Mac OS X:"></a>Mac OS X:</h3><ol class="ui list">
+<li>&#x62A5;&#x9519;&#x4FE1;&#x606F;&#x540C;Windows</li>
+<li>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;:   <strong>&#x4F7F;&#x7528;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</strong> &#x548C; <strong>&#x4FEE;&#x6539;&#x73AF;&#x5883;&#x53D8;&#x91CF;</strong><ol>
+<li>&#x5C06;&#x538B;&#x7F29;&#x5305;&#x89E3;&#x538B;&#x5230;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x9762;.  &#x91CD;&#x547D;&#x540D;&#x6587;&#x4EF6;&#x5939;&#x4E3A; phantomjs</li>
+<li><strong>&#x65B9;&#x6CD5;&#x4E00;:</strong>  &#x5728;&#x7EC8;&#x7AEF;cd&#x5230;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x4E0B;.  &#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x547D;&#x4EE4;:  <code>bin/phantomjs  examples/hello.js</code>    &#x56DE;&#x8F66;, &#x5C31;&#x80FD;&#x770B;&#x5230; &#x8F93;&#x51FA;&#x7684;hello world &#x4E86;.     &#x8F93;&#x5165;<code>bin/phantomjs --version</code>  &#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x7248;&#x672C;,    &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7B80;&#x5355;, &#x4E14;&#x4E0D;&#x7528;&#x4FEE;&#x6539;&#x4EC0;&#x4E48;  </li>
+<li><strong>&#x65B9;&#x6CD5;&#x4E8C;:</strong> &#x5728;&#x7EC8;&#x7AEF;&#x91CC;&#x8BBE;&#x7F6E;PATH   &#x4E00;&#x52B3;&#x6C38;&#x9038;.  &#x547D;&#x4EE4;:  <code>export PATH = &quot;$PATH:/Users/username/phantomjs/bin&quot;</code> &#x5176;&#x4E2D;, &#x5728;/User/&#x540E;, &#x5C31;&#x662F;&#x4F60;phantomjs&#x89E3;&#x538B;&#x540E;&#x6240;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4E86;.   &#x5982;&#x6211;&#x5C31;&#x662F; <code>export PATH = &quot;$PATH:/Users/pengchengnie/work/phantomjs/bin&quot;</code>   &#x4FEE;&#x6539;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4EE5;&#x540E;, &#x5728;&#x7528;&#x6237;&#x4E0B;&#x6B21;&#x767B;&#x9646;&#x65F6;&#x751F;&#x6548;.    </li>
+<li>&#x65B9;&#x6CD5;&#x4E8C;&#x53C2;&#x8003;&#x94FE;&#x63A5;&#x53CA;&#x6DF1;&#x5165;&#x5B66;&#x4E60;&#x94FE;&#x63A5;: <a href="http://www.2cto.com/os/201308/237281.html" target="_blank" rel="external">http://www.2cto.com/os/201308/237281.html</a></li>
+</ol>
+</li>
+</ol>
+<h3 id="&#x5230;&#x8FD9;&#x91CC;-&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5DF2;&#x7ECF;&#x642D;&#x597D;&#x4E86;-&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x1F602;"><a href="#&#x5230;&#x8FD9;&#x91CC;-&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5DF2;&#x7ECF;&#x642D;&#x597D;&#x4E86;-&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x1F602;" class="headerlink" title="&#x5230;&#x8FD9;&#x91CC;, &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5DF2;&#x7ECF;&#x642D;&#x597D;&#x4E86;, &#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x1F602;"></a>&#x5230;&#x8FD9;&#x91CC;, &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5DF2;&#x7ECF;&#x642D;&#x597D;&#x4E86;, &#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x1F602;</h3><p>&#x6B22;&#x8FCE;&#x5173;&#x6CE8;&#x6211;&#x7684;&#x767E;&#x5EA6;IFE 2017 &#x9898;&#x5E93;.   &#x94FE;&#x63A5;&#x5728;&#x8FD9;&#x91CC;&#x1F449;  <a href="https://github.com/PeterGooo/ife" target="_blank" rel="external">GitHub-ife</a>  &#x6C42;star</p>
+<p>over</p>
+]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;我的前端之路-前望后顾&quot;&gt;&lt;a href=&quot;#我的前端之路-前望后顾&quot; class=&quot;headerlink&quot; title=&quot;我的前端之路 - - - 前望后顾&quot;&gt;&lt;/a&gt;我的前端之路 - - - &lt;span style=&quot;color:#a6e859&quot;&gt;前望后顾&lt;/span&gt;&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;你一定要努力   但不要着急到慌张&lt;/p&gt;
+      &lt;h1 id=&quot;今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂&quot;&gt;&lt;a href=&quot;#今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂&quot; class=&quot;headerlink&quot; title=&quot;今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂&quot;&gt;&lt;/a&gt;今天在看百度ife糯米学院的题，遇到了一个问题，解决后就想拿来写写😂&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;排着队，一个一个来🙈&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;这段时间的面试, 有几次会遇到一个值得思考的问题.&lt;br&gt;
+&lt;h3 id=&quot;下载压缩包&quot;&gt;&lt;a href=&quot;#下载压缩包&quot; class=&quot;headerlink&quot; title=&quot;下载压缩包&quot;&gt;&lt;/a&gt;下载压缩包&lt;/h3&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://petergooo.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Phantomjs" scheme="https://petergooo.github.io/tags/Phantomjs/"/>
+    
+      <category term="ife" scheme="https://petergooo.github.io/tags/ife/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css3 一些样式</title>
+    <link href="https://petergooo.github.io/2016/12/19/css01/"/>
+    <id>https://petergooo.github.io/2016/12/19/css01/</id>
+    <published>2016-12-19T05:52:14.000Z</published>
+    <updated>2017-06-07T02:47:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>&#x8FD9;&#x7BC7;&#x535A;&#x5BA2;&#x51FA;&#x73B0;&#x7684;css&#x6837;&#x5F0F;,  &#x53CA;&#x5176;&#x987A;&#x5E8F;,  &#x548C; &#x6211;&#x7684;&#x8FD9;&#x4E2A;&#x9759;&#x6001;&#x9875;&#x9762;&#x662F;&#x540C;&#x6B65;&#x7684;.   <a href="https://petergooo.github.io/demo/learn/12-19/index.html">&#x5728;&#x8FD9;&#x91CC;, &#x8BF7;&#x70B9;&#x51FB;,&#x5BF9;&#x5E94;&#x6837;&#x5F0F;&#x67E5;&#x770B;</a></p>
+</blockquote>
+<h1 id="&#x51E0;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x6837;&#x5F0F;"><a href="#&#x51E0;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x6837;&#x5F0F;" class="headerlink" title="&#x51E0;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x6837;&#x5F0F;"></a>&#x51E0;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x6837;&#x5F0F;</h1><h2 id="&#x6A21;&#x7CCA;"><a href="#&#x6A21;&#x7CCA;" class="headerlink" title="&#x6A21;&#x7CCA;"></a>&#x6A21;&#x7CCA;</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">h1</span>{</div><div class="line">  <span class="attribute">color</span>: transparent;</div><div class="line">  <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">4px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.5);</div><div class="line">}</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="&#x56FE;&#x7247;&#x53D8;&#x9ED1;&#x767D;"><a href="#&#x56FE;&#x7247;&#x53D8;&#x9ED1;&#x767D;" class="headerlink" title="&#x56FE;&#x7247;&#x53D8;&#x9ED1;&#x767D;"></a>&#x56FE;&#x7247;&#x53D8;&#x9ED1;&#x767D;</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">img{</div><div class="line">  filter:grayscale(100%);</div><div class="line">  //&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x517C;&#x5BB9;&#x6027;&#x95EE;&#x9898;</div><div class="line">  -webkit-filter: grayscale(100%);  </div><div class="line">  -moz-filter: grayscale(100%);</div><div class="line">  -ms-filter: grayscale(100%);</div><div class="line">  -o-filter: grayscale(100%);</div><div class="line">}</div></pre></td></tr></table></figure>
+<h2 id="calc-&#x7684;&#x4F7F;&#x7528;"><a href="#calc-&#x7684;&#x4F7F;&#x7528;" class="headerlink" title="calc()&#x7684;&#x4F7F;&#x7528;"></a>calc()&#x7684;&#x4F7F;&#x7528;</h2><p>calc()&#x7528;&#x6CD5;&#x7C7B;&#x4F3C; &#x51FD;&#x6570;,  &#x80FD;&#x591F;&#x7ED9;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;&#x52A8;&#x6001;&#x7684;&#x503C;.  &#x6BD4;&#x5982;  width: calc(100% - 100px);</p>
+<p><strong><em>PS</em></strong> &#x5982;&#x679C;&#x7528; +   -  &#x64CD;&#x4F5C;&#x7B26;,  &#x8981;&#x8BB0;&#x5F97;&#x4EE5;&#x7A7A;&#x683C;&#x5206;&#x5F00;, &#x4E0D;&#x7136;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;.&#x6211;&#x662F;&#x88AB;&#x5751;&#x8FC7;&#x7684;.  &#x4F46; * / &#x5C31;&#x4E0D;&#x7528;, &#x4E0D;&#x8FC7;, &#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x4FDD;&#x6301;&#x7740;&#x7528;calc&#x7684;&#x65F6;&#x5019;, &#x90FD;&#x7528;&#x7A7A;&#x683C;&#x7B26;&#x5206;&#x9694;&#x5427;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.calc</span>{</div><div class="line">  <span class="attribute">width</span>:<span class="number">200px</span>;</div><div class="line">  <span class="attribute">height</span>:<span class="number">300px</span>;</div><div class="line"> <span class="attribute">border</span>:<span class="number">1px</span> solid red;</div><div class="line">}</div><div class="line"><span class="selector-class">.calc</span> <span class="selector-class">.b</span>{</div><div class="line">  <span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">background-color</span>: orange;</div><div class="line">}</div><div class="line"><span class="selector-class">.calc</span> <span class="selector-class">.c</span>{</div><div class="line">  <span class="attribute">height</span>: <span class="built_in">calc</span>(100% - 100px);</div><div class="line">  <span class="attribute">background-color</span>: green;</div><div class="line">}</div></pre></td></tr></table></figure>
+<h2 id="&#x7528;css&#x7684;-border-&#x753B;&#x4E09;&#x89D2;"><a href="#&#x7528;css&#x7684;-border-&#x753B;&#x4E09;&#x89D2;" class="headerlink" title="&#x7528;css&#x7684; border &#x753B;&#x4E09;&#x89D2;"></a>&#x7528;css&#x7684; border &#x753B;&#x4E09;&#x89D2;</h2><p> &#x5229;&#x7528;border,  &#x56DB;&#x4E2A;&#x8FB9;&#x6846;,  &#x8BBE;&#x7F6E;&#x8FB9;&#x6846;&#x7684;&#x5BBD;&#x5EA6;,  &#x7136;&#x540E;&#x4E09;&#x4E2A; &#x662F;&#x900F;&#x660E;,      css&#x4EE3;&#x7801;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.triangle</span>{</div><div class="line">  	<span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">  	<span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">  	<span class="attribute">border-width</span>: <span class="number">40px</span>;</div><div class="line">  	<span class="attribute">border-style</span>: solid;</div><div class="line">  	<span class="attribute">border-color</span>: transparent transparent red transparent;</div><div class="line">  }</div></pre></td></tr></table></figure>
+<h1 id="&#x6E10;&#x53D8;-&#x5F84;&#x5411;&#x548C;&#x7EBF;&#x6027;"><a href="#&#x6E10;&#x53D8;-&#x5F84;&#x5411;&#x548C;&#x7EBF;&#x6027;" class="headerlink" title="&#x6E10;&#x53D8;  &#x5F84;&#x5411;&#x548C;&#x7EBF;&#x6027;"></a>&#x6E10;&#x53D8;  &#x5F84;&#x5411;&#x548C;&#x7EBF;&#x6027;</h1><p>html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;grandient&quot;</span>&gt;</span></div><div class="line"> &#x6587;&#x5B57;&#x7EBF;&#x6027;&#x6E10;&#x53D8;  </div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>css&#x4EE3;&#x7801;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.grandient</span>{</div><div class="line">  <span class="attribute">background-image</span>: <span class="built_in">-webkit-gradient</span>(linear, 0 0 ,0 bottom, from(rgba(0,128,0,1)), <span class="built_in">to</span>(rgba(51,51,51,0.6)));</div><div class="line">  <span class="attribute">-webkit-background-clip</span>:text;</div><div class="line">  <span class="attribute">-webkit-text-fill-color</span>:transparent;</div><div class="line">}</div></pre></td></tr></table></figure>
+<p>&#x4E00;&#x4E2A;&#x7A7A;div&#x7684;&#x5F84;&#x5411;&#x6E10;&#x53D8;   &#x7B49;&#x95F4;&#x8DDD;&#x8272;&#x6807;     css&#x4EE3;&#x7801;     </p>
+<blockquote>
+<p>&#x4EE5;&#x4E0B;&#x7684;css&#x4EE3;&#x7801;&#x5747;&#x53EA;&#x6539;&#x53D8;&#x4E86;background&#x90E8;&#x5206;,   &#x6709;&#x51E0;&#x4E2A;&#x662F;&#x6539;&#x4E86;&#x5BBD;&#x9AD8;, &#x6240;&#x4EE5;&#x5C31;&#x53EA;&#x5199;&#x4E86;background&#x90E8;&#x5206;&#x7684;&#x53D8;&#x5316;</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>{</div><div class="line">  <span class="attribute">width</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">radial-gradient</span>(red, yellow, rhba(30, 144, 255, 0.6));</div><div class="line">}</div></pre></td></tr></table></figure>
+<p>&#x6307;&#x5B9A;&#x95F4;&#x8DDD;&#x8272;&#x6807;  css &#x4EE3;&#x7801;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background</span>: <span class="selector-tag">radial-gradient</span>(<span class="selector-tag">red</span> 5%, <span class="selector-tag">yellow</span> 25%, <span class="selector-id">#1E90FF</span> 50%);</div></pre></td></tr></table></figure>
+<p><strong>&#x5927;&#x5C0F;</strong> &#x662F;&#x5F84;&#x5411;&#x6E10;&#x53D8;&#x548C;&#x7EBF;&#x6027;&#x6E10;&#x53D8;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x5730;&#x65B9;. &#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x5C3A;&#x5BF8;&#x503C;&#x6765;&#x6307;&#x5B9A;&#x5B9A;&#x4E49;&#x5706;&#x5F62;&#x6216;&#x8005;&#x692D;&#x5706;&#x5F62;&#x7684;&#x5927;&#x5C0F;&#x7684;&#x70B9;.      css&#x4EE3;&#x7801;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background</span>: <span class="selector-tag">radial-gradient</span>(<span class="selector-tag">ellipse</span> <span class="selector-tag">closest-side</span>, <span class="selector-tag">red</span>, <span class="selector-tag">yellow</span> 10%, <span class="selector-id">#1E90FF</span> 50%, <span class="selector-tag">white</span>);</div></pre></td></tr></table></figure>
+<p>&#x5176;&#x4E2D; &#x5B83;&#x7684;&#x5927;&#x5C0F;&#x4E5F;&#x53EF;&#x4EE5;&#x6362;&#x6210; <strong>farthest-corner</strong> &#x6E10;&#x53D8;&#x7684;&#x5C3A;&#x5BF8;&#x4E3A;&#x8D77;&#x59CB;&#x70B9;&#x5230;&#x5C01;&#x95ED;&#x76D2;&#x6A21;&#x578B;&#x6700;&#x8FDC;&#x7AEF;&#x7684;&#x8D77;&#x59CB;&#x70B9;&#x7684;&#x8DDD;&#x79BB;&#x3002;</p>
+<h2 id="&#x91CD;&#x590D;&#x7684;&#x6E10;&#x53D8;"><a href="#&#x91CD;&#x590D;&#x7684;&#x6E10;&#x53D8;" class="headerlink" title="&#x91CD;&#x590D;&#x7684;&#x6E10;&#x53D8;"></a>&#x91CD;&#x590D;&#x7684;&#x6E10;&#x53D8;</h2><p><strong>linear-grandient</strong> &#x548C; <strong>radial-grandient</strong> &#x4E0D;&#x652F;&#x6301;&#x81EA;&#x52A8;&#x91CD;&#x590D;&#x7684;&#x8272;&#x6807;,  &#x7136;&#x800C;,  <code>repeating-linear-grandient</code> &#x548C; <code>repeating-radial-grandient</code> &#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;.</p>
+<p>&#x91CD;&#x590D;&#x7684;&#x7EBF;&#x6027;&#x6E10;&#x53D8;    css &#x4EE3;&#x7801;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background</span>: <span class="selector-tag">repeating-linear-gradient</span>(<span class="selector-tag">-45deg</span>, <span class="selector-tag">red</span>, <span class="selector-tag">red</span> 5<span class="selector-tag">px</span>, <span class="selector-tag">white</span> 5<span class="selector-tag">px</span>, <span class="selector-tag">white</span> 10<span class="selector-tag">px</span>);</div></pre></td></tr></table></figure>
+<p>&#x91CD;&#x590D;&#x7684;&#x5F84;&#x5411;&#x6E10;&#x53D8;    css &#x4EE3;&#x7801;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background</span>: <span class="selector-tag">repeating-radial-gradient</span>(<span class="selector-tag">black</span>, <span class="selector-tag">black</span> 5<span class="selector-tag">px</span>, <span class="selector-tag">white</span> 5<span class="selector-tag">px</span>, <span class="selector-tag">white</span> 10<span class="selector-tag">px</span>);</div></pre></td></tr></table></figure>
+<p> &#x53EF;&#x6269;&#x5C55;&#x7684;&#x67E5;&#x770B; &#x83DC;&#x9E1F;&#x6559;&#x7A0B;: <a href="http://www.runoob.com/css3/css3-gradients.html" target="_blank" rel="external">http://www.runoob.com/css3/css3-gradients.html</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这篇博客出现的css样式,  及其顺序,  和 我的这个静态页面是同步的.   &lt;a href=&quot;https://petergooo.github.io/demo/learn/12-19/index.html&quot;&gt;在这里, 请点击,对应样式查看&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;几个有趣的样式&quot;&gt;&lt;a href=&quot;#几个有趣的样式&quot; class=&quot;headerlink&quot; title=&quot;几个有趣的样式&quot;&gt;&lt;/a&gt;几个有趣的样式&lt;/h1&gt;&lt;h2 id=&quot;模糊&quot;&gt;&lt;a href=&quot;#模糊&quot; class=&quot;headerlink&quot; title=&quot;模糊&quot;&gt;&lt;/a&gt;模糊&lt;/h2&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;h1&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;color&lt;/span&gt;: transparent;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;text-shadow&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;4px&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;rgba&lt;/span&gt;(0, 0, 0, 0.5);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
       <category term="前端" scheme="https://petergooo.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Web" scheme="https://petergooo.github.io/tags/Web/"/>
+      <category term="CSS" scheme="https://petergooo.github.io/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github 的注册与使用教程以及github page (二)</title>
+    <link href="https://petergooo.github.io/2016/12/18/Github_2/"/>
+    <id>https://petergooo.github.io/2016/12/18/Github_2/</id>
+    <published>2016-12-18T14:47:16.000Z</published>
+    <updated>2017-06-05T14:16:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="&#x4F7F;&#x7528;Github&#x6765;&#x6258;&#x7BA1;&#x4F60;&#x7684;&#x4EE3;&#x7801;"><a href="#&#x4F7F;&#x7528;Github&#x6765;&#x6258;&#x7BA1;&#x4F60;&#x7684;&#x4EE3;&#x7801;" class="headerlink" title="&#x4F7F;&#x7528;Github&#x6765;&#x6258;&#x7BA1;&#x4F60;&#x7684;&#x4EE3;&#x7801;"></a>&#x4F7F;&#x7528;Github&#x6765;&#x6258;&#x7BA1;&#x4F60;&#x7684;&#x4EE3;&#x7801;</h1><p><strong><em>&#x987B;&#x77E5;</em></strong></p>
+<blockquote>
+<ol class="ui list">
+<li><strong><code>&#x5199;&#x5728;&#x524D;&#x9762;&#x7684;&#x8BDD;:</code></strong>       &#x2003;&#x2003;&#x5982;&#x679C;&#x4F60;&#x81EA;&#x8BA4;&#x4E3A;&#x662F;&#x505A;&#x6280;&#x672F;&#x7684;,  &#x6211;&#x5F3A;&#x70C8;&#x63A8;&#x8350;&#x4F60;  <strong>&#x5B66;&#x4F1A;&#x7FFB;&#x5899;</strong>,  &#x597D;&#x5904;&#x4E0D;&#x7528;&#x591A;&#x8BF4;,  &#x8BB2;&#x9053;&#x7406;&#x67D0;&#x5EA6;&#x641C;&#x7D22;&#x771F;&#x7684;&#x4F1A;&#x8BEF;&#x4EBA;! ! !</li>
+<li><strong><code>&#x5173;&#x4E8E;&#x4F7F;&#x7528;&#x5BA2;&#x6237;&#x7AEF;&#x8FD8;&#x662F;&#x547D;&#x4EE4;&#x884C;</code></strong>   &#x2003;&#x2003;&#x4E24;&#x4E2A;&#x90FD;&#x53EF;&#x4EE5;&#x4E0A;&#x4F20;&#x4F60;&#x7684;&#x4EE3;&#x7801;,  &#x5C31;&#x662F;&#x770B;&#x4F60;&#x559C;&#x6B22;&#x54EA;&#x79CD;&#x98CE;&#x683C;&#x4E86;.   </li>
+<li><strong><code>&#x5584;&#x4E8E;&#x4F7F;&#x7528;&#x5DE6;&#x4FA7;&#x76EE;&#x5F55;&#x8DF3;&#x8F6C;</code></strong> &#x2003;&#x2003;&#x2003;&#x2003;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x6BD4;&#x8F83;&#x957F;, &#x6211;&#x628A;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x547D;&#x4EE4;&#x884C;&#x653E;&#x5728;&#x4E00;&#x8D77;&#x4E86;.   &#x6240;&#x4EE5;&#x8BF7;&#x8BFB;&#x8005;&#x5408;&#x7406;&#x4F7F;&#x7528;&#x5DE6;&#x4FA7;&#x76EE;&#x5F55;&#x8DF3;&#x8F6C;, &#x4EE5;&#x8282;&#x7701;&#x65F6;&#x95F4;.</li>
+<li>&#x672C;&#x6587;&#x662F;&#x4ECE;&#x5C0F;&#x767D;&#x5F00;&#x59CB;&#x7684;&#x6559;&#x7A0B;, &#x5927;&#x725B;&#x52FF;&#x55B7;. &#x518D;&#x8BF4;. &#x8FD9;&#x662F;&#x6211;&#x7B2C;&#x4E00;&#x6B21;&#x5199;, &#x96BE;&#x514D;&#x8FC7;&#x4E8E;&#x5E7C;&#x7A1A;.  &#x4F53;&#x8C05;&#x54C8;~</li>
+</ol>
+</blockquote>
+<a id="more"></a>
+<p><strong><em>&#x76F8;&#x5173;</em></strong>  </p>
+<blockquote>
+<p><strong>&#x7B2C;&#x4E00;&#x90E8;&#x5206;</strong> <a href="https://petergooo.github.io/blog/2016/12/08/Github-1/">&#x8BA4;&#x8BC6;Github&#x548C;Github Page</a></p>
+<p>&#x2003;&#x2003;&#x5728;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x4E2D;,  &#x6211;&#x7B80;&#x5355;&#x7684;&#x5199;&#x4E86;Github&#x7684;&#x6CE8;&#x518C;, &#x5EFA;&#x4ED3;&#x5E93;,  &#x521D;&#x6B21;&#x4F7F;&#x7528;Github page. &#x8FD8;&#x662F;&#x7528;&#x7684;&#x7F51;&#x9875;&#x4E0A;&#x7684;<strong>create new file</strong> &#x5728;&#x5B9E;&#x9645;&#x751F;&#x4EA7;&#x4E2D;, &#x6211;&#x4EEC;&#x80AF;&#x5B9A;&#x4E0D;&#x53EF;&#x80FD;&#x662F;&#x90A3;&#x6837;&#x7684;&#x5199;&#x6587;&#x4EF6;&#x5427;, &#x6240;&#x4EE5;. &#x8FD9;&#x4E2A;&#x535A;&#x6587;&#x5C31;&#x662F;&#x6559;&#x4F60;&#x5982;&#x4F55;&#x4E0A;&#x4F20;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x7684;</p>
+<p><strong>&#x7B2C;&#x4E8C;&#x90E8;&#x5206;</strong> <a href="https://petergooo.github.io/blog/2016/12/08/Github-2/">&#x4F7F;&#x7528;&#x5BA2;&#x6237;&#x7AEF;&#x6216;&#x547D;&#x4EE4;&#x884C;&#x4E0A;&#x4F20;&#x4F60;&#x7684;&#x4EE3;&#x7801;</a></p>
+<p>&#x200B;    &#x2003;&#x2003;&#x672C;&#x6587;&#x8BB2;&#x8FF0;&#x4E86;&#x5982;&#x4F55;&#x4E0A;&#x4F20; &#x672C;&#x5730;&#x7684;&#x4EE3;&#x7801; &#x5230; Github&#x4E0A;.  &#x5E38;&#x89C1;&#x7684;&#x65B9;&#x5F0F;&#x6709; <strong><code>&#x5BA2;&#x6237;&#x7AEF;</code></strong> &#x548C; <strong><code>&#x7EC8;&#x7AEF;&#x547D;&#x4EE4;&#x884C;</code></strong>  &#x8FD9;&#x4E24;&#x79CD;. &#x6211;&#x5728;&#x8FD9;&#x91CC;&#x7528;&#x6587;&#x5B57;&#x52A0;&#x56FE;&#x7247;&#x7684;&#x65B9;&#x6CD5;, &#x8BB2;&#x8FF0;&#x4E00;&#x4E0B;Github&#x7684;&#x4E0A;&#x4F20;&#x4EE3;&#x7801;&#x7684;&#x4E8B;&#x60C5;.</p>
+</blockquote>
+<h1 id="Github-&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;"><a href="#Github-&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;" class="headerlink" title="Github &#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;"></a>Github &#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;</h1><p>&#x2003;&#x2003;&#x5F53;&#x4ECA;&#x76DB;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x6258;&#x7BA1;&#x670D;&#x52A1;&#x5E73;&#x53F0;.  &#x800C;&#x6211;&#x4EEC;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x5458;, &#x5C82;&#x6709;&#x5F03;&#x4E4B;&#x4E0D;&#x7528;&#x4E4B;&#x7406;~  &#x597D;&#x7ED5;&#x54C8;&#x54C8;.    &#x4E0B;&#x9762;&#x6211;&#x5C31;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x4E3B;&#x9898;  &#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x4F7F;&#x7528;.  &#x5206;&#x522B;&#x6709;Mac&#x7AEF; &#x548C; windows&#x7AEF; &#x7684;&#x4F7F;&#x7528;.</p>
+<blockquote>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x662F;&#x7B80;&#x5355;&#x7684;&#x64CD;&#x4F5C;, &#x9002;&#x5408;&#x65B0;&#x624B;.</p>
+</blockquote>
+<h2 id="Mac&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;"><a href="#Mac&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;" class="headerlink" title="Mac&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;"></a>Mac&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;</h2><h3 id="1-&#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;"><a href="#1-&#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;" class="headerlink" title="1. &#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;"></a>1. &#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;</h3><ul class="ui list">
+<li>&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x5730;&#x5740;: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
+<li>&#x5982;&#x679C;&#x7F51;&#x901F;&#x6162;, &#x53EF;&#x4EE5;&#x5728;&#x6211;&#x7684;&#x7F51;&#x76D8;&#x4E0B;&#x8F7D;. &#x94FE;&#x63A5;: <a href="http://pan.baidu.com/s/1i4B4tzZ" target="_blank" rel="external">http://pan.baidu.com/s/1i4B4tzZ</a> &#x5BC6;&#x7801;: gjpy</li>
+</ul>
+<h3 id="2-&#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;"><a href="#2-&#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;" class="headerlink" title="2. &#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;"></a>2. &#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;</h3><ul class="ui list">
+<li>&#x5FEB;&#x6377;&#x952E; <code>command</code> + <code>,</code> &#x6253;&#x5F00;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BBE;&#x7F6E;.  </li>
+<li>&#x70B9;&#x51FB; <strong>Accounts</strong>  &#x7136;&#x540E;  sign in &#x4F60;&#x7684;Github&#x8D26;&#x53F7;.</li>
+</ul>
+<h3 id="3-&#x514B;&#x9686;&#x4ED3;&#x5E93;"><a href="#3-&#x514B;&#x9686;&#x4ED3;&#x5E93;" class="headerlink" title="3. &#x514B;&#x9686;&#x4ED3;&#x5E93;"></a>3. &#x514B;&#x9686;&#x4ED3;&#x5E93;</h3><ul class="ui list">
+<li>&#x767B;&#x9646;&#x6210;&#x529F;&#x540E;, &#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x70B9;&#x51FB; <strong><em>+</em></strong>  &#x56FE;&#x6807;, &#x5728;&#x5F39;&#x51FA;&#x6765;&#x7684;&#x6846;&#x6846;&#x4E2D;,  &#x6709;&#x4E09;&#x4E2A;&#x9009;&#x9879;: Add  Create  Clone,  &#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x70B9;&#x51FB;Clone.</li>
+<li>&#x8FD9;&#x65F6;&#x4F1A;&#x51FA;&#x6765;&#x4F60;Github&#x8D26;&#x53F7;&#x4E0A;,  &#x6240;&#x6709;&#x7684;&#x4ED3;&#x5E93;.  &#x4F60;&#x9700;&#x8981;clone&#x54EA;&#x4E2A;, &#x5C31;&#x70B9;&#x51FB;&#x4ED3;&#x5E93;&#x540D;&#x5B57;, &#x53F3;&#x4E0B;&#x89D2;&#x7684;&#x6309;&#x94AE;&#x5C31;&#x4EAE;&#x4E86;.   click it</li>
+<li>&#x5F39;&#x51FA;clone&#x9009;&#x9879;, &#x4F60;&#x9009;&#x62E9;&#x597D;&#x6587;&#x4EF6;&#x5939;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;.</li>
+</ul>
+<h3 id="4-&#x5199;&#x4EE3;&#x7801;&#x54AF;"><a href="#4-&#x5199;&#x4EE3;&#x7801;&#x54AF;" class="headerlink" title="4. &#x5199;&#x4EE3;&#x7801;&#x54AF;"></a>4. &#x5199;&#x4EE3;&#x7801;&#x54AF;</h3><p>&#x2003;&#x2003;&#x4F60;&#x60F3;&#x6258;&#x7BA1;&#x5728;Github&#x5E73;&#x53F0;&#x7684;&#x4EE3;&#x7801;&#x653E;&#x5728;&#x4F60;&#x514B;&#x9686;&#x5230;&#x672C;&#x5730;&#x7684;&#x4ED3;&#x5E93;&#x4E0B;&#x9762;&#x5C31;&#x597D;&#x4E86;,  &#x7136;&#x540E;&#x63A5;&#x7740;&#x4E0B;&#x4E00;&#x6B65;, push&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x5427;.</p>
+<blockquote>
+<p>&#x8FD9;&#x91CC;&#x4E0A;&#x9762;&#x7684;&#x51E0;&#x4E2A;&#x6B65;&#x9AA4;,  &#x662F;&#x4F60;&#x7B2C;&#x4E00;&#x6B21;&#x4F7F;&#x7528;Github&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x7684;&#x987A;&#x5E8F;,  &#x5728;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x65F6;&#x95F4;&#x91CC;,  &#x5728;&#x4F60;&#x5DF2;&#x7ECF;&#x514B;&#x9686;&#x8FC7;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x540E;, &#x4F60;&#x8981;&#x662F;&#x9700;&#x8981;&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;,  &#x90A3;&#x76F4;&#x63A5;&#x8D70; <a href="#5-&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;">&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;</a> &#x8FD9;&#x4E00;&#x6B65;&#x5C31;&#x597D;&#x4E86;</p>
+</blockquote>
+<h3 id="5-&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;"><a href="#5-&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;" class="headerlink" title="5. &#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;"></a>5. &#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;</h3><ol class="ui list">
+<li><p>&#x6253;&#x5F00;&#x5BA2;&#x6237;&#x7AEF;.  &#x70B9;&#x51FB;&#x5DE6;&#x4FA7;&#x4F60;&#x8981;&#x540C;&#x6B65;&#x7684;&#x4ED3;&#x5E93;</p>
+</li>
+<li><p>&#x5F53;&#x4F60;&#x672C;&#x5730;&#x7684;&#x4EE3;&#x7801;&#x4E0E;&#x7F51;&#x9875;&#x4E0A;&#x7684;&#x76F8;&#x6BD4;, &#x6709;&#x53D8;&#x52A8;&#x7684;&#x65F6;&#x5019;, &#x4F1A;&#x663E;&#x793A;&#x6709;&#x591A;&#x5C11;&#x4E2A; changes .</p>
+</li>
+<li><p>&#x5728;changes&#x4E0B;,  &#x5728;&#x4F60;&#x7684;&#x5934;&#x50CF;&#x65C1;&#x8FB9;, &#x6709;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x6846;, summary(&#x63CF;&#x8FF0;)  &#x8F93;&#x5165;&#x4F60;&#x4E3A;&#x8FD9;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x8BF4;&#x660E;.       </p>
+<ul>
+<li>&#x8FD9;&#x4E2A;&#x662F;&#x5FC5;&#x987B;&#x7684;</li>
+<li>&#x4F60;&#x7684;&#x8BF4;&#x660E;, &#x5982;&#x679C;&#x51FA;&#x73B0;&#x7A7A;&#x683C;,  &#x8BF7;&#x7528; <strong>&#x201C;&#x201D;</strong> &#x628A;&#x8BF4;&#x660E;&#x5305;&#x542B;&#x8D77;&#x6765;</li>
+</ul>
+<p>&#x200B;</p>
+</li>
+<li><p>&#x8F93;&#x5165;&#x5B8C;&#x4E0A;&#x8FF0;&#x7684;summary&#x540E;,  &#x4E0B;&#x9762;&#x7684; <code>Commit to master</code> &#x5C31;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x4E86;     click it</p>
+</li>
+<li><p>&#x8FD9;&#x65F6;&#x5019;&#x4F60;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x4E86;90%&#x4E86;,  &#x6700;&#x540E;&#x4E00;&#x6B65;&#x5C31;&#x662F;&#x70B9;&#x51FB;&#x53F3;&#x4E0A;&#x89D2;&#x9ED1;&#x8272;&#x6846;&#x4E2D;&#x7684;  Sync  . &#x7B49;&#x5F85;&#x4E0A;&#x4F20;&#x6210;&#x529F;&#x5427;.</p>
+</li>
+<li><p>&#x53BB;Github&#x5B98;&#x7F51;&#x4E0A;,  &#x767B;&#x5F55;&#x4F60;&#x7684;&#x8D26;&#x53F7;, &#x67E5;&#x770B;&#x4F60;&#x521A;&#x521A;&#x63D0;&#x4EA4;&#x7684;&#x4EE3;&#x7801;&#x5427;.  &#x554A;&#x54C8;~</p>
+</li>
+</ol>
+<h3 id="6-&#x5E38;&#x89C1;&#x95EE;&#x9898;"><a href="#6-&#x5E38;&#x89C1;&#x95EE;&#x9898;" class="headerlink" title="6. &#x5E38;&#x89C1;&#x95EE;&#x9898;"></a>6. &#x5E38;&#x89C1;&#x95EE;&#x9898;</h3><p>&#x2003;&#x2003;&#x6536;&#x96C6;&#x4E2D;&#x2026;.</p>
+<h2 id="Windows&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;"><a href="#Windows&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;" class="headerlink" title="Windows&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;"></a>Windows&#x5BA2;&#x6237;&#x7AEF;&#x4E0B;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;</h2><h3 id="1-&#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;-1"><a href="#1-&#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;-1" class="headerlink" title="1. &#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;"></a>1. &#x4E0B;&#x8F7D;&#x4E0E;&#x5B89;&#x88C5;</h3><ul class="ui list">
+<li>&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x5730;&#x5740;: <a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
+<li>&#x5982;&#x679C;&#x7F51;&#x901F;&#x6162;, &#x53EF;&#x4EE5;&#x5728;&#x6211;&#x7684;&#x7F51;&#x76D8;&#x4E0B;&#x8F7D;.  &#x94FE;&#x63A5;:</li>
+</ul>
+<h3 id="2-&#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;-1"><a href="#2-&#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;-1" class="headerlink" title="2. &#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;"></a>2. &#x767B;&#x5F55;&#x5BA2;&#x6237;&#x7AEF;</h3><h3 id="3-&#x514B;&#x9686;&#x4ED3;&#x5E93;-1"><a href="#3-&#x514B;&#x9686;&#x4ED3;&#x5E93;-1" class="headerlink" title="3. &#x514B;&#x9686;&#x4ED3;&#x5E93;"></a>3. &#x514B;&#x9686;&#x4ED3;&#x5E93;</h3><h3 id="4-&#x5199;&#x4EE3;&#x7801;&#x54AF;-1"><a href="#4-&#x5199;&#x4EE3;&#x7801;&#x54AF;-1" class="headerlink" title="4. &#x5199;&#x4EE3;&#x7801;&#x54AF;"></a>4. &#x5199;&#x4EE3;&#x7801;&#x54AF;</h3><h3 id="5-&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;-1"><a href="#5-&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;-1" class="headerlink" title="5. &#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;"></a>5. &#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x5230;Github&#x4E0A;</h3><h3 id="6-&#x5E38;&#x89C1;&#x95EE;&#x9898;-1"><a href="#6-&#x5E38;&#x89C1;&#x95EE;&#x9898;-1" class="headerlink" title="6. &#x5E38;&#x89C1;&#x95EE;&#x9898;"></a>6. &#x5E38;&#x89C1;&#x95EE;&#x9898;</h3><h1 id="&#x547D;&#x4EE4;&#x884C;&#x7684;&#x4F7F;&#x7528;-Git"><a href="#&#x547D;&#x4EE4;&#x884C;&#x7684;&#x4F7F;&#x7528;-Git" class="headerlink" title="&#x547D;&#x4EE4;&#x884C;&#x7684;&#x4F7F;&#x7528;  Git"></a>&#x547D;&#x4EE4;&#x884C;&#x7684;&#x4F7F;&#x7528;  Git</h1><blockquote>
+<p>&#x547D;&#x4EE4;&#x884C;&#x662F;&#x8F7B;&#x677E;&#x65B9;&#x4FBF;&#x7684;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;,  &#x5B83;&#x820D;&#x53BB;&#x4E86;&#x9F20;&#x6807;&#x7684;&#x70B9;&#x6765;&#x70B9;&#x53BB;, &#x820D;&#x53BB;&#x4E86;UI&#x754C;&#x9762;,  &#x7528;&#x6700;&#x7B80;&#x5355;&#x7684;&#x4E00;&#x884C;&#x884C;&#x547D;&#x4EE4;&#x8F7B;&#x677E;&#x5B8C;&#x6210;clone  commit  push &#x7B49;&#x7B49;, &#x5C06;&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x4ECE;&#x672C;&#x5730;&#x6258;&#x7BA1;&#x5230;Github&#x4E0A;</p>
+</blockquote>
+<h2 id="Mac&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;"><a href="#Mac&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;" class="headerlink" title="Mac&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;"></a>Mac&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;</h2><h3 id="1-&#x7EC8;&#x7AEF;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x4F7F;&#x7528;"><a href="#1-&#x7EC8;&#x7AEF;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x4F7F;&#x7528;" class="headerlink" title="1. &#x7EC8;&#x7AEF;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x4F7F;&#x7528;"></a>1. &#x7EC8;&#x7AEF;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x4F7F;&#x7528;</h3><ol class="ui list">
+<li><strong>&#x7EC8;&#x7AEF;&#x662F;&#x4EC0;&#x4E48;?</strong><ul>
+<li>&#x662F;&#x4EE5;<code>&#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x65B9;&#x5F0F;</code><strong>&#x6765;&#x5B8C;&#x6210;</strong><code>&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;</code>&#x7684;&#x5DE5;&#x5177;,  &#x6BD4;&#x5982;&#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x6587;&#x4EF6;, &#x4F60;&#x53EF;&#x4EE5;&#x5728;GUI&#x754C;&#x9762;, &#x6253;&#x5F00;Finder&#x67E5;&#x770B;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;.   &#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x7EC8;&#x7AEF;&#x91CC;&#x901A;&#x8FC7; cd  ls &#x7B49;&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x6587;&#x4EF6;.</li>
+<li>&#x8BE6;&#x60C5;&#x8BF7;&#x81EA;&#x884C;&#x8C37;&#x6B4C;<a href="https://www.google.com/" target="_blank" rel="external">https://www.google.com/</a> &#x6216;&#x8005; &#x5FC5;&#x5E94;<a href="http://cn.bing.com/" target="_blank" rel="external">http://cn.bing.com/</a></li>
+<li><strong>PS:</strong> &#x5982;&#x679C;&#x4F60;&#x81EA;&#x8BA4;&#x4E3A;&#x662F;&#x505A;&#x6280;&#x672F;&#x7684;,  &#x6211;&#x5F3A;&#x70C8;&#x63A8;&#x8350;&#x4F60;  <strong>&#x5B66;&#x4F1A;&#x7FFB;&#x5899;</strong>  &#x597D;&#x5904;&#x4E0D;&#x7528;&#x591A;&#x8BF4;,  &#x8BB2;&#x9053;&#x7406;&#x67D0;&#x5EA6;&#x641C;&#x7D22;&#x771F;&#x7684;&#x4F1A;&#x8BEF;&#x4EBA;! ! !</li>
+</ul>
+</li>
+<li><strong>Mac &#x7CFB;&#x7EDF;&#x4E0B;&#x7EC8;&#x7AEF;&#x5728;&#x54EA;&#x91CC;? &#x8FD8;&#x9700;&#x8981;&#x4E0B;&#x8F7D;&#x5417;?</strong><ul>
+<li>Mac&#x7CFB;&#x7EDF;&#x4E0B;,  &#x5DF2;&#x7ECF;&#x6709;&#x7EC8;&#x7AEF;&#x8F6F;&#x4EF6; Terminal , &#x53EF;&#x4EE5;&#x5728;Spotlight &#x4E2D;, &#x8F93;&#x5165; Terminal&#x67E5;&#x627E;,   &#x7136;&#x540E;&#x6253;&#x5F00;.  &#x4E5F;&#x53EF;&#x4EE5;&#x5728;Launchpad&#x4E2D;,  &#x6709;&#x4E2A;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x7A0B;&#x5E8F;&#x6587;&#x4EF6;&#x5939;, &#x7EC8;&#x7AEF;&#x5C31;&#x5728;&#x91CC;&#x9762;, &#x70B9;&#x51FB;&#x6253;&#x5F00;&#x5C31;&#x597D;&#x4E86;.</li>
+<li>Mac&#x7CFB;&#x7EDF;&#x81EA;&#x5E26;&#x7684;&#x6709;Terminal,  &#x6211;&#x89C9;&#x5F97;&#x5B83;&#x7684;<strong>&#x529F;&#x80FD;&#x65B9;&#x9762;</strong>, &#x4E0D;&#x5982;&#x6211;&#x73B0;&#x5728;&#x7528;&#x7684; <code>iTerm</code>  &#x5C31;&#x50CF;&#x662F;&#x8BB0;&#x4E8B;&#x672C;&#x548C;Sublime&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;. - &#x5982;&#x6709;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x53EF;&#x4EE5;&#x8C37;&#x6B4C;&#x641C;&#x7D22;, &#x4E86;&#x89E3;&#x4E86;&#x89E3;. &#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x8BE6;&#x7EC6;&#x8BB2;&#x8FF0;&#x4E86;.</li>
+</ul>
+</li>
+<li><strong>&#x7EC8;&#x7AEF;&#x5982;&#x4F55;&#x4F7F;&#x7528;?</strong><ul>
+<li>&#x6253;&#x5F00;&#x7EC8;&#x7AEF;&#x540E;, &#x8F93;&#x5165;&#x547D;&#x4EE4;, &#x56DE;&#x8F66;&#x6267;&#x884C;.  </li>
+<li>&#x8F93;&#x5165;&#x547D;&#x4EE4;&#x65F6;,  &#x5982;&#x6709;&#x547D;&#x4EE4;&#x52A0;&#x6587;&#x4EF6;&#x7684;,   &#x8BB0;&#x5F97;&#x8981;&#x7528;&#x7A7A;&#x683C;&#x5206;&#x9694;&#x5F00;,   &#x6BD4;&#x5982; cd work &#x4E2D;&#x95F4;&#x6709;&#x7A7A;&#x683C;&#x7684;,  &#x800C;&#x4E0D;&#x662F;cdwork</li>
+</ul>
+</li>
+<li><strong>&#x7EC8;&#x7AEF;&#x5E38;&#x7528;&#x7684;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;</strong><ul>
+<li>ls  &#x2014;&#x2014; &#x663E;&#x793A;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;&#x6587;&#x4EF6;  ls -a&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x9690;&#x85CF;&#x6587;&#x4EF6;. ls -l&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x6587;&#x4EF6;&#x4FE1;&#x606F;. ls -al &#x7EC4;&#x5408;&#x4E24;&#x4E2A;&#x529F;&#x80FD;&#x4E86;</li>
+<li>cd  &#x2014;&#x2014; cd + &#x6587;&#x4EF6;&#x540D;   &#x6253;&#x5F00;&#x6587;&#x4EF6;. &#x6BD4;&#x5982; &#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x4E0B;&#x6709;&#x4E2A;work&#x6587;&#x4EF6;&#x5939;,  &#x6211;&#x60F3;&#x5728;&#x7EC8;&#x7AEF;&#x4E2D;&#x6253;&#x5F00;,  &#x90A3;&#x5C31;&#x662F; cd work &#x56DE;&#x8F66;&#x6267;&#x884C;</li>
+<li>chmod &#x2014;&#x2014; &#x6539;&#x53D8;&#x6587;&#x4EF6;&#x6743;&#x9650;   &#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x53EF;&#x80FD;&#x4F1A;&#x7ECF;&#x5E38;&#x7528;&#x5230;, &#x8BE6;&#x60C5; &#x8BF7;&#x8C37;&#x6B4C;&#x5427;, &#x633A;&#x957F;&#x7684;&#x2026;.   &#x5077;&#x4E2A;&#x61D2;</li>
+<li>mkdir &#x2014;&#x2014; mkdir + &#x6587;&#x4EF6;&#x540D;,  &#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x662F;&#x65B0;&#x5EFA;&#x76EE;&#x5F55;,  mkdir work   &#x5C31;&#x662F;&#x65B0;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;work&#x6587;&#x4EF6;&#x5939;,  &#x4E2D;&#x6587;&#x540D;&#x548C;&#x5E26;&#x7A7A;&#x683C;&#x7B26;&#x7684; ,  &#x8981;&#x7528;&#x201D;&#x201D;&#x7B26;&#x53F7;  &#x5982;  mkdir &#x201C;learn mkdir&#x201D;</li>
+<li>cp &#x2014;&#x2014; &#x590D;&#x5236;&#x6587;&#x4EF6;&#x547D;&#x4EE4;, copy&#x561B;, &#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x662F;  cp &#x53C2;&#x6570; &#x6E90;&#x6587;&#x4EF6; &#x76EE;&#x6807;&#x6587;&#x4EF6;   &#x793A;&#x4F8B;: &#x628A;work&#x4E0B;&#x7684;text.txt&#x6587;&#x4EF6; cp&#x5230;home&#x76EE;&#x5F55;&#x4E0B;,   cp -R /work/text.txt /home/ &#x8FD9;&#x6837;&#x5C31;&#x597D;&#x4E86;  <strong>PS:&#x6CE8;&#x610F;&#x7A7A;&#x683C;,    &#x53E6;&#x5916;&#x6211;&#x53EA;&#x662F;&#x6F14;&#x793A;, &#x8FD9;&#x4E2A;&#x8DEF;&#x5F84;&#x8981;&#x5199;&#x5B8C;&#x6574;, &#x4ECE;&#x6839;&#x76EE;&#x5F55;&#x5F00;&#x59CB;.</strong></li>
+<li>rm &#x2014;&#x2014; &#x5220;&#x9664;&#x6587;&#x4EF6;  remove&#x7684;&#x7F29;&#x5199;&#x54AF;,    &#x793A;&#x4F8B;:  rm text.txt  &#x5220;&#x9664;&#x4E86;text&#x6587;&#x4EF6;.</li>
+<li>&#x8FD8;&#x6709; mv &#x79FB;&#x52A8;&#x6587;&#x4EF6;  move&#x7684;&#x7F29;&#x5199;.     &#x7B49;&#x7B49;&#x2026;.     &#x547D;&#x4EE4;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x592A;&#x591A;&#x4E86;, &#x611F;&#x5174;&#x8DA3;&#x7684;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x641C;&#x7D22;&#x2026;    </li>
+</ul>
+</li>
+</ol>
+<h3 id="2-&#x516C;&#x94A5;&#x5BC6;&#x94A5;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x751F;&#x6210;"><a href="#2-&#x516C;&#x94A5;&#x5BC6;&#x94A5;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x751F;&#x6210;" class="headerlink" title="2. &#x516C;&#x94A5;&#x5BC6;&#x94A5;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x751F;&#x6210;"></a>2. &#x516C;&#x94A5;&#x5BC6;&#x94A5;&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x751F;&#x6210;</h3><ol class="ui list">
+<li><p><strong>ssh, (Secure Shell)</strong>  </p>
+<ul>
+<li>&#x662F;&#x4E00;&#x79CD;  &#x521B;&#x5EFA;&#x5728;&#x5E94;&#x7528;&#x5C42;&#x548C;&#x4F20;&#x8F93;&#x5C42; &#x57FA;&#x7840;&#x4E0A;&#x7684;&#x5B89;&#x5168;&#x534F;&#x8BAE;.</li>
+<li>&#x57FA;&#x4E8E;<strong>&#x5BC6;&#x94A5;</strong>&#x7684;&#x5B89;&#x5168;&#x9A8C;&#x8BC1;    </li>
+<li>Github &#x652F;&#x6301;ssh&#x5BC6;&#x94A5;</li>
+</ul>
+</li>
+<li><p><strong>&#x672C;&#x5730;&#x751F;&#x6210;ssh</strong></p>
+<ol>
+<li><p>&#x5982;&#x679C;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x4F7F;&#x7528;, &#x90A3;&#x4F60;&#x7684;&#x672C;&#x5730;&#x5E94;&#x8BE5;&#x6CA1;&#x6709;&#x4E00;&#x5BF9;&#x5BC6;&#x94A5;&#x7684;.   &#x4E0D;&#x8FC7;&#x4EE5;&#x9632;&#x4E07;&#x4E00;&#x8FD8;&#x662F;&#x68C0;&#x67E5;&#x4E00;&#x4E0B;&#x5427;.  </p>
+<ul>
+<li>&#x6253;&#x5F00;&#x7EC8;&#x7AEF;,  &#x8F93;&#x5165;&#x547D;&#x4EE4;</li>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ~/.ssh</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x5982;&#x679C;&#x8FD4;&#x56DE;&#x2019;&#x2026;No such file or directory &#x2026;&#x2019;  &#x5C31;&#x8BF4;&#x660E;&#x6CA1;&#x6709;&#x521B;&#x5EFA;&#x8FC7;&#x5BC6;&#x94A5;.  &#x90A3;&#x5C31;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x6B65; 2 , &#x751F;&#x6210;&#x4F60;&#x7684;&#x5BC6;&#x94A5;.  &#x5982;&#x679C;&#x6709;,  &#x4F60;&#x786E;&#x5B9A;&#x8FD9;&#x4E2A;rsa&#x662F;&#x4F60;&#x7684;Github&#x6CE8;&#x518C;&#x90AE;&#x7BB1;&#x5417;?  &#x786E;&#x5B9A; &#x90A3;&#x5C31;&#x8DF3;&#x5230; <a href="#3-&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github">3. &#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github</a></p>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x751F;&#x6210;&#x65B0;&#x7684;key</strong></p>
+<ul>
+<li><p>&#x8F93;&#x5165;&#x547D;&#x4EE4;   &#x8FD9;&#x91CC; <strong>&#x201C;&#x201D;</strong> &#x5185;&#x8F93;&#x5165;&#x7684;&#x662F;&#x4F60;Github&#x8D26;&#x53F7;<strong>&#x7ED1;&#x5B9A;&#x7684;&#x90AE;&#x7BB1;</strong>.    &#x5343;&#x4E07;&#x8981;&#x8F93;&#x5165;&#x6B63;&#x786E;&#x8884;&#x2026;       &#x5176;&#x4E2D; &#x5728;&#x547D;&#x4EE4;&#x4E2D;,  github_rsa   &#x662F;&#x6307;&#x7684;  &#x7ED9;&#x65B0;&#x5EFA;&#x7684;&#x5BC6;&#x94A5; <strong>&#x547D;&#x540D;</strong> &#x4E3A;github_rsa , &#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x66F4;&#x6539;. &#x6211;&#x4E0B;&#x6587;&#x90FD;&#x662F;&#x7528;&#x7684;github_rsa, &#x5982;&#x679C;&#x66F4;&#x6539;, &#x6CE8;&#x610F;&#x66FF;&#x6362;&#x8884;.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen <span class="_">-f</span> github_rsa -C <span class="string">&quot;your_email@youremail.com&quot;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x7136;&#x540E;&#x56DE;&#x8F66;&#x4E24;&#x6B21;,  &#x5C31;&#x751F;&#x6210;&#x5B8C;&#x6BD5;&#x4E86;,        &#x5176;&#x4E2D;&#x7B2C;&#x4E00;&#x6B21;&#x56DE;&#x8F66;&#x662F;&#x95EE; passphrase , &#x8FD9;&#x4E2A;&#x5B83;&#x4F1A;&#x5728;&#x4F60;&#x6BCF;&#x6B21;&#x8FDB;&#x884C;&#x7248;&#x672C;&#x63A7;&#x5236;(&#x63D0;&#x4EA4;&#x6587;&#x4EF6;)&#x65F6;,  &#x8BA9;&#x4F60;&#x8F93;&#x5165;, &#x6211;&#x4E2A;&#x4EBA;&#x6CA1;&#x6709;&#x4F7F;&#x7528;, &#x6240;&#x4EE5;&#x5C31;&#x56DE;&#x8F66;&#x4E86;,  &#x7B2C;&#x4E8C;&#x6B21;&#x662F;&#x8BA9;&#x4F60;&#x8F93;&#x5BC6;&#x7801;, &#x7136;&#x540E;&#x6BCF;&#x6B21;&#x63D0;&#x4EA4;&#x4E5F;&#x8981;&#x8F93;&#x5BC6;&#x7801;, &#x6240;&#x4EE5;&#x4E3A;&#x4E86;&#x61D2;, &#x6211;&#x4E5F;&#x56DE;&#x8F66;&#x4E86;,  &#x5F53;&#x7136;&#x4F60;&#x89C9;&#x5F97;&#x6709;&#x7528;, &#x4F60;&#x53EF;&#x4EE5;&#x52A0;&#x4E0A;.</p>
+</li>
+<li><code>ls</code> &#x4E00;&#x4E0B;.  &#x4F1A;&#x6709;<code>github_rsa</code> &#x548C; <code>github_rsa.pub</code> &#x8FD9;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;,  &#x5728;&#x4E0B;&#x4E00;&#x6B65;&#x4E2D;, &#x6211;&#x4EEC;&#x628A;&#x516C;&#x94A5;&#x4E0A;&#x4F20;&#x5230;github.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="3-&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github"><a href="#3-&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github" class="headerlink" title="3. &#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github"></a>3. <strong>&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github</strong></h3><blockquote>
+<p>&#x8FD9;&#x65F6;, &#x4F60;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x6587;&#x4EF6;.ssh &#x4EE5;&#x53CA;&#x6709;&#x4E86;&#x4F60;&#x6CE8;&#x518C;Github&#x8D26;&#x53F7;&#x65F6;, &#x6240;&#x7528;&#x7684;&#x90AE;&#x7BB1;&#x751F;&#x6210;&#x7684; &#x4E00;&#x5BF9;&#x5BC6;&#x94A5;&#x4E86;.  </p>
+</blockquote>
+<ul class="ui list">
+<li>&#x2003;&#x2003;Mac &#x6709;&#x4E2A;&#x547D;&#x4EE4;&#x662F;copy&#x6587;&#x4EF6;&#x5230;&#x526A;&#x8D34;&#x677F;.      &#x90A3;&#x6211;&#x4EEC;&#x628A;&#x4E0A;&#x4E00;&#x6B65;&#x751F;&#x6210;&#x7684;&#x516C;&#x94A5;&#x590D;&#x5236;&#x8FDB;&#x53BB;&#x5427;  &#x6CE8;&#x610F;&#x547D;&#x4EE4;&#x7A7A;&#x683C;</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pbcopy &lt; ~/.ssh/github_rsa.pub</div></pre></td></tr></table></figure>
+<p>OK &#x8F93;&#x5165;&#x5B8C;&#x56DE;&#x8F66;.      &#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x5DF2;&#x7ECF;&#x5341;&#x5206;&#x4E56;&#x5DE7;&#x7684;&#x590D;&#x5236;&#x5230;&#x526A;&#x8D34;&#x677F;&#x91CC;&#x9762;&#x4E86;</p>
+<ul class="ui list">
+<li>&#x6253;&#x5F00;Github <a href="https://github.com/" target="_blank" rel="external">https://github.com/</a> &#x767B;&#x9646;&#x4F60;&#x7684;&#x8D26;&#x53F7;,</li>
+<li>&#x6253;&#x5F00;&#x8FD9;&#x4E2A;&#x94FE;&#x63A5; : <a href="https://github.com/settings/keys" target="_blank" rel="external">https://github.com/settings/keys</a>  </li>
+<li>&#x73B0;&#x5728;&#x6253;&#x5F00;&#x7684;&#x9875;&#x9762;&#x662F;&#x8BBE;&#x7F6E;ssh&#x7684;.    &#x8BF7;&#x70B9;&#x51FB;&#x9875;&#x9762;&#x4E0A;, &#x53F3;&#x4E0A;&#x89D2;&#x533A;&#x57DF;&#x7684; <strong><code>New SSH key</code></strong></li>
+<li>&#x5728;&#x51FA;&#x73B0;&#x7684;&#x4E24;&#x4E2A;&#x8F93;&#x5165;&#x6846;,  &#x7B2C;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x4F60;&#x7ED9;ssh key &#x7684;&#x547D;&#x540D;, &#x6BD4;&#x5982; <code>github_id</code>    &#x7B2C;&#x4E8C;&#x4E2A;&#x8F93;&#x5165;&#x6846;,  &#x9009;&#x4E2D;&#x540E;, <code>command</code> + <code>v</code>  &#x7C98;&#x8D34;&#x4F60;&#x521A;&#x521A;&#x590D;&#x5236;&#x7684;&#x516C;&#x94A5;.</li>
+<li>&#x70B9;&#x51FB; <code>Add SSH key</code> &#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x8FD9;&#x4E00;&#x6B65;.</li>
+</ul>
+<h3 id="4-&#x68C0;&#x67E5;SSH&#x94FE;&#x63A5;"><a href="#4-&#x68C0;&#x67E5;SSH&#x94FE;&#x63A5;" class="headerlink" title="4. &#x68C0;&#x67E5;SSH&#x94FE;&#x63A5;"></a>4. <strong>&#x68C0;&#x67E5;SSH&#x94FE;&#x63A5;</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure>
+<p>&#x5982;&#x679C;&#x663E;&#x793A; : Are you sure you want continue connecting (yes/no)?    &#x8F93;&#x5165;yes      &#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x4E5F;&#x6CA1;&#x4E8B;</p>
+<p>&#x6700;&#x7EC8;&#x663E;&#x793A;:  Hi  yourusername! You&#x2019;re &#x2026;&#x2026;&#x2026;  &#x5C31;ok&#x4E86;</p>
+<p>&#x53C2;&#x8003;&#x94FE;&#x63A5;: <a href="http://www.jianshu.com/p/0d7038102cd6" target="_blank" rel="external">http://www.jianshu.com/p/0d7038102cd6</a>  &#x8BE6;&#x60C5;&#x53EF;&#x70B9;&#x51FB;&#x67E5;&#x770B;.</p>
+<h3 id="5-&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;&#x4EE3;&#x7801;&#x5427;"><a href="#5-&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;&#x4EE3;&#x7801;&#x5427;" class="headerlink" title="5. &#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;&#x4EE3;&#x7801;&#x5427; !"></a>5. <strong>&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;&#x4EE3;&#x7801;&#x5427; !</strong></h3><blockquote>
+<ul class="ui list">
+<li>git status   // &#x68C0;&#x67E5;&#x72B6;&#x6001;.   &#x4E00;&#x822C;&#x7528;&#x4E8E;&#x67E5;&#x770B;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x6709;&#x65E0;&#x6539;&#x52A8;.</li>
+<li>git add .   // &#x66F4;&#x65B0;&#x6539;&#x52A8;.</li>
+<li>git commit -m &#x201C;first commit&#x201D;  // &#x63D0;&#x4EA4;&#x66F4;&#x65B0;&#x5230;&#x6682;&#x5B58;&#x533A;&#x5E76;&#x6CE8;&#x91CA;&#x662F;&#x201D;first commit&#x201D;     <strong>PS</strong> &#x8FD9;&#x4E2A;-m&#x540E;&#x9762; &#x4E00;&#x5B9A;&#x8981;&#x6709;<code>&quot;String&quot;</code> &#x4E0D;&#x7136;&#x4F1A;&#x591A;&#x9EBB;&#x70E6;&#x7684;.</li>
+<li>git push // &#x63D0;&#x4EA4;&#x5230;Github</li>
+</ul>
+</blockquote>
+<h3 id="6-&#x5E38;&#x89C1;&#x95EE;&#x9898;-2"><a href="#6-&#x5E38;&#x89C1;&#x95EE;&#x9898;-2" class="headerlink" title="6. &#x5E38;&#x89C1;&#x95EE;&#x9898;"></a>6. <strong>&#x5E38;&#x89C1;&#x95EE;&#x9898;</strong></h3><p>&#x2003;&#x2003;&#x6536;&#x96C6;&#x4E2D;&#x2026;&#x2026;.</p>
+<h2 id="Windows&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;"><a href="#Windows&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;" class="headerlink" title="Windows&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;"></a>Windows&#x4E0B;&#x7684;git&#x547D;&#x4EE4;&#x884C;</h2><h3 id="1-Git-shell&#x4ECB;&#x7ECD;"><a href="#1-Git-shell&#x4ECB;&#x7ECD;" class="headerlink" title="1. Git shell&#x4ECB;&#x7ECD;"></a>1. <strong>Git shell&#x4ECB;&#x7ECD;</strong></h3><h3 id="2-&#x5BC6;&#x94A5;&#x751F;&#x6210;"><a href="#2-&#x5BC6;&#x94A5;&#x751F;&#x6210;" class="headerlink" title="2. &#x5BC6;&#x94A5;&#x751F;&#x6210;"></a>2. <strong>&#x5BC6;&#x94A5;&#x751F;&#x6210;</strong></h3><h3 id="3-&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github-1"><a href="#3-&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github-1" class="headerlink" title="3. &#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github"></a>3. <strong>&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#x5230;Github</strong></h3><h3 id="4-&#x68C0;&#x67E5;SSH&#x8FDE;&#x63A5;"><a href="#4-&#x68C0;&#x67E5;SSH&#x8FDE;&#x63A5;" class="headerlink" title="4. &#x68C0;&#x67E5;SSH&#x8FDE;&#x63A5;"></a>4. <strong>&#x68C0;&#x67E5;SSH&#x8FDE;&#x63A5;</strong></h3><h3 id="5-&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;"><a href="#5-&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;" class="headerlink" title="5. &#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;"></a>5. <strong>&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x4E0A;&#x4F20;</strong></h3><h3 id="6-&#x5E38;&#x89C1;&#x95EE;&#x9898;-3"><a href="#6-&#x5E38;&#x89C1;&#x95EE;&#x9898;-3" class="headerlink" title="6. &#x5E38;&#x89C1;&#x95EE;&#x9898;"></a>6. <strong>&#x5E38;&#x89C1;&#x95EE;&#x9898;</strong></h3><p>&#x200B;        </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;使用Github来托管你的代码&quot;&gt;&lt;a href=&quot;#使用Github来托管你的代码&quot; class=&quot;headerlink&quot; title=&quot;使用Github来托管你的代码&quot;&gt;&lt;/a&gt;使用Github来托管你的代码&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;须知&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;写在前面的话:&lt;/code&gt;&lt;/strong&gt;         如果你自认为是做技术的,  我强烈推荐你  &lt;strong&gt;学会翻墙&lt;/strong&gt;,  好处不用多说,  讲道理某度搜索真的会误人! ! !&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;关于使用客户端还是命令行&lt;/code&gt;&lt;/strong&gt;     两个都可以上传你的代码,  就是看你喜欢哪种风格了.   &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;善于使用左侧目录跳转&lt;/code&gt;&lt;/strong&gt;     这篇文章比较长, 我把客户端和命令行放在一起了.   所以请读者合理使用左侧目录跳转, 以节省时间.&lt;/li&gt;
+&lt;li&gt;本文是从小白开始的教程, 大牛勿喷. 再说. 这是我第一次写, 难免过于幼稚.  体谅哈~&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://petergooo.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="github" scheme="https://petergooo.github.io/tags/github/"/>
+    
+      <category term="github page" scheme="https://petergooo.github.io/tags/github-page/"/>
     
   </entry>
   

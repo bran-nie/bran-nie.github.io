@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://petergooo.github.io/2018/08/01/2018-start/</loc>
-    
-    <lastmod>2018-08-01T08:37:37.461Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://petergooo.github.io/2017/06/07/css-select/</loc>
     
-    <lastmod>2017-06-08T01:56:34.000Z</lastmod>
+    <lastmod>2018-08-01T11:53:11.313Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://petergooo.github.io/2017/06/06/git/</loc>
+    <loc>https://petergooo.github.io/2017/05/05/brower_meta/</loc>
     
-    <lastmod>2017-06-07T02:50:38.000Z</lastmod>
+    <lastmod>2018-08-01T11:28:35.496Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://petergooo.github.io/tags/index.html</loc>
+    
+    <lastmod>2018-08-01T10:24:27.093Z</lastmod>
     
   </url>
   
@@ -58,27 +58,6 @@
   </url>
   
   <url>
-    <loc>https://petergooo.github.io/2016/12/16/blog/</loc>
-    
-    <lastmod>2017-06-05T14:10:45.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://petergooo.github.io/2017/05/05/browerMETA/</loc>
-    
-    <lastmod>2017-05-05T15:02:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://petergooo.github.io/2017/03/16/MyWebroad/</loc>
-    
-    <lastmod>2017-03-17T03:40:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://petergooo.github.io/2017/03/04/ife-phantomjs/</loc>
     
     <lastmod>2017-03-04T14:34:18.000Z</lastmod>
@@ -86,37 +65,9 @@
   </url>
   
   <url>
-    <loc>https://petergooo.github.io/2016/12/04/Fcc/</loc>
-    
-    <lastmod>2016-12-16T11:31:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://petergooo.github.io/2016/12/12/night/</loc>
     
     <lastmod>2016-12-12T03:11:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://petergooo.github.io/2016/12/04/Writing/</loc>
-    
-    <lastmod>2016-12-12T02:54:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://petergooo.github.io/tags/index.html</loc>
-    
-    <lastmod>2016-12-06T09:02:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://petergooo.github.io/2016/12/04/hello-world/</loc>
-    
-    <lastmod>2016-12-05T04:55:58.000Z</lastmod>
     
   </url>
   

@@ -4,23 +4,8 @@
 
     
   <url>
-    <loc>https://petergooo.github.io/2018/08/01/2018-start/</loc>
-    <lastmod>2018-08-01T08:37:37.461Z</lastmod>
-    <data>
-        <display>
-        <title>2018_start</title>
-        <pubTime>2018-08-01T07:39:31.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://petergooo.github.io/2017/06/07/css-select/</loc>
-    <lastmod>2017-06-08T01:56:34.000Z</lastmod>
+    <lastmod>2018-08-01T11:53:11.313Z</lastmod>
     <data>
         <display>
         <title>css_那些被忽略但有时又很强的选择器</title>
@@ -39,26 +24,27 @@
 
     
   <url>
-    <loc>https://petergooo.github.io/2017/06/06/git/</loc>
-    <lastmod>2017-06-07T02:50:38.000Z</lastmod>
+    <loc>https://petergooo.github.io/2017/05/05/brower_meta/</loc>
+    <lastmod>2018-08-01T11:28:35.496Z</lastmod>
     <data>
         <display>
-        <title>git_</title>
-        <pubTime>2017-06-06T13:15:56.000Z</pubTime>
+        <title>360浏览器、QQ浏览器等 <meta>标签选择webkit内核问题</title>
+        <pubTime>2017-05-05T10:47:16.000Z</pubTime>
         
-        <tag>github</tag>
+        <tag>浏览器</tag>
          
-        <tag>git</tag>
+        <tag>HTML5标签</tag>
          
          
            
              
-              <breadCrumb title="教程" url="https://petergooo.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+              <breadCrumb title="前端" url="https://petergooo.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
     </url>
 
+    
     
   <url>
     <loc>https://petergooo.github.io/2016/12/19/css01/</loc>
@@ -146,68 +132,6 @@
     
     
   <url>
-    <loc>https://petergooo.github.io/2016/12/16/blog/</loc>
-    <lastmod>2017-06-05T14:10:45.000Z</lastmod>
-    <data>
-        <display>
-        <title>这个blog 你需要知道的</title>
-        <pubTime>2016-12-16T11:32:14.000Z</pubTime>
-        
-        <tag>top</tag>
-         
-         
-           
-             
-              <breadCrumb title="Known" url="https://petergooo.github.io/categories/Known/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://petergooo.github.io/2017/05/05/browerMETA/</loc>
-    <lastmod>2017-05-05T15:02:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>360浏览器、QQ浏览器等 <meta>标签选择webkit内核问题</title>
-        <pubTime>2017-05-05T10:47:16.000Z</pubTime>
-        
-        <tag>Brower</tag>
-         
-        <tag>HTML5标签</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端" url="https://petergooo.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://petergooo.github.io/2017/03/16/MyWebroad/</loc>
-    <lastmod>2017-03-17T03:40:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>MyWebRoad</title>
-        <pubTime>2017-03-16T15:50:04.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端" url="https://petergooo.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://petergooo.github.io/2017/03/04/ife-phantomjs/</loc>
     <lastmod>2017-03-04T14:34:18.000Z</lastmod>
     <data>
@@ -230,26 +154,6 @@
 
     
   <url>
-    <loc>https://petergooo.github.io/2016/12/04/Fcc/</loc>
-    <lastmod>2016-12-16T11:31:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>Fcc 须知</title>
-        <pubTime>2016-12-04T15:06:15.000Z</pubTime>
-        
-        <tag>Fcc 闯关</tag>
-         
-         
-           
-             
-              <breadCrumb title="Fcc" url="https://petergooo.github.io/categories/Fcc/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://petergooo.github.io/2016/12/12/night/</loc>
     <lastmod>2016-12-12T03:11:44.000Z</lastmod>
     <data>
@@ -264,42 +168,6 @@
              
               <breadCrumb title="随笔" url="https://petergooo.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://petergooo.github.io/2016/12/04/Writing/</loc>
-    <lastmod>2016-12-12T02:54:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>Write</title>
-        <pubTime>2016-12-04T15:56:22.000Z</pubTime>
-        
-        <tag>生活</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="https://petergooo.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>https://petergooo.github.io/2016/12/04/hello-world/</loc>
-    <lastmod>2016-12-05T04:55:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2016-12-04T07:57:31.000Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>
