@@ -61,16 +61,16 @@
   
     
     <entry>
-      <title><![CDATA[404 Not Found: 该网页无法显示]]></title>
-      <url>https://petergooo.github.io//404.html</url>
-      <content type="html"></content>
+      <title><![CDATA[三大究极问题之一:  我是谁?]]></title>
+      <url>https://petergooo.github.io/about/index.html</url>
+      <content type="html"><![CDATA[&#x8DEF;&#x8FD8;&#x957F;&#x7740;&#x5462;Learn hexo &#x6807;&#x9898;?]]></content>
 
     </entry>
     
     <entry>
-      <title><![CDATA[三大究极问题之一:  我是谁?]]></title>
-      <url>https://petergooo.github.io/about/index.html</url>
-      <content type="html"><![CDATA[&#x8DEF;&#x8FD8;&#x957F;&#x7740;&#x5462;Learn hexo &#x6807;&#x9898;?]]></content>
+      <title><![CDATA[404 Not Found: 该网页无法显示]]></title>
+      <url>https://petergooo.github.io//404.html</url>
+      <content type="html"></content>
 
     </entry>
     
