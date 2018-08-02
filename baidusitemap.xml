@@ -4,71 +4,8 @@
 
     
   <url>
-    <loc>https://petergooo.github.io/2017/06/07/css-select/</loc>
-    <lastmod>2018-08-01T11:53:11.313Z</lastmod>
-    <data>
-        <display>
-        <title>css_那些被忽略但有时又很强的选择器</title>
-        <pubTime>2017-06-07T04:38:00.000Z</pubTime>
-        
-        <tag>CSS</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端" url="https://petergooo.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://petergooo.github.io/2017/05/05/brower_meta/</loc>
-    <lastmod>2018-08-01T11:28:35.496Z</lastmod>
-    <data>
-        <display>
-        <title>360浏览器、QQ浏览器等 <meta>标签选择webkit内核问题</title>
-        <pubTime>2017-05-05T10:47:16.000Z</pubTime>
-        
-        <tag>浏览器</tag>
-         
-        <tag>HTML5标签</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端" url="https://petergooo.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>https://petergooo.github.io/2016/12/19/css01/</loc>
-    <lastmod>2017-06-07T02:47:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>css3 一些样式</title>
-        <pubTime>2016-12-19T05:52:14.000Z</pubTime>
-        
-        <tag>CSS</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端" url="https://petergooo.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://petergooo.github.io/2016/12/05/steamroller/</loc>
-    <lastmod>2017-06-05T14:17:02.000Z</lastmod>
+    <lastmod>2018-08-01T13:23:54.642Z</lastmod>
     <data>
         <display>
         <title>Fcc --- Steamroller</title>
@@ -78,9 +15,6 @@
          
          
            
-             
-              <breadCrumb title="Fcc" url="https://petergooo.github.io/categories/Fcc/"/>
-          
         </display>
     </data>
     </url>
@@ -88,15 +22,13 @@
     
   <url>
     <loc>https://petergooo.github.io/2016/12/18/Github_2/</loc>
-    <lastmod>2017-06-05T14:16:02.000Z</lastmod>
+    <lastmod>2018-08-01T13:23:19.761Z</lastmod>
     <data>
         <display>
         <title>Github 的注册与使用教程以及github page (二)</title>
         <pubTime>2016-12-18T14:47:16.000Z</pubTime>
         
         <tag>github</tag>
-         
-        <tag>github page</tag>
          
          
            
@@ -110,15 +42,13 @@
     
   <url>
     <loc>https://petergooo.github.io/2016/12/08/Github_1/</loc>
-    <lastmod>2017-06-05T14:15:10.000Z</lastmod>
+    <lastmod>2018-08-01T13:23:15.342Z</lastmod>
     <data>
         <display>
         <title>Github 的注册与使用教程以及github page (一)</title>
         <pubTime>2016-12-08T14:47:16.000Z</pubTime>
         
         <tag>github</tag>
-         
-        <tag>github page</tag>
          
          
            
@@ -129,6 +59,69 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>https://petergooo.github.io/2016/12/19/css01/</loc>
+    <lastmod>2018-08-01T13:23:03.626Z</lastmod>
+    <data>
+        <display>
+        <title>css3 一些样式</title>
+        <pubTime>2016-12-19T05:52:14.000Z</pubTime>
+        
+        <tag>CSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://petergooo.github.io/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://petergooo.github.io/2017/06/07/css-select/</loc>
+    <lastmod>2018-08-01T13:22:57.336Z</lastmod>
+    <data>
+        <display>
+        <title>css_那些被忽略但有时又很强的选择器</title>
+        <pubTime>2017-06-07T04:38:00.000Z</pubTime>
+        
+        <tag>CSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://petergooo.github.io/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://petergooo.github.io/2017/05/05/brower_meta/</loc>
+    <lastmod>2018-08-01T13:22:50.929Z</lastmod>
+    <data>
+        <display>
+        <title>360浏览器、QQ浏览器等 <meta>标签选择webkit内核问题</title>
+        <pubTime>2017-05-05T10:47:16.000Z</pubTime>
+        
+        <tag>浏览器</tag>
+         
+        <tag>HTML5标签</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://petergooo.github.io/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
   <url>
