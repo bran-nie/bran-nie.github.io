@@ -4,8 +4,52 @@
 
     
   <url>
+    <loc>https://petergooo.github.io/2018/08/07/promise/base-use/</loc>
+    <lastmod>2018-08-07T08:15:35.040Z</lastmod>
+    <data>
+        <display>
+        <title>ES6 - - - Promise(基本用法)</title>
+        <pubTime>2018-08-07T08:09:49.000Z</pubTime>
+        
+        <tag>Promise</tag>
+         
+        <tag>ES6</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://petergooo.github.io/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://petergooo.github.io/2018/08/07/promise/about/</loc>
+    <lastmod>2018-08-07T08:15:29.887Z</lastmod>
+    <data>
+        <display>
+        <title>ES6 - - - Promise(简介)</title>
+        <pubTime>2018-08-07T08:01:20.000Z</pubTime>
+        
+        <tag>Promise</tag>
+         
+        <tag>ES6</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://petergooo.github.io/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://petergooo.github.io/2018/08/02/mac-server/</loc>
-    <lastmod>2018-08-02T07:46:23.795Z</lastmod>
+    <lastmod>2018-08-02T08:37:16.278Z</lastmod>
     <data>
         <display>
         <title>简单开启Mac下的服务器</title>
