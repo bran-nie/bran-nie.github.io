@@ -1,8 +1,15 @@
-.post-content {
-  display: inline;
+body {
+  font-size: 16px!important;
 }
-.post-content div {
-  padding-top: 10px;
+.item {
+  margin-bottom: 10px;
+}
+.item .post-content {
+  display: inline;
+  color: inherit;
+}
+.item .post-content div {
+  padding-top: 5px;
 }
 footer {
   bottom: 0;
@@ -31,11 +38,11 @@ pre {
 .tag-container .ui.dividing.header {
   vertical-align: middle;
 }
-.tag-container .list .item{
-    margin-bottom: 5px;
+.tag-container .list .item {
+  margin-bottom: 5px;
 }
-.tag-container .list .item time{
-    margin-right: 15px;
+.tag-container .list .item time {
+  margin-right: 15px;
 }
 #search-modal #search-results .highlight {
   background-color: #c6e6f4;
@@ -94,17 +101,15 @@ pre {
 #article-toc {
   top: 55px;
 }
-
-#category .category-item{
-    margin-bottom: 10px;
+#category .category-item {
+  margin-bottom: 10px;
 }
-#category .category-item time{
-    margin-right: 15px;
+#category .category-item time {
+  margin-right: 15px;
 }
-
 .article-entry pre,
 .article-entry code {
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  font-family: Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
   background: #eee;
@@ -196,7 +201,7 @@ pre {
 }
 .article-entry .gist .gist-file {
   border: none;
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  font-family: Consolas, Monaco, Menlo, Consolas, monospace;
   margin: 0;
 }
 .article-entry .gist .gist-file .gist-data {
