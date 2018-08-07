@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://petergooo.github.io/2018/08/07/js/prototype/</loc>
+    
+    <lastmod>2018-08-07T10:19:44.692Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://petergooo.github.io/about/index.html</loc>
+    
+    <lastmod>2018-08-07T09:40:04.673Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://petergooo.github.io/2018/08/07/promise/base-use/</loc>
     
     <lastmod>2018-08-07T08:15:35.040Z</lastmod>
@@ -89,13 +103,6 @@
     <loc>https://petergooo.github.io/2016/12/12/night/</loc>
     
     <lastmod>2016-12-12T03:11:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://petergooo.github.io/about/index.html</loc>
-    
-    <lastmod>2016-12-04T15:47:00.000Z</lastmod>
     
   </url>
   
