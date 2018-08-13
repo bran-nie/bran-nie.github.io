@@ -115,6 +115,7 @@ pre {
   background: #eee;
   text-shadow: 0 1px #fff;
   padding: 0 0.3em;
+  color: #c7254e;
 }
 .article-entry pre {
   background: #2d2d2d;
@@ -132,6 +133,17 @@ pre {
   background: none;
   text-shadow: none;
   padding: 0;
+}
+.article-entry blockquote {
+  margin: 0 0 20px;
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: #f7f7f7;
+  border-left: 6px solid #b4b4b4;
+  word-break: break-word !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
 }
 .article-entry .highlight {
   background: #2d2d2d;
