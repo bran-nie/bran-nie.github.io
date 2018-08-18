@@ -20,7 +20,7 @@
 对嵌套的数组进行扁平化处理。你必须考虑到不同层级的嵌套。如果你被卡住了，
 ​     记得开大招 Read-Search-Ask。尝试与他人结伴编程、编写你自己的代码。">
 <meta property="og:image" content="https://petergooo.github.io/blog/imgs/Fcc/pass.jpg">
-<meta property="og:updated_time" content="2018-08-01T13:23:54.642Z">
+<meta property="og:updated_time" content="2018-08-18T10:40:56.241Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fcc --- Steamroller">
 <meta name="twitter:description" content="题目描述
@@ -232,7 +232,7 @@
 <p>&#x63D0;&#x4F9B;&#x7684;&#x8D44;&#x6E90;:</p>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank" rel="external">Array.isArray()</a></p>
 </blockquote>
-<h1 id="&#x5F80;&#x4E0B;&#x7EE7;&#x7EED;&#x4E4B;&#x524D;-&#x5E0C;&#x671B;&#x4F60;&#x82B1;&#x4E24;&#x5206;&#x949F;&#x770B;&#x770B;&#x8FD9;&#x4E2A;Fcc-&#x987B;&#x77E5;"><a href="#&#x5F80;&#x4E0B;&#x7EE7;&#x7EED;&#x4E4B;&#x524D;-&#x5E0C;&#x671B;&#x4F60;&#x82B1;&#x4E24;&#x5206;&#x949F;&#x770B;&#x770B;&#x8FD9;&#x4E2A;Fcc-&#x987B;&#x77E5;" class="headerlink" title="&#x5F80;&#x4E0B;&#x7EE7;&#x7EED;&#x4E4B;&#x524D;, &#x5E0C;&#x671B;&#x4F60;&#x82B1;&#x4E24;&#x5206;&#x949F;&#x770B;&#x770B;&#x8FD9;&#x4E2A;Fcc &#x987B;&#x77E5;"></a>&#x5F80;&#x4E0B;&#x7EE7;&#x7EED;&#x4E4B;&#x524D;, &#x5E0C;&#x671B;&#x4F60;&#x82B1;&#x4E24;&#x5206;&#x949F;&#x770B;&#x770B;&#x8FD9;&#x4E2A;<a href="https://petergooo.github.io/blog/2016/12/04/Fcc/">Fcc &#x987B;&#x77E5;</a></h1><h1 id="&#x9898;&#x76EE;&#x89E3;&#x6790;"><a href="#&#x9898;&#x76EE;&#x89E3;&#x6790;" class="headerlink" title="&#x9898;&#x76EE;&#x89E3;&#x6790;"></a>&#x9898;&#x76EE;&#x89E3;&#x6790;</h1><h2 id="&#x7406;&#x89E3;&#x9898;&#x610F;"><a href="#&#x7406;&#x89E3;&#x9898;&#x610F;" class="headerlink" title="&#x7406;&#x89E3;&#x9898;&#x610F;"></a>&#x7406;&#x89E3;&#x9898;&#x610F;</h2><blockquote>
+<h1 id="&#x9898;&#x76EE;&#x89E3;&#x6790;"><a href="#&#x9898;&#x76EE;&#x89E3;&#x6790;" class="headerlink" title="&#x9898;&#x76EE;&#x89E3;&#x6790;"></a>&#x9898;&#x76EE;&#x89E3;&#x6790;</h1><h2 id="&#x7406;&#x89E3;&#x9898;&#x610F;"><a href="#&#x7406;&#x89E3;&#x9898;&#x610F;" class="headerlink" title="&#x7406;&#x89E3;&#x9898;&#x610F;"></a>&#x7406;&#x89E3;&#x9898;&#x610F;</h2><blockquote>
 <p>&#x4F55;&#x4E3A;&#x6241;&#x5E73;&#x5316;&#x5904;&#x7406;.   </p>
 <ul class="ui list">
 <li>&#x5982;<code>steamroller([[[&quot;a&quot;]], [[&quot;b&quot;]]])</code> &#x5E94;&#x8BE5;&#x8FD4;&#x56DE; <code>[&quot;a&quot;, &quot;b&quot;]</code>  &#x5C31;&#x662F;&#x628A;&#x6570;&#x7EC4;&#x4E2D;&#x7A7A;&#x7684;&#x503C;, &#x5D4C;&#x5957;&#x7684;&#x503C;&#x7B49;&#x7B49;&#x6700;&#x7EC8;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53EA;&#x6709;&#x4E00;&#x5C42;&#x7684;&#x6570;&#x7EC4;.   &#x65E2;&#x5B8C;&#x6210;&#x4E86;Fcc&#x7684;&#x6311;&#x6218;.</li>
@@ -345,7 +345,7 @@
 
                 <div class="ui sticky article-toc" id="article-toc">
                     <!-- toc -->
-                    <ol class="ui ordered list"><li><a href="#题目描述"><span>题目描述</span></a></li><li><a href="#往下继续之前-希望你花两分钟看看这个Fcc-须知"><span>往下继续之前, 希望你花两分钟看看这个Fcc 须知</span></a></li><li><a href="#题目解析"><span>题目解析</span></a><ol><li><a href="#理解题意"><span>理解题意</span></a></li><li><a href="#前期思考"><span>前期思考</span></a></li><li><a href="#代码示范"><span>代码示范</span></a><ol><li><a href="#一个同学的代码示例"><span>一个同学的代码示例</span></a></li><li><a href="#代码分析"><span>代码分析</span></a></li><li><a href="#我的代码示例"><span>我的代码示例</span></a></li></ol></li></ol></li><li><a href="#资源汇总"><span>资源汇总</span></a></li><li><a href="#最后"><span>最后</span></a></li></ol></li></ol>
+                    <ol class="ui ordered list"><li><a href="#题目描述"><span>题目描述</span></a></li><li><a href="#题目解析"><span>题目解析</span></a><ol><li><a href="#理解题意"><span>理解题意</span></a></li><li><a href="#前期思考"><span>前期思考</span></a></li><li><a href="#代码示范"><span>代码示范</span></a><ol><li><a href="#一个同学的代码示例"><span>一个同学的代码示例</span></a></li><li><a href="#代码分析"><span>代码分析</span></a></li><li><a href="#我的代码示例"><span>我的代码示例</span></a></li></ol></li></ol></li><li><a href="#资源汇总"><span>资源汇总</span></a></li><li><a href="#最后"><span>最后</span></a></li></ol></li></ol>
                 </div>
 
             </div>
