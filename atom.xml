@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://petergooo.github.io/"/>
-  <updated>2018-08-23T03:52:23.040Z</updated>
+  <updated>2018-09-18T10:16:48.793Z</updated>
   <id>https://petergooo.github.io/</id>
   
   <author>
@@ -14,6 +14,92 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux命令- - - scp   服务器间传输，基于ssh</title>
+    <link href="https://petergooo.github.io/2018/09/18/commands/scp/"/>
+    <id>https://petergooo.github.io/2018/09/18/commands/scp/</id>
+    <published>2018-09-18T09:47:16.000Z</published>
+    <updated>2018-09-18T10:16:48.793Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>&#x5173;&#x4E8E;&#x6B64;tag&#xFF0C;emmm&#xFF0C;&#x5728;&#x5DE5;&#x4F5C;&#x5B66;&#x4E60;&#x4E2D;&#xFF0C;&#x63A5;&#x89E6;&#x5230;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;&#x662F;&#x5FC5;&#x4E0D;&#x53EF;&#x5C11;&#x7684;&#x4E86;&#xFF0C;&#x6709;&#x65F6;&#xFF0C;&#x6211;&#x89C9;&#x5F97;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;&#x633A;&#x6709;&#x7528;&#x5904;&#xFF0C;&#x5C31;&#x4F1A;&#x5C1D;&#x8BD5;&#x7740;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#xFF0C;&#x5E0C;&#x671B;&#x80FD;&#x575A;&#x6301;&#x3002;&#x8FD9;&#x4E2A;&#x662F;&#x7B2C;&#x4E00;&#x7BC7;&#xFF0C;&#x50CF;&#x662F;&#x6587;&#x6863;&#x4E00;&#x6837;&#xFF0C;&#x540C;&#x65F6;&#x5E0C;&#x671B;&#x4EE5;&#x540E;&#x80FD;&#x66F4;&#x6709;&#x8DA3;&#x7684;&#x4ECB;&#x7ECD;Linux commands&#x3002;&#x1F495;</p>
+</blockquote>
+<p>  &#x2026;</p>
+<blockquote>
+<p>scp&#x662F; secure copy&#x7684;&#x7F29;&#x5199;&#xFF0C;scp&#x662F;Linux&#x7CFB;&#x7EDF;&#x4E0B;&#x57FA;&#x4E8E;ssh&#x767B;&#x5F55;&#xFF0C;&#x8FDB;&#x884C;&#x7684;&#x8FDC;&#x7A0B;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x547D;&#x4EE4;</p>
+</blockquote>
+<h3 id="scp&#x7B80;&#x6613;&#x5199;&#x6CD5;"><a href="#scp&#x7B80;&#x6613;&#x5199;&#x6CD5;" class="headerlink" title="scp&#x7B80;&#x6613;&#x5199;&#x6CD5;"></a>scp&#x7B80;&#x6613;&#x5199;&#x6CD5;</h3><p>scp &#x3010;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x3011;&#x3010;&#x539F;&#x8DEF;&#x5F84;&#x3011; &#x3010;&#x76EE;&#x6807;&#x8DEF;&#x5F84;&#x3011;</p>
+<h3 id="&#x53EF;&#x9009;&#x53C2;&#x6570;-&#x5E38;&#x89C1;"><a href="#&#x53EF;&#x9009;&#x53C2;&#x6570;-&#x5E38;&#x89C1;" class="headerlink" title="&#x53EF;&#x9009;&#x53C2;&#x6570;  (&#x5E38;&#x89C1;)"></a>&#x53EF;&#x9009;&#x53C2;&#x6570;  (&#x5E38;&#x89C1;)</h3><ul class="ui list">
+<li>-r&#xFF1A;&#x9012;&#x5F52;&#x590D;&#x5236;&#x6574;&#x4E2A;&#x76EE;&#x5F55;</li>
+<li>-C&#xFF1A;&#x5141;&#x8BB8;&#x538B;&#x7F29;</li>
+<li>-p&#xFF1A;&#x4FDD;&#x7559;&#x539F;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF0C;&#x8BBF;&#x95EE;&#x65F6;&#x95F4;&#xFF0C;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x3002;</li>
+<li>-P port&#xFF1A;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x7528;&#x5230;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#x3002;&#x5982; -P 8080</li>
+<li>-I limit&#xFF1A;&#x9650;&#x5B9A;&#x7528;&#x6237;&#x6240;&#x80FD;&#x4F7F;&#x7528;&#x7684;&#x5E26;&#x5BBD;&#xFF0C;kbit/s &#x4E3A;&#x5355;&#x4F4D;</li>
+<li>-v&#xFF1A;&#x8BE6;&#x7EC6;&#x65B9;&#x5F0F;&#x663E;&#x793A;&#x8F93;&#x51FA;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x8C03;&#x8BD5;&#x8FDE;&#x63A5;&#xFF0C;&#x9A8C;&#x8BC1;&#x548C;&#x914D;&#x7F6E;&#x95EE;&#x9898;&#x3002;</li>
+<li>-i identity_file&#xFF1A; &#x4ECE;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;&#x4F20;&#x8F93;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x5BC6;&#x94A5;&#x6587;&#x4EF6;&#xFF0C;&#x6B64;&#x53C2;&#x6570;&#x76F4;&#x63A5;&#x4F20;&#x9012;&#x7ED9;ssh&#x3002;</li>
+</ul>
+<h3 id="&#x793A;&#x4F8B;"><a href="#&#x793A;&#x4F8B;" class="headerlink" title="&#x793A;&#x4F8B;"></a>&#x793A;&#x4F8B;</h3><ol class="ui list">
+<li><h4 id="&#x4ECE;&#x672C;&#x5730;&#x4E0A;&#x4F20;&#x5230;&#x8FDC;&#x7AEF;&#xFF0C;&#xFF08;1&#x3001;2&#x9700;&#x8981;&#x5DF2;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x7684;&#x5BC6;&#x7801;&#xFF0C;3&#x3001;4&#x9700;&#x8981;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#xFF09;"><a href="#&#x4ECE;&#x672C;&#x5730;&#x4E0A;&#x4F20;&#x5230;&#x8FDC;&#x7AEF;&#xFF0C;&#xFF08;1&#x3001;2&#x9700;&#x8981;&#x5DF2;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x7684;&#x5BC6;&#x7801;&#xFF0C;3&#x3001;4&#x9700;&#x8981;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#xFF09;" class="headerlink" title="&#x4ECE;&#x672C;&#x5730;&#x4E0A;&#x4F20;&#x5230;&#x8FDC;&#x7AEF;&#xFF0C;&#xFF08;1&#x3001;2&#x9700;&#x8981;&#x5DF2;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x7684;&#x5BC6;&#x7801;&#xFF0C;3&#x3001;4&#x9700;&#x8981;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#xFF09;"></a>&#x4ECE;&#x672C;&#x5730;&#x4E0A;&#x4F20;&#x5230;&#x8FDC;&#x7AEF;&#xFF0C;&#xFF08;1&#x3001;2&#x9700;&#x8981;&#x5DF2;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x7684;&#x5BC6;&#x7801;&#xFF0C;3&#x3001;4&#x9700;&#x8981;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#xFF09;</h4><ol>
+<li><code>scp /www/test.txt root@192.168.1.1:/www/scp</code>   &#x4E0A;&#x4F20;&#x5230;&#x8FDC;&#x7AEF;&#x7684;scp&#x76EE;&#x5F55;&#x4E0B;     </li>
+<li><code>scp /www/test.txt root@192.168.1.1:/www/scp/new_test.txt</code>   &#x4E0A;&#x4F20;&#x5230;&#x8FDC;&#x7AEF;&#x7684;scp&#x76EE;&#x5F55;&#x4E0B;&#x5E76;&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x540D;</li>
+<li><code>scp /www/test.txt 192.168.1.1:/www/scp</code>   &#x4E0A;&#x4F20;&#x5230;&#x8FDC;&#x7AEF;&#x7684;scp&#x76EE;&#x5F55;&#x4E0B; </li>
+<li><code>scp /www/test.txt 192.168.1.1:/www/scp</code>  &#x4E0A;&#x4F20;&#x5230;&#x8FDC;&#x7AEF;&#x7684;scp&#x76EE;&#x5F55;&#x4E0B;&#x5E76;&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x540D;</li>
+<li>&#x5982;&#x679C;&#x662F;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5C31;&#x52A0;&#x4E0A; -r &#x53C2;&#x6570;&#xFF0C;&#x5982; <code>scp -r /www/test/ 192.168.1.1:/www/scp/</code></li>
+<li>PS&#xFF1A;&#x8FD9;&#x91CC;&#x6709;&#x4E2A;&#x5173;&#x4E8E;&#x6743;&#x9650;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5982;&#x679C;&#x767B;&#x5F55;&#x5230;&#x8FDC;&#x7A0B;&#x7684;&#x7528;&#x6237;&#x662F;&#x666E;&#x901A;&#x7528;&#x6237;&#xFF0C;&#x5219;&#x4E0D;&#x80FD;&#x4E0A;&#x4F20;&#x5230;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x800C;&#x662F;&#x4E0A;&#x4F20;&#x5230;&#x7528;&#x6237;&#x76EE;&#x5F55;&#x3002;</li>
+</ol>
+</li>
+<li><h4 id="&#x4ECE;&#x8FDC;&#x7AEF;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;"><a href="#&#x4ECE;&#x8FDC;&#x7AEF;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;" class="headerlink" title="&#x4ECE;&#x8FDC;&#x7AEF;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;"></a>&#x4ECE;&#x8FDC;&#x7AEF;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;</h4><ol>
+<li>&#x4E0B;&#x8F7D;&#x548C;&#x4E0A;&#x4F20;&#x7C7B;&#x4F3C;&#xFF0C;&#x6362;&#x6362;&#x4E0A;&#x9762;&#x7684;&#x4F4D;&#x7F6E;&#x5373;&#x53EF;&#x3002;&#x5982;  <code>scp -r 192.168.1.1:/www/scp/ /www/test/</code></li>
+<li>PS&#xFF1A;&#x5982;&#x679C;&#x8FDC;&#x7A0B;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5F00;&#x542F;&#x9632;&#x706B;&#x5899;&#x5E76;&#x6307;&#x5B9A;&#x7684;scp&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x4F7F;&#x7528; -P&#x53C2;&#x6570;&#x6765;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E2A;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x5982;<code>scp -r -P 8080 192.168.1.1:/www/scp/ /www/test/</code></li>
+</ol>
+</li>
+</ol>
+<h3 id="&#x8865;&#x5145;"><a href="#&#x8865;&#x5145;" class="headerlink" title="&#x8865;&#x5145;"></a>&#x8865;&#x5145;</h3><p>&#x4E0A;&#x9762;&#x4E24;&#x4E2A;ps&#x3002;</p>
+<p>scp&#x547D;&#x4EE4;&#x4E5F;&#x662F;&#x9700;&#x8981;&#x6743;&#x9650;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x8981;&#x786E;&#x4FDD;&#x8FDE;&#x63A5;&#x7684;&#x7528;&#x6237;&#x5177;&#x6709;&#x53EF;&#x8BFB;&#x53D6;&#x670D;&#x52A1;&#x5668;&#x76F8;&#x5E94;&#x6587;&#x4EF6;&#x7684;&#x6743;&#x9650;&#x3002;&#x5426;&#x5219;&#x5C31; <code>Permission denied</code> &#x1F31A;</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&amp;#x5173;&amp;#x4E8E;&amp;#x6B64;tag&amp;#xFF0C;emmm&amp;#xFF0C;&amp;#x5728;&amp;#x5DE5;&amp;#x4F5C;&amp;#x5B66;&amp;#x4E60;&amp;#x4E2D;&amp;#xFF0C;&amp;#x63A5;&amp;#x89E6;&amp;#x52
+    
+    </summary>
+    
+      <category term="教程" scheme="https://petergooo.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="command" scheme="https://petergooo.github.io/tags/command/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WordPress是什么</title>
+    <link href="https://petergooo.github.io/2018/09/17/wordpress/about/"/>
+    <id>https://petergooo.github.io/2018/09/17/wordpress/about/</id>
+    <published>2018-09-17T09:47:16.000Z</published>
+    <updated>2018-09-18T09:42:34.316Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>WordPress&#x662F;&#x4E00;&#x6B3E;&#x4E13;&#x6CE8;&#x4E8E;&#x6613;&#x7528;&#x6027;&#x3001;&#x8FD0;&#x884C;&#x901F;&#x5EA6;&#x548C;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x7684;&#x53D1;&#x5E03;&#x8F6F;&#x4EF6;&#x3002;</p>
+</blockquote>
+<p>WordPress&#x662F;&#x4E00;&#x4E2A;&#x4E2A;&#x4EBA;&#x53D1;&#x5E03;&#x5E73;&#x53F0;&#xFF0C;&#x8BBE;&#x8BA1;&#x8005;&#x662F;&#x60F3;&#x7ED9;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x81EA;&#x7531;&#x5206;&#x53D1;&#x5185;&#x5BB9;&#xFF0C;&#x6807;&#x51C6;&#x517C;&#x5BB9;&#xFF0C;&#x5FEB;&#x901F;&#xFF0C;&#x8F7B;&#x91CF;&#x7EA7;&#x4EE5;&#x53CA;&#x53EF;&#x4EE5;&#x514D;&#x8D39;&#x7684;&#x4E2A;&#x4EBA;&#x53D1;&#x5E03;&#x5E73;&#x53F0;&#x3002;   &#x5185;&#x5BB9;&#x5305;&#x62EC;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#x3002;</p>
+<h3 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;WordPress"><a href="#&#x5982;&#x4F55;&#x4F7F;&#x7528;WordPress" class="headerlink" title="&#x5982;&#x4F55;&#x4F7F;&#x7528;WordPress"></a>&#x5982;&#x4F55;&#x4F7F;&#x7528;WordPress</h3><p>&#x5B83;&#x53EF;&#x4EE5;&#x5728;&#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#x5EFA;&#x7ACB;&#x8D26;&#x53F7;&#xFF0C;&#x7528;&#x6765;&#x7BA1;&#x7406;&#x521B;&#x5EFA;&#x7684;&#x7AD9;&#x70B9;&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x81EA;&#x5DF1;&#x5B89;&#x88C5;WordPress&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x8FD0;&#x884C;&#x5728;&#x4E2A;&#x4EBA;&#x7684;&#x4E3B;&#x673A;&#x4E0A;&#x3002;&#x5982;&#x679C;&#x662F;&#x540E;&#x8005;&#xFF0C;&#x5219;&#x9700;&#x8981;PHP4.3&#x53CA;&#x4EE5;&#x4E0A;&#x7684;&#x7248;&#x672C;&#xFF0C;MySQL v4&#x53CA;&#x4EE5;&#x4E0A;&#x7684;&#x7248;&#x672C;&#x3002;</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;WordPress&amp;#x662F;&amp;#x4E00;&amp;#x6B3E;&amp;#x4E13;&amp;#x6CE8;&amp;#x4E8E;&amp;#x6613;&amp;#x7528;&amp;#x6027;&amp;#x3001;&amp;#x8FD0;&amp;#x884C;&amp;#x901F;&amp;#x5EA6;&amp;#x
+    
+    </summary>
+    
+      <category term="教程" scheme="https://petergooo.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="WordPress" scheme="https://petergooo.github.io/tags/WordPress/"/>
+    
+  </entry>
   
   <entry>
     <title>JS 变量、作用域和内存问题（一） </title>
@@ -217,117 +303,6 @@
       <category term="Class" scheme="https://petergooo.github.io/tags/Class/"/>
     
       <category term="ES6" scheme="https://petergooo.github.io/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS 原型 --- [[ prototype ]]</title>
-    <link href="https://petergooo.github.io/2018/08/07/js-base/prototype/"/>
-    <id>https://petergooo.github.io/2018/08/07/js-base/prototype/</id>
-    <published>2018-08-07T08:39:40.000Z</published>
-    <updated>2018-08-18T10:36:43.163Z</updated>
-    
-    <content type="html"><![CDATA[<p>JavaScript&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x6709;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x5C5E;&#x6027;&#xFF1A;[[prototype]]&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x5185;&#x7F6E;&#x5C5E;&#x6027;&#x3002;</p>
-<p>&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5B83;&#x662F;&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x3002;  PS&#xFF1A;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x7684;&#x5BF9;&#x8C61;&#x5728;&#x521B;&#x5EFA;&#x65F6;&#xFF0C;&#x8BE5;&#x5C5E;&#x6027;&#x90FD;&#x4F1A;&#x88AB;&#x8D4B;&#x4E88;&#x4E00;&#x4E2A;&#x975E;&#x7A7A;&#x7684;&#x503C;&#x3002;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// egg-1</span></div><div class="line"><span class="keyword">let</span> myObject = {</div><div class="line">    <span class="attr">a</span>: <span class="number">2</span></div><div class="line">}</div><div class="line">myObject.a;   <span class="comment">// 2</span></div></pre></td></tr></table></figure>
-<p>&#x5F53;&#x6211;&#x4EEC;&#x8BD5;&#x56FE;&#x5F15;&#x7528;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x65F6;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1;[[ get ]]&#x64CD;&#x4F5C;&#xFF0C;&#x5C31;&#x50CF;&#x4E0A;&#x9762;&#x7684;myObject.a&#x3002;  &#x5BF9;&#x4E8E;get&#x64CD;&#x4F5C;&#x6765;&#x8BF4;&#xFF0C;&#x7B2C;&#x4E00;&#x6B65;&#x662F;&#x68C0;&#x67E5;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;&#x662F;&#x5426;&#x6709;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x90A3;&#x5C31;&#x4F7F;&#x7528;&#x5B83;&#x3002; &#x5982;&#x679C;&#x6CA1;&#x6709;&#x5462;&#xFF1F; &#x5F80;&#x4E0B;&#x770B;&#x3002;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// egg-2</span></div><div class="line"><span class="keyword">let</span> anotherObject = {</div><div class="line">  <span class="attr">a</span>: <span class="number">2</span></div><div class="line">}</div><div class="line"><span class="keyword">let</span> myObject = <span class="built_in">Object</span>.create(anotherObject);</div><div class="line">myObject.a; <span class="comment">// 2</span></div></pre></td></tr></table></figure>
-<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;myObject&#x662F;&#x6CA1;&#x6709;a&#x5C5E;&#x6027;&#x7684;&#xFF0C;&#x4F46;&#x4F7F;&#x7528;Object.create()&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x5E76;&#x5173;&#x8054; [[ prototype ]] &#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;a&#x5C5E;&#x6027;&#x4E86;&#x3002;</p>
-<p>&#x5982;&#x679C;a&#x4E0D;&#x518D;myObject&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C31;&#x4F1A;&#x7EE7;&#x7EED;&#x8BBF;&#x95EE;&#x5BF9;&#x8C61;&#x7684; [[ prototype ]]&#xFF0C;&#x4E00;&#x5C42;&#x4E00;&#x5C42;&#x7684;&#x5F80;&#x4E0A;&#x8BBF;&#x95EE;&#xFF0C;&#x80FD;&#x627E;&#x5230;&#x5C31;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x6700;&#x540E;&#x4E5F;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x8FD4;&#x56DE;&#x503C;&#x662F;undefined&#x3002;</p>
-<p>tip&#xFF1A;&#x4F7F;&#x7528;for&#x2026;in&#x904D;&#x5386;&#x5BF9;&#x8C61;&#x539F;&#x7406; &#x548C; &#x67E5;&#x627E;[[ prototype ]]&#x94FE; &#x7C7B;&#x4F3C;&#xFF0C;&#x4EFB;&#x4F55;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x539F;&#x578B;&#x94FE;&#x8BBF;&#x95EE;&#x5230;&#xFF08;&#x5E76;&#x4E14;&#x662F;enumerable&#xFF09;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x90FD;&#x4F1A;&#x88AB;&#x679A;&#x4E3E;&#x3002;&#x4F7F;&#x7528;in&#x64CD;&#x4F5C;&#x7B26;&#x6765;&#x68C0;&#x67E5;&#x5C5E;&#x6027;&#x5728;&#x5BF9;&#x8C61;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#xFF0C;&#x540C;&#x6837;&#x4F1A;&#x67E5;&#x627E;&#x5BF9;&#x8C61;&#x7684;&#x6574;&#x6761;&#x539F;&#x578B;&#x94FE;&#x3002;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// egg-3</span></div><div class="line"><span class="keyword">let</span> anotherObject = {</div><div class="line">  <span class="attr">a</span>: <span class="number">2</span></div><div class="line">};</div><div class="line"><span class="keyword">let</span> myObject = <span class="built_in">Object</span>.create(anotherObject);</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> k <span class="keyword">in</span> myObject){</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;found: &quot;</span> + k);</div><div class="line">}</div><div class="line"><span class="comment">// found: a</span></div><div class="line"><span class="string">&quot;a&quot;</span> <span class="keyword">in</span> myObject;   <span class="comment">// true</span></div></pre></td></tr></table></figure>
-<p>&#x56E0;&#x6B64;&#xFF0C;&#x5F53;&#x4F60;&#x901A;&#x8FC7;&#x5404;&#x79CD;&#x8BED;&#x6CD5;&#x8FDB;&#x884C;&#x5C5E;&#x6027;&#x67E5;&#x627E;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x67E5;&#x627E;&#x539F;&#x578B;&#x94FE;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x5C5E;&#x6027;&#x6216;&#x8005;&#x67E5;&#x627E;&#x6574;&#x6761;&#x539F;&#x578B;&#x94FE;&#x3002;</p>
-<h3 id="Object-prototype"><a href="#Object-prototype" class="headerlink" title="Object.prototype"></a>Object.prototype</h3><p>&#x65E2;&#x7136;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x539F;&#x578B;&#x94FE;&#x4E00;&#x76F4;&#x5F80;&#x4E0A;&#x67E5;&#x8BE2;&#xFF0C;&#x90A3;&#x4E48;&#x54EA;&#x91CC;&#x662F;&#x539F;&#x578B;&#x94FE;&#x7684;&#x5C3D;&#x5934;&#x5462;&#xFF1F;</p>
-<p>&#x6240;&#x6709; <em>&#x666E;&#x901A;&#x7684;</em> &#x539F;&#x578B;&#x94FE;&#xFF0C;&#x6700;&#x7EC8;&#x90FD;&#x4F1A;&#x6307;&#x5411;Object.prototype&#x3002; &#x666E;&#x901A;&#x662F;&#x6307;&#x7684;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x62D3;&#x5C55;&#x3002;<br>&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x58F0;&#x660E;&#x51E0;&#x4E2A;&#x6E90;&#x4E8E;Object.prototype&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4F1A;&#x5305;&#x542B;&#x4E00;&#x4E9B;&#x901A;&#x7528;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5982;&#xFF1A;toString()&#xFF0C;hasOwnProperty()&#xFF0C;&#x7B49;&#x7B49;&#x7B49;&#x3002;</p>
-<h3 id="&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x548C;&#x5C4F;&#x853D;"><a href="#&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x548C;&#x5C4F;&#x853D;" class="headerlink" title="&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x548C;&#x5C4F;&#x853D;"></a>&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x548C;&#x5C4F;&#x853D;</h3><blockquote>
-<p>&#x7ED9;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x8BBE;&#x7F6E;&#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x5C5E;&#x6027; &#x6216; &#x4FEE;&#x6539;&#x5DF2;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x3002;</p>
-</blockquote>
-<p>&#x5728;&#x4E0A;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5728;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x5219;&#x4F1A;&#x6CBF;&#x7740;&#x539F;&#x578B;&#x94FE;&#x5F80;&#x4E0A;&#x67E5;&#x627E;&#x3002;&#x90A3;&#x4E48;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x5BF9;myObject.a&#x91CD;&#x65B0;&#x8D4B;&#x503C;&#xFF0C;&#x4F1A;&#x600E;&#x4E48;&#x6837;&#xFF1F;try to&#x3002;</p>
-<p>&#x5982;&#x679C; a &#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x5B58;&#x5728;&#x4E0E;myObject&#x4E2D;&#xFF0C;[[ prototype ]]&#x94FE;&#x5C31;&#x4F1A;&#x88AB;&#x904D;&#x5386;&#xFF0C;&#x5982;&#x679C;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x627E;&#x4E0D;&#x5230;a&#xFF0C;&#x90A3;&#x4E48;a&#x5C31;&#x4F1A;&#x88AB;&#x8D4B;&#x503C;&#x5230;myObject&#x4E0A;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x80FD;&#x627E;&#x5230;&#x65F6;&#xFF0C;&#x8D4B;&#x503C;&#x884C;&#x4E3A;&#x5C31;&#x4F1A;&#x6709;&#x51FA;&#x4E4E;&#x610F;&#x6599;&#x7684;&#x7ED3;&#x679C;&#x4E86;&#x3002;</p>
-<p>&#x5982;&#x679C;&#x5C5E;&#x6027;&#x540D;a&#x5373;&#x51FA;&#x73B0;&#x5728;myObject&#x4E0A;&#xFF0C;&#x53C8;&#x51FA;&#x73B0;&#x5728;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x53D1;&#x751F; &#x5C4F;&#x853D;&#x3002;myObject.a&#x4F1A;&#x5C4F;&#x853D;&#x4E0A;&#x5C42;&#x6240;&#x6709;&#x7684;foo&#x5C5E;&#x6027;&#x3002;&#x56E0;&#x4E3A;myObject.a&#x603B;&#x662F;&#x4F1A;&#x9009;&#x62E9;&#x539F;&#x578B;&#x94FE;&#x6700;&#x5E95;&#x5C42;&#x7684;a&#x5C5E;&#x6027;&#x3002;</p>
-<p>&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5C5E;&#x6027;&#x5C4F;&#x853D;&#x6BD4;&#x6211;&#x4EEC;&#x60F3;&#x8C61;&#x7684;&#x8FD8;&#x8981;&#x590D;&#x6742;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x4E0D;&#x518D;&#x5BF9;&#x8C61;&#x4E2D;(myObject)&#x800C;&#x662F;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x5C42;&#x65F6;&#xFF0C;&#x8FD9;&#x65F6;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x4F1A;&#x51FA;&#x73B0;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#x3002;</p>
-<ul class="ui list">
-<li>&#x5982;&#x679C;&#x5728;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x5B58;&#x5728;&#x5C5E;&#x6027;a&#xFF0C;&#x662F;&#x666E;&#x901A;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x4E14;&#x6CA1;&#x6709;&#x6807;&#x8BB0;&#x4E3A;&#x53EA;&#x8BFB;&#xFF08;writable&#xFF1A;false&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x5728;myObject&#x5BF9;&#x8C61;&#x4E0A;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;a&#x7684;&#x65B0;&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x5C4F;&#x853D;&#x4E86;&#x4E0A;&#x5C42;&#x7684;&#x5C5E;&#x6027;&#x3002;</li>
-<li>&#x5982;&#x679C;&#x5728;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x5B58;&#x5728;&#x5C5E;&#x6027;a&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x662F;&#x53EA;&#x8BFB;&#x5C5E;&#x6027;&#xFF0C;&#x90A3;&#x4E48;&#x65E0;&#x6CD5;&#x4FEE;&#x6539;&#x5DF2;&#x6709;&#x5C5E;&#x6027;&#x6216;&#x8005;&#x5728;myObject&#x5BF9;&#x8C61;&#x4E0A;&#x521B;&#x5EFA;&#x65B0;&#x5C5E;&#x6027;&#x3002;&#x5982;&#x679C;&#x6B64;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x5728;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x4EE3;&#x7801;&#x4F1A;&#x629B;&#x51FA;&#x9519;&#x8BEF;&#x3002;&#x5426;&#x5219;&#xFF0C;&#x8FD9;&#x6761;&#x8BED;&#x53E5;&#x4E0D;&#x4F1A;&#x751F;&#x6548;&#x3002;</li>
-<li>&#x5982;&#x679C;&#x5728;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#x5B58;&#x5728;&#x5C5E;&#x6027;a&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x662F;&#x4E00;&#x4E2A;setter&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4E00;&#x5B9A;&#x4F1A;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;setter&#xFF0C;a&#x5C31;&#x4E0D;&#x4F1A;&#x6DFB;&#x52A0;&#x5230;myObject&#x5BF9;&#x8C61;&#x4E0A;&#x3002;</li>
-</ul>
-<p>&#x5BF9;&#x4E8E;&#x7B2C;&#x4E8C;&#x7B2C;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x5982;&#x679C;&#x4E5F;&#x60F3;&#x5C4F;&#x853D;&#x5C5E;&#x6027;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x800C;&#x662F;&#x4F7F;&#x7528;Object.defineProperty()&#x6765;&#x5411;myObject&#x6DFB;&#x52A0;&#x65B0;&#x5C5E;&#x6027;&#x3002;</p>
-<p>PS&#xFF1A;&#x6709;&#x4E9B;&#x65F6;&#x5019;&#x53EF;&#x80FD;&#x4F1A;&#x4EA7;&#x751F;&#x9690;&#x5F0F;&#x7684;&#x5C4F;&#x853D;&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x4E0B;&#x3002;</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// egg-4</span></div><div class="line"><span class="keyword">let</span> anotherObject = {</div><div class="line">  <span class="attr">a</span>: <span class="number">2</span></div><div class="line">};</div><div class="line"><span class="keyword">let</span> myObject = <span class="built_in">Object</span>.create(anotherObject);</div><div class="line"></div><div class="line">anotherObject.a; <span class="comment">// 2</span></div><div class="line">myObject.a; <span class="comment">// 2</span></div><div class="line">anotherObject.hasOwnProperty(<span class="string">&quot;a&quot;</span>); <span class="comment">// true</span></div><div class="line">myObject.hasOwnProperty(<span class="string">&quot;a&quot;</span>); <span class="comment">// false</span></div><div class="line"></div><div class="line">myObject.a++; <span class="comment">// &#x9690;&#x5F0F;&#x5C4F;&#x853D;&#xFF01;</span></div><div class="line">anotherObject.a; <span class="comment">// 2</span></div><div class="line">myObject.a; <span class="comment">// 3</span></div><div class="line"></div><div class="line">myObject.hasOwnProperty(<span class="string">&quot;a&quot;</span>); <span class="comment">// true</span></div></pre></td></tr></table></figure>
-<p>&#x8FD9;&#x91CC;&#xFF0C;&#x5C3D;&#x7BA1;myObject.a++&#x770B;&#x8D77;&#x6765;&#x50CF;&#x662F;&#x67E5;&#x627E;&#x5E76;&#x589E;&#x52A0;anotherObject.a&#x7684;&#x503C;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C; val++ &#x64CD;&#x4F5C;&#x7B26;&#x76F8;&#x5F53;&#x4E8E; val = val + 1&#xFF1B;&#x56E0;&#x6B64;&#x8FD9;&#x91CC;&#x662F;&#x5148;&#x7ED9;myObject&#x589E;&#x52A0;&#x4E00;&#x4E2A;a&#x65B0;&#x5C5E;&#x6027;&#xFF0C;&#x518D;&#x67E5;&#x627E;&#x5230;anotherOb.a&#x7684;&#x503C;&#xFF0C;&#x4F7F;&#x4E4B;&#x52A0;&#x4E00;&#xFF0C;&#x8D4B;&#x503C;&#x7ED9;myObject&#x3002;</p>
-<h3 id="&#x76F8;&#x5173;"><a href="#&#x76F8;&#x5173;" class="headerlink" title="&#x76F8;&#x5173;"></a><strong>&#x76F8;&#x5173;</strong></h3><ol class="ui list">
-<li><p>&#x5C5E;&#x6027;&#x63CF;&#x8FF0;&#x7B26;&#xFF1A;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5728;es5&#x5F00;&#x59CB;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; Object.getOwnPropertyDescriptor(obj, key)&#xFF1B;&#x83B7;&#x53D6;&#x5B83;&#x7684;&#x5C5E;&#x6027;&#x63CF;&#x8FF0;&#x7B26;&#x3002;writable&#xFF08;&#x8BFB;&#xFF09;    enumerable&#xFF08;&#x679A;&#x4E3E;&#xFF09;  &#x548C;  configurable&#xFF08;&#x914D;&#x7F6E;&#xFF09;&#xFF0C;&#x503C;&#x4E3A;&#x5E03;&#x5C14;&#x503C;&#x3002;</p>
-</li>
-<li><p>Object.defineProperty() &#x5728;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;&#x6216;&#x8005;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.defineProperty(obj, key, {</div><div class="line">  <span class="attr">value</span>: <span class="number">2</span>,</div><div class="line">  <span class="attr">writable</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">enumerable</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">configurable</span>: <span class="literal">true</span></div><div class="line">})</div></pre></td></tr></table></figure>
-<p>&#x5F53;&#x7136;&#xFF0C;&#x4E00;&#x822C;&#x6211;&#x4EEC;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x9664;&#x975E;&#x662F;&#x60F3;&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x63CF;&#x8FF0;&#x7B26;&#x3002;</p>
-<p>&#x200B;</p>
-</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;JavaScript&amp;#x4E2D;&amp;#x7684;&amp;#x5BF9;&amp;#x8C61;&amp;#x6709;&amp;#x4E00;&amp;#x4E2A;&amp;#x7279;&amp;#x6B8A;&amp;#x7684;&amp;#x5C5E;&amp;#x6027;&amp;#xFF1A;[[prototype]]&amp;#xFF0C;&amp;#
-    
-    </summary>
-    
-      <category term="Programming" scheme="https://petergooo.github.io/categories/Programming/"/>
-    
-      <category term="Web" scheme="https://petergooo.github.io/categories/Programming/Web/"/>
-    
-    
-      <category term="prototype" scheme="https://petergooo.github.io/tags/prototype/"/>
-    
-      <category term="js_base" scheme="https://petergooo.github.io/tags/js-base/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ES6 --- Promise(基本用法)</title>
-    <link href="https://petergooo.github.io/2018/08/07/promise/base-use/"/>
-    <id>https://petergooo.github.io/2018/08/07/promise/base-use/</id>
-    <published>2018-08-07T08:09:49.000Z</published>
-    <updated>2018-08-18T10:36:29.756Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>&#x5728;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x4E86;Promise&#x51E0;&#x4E2A;&#x7279;&#x70B9;&#x548C;&#x7F3A;&#x70B9;&#x540E;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x770B;Promise&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x7528;&#x6CD5;&#xFF0C;&#x770B;&#x770B;&#x662F;&#x4E0D;&#x662F;&#x5F88;&#x7279;&#x6027;&#xFF0C;&#x53E6;&#x5916;&#x5B9E;&#x8DF5;&#x662F;&#x5F88;&#x597D;&#x7684;&#x6821;&#x9A8C;&#x65B9;&#x5F0F;&#x3002;</p>
-</blockquote>
-<h2 id="1-&#x521B;&#x5EFA;Promise&#x5BF9;&#x8C61;"><a href="#1-&#x521B;&#x5EFA;Promise&#x5BF9;&#x8C61;" class="headerlink" title="1. &#x521B;&#x5EFA;Promise&#x5BF9;&#x8C61;"></a>1. &#x521B;&#x5EFA;Promise&#x5BF9;&#x8C61;</h2><a id="more"></a>
-<ul class="ui list">
-<li><p>&#x4F7F;&#x7528;new&#x5173;&#x952E;&#x8BCD;&#xFF0C;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;Promise&#x5BF9;&#x8C61;&#x3002;(ES6 &#x89C4;&#x5B9A;&#xFF0C;<code>Promise</code>&#x5BF9;&#x8C61;&#x662F;&#x4E00;&#x4E2A;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x751F;&#x6210;<code>Promise</code>&#x5B9E;&#x4F8B;&#x3002;)</p>
-<p><code>let p = new Promise()</code></p>
-<p>&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> {</div><div class="line">  <span class="comment">// &#x5F02;&#x6B65;&#x64CD;&#x4F5C;</span></div><div class="line">  <span class="keyword">if</span>(<span class="comment">/*&#x5F02;&#x6B65;&#x64CD;&#x4F5C;OK*/</span>){</div><div class="line">     resolve(val)</div><div class="line">  } <span class="keyword">else</span> {</div><div class="line">    reject(error)</div><div class="line">  }</div><div class="line">}</div></pre></td></tr></table></figure>
-<p>&#x5728;&#x5B9E;&#x4F8B;&#x5316;Promise&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x6784;&#x9020;&#x51FD;&#x6570;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5B83;&#x4EEC;&#x662F;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;  &#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x6210;&#x529F;&#x65F6;&#xFF0C;&#x5C06;&#x5BF9;&#x8C61;&#x72B6;&#x6001;&#x7531;&#x7B49;&#x5F85;&#x53D8;&#x66F4;&#x4E3A;&#x6210;&#x529F;&#x72B6;&#x6001;&#x7684; resolve&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x53C2;&#x6570;&#x662F;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x7136;&#x540E;&#x4F20;&#x9012;&#x51FA;&#x53BB;&#xFF1B; &#x7B2C;&#x4E8C;&#x4E2A;&#x662F;  &#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x5931;&#x8D25;&#x65F6;&#xFF0C;&#x5C06;&#x5BF9;&#x8C61;&#x72B6;&#x6001;&#x7531;&#x7B49;&#x5F85;&#x53D8;&#x66F4;&#x4E3A;&#x5931;&#x8D25;&#x72B6;&#x6001;&#x7684; reject&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x53C2;&#x6570;&#x662F;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x62A5;&#x9519;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x51FA;&#x53BB;&#x3002;</p>
-</li>
-</ul>
-<h2 id="2-&#x4F7F;&#x7528;then&#x65B9;&#x6CD5;-catch-&#x94FE;&#x5F0F;&#x5904;&#x7406;&#x5BF9;&#x8C61;&#x8FD4;&#x56DE;&#x503C;"><a href="#2-&#x4F7F;&#x7528;then&#x65B9;&#x6CD5;-catch-&#x94FE;&#x5F0F;&#x5904;&#x7406;&#x5BF9;&#x8C61;&#x8FD4;&#x56DE;&#x503C;" class="headerlink" title="2. &#x4F7F;&#x7528;then&#x65B9;&#x6CD5;(catch)&#x94FE;&#x5F0F;&#x5904;&#x7406;&#x5BF9;&#x8C61;&#x8FD4;&#x56DE;&#x503C;"></a>2. &#x4F7F;&#x7528;then&#x65B9;&#x6CD5;(catch)&#x94FE;&#x5F0F;&#x5904;&#x7406;&#x5BF9;&#x8C61;&#x8FD4;&#x56DE;&#x503C;</h2><ul class="ui list">
-<li><p>&#x4E00;&#x4E2A;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x94FE;&#x5F0F;&#x7684;&#x4F7F;&#x7528;then&#x65B9;&#x6CD5;&#xFF0C;then&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x5176;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;&#x5BF9;&#x8C61;&#x72B6;&#x6001;&#x4E3A;resolve&#x65F6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x662F;&#x5BF9;&#x8C61;&#x72B6;&#x6001;&#x4E3A;reject&#x65F6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;  <em>&#x5176;&#x4E2D;&#x7B2C;&#x4E8C;&#x4E2A;&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x4E00;&#x822C;&#x4F1A;&#x7528;catch&#x65B9;&#x6CD5;&#x6355;&#x83B7;</em></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> {</div><div class="line">  setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> resolve(<span class="string">&apos;resolve&apos;</span>), <span class="number">1000</span>)&#xFF1B;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">&apos;Promise&apos;</span>)</div><div class="line">})</div><div class="line"></div><div class="line">p.then(<span class="function"><span class="params">val</span> =&gt;</span> {</div><div class="line">  <span class="built_in">console</span>.log(val);</div><div class="line">}, error =&gt; {</div><div class="line">  <span class="built_in">console</span>.log(error);</div><div class="line">})</div><div class="line"><span class="comment">// &#x7B49;&#x540C;&#x4F7F;&#x7528;catch</span></div><div class="line">p.then(<span class="function"><span class="params">val</span> =&gt;</span> {</div><div class="line">  <span class="built_in">console</span>.log(val);</div><div class="line">}).catch(<span class="function"><span class="params">error</span> =&gt;</span> {</div><div class="line">  <span class="built_in">console</span>.log(error)</div><div class="line">})</div><div class="line"><span class="built_in">console</span>.log(<span class="string">&apos;hi&apos;</span>);</div><div class="line"></div><div class="line"><span class="comment">// Promise</span></div><div class="line"><span class="comment">// hi</span></div><div class="line"><span class="comment">// resolve</span></div></pre></td></tr></table></figure>
-<p>tip&#xFF1A;&#x5173;&#x4E8E;&#x6267;&#x884C;&#x987A;&#x5E8F;&#xFF0C;Promise&#x5728;&#x521B;&#x5EFA;&#x540E;&#x4F1A;&#x7ACB;&#x523B;&#x6267;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x6253;&#x5370;&#x201C;Promise&#x201D;&#xFF0C;&#x5176;&#x6B21;&#x662F;&#x201C;hi&#x201D;&#xFF0C;&#x5176;&#x56DE;&#x8C03;&#x51FD;&#x6570;then&#x65B9;&#x6CD5;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x811A;&#x672C;&#x4EE3;&#x7801;&#x6240;&#x6709;&#x7684;&#x540C;&#x6B65;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x5B8C;&#x624D;&#x4F1A;&#x6267;&#x884C;&#x3002;</p>
-<p>&#x200B;</p>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;在简单介绍了Promise几个特点和缺点后，让我们看看Promise一些基本用法，看看是不是很特性，另外实践是很好的校验方式。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;1-创建Promise对象&quot;&gt;&lt;a href=&quot;#1-创建Promise对象&quot; class=&quot;headerlink&quot; title=&quot;1. 创建Promise对象&quot;&gt;&lt;/a&gt;1. 创建Promise对象&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="Programming" scheme="https://petergooo.github.io/categories/Programming/"/>
-    
-      <category term="Web" scheme="https://petergooo.github.io/categories/Programming/Web/"/>
-    
-    
-      <category term="ES6" scheme="https://petergooo.github.io/tags/ES6/"/>
-    
-      <category term="Promise" scheme="https://petergooo.github.io/tags/Promise/"/>
     
   </entry>
   
