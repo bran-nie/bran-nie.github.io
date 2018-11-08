@@ -1,14 +1,14 @@
 body {
   font-size: 16px!important;
 }
-.item {
+.list .item {
   margin-bottom: 10px;
 }
-.item .post-content {
+.list .item .post-content {
   display: inline;
   color: inherit;
 }
-.item .post-content div {
+.list .item .post-content div {
   padding-top: 5px;
 }
 footer {
