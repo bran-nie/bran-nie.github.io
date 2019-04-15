@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="执念">
 <meta property="og:description" content="&amp;#x9898;&amp;#x76EE;&amp;#x82F1;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;Longest Substring Without Repeating Characters 
 &amp;#x4E2D;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;&amp;#x65E0;&amp;#x91CD;&amp;#x590D;&amp;#x5B57;&amp;#x7B26;&amp;#x7684;&amp;#x6700;">
-<meta property="og:updated_time" content="2019-04-15T15:04:44.185Z">
+<meta property="og:updated_time" content="2019-04-15T15:07:01.511Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="01-01-#3 --- 331">
 <meta name="twitter:description" content="&amp;#x9898;&amp;#x76EE;&amp;#x82F1;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;Longest Substring Without Repeating Characters 
@@ -221,8 +221,7 @@
                         <h2 id="&#x9898;&#x76EE;"><a href="#&#x9898;&#x76EE;" class="headerlink" title="&#x9898;&#x76EE;"></a>&#x9898;&#x76EE;</h2><p>&#x82F1;&#x6587;&#x9898;&#x76EE;&#xFF1A;<a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="external">Longest Substring Without Repeating Characters</a> </p>
 <p>&#x4E2D;&#x6587;&#x9898;&#x76EE;&#xFF1A;<a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="external">&#x65E0;&#x91CD;&#x590D;&#x5B57;&#x7B26;&#x7684;&#x6700;&#x957F;&#x5B50;&#x4E32;</a></p>
 <h2 id="&#x601D;&#x8DEF;"><a href="#&#x601D;&#x8DEF;" class="headerlink" title="&#x601D;&#x8DEF;"></a>&#x601D;&#x8DEF;</h2><p>&#x6211;&#x6628;&#x665A;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x9898;&#xFF0C;&#x6C42;&#x7ED9;&#x5B9A;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x76F8;&#x90BB;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x6700;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#x7684;length&#x3002;</p>
-<p>&#x7B2C;&#x4E00;&#x7248;&#x672C;</p>
-<p>&#x60F3;&#x4E86;&#x4E00;&#x60F3;&#xFF0C;&#x5927;&#x6982;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#x662F;&#x904D;&#x5386;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E14;&#x5728;&#x540C;&#x65F6;&#x8BB0;&#x5F55;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x6C42;&#x5176;length&#x3002;</p>
+<h3 id="&#x7B2C;&#x4E00;&#x7248;&#x672C;"><a href="#&#x7B2C;&#x4E00;&#x7248;&#x672C;" class="headerlink" title="&#x7B2C;&#x4E00;&#x7248;&#x672C;"></a>&#x7B2C;&#x4E00;&#x7248;&#x672C;</h3><p>&#x60F3;&#x4E86;&#x4E00;&#x60F3;&#xFF0C;&#x5927;&#x6982;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#x662F;&#x904D;&#x5386;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E14;&#x5728;&#x540C;&#x65F6;&#x8BB0;&#x5F55;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x6C42;&#x5176;length&#x3002;</p>
 <p>&#x6253;&#x7B97;&#x7528;JS&#x7684;Set&#x8FDB;&#x884C;&#x91CD;&#x590D;&#x5224;&#x65AD;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x7528;&#x5230;&#x6570;&#x7EC4;&#xFF0C;OK&#xFF0C;</p>
 <ol class="ui list">
 <li>&#x5C06;&#x7ED9;&#x5B9A; sring &#x5206;&#x9694;&#x4E3A;&#x6570;&#x7EC4;&#xFF0C;&#x8FDB;&#x884C;forEach&#xFF08;&#x540E;&#x6765;&#x6539;&#x6210;some&#xFF0C;&#x56E0;&#x4E3A;&#x53EF;&#x4EE5;&#x63D0;&#x524D;&#x9000;&#x51FA;&#xFF09;&#x904D;&#x5386;&#xFF0C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x64CD;&#x4F5C;&#x3002;</li>
@@ -232,8 +231,7 @@
 <li>&#x904D;&#x5386;&#x5B8C;&#x8FD4;&#x56DE;maxLength&#xFF0C;</li>
 </ol>
 <p>&#x7ED3;&#x679C;gg&#x4E86;&#xFF0C;&#x5BF9;&#x4E8E;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#x8F93;&#x5165;&#xFF0C;&#x5C31;&#x4F1A;&#x8D85;&#x65F6;&#xFF0C;&#x56E0;&#x4E3A;while&#x8BED;&#x53E5;&#xFF0C;&#x591A;&#x904D;&#x5386;&#x4E86;&#x597D;&#x591A;&#x904D;&#x3002;</p>
-<p>&#x7B2C;&#x4E8C;&#x7248;&#x672C;</p>
-<p>&#x4ECA;&#x5929;&#x8003;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5199;&#x5B8C;&#x5377;&#x5B50;&#x8FD8;&#x6709;&#x65F6;&#x95F4;&#xFF0C;&#x5728;&#x60F3;&#x6628;&#x665A;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x610F;&#x8BC6;&#x5230;&#x81EA;&#x5DF1;&#x7684;&#x5927;&#x81F4;&#x65B9;&#x5411;&#x6CA1;&#x9519;&#xFF0C;&#x4F46;&#x904D;&#x5386;&#x4E0A;&#x592A;&#x8017;&#x65F6;&#x4E86;&#x3002;&#x60F3;&#x7740;&#x600E;&#x4E48;&#x80FD;&#x591F;&#x51CF;&#x5C11;&#x5FAA;&#x73AF;&#x7684;&#x6B21;&#x6570;&#x3002;</p>
+<h3 id="&#x7B2C;&#x4E8C;&#x7248;&#x672C;"><a href="#&#x7B2C;&#x4E8C;&#x7248;&#x672C;" class="headerlink" title="&#x7B2C;&#x4E8C;&#x7248;&#x672C;"></a>&#x7B2C;&#x4E8C;&#x7248;&#x672C;</h3><p>&#x4ECA;&#x5929;&#x8003;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5199;&#x5B8C;&#x5377;&#x5B50;&#x8FD8;&#x6709;&#x65F6;&#x95F4;&#xFF0C;&#x5728;&#x60F3;&#x6628;&#x665A;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x610F;&#x8BC6;&#x5230;&#x81EA;&#x5DF1;&#x7684;&#x5927;&#x81F4;&#x65B9;&#x5411;&#x6CA1;&#x9519;&#xFF0C;&#x4F46;&#x904D;&#x5386;&#x4E0A;&#x592A;&#x8017;&#x65F6;&#x4E86;&#x3002;&#x60F3;&#x7740;&#x600E;&#x4E48;&#x80FD;&#x591F;&#x51CF;&#x5C11;&#x5FAA;&#x73AF;&#x7684;&#x6B21;&#x6570;&#x3002;</p>
 <p>&#x770B;&#x7740;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7A81;&#x7136;&#x60F3;&#x5230;&#x4E86;&#x8D2A;&#x5403;&#x86C7;&#xFF0C;&#x5403;&#x4E00;&#x4E2A;&#x4E2A;&#x5757;&#x53D8;&#x957F;&#xFF0C;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x8FD8;&#x4F1A;&#x88AB;&#x622A;&#x65AD;&#x53D8;&#x77ED;&#x3002;</p>
 <p>&#x90A3;&#x6211;&#x662F;&#x4E0D;&#x662F;&#x53EA;&#x8981;&#x904D;&#x5386;&#x4E00;&#x904D;&#xFF0C;&#x5C31;&#x591F;&#x4E86;&#xFF0C;&#x4E34;&#x65F6;&#x53D8;&#x91CF;&#x5C31;&#x50CF;&#x4E00;&#x4E2A;&#x8D2A;&#x5403;&#x86C7;&#xFF0C;&#x4F9D;&#x6B21;&#x5403;&#x7ED9;&#x5B9A;string&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x9047;&#x5230;&#x91CD;&#x590D;&#x7684;&#xFF0C;&#x5C06;&#x91CD;&#x590D;&#x7684;&#x524D;&#x9762;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x622A;&#x65AD;&#xFF0C;&#x518D;&#x52A0;&#x4E0A;&#x540E;&#x9762;&#x7684;&#x90A3;&#x4E2A;&#x5B57;&#x7B26;&#x3002;</p>
 <p>OK&#xFF0C;&#x5F00;&#x59CB;&#x6574;&#x7406;&#x5927;&#x6982;&#x601D;&#x8DEF;&#x3002;</p>
@@ -301,23 +299,16 @@
             <div class="column nav-left">
                 
 
-                <a href="/2019/04/14/leetcode331/about/" class="ui tiny button">
-
-                    <i class="angle left icon"></i>
-                    
-                    LeetCode 331计划
-                    
-
-                </a>
+                <a class="ui tiny button disabled"><i class="angle left icon"></i>Previous</a>
 
                 
             </div>
             <div class="column nav-right">
                 
 
-                <a href="/2018/11/08/tools/primes/" class="ui tiny button">
+                <a href="/2019/04/14/leetcode331/about/" class="ui tiny button">
                     
-                    查找范围内的素数 - 埃拉托斯特尼筛法
+                    LeetCode 331计划
                     
                     <i class="angle right icon"></i></a>
                 
@@ -334,7 +325,7 @@
 
                 <div class="ui sticky article-toc" id="article-toc">
                     <!-- toc -->
-                    <ol class="ui ordered list"><li><a href="#题目"><span>题目</span></a></li><li><a href="#思路"><span>思路</span></a></li><li><a href="#代码"><span>代码</span></a></li></ol>
+                    <ol class="ui ordered list"><li><a href="#题目"><span>题目</span></a></li><li><a href="#思路"><span>思路</span></a><ol><li><a href="#第一版本"><span>第一版本</span></a></li><li><a href="#第二版本"><span>第二版本</span></a></li></ol></li><li><a href="#代码"><span>代码</span></a></li></ol>
                 </div>
 
             </div>
