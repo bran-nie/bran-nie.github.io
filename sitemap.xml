@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://petergooo.github.io/2019/04/18/css/2019-04-18/</loc>
+    
+    <lastmod>2019-04-25T06:17:33.422Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://petergooo.github.io/2019/04/14/leetcode331/01_01_03/</loc>
     
-    <lastmod>2019-04-15T15:07:01.511Z</lastmod>
+    <lastmod>2019-04-18T03:49:27.002Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://petergooo.github.io/2017/06/07/css/css-select/</loc>
+    
+    <lastmod>2019-04-18T03:47:00.929Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://petergooo.github.io/2016/12/19/css/css01/</loc>
+    
+    <lastmod>2019-04-18T03:45:56.912Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://petergooo.github.io/2017/03/04/tools/ife-phantomjs/</loc>
+    
+    <lastmod>2019-04-18T03:32:15.981Z</lastmod>
     
   </url>
   
@@ -16,7 +44,7 @@
   </url>
   
   <url>
-    <loc>https://petergooo.github.io/2018/11/08/tools/primes/</loc>
+    <loc>https://petergooo.github.io/2018/11/08/codewars/primes/</loc>
     
     <lastmod>2018-11-08T03:43:16.641Z</lastmod>
     
@@ -51,7 +79,7 @@
   </url>
   
   <url>
-    <loc>https://petergooo.github.io/2016/12/18/Github_2/</loc>
+    <loc>https://petergooo.github.io/2016/12/18/tools/Github_2/</loc>
     
     <lastmod>2018-08-18T10:39:22.987Z</lastmod>
     
@@ -86,49 +114,28 @@
   </url>
   
   <url>
-    <loc>https://petergooo.github.io/2017/05/05/brower_meta/</loc>
+    <loc>https://petergooo.github.io/2017/05/05/tools/brower_meta/</loc>
     
     <lastmod>2018-08-18T10:35:35.321Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://petergooo.github.io/2017/06/07/css-select/</loc>
-    
-    <lastmod>2018-08-18T10:35:19.326Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://petergooo.github.io/2016/12/19/css01/</loc>
-    
-    <lastmod>2018-08-18T10:35:09.737Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://petergooo.github.io/2016/12/08/Github_1/</loc>
+    <loc>https://petergooo.github.io/2016/12/08/tools/Github_1/</loc>
     
     <lastmod>2018-08-18T10:34:46.623Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://petergooo.github.io/2017/03/04/ife-phantomjs/</loc>
-    
-    <lastmod>2018-08-18T10:34:09.681Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://petergooo.github.io/2018/08/02/mac-server/</loc>
+    <loc>https://petergooo.github.io/2018/08/02/tools/mac-server/</loc>
     
     <lastmod>2018-08-18T10:33:57.779Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://petergooo.github.io/2018/08/13/how-to-sleep/</loc>
+    <loc>https://petergooo.github.io/2018/08/13/essay/how-to-sleep/</loc>
     
     <lastmod>2018-08-13T12:36:00.510Z</lastmod>
     
@@ -156,7 +163,7 @@
   </url>
   
   <url>
-    <loc>https://petergooo.github.io/2016/12/12/night/</loc>
+    <loc>https://petergooo.github.io/2016/12/12/essay/night/</loc>
     
     <lastmod>2016-12-12T03:11:44.000Z</lastmod>
     

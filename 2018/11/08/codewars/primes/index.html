@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="21年的时光, 目前爱好于前端~">
+    <title>查找范围内的素数 - 埃拉托斯特尼筛法 | 执念</title>
+
+    <!-- Open Graph -->
+    <meta name="description" content="&amp;#x524D;&amp;#x8A00;&amp;#x5728;&amp;#x505A;codewars&amp;#x4E00;&amp;#x4E2A;&amp;#x9898;&amp;#x76EE;&amp;#x65F6;&amp;#xFF0C;&amp;#x6D89;&amp;#x53CA;&amp;#x5230;&amp;#x7D20;&amp;#x6570;&amp;#x7684;&amp;#x8BA1;&amp;#x7B97;&amp;#xFF0C;&amp;#x4FBF;&amp;#x60F3;&amp;#x5199;&amp;#x4E2A;&amp;#x51FD;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="查找范围内的素数 - 埃拉托斯特尼筛法">
+<meta property="og:url" content="https://petergooo.github.io/2018/11/08/codewars/primes/index.html">
+<meta property="og:site_name" content="执念">
+<meta property="og:description" content="&amp;#x524D;&amp;#x8A00;&amp;#x5728;&amp;#x505A;codewars&amp;#x4E00;&amp;#x4E2A;&amp;#x9898;&amp;#x76EE;&amp;#x65F6;&amp;#xFF0C;&amp;#x6D89;&amp;#x53CA;&amp;#x5230;&amp;#x7D20;&amp;#x6570;&amp;#x7684;&amp;#x8BA1;&amp;#x7B97;&amp;#xFF0C;&amp;#x4FBF;&amp;#x60F3;&amp;#x5199;&amp;#x4E2A;&amp;#x51FD;">
+<meta property="og:image" content="https://petergooo.github.io/assets/images/prime.gif">
+<meta property="og:updated_time" content="2018-11-08T03:43:16.641Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="查找范围内的素数 - 埃拉托斯特尼筛法">
+<meta name="twitter:description" content="&amp;#x524D;&amp;#x8A00;&amp;#x5728;&amp;#x505A;codewars&amp;#x4E00;&amp;#x4E2A;&amp;#x9898;&amp;#x76EE;&amp;#x65F6;&amp;#xFF0C;&amp;#x6D89;&amp;#x53CA;&amp;#x5230;&amp;#x7D20;&amp;#x6570;&amp;#x7684;&amp;#x8BA1;&amp;#x7B97;&amp;#xFF0C;&amp;#x4FBF;&amp;#x60F3;&amp;#x5199;&amp;#x4E2A;&amp;#x51FD;">
+<meta name="twitter:image" content="https://petergooo.github.io/assets/images/prime.gif">
+
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:pengcheng1995@gmail.com",
+  "image": "undefined",
+  "name": "鹏程",
+  "url": "https://petergooo.github.io"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
+</script>
+
+    
+
+    
+    
+
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
+
+</head>
+<body id="body" style="margin-bottom: 0;" class="pushable">
+
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+        <div class="header item"><a href="/">执念</a></div>
+    </div>
+
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
+
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>执念</h3>
+        </div>
+    </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <a href="/">
+                        <img class="ui medium bordered image" src="/images/vae.jpg">
+                    </a>
+                </div>
+                <div class="content">
+                    <a class="header">鹏程</a>
+                    
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                        <div class="item">
+                            <i class="marker icon" style="float: left"></i>
+                            <div class="content">深圳</div>
+                        </div>
+                        
+                        
+                        <div class="item">
+                            <i class="mail icon" style="float: left"></i>
+                            <div class="content">
+                                <a href="mailto:pengcheng1995@gmail.com">pengcheng1995@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+
+                                <a href="https://github.com/PeterGooo"><i class="large github icon" style="float: left"></i></a>
+
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+    
+    
+
+    
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        Home
+    </a>
+
+    
+    
+
+    
+
+    
+    <a href="/categories/Web/" class="item" >
+        <i class="pencil icon"></i>
+        前端Web
+    </a>
+
+    
+    
+
+    
+
+    
+    <a href="/categories/教程/" class="item" >
+        <i class="pencil icon"></i>
+        教程
+    </a>
+
+    
+    
+
+    
+
+    
+    <a href="/categories/随笔/" class="item" >
+        <i class="pencil icon"></i>
+        随笔
+    </a>
+
+    
+    
+
+    
+
+    
+    <a href="/archives/" class="item" >
+        <i class="null icon"></i>
+        Archives
+    </a>
+
+    
+    
+
+    
+
+    
+    <a href="/about" class="item" >
+        <i class="about icon"></i>
+        About
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-codewars/primes" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    查找范围内的素数 - 埃拉托斯特尼筛法
+</h1>
+
+
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <h2 id="&#x524D;&#x8A00;"><a href="#&#x524D;&#x8A00;" class="headerlink" title="&#x524D;&#x8A00;"></a>&#x524D;&#x8A00;</h2><p>&#x5728;&#x505A;codewars&#x4E00;&#x4E2A;&#x9898;&#x76EE;&#x65F6;&#xFF0C;&#x6D89;&#x53CA;&#x5230;&#x7D20;&#x6570;&#x7684;&#x8BA1;&#x7B97;&#xFF0C;&#x4FBF;&#x60F3;&#x5199;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x67E5;&#x627E;&#x4F20;&#x5165;&#x503C;&#x8303;&#x56F4;&#x5185;&#x6240;&#x6709;&#x7684;&#x7D20;&#x6570;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E86;&#x89E3;&#x5230;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x6B64;&#x505A;&#x6B64;&#x8BB0;&#x5F55;&#xFF0C;&#x5E76;&#x6253;&#x7B97;&#x8BB0;&#x5F55;&#x7C7B;&#x4F3C;&#x5DE5;&#x5177;&#x7C7B;&#x51FD;&#x6570;&#x96C6;&#x3002;</p>
+<h2 id="&#x57C3;&#x62C9;&#x6258;&#x65AF;&#x7279;&#x5C3C;&#x7B5B;&#x6CD5;"><a href="#&#x57C3;&#x62C9;&#x6258;&#x65AF;&#x7279;&#x5C3C;&#x7B5B;&#x6CD5;" class="headerlink" title="&#x57C3;&#x62C9;&#x6258;&#x65AF;&#x7279;&#x5C3C;&#x7B5B;&#x6CD5;"></a>&#x57C3;&#x62C9;&#x6258;&#x65AF;&#x7279;&#x5C3C;&#x7B5B;&#x6CD5;</h2><p>&#x8FD9;&#x662F;&#x4E2A;&#x5173;&#x4E8E;&#x7D20;&#x6570;&#x7684;&#x5FEB;&#x901F;&#x7B5B;&#x9009;&#xFF0C;&#x8BE6;&#x60C5;&#x89C1; <a href="https://baike.baidu.com/item/%E5%9F%83%E6%8B%89%E6%89%98%E6%96%AF%E7%89%B9%E5%B0%BC%E7%AD%9B%E6%B3%95" target="_blank" rel="external">&#x57C3;&#x62C9;&#x6258;&#x65AF;&#x7279;&#x5C3C;&#x7B5B;&#x6CD5;-&#x767E;&#x5EA6;&#x767E;&#x79D1;</a>  &#x6216;  <a href="https://zh.wikipedia.org/zh-cn/%E5%9F%83%E6%8B%89%E6%89%98%E6%96%AF%E7%89%B9%E5%B0%BC%E7%AD%9B%E6%B3%95" target="_blank" rel="external">&#x57C3;&#x62C9;&#x6258;&#x65AF;&#x7279;&#x5C3C;&#x7B5B;&#x6CD5;-&#x7EF4;&#x57FA;&#x767E;&#x79D1;-&#x63A8;&#x8350;</a></p>
+<h2 id="&#x601D;&#x8DEF;"><a href="#&#x601D;&#x8DEF;" class="headerlink" title="&#x601D;&#x8DEF;"></a>&#x601D;&#x8DEF;</h2><p>&#x6839;&#x636E;&#x57C3;&#x62C9;&#x6258;&#x65AF;&#x7279;&#x5C3C;&#x7B5B;&#x6CD5;&#xFF0C;&#x4ECE;2&#x5F00;&#x59CB;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x5C06;2&#x7684;&#x500D;&#x6570;&#x8FC7;&#x6EE4;&#x540E;&#xFF0C;&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E5F;&#x662F;&#x7D20;&#x6570;&#x3002;&#x7136;&#x540E;&#x5FAA;&#x73AF;&#x5C06;&#x6B64;&#x5143;&#x7D20;&#x7684;&#x500D;&#x6570;&#x8FC7;&#x6EE4;&#xFF0C;&#x5269;&#x4E0B;&#x6765;&#x7684;&#x6570;&#x7EC4;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E5F;&#x662F;&#x7D20;&#x6570;&#x3002;&#x4F9D;&#x6B21;&#x5FAA;&#x73AF;&#x2026;</p>
+<p><a class="magnific-img" href="/assets/images/prime.gif"><img src="/assets/images/prime.gif" alt="&#x52A8;&#x753B;" class="ui centered image"></a></p>
+<h2 id="&#x5B9E;&#x73B0;"><a href="#&#x5B9E;&#x73B0;" class="headerlink" title="&#x5B9E;&#x73B0;"></a>&#x5B9E;&#x73B0;</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">primesFn</span>(<span class="params">N</span>) </span>{</div><div class="line">    <span class="keyword">if</span>(N &lt; <span class="number">2</span>) <span class="keyword">return</span> []</div><div class="line">    <span class="keyword">let</span> primes = []  <span class="comment">// &#x7D20;&#x6570; &#x6570;&#x7EC4;</span></div><div class="line">    <span class="keyword">let</span> nums = []  <span class="comment">// &#x6570;&#x636E;&#x6E90;</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">2</span>; i&lt;N+<span class="number">1</span>; i++) {</div><div class="line">        nums.push(i)</div><div class="line">    }</div><div class="line">    </div><div class="line">    <span class="comment">// &#x5FAA;&#x73AF;&#x8FC7;&#x6EE4;&#x6570;&#x7EC4;&#x3002; &#x4F7F;&#x7528;filter&#x7B5B;&#x9009;</span></div><div class="line">    <span class="keyword">while</span>(nums.length) {</div><div class="line">        <span class="keyword">let</span> p = nums.shift()</div><div class="line">        primes.push(p)</div><div class="line">    </div><div class="line">        nums = nums.filter(<span class="function"><span class="params">a</span> =&gt;</span> a%p !== <span class="number">0</span>)</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> primes</div><div class="line">}</div></pre></td></tr></table></figure>
+<h2 id="&#x7ED3;&#x8BED;"><a href="#&#x7ED3;&#x8BED;" class="headerlink" title="&#x7ED3;&#x8BED;"></a>&#x7ED3;&#x8BED;</h2><p>&#x9762;&#x5BF9;&#x6709;&#x89C4;&#x5F8B;&#x7684;&#x9898;&#x76EE;&#xFF0C;&#x8981;&#x820D;&#x5F03;&#x66B4;&#x529B;for&#x5FAA;&#x73AF;&#x8BA1;&#x7B97;&#xFF0C;&#x8F6C;&#x800C;&#x601D;&#x8003;&#x600E;&#x4E48;&#x4F7F;&#x7528;&#x89C4;&#x5F8B;&#xFF0C;&#x7B80;&#x5316;&#x7B97;&#x6CD5;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x8FD9;&#x4E2A;&#x9898;&#x76EE;&#xFF0C;&#x4E5F;&#x53EF;&#x901A;&#x7528;&#x3002;&#x4E24;&#x5C42;for&#x5FAA;&#x73AF;&#x4E5F;&#x80FD;&#x627E;&#x51FA;&#x7ED9;&#x5B9A;&#x8303;&#x56F4;&#x5185;&#x7684;&#x7D20;&#x6570;&#xFF0C;&#x4F46;&#x6548;&#x7387;&#x4F1A;&#x968F;&#x7740;&#x8303;&#x56F4;&#x8D8A;&#x5927;&#x8D8A;&#x4F4E;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x5728;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x8C03;&#x7528;&#xFF0C;&#x800C;&#x662F;&#x7528;&#x4E86;while&#x6761;&#x4EF6;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x5F53;nums&#x6570;&#x636E;&#x6E90;&#x4E3A;&#x7A7A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x662F;&#x627E;&#x5230;&#x4E86;&#x6240;&#x6709;&#x7684;&#x7D20;&#x6570;&#x3002;&#x5C06;&#x6BD4;&#x9012;&#x5F52;&#x66F4;&#x6613;&#x61C2;&#x3002;</p>
+
+                        
+                    </div>
+
+                    
+                    
+                    
+
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2018-11-08T02:49:06.000Z" itemprop="datePublished">2018-11-08</time>
+
+    </span>
+    <span class="post-description-item">
+        
+
+    <span>
+        <i class="tags icon"></i>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/primes/">primes</a>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/tags/math/">math</a>
+    </span>
+
+    
+
+    </span>
+</div>
+
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a href="/2019/04/14/leetcode331/about/" class="ui tiny button">
+
+                    <i class="angle left icon"></i>
+                    
+                    LeetCode 331计划
+                    
+
+                </a>
+
+                
+            </div>
+            <div class="column nav-right">
+                
+
+                <a href="/2018/09/18/commands/scp/" class="ui tiny button">
+                    
+                    Linux命令- - - scp   服务器间传输，基于ssh
+                    
+                    <i class="angle right icon"></i></a>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+                
+            </div>
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#前言"><span>前言</span></a></li><li><a href="#埃拉托斯特尼筛法"><span>埃拉托斯特尼筛法</span></a></li><li><a href="#思路"><span>思路</span></a></li><li><a href="#实现"><span>实现</span></a></li><li><a href="#结语"><span>结语</span></a></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2019 <a href="/">鹏程</a>.
+    </div>
+</div>
+
+    </div>
+
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
+
+
+
+</body>
+</html>
