@@ -107,6 +107,11 @@ pre {
 #category .category-item time {
   margin-right: 15px;
 }
+td,
+th {
+  padding: 10px 15px !important;
+  border: 1px solid #ccc;
+}
 .article-entry pre,
 .article-entry code {
   font-family: Consolas, Monaco, Menlo, Consolas, monospace;
