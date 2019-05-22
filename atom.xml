@@ -282,7 +282,7 @@
     <link href="https://petergooo.github.io/2019/04/13/leetcode/001/"/>
     <id>https://petergooo.github.io/2019/04/13/leetcode/001/</id>
     <published>2019-04-13T11:01:20.000Z</published>
-    <updated>2019-05-22T15:10:08.825Z</updated>
+    <updated>2019-05-22T15:37:27.153Z</updated>
     
     <content type="html"><![CDATA[<h2 id="&#x9898;&#x76EE;"><a href="#&#x9898;&#x76EE;" class="headerlink" title="&#x9898;&#x76EE;"></a>&#x9898;&#x76EE;</h2><p>&#x82F1;&#x6587;&#x9898;&#x76EE;&#xFF1A;<a href="https://leetcode.com/problems/two-sum" target="_blank" rel="external">Two Sum</a> </p>
 <p>&#x4E2D;&#x6587;&#x9898;&#x76EE;&#xFF1A;<a href="https://leetcode-cn.com/problems/two-sum" target="_blank" rel="external">Two Sum</a> </p>
@@ -292,7 +292,7 @@
 <p>&#x867D;&#x7136;&#x4E5F;&#x80FD;&#x5F97;&#x5230;&#x7ED3;&#x679C;&#xFF0C;&#x4F46;&#x8FD9;&#x79CD;&#x66B4;&#x529B;&#x5FAA;&#x73AF;&#xFF0C;&#x7F3A;&#x70B9;&#x4E5F;&#x5F88;&#x660E;&#x663E;&#xFF0C;&#x5F53;&#x6570;&#x7EC4;&#x6BD4;&#x8F83;&#x5927;&#xFF0C;&#x4E14;&#x5728;&#x7ED3;&#x679C;&#x5728;&#x540E;&#x9762;&#x65F6;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(n&#xB2;)&#xFF0C;&#x90A3;&#x4E48;&#x600E;&#x4E48;&#x964D;&#x4F4E;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5462;&#xFF0C;&#x90A3;&#x5C31;&#x8981;&#x4ECE;&#x964D;&#x4F4E;&#x5FAA;&#x73AF;&#x6B21;&#x6570;&#x5F00;&#x59CB;&#xFF0C;&#x6700;&#x597D;&#x7684;&#x662F;&#x4E00;&#x904D;&#x5FAA;&#x73AF;&#x5C31;&#x80FD;OK&#x3002;</p>
 <p>&#x6709;&#x4E2A;&#x65B9;&#x5F0F;&#x662F;&#x8BB0;&#x5F55;&#x5FAA;&#x73AF;&#x8FC7;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x53CA;&#x5176;&#x4E0B;&#x6807;&#x3002;&#x662F;&#xFF1A;&#x5B57;&#x5178; map</p>
 <p>&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> twoSum = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>{</div><div class="line">  <span class="keyword">let</span> obj = {};</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;nums.length; i++){</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> obj[nums[i]] === <span class="string">&apos;number&apos;</span>){</div><div class="line">            <span class="keyword">return</span> [obj[nums[i]], i]</div><div class="line">        }</div><div class="line">        obj[target - nums[i]] = i;</div><div class="line">    }</div><div class="line">};</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> twoSum = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>{</div><div class="line">  <span class="keyword">let</span> obj = {};</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;nums.length; i++){</div><div class="line">        <span class="keyword">if</span>(obj.hasOwnProperty(nums[i])){</div><div class="line">            <span class="keyword">return</span> [obj[nums[i]], i]</div><div class="line">        }</div><div class="line">        obj[target - nums[i]] = i;</div><div class="line">    }</div><div class="line">};</div><div class="line"><span class="comment">// Runtime: 40 ms, faster than 99.98% of JavaScript online submissions for Two Sum.</span></div><div class="line"><span class="comment">// Memory Usage: 34.5 MB, less than 83.66% of JavaScript online submissions for Two Sum.</span></div></pre></td></tr></table></figure>
 <ol class="ui list">
 <li>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;</li>
 <li>&#x5BF9;&#x6E90;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x904D;&#x5386;&#xFF0C;</li>
@@ -321,7 +321,7 @@
     <link href="https://petergooo.github.io/2019/04/10/leetcode/about/"/>
     <id>https://petergooo.github.io/2019/04/10/leetcode/about/</id>
     <published>2019-04-10T10:01:20.000Z</published>
-    <updated>2019-05-22T12:52:28.494Z</updated>
+    <updated>2019-05-22T15:28:05.563Z</updated>
     
     <content type="html"><![CDATA[<h2 id="LeetCode"><a href="#LeetCode" class="headerlink" title="LeetCode"></a>LeetCode</h2><p>&#x4E2D;&#x6587;&#x5B98;&#x7F51;&#xFF1A;<a href="https://leetcode-cn.com/" target="_blank" rel="external">https://leetcode-cn.com/</a></p>
 <p>&#x82F1;&#x6587;&#x5B98;&#x7F51;&#xFF1A;<a href="https://leetcode.com/" target="_blank" rel="external">https://leetcode.com/</a></p>
@@ -346,7 +346,7 @@
 <tr>
 <td style="text-align:left">#1   &#xFF08;easy&#xFF09;</td>
 <td style="text-align:center"><a href="https://leetcode.com/problems/two-sum" target="_blank" rel="external">Two Sum</a></td>
-<td style="text-align:center"></td>
+<td style="text-align:center"><a href="/2019/04/13/leetcode/001/">001</a></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
