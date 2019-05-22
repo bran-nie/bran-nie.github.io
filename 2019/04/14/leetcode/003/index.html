@@ -6,20 +6,20 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta name="description" content="21年的时光, 目前爱好于前端~">
-    <title>01-01-#3 --- 331 | 执念</title>
+    <title>003 --- Longest Substring Without Repeating Characters | 执念</title>
 
     <!-- Open Graph -->
     <meta name="description" content="&amp;#x9898;&amp;#x76EE;&amp;#x82F1;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;Longest Substring Without Repeating Characters 
 &amp;#x4E2D;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;&amp;#x65E0;&amp;#x91CD;&amp;#x590D;&amp;#x5B57;&amp;#x7B26;&amp;#x7684;&amp;#x6700;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="01-01-#3 --- 331">
-<meta property="og:url" content="https://petergooo.github.io/2019/04/14/leetcode331/01_01_03/index.html">
+<meta property="og:title" content="003 --- Longest Substring Without Repeating Characters">
+<meta property="og:url" content="https://petergooo.github.io/2019/04/14/leetcode/003/index.html">
 <meta property="og:site_name" content="执念">
 <meta property="og:description" content="&amp;#x9898;&amp;#x76EE;&amp;#x82F1;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;Longest Substring Without Repeating Characters 
 &amp;#x4E2D;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;&amp;#x65E0;&amp;#x91CD;&amp;#x590D;&amp;#x5B57;&amp;#x7B26;&amp;#x7684;&amp;#x6700;">
-<meta property="og:updated_time" content="2019-04-18T03:49:27.002Z">
+<meta property="og:updated_time" content="2019-05-22T13:11:25.554Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="01-01-#3 --- 331">
+<meta name="twitter:title" content="003 --- Longest Substring Without Repeating Characters">
 <meta name="twitter:description" content="&amp;#x9898;&amp;#x76EE;&amp;#x82F1;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;Longest Substring Without Repeating Characters 
 &amp;#x4E2D;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;&amp;#x65E0;&amp;#x91CD;&amp;#x590D;&amp;#x5B57;&amp;#x7B26;&amp;#x7684;&amp;#x6700;">
 
@@ -196,7 +196,7 @@
             <!--<div class="ui one column grid">-->
                 <!--<div class="column">-->
                     <!--<div class="ui main container">-->
-                        <div id="post-leetcode331/01_01_03" class="ui main container article-type-post">
+                        <div id="post-leetcode/003" class="ui main container article-type-post">
 
     
 
@@ -209,7 +209,7 @@
 
 <h1 class="ui header">
     
-    01-01-#3 --- 331
+    003 --- Longest Substring Without Repeating Characters
 </h1>
 
 
@@ -220,7 +220,7 @@
                         
                         <h2 id="&#x9898;&#x76EE;"><a href="#&#x9898;&#x76EE;" class="headerlink" title="&#x9898;&#x76EE;"></a>&#x9898;&#x76EE;</h2><p>&#x82F1;&#x6587;&#x9898;&#x76EE;&#xFF1A;<a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="external">Longest Substring Without Repeating Characters</a> </p>
 <p>&#x4E2D;&#x6587;&#x9898;&#x76EE;&#xFF1A;<a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="external">&#x65E0;&#x91CD;&#x590D;&#x5B57;&#x7B26;&#x7684;&#x6700;&#x957F;&#x5B50;&#x4E32;</a></p>
-<h2 id="&#x601D;&#x8DEF;"><a href="#&#x601D;&#x8DEF;" class="headerlink" title="&#x601D;&#x8DEF;"></a>&#x601D;&#x8DEF;</h2><p>&#x6211;&#x6628;&#x665A;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x9898;&#xFF0C;&#x6C42;&#x7ED9;&#x5B9A;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x76F8;&#x90BB;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x6700;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#x7684;length&#x3002;</p>
+<h2 id="&#x5206;&#x6790;&#x53CA;&#x601D;&#x8DEF;"><a href="#&#x5206;&#x6790;&#x53CA;&#x601D;&#x8DEF;" class="headerlink" title="&#x5206;&#x6790;&#x53CA;&#x601D;&#x8DEF;"></a>&#x5206;&#x6790;&#x53CA;&#x601D;&#x8DEF;</h2><p>&#x6211;&#x6628;&#x665A;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x9898;&#xFF0C;&#x6C42;&#x7ED9;&#x5B9A;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x76F8;&#x90BB;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x6700;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#x7684;length&#x3002;</p>
 <h3 id="&#x7B2C;&#x4E00;&#x7248;&#x672C;"><a href="#&#x7B2C;&#x4E00;&#x7248;&#x672C;" class="headerlink" title="&#x7B2C;&#x4E00;&#x7248;&#x672C;"></a>&#x7B2C;&#x4E00;&#x7248;&#x672C;</h3><p>&#x60F3;&#x4E86;&#x4E00;&#x60F3;&#xFF0C;&#x5927;&#x6982;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#x662F;&#x904D;&#x5386;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E14;&#x5728;&#x540C;&#x65F6;&#x8BB0;&#x5F55;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x6C42;&#x5176;length&#x3002;</p>
 <p>&#x6253;&#x7B97;&#x7528;JS&#x7684;Set&#x8FDB;&#x884C;&#x91CD;&#x590D;&#x5224;&#x65AD;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x7528;&#x5230;&#x6570;&#x7EC4;&#xFF0C;OK&#xFF0C;</p>
 <ol class="ui list">
@@ -280,11 +280,6 @@
     </span>
 
     
-    <span class="ui tiny label">
-        <a href="/tags/Longest-String/">Longest String</a>
-    </span>
-
-    
 
     </span>
 </div>
@@ -313,9 +308,9 @@
             <div class="column nav-right">
                 
 
-                <a href="/2019/04/14/leetcode331/about/" class="ui tiny button">
+                <a href="/2019/04/13/leetcode/001/" class="ui tiny button">
                     
-                    LeetCode 331计划
+                    001 — Two Sum
                     
                     <i class="angle right icon"></i></a>
                 
@@ -332,7 +327,7 @@
 
                 <div class="ui sticky article-toc" id="article-toc">
                     <!-- toc -->
-                    <ol class="ui ordered list"><li><a href="#题目"><span>题目</span></a></li><li><a href="#思路"><span>思路</span></a><ol><li><a href="#第一版本"><span>第一版本</span></a></li><li><a href="#第二版本"><span>第二版本</span></a></li></ol></li><li><a href="#代码"><span>代码</span></a></li></ol>
+                    <ol class="ui ordered list"><li><a href="#题目"><span>题目</span></a></li><li><a href="#分析及思路"><span>分析及思路</span></a><ol><li><a href="#第一版本"><span>第一版本</span></a></li><li><a href="#第二版本"><span>第二版本</span></a></li></ol></li><li><a href="#代码"><span>代码</span></a></li></ol>
                 </div>
 
             </div>
