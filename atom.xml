@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://petergooo.github.io/"/>
-  <updated>2019-05-08T04:15:53.368Z</updated>
+  <updated>2019-05-23T15:13:34.796Z</updated>
   <id>https://petergooo.github.io/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>002 — Add Two Numbers</title>
+    <link href="https://petergooo.github.io/2019/05/23/leetcode/002/"/>
+    <id>https://petergooo.github.io/2019/05/23/leetcode/002/</id>
+    <published>2019-05-23T11:01:20.000Z</published>
+    <updated>2019-05-23T15:13:34.796Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="&#x9898;&#x76EE;"><a href="#&#x9898;&#x76EE;" class="headerlink" title="&#x9898;&#x76EE;"></a>&#x9898;&#x76EE;</h2><p>&#x82F1;&#x6587;&#x9898;&#x76EE;&#xFF1A;<a href="https://leetcode.com/problems/add-two-numbers/" target="_blank" rel="external">Add Two Numbers</a> </p>
+<p>&#x4E2D;&#x6587;&#x9898;&#x76EE;&#xFF1A;<a href="https://leetcode-cn.com/problems/add-two-numbers/" target="_blank" rel="external">Add Two Numbers</a> </p>
+<h2 id="&#x5206;&#x6790;&#x53CA;&#x601D;&#x8DEF;"><a href="#&#x5206;&#x6790;&#x53CA;&#x601D;&#x8DEF;" class="headerlink" title="&#x5206;&#x6790;&#x53CA;&#x601D;&#x8DEF;"></a>&#x5206;&#x6790;&#x53CA;&#x601D;&#x8DEF;</h2><p>&#x53C2;&#x6570;&#xFF1A;&#x4E24;&#x4E2A;&#x975E;&#x7A7A;&#x7684;&#x94FE;&#x8868;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x503C;&#x662F;&#x975E;&#x8D1F;&#x7684;&#x503C;&#xFF0C;&#x4E14;&#x4E0D;&#x4F1A;&#x4EE5;0&#x5F00;&#x5934;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7684;&#x5012;&#x5E8F;&#xFF0C;&#x4E4B;&#x6240;&#x4EE5;&#x5012;&#x5E8F;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x5355;&#x5411;&#x94FE;&#x8868;&#x662F;&#x4ECE;&#x5934;&#x5230;&#x5C3E;&#x7684;&#x3002;</p>
+<p>&#x8981;&#x6C42;&#xFF1A;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x503C;&#x76F8;&#x52A0;&#xFF0C;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x94FE;&#x8868;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#xFF0C;&#x9700;&#x8981;&#x8003;&#x8651;&#x7684;&#x70B9;&#x6709;&#xFF1A;</p>
+<ol class="ui list">
+<li>&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x4F9D;&#x6B21;&#x5411;&#x4E0B;&#x53D6;&#x503C;&#xFF0C;&#x6240;&#x4EE5; L1 = L1.next&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x5F80;&#x5C3E;&#x90E8;&#x8D70;&#xFF0C;&#x76F4;&#x5230;null&#x3002;</li>
+<li>&#x53D6;&#x5230;&#x7684;&#x503C;&#xFF0C;&#x662F;&#x5728;0-9&#x4E4B;&#x5185;&#xFF0C;&#x76F8;&#x52A0;&#x53EF;&#x80FD;&#x4F1A;&#x6EA2;&#x51FA;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x6709;&#x53D8;&#x91CF;&#x4FDD;&#x5B58;&#x8FDB;&#x4F4D;&#x503C;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x7ED3;&#x679C;&#x94FE;&#x8868;&#x662F;&#x7528;&#x65B0;&#x94FE;&#x8868;L3&#xFF0C;&#x90A3;&#x4E48;&#x6BCF;&#x6B21;&#x5F97;&#x5230;&#x76F8;&#x52A0;&#x7684;&#x6570;&#x5B57;&#x540E;&#xFF0C;&#x6DFB;&#x52A0;&#x5230;&#x65B0;&#x94FE;&#x8868;&#x5185;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x7ED3;&#x679C;&#x94FE;&#x8868;&#x662F;L1&#x6216;L2&#xFF0C;&#x90A3;&#x4E48;&#x6BCF;&#x6B21;&#x76F8;&#x52A0;&#x5F97;&#x5230;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x8D4B;&#x503C;&#x7ED9;L1&#x548C;L2&#x7684;&#x5F53;&#x524D;&#x503C;&#xFF0C;&#x4E0D;&#x8FC7;&#x8981;&#x7528;&#x53D8;&#x91CF;&#x8BB0;&#x5F55;&#x5B83;&#x4EEC;&#x54EA;&#x4E2A;&#x957F;&#x5EA6;&#x957F;&#x3002;</li>
+<li>&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x540C;&#x6837;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x6307;&#x5411;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#xFF1A;<ol>
+<li>&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x52A0;&#x5230;&#x6700;&#x540E;&#xFF0C;&#x8FDB;&#x4F4D;&#x8FD8;&#x6709;&#x503C;&#xFF0C;</li>
+<li>&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x957F;&#x5EA6;&#x76F8;&#x5DEE;&#x6BD4;&#x8F83;&#x5927;&#xFF0C;&#x524D;&#x9762;&#x51E0;&#x4E2A;&#x90FD;&#x5DF2;&#x7ECF;&#x8BA1;&#x7B97;&#x5B8C;&#x6BD5;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x524D;return&#xFF0C;&#x5982; 101  + 1239483838483884839&#xFF0C;</li>
+</ol>
+</li>
+</ol>
+<h2 id="&#x4EE3;&#x7801;&#x8BBE;&#x8BA1;"><a href="#&#x4EE3;&#x7801;&#x8BBE;&#x8BA1;" class="headerlink" title="&#x4EE3;&#x7801;&#x8BBE;&#x8BA1;"></a>&#x4EE3;&#x7801;&#x8BBE;&#x8BA1;</h2><h3 id="&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x65B0;&#x94FE;&#x8868;L3"><a href="#&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x65B0;&#x94FE;&#x8868;L3" class="headerlink" title="&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x65B0;&#x94FE;&#x8868;L3"></a>&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x65B0;&#x94FE;&#x8868;L3</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> addTwoNumbers = <span class="function"><span class="keyword">function</span>(<span class="params">l1, l2</span>) </span>{</div><div class="line">    <span class="comment">// &#x521D;&#x59CB;&#x5316; &#x8FDB;&#x4F4D;&#x53D8;&#x91CF;&#x3001;&#x7ED3;&#x679C;&#x94FE;&#x8868;L3&#x3001;L3&#x5F53;&#x524D;&#x8282;&#x70B9;&#x6307;&#x9488;cur&#xFF0C;&#x4E24;&#x6570;&#x76F8;&#x52A0;&#x7684;&#x548C; &#x53D8;&#x91CF;</span></div><div class="line">    <span class="keyword">let</span> carry = <span class="number">0</span>, l3 = <span class="keyword">new</span> ListNode(<span class="literal">null</span>), cur = l3, sum = <span class="number">0</span></div><div class="line"></div><div class="line">    <span class="comment">// &#x7528;while&#x662F;&#x56E0;&#x4E3A;&#x4E0D;&#x77E5;&#x9053;&#x94FE;&#x8868;&#x7684;&#x957F;&#x5EA6;&#xFF0C;while&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x6761;&#x4EF6;&#x6765;&#x5224;&#x65AD;&#x3002;</span></div><div class="line">    <span class="keyword">while</span>(l1 || l2 ) {  <span class="comment">// &#x5F53;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x90FD;&#x5230;&#x5C3E;&#x90E8;&#x65F6;&#xFF0C;&#x9000;&#x51FA;&#x5FAA;&#x73AF;</span></div><div class="line">      	<span class="comment">// &#x5B9A;&#x4E49;&#x5C40;&#x90E8;&#x53D8;&#x91CF;sum&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x4E3A;carry&#x503C;&#x3002;</span></div><div class="line">        sum = carry</div><div class="line">        <span class="keyword">if</span> (l1) {</div><div class="line">          	<span class="comment">// &#x5982;&#x679C;carry&#x4E3A;0&#xFF0C;l2 &#x5230;&#x5C3E;&#x90E8;&#xFF0C;&#x4E14; &#x4E0A;&#x6B21;&#x8BA1;&#x7B97;&#x7684;&#x548C;&#x4E5F;&#x662F;&#x7A7A;&#x503C;&#xFF0C;&#x5219;&#x6EE1;&#x8DB3;&#x4E0A;&#x9762;&#x7B2C;6.2&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x524D;&#x9000;&#x51FA;&#x3002;&#x4E0B;&#x540C;&#x3002;</span></div><div class="line">            <span class="keyword">if</span> (!carry &amp;&amp; !l2 &amp;&amp; !sum) {</div><div class="line">                cur.next = l1</div><div class="line">                <span class="keyword">break</span></div><div class="line">            }</div><div class="line">            sum += l1.val</div><div class="line">            l1 = l1.next <span class="comment">// &#x5C06;&#x94FE;&#x8868;l1&#x5411;&#x4E0B;&#x8D70;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x3002;</span></div><div class="line">        }</div><div class="line">        <span class="keyword">if</span> (l2) {</div><div class="line">            <span class="keyword">if</span> (!carry &amp;&amp; !l1 &amp;&amp; !sum) {</div><div class="line">                cur.next = l2</div><div class="line">                <span class="keyword">break</span></div><div class="line">            }</div><div class="line">            sum += l2.val</div><div class="line">            l2 = l2.next</div><div class="line">        }</div><div class="line">        </div><div class="line">        carry = sum &gt; <span class="number">9</span> ? <span class="number">1</span> : <span class="number">0</span>  <span class="comment">// &#x5224;&#x65AD;&#x4E24;&#x6570;&#x76F8;&#x52A0;&#x662F;&#x5426;&#x9700;&#x8981;&#x8FDB;&#x4F4D;&#x3002;</span></div><div class="line">        cur.next = <span class="keyword">new</span> ListNode(sum % <span class="number">10</span>) <span class="comment">// L3&#x7684;&#x6307;&#x9488;&#xFF0C;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;next&#x5C5E;&#x6027;&#x8D4B;&#x503C;&#xFF0C;</span></div><div class="line">        cur = cur.next   <span class="comment">// &#x5C06;&#x6307;&#x9488;&#x6307;&#x5411;&#x65B0;&#x7684;&#x8282;&#x70B9;&#x3002;&#x5373;&#x94FE;&#x8868;&#x4E0B;&#x79FB;&#x3002;</span></div><div class="line">        sum = <span class="number">0</span>  <span class="comment">// init  sum</span></div><div class="line">    }</div><div class="line">    <span class="keyword">if</span> (carry) {  <span class="comment">// &#x7279;&#x6B8A;&#x60C5;&#x51B5; 6.1&#xFF0C;&#x5982;&#x679C;&#x6700;&#x540E;&#x8FD8;&#x6709;carry&#xFF0C;&#x5219;&#x5BF9;&#x94FE;&#x8868;&#x8FDB;&#x884C;&#x6DFB;&#x52A0;</span></div><div class="line">        cur.next = <span class="keyword">new</span> ListNode(carry)</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> l3.next</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">// &#x7ED3;&#x679C;</span></div><div class="line"><span class="comment">// Runtime: 100 ms, faster than 99.49 % of JavaScript online submissions for Add Two Numbers.</span></div><div class="line"><span class="comment">// Memory Usage: 38.4 MB, less than 66.58% of JavaScript online submissions for Add Two Numbers.</span></div></pre></td></tr></table></figure>
+<h3 id="&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x53D6;L1&#x6216;L2"><a href="#&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x53D6;L1&#x6216;L2" class="headerlink" title="&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x53D6;L1&#x6216;L2"></a>&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x53D6;L1&#x6216;L2</h3><p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x548C;&#x4E0A;&#x9762;&#x7684;&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x6709;&#x9EBB;&#x70E6;&#x5F88;&#x591A;&#xFF0C;&#x5F53;&#x7136;&#x6211;&#x4E00;&#x5F00;&#x59CB;&#x60F3;&#x5230;&#x7684;&#x662F;&#x8FD9;&#x4E2A;&#x3002;&#x4F46;&#x4E0D;&#x63A8;&#x8350;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x3002;hhh</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * function ListNode(val) {</div><div class="line"> *     this.val = val;</div><div class="line"> *     this.next = null;</div><div class="line"> * }</div><div class="line"> */</div><div class="line"><span class="comment">/**</span></div><div class="line"> * @param {ListNode} l1</div><div class="line"> * @param {ListNode} l2</div><div class="line"> * @return {ListNode}</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="keyword">var</span> addTwoNumbers = <span class="function"><span class="keyword">function</span>(<span class="params">l1, l2</span>) </span>{</div><div class="line">    <span class="keyword">let</span> carry = <span class="number">0</span>, m = <span class="number">0</span>, n = <span class="number">0</span>, cur_l1 = l1, cur_l2 = l2, sum = <span class="number">0</span></div><div class="line">    <span class="keyword">while</span>(!(cur_l1 === <span class="literal">null</span> &amp;&amp; cur_l2 === <span class="literal">null</span>)) {</div><div class="line">        sum = carry</div><div class="line">        </div><div class="line">        <span class="keyword">if</span>(cur_l1 &amp;&amp; cur_l2) {</div><div class="line">            m ++</div><div class="line">            n ++</div><div class="line">            </div><div class="line">            sum += cur_l1.val + cur_l2.val</div><div class="line">            carry = sum &gt; <span class="number">9</span> ? <span class="number">1</span> : <span class="number">0</span></div><div class="line">            cur_l1.val = cur_l2.val = sum % <span class="number">10</span></div><div class="line">            </div><div class="line">            cur_l1 = cur_l1.next</div><div class="line">            cur_l2 = cur_l2.next</div><div class="line">        } <span class="keyword">else</span> <span class="keyword">if</span> (!cur_l2) {</div><div class="line">            m ++</div><div class="line">            <span class="keyword">if</span> (!carry) <span class="keyword">break</span></div><div class="line">            </div><div class="line">            sum += cur_l1.val</div><div class="line">            carry = sum &gt; <span class="number">9</span> ? <span class="number">1</span> : <span class="number">0</span></div><div class="line">            cur_l1.val = sum %<span class="number">10</span></div><div class="line">            </div><div class="line">            cur_l1 = cur_l1.next</div><div class="line">        } <span class="keyword">else</span> <span class="keyword">if</span> (!cur_l1) {</div><div class="line">            n ++</div><div class="line">            <span class="keyword">if</span> (!carry) <span class="keyword">break</span></div><div class="line">            </div><div class="line">            sum += cur_l2.val</div><div class="line">            carry = sum &gt; <span class="number">9</span> ? <span class="number">1</span> : <span class="number">0</span></div><div class="line">            cur_l2.val = sum %<span class="number">10</span></div><div class="line">            </div><div class="line">            cur_l2 = cur_l2.next</div><div class="line">        }</div><div class="line">        </div><div class="line">    }</div><div class="line">    <span class="comment">// &#x8BA1;&#x7B97;</span></div><div class="line">    </div><div class="line">    <span class="keyword">if</span> (carry) {</div><div class="line">        m &gt;= n ? (listPush(l1, <span class="keyword">new</span> ListNode(carry))) : (listPush(l2, <span class="keyword">new</span> ListNode(carry)))</div><div class="line">    }</div><div class="line">    <span class="keyword">if</span>(cur_l1 &amp;&amp; !cur_l2) {}</div><div class="line">    <span class="keyword">if</span>(!cur_l1 &amp;&amp; cur_l2) {}</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> m &gt;= n ? l1 : l2</div><div class="line">}</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">listPush</span>(<span class="params">list, item</span>) </span>{</div><div class="line">    <span class="keyword">let</span> cur = list</div><div class="line">    <span class="keyword">while</span>(cur.next !== <span class="literal">null</span>) {</div><div class="line">        cur = cur.next</div><div class="line">    }</div><div class="line">    cur.next = item</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> list</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">// Runtime: 124 ms, faster than 88.59% of JavaScript online submissions for Add Two Numbers.</span></div><div class="line"><span class="comment">// Memory Usage: 39.1 MB, less than 18.25% of JavaScript online submissions for Add Two Numbers.</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;&amp;#x9898;&amp;#x76EE;&quot;&gt;&lt;a href=&quot;#&amp;#x9898;&amp;#x76EE;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x9898;&amp;#x76EE;&quot;&gt;&lt;/a&gt;&amp;#x9898;&amp;#x76EE;&lt;/h2&gt;&lt;p&gt;&amp;#x82F1;&amp;#x658
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="https://petergooo.github.io/categories/Algorithm/"/>
+    
+    
+      <category term="Leetcode" scheme="https://petergooo.github.io/tags/Leetcode/"/>
+    
+      <category term="链表" scheme="https://petergooo.github.io/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>商品规格选择sku --- Vue版</title>
@@ -313,211 +357,6 @@
       <category term="Leetcode" scheme="https://petergooo.github.io/tags/Leetcode/"/>
     
       <category term="字典解法" scheme="https://petergooo.github.io/tags/%E5%AD%97%E5%85%B8%E8%A7%A3%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 每周计划</title>
-    <link href="https://petergooo.github.io/2019/04/10/leetcode/about/"/>
-    <id>https://petergooo.github.io/2019/04/10/leetcode/about/</id>
-    <published>2019-04-10T10:01:20.000Z</published>
-    <updated>2019-05-22T15:28:05.563Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="LeetCode"><a href="#LeetCode" class="headerlink" title="LeetCode"></a>LeetCode</h2><p>&#x4E2D;&#x6587;&#x5B98;&#x7F51;&#xFF1A;<a href="https://leetcode-cn.com/" target="_blank" rel="external">https://leetcode-cn.com/</a></p>
-<p>&#x82F1;&#x6587;&#x5B98;&#x7F51;&#xFF1A;<a href="https://leetcode.com/" target="_blank" rel="external">https://leetcode.com/</a></p>
-<h2 id="331&#x8BA1;&#x5212;-&#x6BCF;&#x5468;&#x8BA1;&#x5212;"><a href="#331&#x8BA1;&#x5212;-&#x6BCF;&#x5468;&#x8BA1;&#x5212;" class="headerlink" title="331&#x8BA1;&#x5212; &#x6BCF;&#x5468;&#x8BA1;&#x5212;"></a><del>331&#x8BA1;&#x5212;</del> &#x6BCF;&#x5468;&#x8BA1;&#x5212;</h2><p><del>331&#x662F;&#x6307;&#x5929;&#x6570;&#xFF0C;&#x521A;&#x597D;&#x4E00;&#x5468;</del></p>
-<p><del>33&#x662F;&#x524D;&#x516D;&#x5929;&#xFF0C;&#x4E24;&#x4E2A;&#x9898;&#xFF0C;3&#x5929;&#x7684;&#x7B2C;&#x4E00;&#x5929;&#x81EA;&#x5DF1;&#x505A;&#xFF0C;&#x7B2C;&#x4E8C;&#x5929;&#x8BA8;&#x8BBA;&#xFF0C;&#x7B2C;&#x4E09;&#x5929;&#x4F18;&#x5316;&#xFF0C;</del></p>
-<p><del>1&#x662F;&#x5468;&#x65E5;&#xFF0C;&#x81EA;&#x7531;&#x5B89;&#x6392;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4F1A;&#x9009;&#x62E9;&#x6574;&#x7406;&#x4E00;&#x4E0B;&#x601D;&#x8DEF;&#xFF0C;&#x8F93;&#x51FA;&#x535A;&#x5BA2;&#x3002;&#x76F8;&#x5173;&#x65B9;&#x9762;&#x7684;&#x4E86;&#x89E3;&#x3002;</del></p>
-<p>emmm&#xFF0C;&#x7ECF;&#x51E0;&#x6B21;&#x7684;&#x5B9E;&#x8DF5;&#xFF0C;&#x53D1;&#x73B0;331&#x5BB9;&#x9519;&#x6027;&#x8F83;&#x4F4E;&#xFF0C;&#x5982;&#x679C;&#x5DE5;&#x4F5C;&#x7E41;&#x5FD9;&#xFF0C;&#x5982;&#x679C;&#x5FC3;&#x60C5;&#x6CE2;&#x52A8;&#xFF0C;&#x5982;&#x679C;&#x7B97;&#x6CD5;&#x592A;&#x96BE;&#xFF0C;<del>&#xFF08;&#x5982;&#x679C;&#x7406;&#x7531;&#x5145;&#x5206;&#xFF09;</del>&#xFF0C;3&#x5929;&#x4E00;&#x9898;&#x786E;&#x5B9E;&#x96BE;&#x4EE5;&#x957F;&#x671F;&#x7EF4;&#x6301;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x548C;&#x7EC4;&#x5458;&#x5546;&#x8BA8;&#x8FC7;&#x540E;&#xFF0C;&#x6539;&#x4E3A;&#x4E86;&#x4E00;&#x5468;&#x4E00;&#x9898;&#xFF0C;&#x8FD9;&#x6837;&#x65E0;&#x8BBA;&#x662F;&#x89E3;&#x9898;&#x8FD8;&#x662F;&#x4F18;&#x5316;&#xFF0C;&#x6216;&#x8005;&#x8F93;&#x51FA;&#x535A;&#x5BA2;&#xFF0C;&#x90FD;&#x4E0D;&#x662F;&#x90A3;&#x4E48;&#x7684;&#x7E41;&#x91CD;&#xFF0C;&#x518D;&#x8005;&#xFF0C;&#x4E5F;&#x6709;&#x5229;&#x4E8E;&#x957F;&#x671F;&#x53D1;&#x5C55;&#x3002;</p>
-<p>&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4F1A;&#x4E25;&#x683C;&#x6267;&#x884C;&#x6BCF;&#x5468;&#x4E00;&#x9898;&#x52A0;&#x535A;&#x5BA2;&#xFF0C;&#x54EA;&#x6015;&#x53EA;&#x662F;&#x8D34;&#x51FA;&#x4E86;&#x4EE3;&#x7801;&#x3002;&#xFF08;&#x540C;&#x65F6;&#x8865;&#x4E4B;&#x524D;&#x6F0F;&#x6389;&#x7684;</p>
-<p>2019-05-22</p>
-<h2 id="&#x5C0F;&#x7EC4;&#x548C;&#x8BA1;&#x5212;&#x6267;&#x884C;"><a href="#&#x5C0F;&#x7EC4;&#x548C;&#x8BA1;&#x5212;&#x6267;&#x884C;" class="headerlink" title="&#x5C0F;&#x7EC4;&#x548C;&#x8BA1;&#x5212;&#x6267;&#x884C;"></a>&#x5C0F;&#x7EC4;&#x548C;&#x8BA1;&#x5212;&#x6267;&#x884C;</h2><p>&#x9879;&#x76EE;&#x7EC4;&#x540C;&#x4E8B;&#x63A8;&#x884C;&#x5237;&#x7B97;&#x6CD5;&#x9898;&#xFF0C;&#x5B9A;&#x4E86;LeetCode&#x8FD9;&#x4E2A;&#x7F51;&#x7AD9;&#xFF0C;&#x6211;&#x89C9;&#x5F97;&#x5F88;&#x68D2;&#x5E76;&#x52A0;&#x5165;&#x548C;&#x5927;&#x4F6C;&#x4EEC;&#x4E00;&#x8D77;&#x5B66;&#x4E60;~  &#x5E76;&#x8865;&#x5145;&#x4E86;&#x6BCF;&#x5468;&#x8BA1;&#x5212;&#x3002;&#x540C;&#x65F6;&#x5728;&#x535A;&#x5BA2;&#x8FD9;&#x91CC;&#x8FDB;&#x884C; <del>&#x4E0D;&#x5B9A;&#x65F6;&#x66F4;&#x65B0;</del> &#x6BCF;&#x5468;&#x66F4;&#x65B0;&#x3002;</p>
-<p>&#x9898;&#x76EE;&#x6309;&#x987A;&#x5E8F;&#x8D70;&#xFF0C;&#x662F;&#x4EE5;medium&#x96BE;&#x5EA6;&#x7684;&#x987A;&#x5E8F;&#xFF0C;easy &#x548C; hard &#x81EA;&#x884C;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x53EF;&#x505A;&#x3002;</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">&#x9898;&#x53F7;  &#xFF08;&#x96BE;&#x5EA6;&#xFF09;</th>
-<th style="text-align:center">&#x9898;&#x76EE;</th>
-<th style="text-align:center">&#x535A;&#x5BA2;&#x5730;&#x5740;</th>
-<th style="text-align:center">&#x7EC4;&#x5458;&#x7684;&#x9898;&#x89E3;&#x5730;&#x5740;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">#1   &#xFF08;easy&#xFF09;</td>
-<td style="text-align:center"><a href="https://leetcode.com/problems/two-sum" target="_blank" rel="external">Two Sum</a></td>
-<td style="text-align:center"><a href="/2019/04/13/leetcode/001/">001</a></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">#2   &#xFF08;medium&#xFF09;</td>
-<td style="text-align:center"><a href="https://leetcode.com/problems/add-two-numbers" target="_blank" rel="external">Add Two Numbers</a></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">#3   &#xFF08;medium&#xFF09;</td>
-<td style="text-align:center"><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters" target="_blank" rel="external">Longest Substring Without Repeating Characters</a></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">#4   &#xFF08;hard&#xFF09;</td>
-<td style="text-align:center"><a href="https://leetcode.com/problems/median-of-two-sorted-arrays" target="_blank" rel="external">Median of Two Sorted Arrays</a></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">#5   &#xFF08;medium&#xFF09;</td>
-<td style="text-align:center"><a href="https://leetcode.com/problems/longest-palindromic-substring" target="_blank" rel="external">Longest Palindromic Substring</a></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">#6   &#xFF08;medium&#xFF09;</td>
-<td style="text-align:center"><a href="https://leetcode.com/problems/zigzag-conversion" target="_blank" rel="external">ZigZag Conversion</a></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">#7   &#xFF08;easy&#xFF09;</td>
-<td style="text-align:center"><a href="https://leetcode.com/problems/reverse-integer" target="_blank" rel="external">Reverse Integer</a></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">#8   &#xFF08;medium&#xFF09;</td>
-<td style="text-align:center"><a href="https://leetcode.com/problems/string-to-integer-atoi" target="_blank" rel="external">String to Integer (atoi)</a></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">#9    &#xFF08;easy&#xFF09;</td>
-<td style="text-align:center"><a href="https://leetcode.com/problems/palindrome-number" target="_blank" rel="external">Palindrome Number</a></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">#10   &#xFF08;hard&#xFF09;</td>
-<td style="text-align:center"><a href="https://leetcode.com/problems/regular-expression-matching" target="_blank" rel="external">Regular Expression Matching</a></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">#11   &#xFF08;medium&#xFF09;</td>
-<td style="text-align:center"><a href="https://leetcode.com/problems/container-with-most-water" target="_blank" rel="external">Container With Most Water</a></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;LeetCode&quot;&gt;&lt;a href=&quot;#LeetCode&quot; class=&quot;headerlink&quot; title=&quot;LeetCode&quot;&gt;&lt;/a&gt;LeetCode&lt;/h2&gt;&lt;p&gt;&amp;#x4E2D;&amp;#x6587;&amp;#x5B98;&amp;#x7F51;&amp;#xFF1A;&lt;a hre
-    
-    </summary>
-    
-      <category term="Algorithm" scheme="https://petergooo.github.io/categories/Algorithm/"/>
-    
-    
-      <category term="LeetCode" scheme="https://petergooo.github.io/tags/LeetCode/"/>
     
   </entry>
   
