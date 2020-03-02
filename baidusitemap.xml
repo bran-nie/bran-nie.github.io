@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>https://petergooo.github.io/2020/03/01/React/2020-03-01/</loc>
+    <lastmod>2020-03-02T06:01:12.907Z</lastmod>
+    <data>
+        <display>
+        <title>不可变性对React来说, 非常重要 (摘录React文档) (拓展到对编码的重要性)</title>
+        <pubTime>2020-03-01T07:01:20.000Z</pubTime>
+        
+        <tag>React</tag>
+         
+         
+           
+             
+              <breadCrumb title="Programming" url="https://petergooo.github.io/categories/Programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://petergooo.github.io/2020/02/28/study/2019-02-28/</loc>
-    <lastmod>2020-03-01T14:22:42.568Z</lastmod>
+    <lastmod>2020-03-02T05:50:04.132Z</lastmod>
     <data>
         <display>
         <title>Git Pull-Request 一种名为PR的项目管理方式 (内附完整教程)</title>
