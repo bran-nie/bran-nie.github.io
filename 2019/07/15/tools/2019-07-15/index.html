@@ -2,19 +2,21 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head prefix="og: http://ogp.me/ns#">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.9.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta name="description" content="21年的时光, 目前爱好于前端~">
     <title>CentOS, Vim7.4升级到8.1 (服务器) | 执念</title>
 
     <!-- Open Graph -->
     <meta name="description" content="&amp;#x8BB0;&amp;#x5F55;&amp;#x4E00;&amp;#x6B21;&amp;#x66F4;&amp;#x65B0;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x4E0A;&amp;#x8E29;&amp;#x5751;&amp;#x7684;&amp;#x4E8B;&amp;#x4EF6;&amp;#xFF0C;&amp;#x5173;&amp;#x4E8E;CentOS&amp;#x66F4;&amp;#x65B0;vim&amp;#x7248;&amp;#x672C;&amp;#x7684;&amp;#x64C">
+<meta name="keywords" content="Vim,CentOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS, Vim7.4升级到8.1 (服务器)">
-<meta property="og:url" content="https://petergooo.github.io/2019/07/15/tools/2019-07-15/index.html">
+<meta property="og:url" content="https://bran-nie.github.io/2019/07/15/tools/2019-07-15/index.html">
 <meta property="og:site_name" content="执念">
 <meta property="og:description" content="&amp;#x8BB0;&amp;#x5F55;&amp;#x4E00;&amp;#x6B21;&amp;#x66F4;&amp;#x65B0;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x4E0A;&amp;#x8E29;&amp;#x5751;&amp;#x7684;&amp;#x4E8B;&amp;#x4EF6;&amp;#xFF0C;&amp;#x5173;&amp;#x4E8E;CentOS&amp;#x66F4;&amp;#x65B0;vim&amp;#x7248;&amp;#x672C;&amp;#x7684;&amp;#x64C">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-07-15T08:10:17.974Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS, Vim7.4升级到8.1 (服务器)">
@@ -27,7 +29,7 @@
   "email": "mailto:pengcheng1995@gmail.com",
   "image": "undefined",
   "name": "鹏程",
-  "url": "https://petergooo.github.io"
+  "url": "https://bran-nie.github.io"
 }
 </script>
     <script>
@@ -123,7 +125,7 @@
     
 
     
-    <a href="/index.html" class="item" >
+    <a href="/index.html" class="item">
         <i class="home icon"></i>
         Home
     </a>
@@ -134,7 +136,7 @@
     
 
     
-    <a href="/categories/Web/" class="item" >
+    <a href="/categories/Web/" class="item">
         <i class="pencil icon"></i>
         前端Web
     </a>
@@ -145,7 +147,7 @@
     
 
     
-    <a href="/categories/教程/" class="item" >
+    <a href="/categories/教程/" class="item">
         <i class="pencil icon"></i>
         教程
     </a>
@@ -156,7 +158,7 @@
     
 
     
-    <a href="/categories/随笔/" class="item" >
+    <a href="/categories/随笔/" class="item">
         <i class="pencil icon"></i>
         随笔
     </a>
@@ -167,7 +169,7 @@
     
 
     
-    <a href="/archives/" class="item" >
+    <a href="/archives/" class="item">
         <i class="null icon"></i>
         Archives
     </a>
@@ -178,7 +180,7 @@
     
 
     
-    <a href="/about" class="item" >
+    <a href="/about" class="item">
         <i class="about icon"></i>
         About
     </a>
@@ -222,10 +224,10 @@
 <p>&#x4E0B;&#x9762;&#x8BB2;&#x89E3;&#x4E00;&#x4E0B;&#xFF0C;&#x901A;&#x8FC7;&#x6E90;&#x4EE3;&#x7801;&#x5B89;&#x88C5;&#x7684;&#x65B9;&#x5F0F;&#x5B89;&#x88C5;&#x6700;&#x65B0;&#x7248; Vim&#xFF0C;&#x76EE;&#x524D;&#x662F;<code>8.1</code>, </p>
 <p><code>PS&#xFF1A;&#x9644;&#x5E26;&#x5B89;&#x88C5;Python3.</code></p>
 <p><code>PS&#xFF1A;&#x5982;&#x679C;&#x63D0;&#x793A;&#x6743;&#x9650;&#x4E0D;&#x591F;&#xFF0C;&#x8BF7;&#x5728;&#x547D;&#x4EE4;&#x524D;&#x6DFB;&#x52A0;sudo&#xFF0C;&#x6216;&#x8005;&#x4F7F;&#x7528;root&#x8D26;&#x6237;</code></p>
-<h1 id="1-&#x901A;&#x8FC7;yum&#x5B89;&#x88C5;Python3"><a href="#1-&#x901A;&#x8FC7;yum&#x5B89;&#x88C5;Python3" class="headerlink" title="1. &#x901A;&#x8FC7;yum&#x5B89;&#x88C5;Python3"></a>1. &#x901A;&#x8FC7;yum&#x5B89;&#x88C5;Python3</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum install -y git gcc-c++ ncurses-devel python-devel cmake wget make</div><div class="line">sudo yum install -y python36 python36-devel</div></pre></td></tr></table></figure>
-<h1 id="2-&#x514B;&#x9686;Github&#x7684;vim&#x9879;&#x76EE;"><a href="#2-&#x514B;&#x9686;Github&#x7684;vim&#x9879;&#x76EE;" class="headerlink" title="2. &#x514B;&#x9686;Github&#x7684;vim&#x9879;&#x76EE;"></a>2. &#x514B;&#x9686;Github&#x7684;vim&#x9879;&#x76EE;</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// &#x514B;&#x9686;&#x9879;&#x76EE;&#x5230;&#x672C;&#x5730;</div><div class="line">// &#x5047;&#x5B9A;&#x662F;&#x5728;~&#x76EE;&#x5F55;&#x4E0B;&#x514B;&#x9686;&#xFF0C;&#x5B9E;&#x9645;&#x53EF;&#x53D8;&#x66F4;&#x4F4D;&#x7F6E;&#x3002;</div><div class="line"><span class="built_in">cd</span> ~</div><div class="line">git <span class="built_in">clone</span> https://github.com/vim/vim.git</div></pre></td></tr></table></figure>
-<h1 id="3-&#x914D;&#x7F6E;&#x5E76;&#x7F16;&#x8BD1;Vim"><a href="#3-&#x914D;&#x7F6E;&#x5E76;&#x7F16;&#x8BD1;Vim" class="headerlink" title="3.  &#x914D;&#x7F6E;&#x5E76;&#x7F16;&#x8BD1;Vim"></a>3.  &#x914D;&#x7F6E;&#x5E76;&#x7F16;&#x8BD1;Vim</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">// &#x8FDB;&#x5165;&#x9879;&#x76EE;</div><div class="line"><span class="built_in">cd</span> vim</div><div class="line"></div><div class="line">// &#x914D;&#x7F6E;&#x53C2;&#x6570;</div><div class="line">./configure --prefix=/usr/<span class="built_in">local</span>/vim  --enable-pythoninterp=yes --enable-python3interp=yes --with-python-command=python --with-python3-command=python36</div><div class="line"></div><div class="line">// &#x7F16;&#x8BD1;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4F7F;&#x7528;sudo&#x6743;&#x9650;</div><div class="line">sudo make</div><div class="line">sudo make install</div><div class="line"></div><div class="line">// &#x7F16;&#x8BD1;&#x6210;&#x529F;&#x540E;&#xFF0C;vim/src/&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4F1A;&#x6709; vim &#x6587;&#x4EF6;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x7528;&#x5230;</div><div class="line">ls ~/vim/src -al</div></pre></td></tr></table></figure>
-<h1 id="4-&#x590D;&#x5236;Vim&#x5230;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;Profile"><a href="#4-&#x590D;&#x5236;Vim&#x5230;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;Profile" class="headerlink" title="4. &#x590D;&#x5236;Vim&#x5230;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;Profile"></a>4. &#x590D;&#x5236;Vim&#x5230;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;Profile</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// &#x590D;&#x5236;&#x524D;&#x53EF;&#x4EE5;&#x5907;&#x4EFD;&#x4E00;&#x4E0B;</div><div class="line">sudo cp /usr/bin/vim /usr/bin/vim.backup</div><div class="line"></div><div class="line">// &#x590D;&#x5236;&#x524D;&#x9762;&#x7F16;&#x8BD1;&#x7684;vim&#x5230;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;</div><div class="line"><span class="built_in">cd</span> ~/vim/src</div><div class="line">sudo cp vim /usr/bin</div><div class="line"></div><div class="line">// &#x4FEE;&#x6539;&#x7CFB;&#x7EDF;&#x7684;Profile, &#x5982;&#x679C;sudo&#x6743;&#x9650;&#x4E0D;&#x591F;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;root&#x7528;&#x6237;&#xFF0C;&#x6211;&#x662F;&#x7528;&#x7684;root&#x7528;&#x6237;&#x3002;</div><div class="line">su  // &#x8F93;&#x5165;root&#x5BC6;&#x7801;&#xFF0C;&#x5982;&#x679C;&#x8FD8;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#xFF0C;&#x5219;&#x8F93;&#x5165; `sudo passwd` &#x8BBE;&#x7F6E;root&#x5BC6;&#x7801;&#x3002;</div><div class="line"><span class="built_in">echo</span> <span class="string">&quot;PATH=\$PATH:/usr/local/vim/bin&quot;</span> &gt;&gt; /etc/profile</div><div class="line"></div><div class="line">// &#x8FD0;&#x884C;&#x521A;&#x4FEE;&#x6539;&#x7684;&#x914D;&#x7F6E;&#x3002;</div><div class="line"><span class="built_in">source</span> /etc/profile</div><div class="line"></div><div class="line">// &#x6700;&#x540E;&#xFF0C;check version</div><div class="line">vim --version</div><div class="line">// &#x540C;&#x65F6;&#xFF0C;&#x4E5F;&#x80FD;&#x770B;&#x5230;&#x5B83;&#x652F;&#x6301;Python3&#x4E86;&#x3002;(7.4&#x662F;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x3002;)</div></pre></td></tr></table></figure>
+<h1 id="1-&#x901A;&#x8FC7;yum&#x5B89;&#x88C5;Python3"><a href="#1-&#x901A;&#x8FC7;yum&#x5B89;&#x88C5;Python3" class="headerlink" title="1. &#x901A;&#x8FC7;yum&#x5B89;&#x88C5;Python3"></a>1. &#x901A;&#x8FC7;yum&#x5B89;&#x88C5;Python3</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y git gcc-c++ ncurses-devel python-devel cmake wget make</span><br><span class="line">sudo yum install -y python36 python36-devel</span><br></pre></td></tr></table></figure>
+<h1 id="2-&#x514B;&#x9686;Github&#x7684;vim&#x9879;&#x76EE;"><a href="#2-&#x514B;&#x9686;Github&#x7684;vim&#x9879;&#x76EE;" class="headerlink" title="2. &#x514B;&#x9686;Github&#x7684;vim&#x9879;&#x76EE;"></a>2. &#x514B;&#x9686;Github&#x7684;vim&#x9879;&#x76EE;</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// &#x514B;&#x9686;&#x9879;&#x76EE;&#x5230;&#x672C;&#x5730;</span><br><span class="line">// &#x5047;&#x5B9A;&#x662F;&#x5728;~&#x76EE;&#x5F55;&#x4E0B;&#x514B;&#x9686;&#xFF0C;&#x5B9E;&#x9645;&#x53EF;&#x53D8;&#x66F4;&#x4F4D;&#x7F6E;&#x3002;</span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/vim/vim.git</span><br></pre></td></tr></table></figure>
+<h1 id="3-&#x914D;&#x7F6E;&#x5E76;&#x7F16;&#x8BD1;Vim"><a href="#3-&#x914D;&#x7F6E;&#x5E76;&#x7F16;&#x8BD1;Vim" class="headerlink" title="3.  &#x914D;&#x7F6E;&#x5E76;&#x7F16;&#x8BD1;Vim"></a>3.  &#x914D;&#x7F6E;&#x5E76;&#x7F16;&#x8BD1;Vim</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// &#x8FDB;&#x5165;&#x9879;&#x76EE;</span><br><span class="line"><span class="built_in">cd</span> vim</span><br><span class="line"></span><br><span class="line">// &#x914D;&#x7F6E;&#x53C2;&#x6570;</span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/vim  --<span class="built_in">enable</span>-pythoninterp=yes --<span class="built_in">enable</span>-python3interp=yes --with-python-command=python --with-python3-command=python36</span><br><span class="line"></span><br><span class="line">// &#x7F16;&#x8BD1;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4F7F;&#x7528;sudo&#x6743;&#x9650;</span><br><span class="line">sudo make</span><br><span class="line">sudo make install</span><br><span class="line"></span><br><span class="line">// &#x7F16;&#x8BD1;&#x6210;&#x529F;&#x540E;&#xFF0C;vim/src/&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4F1A;&#x6709; vim &#x6587;&#x4EF6;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x7528;&#x5230;</span><br><span class="line">ls ~/vim/src -al</span><br></pre></td></tr></table></figure>
+<h1 id="4-&#x590D;&#x5236;Vim&#x5230;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;Profile"><a href="#4-&#x590D;&#x5236;Vim&#x5230;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;Profile" class="headerlink" title="4. &#x590D;&#x5236;Vim&#x5230;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;Profile"></a>4. &#x590D;&#x5236;Vim&#x5230;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;Profile</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// &#x590D;&#x5236;&#x524D;&#x53EF;&#x4EE5;&#x5907;&#x4EFD;&#x4E00;&#x4E0B;</span><br><span class="line">sudo cp /usr/bin/vim /usr/bin/vim.backup</span><br><span class="line"></span><br><span class="line">// &#x590D;&#x5236;&#x524D;&#x9762;&#x7F16;&#x8BD1;&#x7684;vim&#x5230;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;</span><br><span class="line"><span class="built_in">cd</span> ~/vim/src</span><br><span class="line">sudo cp vim /usr/bin</span><br><span class="line"></span><br><span class="line">// &#x4FEE;&#x6539;&#x7CFB;&#x7EDF;&#x7684;Profile, &#x5982;&#x679C;sudo&#x6743;&#x9650;&#x4E0D;&#x591F;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;root&#x7528;&#x6237;&#xFF0C;&#x6211;&#x662F;&#x7528;&#x7684;root&#x7528;&#x6237;&#x3002;</span><br><span class="line">su  // &#x8F93;&#x5165;root&#x5BC6;&#x7801;&#xFF0C;&#x5982;&#x679C;&#x8FD8;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#xFF0C;&#x5219;&#x8F93;&#x5165; `sudo passwd` &#x8BBE;&#x7F6E;root&#x5BC6;&#x7801;&#x3002;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;PATH=\$PATH:/usr/local/vim/bin&quot;</span> &gt;&gt; /etc/profile</span><br><span class="line"></span><br><span class="line">// &#x8FD0;&#x884C;&#x521A;&#x4FEE;&#x6539;&#x7684;&#x914D;&#x7F6E;&#x3002;</span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br><span class="line"></span><br><span class="line">// &#x6700;&#x540E;&#xFF0C;check version</span><br><span class="line">vim --version</span><br><span class="line">// &#x540C;&#x65F6;&#xFF0C;&#x4E5F;&#x80FD;&#x770B;&#x5230;&#x5B83;&#x652F;&#x6301;Python3&#x4E86;&#x3002;(7.4&#x662F;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x3002;)</span><br></pre></td></tr></table></figure>
 <p>&#x5B8C;&#x4E8B;&#x3002;</p>
 
                         

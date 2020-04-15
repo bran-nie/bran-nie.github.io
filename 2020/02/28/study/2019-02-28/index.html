@@ -2,19 +2,21 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head prefix="og: http://ogp.me/ns#">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.9.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta name="description" content="21年的时光, 目前爱好于前端~">
     <title>Git Pull-Request 一种名为PR的项目管理方式 (内附完整教程) | 执念</title>
 
     <!-- Open Graph -->
     <meta name="description" content="&amp;#x5E7F;&amp;#x4E3A;&amp;#x4EBA;&amp;#x77E5;&amp;#x7684;&amp;#x540C;&amp;#x6027;&amp;#x4EA4;&amp;#x53CB;&amp;#x7F51;&amp;#x7AD9;&amp;#x7684;&amp;#x4E00;&amp;#x5927;&amp;#x7279;&amp;#x8272;&amp;#x5C31;&amp;#x662F;Pull-Request&amp;#x529F;&amp;#x80FD;, &amp;#x7B80;&amp;#x79F0;PR. &amp;#x8FD">
+<meta name="keywords" content="github,git Pull-Request">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git Pull-Request 一种名为PR的项目管理方式 (内附完整教程)">
-<meta property="og:url" content="https://petergooo.github.io/2020/02/28/study/2019-02-28/index.html">
+<meta property="og:url" content="https://bran-nie.github.io/2020/02/28/study/2019-02-28/index.html">
 <meta property="og:site_name" content="执念">
 <meta property="og:description" content="&amp;#x5E7F;&amp;#x4E3A;&amp;#x4EBA;&amp;#x77E5;&amp;#x7684;&amp;#x540C;&amp;#x6027;&amp;#x4EA4;&amp;#x53CB;&amp;#x7F51;&amp;#x7AD9;&amp;#x7684;&amp;#x4E00;&amp;#x5927;&amp;#x7279;&amp;#x8272;&amp;#x5C31;&amp;#x662F;Pull-Request&amp;#x529F;&amp;#x80FD;, &amp;#x7B80;&amp;#x79F0;PR. &amp;#x8FD">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/00831rSTgy1gceluo3yrwj31880u0k9a.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/00831rSTgy1gcenffg024j30xc0gwwhk.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/00831rSTgy1gcenbtabthj31lo058q4v.jpg">
@@ -38,7 +40,7 @@
   "email": "mailto:pengcheng1995@gmail.com",
   "image": "undefined",
   "name": "鹏程",
-  "url": "https://petergooo.github.io"
+  "url": "https://bran-nie.github.io"
 }
 </script>
     <script>
@@ -134,7 +136,7 @@
     
 
     
-    <a href="/index.html" class="item" >
+    <a href="/index.html" class="item">
         <i class="home icon"></i>
         Home
     </a>
@@ -145,7 +147,7 @@
     
 
     
-    <a href="/categories/Web/" class="item" >
+    <a href="/categories/Web/" class="item">
         <i class="pencil icon"></i>
         前端Web
     </a>
@@ -156,7 +158,7 @@
     
 
     
-    <a href="/categories/教程/" class="item" >
+    <a href="/categories/教程/" class="item">
         <i class="pencil icon"></i>
         教程
     </a>
@@ -167,7 +169,7 @@
     
 
     
-    <a href="/categories/随笔/" class="item" >
+    <a href="/categories/随笔/" class="item">
         <i class="pencil icon"></i>
         随笔
     </a>
@@ -178,7 +180,7 @@
     
 
     
-    <a href="/archives/" class="item" >
+    <a href="/archives/" class="item">
         <i class="null icon"></i>
         Archives
     </a>
@@ -189,7 +191,7 @@
     
 
     
-    <a href="/about" class="item" >
+    <a href="/about" class="item">
         <i class="about icon"></i>
         About
     </a>
@@ -226,7 +228,7 @@
 
                     <div class="article-entry" itemprop="articleBody">
                         
-                        <p><strong>&#x5E7F;&#x4E3A;&#x4EBA;&#x77E5;&#x7684;<a href="https://github.com/" target="_blank" rel="external">&#x540C;&#x6027;&#x4EA4;&#x53CB;&#x7F51;&#x7AD9;</a>&#x7684;&#x4E00;&#x5927;&#x7279;&#x8272;&#x5C31;&#x662F;Pull-Request&#x529F;&#x80FD;, &#x7B80;&#x79F0;PR. &#x8FD9;&#x4E5F;&#x662F;&#x5F00;&#x6E90;&#x7684;&#x91CD;&#x8981;&#x529F;&#x80FD;&#x4E4B;&#x4E00;. </strong></p>
+                        <p><strong>&#x5E7F;&#x4E3A;&#x4EBA;&#x77E5;&#x7684;<a href="https://github.com/" target="_blank" rel="noopener">&#x540C;&#x6027;&#x4EA4;&#x53CB;&#x7F51;&#x7AD9;</a>&#x7684;&#x4E00;&#x5927;&#x7279;&#x8272;&#x5C31;&#x662F;Pull-Request&#x529F;&#x80FD;, &#x7B80;&#x79F0;PR. &#x8FD9;&#x4E5F;&#x662F;&#x5F00;&#x6E90;&#x7684;&#x91CD;&#x8981;&#x529F;&#x80FD;&#x4E4B;&#x4E00;. </strong></p>
 <p><a class="magnific-img" href="https://tva1.sinaimg.cn/large/00831rSTgy1gceluo3yrwj31880u0k9a.jpg"><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gceluo3yrwj31880u0k9a.jpg" alt="image-2020030118302940 " style="zoom:30%;" class="ui centered image"></a></p>
 <center style="color: #999">&#x5F00;&#x6E90;&#x9879;&#x76EE;&#x62E5;&#x6709;&#x4F17;&#x591A;PR</center>
 
@@ -246,9 +248,9 @@
 </li>
 <li><h3 id="&#x5728;&#x4E2A;&#x4EBA;repos&#x4E2D;&#x6253;&#x5F00;Fork&#x7684;&#x9879;&#x76EE;-&#x5E76;&#x514B;&#x9686;&#x5230;&#x672C;&#x5730;"><a href="#&#x5728;&#x4E2A;&#x4EBA;repos&#x4E2D;&#x6253;&#x5F00;Fork&#x7684;&#x9879;&#x76EE;-&#x5E76;&#x514B;&#x9686;&#x5230;&#x672C;&#x5730;" class="headerlink" title="&#x5728;&#x4E2A;&#x4EBA;repos&#x4E2D;&#x6253;&#x5F00;Fork&#x7684;&#x9879;&#x76EE;, &#x5E76;&#x514B;&#x9686;&#x5230;&#x672C;&#x5730;."></a>&#x5728;&#x4E2A;&#x4EBA;repos&#x4E2D;&#x6253;&#x5F00;Fork&#x7684;&#x9879;&#x76EE;, &#x5E76;&#x514B;&#x9686;&#x5230;&#x672C;&#x5730;.</h3><p> <a class="magnific-img" href="https://tva1.sinaimg.cn/large/00831rSTgy1gcendtyc2bj31ji0f2wou.jpg"><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gcendtyc2bj31ji0f2wou.jpg" alt="image-20200301192334016" class="ui centered image"></a></p>
 </li>
-<li><h3 id="&#x6253;&#x5F00;&#x672C;&#x5730;&#x9879;&#x76EE;-&#x521B;&#x5EFA;&#x4E0E;Fork&#x9879;&#x76EE;&#x4ED3;&#x5E93;&#x7684;&#x8054;&#x7CFB;"><a href="#&#x6253;&#x5F00;&#x672C;&#x5730;&#x9879;&#x76EE;-&#x521B;&#x5EFA;&#x4E0E;Fork&#x9879;&#x76EE;&#x4ED3;&#x5E93;&#x7684;&#x8054;&#x7CFB;" class="headerlink" title="&#x6253;&#x5F00;&#x672C;&#x5730;&#x9879;&#x76EE;, &#x521B;&#x5EFA;&#x4E0E;Fork&#x9879;&#x76EE;&#x4ED3;&#x5E93;&#x7684;&#x8054;&#x7CFB;,"></a>&#x6253;&#x5F00;&#x672C;&#x5730;&#x9879;&#x76EE;, &#x521B;&#x5EFA;&#x4E0E;Fork&#x9879;&#x76EE;&#x4ED3;&#x5E93;&#x7684;&#x8054;&#x7CFB;,</h3> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># learn-PR &#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x8FDC;&#x7AEF;&#x4ED3;&#x5E93;&#x540D;&#x5B57;. &#x8F83;&#x4E3A;&#x6D41;&#x884C;&#x7684;&#x547D;&#x540D;&#x662F;Fork&#x4ED3;&#x5E93;&#x7684;&#x540D;&#x5B57;</span></div><div class="line">git remote add learn-PR git://github.com/<span class="variable">${Other User}</span>/<span class="variable">${repo name}</span>.git</div></pre></td></tr></table></figure>
+<li><h3 id="&#x6253;&#x5F00;&#x672C;&#x5730;&#x9879;&#x76EE;-&#x521B;&#x5EFA;&#x4E0E;Fork&#x9879;&#x76EE;&#x4ED3;&#x5E93;&#x7684;&#x8054;&#x7CFB;"><a href="#&#x6253;&#x5F00;&#x672C;&#x5730;&#x9879;&#x76EE;-&#x521B;&#x5EFA;&#x4E0E;Fork&#x9879;&#x76EE;&#x4ED3;&#x5E93;&#x7684;&#x8054;&#x7CFB;" class="headerlink" title="&#x6253;&#x5F00;&#x672C;&#x5730;&#x9879;&#x76EE;, &#x521B;&#x5EFA;&#x4E0E;Fork&#x9879;&#x76EE;&#x4ED3;&#x5E93;&#x7684;&#x8054;&#x7CFB;,"></a>&#x6253;&#x5F00;&#x672C;&#x5730;&#x9879;&#x76EE;, &#x521B;&#x5EFA;&#x4E0E;Fork&#x9879;&#x76EE;&#x4ED3;&#x5E93;&#x7684;&#x8054;&#x7CFB;,</h3> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># learn-PR &#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x8FDC;&#x7AEF;&#x4ED3;&#x5E93;&#x540D;&#x5B57;. &#x8F83;&#x4E3A;&#x6D41;&#x884C;&#x7684;&#x547D;&#x540D;&#x662F;Fork&#x4ED3;&#x5E93;&#x7684;&#x540D;&#x5B57;</span></span><br><span class="line">git remote add learn-PR git://github.com/<span class="variable">${Other User}</span>/<span class="variable">${repo name}</span>.git</span><br></pre></td></tr></table></figure>
 </li>
-<li><h3 id="&#x5982;&#x679C;&#x53D1;&#x73B0;&#x672C;&#x5730;&#x7684;&#x4EE3;&#x7801;&#x4E0E;Fork&#x9879;&#x76EE;&#x4E0D;&#x4E00;&#x81F4;-&#x4E5F;&#x53EF;&#x4EE5;fetch&#x5230;&#x672C;&#x5730;&#x540E;-&#x518D;merge"><a href="#&#x5982;&#x679C;&#x53D1;&#x73B0;&#x672C;&#x5730;&#x7684;&#x4EE3;&#x7801;&#x4E0E;Fork&#x9879;&#x76EE;&#x4E0D;&#x4E00;&#x81F4;-&#x4E5F;&#x53EF;&#x4EE5;fetch&#x5230;&#x672C;&#x5730;&#x540E;-&#x518D;merge" class="headerlink" title="&#x5982;&#x679C;&#x53D1;&#x73B0;&#x672C;&#x5730;&#x7684;&#x4EE3;&#x7801;&#x4E0E;Fork&#x9879;&#x76EE;&#x4E0D;&#x4E00;&#x81F4;, &#x4E5F;&#x53EF;&#x4EE5;fetch&#x5230;&#x672C;&#x5730;&#x540E;, &#x518D;merge."></a>&#x5982;&#x679C;&#x53D1;&#x73B0;&#x672C;&#x5730;&#x7684;&#x4EE3;&#x7801;&#x4E0E;Fork&#x9879;&#x76EE;&#x4E0D;&#x4E00;&#x81F4;, &#x4E5F;&#x53EF;&#x4EE5;fetch&#x5230;&#x672C;&#x5730;&#x540E;, &#x518D;merge.</h3><p> <a class="magnific-img" href="https://tva1.sinaimg.cn/large/00831rSTgy1gcepnonbm7j30zl0u0goo.jpg"><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gcepnonbm7j30zl0u0goo.jpg" alt="" class="ui centered image"></a></p>
+<li><h3 id="&#x5982;&#x679C;&#x53D1;&#x73B0;&#x672C;&#x5730;&#x7684;&#x4EE3;&#x7801;&#x4E0E;Fork&#x9879;&#x76EE;&#x4E0D;&#x4E00;&#x81F4;-&#x4E5F;&#x53EF;&#x4EE5;fetch&#x5230;&#x672C;&#x5730;&#x540E;-&#x518D;merge"><a href="#&#x5982;&#x679C;&#x53D1;&#x73B0;&#x672C;&#x5730;&#x7684;&#x4EE3;&#x7801;&#x4E0E;Fork&#x9879;&#x76EE;&#x4E0D;&#x4E00;&#x81F4;-&#x4E5F;&#x53EF;&#x4EE5;fetch&#x5230;&#x672C;&#x5730;&#x540E;-&#x518D;merge" class="headerlink" title="&#x5982;&#x679C;&#x53D1;&#x73B0;&#x672C;&#x5730;&#x7684;&#x4EE3;&#x7801;&#x4E0E;Fork&#x9879;&#x76EE;&#x4E0D;&#x4E00;&#x81F4;, &#x4E5F;&#x53EF;&#x4EE5;fetch&#x5230;&#x672C;&#x5730;&#x540E;, &#x518D;merge."></a>&#x5982;&#x679C;&#x53D1;&#x73B0;&#x672C;&#x5730;&#x7684;&#x4EE3;&#x7801;&#x4E0E;Fork&#x9879;&#x76EE;&#x4E0D;&#x4E00;&#x81F4;, &#x4E5F;&#x53EF;&#x4EE5;fetch&#x5230;&#x672C;&#x5730;&#x540E;, &#x518D;merge.</h3><p> <a class="magnific-img" href="https://tva1.sinaimg.cn/large/00831rSTgy1gcepnonbm7j30zl0u0goo.jpg"><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gcepnonbm7j30zl0u0goo.jpg" alt class="ui centered image"></a></p>
 </li>
 <li><h3 id="&#x5728;&#x672C;&#x5730;&#x7F16;&#x8F91;&#x4EE3;&#x7801;-&#x63D0;&#x4EA4;&#x5230;&#x81EA;&#x5DF1;&#x8FDC;&#x7AEF;&#x4ED3;&#x5E93;"><a href="#&#x5728;&#x672C;&#x5730;&#x7F16;&#x8F91;&#x4EE3;&#x7801;-&#x63D0;&#x4EA4;&#x5230;&#x81EA;&#x5DF1;&#x8FDC;&#x7AEF;&#x4ED3;&#x5E93;" class="headerlink" title="&#x5728;&#x672C;&#x5730;&#x7F16;&#x8F91;&#x4EE3;&#x7801;, &#x63D0;&#x4EA4;&#x5230;&#x81EA;&#x5DF1;&#x8FDC;&#x7AEF;&#x4ED3;&#x5E93;."></a>&#x5728;&#x672C;&#x5730;&#x7F16;&#x8F91;&#x4EE3;&#x7801;, &#x63D0;&#x4EA4;&#x5230;&#x81EA;&#x5DF1;&#x8FDC;&#x7AEF;&#x4ED3;&#x5E93;.</h3><p> <a class="magnific-img" href="https://tva1.sinaimg.cn/large/00831rSTgy1gcepuww9ewj31fa0e8tix.jpg"><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gcepuww9ewj31fa0e8tix.jpg" alt="image-20200301204850346" class="ui centered image"></a></p>
 </li>
@@ -264,10 +266,10 @@
 </li>
 <li><h3 id="&#x7BA1;&#x7406;&#x5458;&#x9A8C;&#x8BC1;PR-&#x547D;&#x4EE4;&#x884C;"><a href="#&#x7BA1;&#x7406;&#x5458;&#x9A8C;&#x8BC1;PR-&#x547D;&#x4EE4;&#x884C;" class="headerlink" title="&#x7BA1;&#x7406;&#x5458;&#x9A8C;&#x8BC1;PR (&#x547D;&#x4EE4;&#x884C;"></a>&#x7BA1;&#x7406;&#x5458;&#x9A8C;&#x8BC1;PR (&#x547D;&#x4EE4;&#x884C;</h3><ol>
 <li><p>git am</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Github &#x5BF9;&#x6BCF;&#x4E2A;PR&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;patch&#x6587;&#x4EF6;, &#x4E0B;&#x8F7D;&#x8BE5;&#x6587;&#x4EF6;,&#x5408;&#x5E76;&#x8FDB;&#x672C;&#x5730;&#x4EE3;&#x7801;,&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x67E5;&#x770B;&#x6548;&#x679C;&#x4E86;</span></div><div class="line"><span class="comment"># &#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x8981;&#x5728;&#x672C;&#x5730;&#x9879;&#x76EE;&#x7684;&#x4E3B;&#x9875;.</span></div><div class="line">curl -L http://github.com/nieMick/study/pull/4.patch | git am</div><div class="line"><span class="comment"># nieMick/study &#x662F;Fork&#x4ED3;&#x5E93;, pull/4.patch &#x662F; &#x8BE5;&#x4ED3;&#x5E93;&#x6536;&#x5230;&#x7684;&#x7B2C;4&#x4E2A;PR. git am&#x547D;&#x4EE4;&#x662F;&#x5408;&#x5E76;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;</span></div></pre></td></tr></table></figure>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Github &#x5BF9;&#x6BCF;&#x4E2A;PR&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;patch&#x6587;&#x4EF6;, &#x4E0B;&#x8F7D;&#x8BE5;&#x6587;&#x4EF6;,&#x5408;&#x5E76;&#x8FDB;&#x672C;&#x5730;&#x4EE3;&#x7801;,&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x67E5;&#x770B;&#x6548;&#x679C;&#x4E86;</span></span><br><span class="line"><span class="comment"># &#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x8981;&#x5728;&#x672C;&#x5730;&#x9879;&#x76EE;&#x7684;&#x4E3B;&#x9875;.</span></span><br><span class="line">curl -L http://github.com/nieMick/study/pull/4.patch | git am</span><br><span class="line"><span class="comment"># nieMick/study &#x662F;Fork&#x4ED3;&#x5E93;, pull/4.patch &#x662F; &#x8BE5;&#x4ED3;&#x5E93;&#x6536;&#x5230;&#x7684;&#x7B2C;4&#x4E2A;PR. git am&#x547D;&#x4EE4;&#x662F;&#x5408;&#x5E76;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>&#x4E3A;PR&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># &#x7C7B;&#x4F3C;&#x672C;&#x5730;&#x521B;&#x5EFA;Fork&#x9879;&#x76EE;&#x7684;&#x6D41;&#x7A0B; &#x4E0D;&#x8FC7; &#x4ED3;&#x5E93;&#x662F;&#x63D0;&#x4EA4;PR&#x8005;&#x7684;&#x4ED3;&#x5E93;</span></div><div class="line">git remote add bran git://github.com/bran-nie/study.git</div><div class="line">git fetch bran</div><div class="line">git merge bran/master</div></pre></td></tr></table></figure>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># &#x7C7B;&#x4F3C;&#x672C;&#x5730;&#x521B;&#x5EFA;Fork&#x9879;&#x76EE;&#x7684;&#x6D41;&#x7A0B; &#x4E0D;&#x8FC7; &#x4ED3;&#x5E93;&#x662F;&#x63D0;&#x4EA4;PR&#x8005;&#x7684;&#x4ED3;&#x5E93;</span></span><br><span class="line">git remote add bran git://github.com/bran-nie/study.git</span><br><span class="line">git fetch bran</span><br><span class="line">git merge bran/master</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>

@@ -2,32 +2,25 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head prefix="og: http://ogp.me/ns#">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.9.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta name="description" content="21年的时光, 目前爱好于前端~">
     <title>css_那些被忽略但有时又很强的选择器 | 执念</title>
 
     <!-- Open Graph -->
-    <meta name="description" content="忙里偷闲的学习
-
-
-在切页面的时候，我们免不了要和css打交道，甚至说是颇深，在HTML中，想要快速的定位元素，除了广为人知的.class、#id、通配符*、element元素等选择器，css还为我们提供了更多在某些场景下，效率更高的选择器。">
+    <meta name="description" content="忙里偷闲的学习   在切页面的时候，我们免不了要和css打交道，甚至说是颇深，在HTML中，想要快速的定位元素，除了广为人知的.class、#id、通配符*、element元素等选择器，css还为我们提供了更多在某些场景下，效率更高的选择器。">
+<meta name="keywords" content="css select">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css_那些被忽略但有时又很强的选择器">
-<meta property="og:url" content="https://petergooo.github.io/2017/06/07/css/css-select/index.html">
+<meta property="og:url" content="https://bran-nie.github.io/2017/06/07/css/css-select/index.html">
 <meta property="og:site_name" content="执念">
-<meta property="og:description" content="忙里偷闲的学习
-
-
-在切页面的时候，我们免不了要和css打交道，甚至说是颇深，在HTML中，想要快速的定位元素，除了广为人知的.class、#id、通配符*、element元素等选择器，css还为我们提供了更多在某些场景下，效率更高的选择器。">
+<meta property="og:description" content="忙里偷闲的学习   在切页面的时候，我们免不了要和css打交道，甚至说是颇深，在HTML中，想要快速的定位元素，除了广为人知的.class、#id、通配符*、element元素等选择器，css还为我们提供了更多在某些场景下，效率更高的选择器。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-04-18T03:47:00.929Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css_那些被忽略但有时又很强的选择器">
-<meta name="twitter:description" content="忙里偷闲的学习
-
-
-在切页面的时候，我们免不了要和css打交道，甚至说是颇深，在HTML中，想要快速的定位元素，除了广为人知的.class、#id、通配符*、element元素等选择器，css还为我们提供了更多在某些场景下，效率更高的选择器。">
+<meta name="twitter:description" content="忙里偷闲的学习   在切页面的时候，我们免不了要和css打交道，甚至说是颇深，在HTML中，想要快速的定位元素，除了广为人知的.class、#id、通配符*、element元素等选择器，css还为我们提供了更多在某些场景下，效率更高的选择器。">
 
     <script type="application/ld+json">
 {
@@ -36,7 +29,7 @@
   "email": "mailto:pengcheng1995@gmail.com",
   "image": "undefined",
   "name": "鹏程",
-  "url": "https://petergooo.github.io"
+  "url": "https://bran-nie.github.io"
 }
 </script>
     <script>
@@ -132,7 +125,7 @@
     
 
     
-    <a href="/index.html" class="item" >
+    <a href="/index.html" class="item">
         <i class="home icon"></i>
         Home
     </a>
@@ -143,7 +136,7 @@
     
 
     
-    <a href="/categories/Web/" class="item" >
+    <a href="/categories/Web/" class="item">
         <i class="pencil icon"></i>
         前端Web
     </a>
@@ -154,7 +147,7 @@
     
 
     
-    <a href="/categories/教程/" class="item" >
+    <a href="/categories/教程/" class="item">
         <i class="pencil icon"></i>
         教程
     </a>
@@ -165,7 +158,7 @@
     
 
     
-    <a href="/categories/随笔/" class="item" >
+    <a href="/categories/随笔/" class="item">
         <i class="pencil icon"></i>
         随笔
     </a>
@@ -176,7 +169,7 @@
     
 
     
-    <a href="/archives/" class="item" >
+    <a href="/archives/" class="item">
         <i class="null icon"></i>
         Archives
     </a>
@@ -187,7 +180,7 @@
     
 
     
-    <a href="/about" class="item" >
+    <a href="/about" class="item">
         <i class="about icon"></i>
         About
     </a>
@@ -228,16 +221,16 @@
 
 <blockquote>
 <p>&#x5728;&#x5207;&#x9875;&#x9762;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x514D;&#x4E0D;&#x4E86;&#x8981;&#x548C;css&#x6253;&#x4EA4;&#x9053;&#xFF0C;&#x751A;&#x81F3;&#x8BF4;&#x662F;&#x9887;&#x6DF1;&#xFF0C;&#x5728;HTML&#x4E2D;&#xFF0C;&#x60F3;&#x8981;&#x5FEB;&#x901F;&#x7684;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#xFF0C;&#x9664;&#x4E86;&#x5E7F;&#x4E3A;&#x4EBA;&#x77E5;&#x7684;.class&#x3001;#id&#x3001;&#x901A;&#x914D;&#x7B26;*&#x3001;element&#x5143;&#x7D20;&#x7B49;&#x9009;&#x62E9;&#x5668;&#xFF0C;css&#x8FD8;&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x591A;&#x5728;&#x67D0;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#xFF0C;&#x6548;&#x7387;&#x66F4;&#x9AD8;&#x7684;&#x9009;&#x62E9;&#x5668;&#x3002;<br><a id="more"></a></p>
-<p style="color:gold">&#x6240;&#x4EE5;&#xFF0C;&#x6700;&#x597D;&#x81EA;&#x5DF1;&#x4E5F;&#x5C1D;&#x8BD5;&#x4E00;&#x4E0B;&#xFF0C;&#x4E0D;&#x7136;&#x5C31;&#x7B97;&#x4F60;&#x770B;&#x8FC7;&#x8FD9;&#x7BC7;&#x968F;&#x624B;&#x8BB0;&#xFF0C;&#x4E5F;&#x51E0;&#x4E4E;&#x6CA1;&#x592A;&#x5927;&#x7528;&#x5904;&#x3002;<strong>&#x5373;&#x4FBF;&#x4E0D;&#x592A;&#x5BB9;&#x6613;&#x8BB0;&#x4F4F;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x7559;&#x4E2A;&#x5370;&#x8C61;&#xFF0C;&#x662F;&#x5427;~</strong></p><br><p style="color:green"><strong>PS&#xFF1A;&#x661F;&#x661F;&#x8868;&#x793A;&#x6B64;&#x9009;&#x62E9;&#x5668;&#x5728;&#x672C;&#x6587;&#x4E2D;&#x7684;&#x5F3A;&#x8C03;&#x7A0B;&#x5EA6;&#x3002;&#x548C;&#x5E38;&#x89C1;&#x5EA6;&#x65E0;&#x5173;</strong> </p>
-
 </blockquote>
+<p style="color:gold">&#x6240;&#x4EE5;&#xFF0C;&#x6700;&#x597D;&#x81EA;&#x5DF1;&#x4E5F;&#x5C1D;&#x8BD5;&#x4E00;&#x4E0B;&#xFF0C;&#x4E0D;&#x7136;&#x5C31;&#x7B97;&#x4F60;&#x770B;&#x8FC7;&#x8FD9;&#x7BC7;&#x968F;&#x624B;&#x8BB0;&#xFF0C;&#x4E5F;&#x51E0;&#x4E4E;&#x6CA1;&#x592A;&#x5927;&#x7528;&#x5904;&#x3002;<strong>&#x5373;&#x4FBF;&#x4E0D;&#x592A;&#x5BB9;&#x6613;&#x8BB0;&#x4F4F;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x7559;&#x4E2A;&#x5370;&#x8C61;&#xFF0C;&#x662F;&#x5427;~</strong></p><br>&gt; <p style="color:green"><strong>PS&#xFF1A;&#x661F;&#x661F;&#x8868;&#x793A;&#x6B64;&#x9009;&#x62E9;&#x5668;&#x5728;&#x672C;&#x6587;&#x4E2D;&#x7684;&#x5F3A;&#x8C03;&#x7A0B;&#x5EA6;&#x3002;&#x548C;&#x5E38;&#x89C1;&#x5EA6;&#x65E0;&#x5173;</strong> </p>
+
 <h2 id="CSS3&#x9009;&#x62E9;&#x5668;-&#x2014;&#x2014;-&#x5143;&#x7D20;&#x9009;&#x62E9;&#x5668;-element-&#xFF08;&#x2605;&#x2605;&#xFF09;"><a href="#CSS3&#x9009;&#x62E9;&#x5668;-&#x2014;&#x2014;-&#x5143;&#x7D20;&#x9009;&#x62E9;&#x5668;-element-&#xFF08;&#x2605;&#x2605;&#xFF09;" class="headerlink" title="CSS3&#x9009;&#x62E9;&#x5668; &#x2014;&#x2014; &#x5143;&#x7D20;&#x9009;&#x62E9;&#x5668; [element]  &#xFF08;&#x2605;&#x2605;&#xFF09;"></a>CSS3&#x9009;&#x62E9;&#x5668; &#x2014;&#x2014; &#x5143;&#x7D20;&#x9009;&#x62E9;&#x5668; <code>[element]</code>  &#xFF08;&#x2605;&#x2605;&#xFF09;</h2><ol class="ui list">
 <li><code>element{}</code>&#x3002;&#x8FD9;&#x4E2A;&#x4F1A;&#x9009;&#x62E9;&#x6240;&#x6709;&#x80FD;&#x5339;&#x914D;&#x5230;&#x7684;element&#xFF1B;&#x5982;<code>div{}</code>&#xFF0C;&#x5219;&#x6240;&#x6709;&#x7684;div&#x90FD;&#x4F1A;&#x88AB;&#x9009;&#x4E2D;&#x3002;</li>
 <li><code>element1,element2,....{}</code>&#x3002;&#x8FD9;&#x4E2A;&#x4F1A;&#x9009;&#x62E9;&#x6240;&#x6709;&#x80FD;&#x5339;&#x914D;&#x5230;element&#xFF1B;&#x5982;<code>div, a, p{}</code> &#xFF0C;&#x5219;&#x6240;&#x6709;&#x7684;div&#xFF0C;a&#xFF0C;p&#x90FD;&#x4F1A;&#x88AB;&#x9009;&#x4E2D;&#x3002;</li>
 <li><code>element1 element2{}</code> &#x8FD9;&#x4E2A;&#x4F1A;&#x9009;&#x62E9;&#x7236;&#x5143;&#x7D20;&#x4E3A;element1&#x7684;&#x6240;&#x6709;&#x7684;element2&#x5B50;&#x5143;&#x7D20;&#xFF1B;&#x5982;<code>div a{}</code>&#xFF0C;&#x5219;div&#x4E0B;&#x6240;&#x6709;&#x7684;a&#x90FD;&#x4F1A;&#x88AB;&#x9009;&#x4E2D;&#x3002;</li>
 <li><code>element1&gt;element2{}</code>&#x3002;&#x8FD9;&#x4E2A;&#x4F1A;&#x9009;&#x62E9;&#x7D27;&#x8DDF;&#x7740;element1&#x7684;element2&#x5143;&#x7D20;&#xFF1B;&#x5982;<code>&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;</code> <code>div+p{}</code> &#xFF0C;&#x5219;div&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;p&#x4F1A;&#x88AB;&#x9009;&#x4E2D;&#x3002;</li>
 </ol>
-<h2 id="CSS3&#x9009;&#x62E9;&#x5668;-&#x2014;-&#x2014;-&#x5C5E;&#x6027;&#x9009;&#x62E9;&#x5668;-attribute-&#xFF08;&#x2605;&#x2605;&#x2605;&#x2605;&#xFF09;"><a href="#CSS3&#x9009;&#x62E9;&#x5668;-&#x2014;-&#x2014;-&#x5C5E;&#x6027;&#x9009;&#x62E9;&#x5668;-attribute-&#xFF08;&#x2605;&#x2605;&#x2605;&#x2605;&#xFF09;" class="headerlink" title="CSS3&#x9009;&#x62E9;&#x5668; &#x2014; &#x2014; &#x5C5E;&#x6027;&#x9009;&#x62E9;&#x5668; [attribute]&#xFF08;&#x2605;&#x2605;&#x2605;&#x2605;&#xFF09;"></a>CSS3&#x9009;&#x62E9;&#x5668; &#x2014; &#x2014; &#x5C5E;&#x6027;&#x9009;&#x62E9;&#x5668; <code>[attribute]</code>&#xFF08;&#x2605;&#x2605;&#x2605;&#x2605;&#xFF09;</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://petergooo.github.io&quot;</span> <span class="attr">title</span>=<span class="string">&quot;a b c a-hello&quot;</span>&gt;</span>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;demo1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">target</span>=<span class="string">&quot;_self&quot;</span> <span class="attr">href</span>=<span class="string">&quot;http://petergooo.github.io&quot;</span> <span class="attr">title</span>=<span class="string">&quot;hey hi hello a&quot;</span>&gt;</span>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;demo2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="CSS3&#x9009;&#x62E9;&#x5668;-&#x2014;-&#x2014;-&#x5C5E;&#x6027;&#x9009;&#x62E9;&#x5668;-attribute-&#xFF08;&#x2605;&#x2605;&#x2605;&#x2605;&#xFF09;"><a href="#CSS3&#x9009;&#x62E9;&#x5668;-&#x2014;-&#x2014;-&#x5C5E;&#x6027;&#x9009;&#x62E9;&#x5668;-attribute-&#xFF08;&#x2605;&#x2605;&#x2605;&#x2605;&#xFF09;" class="headerlink" title="CSS3&#x9009;&#x62E9;&#x5668; &#x2014; &#x2014; &#x5C5E;&#x6027;&#x9009;&#x62E9;&#x5668; [attribute]&#xFF08;&#x2605;&#x2605;&#x2605;&#x2605;&#xFF09;"></a>CSS3&#x9009;&#x62E9;&#x5668; &#x2014; &#x2014; &#x5C5E;&#x6027;&#x9009;&#x62E9;&#x5668; <code>[attribute]</code>&#xFF08;&#x2605;&#x2605;&#x2605;&#x2605;&#xFF09;</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://petergooo.github.io&quot;</span> <span class="attr">title</span>=<span class="string">&quot;a b c a-hello&quot;</span>&gt;</span>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;demo1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">target</span>=<span class="string">&quot;_self&quot;</span> <span class="attr">href</span>=<span class="string">&quot;http://petergooo.github.io&quot;</span> <span class="attr">title</span>=<span class="string">&quot;hey hi hello a&quot;</span>&gt;</span>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;demo2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>&#x9009;&#x62E9;&#x5668;&#x524D;&#x9762;&#x4E5F;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#xFF1A;a[src^=&#x2019;https&#x2019;]{ &#x2026; }&#xFF0C; .info[title*=&#x2019;info&#x2019;]&#x3002;</p>
 <ol class="ui list">
 <li><code>[target]{}</code>&#x3002;&#x8FD9;&#x4E2A;&#x4F1A;&#x9009;&#x62E9;&#x5E26;&#x6240;&#x6709;&#x5E26;<em>target</em>&#x5C5E;&#x6027;&#x7684;&#x5143;&#x7D20;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x4E0A;&#x9762;&#x4E24;&#x4E2A;a&#x6807;&#x7B7E;&#x90FD;&#x4F1A;&#x88AB;&#x9009;&#x4E2D;&#x3002;</li>
@@ -271,14 +264,14 @@
 <li>:hover &#x9F20;&#x6807;&#x79FB;&#x52A8;&#x5230;&#x4E0A;&#x9762;&#x7684;&#x6837;&#x5F0F;&#x3002;        &#x8FD9;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x662F;&#x7528;&#x4F5C;&#x906E;&#x7F69;&#x5C42;</li>
 <li>::before, ::after &#x5143;&#x7D20;&#x7684;&#x524D;&#x540E;&#x6837;&#x5F0F;&#x3002;            &#x8FD9;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x6709;&#xFF1A;&#x6E05;&#x9664;&#x6D6E;&#x52A8;&#x3001;&#x6DFB;&#x52A0;&#x7279;&#x5B9A;&#x7684;&#x6837;&#x5F0F;&#x3001;&#x7B49;&#x7B49;<ol>
 <li>PS&#xFF1A;&#x8FD9;&#x91CC;&#x662F;&#x7528;&#x4E86;&#x4E24;&#x4E2A;&#x5192;&#x53F7;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x662F;&#x4F2A;&#x5143;&#x7D20;&#xFF0C;&#x867D;&#x7136;&#x8BF4;&#x7528;&#x5355;&#x5192;&#x53F7;&#x4E5F;&#x80FD;&#x751F;&#x6548;&#xFF0C;&#x4F46;&#x662F;&#x4E3A;&#x4E86;&#x63A8;&#x52A8;css3&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x7EDF;&#x4E00;&#x7528;&#x53CC;&#x5192;&#x53F7;&#x54AF;&#x3002;</li>
-<li>&#x9644;&#x4E0A;&#x4E24;&#x7BC7;&#x6587;&#x7AE0;<a href="http://www.alloyteam.com/2016/05/summary-of-pseudo-classes-and-pseudo-elements/" target="_blank" rel="external">&#x603B;&#x7ED3;&#x4F2A;&#x7C7B;&#x548C;&#x4F2A;&#x5143;&#x7D20;</a> &#x2014;&#x2014;&#x2014;&#x2014; &#x2014;&#x2014;&#x2014;  <a href="https://segmentfault.com/a/1190000000484493" target="_blank" rel="external">&#x8BE6;&#x89E3; CSS &#x5C5E;&#x6027; - &#x4F2A;&#x7C7B;&#x548C;&#x4F2A;&#x5143;&#x7D20;&#x7684;&#x533A;&#x522B;</a></li>
+<li>&#x9644;&#x4E0A;&#x4E24;&#x7BC7;&#x6587;&#x7AE0;<a href="http://www.alloyteam.com/2016/05/summary-of-pseudo-classes-and-pseudo-elements/" target="_blank" rel="noopener">&#x603B;&#x7ED3;&#x4F2A;&#x7C7B;&#x548C;&#x4F2A;&#x5143;&#x7D20;</a> &#x2014;&#x2014;&#x2014;&#x2014; &#x2014;&#x2014;&#x2014;  <a href="https://segmentfault.com/a/1190000000484493" target="_blank" rel="noopener">&#x8BE6;&#x89E3; CSS &#x5C5E;&#x6027; - &#x4F2A;&#x7C7B;&#x548C;&#x4F2A;&#x5143;&#x7D20;&#x7684;&#x533A;&#x522B;</a></li>
 </ol>
 </li>
 <li>:not(selector)   &#x7ED9;&#x975E;&#x6240;&#x9009;&#x5143;&#x7D20;&#x8BBE;&#x5B9A;&#x6837;&#x5F0F;</li>
 </ol>
 <h3 id="&#x8FD9;&#x91CC;&#x6709;&#x8DA3;&#x7684;&#x51E0;&#x4E2A;&#x6709;&#xFF1A;"><a href="#&#x8FD9;&#x91CC;&#x6709;&#x8DA3;&#x7684;&#x51E0;&#x4E2A;&#x6709;&#xFF1A;" class="headerlink" title="&#x8FD9;&#x91CC;&#x6709;&#x8DA3;&#x7684;&#x51E0;&#x4E2A;&#x6709;&#xFF1A;"></a>&#x8FD9;&#x91CC;&#x6709;&#x8DA3;&#x7684;&#x51E0;&#x4E2A;&#x6709;&#xFF1A;</h3><ol class="ui list">
 <li><p>::first-letter &#xFF1A; &#x7ED9;&#x6240;&#x9009;&#x5143;&#x7D20;&#x7684;&#x9996;&#x5B57;&#x6BCD;/&#x4E2D;&#x6587; &#x5E94;&#x7528;&#x6837;&#x5F0F;&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x62E9;&#x5668;&#x53EF;&#x4EE5;&#x505A;&#x9996;&#x5B57;&#x6BCD;&#x6548;&#x679C;&#x3002;&#x5F88;&#x65B9;&#x4FBF;&#xFF0C;&#x9884;&#x89C8;&#x5982;&#x4E0B;&#xFF1A;</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;a&quot;</span>&gt;</span>Oh my god, Look at the first letter<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;a&quot;</span>&gt;</span>&#x6211;&#x7684;&#x5929;&#xFF0C;&#x770B;&#x770B;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x5B57;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">  .a::first-letter{</div><div class="line">    font-size:200%;</div><div class="line">    color:#8a2be2;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;a&quot;</span>&gt;</span>Oh my god, Look at the first letter<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;a&quot;</span>&gt;</span>&#x6211;&#x7684;&#x5929;&#xFF0C;&#x770B;&#x770B;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x5B57;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">  <span class="selector-class">.a</span><span class="selector-pseudo">::first-letter</span>{</span></span><br><span class="line"><span class="css">    <span class="selector-tag">font-size</span><span class="selector-pseudo">:200</span>%;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">color</span>:<span class="selector-id">#8a2be2</span>;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p class="a">Oh my god, Look at the first letter </p><p class="a">&#x6211;&#x7684;&#x5929;&#xFF0C;&#x770B;&#x770B;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x5B57;</p>
 
 <style>.a::first-letter{font-size:200%;color:#8a2be2</style>
@@ -289,7 +282,7 @@
 <style>::selection{color:#ff0000;}::-moz-selection{color:#ff0000;}</style>
 </li>
 <li><p>:target  &#x8FD9;&#x4E2A;&#x5C31;&#x5F88;&#x6709;&#x8DA3;&#x4E86;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E0D;&#x652F;&#x6301;ie8&#x53CA;&#x4EE5;&#x4E0B;&#x3002;  &#x5F53;&#x524D;&#x9875;&#x9762;&#x6D3B;&#x52A8;&#x7684;&#x951A;&#x70B9;&#x7684;&#x6837;&#x5F0F;&#x3002;&#x4EE3;&#x7801;&#x793A;&#x4F8B;:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">  :target{</div><div class="line">    border:2px solid #ccc;</div><div class="line">    background-color: #e5eecc;</div><div class="line">  }</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#id1&quot;</span>&gt;</span>jump target1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#id2&quot;</span>&gt;</span>jump target2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;id1&quot;</span>&gt;</span>target1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;id2&quot;</span>&gt;</span>target2<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">  <span class="selector-pseudo">:target</span>{</span></span><br><span class="line"><span class="css">    <span class="selector-tag">border</span><span class="selector-pseudo">:2px</span> <span class="selector-tag">solid</span> <span class="selector-id">#ccc</span>;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">background-color</span>: <span class="selector-id">#e5eecc</span>;</span></span><br><span class="line">  }</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#id1&quot;</span>&gt;</span>jump target1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#id2&quot;</span>&gt;</span>jump target2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;id1&quot;</span>&gt;</span>target1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;id2&quot;</span>&gt;</span>target2<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>&#x6548;&#x679C;&#x4F53;&#x9A8C;&#x5982;&#x4E0B;&#x3002;&#x70B9;&#x51FB;&#x4E24;&#x4E2A;&#x951A;&#x70B9;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;id&#x6D3B;&#x8DC3;&#x65F6;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6709;&#x80CC;&#x666F;&#x3002;</p>
 <p><a href="#id1">jump target1</a>   &#x2014;&#x2014;&#x2014;   <a href="#id2">jump target2</a></p>
 <p id="id1">target1</p><br><p id="id2">target2</p>
@@ -298,7 +291,7 @@
 </li>
 <li><p>&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5F53;&#x5C5E; :nth-child(n) &#x5566;</p>
 <p>&#x5C31;&#x50CF;&#x6211;&#x4E0A;&#x9762;&#x8BF4;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x9009;&#x62E9;&#x5668;&#x7528;&#x6765;&#x5FAA;&#x73AF;&#x9009;&#x62E9;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x7B80;&#x76F4;&#x4E0D;&#x8981;&#x592A;&#x723D;&#xFF01;</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span>&gt;</span>aaa<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span>&gt;</span>bbb<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span>&gt;</span>ccc<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">  .c{</div><div class="line">    display:inline-block;</div><div class="line">    margin:0;</div><div class="line">    border:1px solid #ccc;</div><div class="line">    width:33.33333%;text-align:center</div><div class="line">  }</div><div class="line">  .c:nth-child(3n){</div><div class="line">    background-color:green;</div><div class="line">  }</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span>&gt;</span>aaa<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span>&gt;</span>bbb<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;c&quot;</span>&gt;</span>ccc<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">  <span class="selector-class">.c</span>{</span></span><br><span class="line"><span class="css">    <span class="selector-tag">display</span><span class="selector-pseudo">:inline-block</span>;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">margin</span><span class="selector-pseudo">:0</span>;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">border</span><span class="selector-pseudo">:1px</span> <span class="selector-tag">solid</span> <span class="selector-id">#ccc</span>;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">width</span><span class="selector-pseudo">:33.33333</span>%;<span class="selector-tag">text-align</span><span class="selector-pseudo">:center</span></span></span><br><span class="line">  }</span><br><span class="line"><span class="css">  <span class="selector-class">.c</span><span class="selector-pseudo">:nth-child(3n)</span>{</span></span><br><span class="line"><span class="css">    <span class="selector-tag">background-color</span><span class="selector-pseudo">:green</span>;</span></span><br><span class="line">  }</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><span class="c">aaa</span><span class="c">bbb</span><span class="c">ccc</span></p>
 <style>.c{display:inline-block;margin:0;border:1px solid #ccc; width:33.33333%;text-align:center}.c:nth-child(3n){background-color:green;}</style>
 
@@ -307,7 +300,7 @@
 </ol>
 <h2 id="&#x5199;&#x5230;&#x6700;&#x540E;&#x5199;&#x61F5;&#x903C;&#x4E86;&#x3002;"><a href="#&#x5199;&#x5230;&#x6700;&#x540E;&#x5199;&#x61F5;&#x903C;&#x4E86;&#x3002;" class="headerlink" title="&#x5199;&#x5230;&#x6700;&#x540E;&#x5199;&#x61F5;&#x903C;&#x4E86;&#x3002;"></a>&#x5199;&#x5230;&#x6700;&#x540E;&#x5199;&#x61F5;&#x903C;&#x4E86;&#x3002;</h2><p>&#x8FD9;&#x61F5;&#x903C;&#x7684;&#x6392;&#x7248;&#x3002;&#x3002;&#x3002;&#x3002;&#x539F;&#x8C05;&#x6211;&#x5427;</p>
 <p>233333333333</p>
-<h3 id="&#x53C2;&#x8003;&#x6587;&#x6863;"><a href="#&#x53C2;&#x8003;&#x6587;&#x6863;" class="headerlink" title="&#x53C2;&#x8003;&#x6587;&#x6863;"></a>&#x53C2;&#x8003;&#x6587;&#x6863;</h3><p><a href="http://www.w3school.com.cn/cssref/css_selectors.asp" target="_blank" rel="external">CSS &#x9009;&#x62E9;&#x5668;&#x53C2;&#x8003;&#x624B;&#x518C;</a></p>
+<h3 id="&#x53C2;&#x8003;&#x6587;&#x6863;"><a href="#&#x53C2;&#x8003;&#x6587;&#x6863;" class="headerlink" title="&#x53C2;&#x8003;&#x6587;&#x6863;"></a>&#x53C2;&#x8003;&#x6587;&#x6863;</h3><p><a href="http://www.w3school.com.cn/cssref/css_selectors.asp" target="_blank" rel="noopener">CSS &#x9009;&#x62E9;&#x5668;&#x53C2;&#x8003;&#x624B;&#x518C;</a></p>
 
                         
                     </div>

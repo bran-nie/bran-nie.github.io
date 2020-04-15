@@ -2,29 +2,25 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head prefix="og: http://ogp.me/ns#">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.9.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta name="description" content="21年的时光, 目前爱好于前端~">
     <title>ES6 --- Promise(基本用法) | 执念</title>
 
     <!-- Open Graph -->
-    <meta name="description" content="在简单介绍了Promise几个特点和缺点后，让我们看看Promise一些基本用法，看看是不是很特性，另外实践是很好的校验方式。
-
-1. 创建Promise对象">
+    <meta name="description" content="在简单介绍了Promise几个特点和缺点后，让我们看看Promise一些基本用法，看看是不是很特性，另外实践是很好的校验方式。  1. 创建Promise对象">
+<meta name="keywords" content="ES6,Promise">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6 --- Promise(基本用法)">
-<meta property="og:url" content="https://petergooo.github.io/2018/08/07/promise/base-use/index.html">
+<meta property="og:url" content="https://bran-nie.github.io/2018/08/07/promise/base-use/index.html">
 <meta property="og:site_name" content="执念">
-<meta property="og:description" content="在简单介绍了Promise几个特点和缺点后，让我们看看Promise一些基本用法，看看是不是很特性，另外实践是很好的校验方式。
-
-1. 创建Promise对象">
+<meta property="og:description" content="在简单介绍了Promise几个特点和缺点后，让我们看看Promise一些基本用法，看看是不是很特性，另外实践是很好的校验方式。  1. 创建Promise对象">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-08-18T10:36:29.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6 --- Promise(基本用法)">
-<meta name="twitter:description" content="在简单介绍了Promise几个特点和缺点后，让我们看看Promise一些基本用法，看看是不是很特性，另外实践是很好的校验方式。
-
-1. 创建Promise对象">
+<meta name="twitter:description" content="在简单介绍了Promise几个特点和缺点后，让我们看看Promise一些基本用法，看看是不是很特性，另外实践是很好的校验方式。  1. 创建Promise对象">
 
     <script type="application/ld+json">
 {
@@ -33,7 +29,7 @@
   "email": "mailto:pengcheng1995@gmail.com",
   "image": "undefined",
   "name": "鹏程",
-  "url": "https://petergooo.github.io"
+  "url": "https://bran-nie.github.io"
 }
 </script>
     <script>
@@ -129,7 +125,7 @@
     
 
     
-    <a href="/index.html" class="item" >
+    <a href="/index.html" class="item">
         <i class="home icon"></i>
         Home
     </a>
@@ -140,7 +136,7 @@
     
 
     
-    <a href="/categories/Web/" class="item" >
+    <a href="/categories/Web/" class="item">
         <i class="pencil icon"></i>
         前端Web
     </a>
@@ -151,7 +147,7 @@
     
 
     
-    <a href="/categories/教程/" class="item" >
+    <a href="/categories/教程/" class="item">
         <i class="pencil icon"></i>
         教程
     </a>
@@ -162,7 +158,7 @@
     
 
     
-    <a href="/categories/随笔/" class="item" >
+    <a href="/categories/随笔/" class="item">
         <i class="pencil icon"></i>
         随笔
     </a>
@@ -173,7 +169,7 @@
     
 
     
-    <a href="/archives/" class="item" >
+    <a href="/archives/" class="item">
         <i class="null icon"></i>
         Archives
     </a>
@@ -184,7 +180,7 @@
     
 
     
-    <a href="/about" class="item" >
+    <a href="/about" class="item">
         <i class="about icon"></i>
         About
     </a>
@@ -229,13 +225,13 @@
 <li><p>&#x4F7F;&#x7528;new&#x5173;&#x952E;&#x8BCD;&#xFF0C;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;Promise&#x5BF9;&#x8C61;&#x3002;(ES6 &#x89C4;&#x5B9A;&#xFF0C;<code>Promise</code>&#x5BF9;&#x8C61;&#x662F;&#x4E00;&#x4E2A;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x751F;&#x6210;<code>Promise</code>&#x5B9E;&#x4F8B;&#x3002;)</p>
 <p><code>let p = new Promise()</code></p>
 <p>&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> {</div><div class="line">  <span class="comment">// &#x5F02;&#x6B65;&#x64CD;&#x4F5C;</span></div><div class="line">  <span class="keyword">if</span>(<span class="comment">/*&#x5F02;&#x6B65;&#x64CD;&#x4F5C;OK*/</span>){</div><div class="line">     resolve(val)</div><div class="line">  } <span class="keyword">else</span> {</div><div class="line">    reject(error)</div><div class="line">  }</div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> {</span><br><span class="line">  <span class="comment">// &#x5F02;&#x6B65;&#x64CD;&#x4F5C;</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="comment">/*&#x5F02;&#x6B65;&#x64CD;&#x4F5C;OK*/</span>){</span><br><span class="line">     resolve(val)</span><br><span class="line">  } <span class="keyword">else</span> {</span><br><span class="line">    reject(error)</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <p>&#x5728;&#x5B9E;&#x4F8B;&#x5316;Promise&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x6784;&#x9020;&#x51FD;&#x6570;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5B83;&#x4EEC;&#x662F;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;  &#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x6210;&#x529F;&#x65F6;&#xFF0C;&#x5C06;&#x5BF9;&#x8C61;&#x72B6;&#x6001;&#x7531;&#x7B49;&#x5F85;&#x53D8;&#x66F4;&#x4E3A;&#x6210;&#x529F;&#x72B6;&#x6001;&#x7684; resolve&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x53C2;&#x6570;&#x662F;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x7136;&#x540E;&#x4F20;&#x9012;&#x51FA;&#x53BB;&#xFF1B; &#x7B2C;&#x4E8C;&#x4E2A;&#x662F;  &#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x5931;&#x8D25;&#x65F6;&#xFF0C;&#x5C06;&#x5BF9;&#x8C61;&#x72B6;&#x6001;&#x7531;&#x7B49;&#x5F85;&#x53D8;&#x66F4;&#x4E3A;&#x5931;&#x8D25;&#x72B6;&#x6001;&#x7684; reject&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x53C2;&#x6570;&#x662F;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x62A5;&#x9519;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x51FA;&#x53BB;&#x3002;</p>
 </li>
 </ul>
 <h2 id="2-&#x4F7F;&#x7528;then&#x65B9;&#x6CD5;-catch-&#x94FE;&#x5F0F;&#x5904;&#x7406;&#x5BF9;&#x8C61;&#x8FD4;&#x56DE;&#x503C;"><a href="#2-&#x4F7F;&#x7528;then&#x65B9;&#x6CD5;-catch-&#x94FE;&#x5F0F;&#x5904;&#x7406;&#x5BF9;&#x8C61;&#x8FD4;&#x56DE;&#x503C;" class="headerlink" title="2. &#x4F7F;&#x7528;then&#x65B9;&#x6CD5;(catch)&#x94FE;&#x5F0F;&#x5904;&#x7406;&#x5BF9;&#x8C61;&#x8FD4;&#x56DE;&#x503C;"></a>2. &#x4F7F;&#x7528;then&#x65B9;&#x6CD5;(catch)&#x94FE;&#x5F0F;&#x5904;&#x7406;&#x5BF9;&#x8C61;&#x8FD4;&#x56DE;&#x503C;</h2><ul class="ui list">
 <li><p>&#x4E00;&#x4E2A;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x94FE;&#x5F0F;&#x7684;&#x4F7F;&#x7528;then&#x65B9;&#x6CD5;&#xFF0C;then&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x5176;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;&#x5BF9;&#x8C61;&#x72B6;&#x6001;&#x4E3A;resolve&#x65F6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x662F;&#x5BF9;&#x8C61;&#x72B6;&#x6001;&#x4E3A;reject&#x65F6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;  <em>&#x5176;&#x4E2D;&#x7B2C;&#x4E8C;&#x4E2A;&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x4E00;&#x822C;&#x4F1A;&#x7528;catch&#x65B9;&#x6CD5;&#x6355;&#x83B7;</em></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> {</div><div class="line">  setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> resolve(<span class="string">&apos;resolve&apos;</span>), <span class="number">1000</span>)&#xFF1B;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">&apos;Promise&apos;</span>)</div><div class="line">})</div><div class="line"></div><div class="line">p.then(<span class="function"><span class="params">val</span> =&gt;</span> {</div><div class="line">  <span class="built_in">console</span>.log(val);</div><div class="line">}, error =&gt; {</div><div class="line">  <span class="built_in">console</span>.log(error);</div><div class="line">})</div><div class="line"><span class="comment">// &#x7B49;&#x540C;&#x4F7F;&#x7528;catch</span></div><div class="line">p.then(<span class="function"><span class="params">val</span> =&gt;</span> {</div><div class="line">  <span class="built_in">console</span>.log(val);</div><div class="line">}).catch(<span class="function"><span class="params">error</span> =&gt;</span> {</div><div class="line">  <span class="built_in">console</span>.log(error)</div><div class="line">})</div><div class="line"><span class="built_in">console</span>.log(<span class="string">&apos;hi&apos;</span>);</div><div class="line"></div><div class="line"><span class="comment">// Promise</span></div><div class="line"><span class="comment">// hi</span></div><div class="line"><span class="comment">// resolve</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> {</span><br><span class="line">  setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> resolve(<span class="string">&apos;resolve&apos;</span>), <span class="number">1000</span>)&#xFF1B;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&apos;Promise&apos;</span>)</span><br><span class="line">})</span><br><span class="line"></span><br><span class="line">p.then(<span class="function"><span class="params">val</span> =&gt;</span> {</span><br><span class="line">  <span class="built_in">console</span>.log(val);</span><br><span class="line">}, error =&gt; {</span><br><span class="line">  <span class="built_in">console</span>.log(error);</span><br><span class="line">})</span><br><span class="line"><span class="comment">// &#x7B49;&#x540C;&#x4F7F;&#x7528;catch</span></span><br><span class="line">p.then(<span class="function"><span class="params">val</span> =&gt;</span> {</span><br><span class="line">  <span class="built_in">console</span>.log(val);</span><br><span class="line">}).catch(<span class="function"><span class="params">error</span> =&gt;</span> {</span><br><span class="line">  <span class="built_in">console</span>.log(error)</span><br><span class="line">})</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&apos;hi&apos;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Promise</span></span><br><span class="line"><span class="comment">// hi</span></span><br><span class="line"><span class="comment">// resolve</span></span><br></pre></td></tr></table></figure>
 <p>tip&#xFF1A;&#x5173;&#x4E8E;&#x6267;&#x884C;&#x987A;&#x5E8F;&#xFF0C;Promise&#x5728;&#x521B;&#x5EFA;&#x540E;&#x4F1A;&#x7ACB;&#x523B;&#x6267;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x6253;&#x5370;&#x201C;Promise&#x201D;&#xFF0C;&#x5176;&#x6B21;&#x662F;&#x201C;hi&#x201D;&#xFF0C;&#x5176;&#x56DE;&#x8C03;&#x51FD;&#x6570;then&#x65B9;&#x6CD5;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x811A;&#x672C;&#x4EE3;&#x7801;&#x6240;&#x6709;&#x7684;&#x540C;&#x6B65;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x5B8C;&#x624D;&#x4F1A;&#x6267;&#x884C;&#x3002;</p>
 <p>&#x200B;</p>
 </li>

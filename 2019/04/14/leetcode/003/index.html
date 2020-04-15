@@ -2,26 +2,25 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head prefix="og: http://ogp.me/ns#">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.9.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta name="description" content="21年的时光, 目前爱好于前端~">
     <title>003 --- Longest Substring Without Repeating Characters | 执念</title>
 
     <!-- Open Graph -->
-    <meta name="description" content="&amp;#x9898;&amp;#x76EE;&amp;#x82F1;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;Longest Substring Without Repeating Characters 
-&amp;#x4E2D;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;&amp;#x65E0;&amp;#x91CD;&amp;#x590D;&amp;#x5B57;&amp;#x7B26;&amp;#x7684;&amp;#x6700;">
+    <meta name="description" content="&amp;#x9898;&amp;#x76EE;&amp;#x82F1;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;Longest Substring Without Repeating Characters  &amp;#x4E2D;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;&amp;#x65E0;&amp;#x91CD;&amp;#x590D;&amp;#x5B57;&amp;#x7B26;&amp;#x7684;&amp;#x6700;">
+<meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="003 --- Longest Substring Without Repeating Characters">
-<meta property="og:url" content="https://petergooo.github.io/2019/04/14/leetcode/003/index.html">
+<meta property="og:url" content="https://bran-nie.github.io/2019/04/14/leetcode/003/index.html">
 <meta property="og:site_name" content="执念">
-<meta property="og:description" content="&amp;#x9898;&amp;#x76EE;&amp;#x82F1;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;Longest Substring Without Repeating Characters 
-&amp;#x4E2D;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;&amp;#x65E0;&amp;#x91CD;&amp;#x590D;&amp;#x5B57;&amp;#x7B26;&amp;#x7684;&amp;#x6700;">
+<meta property="og:description" content="&amp;#x9898;&amp;#x76EE;&amp;#x82F1;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;Longest Substring Without Repeating Characters  &amp;#x4E2D;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;&amp;#x65E0;&amp;#x91CD;&amp;#x590D;&amp;#x5B57;&amp;#x7B26;&amp;#x7684;&amp;#x6700;">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-05-22T13:11:25.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="003 --- Longest Substring Without Repeating Characters">
-<meta name="twitter:description" content="&amp;#x9898;&amp;#x76EE;&amp;#x82F1;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;Longest Substring Without Repeating Characters 
-&amp;#x4E2D;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;&amp;#x65E0;&amp;#x91CD;&amp;#x590D;&amp;#x5B57;&amp;#x7B26;&amp;#x7684;&amp;#x6700;">
+<meta name="twitter:description" content="&amp;#x9898;&amp;#x76EE;&amp;#x82F1;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;Longest Substring Without Repeating Characters  &amp;#x4E2D;&amp;#x6587;&amp;#x9898;&amp;#x76EE;&amp;#xFF1A;&amp;#x65E0;&amp;#x91CD;&amp;#x590D;&amp;#x5B57;&amp;#x7B26;&amp;#x7684;&amp;#x6700;">
 
     <script type="application/ld+json">
 {
@@ -30,7 +29,7 @@
   "email": "mailto:pengcheng1995@gmail.com",
   "image": "undefined",
   "name": "鹏程",
-  "url": "https://petergooo.github.io"
+  "url": "https://bran-nie.github.io"
 }
 </script>
     <script>
@@ -126,7 +125,7 @@
     
 
     
-    <a href="/index.html" class="item" >
+    <a href="/index.html" class="item">
         <i class="home icon"></i>
         Home
     </a>
@@ -137,7 +136,7 @@
     
 
     
-    <a href="/categories/Web/" class="item" >
+    <a href="/categories/Web/" class="item">
         <i class="pencil icon"></i>
         前端Web
     </a>
@@ -148,7 +147,7 @@
     
 
     
-    <a href="/categories/教程/" class="item" >
+    <a href="/categories/教程/" class="item">
         <i class="pencil icon"></i>
         教程
     </a>
@@ -159,7 +158,7 @@
     
 
     
-    <a href="/categories/随笔/" class="item" >
+    <a href="/categories/随笔/" class="item">
         <i class="pencil icon"></i>
         随笔
     </a>
@@ -170,7 +169,7 @@
     
 
     
-    <a href="/archives/" class="item" >
+    <a href="/archives/" class="item">
         <i class="null icon"></i>
         Archives
     </a>
@@ -181,7 +180,7 @@
     
 
     
-    <a href="/about" class="item" >
+    <a href="/about" class="item">
         <i class="about icon"></i>
         About
     </a>
@@ -218,8 +217,8 @@
 
                     <div class="article-entry" itemprop="articleBody">
                         
-                        <h2 id="&#x9898;&#x76EE;"><a href="#&#x9898;&#x76EE;" class="headerlink" title="&#x9898;&#x76EE;"></a>&#x9898;&#x76EE;</h2><p>&#x82F1;&#x6587;&#x9898;&#x76EE;&#xFF1A;<a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="external">Longest Substring Without Repeating Characters</a> </p>
-<p>&#x4E2D;&#x6587;&#x9898;&#x76EE;&#xFF1A;<a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="external">&#x65E0;&#x91CD;&#x590D;&#x5B57;&#x7B26;&#x7684;&#x6700;&#x957F;&#x5B50;&#x4E32;</a></p>
+                        <h2 id="&#x9898;&#x76EE;"><a href="#&#x9898;&#x76EE;" class="headerlink" title="&#x9898;&#x76EE;"></a>&#x9898;&#x76EE;</h2><p>&#x82F1;&#x6587;&#x9898;&#x76EE;&#xFF1A;<a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">Longest Substring Without Repeating Characters</a> </p>
+<p>&#x4E2D;&#x6587;&#x9898;&#x76EE;&#xFF1A;<a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">&#x65E0;&#x91CD;&#x590D;&#x5B57;&#x7B26;&#x7684;&#x6700;&#x957F;&#x5B50;&#x4E32;</a></p>
 <h2 id="&#x5206;&#x6790;&#x53CA;&#x601D;&#x8DEF;"><a href="#&#x5206;&#x6790;&#x53CA;&#x601D;&#x8DEF;" class="headerlink" title="&#x5206;&#x6790;&#x53CA;&#x601D;&#x8DEF;"></a>&#x5206;&#x6790;&#x53CA;&#x601D;&#x8DEF;</h2><p>&#x6211;&#x6628;&#x665A;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x9898;&#xFF0C;&#x6C42;&#x7ED9;&#x5B9A;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x76F8;&#x90BB;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x6700;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#x7684;length&#x3002;</p>
 <h3 id="&#x7B2C;&#x4E00;&#x7248;&#x672C;"><a href="#&#x7B2C;&#x4E00;&#x7248;&#x672C;" class="headerlink" title="&#x7B2C;&#x4E00;&#x7248;&#x672C;"></a>&#x7B2C;&#x4E00;&#x7248;&#x672C;</h3><p>&#x60F3;&#x4E86;&#x4E00;&#x60F3;&#xFF0C;&#x5927;&#x6982;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#x662F;&#x904D;&#x5386;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E14;&#x5728;&#x540C;&#x65F6;&#x8BB0;&#x5F55;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x6C42;&#x5176;length&#x3002;</p>
 <p>&#x6253;&#x7B97;&#x7528;JS&#x7684;Set&#x8FDB;&#x884C;&#x91CD;&#x590D;&#x5224;&#x65AD;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x7528;&#x5230;&#x6570;&#x7EC4;&#xFF0C;OK&#xFF0C;</p>
@@ -251,9 +250,9 @@
 </ol>
 <p>&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x662F;&#x4EE3;&#x7801;&#x4E86;&#x3002;&#x5C31;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x751A;&#x81F3;&#x6CA1;&#x7528;&#x4EC0;&#x4E48;&#x9AD8;&#x7EA7;&#x8BED;&#x6CD5;&#x3002;</p>
 <h2 id="&#x4EE3;&#x7801;"><a href="#&#x4EE3;&#x7801;" class="headerlink" title="&#x4EE3;&#x7801;"></a>&#x4EE3;&#x7801;</h2><p>&#x7B2C;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#xFF0C;&#x5F53;&#x7136;&#x56E0;&#x4E3A;&#x8D85;&#x65F6;&#x800C;&#x6CA1;&#x901A;&#x8FC7;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> lengthOfLongestSubstring = <span class="function"><span class="keyword">function</span>(<span class="params">s</span>) </span>{</div><div class="line">    <span class="keyword">let</span> max_length = <span class="number">0</span></div><div class="line">    </div><div class="line">    s.split(<span class="string">&apos;&apos;</span>).some(<span class="function">(<span class="params">v, index, arr</span>) =&gt;</span> {</div><div class="line">        <span class="keyword">let</span> k = index</div><div class="line">        <span class="keyword">let</span> tmp = []</div><div class="line">        <span class="keyword">while</span>(have(tmp) &amp;&amp; k &lt;= arr.length){</div><div class="line">            tmp.push(arr[k])</div><div class="line">            k++</div><div class="line">        }</div><div class="line">        max_length = <span class="built_in">Math</span>.max(max_length, tmp.length - <span class="number">1</span>)</div><div class="line">    })</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> max_length</div><div class="line">};</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">have</span>(<span class="params">arr</span>) </span>{</div><div class="line">    <span class="keyword">return</span> arr.length === <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(arr)).length</div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> lengthOfLongestSubstring = <span class="function"><span class="keyword">function</span>(<span class="params">s</span>) </span>{</span><br><span class="line">    <span class="keyword">let</span> max_length = <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    s.split(<span class="string">&apos;&apos;</span>).some(<span class="function">(<span class="params">v, index, arr</span>) =&gt;</span> {</span><br><span class="line">        <span class="keyword">let</span> k = index</span><br><span class="line">        <span class="keyword">let</span> tmp = []</span><br><span class="line">        <span class="keyword">while</span>(have(tmp) &amp;&amp; k &lt;= arr.length){</span><br><span class="line">            tmp.push(arr[k])</span><br><span class="line">            k++</span><br><span class="line">        }</span><br><span class="line">        max_length = <span class="built_in">Math</span>.max(max_length, tmp.length - <span class="number">1</span>)</span><br><span class="line">    })</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> max_length</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">have</span>(<span class="params">arr</span>) </span>{</span><br><span class="line">    <span class="keyword">return</span> arr.length === <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(arr)).length</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <p>&#x7B2C;&#x4E8C;&#x4E2A;&#x7248;&#x672C;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> lengthOfLongestSubstring = <span class="function"><span class="keyword">function</span>(<span class="params">s</span>) </span>{</div><div class="line">    <span class="keyword">let</span> snake = <span class="string">&apos;&apos;</span></div><div class="line">    <span class="keyword">let</span> max = <span class="number">0</span></div><div class="line">    </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;s.length; i++) {</div><div class="line">        <span class="keyword">let</span> s_i = snake.indexOf(s[i])</div><div class="line">        <span class="keyword">if</span> (s_i === <span class="number">-1</span>) {</div><div class="line">            snake += s[i]</div><div class="line">        } <span class="keyword">else</span> {</div><div class="line">            max = <span class="built_in">Math</span>.max(max, snake.length)</div><div class="line">            snake = snake.slice(s_i + <span class="number">1</span>)</div><div class="line">            snake += s[i]</div><div class="line">        }</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.max(max, snake.length)</div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> lengthOfLongestSubstring = <span class="function"><span class="keyword">function</span>(<span class="params">s</span>) </span>{</span><br><span class="line">    <span class="keyword">let</span> snake = <span class="string">&apos;&apos;</span></span><br><span class="line">    <span class="keyword">let</span> max = <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;s.length; i++) {</span><br><span class="line">        <span class="keyword">let</span> s_i = snake.indexOf(s[i])</span><br><span class="line">        <span class="keyword">if</span> (s_i === <span class="number">-1</span>) {</span><br><span class="line">            snake += s[i]</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            max = <span class="built_in">Math</span>.max(max, snake.length)</span><br><span class="line">            snake = snake.slice(s_i + <span class="number">1</span>)</span><br><span class="line">            snake += s[i]</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.max(max, snake.length)</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
                         
                     </div>

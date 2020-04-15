@@ -2,19 +2,21 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head prefix="og: http://ogp.me/ns#">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.9.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta name="description" content="21年的时光, 目前爱好于前端~">
     <title>不可变性对React来说, 非常重要 (摘录React文档) (拓展到对编码的重要性) | 执念</title>
 
     <!-- Open Graph -->
     <meta name="description" content="&amp;#x5728;&amp;#x770B;React&amp;#x7684;&amp;#x6587;&amp;#x6863;&amp;#x65F6;, &amp;#x770B;&amp;#x5230;&amp;#x4E00;&amp;#x79CD;&amp;#x5904;&amp;#x7406;&amp;#x6570;&amp;#x636E;&amp;#x7684;&amp;#x65B9;&amp;#x5F0F;, &amp;#x611F;&amp;#x89C9;&amp;#x662F;&amp;#x4E00;&amp;#x79CD;&amp;#x633A;&amp;#x59">
+<meta name="keywords" content="React">
 <meta property="og:type" content="article">
 <meta property="og:title" content="不可变性对React来说, 非常重要 (摘录React文档) (拓展到对编码的重要性)">
-<meta property="og:url" content="https://petergooo.github.io/2020/03/01/React/2020-03-01/index.html">
+<meta property="og:url" content="https://bran-nie.github.io/2020/03/01/React/2020-03-01/index.html">
 <meta property="og:site_name" content="执念">
 <meta property="og:description" content="&amp;#x5728;&amp;#x770B;React&amp;#x7684;&amp;#x6587;&amp;#x6863;&amp;#x65F6;, &amp;#x770B;&amp;#x5230;&amp;#x4E00;&amp;#x79CD;&amp;#x5904;&amp;#x7406;&amp;#x6570;&amp;#x636E;&amp;#x7684;&amp;#x65B9;&amp;#x5F0F;, &amp;#x611F;&amp;#x89C9;&amp;#x662F;&amp;#x4E00;&amp;#x79CD;&amp;#x633A;&amp;#x59">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2020-03-02T06:01:12.907Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="不可变性对React来说, 非常重要 (摘录React文档) (拓展到对编码的重要性)">
@@ -27,7 +29,7 @@
   "email": "mailto:pengcheng1995@gmail.com",
   "image": "undefined",
   "name": "鹏程",
-  "url": "https://petergooo.github.io"
+  "url": "https://bran-nie.github.io"
 }
 </script>
     <script>
@@ -123,7 +125,7 @@
     
 
     
-    <a href="/index.html" class="item" >
+    <a href="/index.html" class="item">
         <i class="home icon"></i>
         Home
     </a>
@@ -134,7 +136,7 @@
     
 
     
-    <a href="/categories/Web/" class="item" >
+    <a href="/categories/Web/" class="item">
         <i class="pencil icon"></i>
         前端Web
     </a>
@@ -145,7 +147,7 @@
     
 
     
-    <a href="/categories/教程/" class="item" >
+    <a href="/categories/教程/" class="item">
         <i class="pencil icon"></i>
         教程
     </a>
@@ -156,7 +158,7 @@
     
 
     
-    <a href="/categories/随笔/" class="item" >
+    <a href="/categories/随笔/" class="item">
         <i class="pencil icon"></i>
         随笔
     </a>
@@ -167,7 +169,7 @@
     
 
     
-    <a href="/archives/" class="item" >
+    <a href="/archives/" class="item">
         <i class="null icon"></i>
         Archives
     </a>
@@ -178,7 +180,7 @@
     
 
     
-    <a href="/about" class="item" >
+    <a href="/about" class="item">
         <i class="about icon"></i>
         About
     </a>
@@ -227,9 +229,9 @@
 </ol>
 </blockquote>
 <p>&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x6570;&#x636E;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> player = {<span class="attr">score</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">&apos;Jeff&apos;</span>}</div><div class="line">player.score = <span class="number">2</span></div><div class="line"><span class="comment">// player &#x4FEE;&#x6539;&#x540E;&#x7684;&#x503C;&#x4E3A; {score: 2, name: &apos;Jeff&apos;}</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> player = {<span class="attr">score</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">&apos;Jeff&apos;</span>}</span><br><span class="line">player.score = <span class="number">2</span></span><br><span class="line"><span class="comment">// player &#x4FEE;&#x6539;&#x540E;&#x7684;&#x503C;&#x4E3A; {score: 2, name: &apos;Jeff&apos;}</span></span><br></pre></td></tr></table></figure>
 <p>&#x65B0;&#x6570;&#x636E;&#x66FF;&#x6362;&#x65E7;&#x6570;&#x636E;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> player = {<span class="attr">score</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">&apos;Jeff&apos;</span>}</div><div class="line"><span class="keyword">let</span> newPlayer = <span class="built_in">Object</span>.assign({}, player, {<span class="attr">score</span>: <span class="number">2</span>})</div><div class="line"><span class="comment">// player &#x7684;&#x503C;&#x6CA1;&#x6709;&#x53D8;&#x5316;,&#x4F46;&#x662F;newPlayer&#x7684;&#x503C;&#x662F; {score: 2, name: &apos;Jeff&apos;}</span></div><div class="line"></div><div class="line"><span class="comment">// &#x5982;&#x679C;&#x4F7F;&#x7528;&#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x8BED;&#x6CD5;, &#x5C31;&#x53EF;&#x4EE5;&#x5199;&#x6210;:</span></div><div class="line"><span class="keyword">let</span> newPlayerObj = {...player, <span class="attr">score</span>: <span class="number">2</span>}</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> player = {<span class="attr">score</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">&apos;Jeff&apos;</span>}</span><br><span class="line"><span class="keyword">let</span> newPlayer = <span class="built_in">Object</span>.assign({}, player, {<span class="attr">score</span>: <span class="number">2</span>})</span><br><span class="line"><span class="comment">// player &#x7684;&#x503C;&#x6CA1;&#x6709;&#x53D8;&#x5316;,&#x4F46;&#x662F;newPlayer&#x7684;&#x503C;&#x662F; {score: 2, name: &apos;Jeff&apos;}</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x5982;&#x679C;&#x4F7F;&#x7528;&#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x8BED;&#x6CD5;, &#x5C31;&#x53EF;&#x4EE5;&#x5199;&#x6210;:</span></span><br><span class="line"><span class="keyword">let</span> newPlayerObj = {...player, <span class="attr">score</span>: <span class="number">2</span>}</span><br></pre></td></tr></table></figure>
 <p>&#x4ECE;&#x4E0A;&#x9762;&#x6765;&#x770B;, &#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x90FD;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x60F3;&#x8981;&#x7684;&#x6570;&#x636E;</p>
 <h2 id="&#x90A3;&#x4E48;-&#x4E0D;&#x76F4;&#x63A5;&#x4FEE;&#x6539;-&#x6216;&#x6539;&#x53D8;&#x5E95;&#x5C42;&#x6570;&#x636E;-&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;-&#x6709;&#x4EC0;&#x4E48;&#x597D;&#x5904;&#x5462;"><a href="#&#x90A3;&#x4E48;-&#x4E0D;&#x76F4;&#x63A5;&#x4FEE;&#x6539;-&#x6216;&#x6539;&#x53D8;&#x5E95;&#x5C42;&#x6570;&#x636E;-&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;-&#x6709;&#x4EC0;&#x4E48;&#x597D;&#x5904;&#x5462;" class="headerlink" title="&#x90A3;&#x4E48;, &#x4E0D;&#x76F4;&#x63A5;&#x4FEE;&#x6539;(&#x6216;&#x6539;&#x53D8;&#x5E95;&#x5C42;&#x6570;&#x636E;) &#x8FD9;&#x79CD;&#x65B9;&#x5F0F;,&#x6709;&#x4EC0;&#x4E48;&#x597D;&#x5904;&#x5462;?"></a>&#x90A3;&#x4E48;, &#x4E0D;&#x76F4;&#x63A5;&#x4FEE;&#x6539;(&#x6216;&#x6539;&#x53D8;&#x5E95;&#x5C42;&#x6570;&#x636E;) &#x8FD9;&#x79CD;&#x65B9;&#x5F0F;,&#x6709;&#x4EC0;&#x4E48;&#x597D;&#x5904;&#x5462;?</h2><h3 id="&#x7B80;&#x5316;&#x590D;&#x6742;&#x7684;&#x529F;&#x80FD;"><a href="#&#x7B80;&#x5316;&#x590D;&#x6742;&#x7684;&#x529F;&#x80FD;" class="headerlink" title="&#x7B80;&#x5316;&#x590D;&#x6742;&#x7684;&#x529F;&#x80FD;"></a>&#x7B80;&#x5316;&#x590D;&#x6742;&#x7684;&#x529F;&#x80FD;</h3><p>&#x4E0D;&#x53EF;&#x53D8;&#x6027;&#x4F7F;&#x5F97;&#x590D;&#x6742;&#x7684;&#x7279;&#x6027;&#x66F4;&#x5BB9;&#x6613;&#x5B9E;&#x73B0;. &#x5728;&#x5B9E;&#x73B0;&#x4E00;&#x79CD;&#x53EB;&#x505A;&#x201D;&#x65F6;&#x95F4;&#x65C5;&#x884C;&#x201D;&#x7684;&#x529F;&#x80FD;&#x4E2D;&#x5C31;&#x4F1A;&#x7528;&#x5230;. &#x201C;&#x65F6;&#x95F4;&#x65C5;&#x884C;&#x201D;&#x53EF;&#x4EE5;&#x662F;&#x6211;&#x4EEC;&#x56DE;&#x987E;&#x4E95;&#x5B57;&#x68CB;&#x7684;&#x5386;&#x53F2;&#x6B65;&#x9AA4;, &#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x8DF3;&#x56DE;&#x4E4B;&#x524D;&#x7684;&#x6B65;&#x9AA4;. &#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x5E76;&#x4E0D;&#x662F;&#x53EA;&#x6709;&#x6E38;&#x620F;&#x624D;&#x4F1A;&#x7528;&#x5230; &#x2014; &#x64A4;&#x9500;&#x548C;&#x6062;&#x590D;&#x529F;&#x80FD;&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x5E38;&#x89C1;&#x7684;&#x9700;&#x6C42;. &#x4E0D;&#x76F4;&#x63A5;&#x5728;&#x6570;&#x636E;&#x4E0A;&#x4FEE;&#x6539;&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x4EEC;&#x8FFD;&#x6EAF;&#x5E76;&#x590D;&#x7528;&#x6E38;&#x620F;&#x7684;&#x5386;&#x53F2;&#x8BB0;&#x5F55;.</p>
 <h3 id="&#x8DDF;&#x8E2A;&#x6570;&#x636E;&#x7684;&#x6539;&#x53D8;"><a href="#&#x8DDF;&#x8E2A;&#x6570;&#x636E;&#x7684;&#x6539;&#x53D8;" class="headerlink" title="&#x8DDF;&#x8E2A;&#x6570;&#x636E;&#x7684;&#x6539;&#x53D8;"></a>&#x8DDF;&#x8E2A;&#x6570;&#x636E;&#x7684;&#x6539;&#x53D8;</h3><p>&#x5982;&#x679C;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x6570;&#x636E;, &#x90A3;&#x4E48;&#x5C31;&#x5F88;&#x96BE;&#x8DDF;&#x8E2A;&#x5230;&#x6570;&#x636E;&#x7684;&#x6539;&#x53D8;.<br>&#x8DDF;&#x8E2A;&#x6570;&#x636E;&#x7684;&#x6539;&#x53D8; &#x9700;&#x8981; &#x53EF;&#x53D8;&#x5BF9;&#x8C61; &#x53EF;&#x4EE5;&#x4E0E; &#x6539;&#x53D8;&#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C; &#x8FDB;&#x884C;&#x5BF9;&#x6BD4;, &#x8FD9;&#x6837;&#x6574;&#x4E2A;&#x5BF9;&#x8C61;&#x6570;&#x90FD;&#x9700;&#x8981;&#x88AB;&#x904D;&#x5386;&#x4E00;&#x6B21;. </p>
@@ -278,7 +280,14 @@
             <div class="column nav-left">
                 
 
-                <a class="ui tiny button disabled"><i class="angle left icon"></i>前一篇</a>
+                <a href="/2020/04/25/js-base/runtime/2020-04-15/" class="ui tiny button">
+
+                    <i class="angle left icon"></i>
+                    
+                    关于JS中, 对引用类型console出现偏差的问题分析
+                    
+
+                </a>
 
                 
             </div>
