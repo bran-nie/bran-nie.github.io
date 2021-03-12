@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><title>商品规格选择sku --- Vue版 &mdash; 鹏程</title><link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css"><link rel="stylesheet" href="http://localhost:4000/assets/css/components/collection.css"><link rel="stylesheet" href="http://localhost:4000/assets/css/components/repo-card.css"><link rel="stylesheet" href="http://localhost:4000/assets/css/sections/repo-list.css"><link rel="stylesheet" href="http://localhost:4000/assets/css/components/boxed-group.css"><link rel="stylesheet" href="http://localhost:4000/assets/css/globals/common.css"><link rel="stylesheet" href="http://localhost:4000/assets/css/globals/responsive.css"><link rel="stylesheet" href="http://localhost:4000/assets/css/posts/index.css"><link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css"><link rel="stylesheet" href="https://mazhuang.org/rouge-themes/dist/github.css"><link rel="canonical" href="http://localhost:4000/2019/05/07/sku/"><link rel="alternate" type="application/atom+xml" title="鹏程" href="http://localhost:4000/feed.xml"><link rel="shortcut icon" href="http://localhost:4000/favicon.ico"><meta property="og:title" content="商品规格选择sku --- Vue版"><meta name="keywords" content="前端"><meta name="og:keywords" content="前端"><meta name="description" content=" 朋友问我像淘宝那样的选择商品的规格，如商品的颜色，尺寸，款式，并且还要根据后端传来的库存，哪些还有，哪些没了。咋一看不复杂，然后后面被一步一步的套牢，出不来了。最终借助 Google 的力量，完成了对这个类型的需求，有个初步的了解，并输出 blog 以记录。"><meta name="og:description" content=" 朋友问我像淘宝那样的选择商品的规格，如商品的颜色，尺寸，款式，并且还要根据后端传来的库存，哪些还有，哪些没了。咋一看不复杂，然后后面被一步一步的套牢，出不来了。最终借助 Google 的力量，完成了对这个类型的需求，有个初步的了解，并输出 blog 以记录。"><meta property="og:url" content="http://localhost:4000/2019/05/07/sku/"><meta property="og:site_name" content="鹏程"><meta property="og:type" content="article"><meta property="og:locale" content="zh_CN" /><meta property="article:published_time" content="2019-05-07"> <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script> <script src="http://localhost:4000/assets/js/jquery-ui.js"></script> <script src="http://localhost:4000/assets/js/main.js"></script></head><body class="" data-mz=""><header class="site-header"><div class="container"><h1><a href="http://localhost:4000/" title="鹏程"><span class="octicon octicon-mark-github"></span> 鹏程</a></h1><button class="collapsed mobile-visible" type="button" onclick="toggleMenu();"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button><nav class="site-header-nav" role="navigation"> <a href="http://localhost:4000/" class=" site-header-nav-item" target="" title="首页">首页</a> <a href="http://localhost:4000/categories/" class=" site-header-nav-item" target="" title="分类">分类</a> <a href="http://localhost:4000/wiki/" class=" site-header-nav-item" target="" title="维基">维基</a> <a href="http://localhost:4000/links/" class=" site-header-nav-item" target="" title="链接">链接</a> <a href="http://localhost:4000/about/" class=" site-header-nav-item" target="" title="关于">关于</a></nav></div></header><section class="collection-head small geopattern" data-pattern-id="商品规格选择sku --- V"><div class="container"><div class="columns"><div class="column three-fourths"><div class="collection-title"><h1 class="collection-header">商品规格选择sku --- Vue版</h1><div class="collection-info"> <span class="meta-info"> <span class="octicon octicon-calendar"></span> 2019/05/07 </span> <span class="meta-info"> <span class="octicon octicon-file-directory"></span> <a href="http://localhost:4000/categories/#Javascript" title="Javascript">Javascript</a> </span> <span class="meta-info"> <span class="octicon octicon-clock"></span> 共 5293 字，约 16 分钟 </span></div></div></div><div class="column one-fourth mobile-hidden"><div class="collection-title"></div></div></div></div></section><section class="container content"><div class="columns"><div class="column three-fourths" ><article class="article-content markdown-body"><blockquote><p>朋友问我像淘宝那样的选择商品的规格，如商品的颜色，尺寸，款式，并且还要根据后端传来的库存，哪些还有，哪些没了。咋一看不复杂，然后后面被一步一步的套牢，出不来了。最终借助 Google 的力量，完成了对这个类型的需求，有个初步的了解，并输出 blog 以记录。</p></blockquote><h2 id="什么是-sku">什么是 sku</h2><ul><li>Stock Keeping Unit（库存量单位）</li><li>定义有很多，在电商上来看，我的理解是，一件商品的基础属性组成的单品，如一件衣服的基础属性有颜色，款式，尺寸三个属性，那么这三个属性合一就组成了一个单品 sku，不同的颜色、款式、尺寸，就构成了不同的单品。</li></ul><p><strong>OK，对于第一次接触的同学来说，让我们从开始了解商品规则和其选择吧~</strong></p><p><strong>我是从数据存储到前端展示这样一个流程，开始分享的。（如果对后端感兴趣的话可以看前两段</strong></p><h2 id="在数据库中的存储">在数据库中的存储</h2><p>在搜索中看到不少设计，太过复杂的方式我还没看懂，不过还是看到一个分了几个表建立的，感觉容易理解些。</p><p>建表：</p><ul><li>商品表：主键是商品 ID、自增，还有商品的 name 字段。</li><li>属性表：一件商品都有哪些属性，主键是属性 ID、自增，还要有属性的 name 字段。同时可以和商品表关联</li><li>属性值表：一个属性都有哪些取值，主键是属性值 ID、自增，还要有属性值的 name 字段。同时和属性表关联</li><li>sku 表：由上面 3 个表可以构成 sku 表，主键是 sku_id、自增，可以有 sku_value，sku_sku_code，stock，price 字段。</li></ul><h2 id="后端返回数据">后端返回数据</h2><p>返回数据的话，比如针对某个商品返回它的 sku，那么理想的是返回三个字段，一个是属性对象，一个是属性值对象，一个这个商品的 sku 对象。</p><p>不过我示例中的返回数据，不是这样，所以要进一步处理成前端需要的格式。</p><h2 id="思路部分">思路部分</h2><ul><li>首先，将商品的属性和属性值，展示出来，比如颜色下有蓝色、红色，款式下有经典款和流行款，尺寸有 M 和 L。</li><li>当选择一个属性后，需要判断和其他属性构成的 sku，库存是否为空，为空的话是要置灰或者提示没有库存了。</li><li>选择用对象存储不同的 sku 的库存，性能是否好点。</li><li>对已选择的属性，进行其他属性循环填充，如果没库存，就可以置灰其他属性。</li></ul><h2 id="处理数据代码规划">处理数据+代码规划</h2><p>朋友给的数据对象，有三个字段，分别是该商品的 shopSkuVo（sku 对象），shopMainSpecVo（属性对象），shopChildVoList（属性值对象）</p><ul><li>那么，首先我要将属性对象和属性值对象，取出来，得到一个规格对象，如：</li></ul><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">mainSpec</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">颜色</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">attr</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">蓝色</span><span class="dl">'</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">白色</span><span class="dl">'</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">尺寸</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">attr</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">M</span><span class="dl">'</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="na">id</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">L</span><span class="dl">'</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+<span class="p">];</span>
+</code></pre></div></div><ul><li>得到这样的规格字段后，就可以借助 Vue 中的 v-for，进行 dom 渲染了。</li><li>考虑到用对象来存储 sku 的数据，这里我根据数据的特色，使用 sku_value 来做对象的 key，对应的值就是这条 sku 数据。如：</li></ul><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">skuObj</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="dl">'</span><span class="s1">红色/M/经典款</span><span class="dl">'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// sku_id</span>
+        <span class="na">sku_value</span><span class="p">:</span> <span class="dl">'</span><span class="s1">红色/M/经典款</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">stock</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="na">price</span><span class="p">:</span> <span class="dl">'</span><span class="s1">33.0</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="dl">'</span><span class="s1">红色/M/流行款</span><span class="dl">'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="c1">// sku_id</span>
+        <span class="na">sku_value</span><span class="p">:</span> <span class="dl">'</span><span class="s1">红色/M/经典款</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">stock</span><span class="p">:</span> <span class="mi">330</span><span class="p">,</span>
+        <span class="na">price</span><span class="p">:</span> <span class="dl">'</span><span class="s1">53.0</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div></div><ul><li>核心思路，每次用户点击一个属性后，将该属性和其他点击过的属性，以及还没点击的属性，组合起来，检查库存数量，进而判断还没点击的属性，是否置灰显示。</li></ul><h2 id="代码实现">代码实现</h2><p>后端数据格式展示：(基于篇幅，我只展示了每种的前两条数据)</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">shopSkuVo</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="na">skuId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">38</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">goodsId</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">specNames</span><span class="p">:</span> <span class="dl">'</span><span class="s1">S/红/乞丐款</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">specIds</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">skuNo</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">skuImg</span><span class="p">:</span> <span class="dl">'</span><span class="s1">C30000/1/img/20190322/37ff02207d0349489a90a3f7d4ff578d</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">skuPrice</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">stock</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+            <span class="na">enabled</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">goodSkuSpecDetails</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">classifyList</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="na">skuId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">39</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">goodsId</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">specNames</span><span class="p">:</span> <span class="dl">'</span><span class="s1">S/红/爆炸款</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">specIds</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">skuNo</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">skuImg</span><span class="p">:</span> <span class="dl">'</span><span class="s1">C30000/1/img/20190322/37ff02207d0349489a90a3f7d4ff578d</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">skuPrice</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">stock</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+            <span class="na">enabled</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">goodSkuSpecDetails</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">classifyList</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="na">shopMainSpecVo</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="na">skuId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">38</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">mainSpecId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">1</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">mainSpecMerchantId</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">mainSpecName</span><span class="p">:</span> <span class="dl">'</span><span class="s1">尺寸</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">mainSpecSort</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">mainSpecPid</span><span class="p">:</span> <span class="dl">'</span><span class="s1">0</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">goodSkuSpecDetailsID</span><span class="p">:</span> <span class="dl">'</span><span class="s1">6742da9e002b496e8058c8cebaf292f2</span><span class="dl">'</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="na">skuId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">38</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">mainSpecId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">12</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">mainSpecMerchantId</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">mainSpecName</span><span class="p">:</span> <span class="dl">'</span><span class="s1">颜色</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">mainSpecSort</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">mainSpecPid</span><span class="p">:</span> <span class="dl">'</span><span class="s1">0</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">goodSkuSpecDetailsID</span><span class="p">:</span> <span class="dl">'</span><span class="s1">df0f08465d9f43cf8f951ed79743cea5</span><span class="dl">'</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="na">shopChildVoList</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="na">skuId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">38</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">ChildId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">52</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">ChildMerchantId</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">ChildSpecName</span><span class="p">:</span> <span class="dl">'</span><span class="s1">S</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">ChildSpecPid</span><span class="p">:</span> <span class="dl">'</span><span class="s1">1</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">goodSkuSpecDetailsID</span><span class="p">:</span> <span class="dl">'</span><span class="s1">6742da9e002b496e8058c8cebaf292f2</span><span class="dl">'</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="na">skuId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">38</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">ChildId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">13</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">ChildMerchantId</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="na">ChildSpecName</span><span class="p">:</span> <span class="dl">'</span><span class="s1">红</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">ChildSpecPid</span><span class="p">:</span> <span class="dl">'</span><span class="s1">12</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">goodSkuSpecDetailsID</span><span class="p">:</span> <span class="dl">'</span><span class="s1">df0f08465d9f43cf8f951ed79743cea5</span><span class="dl">'</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">};</span>
+</code></pre></div></div><h3 id="vue-实例绑定的-template-模板">Vue 实例绑定的 template 模板：</h3><div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">v-for=</span><span class="s">"(shopMain, rowIndex) in mainSpec"</span> <span class="na">:key=</span><span class="s">"rowIndex"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span&gt;</span>： <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"item clearfix"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span>
+            <span class="na">v-for=</span><span class="s">"(cItem, colIndex) in shopMain.item"</span>
+            <span class="err">@</span><span class="na">click=</span><span class="s">"clickButton($event, cItem.name, rowIndex, colIndex)"</span>
+            <span class="na">:class=</span><span class="s">"[cItem.enabled?'':'disabled',subIndex[rowIndex] == colIndex?'checked':'']"</span>
+        <span class="nt">&gt;</span>
+            
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div><h3 id="vue-实例中定义的-data-字段">Vue 实例中定义的 data 字段：</h3><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="na">shopSkuVo</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">shopSkuVo</span><span class="p">,</span>   <span class="c1">// 本地我将后端返回的数据放到一个js中了，用import引入。</span>
+            <span class="na">shopMainSpecVo</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">shopMainSpecVo</span><span class="p">,</span>
+            <span class="na">shopChildVoList</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">shopChildVoList</span><span class="p">,</span>
+
+            <span class="c1">// sku 对象，</span>
+            <span class="na">skuObj</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="c1">// 规则属性 数组对象</span>
+            <span class="na">mainSpec</span><span class="p">:</span> <span class="p">[],</span>
+
+            <span class="c1">// 选择的 属性 数组和其下标，用来进行stock判断和前端样式控制。</span>
+            <span class="na">selectItemArr</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="na">subIndex</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">```
+</span></code></pre></div></div><h3 id="处理-sku-数据">处理 sku 数据</h3><ul><li>对属性对象和属性值对象进行数据处理，得到一个规则对象。对 sku 对象进行数据处理，得到 sku，商品 value 为 key 的 sku 对象。</li></ul><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">created</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">shopMainSpecVo</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">deduplication</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">shopMainSpecVo</span><span class="p">,</span> <span class="dl">'</span><span class="s1">mainSpecId</span><span class="dl">'</span><span class="p">)</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">shopMainSpecVo</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">s</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="nx">obj</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">mainSpecName</span>
+            <span class="nx">obj</span><span class="p">.</span><span class="nx">item</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">filterShopByKey</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">mainSpecId</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">n</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="nx">obj</span><span class="p">.</span><span class="nx">item</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span><span class="na">name</span><span class="p">:</span> <span class="nx">n</span><span class="p">})</span>
+            <span class="p">})</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">mainSpec</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span>
+        <span class="p">})</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">skuObj</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">getObjByKey</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">shopSkuVo</span><span class="p">,</span> <span class="dl">'</span><span class="s1">specNames</span><span class="dl">'</span><span class="p">)</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">checkItem</span><span class="p">()</span>
+    <span class="p">},</span>
+<span class="nx">methods</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nx">deduplication</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{},</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">a</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obj</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="nx">key</span><span class="p">]))</span> <span class="p">{</span>
+                    <span class="nx">obj</span><span class="p">[</span><span class="nx">a</span><span class="p">[</span><span class="nx">key</span><span class="p">]]</span> <span class="o">=</span> <span class="nx">a</span>
+                <span class="p">}</span>
+            <span class="p">})</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">k</span> <span class="k">in</span> <span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">obj</span><span class="p">[</span><span class="nx">k</span><span class="p">])</span>
+            <span class="p">}</span>
+
+            <span class="k">return</span> <span class="nx">result</span>
+        <span class="p">},</span>
+  <span class="nx">filterShopByKey</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nb">Array</span><span class="p">.</span><span class="k">from</span><span class="p">(</span><span class="k">new</span> <span class="nb">Set</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">shopChildVoList</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">f</span> <span class="o">=&gt;</span> <span class="nx">f</span><span class="p">.</span><span class="nx">ChildSpecPid</span> <span class="o">===</span> <span class="nx">key</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">m</span> <span class="o">=&gt;</span> <span class="nx">m</span><span class="p">.</span><span class="nx">ChildSpecName</span><span class="p">))).</span><span class="nx">sort</span><span class="p">()</span>
+        <span class="p">},</span>
+  <span class="nx">getObjByKey</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">a</span> <span class="o">=&gt;</span> <span class="p">{</span>
+               <span class="nx">obj</span><span class="p">[</span><span class="nx">a</span><span class="p">[</span><span class="nx">key</span><span class="p">]]</span> <span class="o">=</span> <span class="nx">a</span>
+            <span class="p">})</span>
+
+            <span class="k">return</span> <span class="nx">obj</span>
+        <span class="p">},</span>
+  <span class="c1">// 属性值按钮点击，控制点击元素高亮、同属性的其他属性值去高亮，并进行检查。</span>
+  <span class="nx">clickButton</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">item</span><span class="p">,</span> <span class="nx">rowIndex</span><span class="p">,</span> <span class="nx">colIndex</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">selectItemArr</span><span class="p">[</span><span class="nx">rowIndex</span><span class="p">]</span> <span class="o">!==</span> <span class="nx">item</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// 如果点击当前属性中 未勾选的按钮，则取消该属性别的按钮勾选，且记录下来。</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">selectItemArr</span><span class="p">[</span><span class="nx">rowIndex</span><span class="p">]</span> <span class="o">=</span> <span class="nx">item</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">subIndex</span><span class="p">[</span><span class="nx">rowIndex</span><span class="p">]</span> <span class="o">=</span> <span class="nx">colIndex</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>  <span class="c1">// 如果是点击当前属性中 已勾选的按钮，则取消勾选</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">selectItemArr</span><span class="p">[</span><span class="nx">rowIndex</span><span class="p">]</span> <span class="o">=</span> <span class="dl">''</span>
+                <span class="k">this</span><span class="p">.</span><span class="nx">subIndex</span><span class="p">[</span><span class="nx">rowIndex</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="p">}</span>
+
+            <span class="k">this</span><span class="p">.</span><span class="nx">checkItem</span><span class="p">()</span>
+        <span class="p">},</span>
+   <span class="nx">checkItem</span><span class="p">()</span> <span class="p">{</span>
+     				<span class="c1">// 临时 存放 选择属性值的数组。</span>
+            <span class="kd">let</span> <span class="nx">tmpSelectArr</span> <span class="o">=</span> <span class="p">[]</span>
+      <span class="c1">// 将已经勾选的属性，存入临时数组里。</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">mainSpec</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">m</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="nx">tmpSelectArr</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">selectItemArr</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span> <span class="p">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">selectItemArr</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span> <span class="p">:</span> <span class="dl">''</span>
+            <span class="p">})</span>
+
+<span class="c1">// 对已勾选属性进行补充，即如果已经选了颜色和尺寸了，那么模拟用户选择款式，目前是暴力循环。在选择完后，调用isEnabled方法，判断补充的属性值是否可以点击。</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">mainSpec</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">m</span><span class="p">,</span> <span class="nx">mIndex</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="kd">let</span> <span class="nx">last</span> <span class="o">=</span> <span class="nx">tmpSelectArr</span><span class="p">[</span><span class="nx">mIndex</span><span class="p">]</span>
+                <span class="nx">m</span><span class="p">.</span><span class="nx">item</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">s</span><span class="p">,</span> <span class="nx">sIndex</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    <span class="nx">tmpSelectArr</span><span class="p">[</span><span class="nx">mIndex</span><span class="p">]</span> <span class="o">=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">name</span>
+                    <span class="nx">s</span><span class="p">.</span><span class="nx">enabled</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">isEnabled</span><span class="p">(</span><span class="nx">tmpSelectArr</span><span class="p">)</span>
+                <span class="p">})</span>
+                <span class="nx">tmpSelectArr</span><span class="p">[</span><span class="nx">mIndex</span><span class="p">]</span> <span class="o">=</span> <span class="nx">last</span>
+            <span class="p">})</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">$forceUpdate</span><span class="p">()</span> <span class="c1">//重绘</span>
+        <span class="p">},</span>
+
+   <span class="c1">// 判断属性组合之后，添加的属性是否可以点击</span>
+   <span class="nx">isEnabled</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="dl">''</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span>  <span class="c1">// 如果添加的属性中，有空的，直接返回true。</span>
+            <span class="p">}</span>
+
+            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">skuObj</span><span class="p">[</span><span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">)].</span><span class="nx">stock</span> <span class="o">===</span> <span class="mi">0</span> <span class="p">?</span> <span class="kc">false</span> <span class="p">:</span> <span class="kc">true</span>
+        <span class="p">},</span>
+<span class="p">}</span>
+</code></pre></div></div><h3 id="样式适配状态">样式适配状态</h3><ul><li>template 的样式，其中一个 css 属性非常棒，是 pointer-events: none;，这个属性可以阻止当前元素的事件触发，再搭配 cursor 和 background-color，就可以实现不可点击的交互。</li></ul><div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.item</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.item</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">5px</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="nl">margin-right</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#c9e9ed</span><span class="p">;</span>
+    <span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.item</span> <span class="nt">li</span><span class="nc">.checked</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">orange</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.item</span> <span class="nt">li</span><span class="nc">.disabled</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#cccccc</span><span class="p">;</span>
+    <span class="nl">cursor</span><span class="p">:</span> <span class="n">not-allowed</span><span class="p">;</span>
+    <span class="nl">pointer-events</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div><div style="margin-top:2em;padding:0 1.5em;border:1px solid #d3d3d3;background-color:#deebf7"><h3>文档信息</h3><ul><li>本文作者：<a href="http://localhost:4000" target="_blank">Bran.nie</a></li><li>本文链接：<a href="http://localhost:4000/2019/05/07/sku/" target="_blank">http://localhost:4000/2019/05/07/sku/</a></li><li>版权声明：自由转载-非商用-非衍生-保持署名（<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank">创意共享3.0许可证</a>）</li></ul></div></article><div class="share"></div><div class="comment"><div id="gitalk-container"></div><link rel="stylesheet" href="http://localhost:4000/assets/vendor/gitalk/gitalk.css"> <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> <script> var gitalk = new Gitalk({ id: '/2019/05/07/sku/', clientID: '2de5c26774734ef5886c', clientSecret: '29d08007f41b856632995a2fa39aca6cc682a09f', repo: 'bran-nie.github.io', owner: 'bran-nie', admin: ['bran-nie'], labels: ['gitment'], perPage: 50, }); gitalk.render('gitalk-container'); </script></div></div><div class="column one-fourth"><h3>Search</h3><div id="site_search"> <input style="width:96%" type="text" id="search_box" placeholder="Search"></div><ul id="search_results" style="font-size:14px;list-style-type:none;padding-top:10px;padding-left:10px;"></ul><script src="http://localhost:4000/assets/js/simple-jekyll-search.min.js"></script> <script type="text/javascript"> SimpleJekyllSearch({ searchInput: document.getElementById('search_box'), resultsContainer: document.getElementById('search_results'), json: 'http://localhost:4000/assets/search_data.json', searchResultTemplate: '<li><a href="{url}" title="{title}">{title}</a></li>', noResultsText: 'No results found', limit: 10, fuzzy: false, exclude: ['Welcome'] }) </script><h3 class="post-directory-title mobile-hidden">Table of Contents</h3><div id="post-directory-module" class="mobile-hidden"><section class="post-directory"><dl></dl></section></div><script src="http://localhost:4000/assets/js/jquery.toc.js"></script></div></div></section><footer class="container"><div class="site-footer" role="contentinfo"><div class="copyright left mobile-block"> © 2016 <span title="Bran.nie">Bran.nie</span> <a href="javascript:window.scrollTo({behavior: 'smooth', top: 0})" class="right mobile-visible">TOP</a></div><ul class="site-footer-links right mobile-hidden"><li> <a href="javascript:window.scrollTo({behavior: 'smooth', top: 0})" >TOP</a></li></ul><a href="https://github.com/bran-nie/bran-nie.github.io" target="_blank" aria-label="view source code"> <span class="mega-octicon octicon-mark-github" title="GitHub"></span> </a><ul class="site-footer-links mobile-hidden"><li> <a href="http://localhost:4000/" title="首页" target="">首页</a></li><li> <a href="http://localhost:4000/categories/" title="分类" target="">分类</a></li><li> <a href="http://localhost:4000/wiki/" title="维基" target="">维基</a></li><li> <a href="http://localhost:4000/links/" title="链接" target="">链接</a></li><li> <a href="http://localhost:4000/about/" title="关于" target="">关于</a></li><li><a href="http://localhost:4000/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li></ul></div></footer><div class="tools-wrapper"> <a class="gotop" href="#" title="回到顶部"><span class="octicon octicon-arrow-up"></span></a></div><script src="http://localhost:4000/assets/js/geopattern.js"></script> <script> jQuery(document).ready(function($) { $('.geopattern').each(function(){ $(this).geopattern($(this).data('pattern-id')); }); /* hljs.initHighlightingOnLoad(); */ }); </script></body></html>
