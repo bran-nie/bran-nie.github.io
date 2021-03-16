@@ -1,6 +1,259 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.github.io/" rel="alternate" type="text/html" /><updated>2021-03-15T20:37:38+08:00</updated><id>https://bran-nie.github.io/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">PicGo 一款优秀的图床</title><link href="https://bran-nie.github.io/2021/03/15/PicGo/" rel="alternate" type="text/html" title="PicGo 一款优秀的图床" /><published>2021-03-15T00:00:00+08:00</published><updated>2021-03-15T00:00:00+08:00</updated><id>https://bran-nie.github.io/2021/03/15/PicGo</id><content type="html" xml:base="https://bran-nie.github.io/2021/03/15/PicGo/">&lt;h2 id=&quot;picgo&quot;&gt;PicGo&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.github.io/" rel="alternate" type="text/html" /><updated>2021-03-16T16:09:47+08:00</updated><id>https://bran-nie.github.io/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">PicGo 一款优秀的图床</title><link href="https://bran-nie.github.io/2021/03/15/PicGo/" rel="alternate" type="text/html" title="PicGo 一款优秀的图床" /><published>2021-03-15T00:00:00+08:00</published><updated>2021-03-15T00:00:00+08:00</updated><id>https://bran-nie.github.io/2021/03/15/PicGo</id><content type="html" xml:base="https://bran-nie.github.io/2021/03/15/PicGo/">&lt;h2 id=&quot;picgo&quot;&gt;PicGo&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/blog/picgo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Tutorials" /><summary type="html">PicGo</summary></entry><entry><title type="html">经济萧条下的消费</title><link href="https://bran-nie.github.io/2020/04/15/think/" rel="alternate" type="text/html" title="经济萧条下的消费" /><published>2020-04-15T00:00:00+08:00</published><updated>2020-04-15T00:00:00+08:00</updated><id>https://bran-nie.github.io/2020/04/15/think</id><content type="html" xml:base="https://bran-nie.github.io/2020/04/15/think/">&lt;p&gt;&lt;img src=&quot;/images/blog/door.jpg&quot; alt=&quot;?&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/blog/picgo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Tutorials" /><summary type="html">PicGo</summary></entry><entry><title type="html">CSS 滚动条样式</title><link href="https://bran-nie.github.io/2021/01/14/scrollbar/" rel="alternate" type="text/html" title="CSS 滚动条样式" /><published>2021-01-14T00:00:00+08:00</published><updated>2021-01-14T00:00:00+08:00</updated><id>https://bran-nie.github.io/2021/01/14/scrollbar</id><content type="html" xml:base="https://bran-nie.github.io/2021/01/14/scrollbar/">&lt;blockquote&gt;
+  &lt;p&gt;该特性还是草案，是非标准的。请明确知道它&lt;strong&gt;只支持 Webkit 内核的浏览器。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;demo-预览-或-在-codepen-中打开&quot;&gt;&lt;a href=&quot;https://bran-nie.github.io/Note/css/scrollbar/&quot;&gt;Demo 预览&lt;/a&gt; 或 &lt;a href=&quot;https://codepen.io/bran-nie/pen/jOMaOqp&quot;&gt;在 Codepen 中打开&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&quot;css-属性自定义滚动条样式&quot;&gt;CSS 属性：自定义滚动条样式&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::-webkit-scrollbar&lt;/code&gt; 整个滚动条&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::-webkit-scrollbar-button&lt;/code&gt; 滚动条上的按钮（上下或左右箭头）&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::-webkit-scrollbar-track&lt;/code&gt; 滚动条轨道&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::-webkit-scrollbar-track-piece&lt;/code&gt; 滚动条没有滑块的轨道部分&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::-webkit-scrollbar-thumb&lt;/code&gt; 滚动条上的滚动滑块&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::-webkit-scrollbar-corner&lt;/code&gt; 垂直和水平滚动条交汇的部分&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::-webkit-resizer&lt;/code&gt; 上面交汇部分中的部分样式。（可拖动的按钮）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/css-scrollbar.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;css-属性控制浏览器过渡滚动&quot;&gt;CSS 属性：控制浏览器过渡滚动&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/CSS/overscroll-behavior&quot;&gt;overscroll-behavior&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;auto&lt;/code&gt; 默认效果。&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;contain&lt;/code&gt; 默认的滚动边界行为不变（“触底”效果或者刷新），但是临近的滚动区域不会被滚动链影响到，比如对话框后方的页面不会滚动。&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;none&lt;/code&gt; 临近滚动区域不受到滚动链影响，而且默认的滚动到边界的表现也被阻止。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;css-属性控制滚动条的绘制位置&quot;&gt;CSS 属性：控制滚动条的绘制位置&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;overflow: overlay&lt;/code&gt; 滚动条将绘制在内容之上。
+    &lt;ul&gt;
+      &lt;li&gt;PS：这个属性 仅在基于 WebKit（例如，Safari）和基于 Blink 的（例如，Chrome 或 Opera）浏览器中受支持。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;应用&quot;&gt;应用：&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;还原 UI 设计的滚动条样式&lt;/li&gt;
+  &lt;li&gt;修改滚动条跳动导致页面错位的 bug&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Bran.nie</name></author><category term="Css" /><summary type="html">该特性还是草案，是非标准的。请明确知道它只支持 Webkit 内核的浏览器。</summary></entry><entry><title type="html">使用 css自定义属性（css变量），配合 js 更新 css，实现星星打分~</title><link href="https://bran-nie.github.io/2020/12/18/css-variable/" rel="alternate" type="text/html" title="使用 css自定义属性（css变量），配合 js 更新 css，实现星星打分~" /><published>2020-12-18T00:00:00+08:00</published><updated>2020-12-18T00:00:00+08:00</updated><id>https://bran-nie.github.io/2020/12/18/css%20variable</id><content type="html" xml:base="https://bran-nie.github.io/2020/12/18/css-variable/">&lt;p&gt;&lt;img src=&quot;https://tva1.sinaimg.cn/large/0081Kckwgy1glsawoxq9aj30c208oq30.jpg&quot; alt=&quot;preview&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;demo-预览-或-在-codepen-中打开&quot;&gt;&lt;a href=&quot;https://bran-nie.github.io/Note/css/variable/&quot;&gt;Demo 预览&lt;/a&gt; 或 &lt;a href=&quot;https://codepen.io/bran-nie/pen/NWRjOXO&quot;&gt;在 Codepen 中打开&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h2 id=&quot;所需知识点&quot;&gt;所需知识点&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties&quot;&gt;css 自定义属性，即变量&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/CSS/var()&quot;&gt;var()函数&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/CSS/calc()&quot;&gt;calc()函数&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;background 使用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;需求解析编码思路&quot;&gt;需求解析&amp;amp;编码思路&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;鼠标在其上移动，评分随之变更&lt;/li&gt;
+  &lt;li&gt;点击评分后，固定评分&lt;/li&gt;
+  &lt;li&gt;鼠标离开后，回显上次评分&lt;/li&gt;
+  &lt;li&gt;采用背景图方案，repeat 素材&lt;/li&gt;
+  &lt;li&gt;使用 calc 计算宽度，展示评分的变化&lt;/li&gt;
+  &lt;li&gt;根据鼠标在评分 DOM 元素上的 x 轴偏移量，计算评分&lt;/li&gt;
+  &lt;li&gt;绑定事件，mousemove，mouseleave，及 click&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;代码实现&quot;&gt;代码实现&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;starBox&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;star-box&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;/* 将背景属性公用的部分提出 */&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.star-box&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.star-box&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;::before&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;background-repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;repeat-x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;background-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;26px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.star-box&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* 盒子总宽度，与星星个数有关，单个星星素材宽高26px */&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;--starNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;26px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;26px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;nl&quot;&gt;background-image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url('/* 未评分的星星svg素材 */')&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.star-box&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;::before&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;z-index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* 点亮的星星个数，计算宽度 */&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;--activeStar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;26px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;nl&quot;&gt;background-image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url('/* 评分的星星svg素材 */')&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;AllScore&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 评分总个数&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 评分&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;starBox&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;starBox&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;starBox&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HTMLDivElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 待实现功能：&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 1. 鼠标在其上移动，评分变更&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 2. 点击评分后，固定评分&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 3. 鼠标离开后，回显上次评分&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// 处理鼠标移动事件，改变评分。&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handleMove&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 通过x轴距离起点待偏移量和x轴总长确定评分&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;offsetX&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// console.log({ offsetX });&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hoverStar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getScore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offsetX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;starBox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;--activeStar&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hoverStar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 鼠标离开后，恢复至上次评分&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handleLeave&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;starBox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;--activeStar&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 点击评分后，记录评分&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;offsetX&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getScore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offsetX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;starBox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;--activeStar&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// 获取评分。&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getScore&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offsetX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;offsetX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;offsetX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offsetX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offsetX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;offsetX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;starBox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;mousemove&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handleMove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;starBox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;mouseleave&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handleLeave&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;starBox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;扩展和探索发现&quot;&gt;扩展和探索发现&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Q：PC 端用 mousemove 和 mouseleave 事件，那移动端呢？&lt;/li&gt;
+  &lt;li&gt;A：使用 touchmove 和 touchend。&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/API/Touch_events&quot;&gt;触摸事件&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;详细代码见&lt;a href=&quot;./index.html&quot;&gt;index.html&lt;/a&gt;文件&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Q：移动端和 PC 会有什么不同？&lt;/li&gt;
+  &lt;li&gt;A：
+    &lt;ul&gt;
+      &lt;li&gt;首先是交互不同，PC 端是鼠标移动，移动端是手指触摸滑动；对于确认评分，PC 端是常见是点击事件，移动端则是手指抬起，即 touchend 事件结束。&lt;/li&gt;
+      &lt;li&gt;left 取值不同，PC 端是取相对偏移量，移动端是获取触摸点端位置减去 DOM 元素的偏移量。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Q：还有别的巧妙的方式吗？&lt;/li&gt;
+  &lt;li&gt;A：利用 input[type=”range”]也可以实现。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;感谢sunseekers的知识分享&quot;&gt;感谢&lt;a href=&quot;https://github.com/sunseekers&quot;&gt;sunseekers&lt;/a&gt;的知识分享。&lt;/h2&gt;</content><author><name>Bran.nie</name></author><category term="Css" /><summary type="html"></summary></entry><entry><title type="html">CSS counter 计数</title><link href="https://bran-nie.github.io/2020/12/17/css-counter/" rel="alternate" type="text/html" title="CSS counter 计数" /><published>2020-12-17T00:00:00+08:00</published><updated>2020-12-17T00:00:00+08:00</updated><id>https://bran-nie.github.io/2020/12/17/css%20counter</id><content type="html" xml:base="https://bran-nie.github.io/2020/12/17/css-counter/">&lt;blockquote&gt;
+  &lt;p&gt;本质上 CSS 计数器是由 CSS 维护的变量，这些变量可能根据 CSS 规则增加以跟踪使用次数。这允许你根据文档位置来调整内容表现。&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Counters&quot;&gt;CSS 计数器&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;计数器&quot;&gt;计数器&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;创建一个 counters：&lt;/strong&gt; 在父元素或更高层中声明一个变量。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counter-reset: ${counter-name} ${value}&lt;/code&gt;， value 必须是 integer 类型，否则为默认值 0.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;控制 counters 的值变化：&lt;/strong&gt; 在需要计数的元素中，使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cunter-increment&lt;/code&gt;或者&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counter-set&lt;/code&gt;来控制 counters 的变化。
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;counter-name&amp;gt;?&amp;lt;integer&amp;gt;&lt;/code&gt;，integer 默认值，使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counter-increment: &lt;/code&gt;时是 1， 使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counter-set&lt;/code&gt;时是 0。&lt;/li&gt;
+      &lt;li&gt;如果元素上当前没有给定名称的计数器，则该元素会在设置或递增其值之前使用起始值 0 实例化给定名称的新计数器。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;使用 counters&lt;/strong&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counter()&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counters()&lt;/code&gt;函数是返回 counter 的方式。
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counter(name, counter-type?)&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counters(name, string, counter-type?)&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;counter-type 默认是十进制 （decimal）&lt;/li&gt;
+      &lt;li&gt;尽管这两个函数可以在大多数 css 属性里使用，但推荐在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;content&lt;/code&gt;里使用&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;for-example&quot;&gt;For example&lt;/h3&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;list-style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;counter-reset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;::before&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;counter-increment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;'. '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;counter，设置的变量是 hello 初始值是3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;在li的before中，每次递增的是3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;在li的before伪元素content属性中，调用 counter 函数，&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
+        因为调用过后，变量hello的值就会改变，所以第一个li的
+        编号就是初始值+递增值。即6
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;demo-预览&quot;&gt;&lt;a href=&quot;https://bran-nie.github.io/Note/css/counters/&quot;&gt;Demo 预览&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&quot;应用&quot;&gt;应用&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;目录&lt;/li&gt;
+  &lt;li&gt;计数&lt;/li&gt;
+  &lt;li&gt;循环赋值&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Bran.nie</name></author><category term="Css" /><summary type="html">本质上 CSS 计数器是由 CSS 维护的变量，这些变量可能根据 CSS 规则增加以跟踪使用次数。这允许你根据文档位置来调整内容表现。CSS 计数器</summary></entry><entry><title type="html">经济萧条下的消费</title><link href="https://bran-nie.github.io/2020/04/15/think/" rel="alternate" type="text/html" title="经济萧条下的消费" /><published>2020-04-15T00:00:00+08:00</published><updated>2020-04-15T00:00:00+08:00</updated><id>https://bran-nie.github.io/2020/04/15/think</id><content type="html" xml:base="https://bran-nie.github.io/2020/04/15/think/">&lt;p&gt;&lt;img src=&quot;/images/blog/door.jpg&quot; alt=&quot;?&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2020 可算是魔幻开局，新型肺炎、国内外火灾、经济下滑…&lt;/p&gt;
 
@@ -817,198 +1070,4 @@ For more examples and ideas, visit:
     &lt;span class=&quot;nl&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;not-allowed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;nl&quot;&gt;pointer-events&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Bran.nie</name></author><category term="Javascript" /><summary type="html">朋友问我像淘宝那样的选择商品的规格，如商品的颜色，尺寸，款式，并且还要根据后端传来的库存，哪些还有，哪些没了。咋一看不复杂，然后后面被一步一步的套牢，出不来了。最终借助 Google 的力量，完成了对这个类型的需求，有个初步的了解，并输出 blog 以记录。</summary></entry><entry><title type="html">分析比较opacity:0、visibility:hidden、display:none的区别、优劣及适用场景</title><link href="https://bran-nie.github.io/2019/04/18/css/" rel="alternate" type="text/html" title="分析比较opacity:0、visibility:hidden、display:none的区别、优劣及适用场景" /><published>2019-04-18T00:00:00+08:00</published><updated>2019-04-18T00:00:00+08:00</updated><id>https://bran-nie.github.io/2019/04/18/css</id><content type="html" xml:base="https://bran-nie.github.io/2019/04/18/css/">&lt;h2 id=&quot;三个属性分别是什么&quot;&gt;三个属性分别是什么？&lt;/h2&gt;
-
-&lt;h3 id=&quot;opacity--mdn-详细讲解&quot;&gt;opacity – &lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/CSS/opacity&quot;&gt;MDN 详细讲解&lt;/a&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;定义：指定了一个元素的透明度 （filter: alpha（opacity = 0-100））&lt;/li&gt;
-  &lt;li&gt;值：number 类型的值，0~1，如果超过范围，则按最接近的范围值展示，如值为 999 的时候，是按 1 展示。默认为 1，同样，值为-999 时，是按 0 展示&lt;/li&gt;
-  &lt;li&gt;兼容性：很好。除了 IE9 之前（详细到各浏览器版本号就看文档&lt;/li&gt;
-  &lt;li&gt;关注点：什么是透明，是否还存在文档流中，对子元素影响呢？&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;visibility--mdn-详细讲解&quot;&gt;visibility – &lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/CSS/visibility&quot;&gt;MDN 详细讲解&lt;/a&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;定义：显示或隐藏元素而不更改文档的布局。其中 collapse 值，还可以隐藏 table 中的行或列。&lt;/li&gt;
-  &lt;li&gt;值：关键值有三个，分别如下。
-    &lt;ul&gt;
-      &lt;li&gt;visible，默认值，正常展示&lt;/li&gt;
-      &lt;li&gt;hidden，隐藏元素，不改变布局，但子元素如果设置为 visibility: visible，则该子元素可见（很有意思的一个属性）&lt;/li&gt;
-      &lt;li&gt;collapse，应用于 table 表格。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;兼容性：css2 的属性，应该都能兼容吧（没 Windows&lt;/li&gt;
-  &lt;li&gt;关注点：和 opacity 的透明度有什么区别？&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;display--mdn-详细讲解&quot;&gt;display – &lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/CSS/display#display_none&quot;&gt;MDN 详细讲解&lt;/a&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;定义：指定了元素的显示类型，包含两类基础特征，用于指定元素怎样生成盒模型。 外部显示类型定义了元素怎么参与流式布局的处理。内部显示类型定义了子元素的布局方式， 详细可以看看语法部分)&lt;/li&gt;
-  &lt;li&gt;值：很多值，其中 none 属于 display-box。被设置成 none 的元素，将从可访问性树中移除，包括其子元素在内。&lt;/li&gt;
-  &lt;li&gt;兼容性：基本支持&lt;/li&gt;
-  &lt;li&gt;关注点：对页面重绘有没性能影响？是否可与别的属性连用？&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;表格对比&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;opacity: 0&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;visibility: hidden&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;display:none&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;是否存在页面中&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;存在&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;存在&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;不存在&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;子元素设置该属性其他值是否还能展示&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;不可以&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;可以&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;不可以&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;自身绑定的事件是否能触发&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;能&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;不能&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;不能&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;是否影响遮挡元素的事件触发&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;影响&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;不影响&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;不影响&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;改变属性值是否影响页面重绘&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;不一定&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;一定&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;一定&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;改变属性值是否影响回流&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;不会&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;会&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;会&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;该属性是否支持 transition&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;支持&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;支持&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;不支持&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;三者的优劣和应用场景&quot;&gt;三者的优劣和应用场景&lt;/h2&gt;
-
-&lt;h3 id=&quot;绑定事件&quot;&gt;绑定事件&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;opacity：从表格可得知，opacity 的隐藏，只是透明度 100%，看不见了，但还在页面中且可以通过 z-index 等方式遮挡其他元素，同时绑在在该元素上的事件依旧能触发。应用场景可以有：移动端使用 input、select 加 div，自定义样式，其中 input、select 层级在 div 上面，并设置 opacity 为 0&lt;/li&gt;
-  &lt;li&gt;visibility：这个属性是隐藏，意味着不能聚焦了还占据页面空间。但其子元素可以设置属性值为 visible，就能正常显示。应用场景：父元素隐藏，子元素根据一定条件某些展示某些隐藏。可以做一个闪闪发光的星空？&lt;/li&gt;
-  &lt;li&gt;display none 就不存在页面中了，可以理解为完全的消失。优点即应用场景，如果是流式布局，让一个元素隐藏且不占据空间，就使用这个属性值了。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;性能方面&quot;&gt;性能方面&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;opacity 由于只是透明度变化，就还好，visibility 是元素隐藏，需要重绘，disable 是元素消失，也是需要。&lt;/li&gt;
-  &lt;li&gt;应用方面，需要频繁切换状态时，在 display 和 opacity 中，可以选择后者，不频繁时，none 也可以。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;遇到新的理解再补充&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Css" /><summary type="html">三个属性分别是什么？</summary></entry><entry><title type="html">查找范围内的素数 - 埃拉托斯特尼筛法</title><link href="https://bran-nie.github.io/2018/11/08/primes/" rel="alternate" type="text/html" title="查找范围内的素数 - 埃拉托斯特尼筛法" /><published>2018-11-08T00:00:00+08:00</published><updated>2018-11-08T00:00:00+08:00</updated><id>https://bran-nie.github.io/2018/11/08/primes</id><content type="html" xml:base="https://bran-nie.github.io/2018/11/08/primes/">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
-
-&lt;p&gt;在做 codewars 一个题目时，涉及到素数的计算，便想写个函数，查找传入值范围内所有的素数。在这个过程中，了解到一个方法，因此做此记录，并打算记录类似工具类函数集。&lt;/p&gt;
-
-&lt;h2 id=&quot;埃拉托斯特尼筛法&quot;&gt;埃拉托斯特尼筛法&lt;/h2&gt;
-
-&lt;p&gt;这是个关于素数的快速筛选，详情见 &lt;a target=&quot;_blank&quot; href=&quot;https://baike.baidu.com/item/%E5%9F%83%E6%8B%89%E6%89%98%E6%96%AF%E7%89%B9%E5%B0%BC%E7%AD%9B%E6%B3%95&quot;&gt; 埃拉托斯特尼筛法-百度百科&lt;/a&gt; 或 &lt;a target=&quot;_blank&quot; href=&quot;https://zh.wikipedia.org/zh-cn/%E5%9F%83%E6%8B%89%E6%89%98%E6%96%AF%E7%89%B9%E5%B0%BC%E7%AD%9B%E6%B3%95&quot;&gt; 埃拉托斯特尼筛法-维基百科-推荐&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;思路&quot;&gt;思路&lt;/h2&gt;
-
-&lt;p&gt;根据埃拉托斯特尼筛法，从 2 开始的数组，将 2 的倍数过滤后，数组的第一个元素也是素数。然后循环将此元素的倍数过滤，剩下来的数组第一个元素也是素数。依次循环…&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/blog/prime.gif&quot; alt=&quot;动画&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;实现&quot;&gt;实现&lt;/h2&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;primesFn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;N&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;primes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 素数 数组&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 数据源&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;N&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// 循环过滤数组。 使用filter筛选&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;shift&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;primes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;primes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;
-
-&lt;p&gt;面对有规律的题目，要舍弃暴力 for 循环计算，转而思考怎么使用规律，简化算法。&lt;/p&gt;
-
-&lt;p&gt;对于这个题目，也可通用。两层 for 循环也能找出给定范围内的素数，但效率会随着范围越大越低。&lt;/p&gt;
-
-&lt;p&gt;另外，在实现中，没有使用递归调用，而是用了 while 条件，是因为已经知道当 nums 数据源为空的时候，就是找到了所有的素数。将比递归更易懂。&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Algorithm" /><summary type="html">前言</summary></entry><entry><title type="html">Linux命令- - - scp 服务器间传输，基于ssh</title><link href="https://bran-nie.github.io/2018/09/18/commands-scp/" rel="alternate" type="text/html" title="Linux命令- - - scp 服务器间传输，基于ssh" /><published>2018-09-18T00:00:00+08:00</published><updated>2018-09-18T00:00:00+08:00</updated><id>https://bran-nie.github.io/2018/09/18/commands-scp</id><content type="html" xml:base="https://bran-nie.github.io/2018/09/18/commands-scp/">&lt;blockquote&gt;
-  &lt;p&gt;scp 是 secure copy 的缩写，scp 是 Linux 系统下基于 ssh 登录，进行的远程文件拷贝命令&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;scp-简易写法&quot;&gt;scp 简易写法&lt;/h2&gt;
-
-&lt;p&gt;scp 【可选参数】【原路径】 【目标路径】&lt;/p&gt;
-
-&lt;h2 id=&quot;可选参数-常见&quot;&gt;可选参数 (常见)&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;-r：递归复制整个目录&lt;/li&gt;
-  &lt;li&gt;-C：允许压缩&lt;/li&gt;
-  &lt;li&gt;-p：保留原文件的修改时间，访问时间，访问权限。&lt;/li&gt;
-  &lt;li&gt;-P port：指定数据传输用到的端口号。如 -P 8080&lt;/li&gt;
-  &lt;li&gt;-I limit：限定用户所能使用的带宽，kbit/s 为单位&lt;/li&gt;
-  &lt;li&gt;-v：详细方式显示输出，可以用于调试连接，验证和配置问题。&lt;/li&gt;
-  &lt;li&gt;-i identity_file： 从指定文件中读取传输时使用的密钥文件，此参数直接传递给 ssh。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;示例&quot;&gt;示例&lt;/h2&gt;
-
-&lt;h3 id=&quot;从本地上传到远端12-需要已指定用户的密码34-需要输入用户名和密码&quot;&gt;从本地上传到远端，（1、2 需要已指定用户的密码，3、4 需要输入用户名和密码）&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;scp /www/test.txt root@192.168.1.1:/www/scp 上传到远端的 scp 目录下&lt;/li&gt;
-  &lt;li&gt;scp /www/test.txt root@192.168.1.1:/www/scp/new_test.txt 上传到远端的 scp 目录下并修改文件名&lt;/li&gt;
-  &lt;li&gt;scp /www/test.txt 192.168.1.1:/www/scp 上传到远端的 scp 目录下&lt;/li&gt;
-  &lt;li&gt;scp /www/test.txt 192.168.1.1:/www/scp 上传到远端的 scp 目录下并修改文件名&lt;/li&gt;
-  &lt;li&gt;如果是文件夹，就加上 -r 参数，如 scp -r /www/test/ 192.168.1.1:/www/scp/&lt;/li&gt;
-  &lt;li&gt;PS：这里有个关于权限的问题，如果登录到远程的用户是普通用户，则不能上传到根目录，而是上传到用户目录。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;从远端下载到本地&quot;&gt;从远端下载到本地&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;下载和上传类似，换换上面的位置即可。如 scp -r 192.168.1.1:/www/scp/ /www/test/&lt;/li&gt;
-  &lt;li&gt;PS：如果远程的服务器开启防火墙并指定的 scp 的端口号，则需要使用 -P 参数来设置这个端口号，如 scp -r -P 8080 192.168.1.1:/www/scp/ /www/test/&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;补充&quot;&gt;补充&lt;/h2&gt;
-
-&lt;p&gt;上面两个 ps。 scp 命令也是需要权限的，所以在使用的过程中，要确保连接的用户具有可读取服务器相应文件的权限。否则就 Permission denied 🌚&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Tutorials" /><summary type="html">scp 是 secure copy 的缩写，scp 是 Linux 系统下基于 ssh 登录，进行的远程文件拷贝命令</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Bran.nie</name></author><category term="Javascript" /><summary type="html">朋友问我像淘宝那样的选择商品的规格，如商品的颜色，尺寸，款式，并且还要根据后端传来的库存，哪些还有，哪些没了。咋一看不复杂，然后后面被一步一步的套牢，出不来了。最终借助 Google 的力量，完成了对这个类型的需求，有个初步的了解，并输出 blog 以记录。</summary></entry></feed>
