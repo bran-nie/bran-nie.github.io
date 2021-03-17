@@ -1,3 +1,7 @@
 - name: Sunseekers
   url: https://sunseekers.github.io
   src: life
+
+- name: 码志
+  url: https://mazhuang.org
+  src: www

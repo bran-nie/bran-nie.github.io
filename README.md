@@ -2,7 +2,7 @@
 
 我的个人博客：<https://bran-nie.github.io>
 
-Fork [mzlogin](https://github.com/mzlogin)的 <https://github.com/mzlogin/mzlogin.github.io>
+Fork [mzlogin](https://github.com/mzlogin) 的 <https://github.com/mzlogin/mzlogin.github.io>
 
 ## 概览
 
