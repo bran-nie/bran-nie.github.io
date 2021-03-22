@@ -6,12 +6,24 @@
     html.dark-mode img {
         opacity: 0.85;
     }
+    body {
+        position: relative;
+    }
 
     #darkContainer {
         position: fixed;
+        z-index: 100;
         bottom: 50px;
         left: 100px;
-        display: flex;
+        display: inline-flex;
+    }
+    @media (max-width: 50em) {
+        #darkContainer {
+            position: absolute;
+            transform: scale(0.8);
+            bottom: 5px;
+            left: 8px;
+        }
     }
     #darkContainer .text {
         margin-right: 8px;
