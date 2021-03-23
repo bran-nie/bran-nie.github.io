@@ -7,7 +7,7 @@ description: css, scrollbar, 自定义css滚动条样式
 
 > 该特性还是草案，是非标准的。请明确知道它**只支持 Webkit 内核的浏览器。**
 
-## [Demo 预览](https://bran-nie.github.io/Note/css/scrollbar/) 或 [在 Codepen 中打开](https://codepen.io/bran-nie/pen/jOMaOqp)
+## [Demo 预览](https://bran-nie.com/Note/css/scrollbar/) 或 [在 Codepen 中打开](https://codepen.io/bran-nie/pen/jOMaOqp)
 
 ## CSS 属性：自定义滚动条样式
 

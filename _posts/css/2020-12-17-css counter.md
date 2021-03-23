@@ -36,14 +36,11 @@ description: css, counter
     <li>counter，设置的变量是 hello 初始值是3</li>
     <li>在li的before中，每次递增的是3</li>
     <li>在li的before伪元素content属性中，调用 counter 函数，</li>
-    <li>
-        因为调用过后，变量hello的值就会改变，所以第一个li的
-        编号就是初始值+递增值。即6
-    </li>
+    <li>因为调用过后，变量hello的值就会改变，所以第一个li的 编号就是初始值+递增值。即6</li>
 </ul>
 ```
 
-### [Demo 预览](https://bran-nie.github.io/Note/css/counters/)
+### [Demo 预览](https://bran-nie.com/Note/css/counters/)
 
 ### 应用
 

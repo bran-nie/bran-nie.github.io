@@ -7,7 +7,7 @@ description: css, variable, css变量
 
 ![](/images/blog/css-variable.png)
 
-### [Demo 预览](https://bran-nie.github.io/Note/css/variable/) 或 [在 Codepen 中打开](https://codepen.io/bran-nie/pen/NWRjOXO)
+### [Demo 预览](https://bran-nie.com/Note/css/variable/) 或 [在 Codepen 中打开](https://codepen.io/bran-nie/pen/NWRjOXO)
 
 ## 所需知识点
 

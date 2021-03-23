@@ -25,7 +25,7 @@ description: IntersectionObserver
 ## 简单示例
 
 -   ### 图片懒加载
--   **<a target="_blank" href="https://bran-nie.github.io/Note/js/API/IntersectionObserver/?demo=imglazyload">Demo 展示</a>**
+-   **<a target="_blank" href="https://bran-nie.com/Note/js/API/IntersectionObserver/?demo=imglazyload">Demo 展示</a>**
 
 ![](/images/blog/img_lazyload.png)
 ![](/images/blog/img_lazyload_2.png)
@@ -75,7 +75,7 @@ images.forEach((img) => imgObserver.observe(img));
 
 -   ### 内容滚动加载 && 播放动画
 
--   **<a target="_blank" href="https://bran-nie.github.io/Note/js/API/IntersectionObserver/?demo=animation">Demo 展示</a>**
+-   **<a target="_blank" href="https://bran-nie.com/Note/js/API/IntersectionObserver/?demo=animation">Demo 展示</a>**
 
 ```html
 <div class="animation" v-if="!showImageLazyDemo">
