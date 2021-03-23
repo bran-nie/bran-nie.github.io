@@ -1,6 +1,6 @@
 ## Bran.nie
 
-我的个人博客：<https://bran-nie.github.io>
+我的个人博客：<https://bran-nie.com>
 
 Fork [mzlogin](https://github.com/mzlogin) 的 <https://github.com/mzlogin/mzlogin.github.io>
 
