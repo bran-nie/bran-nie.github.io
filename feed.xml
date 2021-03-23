@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-03-23T11:44:03+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">小飞机工作原理</title><link href="https://bran-nie.com/2021/03/22/ss/" rel="alternate" type="text/html" title="小飞机工作原理" /><published>2021-03-22T00:00:00+08:00</published><updated>2021-03-22T00:00:00+08:00</updated><id>https://bran-nie.com/2021/03/22/ss</id><content type="html" xml:base="https://bran-nie.com/2021/03/22/ss/">&lt;h2 id=&quot;起因&quot;&gt;起因&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-03-23T16:13:58+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">博客由 username.github.io 转为自定义域名</title><link href="https://bran-nie.com/2021/03/23/domain-name/" rel="alternate" type="text/html" title="博客由 username.github.io 转为自定义域名" /><published>2021-03-23T00:00:00+08:00</published><updated>2021-03-23T00:00:00+08:00</updated><id>https://bran-nie.com/2021/03/23/domain-name</id><content type="html" xml:base="https://bran-nie.com/2021/03/23/domain-name/">&lt;blockquote&gt;
+  &lt;p&gt;发现在国内，username.github.io 不能解析，了解一下是运营商的 DNS 问题。科学上网和通过本地修改 DNS 可以解决，但这只是针对个人，对其他人一点也不友好。而自定义域名可以完美的解决这个问题，再者，GitHub Page 也是很完美的支持自定义域名。&lt;/p&gt;
+
+  &lt;p&gt;故今早打算购买一个域名用作博客，HTTPS 也是要考虑的。看了一些服务商，最后选择了腾讯云，花半个小时左右完美的解决需求。&lt;strong&gt;且为了培养写博客的习惯，便记录一下这个流程，也供同道中人参考使用。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!-- ![](/images/blog/inaccessible.png) --&gt;
+&lt;p&gt;&lt;img src=&quot;/images/blog/inaccessible.png&quot; height=&quot;360&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;购买域名&quot;&gt;购买域名&lt;/h2&gt;
+
+&lt;p&gt;域名注册服务商有不少，你可以依据自己喜爱选择一个即可。我是今天看到 &lt;a href=&quot;https://www.dnspod.cn/promo/domainscarnival?promo_code=G2LSXI22380&amp;amp;from=fugongdacu&quot; target=&quot;_blank&quot;&gt;腾讯云的复工大促活动&lt;/a&gt; ，再加上之前一些云服务也是用的他们的，所以就选择了这个服务商。&lt;/p&gt;
+
+&lt;p&gt;至于其他的域名服务商，也都大同小异，这里说几个熟悉的平台：&lt;a href=&quot;https://sg.godaddy.com/&quot; target=&quot;_blank&quot;&gt;Godaddy&lt;/a&gt;，&lt;a href=&quot;https://wanwang.aliyun.com/domain/&quot; target=&quot;_blank&quot;&gt;阿里云&lt;/a&gt;，&lt;a href=&quot;https://dnspod.cloud.tencent.com/&quot; target=&quot;_blank&quot;&gt;腾讯云&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;选好平台后，如何购买域名。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;首先是要查询你想要注册的域名，是否还在。不在的话就换吧，换名字或者一级域名(即后缀如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cn&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xyz&lt;/code&gt;)。&lt;/li&gt;
+  &lt;li&gt;域名选好后，加到购物车进行支付购买即可。&lt;/li&gt;
+  &lt;li&gt;备注：国内的服务商，要填好个人的信息，需要实名认证的。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;域名解析&quot;&gt;域名解析&lt;/h2&gt;
+
+&lt;p&gt;在购买好域名之后，我们就可以进到域名服务商提供的域名管理页面。这一步就是用来解析域名，通俗点讲，就是要让网络知道这个域名指向哪里，因为域名本质上只是一个名字。你叫张三，他叫李四，张三与李四只是两个人的名字。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;打开域名的管理页面，找到解析这个功能，(找不到的可以自行查询 &lt;a href=&quot;https://cn.bing.com&quot; target=&quot;_blank&quot;&gt;Bing 搜索&lt;/a&gt;)，下面展示的均为腾讯云(没广告费哎)。
+&lt;img src=&quot;/images/blog/domain_1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;添加记录，两条 A 记录和一个 CNAME 记录即可。可以仿照图片添加，&lt;strong&gt;需要替换的是 CNAME 那里的记录值，换成你的 GitHub page 地址。&lt;/strong&gt;
+&lt;img src=&quot;/images/blog/domain_2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;这里简单说一下两个 A 记录是什么，这两个 A 记录指向的是 GitHub Page 的 IP 地址，&lt;img src=&quot;/images/blog/domain_3.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;另外，关于 GitHub Page 自定义域名，&lt;a href=&quot;https://docs.github.com/cn/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site&quot; target=&quot;_blank&quot;&gt;官方也有相应的文档&lt;/a&gt;，感兴趣的可以看一下，多了解一些总归是好的～。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;github-page-添加-cname&quot;&gt;GitHub Page 添加 CNAME&lt;/h2&gt;
+
+&lt;p&gt;当域名也购买好了，解析也配置 OK 了。接下来就是在 GitHub 上面，开启自定义域名配置了。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;首先，在博客项目仓库，新建一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CNAME&lt;/code&gt;文件，&lt;strong&gt;强调，文件名就是 CNAME，且没有后缀&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;注意，如果你用类似 Hexo 生成的博客，然后 deploy 到 GitHub page 仓库的，请注意需要把这个文件也存放到生成的文件夹根目录下。具体可以搜索或者在文章下方留言。
+&lt;img src=&quot;/images/blog/domain_5.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;这个文件里面就写上你自己的域名，如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bran-nie.com&lt;/code&gt;，不要 http、https 等这些协议。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;随后，你在项目仓库的 Setting 中，就能看到类似我的这样的信息。
+&lt;img src=&quot;/images/blog/domain_4.png&quot; alt=&quot;&quot; /&gt;
+说明已经 OK 了&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;修改博客配置文件&quot;&gt;修改博客配置文件&lt;/h2&gt;
+
+&lt;p&gt;这里我踩了一个坑。修改过自定义域名后，把配置&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\_config.yml&lt;/code&gt;中的 url 属性忘记修改成申请的域名了，因此导致博客网站的链接都还是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bran-nie.github.io/xxx&lt;/code&gt;，实际上国内还是访问不到。&lt;/p&gt;
+
+&lt;p&gt;因此，切记还需要在配置文件中，修改站点 URL，这样，GitHub Page 生成的页面中的链接，站点才是正确的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bran-nie.com/xxx&lt;/code&gt; 。&lt;/p&gt;
+
+&lt;h2 id=&quot;域名-ssl可选&quot;&gt;域名 SSL（可选&lt;/h2&gt;
+
+&lt;p&gt;现在浏览器打开一个网页，如果是 http 协议的网站，则浏览器会提示一个不安全。现在又是大家会比较重视信息安全的时代，那么，很有必要给我们的博客加一把小锁了.&lt;/p&gt;
+
+&lt;p&gt;我们的博客网站，几乎都是静态页面了，现在 SSL 证书也有免费的，就我所购买的腾讯云域名，在域名管理页面，就可以快速申请 SSL 证书，点击一下就可以的那种。其他服务商，也都大同小异吧～&lt;/p&gt;
+
+&lt;p&gt;便捷方式：是在域名解析的这里，点击右侧的 SSL，根据提示操作即可。（我这里是已经申请过了，所以是绿色的 SSL 文字。
+&lt;img src=&quot;/images/blog/domain_2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;再或者，可以在域名控制台，找到证书相关的菜单，申请证书即可。如图：
+&lt;img src=&quot;/images/blog/domain_6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;最后&quot;&gt;最后&lt;/h2&gt;
+
+&lt;p&gt;配置好博客，这是一个愉快的开端，希望我们不要忘记，为什么开通这个博客，折腾了这么久，不要忘记初心呀～&lt;/p&gt;
+
+&lt;p&gt;一点一滴的想，一字一句的写，将自己所了解的、学到的、感悟的知识输出出来，既能有益他人的学习，更能帮助自己进一步的掌握。加油，干饭人！&lt;/p&gt;
+
+&lt;p&gt;PS：确实，一开始写博客，是会耗时。眨眼间，两三个小时过去了，就拿这个博客来说吧，我早上从申请域名到完成迁移，也就半个小时左右，但输出这篇文章，大概花费了两个多小时。猛的一想还挺浪费时间的，其实呀，万事开头难，写多了，就好了。&lt;strong&gt;写着写着就习惯了&lt;/strong&gt; hhh&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Blog" /><summary type="html">发现在国内，username.github.io 不能解析，了解一下是运营商的 DNS 问题。科学上网和通过本地修改 DNS 可以解决，但这只是针对个人，对其他人一点也不友好。而自定义域名可以完美的解决这个问题，再者，GitHub Page 也是很完美的支持自定义域名。 故今早打算购买一个域名用作博客，HTTPS 也是要考虑的。看了一些服务商，最后选择了腾讯云，花半个小时左右完美的解决需求。且为了培养写博客的习惯，便记录一下这个流程，也供同道中人参考使用。</summary></entry><entry><title type="html">小飞机工作原理</title><link href="https://bran-nie.com/2021/03/22/ss/" rel="alternate" type="text/html" title="小飞机工作原理" /><published>2021-03-22T00:00:00+08:00</published><updated>2021-03-22T00:00:00+08:00</updated><id>https://bran-nie.com/2021/03/22/ss</id><content type="html" xml:base="https://bran-nie.com/2021/03/22/ss/">&lt;h2 id=&quot;起因&quot;&gt;起因&lt;/h2&gt;
 
 &lt;p&gt;通常，我们在浏览器中准备打开一个网站如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://cn.bing.com/&lt;/code&gt;，在地址栏输入完网址按下回车后，浏览器会调用网络进程，由电脑发起网络请求，随后将下载的 html、css、js 等资源给浏览器的渲染进程。&lt;/p&gt;
 
@@ -176,6 +262,12 @@ html 的结构如下，img 标签，自定义 data 放置图片的 src，设置 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;api-语法简介&quot;&gt;API 语法简介&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;这个 API 兼容性上，不支持 IE 浏览器，其他浏览器的版本，现在常见的都还可以。&lt;/p&gt;
+
+  &lt;p&gt;官方提供的 &lt;a href=&quot;https://github.com/w3c/IntersectionObserver/blob/main/polyfill/intersection-observer.js&quot; target=&quot;_blank&quot;&gt;polyfill&lt;/a&gt; 。&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;const Observer = new IntersectionObserver(callback[, options])&lt;/code&gt;&lt;/p&gt;
@@ -679,161 +771,4 @@ git merge bran/master
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;待后续使用补充…&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Tutorials" /><summary type="html">hey 出现</summary></entry><entry><title type="html">初步了解Docker及其使用（一）</title><link href="https://bran-nie.com/2019/07/16/docker/" rel="alternate" type="text/html" title="初步了解Docker及其使用（一）" /><published>2019-07-16T00:00:00+08:00</published><updated>2019-07-16T00:00:00+08:00</updated><id>https://bran-nie.com/2019/07/16/docker</id><content type="html" xml:base="https://bran-nie.com/2019/07/16/docker/">&lt;blockquote&gt;
-  &lt;p&gt;记录初步了解 Docker 是什么，它的来源与应用。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;历史问题&quot;&gt;历史问题&lt;/h2&gt;
-
-&lt;p&gt;有句话，相信大部分开发者都说过一句话：“在我这是好的”。但为什么在其他环境下，就不好了呢~&lt;/p&gt;
-
-&lt;p&gt;在软件开发上，最大的麻烦之一，就是环境配置。用户计算机的环境不尽相同，比如某些库和软件没有或者版本不一致，都会引起 -It works on my machine-&lt;/p&gt;
-
-&lt;p&gt;不畏困难的开发者们就在想，能不能让软件自带环境再去安装呢，这样就从根本上解决了问题。也就是说软件需要什么环境，安装包就有什么。这样，就是 It works on every machine&lt;/p&gt;
-
-&lt;h2 id=&quot;解决问题的方式&quot;&gt;解决问题的方式&lt;/h2&gt;
-
-&lt;h3 id=&quot;虚拟机&quot;&gt;虚拟机&lt;/h3&gt;
-
-&lt;p&gt;学过操作系统的人，或者自己装过系统的人，可能听说或用过虚拟机。虚拟机是在一种操作系统里面运行另一种操作系统，比如在 Mac 系统里面运行 Windows 系统。&lt;/p&gt;
-
-&lt;p&gt;那么，我们将应用程序，安装在虚拟机里面。对于应用程序来说，它并不知道实际上计算机是什么操作系统，不影响它的运行。并且对于计算机而言，虚拟机就是一个文件，不需要了，删掉就可以了，也不会影响计算机的其他应用。&lt;/p&gt;
-
-&lt;p&gt;但这个方式有几个缺点，就很致命。&lt;/p&gt;
-
-&lt;h4 id=&quot;资源占用多&quot;&gt;资源占用多。&lt;/h4&gt;
-
-&lt;p&gt;哪怕应用只需要 1MB 的内存，虚拟机依然需要几百 MB 的内存才能运行。&lt;/p&gt;
-
-&lt;h4 id=&quot;冗余步骤多&quot;&gt;冗余步骤多&lt;/h4&gt;
-
-&lt;p&gt;​ 虚拟机是完整的操作系统，一些系统级的操作步骤往往无法跳过，比如用户登录。&lt;/p&gt;
-
-&lt;h4 id=&quot;启动慢&quot;&gt;启动慢&lt;/h4&gt;
-
-&lt;p&gt;​ 启动程序，需要先启动虚拟机，等几分钟再启动程序了。&lt;/p&gt;
-
-&lt;h3 id=&quot;linux-容器&quot;&gt;Linux 容器&lt;/h3&gt;
-
-&lt;p&gt;虚拟机虽然实现很简单，但上述的缺点，还是很严重。于是，睿智的开发者们又通过 Linux 发展出了另一种虚拟化技术：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Linux容器（Linux Containers LXC）&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Linux 容器不是模拟一个完整的操作系统，而是对进程进行隔离。&lt;/strong&gt;或者说，在正常的进程外面套了一个保护层。对于容器里面的进程来说，它接触道德各种资源都是寻你的，从而实现与底层系统的隔离。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;PS：刚了解的我，也是看的懵懵懂懂，但看到一个比喻是这样：一艘货轮上装满了集装箱，OK，货轮即计算机。集装箱就是一个个容器，里面装着不同的应用程序（货物）。需要多大的内存，就用多大的集装箱。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;那么，容器的有点有：（其实相对虚拟机来说的&lt;/p&gt;
-
-&lt;h4 id=&quot;资源占用少&quot;&gt;资源占用少&lt;/h4&gt;
-
-&lt;p&gt;​ 容器只占用应用程序需要的资源。多个容器还可以共享资源，虚拟机是独享资源，哪怕用不到那么多。&lt;/p&gt;
-
-&lt;h4 id=&quot;体积小&quot;&gt;体积小&lt;/h4&gt;
-
-&lt;p&gt;​ 容器只要包含用到的组件和库即可，不需要整个操作系统，所以相比虚拟机，它的体积小很多，并且没有太多冗余步骤。&lt;/p&gt;
-
-&lt;h4 id=&quot;启动快&quot;&gt;启动快&lt;/h4&gt;
-
-&lt;p&gt;​ 容器里面的应用，直接就是底层系统的的一个进程，而不是虚拟机的整个系统。所以速度就会快很多。&lt;/p&gt;
-
-&lt;p&gt;看起来，容器相对于虚拟机，简直是秒杀了。&lt;/p&gt;
-
-&lt;h2 id=&quot;docker-是什么&quot;&gt;Docker 是什么&lt;/h2&gt;
-
-&lt;p&gt;Docker 属于 Linux 容器的一种封装，(毕竟 Linux 容器对于很多人来说不易用) 提供简单易用的容器使用接口。它是目前最流行的 Linux 容器解决方案。&lt;/p&gt;
-
-&lt;p&gt;Docker 将应用程序与该程序的依赖，打包在一个文件（货物~）里面。运行这个文件，就会生成一个虚拟容器（集装箱~）。程序在这个虚拟容器里运行，就好像在真是的物理机上运行一样。有了 Docker，就不用担心环境问题了。&lt;/p&gt;
-
-&lt;p&gt;总体来说，Docker 的接口相当简单，用户可以方便地创建和使用容器，把自己的应用放入容器。容器还可以进行版本管理、复制、分享、修改，就像管理普通代码一样。（PS：真的是十分棒的发明了。&lt;/p&gt;
-
-&lt;h2 id=&quot;docker-用在什么地方&quot;&gt;Docker 用在什么地方&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;提供一次性的环境。开发给测试提供一致的测试环境。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;提供弹性的云服务。因为 Docker 容器可以随开随关，很适合动态的扩容和缩容。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;组件微服务架构。通过多个容器，一台容器可以跑多个服务，因此在一个机器上就可以模拟出微服务架构。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;docker-安装&quot;&gt;Docker 安装&lt;/h2&gt;
-
-&lt;p&gt;了解到 Docker 是一个开源的商业产品，所以有两个版本，一个是社区版(Community Edition, CE)，和企业版(Enterprise Edition, EE)。社区版就是众多优秀的开发者维护并更新的。&lt;/p&gt;
-
-&lt;p&gt;Docker CE 的安装可以参考官方文档。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.docker.com/docker-for-mac/install/&quot;&gt;Mac&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.docker.com/docker-for-windows/install/&quot;&gt;Windows&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.docker.com/install/linux/docker-ce/ubuntu/&quot;&gt;Ubuntu&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.docker.com/install/linux/docker-ce/debian/&quot;&gt;Debian&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.docker.com/install/linux/docker-ce/centos/&quot;&gt;CentOS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.docker.com/install/linux/docker-ce/fedora/&quot;&gt;Fedora&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;安装完成后，运行下面命令，查看是否安装成功&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker version
-// 或者
-docker info
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;因为 docker 用户需要 sudo 权限，为了避免每次都需要 sudo，可以把用户加入 docker 用户组。&lt;/p&gt;
-
-&lt;p&gt;PS：这里需要重新打开终端才生效，终端不行的话就重启服务器。&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 添加docker用户组
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;groupadd docker
-
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;usermod &lt;span class=&quot;nt&quot;&gt;-aG&lt;/span&gt; docker &lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt;
-// 将用户加入docker用户组。其中&lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt;是当前用户。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Docker 是服务器—客户端架构。命令行运行 docker 命令的时候，需要本机有 Docker 服务。如果这项服务没有启动，可以用下面的命令启动。&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl start docker
-// 或者
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;service docker start
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;也可以开启 开机启动&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;docker
-
-// 关闭开机启动
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl disable docker
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;最后，测试一下 Docker 服务&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;docker run hello-world
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;此命令下载测试映像并在容器中运行它。当容器运行时，它会打印一条信息性消息并退出。&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Hello from Docker!
-This message shows that your installation appears to be working correctly.
-
-To generate this message, Docker took the following steps:
- 1. The Docker client contacted the Docker daemon.
- 2. The Docker daemon pulled the &lt;span class=&quot;s2&quot;&gt;&quot;hello-world&quot;&lt;/span&gt; image from the Docker Hub.
-    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;amd64&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
- 3. The Docker daemon created a new container from that image which runs the
-    executable that produces the output you are currently reading.
- 4. The Docker daemon streamed that output to the Docker client, which sent it
-    to your terminal.
-
-To try something more ambitious, you can run an Ubuntu container with:
- &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; ubuntu bash
-
-Share images, automate workflows, and more with a free Docker ID:
- https://hub.docker.com/
-
-For more examples and ideas, visit:
- https://docs.docker.com/get-started/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Bran.nie</name></author><category term="Tool" /><summary type="html">记录初步了解 Docker 是什么，它的来源与应用。</summary></entry></feed>
+&lt;p&gt;待后续使用补充…&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Tutorials" /><summary type="html">hey 出现</summary></entry></feed>
