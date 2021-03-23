@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.github.io/" rel="alternate" type="text/html" /><updated>2021-03-23T10:37:56+08:00</updated><id>https://bran-nie.github.io/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">小飞机工作原理</title><link href="https://bran-nie.github.io/2021/03/22/ss/" rel="alternate" type="text/html" title="小飞机工作原理" /><published>2021-03-22T00:00:00+08:00</published><updated>2021-03-22T00:00:00+08:00</updated><id>https://bran-nie.github.io/2021/03/22/ss</id><content type="html" xml:base="https://bran-nie.github.io/2021/03/22/ss/">&lt;h2 id=&quot;起因&quot;&gt;起因&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-03-23T11:21:39+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">小飞机工作原理</title><link href="https://bran-nie.com/2021/03/22/ss/" rel="alternate" type="text/html" title="小飞机工作原理" /><published>2021-03-22T00:00:00+08:00</published><updated>2021-03-22T00:00:00+08:00</updated><id>https://bran-nie.com/2021/03/22/ss</id><content type="html" xml:base="https://bran-nie.com/2021/03/22/ss/">&lt;h2 id=&quot;起因&quot;&gt;起因&lt;/h2&gt;
 
 &lt;p&gt;通常，我们在浏览器中准备打开一个网站如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://cn.bing.com/&lt;/code&gt;，在地址栏输入完网址按下回车后，浏览器会调用网络进程，由电脑发起网络请求，随后将下载的 html、css、js 等资源给浏览器的渲染进程。&lt;/p&gt;
 
@@ -48,7 +48,7 @@
   &lt;li&gt;由工具开启本地服务器&lt;/li&gt;
   &lt;li&gt;本地服务器与代理服务器通信，代理服务器与目标服务器通信&lt;/li&gt;
   &lt;li&gt;访问被墙的目标服务器时，电脑是通过 &lt;strong&gt;本地服务器 &amp;lt;—&amp;gt; 代理服务器 &amp;lt;—&amp;gt; 目标服务器&lt;/strong&gt; 这样的请求流程，得到想要的资源的。&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Bran.nie</name></author><category term="Blog" /><summary type="html">起因</summary></entry><entry><title type="html">抛开 Scroll 事件，这个 API，可以轻松实现吸顶、触底、懒加载</title><link href="https://bran-nie.github.io/2021/03/18/IntersectionObserver/" rel="alternate" type="text/html" title="抛开 Scroll 事件，这个 API，可以轻松实现吸顶、触底、懒加载" /><published>2021-03-18T00:00:00+08:00</published><updated>2021-03-18T00:00:00+08:00</updated><id>https://bran-nie.github.io/2021/03/18/IntersectionObserver</id><content type="html" xml:base="https://bran-nie.github.io/2021/03/18/IntersectionObserver/">&lt;blockquote&gt;
+&lt;/ol&gt;</content><author><name>Bran.nie</name></author><category term="Blog" /><summary type="html">起因</summary></entry><entry><title type="html">抛开 Scroll 事件，这个 API，可以轻松实现吸顶、触底、懒加载</title><link href="https://bran-nie.com/2021/03/18/IntersectionObserver/" rel="alternate" type="text/html" title="抛开 Scroll 事件，这个 API，可以轻松实现吸顶、触底、懒加载" /><published>2021-03-18T00:00:00+08:00</published><updated>2021-03-18T00:00:00+08:00</updated><id>https://bran-nie.com/2021/03/18/IntersectionObserver</id><content type="html" xml:base="https://bran-nie.com/2021/03/18/IntersectionObserver/">&lt;blockquote&gt;
   &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Intersection Observer API&lt;/code&gt; 提供了一种异步检测目标元素与祖先元素或 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viewport&lt;/code&gt; 相交情况变化的方法。&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -269,9 +269,9 @@ html 的结构如下，img 标签，自定义 data 放置图片的 src，设置 
 
 &lt;p&gt;确实，不间断地折腾，它在当下看，似乎没什么收益，但长远来看，折腾是以一种更加无形的方式反馈给了你！&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/blog/toos_worth.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Javascript" /><summary type="html">Intersection Observer API 提供了一种异步检测目标元素与祖先元素或 viewport 相交情况变化的方法。</summary></entry><entry><title type="html">PicGo 一款优秀的图床</title><link href="https://bran-nie.github.io/2021/03/15/PicGo/" rel="alternate" type="text/html" title="PicGo 一款优秀的图床" /><published>2021-03-15T00:00:00+08:00</published><updated>2021-03-15T00:00:00+08:00</updated><id>https://bran-nie.github.io/2021/03/15/PicGo</id><content type="html" xml:base="https://bran-nie.github.io/2021/03/15/PicGo/">&lt;h2 id=&quot;picgo&quot;&gt;PicGo&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/blog/toos_worth.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Javascript" /><summary type="html">Intersection Observer API 提供了一种异步检测目标元素与祖先元素或 viewport 相交情况变化的方法。</summary></entry><entry><title type="html">PicGo 一款优秀的图床</title><link href="https://bran-nie.com/2021/03/15/PicGo/" rel="alternate" type="text/html" title="PicGo 一款优秀的图床" /><published>2021-03-15T00:00:00+08:00</published><updated>2021-03-15T00:00:00+08:00</updated><id>https://bran-nie.com/2021/03/15/PicGo</id><content type="html" xml:base="https://bran-nie.com/2021/03/15/PicGo/">&lt;h2 id=&quot;picgo&quot;&gt;PicGo&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/blog/picgo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Tutorials" /><summary type="html">PicGo</summary></entry><entry><title type="html">CSS 滚动条样式</title><link href="https://bran-nie.github.io/2021/01/14/scrollbar/" rel="alternate" type="text/html" title="CSS 滚动条样式" /><published>2021-01-14T00:00:00+08:00</published><updated>2021-01-14T00:00:00+08:00</updated><id>https://bran-nie.github.io/2021/01/14/scrollbar</id><content type="html" xml:base="https://bran-nie.github.io/2021/01/14/scrollbar/">&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/images/blog/picgo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Tutorials" /><summary type="html">PicGo</summary></entry><entry><title type="html">CSS 滚动条样式</title><link href="https://bran-nie.com/2021/01/14/scrollbar/" rel="alternate" type="text/html" title="CSS 滚动条样式" /><published>2021-01-14T00:00:00+08:00</published><updated>2021-01-14T00:00:00+08:00</updated><id>https://bran-nie.com/2021/01/14/scrollbar</id><content type="html" xml:base="https://bran-nie.com/2021/01/14/scrollbar/">&lt;blockquote&gt;
   &lt;p&gt;该特性还是草案，是非标准的。请明确知道它&lt;strong&gt;只支持 Webkit 内核的浏览器。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -318,7 +318,7 @@ html 的结构如下，img 标签，自定义 data 放置图片的 src，设置 
 &lt;ul&gt;
   &lt;li&gt;还原 UI 设计的滚动条样式&lt;/li&gt;
   &lt;li&gt;修改滚动条跳动导致页面错位的 bug&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Bran.nie</name></author><category term="Css" /><summary type="html">该特性还是草案，是非标准的。请明确知道它只支持 Webkit 内核的浏览器。</summary></entry><entry><title type="html">使用 css自定义属性（css变量），配合 js 更新 css，实现星星打分~</title><link href="https://bran-nie.github.io/2020/12/18/css-variable/" rel="alternate" type="text/html" title="使用 css自定义属性（css变量），配合 js 更新 css，实现星星打分~" /><published>2020-12-18T00:00:00+08:00</published><updated>2020-12-18T00:00:00+08:00</updated><id>https://bran-nie.github.io/2020/12/18/css%20variable</id><content type="html" xml:base="https://bran-nie.github.io/2020/12/18/css-variable/">&lt;p&gt;&lt;img src=&quot;/images/blog/css-variable.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Bran.nie</name></author><category term="Css" /><summary type="html">该特性还是草案，是非标准的。请明确知道它只支持 Webkit 内核的浏览器。</summary></entry><entry><title type="html">使用 css自定义属性（css变量），配合 js 更新 css，实现星星打分~</title><link href="https://bran-nie.com/2020/12/18/css-variable/" rel="alternate" type="text/html" title="使用 css自定义属性（css变量），配合 js 更新 css，实现星星打分~" /><published>2020-12-18T00:00:00+08:00</published><updated>2020-12-18T00:00:00+08:00</updated><id>https://bran-nie.com/2020/12/18/css%20variable</id><content type="html" xml:base="https://bran-nie.com/2020/12/18/css-variable/">&lt;p&gt;&lt;img src=&quot;/images/blog/css-variable.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;demo-预览-或-在-codepen-中打开&quot;&gt;&lt;a href=&quot;https://bran-nie.github.io/Note/css/variable/&quot;&gt;Demo 预览&lt;/a&gt; 或 &lt;a href=&quot;https://codepen.io/bran-nie/pen/NWRjOXO&quot;&gt;在 Codepen 中打开&lt;/a&gt;&lt;/h3&gt;
 
@@ -469,7 +469,7 @@ html 的结构如下，img 标签，自定义 data 放置图片的 src，设置 
   &lt;li&gt;A：利用 input[type=”range”]也可以实现。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;感谢sunseekers的知识分享&quot;&gt;感谢&lt;a href=&quot;https://github.com/sunseekers&quot;&gt;sunseekers&lt;/a&gt;的知识分享。&lt;/h2&gt;</content><author><name>Bran.nie</name></author><category term="Css" /><summary type="html"></summary></entry><entry><title type="html">CSS counter 计数</title><link href="https://bran-nie.github.io/2020/12/17/css-counter/" rel="alternate" type="text/html" title="CSS counter 计数" /><published>2020-12-17T00:00:00+08:00</published><updated>2020-12-17T00:00:00+08:00</updated><id>https://bran-nie.github.io/2020/12/17/css%20counter</id><content type="html" xml:base="https://bran-nie.github.io/2020/12/17/css-counter/">&lt;blockquote&gt;
+&lt;h2 id=&quot;感谢sunseekers的知识分享&quot;&gt;感谢&lt;a href=&quot;https://github.com/sunseekers&quot;&gt;sunseekers&lt;/a&gt;的知识分享。&lt;/h2&gt;</content><author><name>Bran.nie</name></author><category term="Css" /><summary type="html"></summary></entry><entry><title type="html">CSS counter 计数</title><link href="https://bran-nie.com/2020/12/17/css-counter/" rel="alternate" type="text/html" title="CSS counter 计数" /><published>2020-12-17T00:00:00+08:00</published><updated>2020-12-17T00:00:00+08:00</updated><id>https://bran-nie.com/2020/12/17/css%20counter</id><content type="html" xml:base="https://bran-nie.com/2020/12/17/css-counter/">&lt;blockquote&gt;
   &lt;p&gt;本质上 CSS 计数器是由 CSS 维护的变量，这些变量可能根据 CSS 规则增加以跟踪使用次数。这允许你根据文档位置来调整内容表现。&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Counters&quot;&gt;CSS 计数器&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -524,7 +524,7 @@ html 的结构如下，img 标签，自定义 data 放置图片的 src，设置 
   &lt;li&gt;目录&lt;/li&gt;
   &lt;li&gt;计数&lt;/li&gt;
   &lt;li&gt;循环赋值&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Bran.nie</name></author><category term="Css" /><summary type="html">本质上 CSS 计数器是由 CSS 维护的变量，这些变量可能根据 CSS 规则增加以跟踪使用次数。这允许你根据文档位置来调整内容表现。CSS 计数器</summary></entry><entry><title type="html">经济萧条下的消费</title><link href="https://bran-nie.github.io/2020/04/15/think/" rel="alternate" type="text/html" title="经济萧条下的消费" /><published>2020-04-15T00:00:00+08:00</published><updated>2020-04-15T00:00:00+08:00</updated><id>https://bran-nie.github.io/2020/04/15/think</id><content type="html" xml:base="https://bran-nie.github.io/2020/04/15/think/">&lt;p&gt;&lt;img src=&quot;/images/blog/door.jpg&quot; alt=&quot;?&quot; /&gt;&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>Bran.nie</name></author><category term="Css" /><summary type="html">本质上 CSS 计数器是由 CSS 维护的变量，这些变量可能根据 CSS 规则增加以跟踪使用次数。这允许你根据文档位置来调整内容表现。CSS 计数器</summary></entry><entry><title type="html">经济萧条下的消费</title><link href="https://bran-nie.com/2020/04/15/think/" rel="alternate" type="text/html" title="经济萧条下的消费" /><published>2020-04-15T00:00:00+08:00</published><updated>2020-04-15T00:00:00+08:00</updated><id>https://bran-nie.com/2020/04/15/think</id><content type="html" xml:base="https://bran-nie.com/2020/04/15/think/">&lt;p&gt;&lt;img src=&quot;/images/blog/door.jpg&quot; alt=&quot;?&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2020 可算是魔幻开局，新型肺炎、国内外火灾、经济下滑…&lt;/p&gt;
 
@@ -538,7 +538,7 @@ html 的结构如下，img 标签，自定义 data 放置图片的 src，设置 
 
 &lt;p&gt;而普通人呢，还在思考生存的问题。&lt;/p&gt;
 
-&lt;p&gt;哦，这多彩斑斓的世界，竟如此美丽。&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Life" /><summary type="html"></summary></entry><entry><title type="html">关于JS中, 对引用类型console出现偏差的问题分析</title><link href="https://bran-nie.github.io/2020/04/15/console/" rel="alternate" type="text/html" title="关于JS中, 对引用类型console出现偏差的问题分析" /><published>2020-04-15T00:00:00+08:00</published><updated>2020-04-15T00:00:00+08:00</updated><id>https://bran-nie.github.io/2020/04/15/console</id><content type="html" xml:base="https://bran-nie.github.io/2020/04/15/console/">&lt;blockquote&gt;
+&lt;p&gt;哦，这多彩斑斓的世界，竟如此美丽。&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Life" /><summary type="html"></summary></entry><entry><title type="html">关于JS中, 对引用类型console出现偏差的问题分析</title><link href="https://bran-nie.com/2020/04/15/console/" rel="alternate" type="text/html" title="关于JS中, 对引用类型console出现偏差的问题分析" /><published>2020-04-15T00:00:00+08:00</published><updated>2020-04-15T00:00:00+08:00</updated><id>https://bran-nie.com/2020/04/15/console</id><content type="html" xml:base="https://bran-nie.com/2020/04/15/console/">&lt;blockquote&gt;
   &lt;p&gt;key 引用类型 内存 同步执行 console.log&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -579,7 +579,7 @@ html 的结构如下，img 标签，自定义 data 放置图片的 src，设置 
 
 &lt;p&gt;在使用断点后, 第一次打印的数据, 展开后是 push 操作前的值, 代码块执行完后, 再次展开还是一个元素.&lt;/p&gt;
 
-&lt;p&gt;上面两种方式, 说明了 console 操作对于引用类型, 是有两次读取的. 第二次来自首次展开对象.&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Javascript" /><summary type="html">key 引用类型 内存 同步执行 console.log</summary></entry><entry><title type="html">Git Pull-Request 一种名为PR的项目管理方式</title><link href="https://bran-nie.github.io/2020/02/28/github-PR/" rel="alternate" type="text/html" title="Git Pull-Request 一种名为PR的项目管理方式" /><published>2020-02-28T00:00:00+08:00</published><updated>2020-02-28T00:00:00+08:00</updated><id>https://bran-nie.github.io/2020/02/28/github-PR</id><content type="html" xml:base="https://bran-nie.github.io/2020/02/28/github-PR/">&lt;h2 id=&quot;hey-出现&quot;&gt;hey 出现&lt;/h2&gt;
+&lt;p&gt;上面两种方式, 说明了 console 操作对于引用类型, 是有两次读取的. 第二次来自首次展开对象.&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Javascript" /><summary type="html">key 引用类型 内存 同步执行 console.log</summary></entry><entry><title type="html">Git Pull-Request 一种名为PR的项目管理方式</title><link href="https://bran-nie.com/2020/02/28/github-PR/" rel="alternate" type="text/html" title="Git Pull-Request 一种名为PR的项目管理方式" /><published>2020-02-28T00:00:00+08:00</published><updated>2020-02-28T00:00:00+08:00</updated><id>https://bran-nie.com/2020/02/28/github-PR</id><content type="html" xml:base="https://bran-nie.com/2020/02/28/github-PR/">&lt;h2 id=&quot;hey-出现&quot;&gt;hey 出现&lt;/h2&gt;
 
 &lt;p&gt;广为人知的&lt;a href=&quot;https://github.com/&quot;&gt;同性交友网站&lt;/a&gt;的一大特色就是 Pull-Request 功能, 简称 PR. 这也是开源的重要功能之一。&lt;/p&gt;
 
@@ -682,7 +682,7 @@ git merge bran/master
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;待后续使用补充…&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Tutorials" /><summary type="html">hey 出现</summary></entry><entry><title type="html">初步了解Docker及其使用（一）</title><link href="https://bran-nie.github.io/2019/07/16/docker/" rel="alternate" type="text/html" title="初步了解Docker及其使用（一）" /><published>2019-07-16T00:00:00+08:00</published><updated>2019-07-16T00:00:00+08:00</updated><id>https://bran-nie.github.io/2019/07/16/docker</id><content type="html" xml:base="https://bran-nie.github.io/2019/07/16/docker/">&lt;blockquote&gt;
+&lt;p&gt;待后续使用补充…&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Tutorials" /><summary type="html">hey 出现</summary></entry><entry><title type="html">初步了解Docker及其使用（一）</title><link href="https://bran-nie.com/2019/07/16/docker/" rel="alternate" type="text/html" title="初步了解Docker及其使用（一）" /><published>2019-07-16T00:00:00+08:00</published><updated>2019-07-16T00:00:00+08:00</updated><id>https://bran-nie.com/2019/07/16/docker</id><content type="html" xml:base="https://bran-nie.com/2019/07/16/docker/">&lt;blockquote&gt;
   &lt;p&gt;记录初步了解 Docker 是什么，它的来源与应用。&lt;/p&gt;
 &lt;/blockquote&gt;
 

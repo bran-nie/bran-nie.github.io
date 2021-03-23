@@ -1,1 +1,1 @@
-Sitemap: https://bran-nie.github.io/sitemap.xml
+Sitemap: https://bran-nie.com/sitemap.xml

@@ -5,7 +5,7 @@
   
     {
       "title"    : "页面没有找到",
-      "url"      : "https://bran-nie.github.io/404.html",
+      "url"      : "https://bran-nie.com/404.html",
       "keywords" : "404"
     } ,
   
@@ -13,7 +13,7 @@
   
     {
       "title"    : "About",
-      "url"      : "https://bran-nie.github.io/about/",
+      "url"      : "https://bran-nie.com/about/",
       "keywords" : "Zhuang Ma, 马壮"
     } ,
   
@@ -21,7 +21,7 @@
   
     {
       "title"    : "归档",
-      "url"      : "https://bran-nie.github.io/archives/",
+      "url"      : "https://bran-nie.com/archives/",
       "keywords" : "归档"
     } ,
   
@@ -29,7 +29,7 @@
   
     {
       "title"    : "Categories",
-      "url"      : "https://bran-nie.github.io/categories/",
+      "url"      : "https://bran-nie.com/categories/",
       "keywords" : "分类"
     } ,
   
@@ -39,7 +39,7 @@
   
     {
       "title"    : "Links",
-      "url"      : "https://bran-nie.github.io/links/",
+      "url"      : "https://bran-nie.com/links/",
       "keywords" : "友情链接"
     } ,
   
@@ -47,7 +47,7 @@
   
     {
       "title"    : "mindmap",
-      "url"      : "https://bran-nie.github.io/mindmap-viewer/",
+      "url"      : "https://bran-nie.com/mindmap-viewer/",
       "keywords" : "mindmap"
     } ,
   
@@ -55,7 +55,7 @@
   
     {
       "title"    : "Open Source Projects",
-      "url"      : "https://bran-nie.github.io/open-source/",
+      "url"      : "https://bran-nie.com/open-source/",
       "keywords" : "开源,open-source,GitHub,开源项目"
     } ,
   
@@ -65,7 +65,7 @@
   
     {
       "title"    : "Wiki",
-      "url"      : "https://bran-nie.github.io/wiki/",
+      "url"      : "https://bran-nie.com/wiki/",
       "keywords" : "维基, Wiki"
     } ,
   
@@ -88,7 +88,7 @@
       "title"    : "Fcc --- steamrollArray",
       "category" : "Algorithm",
       
-      "url"      : "https://bran-nie.github.io/2016/12/05/fcc-steamroller/",
+      "url"      : "https://bran-nie.com/2016/12/05/fcc-steamroller/",
       "keywords" : "keyword1, keyword2"
     } ,
   
@@ -96,7 +96,7 @@
       "title"    : "Github 的注册与使用教程以及github page (一)",
       "category" : "Tutorials",
       
-      "url"      : "https://bran-nie.github.io/2016/12/08/github-page-1/",
+      "url"      : "https://bran-nie.com/2016/12/08/github-page-1/",
       "keywords" : "Github page"
     } ,
   
@@ -104,7 +104,7 @@
       "title"    : "一次晚归夜宿与早起日出",
       "category" : "Life",
       
-      "url"      : "https://bran-nie.github.io/2016/12/12/night/",
+      "url"      : "https://bran-nie.com/2016/12/12/night/",
       "keywords" : ""
     } ,
   
@@ -112,7 +112,7 @@
       "title"    : "Github 的注册与使用教程以及github page (二)",
       "category" : "Tutorials",
       
-      "url"      : "https://bran-nie.github.io/2016/12/18/github-page-2/",
+      "url"      : "https://bran-nie.com/2016/12/18/github-page-2/",
       "keywords" : "Github page"
     } ,
   
@@ -120,7 +120,7 @@
       "title"    : "css3 一些样式",
       "category" : "Css",
       
-      "url"      : "https://bran-nie.github.io/2016/12/19/css/",
+      "url"      : "https://bran-nie.com/2016/12/19/css/",
       "keywords" : ""
     } ,
   
@@ -128,7 +128,7 @@
       "title"    : "phantomjs———刷IFE琐记",
       "category" : "Tutorials",
       
-      "url"      : "https://bran-nie.github.io/2017/03/04/ife-phantomjs/",
+      "url"      : "https://bran-nie.com/2017/03/04/ife-phantomjs/",
       "keywords" : "ife, phantomjs"
     } ,
   
@@ -136,7 +136,7 @@
       "title"    : "360浏览器、QQ浏览器等 &lt;meta&gt; 标签选择webkit内核问题",
       "category" : "Tutorials",
       
-      "url"      : "https://bran-nie.github.io/2017/05/05/brower_meta/",
+      "url"      : "https://bran-nie.com/2017/05/05/brower_meta/",
       "keywords" : ""
     } ,
   
@@ -144,7 +144,7 @@
       "title"    : "简单开启Mac下的服务器",
       "category" : "Tutorials",
       
-      "url"      : "https://bran-nie.github.io/2018/08/02/mac-server/",
+      "url"      : "https://bran-nie.com/2018/08/02/mac-server/",
       "keywords" : "Mac 终端 本地服务器"
     } ,
   
@@ -152,7 +152,7 @@
       "title"    : "ES6 --- Promise(简介)",
       "category" : "Javascript",
       
-      "url"      : "https://bran-nie.github.io/2018/08/07/promise/",
+      "url"      : "https://bran-nie.com/2018/08/07/promise/",
       "keywords" : ""
     } ,
   
@@ -160,7 +160,7 @@
       "title"    : "如何自然入睡",
       "category" : "Life",
       
-      "url"      : "https://bran-nie.github.io/2018/08/13/easy-to-sleep/",
+      "url"      : "https://bran-nie.com/2018/08/13/easy-to-sleep/",
       "keywords" : ""
     } ,
   
@@ -168,7 +168,7 @@
       "title"    : "Linux命令- - - scp 服务器间传输，基于ssh",
       "category" : "Tutorials",
       
-      "url"      : "https://bran-nie.github.io/2018/09/18/commands-scp/",
+      "url"      : "https://bran-nie.com/2018/09/18/commands-scp/",
       "keywords" : "Mac scp Linux 文件传输 服务器"
     } ,
   
@@ -176,7 +176,7 @@
       "title"    : "查找范围内的素数 - 埃拉托斯特尼筛法",
       "category" : "Algorithm",
       
-      "url"      : "https://bran-nie.github.io/2018/11/08/primes/",
+      "url"      : "https://bran-nie.com/2018/11/08/primes/",
       "keywords" : "primes"
     } ,
   
@@ -184,7 +184,7 @@
       "title"    : "分析比较opacity:0、visibility:hidden、display:none的区别、优劣及适用场景",
       "category" : "Css",
       
-      "url"      : "https://bran-nie.github.io/2019/04/18/css/",
+      "url"      : "https://bran-nie.com/2019/04/18/css/",
       "keywords" : ""
     } ,
   
@@ -192,7 +192,7 @@
       "title"    : "商品规格选择sku --- Vue版",
       "category" : "Javascript",
       
-      "url"      : "https://bran-nie.github.io/2019/05/07/sku/",
+      "url"      : "https://bran-nie.com/2019/05/07/sku/",
       "keywords" : ""
     } ,
   
@@ -200,7 +200,7 @@
       "title"    : "两个链表相加",
       "category" : "Algorithm",
       
-      "url"      : "https://bran-nie.github.io/2019/05/23/two-linklist-add/",
+      "url"      : "https://bran-nie.com/2019/05/23/two-linklist-add/",
       "keywords" : "LinkList"
     } ,
   
@@ -208,7 +208,7 @@
       "title"    : "初步了解Docker及其使用（一）",
       "category" : "Tool",
       
-      "url"      : "https://bran-nie.github.io/2019/07/16/docker/",
+      "url"      : "https://bran-nie.com/2019/07/16/docker/",
       "keywords" : "Tool, docker"
     } ,
   
@@ -216,7 +216,7 @@
       "title"    : "Git Pull-Request 一种名为PR的项目管理方式",
       "category" : "Tutorials",
       
-      "url"      : "https://bran-nie.github.io/2020/02/28/github-PR/",
+      "url"      : "https://bran-nie.com/2020/02/28/github-PR/",
       "keywords" : "Github flow, PR"
     } ,
   
@@ -224,7 +224,7 @@
       "title"    : "经济萧条下的消费",
       "category" : "Life",
       
-      "url"      : "https://bran-nie.github.io/2020/04/15/think/",
+      "url"      : "https://bran-nie.com/2020/04/15/think/",
       "keywords" : ""
     } ,
   
@@ -232,7 +232,7 @@
       "title"    : "关于JS中, 对引用类型console出现偏差的问题分析",
       "category" : "Javascript",
       
-      "url"      : "https://bran-nie.github.io/2020/04/15/console/",
+      "url"      : "https://bran-nie.com/2020/04/15/console/",
       "keywords" : ""
     } ,
   
@@ -240,7 +240,7 @@
       "title"    : "CSS counter 计数",
       "category" : "Css",
       
-      "url"      : "https://bran-nie.github.io/2020/12/17/css-counter/",
+      "url"      : "https://bran-nie.com/2020/12/17/css-counter/",
       "keywords" : ""
     } ,
   
@@ -248,7 +248,7 @@
       "title"    : "使用 css自定义属性（css变量），配合 js 更新 css，实现星星打分~",
       "category" : "Css",
       
-      "url"      : "https://bran-nie.github.io/2020/12/18/css-variable/",
+      "url"      : "https://bran-nie.com/2020/12/18/css-variable/",
       "keywords" : ""
     } ,
   
@@ -256,7 +256,7 @@
       "title"    : "CSS 滚动条样式",
       "category" : "Css",
       
-      "url"      : "https://bran-nie.github.io/2021/01/14/scrollbar/",
+      "url"      : "https://bran-nie.com/2021/01/14/scrollbar/",
       "keywords" : ""
     } ,
   
@@ -264,7 +264,7 @@
       "title"    : "PicGo 一款优秀的图床",
       "category" : "Tutorials",
       
-      "url"      : "https://bran-nie.github.io/2021/03/15/PicGo/",
+      "url"      : "https://bran-nie.com/2021/03/15/PicGo/",
       "keywords" : "PicGo, 图床"
     } ,
   
@@ -272,7 +272,7 @@
       "title"    : "抛开 Scroll 事件，这个 API，可以轻松实现吸顶、触底、懒加载",
       "category" : "Javascript",
       
-      "url"      : "https://bran-nie.github.io/2021/03/18/IntersectionObserver/",
+      "url"      : "https://bran-nie.com/2021/03/18/IntersectionObserver/",
       "keywords" : ""
     } ,
   
@@ -280,7 +280,7 @@
       "title"    : "小飞机工作原理",
       "category" : "Blog",
       
-      "url"      : "https://bran-nie.github.io/2021/03/22/ss/",
+      "url"      : "https://bran-nie.com/2021/03/22/ss/",
       "keywords" : ""
     } ,
   
@@ -288,7 +288,7 @@
       "title"    : "Markdown",
       "category" : "Markdown",
       
-      "url"      : "https://bran-nie.github.io/wiki/markdown/",
+      "url"      : "https://bran-nie.com/wiki/markdown/",
       "keywords" : "Markdown"
     } 
   
