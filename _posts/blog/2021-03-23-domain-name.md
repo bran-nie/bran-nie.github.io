@@ -14,7 +14,7 @@ description: '域名，GitHub Page'
 
 ## 购买域名
 
-域名注册服务商有不少，你可以依据自己喜爱选择一个即可。我是今天看到 <a href="https://www.dnspod.cn/promo/domainscarnival?promo_code=G2LSXI22380&from=fugongdacu" target="_blank">腾讯云的复工大促活动</a> ，再加上之前一些云服务也是用的他们的，所以就选择了这个服务商。
+域名注册服务商有不少，你可以依据自己喜爱选择一个即可。我是今天看到 <a href="https://www.dnspod.cn/promo/domainscarnival?promo_code=G2LSXI22380&source=sharelink&from=link" target="_blank">腾讯云的复工大促活动</a> ，再加上之前一些云服务也是用的他们的，所以就选择了这个服务商。
 
 至于其他的域名服务商，也都大同小异，这里说几个熟悉的平台：<a href='https://sg.godaddy.com/' target='_blank'>Godaddy</a>，<a href='https://wanwang.aliyun.com/domain/' target='_blank'>阿里云</a>，<a href='https://dnspod.cloud.tencent.com/' target='_blank'>腾讯云</a>。
 
