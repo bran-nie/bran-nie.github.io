@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-03-24T15:02:00+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">博客由 username.github.io 转为自定义域名</title><link href="https://bran-nie.com/2021/03/23/domain-name/" rel="alternate" type="text/html" title="博客由 username.github.io 转为自定义域名" /><published>2021-03-23T00:00:00+08:00</published><updated>2021-03-23T00:00:00+08:00</updated><id>https://bran-nie.com/2021/03/23/domain-name</id><content type="html" xml:base="https://bran-nie.com/2021/03/23/domain-name/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-03-24T17:14:55+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">博客由 username.github.io 转为自定义域名</title><link href="https://bran-nie.com/2021/03/23/domain-name/" rel="alternate" type="text/html" title="博客由 username.github.io 转为自定义域名" /><published>2021-03-23T00:00:00+08:00</published><updated>2021-03-23T00:00:00+08:00</updated><id>https://bran-nie.com/2021/03/23/domain-name</id><content type="html" xml:base="https://bran-nie.com/2021/03/23/domain-name/">&lt;blockquote&gt;
   &lt;p&gt;发现在国内，username.github.io 不能解析，了解一下是运营商的 DNS 问题。科学上网和通过本地修改 DNS 可以解决，但这只是针对个人，对其他人一点也不友好。而自定义域名可以完美的解决这个问题，再者，GitHub Page 也是很完美的支持自定义域名。&lt;/p&gt;
 
   &lt;p&gt;故今早打算购买一个域名用作博客，HTTPS 也是要考虑的。看了一些服务商，最后选择了腾讯云，花半个小时左右完美的解决需求。&lt;strong&gt;且为了培养写博客的习惯，便记录一下这个流程，也供同道中人参考使用。&lt;/strong&gt;&lt;/p&gt;
@@ -55,12 +55,16 @@
   &lt;li&gt;
     &lt;p&gt;这个文件里面就写上你自己的域名，如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bran-nie.com&lt;/code&gt;，不要 http、https 等这些协议。&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;随后，你在项目仓库的 Setting 中，就能看到类似我的这样的信息。
+  &lt;li&gt;随后，你在项目仓库的 Setting 中，就能看到类似我的这样的信息。&lt;strong&gt;如果自定义域名还没有添加证书，则这里的 HTTPS 是不能勾选的&lt;/strong&gt;
 &lt;img src=&quot;/images/blog/domain_4.png&quot; alt=&quot;&quot; /&gt;
 说明已经 OK 了&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;修改博客配置文件&quot;&gt;修改博客配置文件&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;这一步是针对 Jekyll 用户的，其他方式的可以忽略&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;这里我踩了一个坑。修改过自定义域名后，把配置&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\_config.yml&lt;/code&gt;中的 url 属性忘记修改成申请的域名了，因此导致博客网站的链接都还是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bran-nie.github.io/xxx&lt;/code&gt;，实际上国内还是访问不到。&lt;/p&gt;
 
@@ -77,6 +81,10 @@
 
 &lt;p&gt;再或者，可以在域名控制台，找到证书相关的菜单，申请证书即可。如图：
 &lt;img src=&quot;/images/blog/domain_6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;申请好证书后，是会进入审核阶段，大概半小时？审核成功后会发短信邮件等通知。&lt;/p&gt;
+
+&lt;p&gt;当审核通过后，最后一步，是去 GitHub page 所在的仓库，在设置中勾选 HTTPS 选项，这时候，你的博客就是 https 协议访问啦～&lt;/p&gt;
 
 &lt;h2 id=&quot;最后&quot;&gt;最后&lt;/h2&gt;
 
