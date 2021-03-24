@@ -46,11 +46,13 @@ description: '域名，GitHub Page'
       ![](/images/blog/domain_5.png)
 2. 这个文件里面就写上你自己的域名，如 `bran-nie.com`，不要 http、https 等这些协议。
 
-3. 随后，你在项目仓库的 Setting 中，就能看到类似我的这样的信息。
+3. 随后，你在项目仓库的 Setting 中，就能看到类似我的这样的信息。**如果自定义域名还没有添加证书，则这里的 HTTPS 是不能勾选的**
    ![](/images/blog/domain_4.png)
    说明已经 OK 了
 
 ## 修改博客配置文件
+
+> 这一步是针对 Jekyll 用户的，其他方式的可以忽略
 
 这里我踩了一个坑。修改过自定义域名后，把配置`\_config.yml`中的 url 属性忘记修改成申请的域名了，因此导致博客网站的链接都还是 `bran-nie.github.io/xxx`，实际上国内还是访问不到。
 
@@ -67,6 +69,10 @@ description: '域名，GitHub Page'
 
 再或者，可以在域名控制台，找到证书相关的菜单，申请证书即可。如图：
 ![](/images/blog/domain_6.png)
+
+申请好证书后，是会进入审核阶段，大概半小时？审核成功后会发短信邮件等通知。
+
+当审核通过后，最后一步，是去 GitHub page 所在的仓库，在设置中勾选 HTTPS 选项，这时候，你的博客就是 https 协议访问啦～
 
 ## 最后
 
