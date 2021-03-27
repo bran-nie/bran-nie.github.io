@@ -293,6 +293,30 @@
     } ,
   
     {
+      "title"    : "排序算法简单分析系列 - - 冒泡排序",
+      "category" : "Algorithm",
+      
+      "url"      : "https://bran-nie.com/2021/03/27/bubbleSort/",
+      "keywords" : "排序算法, 冒泡排序, 排序算法简单分析系列 - - 冒泡排序"
+    } ,
+  
+    {
+      "title"    : "排序算法简单分析系列 - - 快速排序",
+      "category" : "Algorithm",
+      
+      "url"      : "https://bran-nie.com/2021/03/27/quickSort/",
+      "keywords" : "排序算法, 快速排序, 排序算法简单分析系列 - - 快速排序"
+    } ,
+  
+    {
+      "title"    : "排序算法简单分析系列 - - 选择排序",
+      "category" : "Algorithm",
+      
+      "url"      : "https://bran-nie.com/2021/03/27/selectSort/",
+      "keywords" : "排序算法, 选择排序, 排序算法简单分析系列 - - 选择排序"
+    } ,
+  
+    {
       "title"    : "Markdown",
       "category" : "Markdown",
       
