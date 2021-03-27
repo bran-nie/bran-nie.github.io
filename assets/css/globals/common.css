@@ -607,8 +607,15 @@ body {
     border: 0;
 }
 
+.markdown-body div.highlight {
+    padding: 42px 0px 20px;
+    pointer-events: none;
+}
 .markdown-body .highlight {
     margin-bottom: 16px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .markdown-body .highlight pre,
@@ -617,6 +624,8 @@ body {
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
+    border: none;
+    pointer-events: auto;
     /* background-color: #f7f7f7; */
     /* border-radius: 3px */
 }
@@ -624,10 +633,35 @@ body {
 .markdown-body .highlight pre {
     margin-bottom: 0;
     word-break: normal;
+    position: relative;
+    padding: 0px 38px;
 }
 
 .markdown-body pre {
     word-wrap: normal;
+}
+
+/* mac 风格的样式 */
+.markdown-body div.highlight::before {
+    content: '';
+    position: absolute;
+    /* border-radius: 50%; */
+    /* background: #fc625d; */
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDU0IDE0Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMSkiPjxjaXJjbGUgY3g9IjYiIGN5PSI2IiByPSI2IiBmaWxsPSIjRkY1RjU2IiBzdHJva2U9IiNFMDQ0M0UiIHN0cm9rZS13aWR0aD0iLjUiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjI2IiBjeT0iNiIgcj0iNiIgZmlsbD0iI0ZGQkQyRSIgc3Ryb2tlPSIjREVBMTIzIiBzdHJva2Utd2lkdGg9Ii41Ij48L2NpcmNsZT48Y2lyY2xlIGN4PSI0NiIgY3k9IjYiIHI9IjYiIGZpbGw9IiMyN0M5M0YiIHN0cm9rZT0iIzFBQUIyOSIgc3Ryb2tlLXdpZHRoPSIuNSI+PC9jaXJjbGU+PC9nPjwvc3ZnPg==)
+        no-repeat;
+    width: 54px;
+    height: 14px;
+    left: 16px;
+    display: block;
+    top: 18px;
+    /* -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b; */
+    /* box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b; */
+    z-index: 2;
+    pointer-events: auto;
+}
+
+.markdown-body .highlight::-webkit-scrollbar {
+    display: none;
 }
 
 .markdown-body pre code,
