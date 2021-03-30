@@ -36,7 +36,7 @@ jQuery(function () {
     toTop();
 });
 
-(function imageLazyLoad() {
+function imageLazyLoad() {
     console.log('images lazyload~');
     const images = document.querySelectorAll('img.lazyload');
 
@@ -58,4 +58,12 @@ jQuery(function () {
     );
 
     images.forEach((img) => imgObserver.observe(img));
+}
+
+(function () {
+    // 图片懒加载功能
+    imageLazyLoad();
+
+    // 代码块全屏功能
+    // codeFullScroll()
 })();

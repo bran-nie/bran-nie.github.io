@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-03-30T13:24:33+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">排序算法简单分析系列 - - 冒泡排序</title><link href="https://bran-nie.com/2021/03/27/bubbleSort/" rel="alternate" type="text/html" title="排序算法简单分析系列 - - 冒泡排序" /><published>2021-03-27T00:00:00+08:00</published><updated>2021-03-27T00:00:00+08:00</updated><id>https://bran-nie.com/2021/03/27/bubbleSort</id><content type="html" xml:base="https://bran-nie.com/2021/03/27/bubbleSort/">&lt;h2 id=&quot;基本思想&quot;&gt;基本思想&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-03-30T22:23:58+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html"></title><link href="https://bran-nie.com/2021/03/30/2021-03-30-create-commands/" rel="alternate" type="text/html" title="" /><published>2021-03-30T22:23:58+08:00</published><updated>2021-03-30T22:23:58+08:00</updated><id>https://bran-nie.com/2021/03/30/2021-03-30-create-commands</id><content type="html" xml:base="https://bran-nie.com/2021/03/30/2021-03-30-create-commands/">&lt;h2 id=&quot;待补充&quot;&gt;待补充&lt;/h2&gt;</content><author><name>Bran.nie</name></author></entry><entry><title type="html">排序算法简单分析系列 - - 冒泡排序</title><link href="https://bran-nie.com/2021/03/27/bubbleSort/" rel="alternate" type="text/html" title="排序算法简单分析系列 - - 冒泡排序" /><published>2021-03-27T00:00:00+08:00</published><updated>2021-03-27T00:00:00+08:00</updated><id>https://bran-nie.com/2021/03/27/bubbleSort</id><content type="html" xml:base="https://bran-nie.com/2021/03/27/bubbleSort/">&lt;h2 id=&quot;基本思想&quot;&gt;基本思想&lt;/h2&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;首先这个排序的名字就比较形象，因此会比较容易理解。冒泡，气泡从水底往上漂浮，而重的石块会从水面向下沉。&lt;/p&gt;
@@ -815,56 +815,4 @@ html 的结构如下，img 标签，自定义 data 放置图片的 src，设置 
   &lt;li&gt;A：利用 input[type=”range”]也可以实现。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;感谢sunseekers的知识分享&quot;&gt;感谢&lt;a href=&quot;https://github.com/sunseekers&quot;&gt;sunseekers&lt;/a&gt;的知识分享。&lt;/h2&gt;</content><author><name>Bran.nie</name></author><category term="Css" /><summary type="html"></summary></entry><entry><title type="html">CSS counter 计数</title><link href="https://bran-nie.com/2020/12/17/css-counter/" rel="alternate" type="text/html" title="CSS counter 计数" /><published>2020-12-17T00:00:00+08:00</published><updated>2020-12-17T00:00:00+08:00</updated><id>https://bran-nie.com/2020/12/17/css%20counter</id><content type="html" xml:base="https://bran-nie.com/2020/12/17/css-counter/">&lt;blockquote&gt;
-  &lt;p&gt;本质上 CSS 计数器是由 CSS 维护的变量，这些变量可能根据 CSS 规则增加以跟踪使用次数。这允许你根据文档位置来调整内容表现。&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Counters&quot;&gt;CSS 计数器&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;计数器&quot;&gt;计数器&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;创建一个 counters：&lt;/strong&gt; 在父元素或更高层中声明一个变量。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counter-reset: ${counter-name} ${value}&lt;/code&gt;， value 必须是 integer 类型，否则为默认值 0.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;控制 counters 的值变化：&lt;/strong&gt; 在需要计数的元素中，使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cunter-increment&lt;/code&gt;或者&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counter-set&lt;/code&gt;来控制 counters 的变化。
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;counter-name&amp;gt;?&amp;lt;integer&amp;gt;&lt;/code&gt;，integer 默认值，使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counter-increment: &lt;/code&gt;时是 1， 使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counter-set&lt;/code&gt;时是 0。&lt;/li&gt;
-      &lt;li&gt;如果元素上当前没有给定名称的计数器，则该元素会在设置或递增其值之前使用起始值 0 实例化给定名称的新计数器。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;使用 counters&lt;/strong&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counter()&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counters()&lt;/code&gt;函数是返回 counter 的方式。
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counter(name, counter-type?)&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;counters(name, string, counter-type?)&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;counter-type 默认是十进制 （decimal）&lt;/li&gt;
-      &lt;li&gt;尽管这两个函数可以在大多数 css 属性里使用，但推荐在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;content&lt;/code&gt;里使用&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;for-example&quot;&gt;For example&lt;/h3&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nl&quot;&gt;list-style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;nl&quot;&gt;counter-reset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;::before&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nl&quot;&gt;counter-increment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;nl&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;'. '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;counter，设置的变量是 hello 初始值是3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;在li的before中，每次递增的是3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;在li的before伪元素content属性中，调用 counter 函数，&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;因为调用过后，变量hello的值就会改变，所以第一个li的 编号就是初始值+递增值。即6&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;demo-预览&quot;&gt;&lt;a href=&quot;https://bran-nie.com/Note/css/counters/&quot;&gt;Demo 预览&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;应用&quot;&gt;应用&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;目录&lt;/li&gt;
-  &lt;li&gt;计数&lt;/li&gt;
-  &lt;li&gt;循环赋值&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Bran.nie</name></author><category term="Css" /><summary type="html">本质上 CSS 计数器是由 CSS 维护的变量，这些变量可能根据 CSS 规则增加以跟踪使用次数。这允许你根据文档位置来调整内容表现。CSS 计数器</summary></entry></feed>
+&lt;h2 id=&quot;感谢sunseekers的知识分享&quot;&gt;感谢&lt;a href=&quot;https://github.com/sunseekers&quot;&gt;sunseekers&lt;/a&gt;的知识分享。&lt;/h2&gt;</content><author><name>Bran.nie</name></author><category term="Css" /><summary type="html"></summary></entry></feed>
