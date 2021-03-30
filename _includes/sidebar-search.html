@@ -7,13 +7,17 @@
 
 <script src="{{ assets_base_url }}/assets/js/simple-jekyll-search.min.js"></script>
 
+{% assign buildNow = "now" | date: "%s" %} {% if site.cdn.jsdelivr.enabled and site.url contains 'bran-nie' %} {% assign
+json_url = 'https://cdn.jsdelivr.net/gh/bran-nie/bran-nie.github.io@built/assets/search_data.json?v=' | append: buildNow
+%} {% else %} {% assign json_url = '' | append: site.url | append: '/assets/search_data.json' %} {% endif %}
+
 <script type="text/javascript">
     var searchLimit = Number('{{ site.simple_jekyll_search.limit | default: 10 }}');
     searchLimit = typeof searchLimit === 'number' ? searchLimit : 8;
     SimpleJekyllSearch({
         searchInput: document.getElementById('search_box'),
         resultsContainer: document.getElementById('search_results'),
-        json: '{{ site.url }}/assets/search_data.json',
+        json: '{{ json_url }}',
         searchResultTemplate: '<li><a href="{url}" title="{title}">{title}</a></li>',
         noResultsText: 'No results found',
         limit: searchLimit,
