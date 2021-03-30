@@ -1,0 +1,16 @@
+{
+    "name": "bran-command",
+    "version": "1.0.0",
+    "author": "bran-nie",
+    "bin": {
+        "bran": "bin/index.js"
+    },
+    "description": "通过 Node 服务，用命令的方式新建博客文章。",
+    "scripts": {
+        "start": "bundle exec jekyll serve"
+    },
+    "dependencies": {
+        "commander": "^7.2.0",
+        "chalk": "^4.1.0"
+    }
+}
