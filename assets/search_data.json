@@ -317,11 +317,11 @@
     } ,
   
     {
-      "title"    : "",
-      "category" : "",
+      "title"    : "创建一个属于你的命令",
+      "category" : "Blog",
       
-      "url"      : "https://bran-nie.com/2021/03/30/2021-03-30-create-commands/",
-      "keywords" : ""
+      "url"      : "https://bran-nie.com/2021/03/30/create-commands/",
+      "keywords" : "创建一个属于你的命令, &#39;commander.js&#39;, &#39;node.js&#39;"
     } ,
   
     {
