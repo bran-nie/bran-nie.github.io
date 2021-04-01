@@ -52,7 +52,7 @@ const quickPart = (arr, startIndex, endIndex) => {
     while (left < right) {
         // 从右边查找第一个小于基准元素的值
         // debugger;
-        while (left < right && arr[right] > pivot) right--;
+        while (left < right && arr[right] >= pivot) right--;
         // 从左边查找第一个大于基准元素的值，
         while (left < right && arr[left] <= pivot) left++;
 
