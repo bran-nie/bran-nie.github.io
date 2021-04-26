@@ -36,7 +36,7 @@ $: yarn bran new [layout] --path blog <filename> [title]
 
 ![](/images/blog/create-commands_1.png)
 
-![](/images/images/blog/create-commands_2.png)
+![](/images/blog/create-commands_2.png)
 
 ## 功能拆分与规划
 
