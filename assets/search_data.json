@@ -82,6 +82,8 @@
   
   
   
+  
+  
 
   
     {
@@ -322,6 +324,14 @@
       
       "url"      : "https://bran-nie.com/2021/03/30/create-commands/",
       "keywords" : "创建一个属于你的命令, &#39;commander.js&#39;, &#39;node.js&#39;"
+    } ,
+  
+    {
+      "title"    : "从 LazyMan 需求再次了解队列这种数据结构",
+      "category" : "Javascript",
+      
+      "url"      : "https://bran-nie.com/2021/04/12/lazyman/",
+      "keywords" : "队列, &#39;从 LazyMan 需求再次了解队列这种数据结构&#39;"
     } ,
   
     {
