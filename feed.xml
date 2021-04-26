@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-04-26T14:49:22+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">从 LazyMan 需求再次了解队列这种数据结构</title><link href="https://bran-nie.com/2021/04/12/lazyman/" rel="alternate" type="text/html" title="从 LazyMan 需求再次了解队列这种数据结构" /><published>2021-04-12T00:00:00+08:00</published><updated>2021-04-12T00:00:00+08:00</updated><id>https://bran-nie.com/2021/04/12/lazyman</id><content type="html" xml:base="https://bran-nie.com/2021/04/12/lazyman/">&lt;p&gt;趣味解读，实现一个 LazyMan，可以链式调用，它有&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sleep(time)&lt;/code&gt;方法，可以等待指定时间后，再继续执行后续的调用。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-04-26T18:18:15+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">从 LazyMan 需求再次了解队列这种数据结构</title><link href="https://bran-nie.com/2021/04/12/lazyman/" rel="alternate" type="text/html" title="从 LazyMan 需求再次了解队列这种数据结构" /><published>2021-04-12T00:00:00+08:00</published><updated>2021-04-12T00:00:00+08:00</updated><id>https://bran-nie.com/2021/04/12/lazyman</id><content type="html" xml:base="https://bran-nie.com/2021/04/12/lazyman/">&lt;p&gt;趣味解读，实现一个 LazyMan，可以链式调用，它有&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sleep(time)&lt;/code&gt;方法，可以等待指定时间后，再继续执行后续的调用。&lt;/p&gt;
 
 &lt;h2 id=&quot;lazyman-的分析&quot;&gt;LazyMan 的分析&lt;/h2&gt;
 
@@ -165,9 +165,9 @@
 
 &lt;p&gt;命令参数描述如下图所示：「之前在草稿纸上写的参数描述不见了，这是写好后的命令 help 文档」&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/bran-nie/bran-nie.github.io/images/images/blog/create-commands_1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/images/blog/create-commands_1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/bran-nie/bran-nie.github.io/images/images/blog/create-commands_2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/images/blog/create-commands_2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;功能拆分与规划&quot;&gt;功能拆分与规划&lt;/h2&gt;
 
