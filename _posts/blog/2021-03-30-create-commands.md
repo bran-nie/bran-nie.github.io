@@ -34,7 +34,7 @@ $: yarn bran new [layout] --path blog <filename> [title]
 
 命令参数描述如下图所示：「之前在草稿纸上写的参数描述不见了，这是写好后的命令 help 文档」
 
-![](/images/images/blog/create-commands_1.png)
+![](/images/blog/create-commands_1.png)
 
 ![](/images/images/blog/create-commands_2.png)
 
