@@ -11,7 +11,6 @@ const { log } = require('console');
 const { red, green, yellow, cyanBright, redBright } = chalk;
 
 // log(green('命令详细说明：(若全局安装)bran help new 或 yarn/npm bran help new  '));
-// log(red('red'), green('green'), yellow('yellow'), cyanBright('cyanBright'));
 
 // 1. 解析命令
 // 2. 符合标准 - N 打印帮助信息，退出。
@@ -39,11 +38,13 @@ const newPost = program
         title: 'post title',
     })
     .action((filename, title, options) => {
-        // log({ filename, title }, '\n');
-        // log(options);
+        // layout 和 replace 是有默认值的
         const { layout, path, replace } = options;
         createFile(layout, path, filename, title, replace);
     });
+
+// 命令工具的实例，处理参数，这个 parse 方法的默认参数是 process.argv。
+program.parse();
 
 /**
  * 创建文件
@@ -98,12 +99,15 @@ function getRandomMotto() {
 
     return mottos[getRandomNum(0, mottos.length - 1)];
 }
-
+/**
+ *
+ * @param {string} layout 模板文件
+ * @returns string
+ */
 function readLayoutFile(layout) {
     try {
         const buffer = fs.readFileSync(`./_scaffolds/${layout}.md`);
         const str = buffer.toString('utf-8', 0);
-        // log(str);
         return str;
     } catch (error) {
         logError(error);
@@ -115,7 +119,3 @@ function logError(error) {
     log(yellow(`该路径 ${redBright(error.path)} 不存在，请输入正确的路径，或者先创建好文件夹再输入～\n\n`));
     exit();
 }
-
-program.parse();
-
-// await createFile()
