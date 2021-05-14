@@ -1,4 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-05-10T10:15:20+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">从 LazyMan 需求再次了解队列这种数据结构</title><link href="https://bran-nie.com/2021/04/12/lazyman/" rel="alternate" type="text/html" title="从 LazyMan 需求再次了解队列这种数据结构" /><published>2021-04-12T00:00:00+08:00</published><updated>2021-04-12T00:00:00+08:00</updated><id>https://bran-nie.com/2021/04/12/lazyman</id><content type="html" xml:base="https://bran-nie.com/2021/04/12/lazyman/">&lt;p&gt;趣味解读，实现一个 LazyMan，可以链式调用，它有&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sleep(time)&lt;/code&gt;方法，可以等待指定时间后，再继续执行后续的调用。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-05-14T11:47:00+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">Leetcode-45 – 跳跃游戏II</title><link href="https://bran-nie.com/2021/05/14/leetcode-45-jump-game-ii/" rel="alternate" type="text/html" title="Leetcode-45 – 跳跃游戏II" /><published>2021-05-14T00:00:00+08:00</published><updated>2021-05-14T00:00:00+08:00</updated><id>https://bran-nie.com/2021/05/14/leetcode-45-jump-game-ii</id><content type="html" xml:base="https://bran-nie.com/2021/05/14/leetcode-45-jump-game-ii/">&lt;p&gt;贪心算法，通过局部最优解得到全局最优解。&lt;/p&gt;
+
+&lt;h2 id=&quot;题目&quot;&gt;题目&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;给定一个非负整数数组，你最初位于数组的第一个位置。&lt;/p&gt;
+
+  &lt;p&gt;数组中的每个元素代表你在该位置可以跳跃的最大长度。&lt;/p&gt;
+
+  &lt;p&gt;你的目标是使用最少的跳跃次数到达数组的最后一个位置。&lt;/p&gt;
+
+  &lt;p&gt;假设你总是可以到达数组的最后一个位置。&lt;/p&gt;
+
+  &lt;p&gt;示例 1:&lt;/p&gt;
+
+  &lt;p&gt;输入: [2,3,1,1,4]&lt;/p&gt;
+
+  &lt;p&gt;输出: 2&lt;/p&gt;
+
+  &lt;p&gt;解释: 跳到最后一个位置的最小跳跃数是 2。
+  从下标为 0 跳到下标为 1 的位置，跳  1  步，然后跳  3  步到达数组的最后一个位置。&lt;/p&gt;
+
+  &lt;p&gt;示例 2:&lt;/p&gt;
+
+  &lt;p&gt;输入: [2,3,0,1,4]&lt;/p&gt;
+
+  &lt;p&gt;输出: 2&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;解题思路&quot;&gt;解题思路&lt;/h2&gt;
+
+&lt;h3 id=&quot;读题&quot;&gt;读题&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;可以得出数组元素值表示可以跳跃的次数，也就是可以前进的次数。&lt;/li&gt;
+  &lt;li&gt;在元素 nums[i] 处跳跃时，可以选择不跳完。即 元素值是 4，可以跳跃 4 次，但跳跃 2 次后，可以选择更大的数字重新跳跃。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;思路&quot;&gt;思路&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;一次跳跃，因为可以选择不跳跃完，那就是在跳跃的过程中，要求出跳跃路径上，是否有比跳跃完更好的选择，如果有，就放弃之前的跳跃，从更好的选择开始新的出发。&lt;/li&gt;
+  &lt;li&gt;可以将数组的开始到最后，一次次跳跃拆分出来，每次只处理一次跳跃的情况。即编写一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nextIndex&lt;/code&gt;函数，它接受两个参数&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index&lt;/code&gt;，分别是跳跃的数组与跳跃的起始位置，返回值则是下一个跳跃位置。函数内部就会计算跳跃过程中性价比最高的下个跳跃位置。&lt;/li&gt;
+  &lt;li&gt;有了&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nextIndex&lt;/code&gt;函数，我们就可以通过&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;while&lt;/code&gt;循环，判断&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index&lt;/code&gt;是否为最后一个元素下标来决定跳跃情况。&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nextIndex&lt;/code&gt;函数需要注意的情况是：如果起跳位置&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index&lt;/code&gt;可以跳到终点，则无需再做贪心算法，直接返回终点下标即可。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;代码&quot;&gt;代码&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/**
+ * @param {number[]} nums
+ * @return {number}
+ */&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jump&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;cm&quot;&gt;/**
+     *
+     * @param {number[]} nums
+     * @param {number} index
+     * @return {number}
+     */&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nextIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cur&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 当传入下标值可以跳到最后时，直接返回&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cur&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cur&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 差值：下一个值减去传入下标值跳跃后的剩余值&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;difference&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 用来存放最大的差值及其所属下标&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 传入下标值可以跳跃的时候&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cur&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// 跳跃一次，值减 1，index + 1&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;cur&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;difference&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cur&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// max 若存在，则判断当前 index 的差值是否是最大的。不存在则初始化。&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;difference&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;difference&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;difference&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;difference&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;difference&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 初始化数组下标，跳跃次数&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 当数组下标不是最后一个下标时，表明还可以继续跳跃。&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nextIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;ac&quot;&gt;AC&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/algorithm/leetcode-45ac.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><summary type="html">贪心算法，通过局部最优解得到全局最优解。</summary></entry><entry><title type="html">从 LazyMan 需求再次了解队列这种数据结构</title><link href="https://bran-nie.com/2021/04/12/lazyman/" rel="alternate" type="text/html" title="从 LazyMan 需求再次了解队列这种数据结构" /><published>2021-04-12T00:00:00+08:00</published><updated>2021-04-12T00:00:00+08:00</updated><id>https://bran-nie.com/2021/04/12/lazyman</id><content type="html" xml:base="https://bran-nie.com/2021/04/12/lazyman/">&lt;p&gt;趣味解读，实现一个 LazyMan，可以链式调用，它有&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sleep(time)&lt;/code&gt;方法，可以等待指定时间后，再继续执行后续的调用。&lt;/p&gt;
 
 &lt;h2 id=&quot;lazyman-的分析&quot;&gt;LazyMan 的分析&lt;/h2&gt;
 
@@ -1009,51 +1105,4 @@ html 的结构如下，img 标签，自定义 data 放置图片的 src，设置 
 
 &lt;p&gt;&lt;img src=&quot;/images/blog/toos_worth.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Javascript" /><summary type="html">Intersection Observer API 提供了一种异步检测目标元素与祖先元素或 viewport 相交情况变化的方法。</summary></entry><entry><title type="html">PicGo 一款优秀的图床</title><link href="https://bran-nie.com/2021/03/15/PicGo/" rel="alternate" type="text/html" title="PicGo 一款优秀的图床" /><published>2021-03-15T00:00:00+08:00</published><updated>2021-03-15T00:00:00+08:00</updated><id>https://bran-nie.com/2021/03/15/PicGo</id><content type="html" xml:base="https://bran-nie.com/2021/03/15/PicGo/">&lt;h2 id=&quot;picgo&quot;&gt;PicGo&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/blog/picgo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Tutorials" /><summary type="html">PicGo</summary></entry><entry><title type="html">CSS 滚动条样式</title><link href="https://bran-nie.com/2021/01/14/scrollbar/" rel="alternate" type="text/html" title="CSS 滚动条样式" /><published>2021-01-14T00:00:00+08:00</published><updated>2021-01-14T00:00:00+08:00</updated><id>https://bran-nie.com/2021/01/14/scrollbar</id><content type="html" xml:base="https://bran-nie.com/2021/01/14/scrollbar/">&lt;blockquote&gt;
-  &lt;p&gt;该特性还是草案，是非标准的。请明确知道它&lt;strong&gt;只支持 Webkit 内核的浏览器。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;demo-预览-或-在-codepen-中打开&quot;&gt;&lt;a href=&quot;https://bran-nie.com/Note/css/scrollbar/&quot;&gt;Demo 预览&lt;/a&gt; 或 &lt;a href=&quot;https://codepen.io/bran-nie/pen/jOMaOqp&quot;&gt;在 Codepen 中打开&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h2 id=&quot;css-属性自定义滚动条样式&quot;&gt;CSS 属性：自定义滚动条样式&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::-webkit-scrollbar&lt;/code&gt; 整个滚动条&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::-webkit-scrollbar-button&lt;/code&gt; 滚动条上的按钮（上下或左右箭头）&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::-webkit-scrollbar-track&lt;/code&gt; 滚动条轨道&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::-webkit-scrollbar-track-piece&lt;/code&gt; 滚动条没有滑块的轨道部分&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::-webkit-scrollbar-thumb&lt;/code&gt; 滚动条上的滚动滑块&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::-webkit-scrollbar-corner&lt;/code&gt; 垂直和水平滚动条交汇的部分&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::-webkit-resizer&lt;/code&gt; 上面交汇部分中的部分样式。（可拖动的按钮）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/blog/css-scrollbar.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;css-属性控制浏览器过渡滚动&quot;&gt;CSS 属性：控制浏览器过渡滚动&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/CSS/overscroll-behavior&quot;&gt;overscroll-behavior&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;auto&lt;/code&gt; 默认效果。&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;contain&lt;/code&gt; 默认的滚动边界行为不变（“触底”效果或者刷新），但是临近的滚动区域不会被滚动链影响到，比如对话框后方的页面不会滚动。&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;none&lt;/code&gt; 临近滚动区域不受到滚动链影响，而且默认的滚动到边界的表现也被阻止。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;css-属性控制滚动条的绘制位置&quot;&gt;CSS 属性：控制滚动条的绘制位置&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;overflow: overlay&lt;/code&gt; 滚动条将绘制在内容之上。
-    &lt;ul&gt;
-      &lt;li&gt;PS：这个属性 仅在基于 WebKit（例如，Safari）和基于 Blink 的（例如，Chrome 或 Opera）浏览器中受支持。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;应用&quot;&gt;应用：&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;还原 UI 设计的滚动条样式&lt;/li&gt;
-  &lt;li&gt;修改滚动条跳动导致页面错位的 bug&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Bran.nie</name></author><category term="Css" /><summary type="html">该特性还是草案，是非标准的。请明确知道它只支持 Webkit 内核的浏览器。</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/images/blog/picgo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Tutorials" /><summary type="html">PicGo</summary></entry></feed>
