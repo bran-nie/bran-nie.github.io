@@ -1,4 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-05-14T11:47:00+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">Leetcode-45 – 跳跃游戏II</title><link href="https://bran-nie.com/2021/05/14/leetcode-45-jump-game-ii/" rel="alternate" type="text/html" title="Leetcode-45 – 跳跃游戏II" /><published>2021-05-14T00:00:00+08:00</published><updated>2021-05-14T00:00:00+08:00</updated><id>https://bran-nie.com/2021/05/14/leetcode-45-jump-game-ii</id><content type="html" xml:base="https://bran-nie.com/2021/05/14/leetcode-45-jump-game-ii/">&lt;p&gt;贪心算法，通过局部最优解得到全局最优解。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-07-14T18:25:27+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">Leetcode-198 – 打家劫舍 （动态规划）</title><link href="https://bran-nie.com/2021/07/14/leetcode-198-house-robber/" rel="alternate" type="text/html" title="Leetcode-198 – 打家劫舍 （动态规划）" /><published>2021-07-14T00:00:00+08:00</published><updated>2021-07-14T00:00:00+08:00</updated><id>https://bran-nie.com/2021/07/14/leetcode-198-house-robber</id><content type="html" xml:base="https://bran-nie.com/2021/07/14/leetcode-198-house-robber/">&lt;p&gt;动态规划，通过寻找状态转移方程、边界，将原问题分解为相对简单的子问题的方式求解复杂问题的方法。&lt;/p&gt;
+
+&lt;h3 id=&quot;题目-打家劫舍&quot;&gt;题目 &lt;a href=&quot;https://leetcode-cn.com/problems/house-robber/&quot; target=&quot;_blank&quot;&gt;打家劫舍&lt;/a&gt;&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。&lt;/p&gt;
+
+  &lt;p&gt;给定一个代表每个房屋存放金额的非负整数数组，计算你 不触动警报装置的情况下 ，一夜之内能够偷窃到的最高金额。&lt;/p&gt;
+
+  &lt;p&gt;示例 1：&lt;/p&gt;
+
+  &lt;p&gt;输入：[1,2,3,1]&lt;/p&gt;
+
+  &lt;p&gt;输出：4&lt;/p&gt;
+
+  &lt;p&gt;解释：偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。&lt;/p&gt;
+
+  &lt;p&gt;偷窃到的最高金额 = 1 + 3 = 4 。&lt;/p&gt;
+
+  &lt;p&gt;示例 2：&lt;/p&gt;
+
+  &lt;p&gt;输入：[2,7,9,3,1]&lt;/p&gt;
+
+  &lt;p&gt;输出：12
+解释：偷窃 1 号房屋 (金额 = 2), 偷窃 3 号房屋 (金额 = 9)，接着偷窃 5 号房屋 (金额 = 1)。&lt;/p&gt;
+
+  &lt;p&gt;偷窃到的最高金额 = 2 + 9 + 1 = 12 。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;解题思路&quot;&gt;解题思路&lt;/h3&gt;
+
+&lt;h4 id=&quot;1-确定解题方式--动态规划&quot;&gt;1. 确定解题方式 — 动态规划&lt;/h4&gt;
+
+&lt;p&gt;看到题目描述，可以得知&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;第 n 间&lt;/code&gt;房屋可以得到的总金币与&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n-1，n-2&lt;/code&gt;房屋有关。那么这道题的就可以使用动态规划来做。&lt;/p&gt;
+
+&lt;h4 id=&quot;2-寻找动态规划的状态转移方程边界&quot;&gt;2. 寻找动态规划的状态转移方程、边界&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;当房间 n 为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1 or 2&lt;/code&gt;时，则只需要比对这两间房屋金币最大值即可，故，边界是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n &amp;lt; 2&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;当 n 大于 2 时，则对于 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;k(k&amp;gt;2)&lt;/code&gt; 房屋，有两种选择
+    &lt;ul&gt;
+      &lt;li&gt;选择偷这间房屋，则此刻可以得到的总金币为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dp[k-2] + nums[k]&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;不偷这件房屋，则此刻可以得到的总金币为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dp[k-1]&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;故，状态转移方程为：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dp[k] = max(dp[k-2] + nums[k], dp[k-1])&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;3-将思路映射到代码中&quot;&gt;3. 将思路映射到代码中&lt;/h4&gt;
+
+&lt;p&gt;由于每次只需要用到&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dp[k-2], dp[k-1]&lt;/code&gt;两个值，因此可以不用创建 dp 数组，使用变量就能完成。&lt;/p&gt;
+
+&lt;p&gt;我用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 代表不偷，即是走到上个房间时的最大收益，还没偷上个房间；&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;m&lt;/code&gt;代表偷当前房间，即 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n + nums[k]&lt;/code&gt;；&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ans&lt;/code&gt;代表当前房间最大收益。&lt;/p&gt;
+
+&lt;p&gt;(由于还不会画图，所以用 log 方式展现过程)
+&lt;img src=&quot;https://pic.leetcode-cn.com/1626256043-xhAvmg-image.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;代码&quot;&gt;代码&lt;/h3&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/**
+ * @param {number[]} nums
+ * @return {number}
+ */&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rob&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// m 为 偷当前房屋的金币，初始化为 第一个房间 的金币&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// n 为 不偷当前房屋的金币，故 初始化为 0&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// ans 为走到当前房屋时，所偷到到总金币。&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`当前偷取第1间房屋后`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;cm&quot;&gt;/**
+         * 动态规划，状态转移公式为
+         * dp[i] = max(dp[i-2] + nums[i], dp[i-1]);
+         * 转化为代码，就是  m = dp[i-2] + nums[i]; n =  dp[i-2]
+         */&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`当前是第&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;间房屋，金币数是&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`走过这间房间时：`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`走过这间房间后：`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;m = n + cur, n = ans, ans = max(m,n)&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Bran.nie</name></author><category term="Algorithm" /><summary type="html">动态规划，通过寻找状态转移方程、边界，将原问题分解为相对简单的子问题的方式求解复杂问题的方法。</summary></entry><entry><title type="html">Leetcode-45 – 跳跃游戏II</title><link href="https://bran-nie.com/2021/05/14/leetcode-45-jump-game-ii/" rel="alternate" type="text/html" title="Leetcode-45 – 跳跃游戏II" /><published>2021-05-14T00:00:00+08:00</published><updated>2021-05-14T00:00:00+08:00</updated><id>https://bran-nie.com/2021/05/14/leetcode-45-jump-game-ii</id><content type="html" xml:base="https://bran-nie.com/2021/05/14/leetcode-45-jump-game-ii/">&lt;p&gt;贪心算法，通过局部最优解得到全局最优解。&lt;/p&gt;
 
 &lt;h2 id=&quot;题目&quot;&gt;题目&lt;/h2&gt;
 
@@ -94,7 +184,7 @@
 
 &lt;h2 id=&quot;ac&quot;&gt;AC&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/blog/algorithm/leetcode-45ac.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><summary type="html">贪心算法，通过局部最优解得到全局最优解。</summary></entry><entry><title type="html">从 LazyMan 需求再次了解队列这种数据结构</title><link href="https://bran-nie.com/2021/04/12/lazyman/" rel="alternate" type="text/html" title="从 LazyMan 需求再次了解队列这种数据结构" /><published>2021-04-12T00:00:00+08:00</published><updated>2021-04-12T00:00:00+08:00</updated><id>https://bran-nie.com/2021/04/12/lazyman</id><content type="html" xml:base="https://bran-nie.com/2021/04/12/lazyman/">&lt;p&gt;趣味解读，实现一个 LazyMan，可以链式调用，它有&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sleep(time)&lt;/code&gt;方法，可以等待指定时间后，再继续执行后续的调用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/blog/algorithm/leetcode-45ac.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Algorithm" /><summary type="html">贪心算法，通过局部最优解得到全局最优解。</summary></entry><entry><title type="html">从 LazyMan 需求再次了解队列这种数据结构</title><link href="https://bran-nie.com/2021/04/12/lazyman/" rel="alternate" type="text/html" title="从 LazyMan 需求再次了解队列这种数据结构" /><published>2021-04-12T00:00:00+08:00</published><updated>2021-04-12T00:00:00+08:00</updated><id>https://bran-nie.com/2021/04/12/lazyman</id><content type="html" xml:base="https://bran-nie.com/2021/04/12/lazyman/">&lt;p&gt;趣味解读，实现一个 LazyMan，可以链式调用，它有&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sleep(time)&lt;/code&gt;方法，可以等待指定时间后，再继续执行后续的调用。&lt;/p&gt;
 
 &lt;h2 id=&quot;lazyman-的分析&quot;&gt;LazyMan 的分析&lt;/h2&gt;
 
@@ -1103,6 +1193,4 @@ html 的结构如下，img 标签，自定义 data 放置图片的 src，设置 
 
 &lt;p&gt;确实，不间断地折腾，它在当下看，似乎没什么收益，但长远来看，折腾是以一种更加无形的方式反馈给了你！&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/blog/toos_worth.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Javascript" /><summary type="html">Intersection Observer API 提供了一种异步检测目标元素与祖先元素或 viewport 相交情况变化的方法。</summary></entry><entry><title type="html">PicGo 一款优秀的图床</title><link href="https://bran-nie.com/2021/03/15/PicGo/" rel="alternate" type="text/html" title="PicGo 一款优秀的图床" /><published>2021-03-15T00:00:00+08:00</published><updated>2021-03-15T00:00:00+08:00</updated><id>https://bran-nie.com/2021/03/15/PicGo</id><content type="html" xml:base="https://bran-nie.com/2021/03/15/PicGo/">&lt;h2 id=&quot;picgo&quot;&gt;PicGo&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/blog/picgo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Tutorials" /><summary type="html">PicGo</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/images/blog/toos_worth.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Javascript" /><summary type="html">Intersection Observer API 提供了一种异步检测目标元素与祖先元素或 viewport 相交情况变化的方法。</summary></entry></feed>

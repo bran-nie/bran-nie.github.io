@@ -336,10 +336,18 @@
   
     {
       "title"    : "Leetcode-45 -- 跳跃游戏II",
-      "category" : "",
+      "category" : "Algorithm",
       
       "url"      : "https://bran-nie.com/2021/05/14/leetcode-45-jump-game-ii/",
-      "keywords" : ""
+      "keywords" : "leetcode算法题解, 跳跃游戏II, 贪心算法"
+    } ,
+  
+    {
+      "title"    : "Leetcode-198 -- 打家劫舍 （动态规划）",
+      "category" : "Algorithm",
+      
+      "url"      : "https://bran-nie.com/2021/07/14/leetcode-198-house-robber/",
+      "keywords" : "leetcode算法题解, 打家劫舍, 动态规划"
     } ,
   
     {
