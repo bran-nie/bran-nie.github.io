@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Leetcode-45 -- 跳跃游戏II
-categories:
-description:
-keywords:
+categories: [Algorithm]
+description: leetcode 算法题解 --- 跳跃游戏II
+keywords: leetcode算法题解, 跳跃游戏II, 贪心算法
 ---
 
 贪心算法，通过局部最优解得到全局最优解。
