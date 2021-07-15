@@ -54,7 +54,7 @@ keywords: leetcode算法题解, 打家劫舍, 动态规划
 我用 `n` 代表不偷，即是走到上个房间时的最大收益，还没偷上个房间；`m`代表偷当前房间，即 `n + nums[k]`；`ans`代表当前房间最大收益。
 
 (由于还不会画图，所以用 log 方式展现过程)
-![image.png](https://pic.leetcode-cn.com/1626256043-xhAvmg-image.png)
+![](/images/blog/algorithm/ac198.png)
 
 ### 代码
 
