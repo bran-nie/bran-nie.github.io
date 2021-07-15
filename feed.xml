@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-07-14T18:25:27+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">Leetcode-198 – 打家劫舍 （动态规划）</title><link href="https://bran-nie.com/2021/07/14/leetcode-198-house-robber/" rel="alternate" type="text/html" title="Leetcode-198 – 打家劫舍 （动态规划）" /><published>2021-07-14T00:00:00+08:00</published><updated>2021-07-14T00:00:00+08:00</updated><id>https://bran-nie.com/2021/07/14/leetcode-198-house-robber</id><content type="html" xml:base="https://bran-nie.com/2021/07/14/leetcode-198-house-robber/">&lt;p&gt;动态规划，通过寻找状态转移方程、边界，将原问题分解为相对简单的子问题的方式求解复杂问题的方法。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2021-07-15T11:17:27+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">Leetcode-198 – 打家劫舍 （动态规划）</title><link href="https://bran-nie.com/2021/07/14/leetcode-198-house-robber/" rel="alternate" type="text/html" title="Leetcode-198 – 打家劫舍 （动态规划）" /><published>2021-07-14T00:00:00+08:00</published><updated>2021-07-14T00:00:00+08:00</updated><id>https://bran-nie.com/2021/07/14/leetcode-198-house-robber</id><content type="html" xml:base="https://bran-nie.com/2021/07/14/leetcode-198-house-robber/">&lt;p&gt;动态规划，通过寻找状态转移方程、边界，将原问题分解为相对简单的子问题的方式求解复杂问题的方法。&lt;/p&gt;
 
 &lt;h3 id=&quot;题目-打家劫舍&quot;&gt;题目 &lt;a href=&quot;https://leetcode-cn.com/problems/house-robber/&quot; target=&quot;_blank&quot;&gt;打家劫舍&lt;/a&gt;&lt;/h3&gt;
 
@@ -53,7 +53,7 @@
 &lt;p&gt;我用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 代表不偷，即是走到上个房间时的最大收益，还没偷上个房间；&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;m&lt;/code&gt;代表偷当前房间，即 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n + nums[k]&lt;/code&gt;；&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ans&lt;/code&gt;代表当前房间最大收益。&lt;/p&gt;
 
 &lt;p&gt;(由于还不会画图，所以用 log 方式展现过程)
-&lt;img src=&quot;https://pic.leetcode-cn.com/1626256043-xhAvmg-image.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/images/blog/algorithm/ac198.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;代码&quot;&gt;代码&lt;/h3&gt;
 
