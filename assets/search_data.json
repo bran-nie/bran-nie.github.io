@@ -351,6 +351,14 @@
     } ,
   
     {
+      "title"    : "使用脚本生成新的博客文章，取代CV",
+      "category" : "Blog",
+      
+      "url"      : "https://bran-nie.com/2022/01/14/gen-blog-script/",
+      "keywords" : ""
+    } ,
+  
+    {
       "title"    : "Markdown",
       "category" : "Markdown",
       
