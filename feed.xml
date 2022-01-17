@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2022-01-17T16:09:26+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">工欲善其事，必先利其器 – pnpm</title><link href="https://bran-nie.com/2022/01/17/pnpm/" rel="alternate" type="text/html" title="工欲善其事，必先利其器 – pnpm" /><published>2022-01-17T00:00:00+08:00</published><updated>2022-01-17T00:00:00+08:00</updated><id>https://bran-nie.com/2022/01/17/pnpm</id><content type="html" xml:base="https://bran-nie.com/2022/01/17/pnpm/">&lt;p&gt;众所周知，前端项目的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;，是一个深渊，项目稍大一些，那所安装的依赖，轻轻松松上百个，存储空间几百 MB，再大单位就是 GB 了，简直离谱。用命令统计一下文件数量，几万个都算是少的。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2022-01-17T18:29:45+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">工欲善其事，必先利其器 – nvm</title><link href="https://bran-nie.com/2022/01/17/nvm/" rel="alternate" type="text/html" title="工欲善其事，必先利其器 – nvm" /><published>2022-01-17T00:00:00+08:00</published><updated>2022-01-17T00:00:00+08:00</updated><id>https://bran-nie.com/2022/01/17/nvm</id><content type="html" xml:base="https://bran-nie.com/2022/01/17/nvm/">&lt;p&gt;当项目不止一个的时候，当项目所在的时间轴很长时，其项目所需的 node 版本，大概率会有所不同，这时暴露出来一个问题：如何合理的管理我们的 node 版本呢？&lt;/p&gt;
+
+&lt;p&gt;现在常见的两种方式：nvm 和 n。那么这两者有什么区别呢？接下来，让我们揭开它们神秘的面纱～&lt;/p&gt;
+
+&lt;h3 id=&quot;nvm-与-n-的不同&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvm&lt;/code&gt; 与 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 的不同&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvm&lt;/code&gt; 是一个命令，来管理 node.js 版本，对于多个 node.js 版本，它是创建了多个目录来存放 node.js 的代码，实现了完全隔离，即沙箱这种方式。切换版本也是通过修改 node 路径所对应的文件夹目录。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 呢，是一个 npm 全局包命令，切换版本是将安装的 node 版本复制到 /usr/local/bin 目录下。多版本之间没有很强的隔离。甚至会出现全局包错误问题。&lt;/p&gt;
+
+&lt;p&gt;因此，我更推荐使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvm&lt;/code&gt; 来做 node.js 的版本管理器。&lt;/p&gt;
+
+&lt;h3 id=&quot;nvm-安装&quot;&gt;nvm 安装&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;之前令人难以选择的是，Windows 用户无法使用 nvm，对于版本管理，只好选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 了，但现在而言，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvm&lt;/code&gt; 也是有 Windows 版本的。&lt;a href=&quot;https://github.com/coreybutler/nvm-windows&quot; target=&quot;\_blank&quot;&gt;传送门&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;这里简单复制部分，链接：&lt;a href=&quot;https://github.com/nvm-sh/nvm#installing-and-updating&quot; target=&quot;\_blank&quot;&gt;官方文档安装方式&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-o-&lt;/span&gt; https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;需要注意的是在执行完安装脚本后，也要检查确认终端文件中是否有这一段代码。(~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc)，这个看你的终端使用的是什么了，比如我的是 zsh，那么文件就是 .zshrc 了。&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;NVM_DIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/.nvm&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$NVM_DIR&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/nvm.sh&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$NVM_DIR&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/nvm.sh&quot;&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# This loads nvm&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$NVM_DIR&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/bash_completion&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$NVM_DIR&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/bash_completion&quot;&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# This loads nvm bash_completion&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这段代码的意思是：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;声明 nvm 的目录所在路径，&lt;/li&gt;
+  &lt;li&gt;加载 nvm，&lt;/li&gt;
+  &lt;li&gt;加载 nvm bash_completion。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;这样，在终端内就可以使用 nvm 命令了&lt;/p&gt;
+
+&lt;h3 id=&quot;nvm-使用&quot;&gt;nvm 使用&lt;/h3&gt;
+
+&lt;p&gt;常用的几个 nvm 命令&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvm ls&lt;/code&gt; 查看本地安装的 node.js 版本列表&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvm install ***&lt;/code&gt; 安装 *** 版本&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvm use ***&lt;/code&gt; 在当前终端窗口使用某个版本&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvm alias default ***&lt;/code&gt; 设置某个版本为默认（新开终端窗口 or 重新打开终端生效）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;至于其他的命令，可以用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvm help&lt;/code&gt; 查看。&lt;/p&gt;
+
+&lt;h3 id=&quot;nvm-需要注意的地方&quot;&gt;nvm 需要注意的地方&lt;/h3&gt;
+
+&lt;p&gt;由于切换版本是沙箱式，隔离 100%，故 npm 全局依赖在切换版本后，都需要重新安装一番了。这就是享受安全、互不影响的另一端了。事物都有双面性不是～&lt;/p&gt;
+
+&lt;p&gt;因此可以用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm list -g --depth=0&lt;/code&gt; 快速查看全局安装了哪些依赖，嘿嘿，再安装一遍呗。&lt;/p&gt;
+
+&lt;h3 id=&quot;补充nrm&quot;&gt;补充，nrm&lt;/h3&gt;
+
+&lt;p&gt;再补充一个小工具：一个管理 npm 源的 nrm。&lt;/p&gt;
+
+&lt;p&gt;咋一看两者还挺像的，nvm 是 node.js 的版本管理，nrm 是 npm 源的管理。谁让前端是个大杂烩呢。&lt;/p&gt;
+
+&lt;p&gt;(nvm: node version manager, nrm: npm registry manager)&lt;/p&gt;
+
+&lt;p&gt;什么时候会用到 nrm，如：国内 npm 源访问太慢，公司内部有自己的 npm 仓库，这时候切换源，用 nrm 就很方便。&lt;/p&gt;
+
+&lt;h4 id=&quot;安装与使用&quot;&gt;安装与使用&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i nrm &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt;
+
+nrm &lt;span class=&quot;nb&quot;&gt;ls
+&lt;/span&gt;nrm use &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Bran.nie</name></author><category term="Config" /><summary type="html">当项目不止一个的时候，当项目所在的时间轴很长时，其项目所需的 node 版本，大概率会有所不同，这时暴露出来一个问题：如何合理的管理我们的 node 版本呢？</summary></entry><entry><title type="html">工欲善其事，必先利其器 – pnpm</title><link href="https://bran-nie.com/2022/01/17/pnpm/" rel="alternate" type="text/html" title="工欲善其事，必先利其器 – pnpm" /><published>2022-01-17T00:00:00+08:00</published><updated>2022-01-17T00:00:00+08:00</updated><id>https://bran-nie.com/2022/01/17/pnpm</id><content type="html" xml:base="https://bran-nie.com/2022/01/17/pnpm/">&lt;p&gt;众所周知，前端项目的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;，是一个深渊，项目稍大一些，那所安装的依赖，轻轻松松上百个，存储空间几百 MB，再大单位就是 GB 了，简直离谱。用命令统计一下文件数量，几万个都算是少的。&lt;/p&gt;
 
 &lt;p&gt;于是，电脑上项目数量多了的话，仅仅是这个 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;，就占据了不少的空间，且不少都是重复性的依赖安装包！那么有什么方式可以优化这个呢？&lt;/p&gt;
 
@@ -1070,98 +1145,4 @@
   &lt;li&gt;&lt;a href=&quot;/2021/03/27/bubbleSort/&quot;&gt;排序算法简单分析系列 - - 冒泡排序&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/2021/03/27/quickSort/&quot;&gt;排序算法简单分析系列 - - 快速排序&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;/2021/03/27/selectSort/&quot;&gt;排序算法简单分析系列 - - 选择排序&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Bran.nie</name></author><category term="Algorithm" /><summary type="html">基本思想</summary></entry><entry><title type="html">博客由 username.github.io 转为自定义域名</title><link href="https://bran-nie.com/2021/03/23/domain-name/" rel="alternate" type="text/html" title="博客由 username.github.io 转为自定义域名" /><published>2021-03-23T00:00:00+08:00</published><updated>2021-03-23T00:00:00+08:00</updated><id>https://bran-nie.com/2021/03/23/domain-name</id><content type="html" xml:base="https://bran-nie.com/2021/03/23/domain-name/">&lt;blockquote&gt;
-  &lt;p&gt;发现在国内，username.github.io 不能解析，了解一下是运营商的 DNS 问题。科学上网和通过本地修改 DNS 可以解决，但这只是针对个人，对其他人一点也不友好。而自定义域名可以完美的解决这个问题，再者，GitHub Page 也是很完美的支持自定义域名。&lt;/p&gt;
-
-  &lt;p&gt;故今早打算购买一个域名用作博客，HTTPS 也是要考虑的。看了一些服务商，最后选择了腾讯云，花半个小时左右完美的解决需求。&lt;strong&gt;且为了培养写博客的习惯，便记录一下这个流程，也供同道中人参考使用。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;!-- ![](/images/blog/inaccessible.png) --&gt;
-&lt;p&gt;&lt;img src=&quot;/images/blog/inaccessible.png&quot; height=&quot;360&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;购买域名&quot;&gt;购买域名&lt;/h2&gt;
-
-&lt;p&gt;域名注册服务商有不少，你可以依据自己喜爱选择一个即可。我是今天看到 &lt;a href=&quot;https://www.dnspod.cn/promo/domainscarnival?promo_code=G2LSXI22380&amp;amp;source=sharelink&amp;amp;from=link&quot; target=&quot;_blank&quot;&gt;腾讯云的复工大促活动&lt;/a&gt; ，再加上之前一些云服务也是用的他们的，所以就选择了这个服务商。&lt;/p&gt;
-
-&lt;p&gt;至于其他的域名服务商，也都大同小异，这里说几个熟悉的平台：&lt;a href=&quot;https://sg.godaddy.com/&quot; target=&quot;_blank&quot;&gt;Godaddy&lt;/a&gt;，&lt;a href=&quot;https://wanwang.aliyun.com/domain/&quot; target=&quot;_blank&quot;&gt;阿里云&lt;/a&gt;，&lt;a href=&quot;https://dnspod.cloud.tencent.com/&quot; target=&quot;_blank&quot;&gt;腾讯云&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;选好平台后，如何购买域名。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;首先是要查询你想要注册的域名，是否还在。不在的话就换吧，换名字或者一级域名(即后缀如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cn&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xyz&lt;/code&gt;)。&lt;/li&gt;
-  &lt;li&gt;域名选好后，加到购物车进行支付购买即可。&lt;/li&gt;
-  &lt;li&gt;备注：国内的服务商，要填好个人的信息，需要实名认证的。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;域名解析&quot;&gt;域名解析&lt;/h2&gt;
-
-&lt;p&gt;在购买好域名之后，我们就可以进到域名服务商提供的域名管理页面。这一步就是用来解析域名，通俗点讲，就是要让网络知道这个域名指向哪里，因为域名本质上只是一个名字。你叫张三，他叫李四，张三与李四只是两个人的名字。&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;打开域名的管理页面，找到解析这个功能，(找不到的可以自行查询 &lt;a href=&quot;https://cn.bing.com&quot; target=&quot;_blank&quot;&gt;Bing 搜索&lt;/a&gt;)，下面展示的均为腾讯云(没广告费哎)。
-&lt;img src=&quot;/images/blog/domain_1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;添加记录，两条 A 记录和一个 CNAME 记录即可。可以仿照图片添加，&lt;strong&gt;需要替换的是 CNAME 那里的记录值，换成你的 GitHub page 地址。&lt;/strong&gt;
-&lt;img src=&quot;/images/blog/domain_2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;这里简单说一下两个 A 记录是什么，这两个 A 记录指向的是 GitHub Page 的 IP 地址，&lt;img src=&quot;/images/blog/domain_3.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;另外，关于 GitHub Page 自定义域名，&lt;a href=&quot;https://docs.github.com/cn/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site&quot; target=&quot;_blank&quot;&gt;官方也有相应的文档&lt;/a&gt;，感兴趣的可以看一下，多了解一些总归是好的～。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;github-page-添加-cname&quot;&gt;GitHub Page 添加 CNAME&lt;/h2&gt;
-
-&lt;p&gt;当域名也购买好了，解析也配置 OK 了。接下来就是在 GitHub 上面，开启自定义域名配置了。&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;首先，在博客项目仓库，新建一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CNAME&lt;/code&gt;文件，&lt;strong&gt;强调，文件名就是 CNAME，且没有后缀&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;注意，如果你用类似 Hexo 生成的博客，然后 deploy 到 GitHub page 仓库的，请注意需要把这个文件也存放到生成的文件夹根目录下。具体可以搜索或者在文章下方留言。
-&lt;img src=&quot;/images/blog/domain_5.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;这个文件里面就写上你自己的域名，如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bran-nie.com&lt;/code&gt;，不要 http、https 等这些协议。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;随后，你在项目仓库的 Setting 中，就能看到类似我的这样的信息。&lt;strong&gt;如果自定义域名还没有添加证书，则这里的 HTTPS 是不能勾选的&lt;/strong&gt;
-&lt;img src=&quot;/images/blog/domain_4.png&quot; alt=&quot;&quot; /&gt;
-说明已经 OK 了&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;修改博客配置文件&quot;&gt;修改博客配置文件&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;这一步是针对 Jekyll 用户的，其他方式的可以忽略&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;这里我踩了一个坑。修改过自定义域名后，把配置&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\_config.yml&lt;/code&gt;中的 url 属性忘记修改成申请的域名了，因此导致博客网站的链接都还是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bran-nie.github.io/xxx&lt;/code&gt;，实际上国内还是访问不到。&lt;/p&gt;
-
-&lt;p&gt;因此，切记还需要在配置文件中，修改站点 URL，这样，GitHub Page 生成的页面中的链接，站点才是正确的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bran-nie.com/xxx&lt;/code&gt; 。&lt;/p&gt;
-
-&lt;h2 id=&quot;域名-ssl可选&quot;&gt;域名 SSL（可选&lt;/h2&gt;
-
-&lt;p&gt;现在浏览器打开一个网页，如果是 http 协议的网站，则浏览器会提示一个不安全。现在又是大家会比较重视信息安全的时代，那么，很有必要给我们的博客加一把小锁了.&lt;/p&gt;
-
-&lt;p&gt;我们的博客网站，几乎都是静态页面了，现在 SSL 证书也有免费的，就我所购买的腾讯云域名，在域名管理页面，就可以快速申请 SSL 证书，点击一下就可以的那种。其他服务商，也都大同小异吧～&lt;/p&gt;
-
-&lt;p&gt;便捷方式：是在域名解析的这里，点击右侧的 SSL，根据提示操作即可。（我这里是已经申请过了，所以是绿色的 SSL 文字。
-&lt;img src=&quot;/images/blog/domain_2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;再或者，可以在域名控制台，找到证书相关的菜单，申请证书即可。如图：
-&lt;img src=&quot;/images/blog/domain_6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;申请好证书后，是会进入审核阶段，大概半小时？审核成功后会发短信邮件等通知。&lt;/p&gt;
-
-&lt;p&gt;当审核通过后，最后一步，是去 GitHub page 所在的仓库，在设置中勾选 HTTPS 选项，这时候，你的博客就是 https 协议访问啦～&lt;/p&gt;
-
-&lt;h2 id=&quot;最后&quot;&gt;最后&lt;/h2&gt;
-
-&lt;p&gt;配置好博客，这是一个愉快的开端，希望我们不要忘记，为什么开通这个博客，折腾了这么久，不要忘记初心呀～&lt;/p&gt;
-
-&lt;p&gt;一点一滴的想，一字一句的写，将自己所了解的、学到的、感悟的知识输出出来，既能有益他人的学习，更能帮助自己进一步的掌握。加油，干饭人！&lt;/p&gt;
-
-&lt;p&gt;PS：确实，一开始写博客，是会耗时。眨眼间，两三个小时过去了，就拿这个博客来说吧，我早上从申请域名到完成迁移，也就半个小时左右，但输出这篇文章，大概花费了两个多小时。猛的一想还挺浪费时间的，其实呀，万事开头难，写多了，就好了。&lt;strong&gt;写着写着就习惯了&lt;/strong&gt; hhh&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Blog" /><summary type="html">发现在国内，username.github.io 不能解析，了解一下是运营商的 DNS 问题。科学上网和通过本地修改 DNS 可以解决，但这只是针对个人，对其他人一点也不友好。而自定义域名可以完美的解决这个问题，再者，GitHub Page 也是很完美的支持自定义域名。 故今早打算购买一个域名用作博客，HTTPS 也是要考虑的。看了一些服务商，最后选择了腾讯云，花半个小时左右完美的解决需求。且为了培养写博客的习惯，便记录一下这个流程，也供同道中人参考使用。</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Bran.nie</name></author><category term="Algorithm" /><summary type="html">基本思想</summary></entry></feed>
