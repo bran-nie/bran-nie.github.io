@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2022-01-17T10:47:05+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">使用脚本生成新的博客文章，取代CV</title><link href="https://bran-nie.com/2022/01/14/gen-blog-script/" rel="alternate" type="text/html" title="使用脚本生成新的博客文章，取代CV" /><published>2022-01-14T00:00:00+08:00</published><updated>2022-01-14T00:00:00+08:00</updated><id>https://bran-nie.com/2022/01/14/gen-blog-script</id><content type="html" xml:base="https://bran-nie.com/2022/01/14/gen-blog-script/">&lt;p&gt;之前写过一篇文章，在&lt;a href=&quot;/2021/03/30/create-commands/&quot;&gt;使用 node.js 创建一个属于你的命令&lt;/a&gt;，美中不足的是，我很容易就忘记命令的参数，尽管我已经写了描述，但时隔几个月还是会忘记。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2022-01-17T16:09:26+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">工欲善其事，必先利其器 – pnpm</title><link href="https://bran-nie.com/2022/01/17/pnpm/" rel="alternate" type="text/html" title="工欲善其事，必先利其器 – pnpm" /><published>2022-01-17T00:00:00+08:00</published><updated>2022-01-17T00:00:00+08:00</updated><id>https://bran-nie.com/2022/01/17/pnpm</id><content type="html" xml:base="https://bran-nie.com/2022/01/17/pnpm/">&lt;p&gt;众所周知，前端项目的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;，是一个深渊，项目稍大一些，那所安装的依赖，轻轻松松上百个，存储空间几百 MB，再大单位就是 GB 了，简直离谱。用命令统计一下文件数量，几万个都算是少的。&lt;/p&gt;
+
+&lt;p&gt;于是，电脑上项目数量多了的话，仅仅是这个 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;，就占据了不少的空间，且不少都是重复性的依赖安装包！那么有什么方式可以优化这个呢？&lt;/p&gt;
+
+&lt;h3 id=&quot;包管理器&quot;&gt;包管理器&lt;/h3&gt;
+
+&lt;p&gt;大家最常使用的包管理器，那应该是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn&lt;/code&gt; 了吧，对于这两者的历史与介绍，这里就不做展开了，下面说说今天的主角：&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pnpm&lt;/code&gt;&lt;/strong&gt;，&lt;a href=&quot;https://pnpm.io&quot; target=&quot;\_blank&quot;&gt;官网传送门&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;pnpm---是什么&quot;&gt;pnpm - 是什么&lt;/h3&gt;
+
+&lt;p&gt;一个包管理器。&lt;/p&gt;
+
+&lt;p&gt;slogan：快速的，节省磁盘空间的包管理器（Fast, disk space efficient package manager），从而我们可以了解到，特点是一个能够节省磁盘空间的包管理器，唔，npm 和 yarn 遇到对手了。至于快速这个特点，我们稍后再看，毕竟，节省磁盘空间这个特点看起来很靓哦。&lt;/p&gt;
+
+&lt;h3 id=&quot;pnpm---解决了什么怎么做到的&quot;&gt;pnpm - 解决了什么，怎么做到的&lt;/h3&gt;
+
+&lt;h4 id=&quot;安装&quot;&gt;安装&lt;/h4&gt;
+
+&lt;p&gt;刚刚得知，相比其他的包管理器，pnpm 一个很大的特点就是能够节省磁盘空间，哇哦，这不就是我们前面说到的，node_modules 它这个磁盘地狱问题吗，如果使用 pnpm 能解决这个问题，单单冲这一点，那也得冲一波啊，这就去看看。&lt;/p&gt;
+
+&lt;p&gt;惯例，先看文档，了解安装跑 DEMO 三部曲走一下。（省略若干&lt;/p&gt;
+
+&lt;p&gt;OK，现在电脑上已经安装了最新版的 pnpm，-v 一下，输出 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.24.4&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;跑项目对比&quot;&gt;跑项目对比&lt;/h4&gt;
+
+&lt;p&gt;现在我们用 vite 初始化一个 vue3 项目，分别使用 pnpm 和 yarn 作为包管理器，从文档和下图可以得知，在 pnpm 中，如果一些依赖已经安装过，则会存在电脑中，再次在项目中使用时，是硬连接到项目中，所以在速度上，比 yarn 号称快的包管理器还要快，唔。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/20220117151841.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;那我们在看一下两者的 node_modules，有何区别。
+&lt;img src=&quot;/images/20220117153051.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;OK，经过查看，在文件大小方面，两者只有 1MB 之差？？不是说好的，pnpm 包是全局存储，为何 node_modules 还是使用了磁盘空间？欺负老实人的吗，让我看看。&lt;/p&gt;
+
+&lt;p&gt;原来硬连接是这回事啊（不明觉厉）&lt;a href=&quot;https://pnpm.io/zh/faq&quot; target=&quot;\_blank&quot;&gt;官方回答 FAQ&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;pnpm 在 install 时，是会创建项目所需依赖到全局存储依赖包的硬连接。而硬连接指向磁盘上原始文件所在的同一位置。因此，当我们查看 A 项目的 node_modules 中的 foo 依赖，和查看 B 项目的 node_modules 中的 foo 依赖，看到都是 1MB，但实际上都是磁盘上同一个文件，所以总磁盘空间还是 1MB。举个例子：某张银行卡同时绑定了微信和支付宝，卡内有一万元，这时候通过微信查看，唔，有一万元，通过支付宝查看，唔也有一万元，但是，我们不会认为，卡里有两万元吧。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;总之，pnpm 革命性的节约磁盘空间，是通过链接这种方式，做到的，至于一些复杂的情况如嵌套依赖，版本管理等这些，个人理解有限，怕有所误解，就建议阅读官方文档进行学习了解了。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在上图中，pnpm 和 yarn 还有一个不同的地方，是什么呢？是 node_modules 目录下文件的不同。前者目录下似乎只有 package.json 文件所声明的依赖，而后者呢，则是平铺了 node_modules，即，所有的依赖都会在这一层级。&lt;/p&gt;
+
+&lt;p&gt;关于这一点的详细不同，可以参考 &lt;a href=&quot;https://pnpm.io/zh/blog/2020/05/27/flat-node-modules-is-not-the-only-way&quot; target=&quot;\_blank&quot;&gt;官方的博客文章&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;但对于用户来说，这样做有一个潜在的好处，那就是避免幽灵依赖！&lt;/p&gt;
+
+&lt;h4 id=&quot;幽灵依赖&quot;&gt;幽灵依赖&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;幽灵依赖，即没有在 package.json 中声明依赖，但在代码中呢，可以使用的依赖。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在项目中，我们在 package.json 中声明了 A 依赖，然后 A 依赖同时依赖 B 依赖，那么使用 yarn or npm 进行安装时，由于两者都是平铺 node_modules，那么在代码中，我们竟可以使用 B 依赖，尽管，package.json 中，未曾声明 B 依赖！&lt;/p&gt;
+
+&lt;p&gt;之所以说是潜在问题，即未来某时，我们项目不再使用 A 依赖了，或者 A 依赖升级，不再需要 B 依赖了，那么代码中，那个使用 B 依赖的地方，就会出问题。再者，本着版本管理规范的说法，在项目中所需要的依赖，也是要在 package.json 中进行声明的。&lt;/p&gt;
+
+&lt;p&gt;所以，pnpm 这种非平铺的方式，在源头就避免了幽灵依赖这种问题。&lt;/p&gt;
+
+&lt;h3 id=&quot;pnpm---未来可期&quot;&gt;pnpm - 未来可期&lt;/h3&gt;
+
+&lt;p&gt;为何这样说呢，在现在一个前端项目，动则上 GB 的存储空间下，磁盘空间已经是一个需要关注的资源了，再加上服务器多项目部署，那无论是速度还是空间，都是一个性能点。因此，pnpm 的出现，就解决了这些痛点。&lt;/p&gt;
+
+&lt;p&gt;pnpm 是 2015 年诞生的，迄今为止也有六七年的发展了，其迭代版本已经稳定到 6.24，那么在项目开发中，是一个可以放心使用的包管理器了。这不，尤大的 Vue 全家桶，都已经在使用 pnpm 作为官方包管理器。&lt;/p&gt;
+
+&lt;p&gt;再说，没有完美的事物，只有趋近完美。你不用我不用，就算有 bug 也没人知。所以有 bug 不怕，可以在其 GitHub 上提 issues 或者参与贡献！&lt;/p&gt;
+
+&lt;h3 id=&quot;结语&quot;&gt;结语&lt;/h3&gt;
+
+&lt;p&gt;很久之前我就有想过多项目重复的依赖，为何不用连接呢，但我只是想想，没想到 pnpm 就是这样的，真的挺好。&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Config" /><summary type="html">众所周知，前端项目的 node_modules，是一个深渊，项目稍大一些，那所安装的依赖，轻轻松松上百个，存储空间几百 MB，再大单位就是 GB 了，简直离谱。用命令统计一下文件数量，几万个都算是少的。</summary></entry><entry><title type="html">使用脚本生成新的博客文章，取代CV</title><link href="https://bran-nie.com/2022/01/14/gen-blog-script/" rel="alternate" type="text/html" title="使用脚本生成新的博客文章，取代CV" /><published>2022-01-14T00:00:00+08:00</published><updated>2022-01-14T00:00:00+08:00</updated><id>https://bran-nie.com/2022/01/14/gen-blog-script</id><content type="html" xml:base="https://bran-nie.com/2022/01/14/gen-blog-script/">&lt;p&gt;之前写过一篇文章，在&lt;a href=&quot;/2021/03/30/create-commands/&quot;&gt;使用 node.js 创建一个属于你的命令&lt;/a&gt;，美中不足的是，我很容易就忘记命令的参数，尽管我已经写了描述，但时隔几个月还是会忘记。&lt;/p&gt;
 
 &lt;p&gt;当我们使用 webpack、vite 等脚手架初始化项目时，那种交互式命令就很棒，于是我想，将生成博客的脚本更新为交互式的如何，于是查阅一番就开撸。&lt;/p&gt;
 
@@ -1095,54 +1164,4 @@
 
 &lt;p&gt;一点一滴的想，一字一句的写，将自己所了解的、学到的、感悟的知识输出出来，既能有益他人的学习，更能帮助自己进一步的掌握。加油，干饭人！&lt;/p&gt;
 
-&lt;p&gt;PS：确实，一开始写博客，是会耗时。眨眼间，两三个小时过去了，就拿这个博客来说吧，我早上从申请域名到完成迁移，也就半个小时左右，但输出这篇文章，大概花费了两个多小时。猛的一想还挺浪费时间的，其实呀，万事开头难，写多了，就好了。&lt;strong&gt;写着写着就习惯了&lt;/strong&gt; hhh&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Blog" /><summary type="html">发现在国内，username.github.io 不能解析，了解一下是运营商的 DNS 问题。科学上网和通过本地修改 DNS 可以解决，但这只是针对个人，对其他人一点也不友好。而自定义域名可以完美的解决这个问题，再者，GitHub Page 也是很完美的支持自定义域名。 故今早打算购买一个域名用作博客，HTTPS 也是要考虑的。看了一些服务商，最后选择了腾讯云，花半个小时左右完美的解决需求。且为了培养写博客的习惯，便记录一下这个流程，也供同道中人参考使用。</summary></entry><entry><title type="html">小飞机工作原理</title><link href="https://bran-nie.com/2021/03/22/ss/" rel="alternate" type="text/html" title="小飞机工作原理" /><published>2021-03-22T00:00:00+08:00</published><updated>2021-03-22T00:00:00+08:00</updated><id>https://bran-nie.com/2021/03/22/ss</id><content type="html" xml:base="https://bran-nie.com/2021/03/22/ss/">&lt;h2 id=&quot;起因&quot;&gt;起因&lt;/h2&gt;
-
-&lt;p&gt;通常，我们在浏览器中准备打开一个网站如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://cn.bing.com/&lt;/code&gt;，在地址栏输入完网址按下回车后，浏览器会调用网络进程，由电脑发起网络请求，随后将下载的 html、css、js 等资源给浏览器的渲染进程。&lt;/p&gt;
-
-&lt;p&gt;但是，我们在浏览器中输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://google.com&lt;/code&gt;。却无法打开页面，那不是因为谷歌的服务器挂了，而是，我们的请求就没走到谷歌那里去，由于 &lt;a href=&quot;https://baike.baidu.com/item/%E9%98%B2%E7%81%AB%E5%A2%99%E9%95%BF%E5%9F%8E&quot;&gt;GFW&lt;/a&gt; (即我们所说的网络墙)的存在，而被拦截了。&lt;/p&gt;
-
-&lt;h2 id=&quot;发展&quot;&gt;发展&lt;/h2&gt;
-
-&lt;p&gt;因此，诞生了众多工具，如 shadowsocks，ssr，V2Ray 等等。俗称梯子，梯子的一个作用，不就是爬墙吗，hahah，也就是将上面被墙拦截的请求，通过梯子爬过去。&lt;/p&gt;
-
-&lt;p&gt;工具大概是个什么情况呢？
-如图所示，再来讲解。（“优雅”的字啊 hhh
-&lt;img src=&quot;/images/blog/ss.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;我们的电脑无法直接访问 Google 的服务器，通过上面其中一个工具，在有效的配置与开启后，会在自己的电脑上开启一个服务器。如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;127.0.0.1:1086&lt;/code&gt;，即本地服务，端口号是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1086&lt;/code&gt;。&lt;/li&gt;
-  &lt;li&gt;随后，工具开启的本地服务器代理(拦截)我们电脑的网络请求，一般工具会提供几个模式如：PAC、全局。PAC 模式下，网络请求会进行判断，命中 PAC 中的配置，则会通过代理服务器发送网络请求，否则是直接发送请求，而全局模式，顾名思义，则是全部的请求都会通过代理服务器。&lt;/li&gt;
-  &lt;li&gt;代理服务器可以与我们的电脑，目标服务器如 Google 都能进行连接，因此，我们自己电脑访问 Google，就给它发送请求，它接收到以后再去请求 Google 的服务器，Google 的服务器把响应给它，它再给我们。这就是一个翻墙的流程了。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;小故事&quot;&gt;小故事&lt;/h2&gt;
-
-&lt;p&gt;如果，这样描述不好理解，那么可以用个小故事类比一下。有请小明～～～&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;小明是个可怜的孩子，只能呆在一个小院子里，想要与外界沟通，只能通过门口的威猛的保安大叔。&lt;/p&gt;
-
-  &lt;p&gt;小明想知道小米的股票多少钱，给保安说了，保安看了看规则，发现可以告诉小明，就去查询随后告诉小明。&lt;/p&gt;
-
-  &lt;p&gt;小明想给他的好朋友小红通话，给保安说了，保安看了看规则，发现可以让他们通话，于是就让他们建立连接。&lt;/p&gt;
-
-  &lt;p&gt;小明想看 Youtube 的上面的可爱视频，给保安说了，保安看了看规则，不行！因此小明被拒绝了。&lt;/p&gt;
-
-  &lt;p&gt;小明苦啊，怎么办呢，怎么办呢，这时候，小明突然想到，他可以和小红有联系，而小红呢，可以看 YouTube，咦，那不就可以让小红把 YouTube 的视频发给我么。&lt;/p&gt;
-
-  &lt;p&gt;于是，小明给小红说了一下，小红同意了。于是小明做了个小工具让他和小红使用。而保安呢，小明只是给他说，我要和小红打电话哈，你同意下。保安看了看规则，可以。&lt;/p&gt;
-
-  &lt;p&gt;这个工具呢，小明用它的时候，就会给保安说，要和小红打电话，保安就会同意，而小红那边的工具呢，接收到信息后，发现是小明的工具发过来的，就明白了，小明是要看 YouTube，于是小红就会按照小明的请求，去找 YouTube 的资源，然后发给小明。&lt;/p&gt;
-
-  &lt;p&gt;在这个过程中，小明假装是和小红打电话，让保安没有拒绝他的请求，实际上是通过工具让小红给他看可爱的 YouTube 视频。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;在这个故事里，小明就是我们的电脑和我们，小红就是代理服务器，工具呢，就是我们所用的梯子，ss、ssr 等等那些，什么，这些梯子你都没听过？那可不好讲了。。&lt;/p&gt;
-
-&lt;h2 id=&quot;总结一下&quot;&gt;总结一下&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;由工具开启本地服务器&lt;/li&gt;
-  &lt;li&gt;本地服务器与代理服务器通信，代理服务器与目标服务器通信&lt;/li&gt;
-  &lt;li&gt;访问被墙的目标服务器时，电脑是通过 &lt;strong&gt;本地服务器 &amp;lt;—&amp;gt; 代理服务器 &amp;lt;—&amp;gt; 目标服务器&lt;/strong&gt; 这样的请求流程，得到想要的资源的。&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Bran.nie</name></author><category term="Blog" /><summary type="html">起因</summary></entry></feed>
+&lt;p&gt;PS：确实，一开始写博客，是会耗时。眨眼间，两三个小时过去了，就拿这个博客来说吧，我早上从申请域名到完成迁移，也就半个小时左右，但输出这篇文章，大概花费了两个多小时。猛的一想还挺浪费时间的，其实呀，万事开头难，写多了，就好了。&lt;strong&gt;写着写着就习惯了&lt;/strong&gt; hhh&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Blog" /><summary type="html">发现在国内，username.github.io 不能解析，了解一下是运营商的 DNS 问题。科学上网和通过本地修改 DNS 可以解决，但这只是针对个人，对其他人一点也不友好。而自定义域名可以完美的解决这个问题，再者，GitHub Page 也是很完美的支持自定义域名。 故今早打算购买一个域名用作博客，HTTPS 也是要考虑的。看了一些服务商，最后选择了腾讯云，花半个小时左右完美的解决需求。且为了培养写博客的习惯，便记录一下这个流程，也供同道中人参考使用。</summary></entry></feed>
