@@ -1,7 +1,6 @@
 // 收集命令行的输入数据
 const inquirer = require('inquirer');
 const fs = require('fs-extra');
-const { resolve } = require('path');
 
 const { formatTime } = require('../utils/index.js');
 

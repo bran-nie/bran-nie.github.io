@@ -577,7 +577,8 @@ body {
     margin: 0;
     font-size: 85%;
     background-color: rgba(0, 0, 0, 0.04);
-    /* border-radius: 3px */
+    border-radius: 3px;
+    color: chocolate;
 }
 
 .markdown-body code:after,
