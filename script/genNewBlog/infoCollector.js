@@ -9,6 +9,9 @@ const RegxMap = {
     IS_DIRECTORY_NAME: /^[a-z]+$/g,
 };
 
+const postsDirs = fs.readdirSync('_posts');
+// console.log({ postsDirs });
+
 module.exports = async () => {
     const meta = await inquirer.prompt([
         {
@@ -19,19 +22,11 @@ module.exports = async () => {
             choices: ['post', 'page'],
         },
         {
-            type: 'input',
-            message: '请输入文章所在 _post 下的目录名（小写字母）',
+            type: 'list',
+            message: '请选择文章所在 _post 下的分类，（新建分类请在文件夹中操作',
             name: 'filepath',
             default: 'blog',
-            validate(answer) {
-                const done = this.async();
-                const validateRes = RegxMap.IS_DIRECTORY_NAME.test(answer);
-                if (!validateRes) {
-                    done('请输入正确的目录名');
-                    return;
-                }
-                done(null, true);
-            },
+            choices: postsDirs,
         },
         {
             type: 'input',
