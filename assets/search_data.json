@@ -383,6 +383,14 @@
     } ,
   
     {
+      "title"    : "Petite-vue，尤大几个月前的悄悄写的 mini-vue，项目实践一下",
+      "category" : "Blog",
+      
+      "url"      : "https://bran-nie.com/2022/01/28/petite-vue/",
+      "keywords" : "Petite-vue, vue, vue 3"
+    } ,
+  
+    {
       "title"    : "Markdown",
       "category" : "Markdown",
       
