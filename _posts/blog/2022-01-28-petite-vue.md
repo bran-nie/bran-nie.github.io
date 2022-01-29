@@ -9,7 +9,7 @@ keywords: Petite-vue, vue, vue 3
 几个月前，尤大开整了一个轻量级的 vue，之前看到过，大致看一遍点了个 star 后，就没再看了，前几天要为运营写一个处理数据的小工具，也就一个页面，再 vite 一个项目不值得，写原生吧，感觉麻烦的，忽然就想到了之前看到的 petite-vue 了，这个约 6kb 的渐进增强的 vue 替代版，那不是妥妥的合适吗。
 
 没想到短短几个月，这 star 量蹭蹭的涨，尤大不愧是前端巨擎 hhh
-![](https://raw.githubusercontent.com/bran-nie/blog_images/images/20220128161542.png)
+![](/images/20220128161542.png)
 
 ## 介绍
 
@@ -45,7 +45,7 @@ keywords: Petite-vue, vue, vue 3
     -   阅读源码可知，
         -   const s = document.currentScript;
         -   if (s && s.hasAttribute('init')) {
-        -                                 createApp().mount();
+        -                                   createApp().mount();
         -   }
     -   如果不想自动初始化，那么移除 init 属性，且在 script 标签中，增加 `PetiteVue.createApp().mount()`。
     -   当然，如果目标浏览器支持模块引用的话，也可以使用 ES 模块构建
