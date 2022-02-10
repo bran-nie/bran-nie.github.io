@@ -391,6 +391,14 @@
     } ,
   
     {
+      "title"    : "Pinia，下一代状态管理库？Vuex的替代品？",
+      "category" : "Blog",
+      
+      "url"      : "https://bran-nie.com/2022/01/30/pinia/",
+      "keywords" : "Pinia，下一代状态管理库？Vuex的替代品？"
+    } ,
+  
+    {
       "title"    : "Markdown",
       "category" : "Markdown",
       
