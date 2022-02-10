@@ -45,7 +45,11 @@ function getRandomMotto() {
 
 module.exports = async (meta) => {
     const layoutStr = readLayoutFile(meta.layout);
-    const newFileData = layoutStr.replace('$title$', meta.title);
+    const newFileData = layoutStr
+        .replace('$title$', meta.title)
+        .replace('$categories$', `[${meta.filepath.replace(/^(.{1})/, (v) => v.toLocaleUpperCase())}]`)
+        .replace('$description$', meta.title)
+        .replace('$keywords$', meta.title);
 
     try {
         fs.writeFileSync(meta.fullFilePath, newFileData, 'utf-8');

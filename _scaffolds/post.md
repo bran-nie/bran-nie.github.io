@@ -1,7 +1,7 @@
 ---
 layout: post
 title: $title$
-categories:
-description:
-keywords:
+categories: $categories$
+description: $description$
+keywords: $keywords$
 ---
