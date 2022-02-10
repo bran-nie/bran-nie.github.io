@@ -474,6 +474,7 @@ body {
     display: block;
     margin: 0 auto;
     max-width: 100%;
+    cursor: zoom-in;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
