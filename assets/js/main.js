@@ -60,9 +60,66 @@ function imageLazyLoad() {
     images.forEach((img) => imgObserver.observe(img));
 }
 
+class ImageModal {
+    constructor() {
+        var style = document.createElement('style');
+        style.innerHTML = `
+        .image-modal{
+            position: fixed;
+            display: none;
+            z-index: 999;
+            height: 100vh;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .image-modal img {    
+            max-width: 90%;
+            max-height: 90%;
+            margin: 0 auto;
+            display: block;
+            margin-top: 50vh;
+            cursor: zoom-out;
+            transform: translateY(-50%);
+        }
+        `;
+        document.head.appendChild(style);
+        this.modalEle = document.createElement('div');
+        this.modalEle.classList.add('image-modal');
+        this.imgEle = document.createElement('img');
+        this.modalEle.addEventListener('click', () => {
+            this.close();
+        });
+
+        this.modalEle.appendChild(this.imgEle);
+        document.body.appendChild(this.modalEle);
+    }
+    show(imgUrl) {
+        this.imgEle.src = imgUrl;
+        this.modalEle.style.display = 'block';
+    }
+    close() {
+        this.modalEle.style.display = 'none';
+    }
+}
+
+function viewLargerImage() {
+    var imageModal = new ImageModal();
+    document.querySelectorAll('img.lazyload').forEach((img) => {
+        img.addEventListener('click', (e) => {
+            // console.log(e);
+            imageModal.show(e.target.src);
+        });
+    });
+}
+
 (function () {
     // 图片懒加载功能
     imageLazyLoad();
+
+    // 查看图片大图功能
+    viewLargerImage();
 
     // 代码块全屏功能
     // codeFullScroll()
