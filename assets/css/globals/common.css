@@ -577,9 +577,9 @@ body {
     padding: 0.2em 0;
     margin: 0;
     font-size: 85%;
-    background-color: rgba(0, 0, 0, 0.04);
-    border-radius: 3px;
+    border-radius: 4px;
     color: #ff502c;
+    background-color: #fff5f5;
 }
 
 .markdown-body code:after,
