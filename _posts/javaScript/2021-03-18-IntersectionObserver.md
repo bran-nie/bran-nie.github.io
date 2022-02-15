@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 抛开 Scroll 事件，这个 API，可以轻松实现吸顶、触底、懒加载
-categories: [Javascript]
+categories: [JavaScript]
 description: IntersectionObserver
 ---
 
