@@ -152,7 +152,7 @@
   
     {
       "title"    : "ES6 --- Promise(简介)",
-      "category" : "Javascript",
+      "category" : "JavaScript",
       
       "url"      : "https://bran-nie.com/2018/08/07/promise/",
       "keywords" : ""
@@ -192,7 +192,7 @@
   
     {
       "title"    : "商品规格选择sku --- Vue版",
-      "category" : "Javascript",
+      "category" : "JavaScript",
       
       "url"      : "https://bran-nie.com/2019/05/07/sku/",
       "keywords" : ""
@@ -223,18 +223,18 @@
     } ,
   
     {
-      "title"    : "经济萧条下的消费",
-      "category" : "Life",
+      "title"    : "关于JS中, 对引用类型console出现偏差的问题分析",
+      "category" : "JavaScript",
       
-      "url"      : "https://bran-nie.com/2020/04/15/think/",
+      "url"      : "https://bran-nie.com/2020/04/15/console/",
       "keywords" : ""
     } ,
   
     {
-      "title"    : "关于JS中, 对引用类型console出现偏差的问题分析",
-      "category" : "Javascript",
+      "title"    : "经济萧条下的消费",
+      "category" : "Life",
       
-      "url"      : "https://bran-nie.com/2020/04/15/console/",
+      "url"      : "https://bran-nie.com/2020/04/15/think/",
       "keywords" : ""
     } ,
   
@@ -272,7 +272,7 @@
   
     {
       "title"    : "抛开 Scroll 事件，这个 API，可以轻松实现吸顶、触底、懒加载",
-      "category" : "Javascript",
+      "category" : "JavaScript",
       
       "url"      : "https://bran-nie.com/2021/03/18/IntersectionObserver/",
       "keywords" : ""
@@ -328,7 +328,7 @@
   
     {
       "title"    : "从 LazyMan 需求再次了解队列这种数据结构",
-      "category" : "Javascript",
+      "category" : "JavaScript",
       
       "url"      : "https://bran-nie.com/2021/04/12/lazyman/",
       "keywords" : "队列, &#39;从 LazyMan 需求再次了解队列这种数据结构&#39;"
@@ -396,6 +396,14 @@
       
       "url"      : "https://bran-nie.com/2022/01/30/pinia/",
       "keywords" : "Pinia，下一代状态管理库？Vuex的替代品？"
+    } ,
+  
+    {
+      "title"    : "个人理解的 js 中的防抖和节流，通俗易懂",
+      "category" : "JavaScript",
+      
+      "url"      : "https://bran-nie.com/2022/02/05/debounce-throttle/",
+      "keywords" : "个人理解的js中的防抖和节流，通俗易懂"
     } ,
   
     {
