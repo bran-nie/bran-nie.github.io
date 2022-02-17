@@ -1,22 +1,20 @@
-
 <h3>Blog Categories</h3>
 <div id="blog-categories">
-  <ul class="list-group">
-    {% assign sorted_categories = site.categories | sort %}
-    {% for category in sorted_categories %}
-    <li class="list-group-item">
-    <a href="#{{ category[0] }}">{{ category | first }}</a>
-    <span class="badge">{{ category[1].size }}</span>
-    </li>
-    {% endfor %}
-  </ul>
+    {% assign total = 0 %}
+    <ul class="list-group">
+        {% assign sorted_categories = site.categories | sort %} {% for category in sorted_categories %}
+        <li class="list-group-item">
+            <a href="#{{ category[0] }}">{{ category | first }}</a>
+            <span class="badge">{{ category[1].size }}</span>
+            {% assign total = total | plus: category[1].size %}
+        </li>
+        {% endfor %}
+    </ul>
 </div>
+<h3>Total: {{ total }}</h3>
 
 <script type="text/javascript">
-
-  $(document).ready(function(){
-    $("#blog-categories li").css('text-transform','capitalize')
-  });
-
+    $(document).ready(function () {
+        $('#blog-categories li').css('text-transform', 'capitalize');
+    });
 </script>
-
