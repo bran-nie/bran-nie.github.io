@@ -84,6 +84,8 @@
   
   
   
+  
+  
 
   
     {
@@ -404,6 +406,14 @@
       
       "url"      : "https://bran-nie.com/2022/02/05/debounce-throttle/",
       "keywords" : "个人理解的js中的防抖和节流，通俗易懂"
+    } ,
+  
+    {
+      "title"    : "算法题：根据运算优先级添加括号",
+      "category" : "Algorithm",
+      
+      "url"      : "https://bran-nie.com/2022/03/01/add-brackets/",
+      "keywords" : "算法题：根据运算优先级添加括号"
     } ,
   
     {
