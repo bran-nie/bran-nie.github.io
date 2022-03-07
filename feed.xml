@@ -1,4 +1,114 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2022-03-01T17:56:00+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">算法题：根据运算优先级添加括号</title><link href="https://bran-nie.com/2022/03/01/add-brackets/" rel="alternate" type="text/html" title="算法题：根据运算优先级添加括号" /><published>2022-03-01T00:00:00+08:00</published><updated>2022-03-01T00:00:00+08:00</updated><id>https://bran-nie.com/2022/03/01/add-brackets</id><content type="html" xml:base="https://bran-nie.com/2022/03/01/add-brackets/">&lt;p&gt;根据运算优先级添加括号，现已知一个字符串是由正整数和加减乘除四个运算符&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+ - \* /&lt;/code&gt;组成。例如存在字符串 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;const str = '11+2-3*4+5/2*4+10/5'&lt;/code&gt;，现在需要将高优先级运算，用小括号包裹起来，例如结果为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'11+2-(3*4)+(5/2*4)+(10/5)'&lt;/code&gt;。注意可能会出现连续的乘除运算，需要包裹到一起。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://bran-nie.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bran-nie.com/" rel="alternate" type="text/html" /><updated>2022-03-07T12:59:32+08:00</updated><id>https://bran-nie.com/feed.xml</id><title type="html">鹏程</title><subtitle>description</subtitle><author><name>Bran.nie</name></author><entry><title type="html">十进制转化其他进制，原理分析</title><link href="https://bran-nie.com/2022/03/07/base-conversion/" rel="alternate" type="text/html" title="十进制转化其他进制，原理分析" /><published>2022-03-07T00:00:00+08:00</published><updated>2022-03-07T00:00:00+08:00</updated><id>https://bran-nie.com/2022/03/07/base-conversion</id><content type="html" xml:base="https://bran-nie.com/2022/03/07/base-conversion/">&lt;p&gt;LeetCode 的每日一题，今天的题目是&lt;a href=&quot;https://leetcode-cn.com/problems/base-7/&quot; target=&quot;\_blank&quot;&gt;“504. 七进制数”&lt;/a&gt;，&lt;strong&gt;jser&lt;/strong&gt; 看到这道题，简直 so easy，一行代码解决：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;return num.toString(7)&lt;/code&gt;。但是，对于想成为大佬的我们来说，不能局限于 API 工程师，除了灵活使用语言提供的 API 之外，我们也要去思考这背后的逻辑、原理是什么？毕竟，计算机也是由人们创造出来的可以高速运算的 01 工具。&lt;/p&gt;
+
+&lt;p&gt;OK，话不多说，让我们看看通过这个十进制转七进制这道题，如何实现，又如何通过理解其背后的逻辑、原理，然后举一反三，实现十进制到其他进制之间的转化！&lt;/p&gt;
+
+&lt;h3 id=&quot;运行结果&quot;&gt;运行结果&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/20220307123550.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;前置知识&quot;&gt;前置知识&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;面向对进制不熟悉的同学而写，了如指掌的同学可以跳过本段～～
+&lt;strong&gt;n 进制，在数学中表示为数值从 0 累加到 n-1 后，再加 1，就要向更高位进 1 了。&lt;/strong&gt; 即在我们熟知的十进制中，有着个位十位百位等等。
+那么，个位中，有 0-9 来表示，当从 9 再加 1 时，0-9 中已经没有可以表示的数字了，那么这时候就会向更高位也就是十位进一，即 10。&lt;/p&gt;
+
+  &lt;p&gt;那么对于 7 进制呢？同样的思想，它也是会有“个位十位百位”，那么它的个位，就用 0-6 来表示了。同样的，在七进制中，6 再加 1 时，就要向更高位进一了，于是，十进制的 7 就是 七进制的 10。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;十进制转七进制背后的逻辑分析&quot;&gt;十进制转七进制，背后的逻辑分析&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;对于十进制中的 0-6，可以不用变化就是七进制中的 0-6 了，为何？在上面提到，对于 n 进制来说，当数值累加到 n-1 之前时，是都不用进位的。&lt;/li&gt;
+  &lt;li&gt;对于十进制中的 7，6+1 即是 7，对于七进制，6 已经是个位能表示的最大值了，那不就是要向高位进一了吗？故十进制中的 7，由 6 + 1 后，向高位进一得到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1-&lt;/code&gt;，而 6 加完 1 后，也没有剩余值了，所以个位还是 0，故最终是：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;10&lt;/code&gt;。&lt;/li&gt;
+  &lt;li&gt;对于十进制中的 &amp;gt; 7，其实就是前两者情况的复合情况。拿十进制中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;10&lt;/code&gt; 来说，可以用十进制的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3 + 7&lt;/code&gt;来表示吧，那么，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt;不就是对应情况 1，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7&lt;/code&gt;不就是对应的情况 2 吗？对于的七进制就是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;13&lt;/code&gt;。而 十进制的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;20&lt;/code&gt;，那就是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6 + 7 + 7&lt;/code&gt;，其中，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6&lt;/code&gt;对应的是情况 1，而剩余的两个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7&lt;/code&gt;就是七进制中的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;20&lt;/code&gt;，咦，两个七是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;20&lt;/code&gt;，那三个呢，四个呢，7 个的时候呢？
+    &lt;ul&gt;
+      &lt;li&gt;七进制中，逢 6 进 1，对于十位上的 6，也是如此，所以，十位上有将要有 7 个时，也是要更高一位进一的，即&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;60 + 10 = 100&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;故，我们在进行转化时，对于十位上出现的大于 6 的情况，也是要以情况 3 来处理的。唔，循环判断了。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;那接下来让我们尝试用代码实现一下吧～&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/**
+ * @param {number} num
+ * @return {string}
+ */&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;convertToBase7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 符号，考虑到 num 为负值，在这里将其符号存起来，下面取值时将其取正值&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sign&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;lastVal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 使用 do while，而不是 while，是因为循环体内的语句至少会执行一次。用 do while 更合适，可以减少一次 lastVal 的取值书写。&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 对剩余数值进行求余，这样得到的值就是 情况 1，随后得到的值添加到 结果字符串前方即可。PS：添加到前方是因为更高位。&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lastVal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 随后求出剩余数值中还有多少个 7。&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;lastVal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lastVal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lastVal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 直到剩余数值为零，结束循环。&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// 将符号添加到结果中。Done！&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sign&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// 现在我们不是只会用 API 的工程师了～～&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// return num.toString(7);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;十进制转-n-进制&quot;&gt;十进制转 n 进制&lt;/h3&gt;
+
+&lt;p&gt;上面了解到十进制转七进制的背后逻辑后，那么，对于十进制转化为其他进制，是否能做到举一反三呢？&lt;/p&gt;
+
+&lt;p&gt;本质上，我们需要知道的有两点：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;对于 n 进制，在其 n-1 时，再加 1，就要向高位进一了。&lt;/li&gt;
+  &lt;li&gt;对于任意位置(个位十位百位)，都可看成一种情况，那就是对于&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;= n&lt;/code&gt;的数值，要进行进位，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt; n&lt;/code&gt;的数值，添加到字符串的最前方即可。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;那么，来看看代码怎么实现吧～&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/**
+ *
+ * @param {number} num
+ * @param {number?} radix
+ * @returns string
+ */&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 这里 radix 使用 ES6+ 的参数默认值&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;convertToBaseN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;radix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sign&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 对进制进行最大最小值判断。范围：2～32&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;radix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;radix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// 声明多种进制个位对应的字符表示，如超过十进制的进制中，10 用 A 来表示&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;charIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fromCharCode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// 取 num 绝对值&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;last&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;charIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lastVal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;radix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;lastVal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lastVal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;radix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lastVal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sign&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;最后总结&quot;&gt;最后总结&lt;/h3&gt;
+
+&lt;p&gt;Q：这题这么简单，有必要吧啦吧啦写这么多吗？
+A：可能不少人会对这种简单题，嗤之以鼻，但简单题并非一无是处。对于我们了解知识，它其实是从外到内的一个很好的入口，&lt;strong&gt;不积跬步，无以至千里&lt;/strong&gt;。当我们面对简单能够做到平心静气，那么算法中的中等题，困难题，不过是各种方式的排列组合，随之庖丁解牛罢了。&lt;/p&gt;
+
+&lt;p&gt;Q：有那么多大佬写了题解，你为啥还要巴拉巴拉的写呢？
+A：无限的星空中，既有耀眼的恒星发散着它的光芒，也有着小小的星星，一闪一闪的照耀着。我们应当敬佩大佬，向之学习，也应当照耀前方，向前进！&lt;/p&gt;
+
+&lt;p&gt;Q: 那么我们应该？
+A：冲啊，高山就在那里～&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Algorithm" /><summary type="html">LeetCode 的每日一题，今天的题目是“504. 七进制数”，jser 看到这道题，简直 so easy，一行代码解决：return num.toString(7)。但是，对于想成为大佬的我们来说，不能局限于 API 工程师，除了灵活使用语言提供的 API 之外，我们也要去思考这背后的逻辑、原理是什么？毕竟，计算机也是由人们创造出来的可以高速运算的 01 工具。</summary></entry><entry><title type="html">算法题：根据运算优先级添加括号</title><link href="https://bran-nie.com/2022/03/01/add-brackets/" rel="alternate" type="text/html" title="算法题：根据运算优先级添加括号" /><published>2022-03-01T00:00:00+08:00</published><updated>2022-03-01T00:00:00+08:00</updated><id>https://bran-nie.com/2022/03/01/add-brackets</id><content type="html" xml:base="https://bran-nie.com/2022/03/01/add-brackets/">&lt;p&gt;根据运算优先级添加括号，现已知一个字符串是由正整数和加减乘除四个运算符&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+ - \* /&lt;/code&gt;组成。例如存在字符串 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;const str = '11+2-3*4+5/2*4+10/5'&lt;/code&gt;，现在需要将高优先级运算，用小括号包裹起来，例如结果为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'11+2-(3*4)+(5/2*4)+(10/5)'&lt;/code&gt;。注意可能会出现连续的乘除运算，需要包裹到一起。&lt;/p&gt;
 
 &lt;p&gt;请用 javascript 实现这一过程&lt;/p&gt;
 
@@ -145,7 +255,6 @@
 
 &lt;p&gt;&lt;img src=&quot;/images/20220215120157.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;!-- 等整明白了再写 --&gt;
 &lt;!-- 不过相比于防抖函数的纯粹，节流函数还有个区别在于，节流函数有触发方式从而有两种写法：在规定时间段内，是时间段开始时触发，还是时间段结束时触发(根据传入参数来判断)。上面的代码，是在开始时触发的。我们修改一下代码把 count 打印一下就可知了。
 ![](/images/20220215120844.png)
 那如果是时间段结束时触发怎么写呢？
@@ -153,35 +262,28 @@
 ```javascript
 function throttle(fn, delay = 300) {
     // 创建一个闭包变量
-	let runFlag = true;
-    let timer = null;
-	let time = new Date().getTime();
-    // 返回一个函数，即通过 throttle 创建的节流实例，
+    let prevTime = new Date();
     return (...args) =&gt; {
-        // 实例被事件触发
-        // 如果没有等待执行的事件，则用定时器在规定时间内执行一次事件。
-        // 如果有在执行的事件，则本次触发，不做响应。
-		// if (!runFlag) return;
-
-		if (timer) {
-			clearTimeout(timer);
-		}
-
-		timer = setTimeout(() =&gt; {
-			fn.apply(this, args);
-
-		}, delay);
-
-        if (!runFlag) {
-            cosnt timer = setTimeout(() =&gt; {
-                fn.apply(this, args);
-                clearTimeout(timer);
-                // 执行完后将 timer 重置，这样就可以接收下一次事件触发
-                runFlag = false;
-            }, delay);
+        const now = new Date();
+        if (now - prevTime &gt; delay) {
+            fn.apply(this, args);
+            prevTime = now;
         }
     };
 }
+
+const fn = throttle(console.log, 1000);
+let count = 0;
+
+const timer = setInterval(() =&gt; {
+    console.log('interval... 300ms', count);
+    fn('throttle... 1000ms', count);
+
+    count++;
+    if (count &gt; 20) {
+        clearInterval(timer);
+    }
+}, 300);
 ``` --&gt;
 
 &lt;h2 id=&quot;两者的相同点与不同点&quot;&gt;两者的相同点与不同点&lt;/h2&gt;
@@ -1112,100 +1214,4 @@ nrm &lt;span class=&quot;nb&quot;&gt;ls
 
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Bran.nie</name></author><category term="Algorithm" /><summary type="html">动态规划，通过寻找状态转移方程、边界，将原问题分解为相对简单的子问题的方式求解复杂问题的方法。</summary></entry><entry><title type="html">Leetcode-45 – 跳跃游戏II</title><link href="https://bran-nie.com/2021/05/14/leetcode-45-jump-game-ii/" rel="alternate" type="text/html" title="Leetcode-45 – 跳跃游戏II" /><published>2021-05-14T00:00:00+08:00</published><updated>2021-05-14T00:00:00+08:00</updated><id>https://bran-nie.com/2021/05/14/leetcode-45-jump-game-ii</id><content type="html" xml:base="https://bran-nie.com/2021/05/14/leetcode-45-jump-game-ii/">&lt;p&gt;贪心算法，通过局部最优解得到全局最优解。&lt;/p&gt;
-
-&lt;h2 id=&quot;题目&quot;&gt;题目&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;给定一个非负整数数组，你最初位于数组的第一个位置。&lt;/p&gt;
-
-  &lt;p&gt;数组中的每个元素代表你在该位置可以跳跃的最大长度。&lt;/p&gt;
-
-  &lt;p&gt;你的目标是使用最少的跳跃次数到达数组的最后一个位置。&lt;/p&gt;
-
-  &lt;p&gt;假设你总是可以到达数组的最后一个位置。&lt;/p&gt;
-
-  &lt;p&gt;示例 1:&lt;/p&gt;
-
-  &lt;p&gt;输入: [2,3,1,1,4]&lt;/p&gt;
-
-  &lt;p&gt;输出: 2&lt;/p&gt;
-
-  &lt;p&gt;解释: 跳到最后一个位置的最小跳跃数是 2。
-  从下标为 0 跳到下标为 1 的位置，跳  1  步，然后跳  3  步到达数组的最后一个位置。&lt;/p&gt;
-
-  &lt;p&gt;示例 2:&lt;/p&gt;
-
-  &lt;p&gt;输入: [2,3,0,1,4]&lt;/p&gt;
-
-  &lt;p&gt;输出: 2&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;解题思路&quot;&gt;解题思路&lt;/h2&gt;
-
-&lt;h3 id=&quot;读题&quot;&gt;读题&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;可以得出数组元素值表示可以跳跃的次数，也就是可以前进的次数。&lt;/li&gt;
-  &lt;li&gt;在元素 nums[i] 处跳跃时，可以选择不跳完。即 元素值是 4，可以跳跃 4 次，但跳跃 2 次后，可以选择更大的数字重新跳跃。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;思路&quot;&gt;思路&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;一次跳跃，因为可以选择不跳跃完，那就是在跳跃的过程中，要求出跳跃路径上，是否有比跳跃完更好的选择，如果有，就放弃之前的跳跃，从更好的选择开始新的出发。&lt;/li&gt;
-  &lt;li&gt;可以将数组的开始到最后，一次次跳跃拆分出来，每次只处理一次跳跃的情况。即编写一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nextIndex&lt;/code&gt;函数，它接受两个参数&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index&lt;/code&gt;，分别是跳跃的数组与跳跃的起始位置，返回值则是下一个跳跃位置。函数内部就会计算跳跃过程中性价比最高的下个跳跃位置。&lt;/li&gt;
-  &lt;li&gt;有了&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nextIndex&lt;/code&gt;函数，我们就可以通过&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;while&lt;/code&gt;循环，判断&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index&lt;/code&gt;是否为最后一个元素下标来决定跳跃情况。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nextIndex&lt;/code&gt;函数需要注意的情况是：如果起跳位置&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index&lt;/code&gt;可以跳到终点，则无需再做贪心算法，直接返回终点下标即可。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;代码&quot;&gt;代码&lt;/h2&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/**
- * @param {number[]} nums
- * @return {number}
- */&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;jump&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;cm&quot;&gt;/**
-     *
-     * @param {number[]} nums
-     * @param {number} index
-     * @return {number}
-     */&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nextIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cur&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// 当传入下标值可以跳到最后时，直接返回&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cur&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cur&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// 差值：下一个值减去传入下标值跳跃后的剩余值&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;difference&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 用来存放最大的差值及其所属下标&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// 传入下标值可以跳跃的时候&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cur&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// 跳跃一次，值减 1，index + 1&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;cur&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;difference&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cur&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// max 若存在，则判断当前 index 的差值是否是最大的。不存在则初始化。&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;difference&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;difference&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;difference&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;difference&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;difference&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// 初始化数组下标，跳跃次数&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// 当数组下标不是最后一个下标时，表明还可以继续跳跃。&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nextIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;ac&quot;&gt;AC&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/blog/algorithm/leetcode-45ac.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Bran.nie</name></author><category term="Algorithm" /><summary type="html">贪心算法，通过局部最优解得到全局最优解。</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Bran.nie</name></author><category term="Algorithm" /><summary type="html">动态规划，通过寻找状态转移方程、边界，将原问题分解为相对简单的子问题的方式求解复杂问题的方法。</summary></entry></feed>

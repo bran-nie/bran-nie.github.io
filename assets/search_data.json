@@ -417,6 +417,14 @@
     } ,
   
     {
+      "title"    : "十进制转化其他进制，原理分析",
+      "category" : "Algorithm",
+      
+      "url"      : "https://bran-nie.com/2022/03/07/base-conversion/",
+      "keywords" : "十进制转化其他进制，原理分析"
+    } ,
+  
+    {
       "title"    : "Markdown",
       "category" : "Markdown",
       
