@@ -79,7 +79,6 @@ const timer = setInterval(() => {
 
 ![](/images/20220215120157.png)
 
-<!-- 等整明白了再写 -->
 <!-- 不过相比于防抖函数的纯粹，节流函数还有个区别在于，节流函数有触发方式从而有两种写法：在规定时间段内，是时间段开始时触发，还是时间段结束时触发(根据传入参数来判断)。上面的代码，是在开始时触发的。我们修改一下代码把 count 打印一下就可知了。
 ![](/images/20220215120844.png)
 那如果是时间段结束时触发怎么写呢？
@@ -87,35 +86,28 @@ const timer = setInterval(() => {
 ```javascript
 function throttle(fn, delay = 300) {
     // 创建一个闭包变量
-	let runFlag = true;
-    let timer = null;
-	let time = new Date().getTime();
-    // 返回一个函数，即通过 throttle 创建的节流实例，
+    let prevTime = new Date();
     return (...args) => {
-        // 实例被事件触发
-        // 如果没有等待执行的事件，则用定时器在规定时间内执行一次事件。
-        // 如果有在执行的事件，则本次触发，不做响应。
-		// if (!runFlag) return;
-
-		if (timer) {
-			clearTimeout(timer);
-		}
-
-		timer = setTimeout(() => {
-			fn.apply(this, args);
-
-		}, delay);
-
-        if (!runFlag) {
-            cosnt timer = setTimeout(() => {
-                fn.apply(this, args);
-                clearTimeout(timer);
-                // 执行完后将 timer 重置，这样就可以接收下一次事件触发
-                runFlag = false;
-            }, delay);
+        const now = new Date();
+        if (now - prevTime > delay) {
+            fn.apply(this, args);
+            prevTime = now;
         }
     };
 }
+
+const fn = throttle(console.log, 1000);
+let count = 0;
+
+const timer = setInterval(() => {
+    console.log('interval... 300ms', count);
+    fn('throttle... 1000ms', count);
+
+    count++;
+    if (count > 20) {
+        clearInterval(timer);
+    }
+}, 300);
 ``` -->
 
 ## 两者的相同点与不同点
