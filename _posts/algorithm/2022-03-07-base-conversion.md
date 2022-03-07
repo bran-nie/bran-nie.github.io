@@ -90,7 +90,7 @@ var convertToBaseN = function (num, radix = 7) {
 
     // 取 num 绝对值
     let str = '',
-        last = Math.abs(num);
+        lastVal = Math.abs(num);
     do {
         str = charIndex[lastVal % radix] + str;
         lastVal = Math.floor(lastVal / radix);
