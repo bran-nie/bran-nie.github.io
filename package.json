@@ -1,16 +1,16 @@
 {
-    "name": "blog_command",
-    "version": "1.0.0",
-    "description": "Just to start the service. Use `yarn start` or `num start` to simplify bundle commands...",
-    "scripts": {
-        "start": "bundle exec jekyll serve --livereload",
-        "gen": "node ./script/genNewBlog/index.js"
-    },
-    "devDependencies": {
-        "inquirer": "^8.2.0"
-    },
-    "dependencies": {
-        "chalk": "4.1.0",
-        "fs-extra": "^10.0.0"
-    }
+  "name": "blog_command",
+  "version": "1.0.0",
+  "description": "Just to start the service. Use `yarn dev` or `num dev` to simplify bundle commands...",
+  "scripts": {
+    "dev": "bundle exec jekyll serve --livereload",
+    "gen": "node ./script/genNewBlog/index.js"
+  },
+  "devDependencies": {
+    "inquirer": "^8.2.0"
+  },
+  "dependencies": {
+    "chalk": "4.1.0",
+    "fs-extra": "^10.0.0"
+  }
 }

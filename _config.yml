@@ -17,24 +17,24 @@ repository_images: bran-nie/blog_images
 repository_images_branch: '@images'
 # 对 css 和 js 资源的 cdn 加速配置
 cdn:
-    jsdelivr:
-        enabled: true
+  jsdelivr:
+    enabled: true
 # 组件配置
 components:
-    # 分享
-    share:
-        enabled: true
-    # 不蒜子访问统计
-    busuanzi:
-        enabled: true
-        start_date: 2021-03-01
+  # 分享
+  share:
+    enabled: true
+  # 不蒜子访问统计
+  busuanzi:
+    enabled: true
+    start_date: 2021-03-01
 # 压缩页面内容
 compress_html:
-    clippings: all
-    comments: ['<!--', '-->']
+  clippings: all
+  comments: ['<!--', '-->']
 # 文章字数统计
 word_count:
-    enabled: true
+  enabled: true
 
 # 深色模式（简单版），可选值：automatic 跟随系统；usercontrol 用户控制；none 不需要。  default: none;
 dark_mode: usercontrol
@@ -58,28 +58,28 @@ since_date: 2016
 #    Navigation    #
 # ---------------- #
 navs:
-    - href: /
-      label: 首页
+  - href: /
+    label: 首页
 
-    - href: /categories/
-      label: 分类
+  - href: /categories/
+    label: 分类
 
-    #   -
-    #     href: /archives/
-    #     label: 归档
+  #   -
+  #     href: /archives/
+  #     label: 归档
 
-    #   -
-    #     href: /open-source/
-    #     label: 开源
+  #   -
+  #     href: /open-source/
+  #     label: 开源
 
-    - href: /wiki/
-      label: 维基
+  - href: /wiki/
+    label: 维基
 
-    - href: /links/
-      label: 链接
+  - href: /links/
+    label: 链接
 
-    - href: /about/
-      label: 关于
+  - href: /about/
+    label: 关于
 
 # ---------------- #
 #       RSS        #
@@ -91,25 +91,29 @@ subscribe_rss: /feed.xml
 # ---------------- #
 markdown: kramdown
 kramdown:
-    input: GFM
+  input: GFM
 paginate: 10
 lsi: false
 quiet: false
 excerpt_separator: "\n\n"
 permalink: /:year/:month/:day/:title/
 plugins:
-    - jekyll-github-metadata
-    - rouge
-    #     - jekyll-html-pipeline
-    - jekyll-paginate
-    - jekyll-sitemap
-    - jekyll-feed
-    - jemoji
+  - jekyll-github-metadata
+  - rouge
+  #     - jekyll-html-pipeline
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jemoji
 #     - jekyll-mentions
 collections:
-    wiki:
-        output: true
-        permalink: /wiki/:path/
+  wiki:
+    output: true
+    permalink: /wiki/:path/
+
+# 公共仓库
+github:
+  public_repositories: false
 
 # ---------------- #
 #      Comments    #
@@ -121,7 +125,7 @@ collections:
 comments_provider: gitalk
 # https://disqus.com 文档
 disqus:
-    username:
+  username:
 
 # https://imsun.net/posts/gitment-introduction/ 文档
 # gitment:
@@ -133,10 +137,10 @@ disqus:
 
 # https://github.com/gitalk/gitalk#install 文档
 gitalk:
-    owner: bran-nie
-    repo: bran-nie.github.io
-    clientID: 2de5c26774734ef5886c
-    clientSecret: 29d08007f41b856632995a2fa39aca6cc682a09f
+  owner: bran-nie
+  repo: bran-nie.github.io
+  clientID: 2de5c26774734ef5886c
+  clientSecret: 29d08007f41b856632995a2fa39aca6cc682a09f
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus: false
 
@@ -144,10 +148,10 @@ lazy_load_disqus: false
 #      Search      #
 # ---------------- #
 simple_jekyll_search:
-    # 是否支持全文搜索
-    fulltext: false
-    # 最多显示多少条搜索结果
-    limit: 10
+  # 是否支持全文搜索
+  fulltext: false
+  # 最多显示多少条搜索结果
+  limit: 10
 # ---------------- #
 #      Google      #
 # ---------------- #
