@@ -13,13 +13,13 @@ keywords: 使用微积木 DIY 一个便携式显示器
 话不多说，先看看最终效果，激起兴趣再说
 
 塞尔达 无敌！
-![](https://raw.githubusercontent.com/bran-nie/blog_images/images/IMG_7193.jpg)
+![](/images/IMG_7193.jpg)
 
 背面效果
-![](https://raw.githubusercontent.com/bran-nie/blog_images/images/IMG_7190.jpg)
+![](/images/IMG_7190.jpg)
 
 由于屏幕面板背后会亮，这样反而还能在晚上突出背面的图像
-![](https://raw.githubusercontent.com/bran-nie/blog_images/images/IMG_7189.jpg)
+![](/images/IMG_7189.jpg)
 
 ## 生命不息，折腾不止
 
@@ -32,15 +32,15 @@ keywords: 使用微积木 DIY 一个便携式显示器
 淘宝上搜一下笔记本显示屏驱动板，找一个有销量的店家，问问客服购买什么样的，客服会让我们拍一下笔记本屏幕背后的信息：品牌、型号等等，然后会给我们说哪些驱动板适用。选择一个下单购买就好了。
 
 我的显示屏
-![我的显示屏](https://raw.githubusercontent.com/bran-nie/blog_images/images/IMG_5213.JPG)
+![我的显示屏](/images/IMG_5213.JPG)
 
 一般一个完整的套件包括：驱动板、屏线、按键板及接线。（可选的电源
 
 其中，驱动版上会有常见的视频接口，如：VGA、HDMI、DP 等等，可以根据自己的需求来。
 
-![](https://raw.githubusercontent.com/bran-nie/blog_images/images/IMG_5210.JPG)
+![](/images/IMG_5210.JPG)
 
-![](https://raw.githubusercontent.com/bran-nie/blog_images/images/IMG_5211111.JPG)
+![](/images/IMG_5211111.JPG)
 
 > 我这里第一次抱着垃圾佬的想法，买最便宜的用，VGA + HDMI 接口，电源输入是 12V DC 接口的，也只是打算硬纸板 + 双面胶固定，主打的就是能用就行。后来，网上冲浪时，发现还有人，用**微积木**搭建了一个屏幕外壳，我艹，好酷啊，颅内高潮了，不行，我也要。
 >
@@ -61,23 +61,23 @@ keywords: 使用微积木 DIY 一个便携式显示器
 
 ### Excel 绘制图案
 
-![](https://raw.githubusercontent.com/bran-nie/blog_images/images/20230928181512.png)
+![](/images/20230928181512.png)
 
 新建一个 Excel 表格，将单元格的宽高设置成一样的，再将行列设置为显示器外壳计算出来的积木个数。填充颜色来进行像素图绘画吧～
 
-![](https://raw.githubusercontent.com/bran-nie/blog_images/images/20230928204630.png)
+![](/images/20230928204630.png)
 
 ### 拼装
 
 驱动板的外壳
 
 这个图中的屏线，就是错误示范，我刚开始是折叠了，后续安装完成后，使用时有雪花，再渐渐就变成了非正常显示了。
-![](https://raw.githubusercontent.com/bran-nie/blog_images/images/20230928205813.png)
+![](/images/20230928205813.png)
 
-![](https://raw.githubusercontent.com/bran-nie/blog_images/images/20230928205614.png)
+![](/images/20230928205614.png)
 
 驱动板外壳的图案，嘿嘿，问号砖块
-![](https://raw.githubusercontent.com/bran-nie/blog_images/images/20230928210239.png)
+![](/images/20230928210239.png)
 
 #### tips：
 
@@ -87,9 +87,9 @@ keywords: 使用微积木 DIY 一个便携式显示器
 ## 收获
 
 比如给树莓派整个显示屏
-![](https://raw.githubusercontent.com/bran-nie/blog_images/images/20230928211108.png)
+![](/images/20230928211108.png)
 
 比如这个爱心（五六千个积木盘下来，确实是费手指，都撸出茧子了 omz
-![](https://raw.githubusercontent.com/bran-nie/blog_images/images/20230928211221.png)
+![](/images/20230928211221.png)
 
 但，总体来说，还是一个蛮不错的经历，通过旧物回收使用 ♻️、制定方案、发现微积木 DIY 外壳而修改方案、绘制像素图、拼装微积木、拼装外壳等等这一系列的操作，让我收获了一个便携式显示屏，还拥有了一个不错的体验，满足折腾的心思，真的是**生命不息，折腾不止**～～～

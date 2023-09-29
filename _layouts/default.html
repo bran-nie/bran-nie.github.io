@@ -8,8 +8,8 @@ layout: compress
 
 <!-- 如果开启 CDN 加速，则将 assets_base_url 和 assets_images_base_url 更改为 CDN 地址 -->
 {% if site.cdn.jsdelivr.enabled %}
-{% assign assets_base_url = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: site.repository_branch %}
-{% assign assets_images_base_url = "https://cdn.jsdelivr.net/gh/" | append: site.repository_images | append: site.repository_images_branch %}
+{% assign assets_base_url = "https://gcore.jsdelivr.net/gh/" | append: site.repository | append: site.repository_branch %}
+{% assign assets_images_base_url = "https://gcore.jsdelivr.net/gh/" | append: site.repository_images | append: site.repository_images_branch %}
 {% endif %}
 
 {% assign assets_images_url = '<img class="lazyload" data-src="' | append: assets_images_base_url  %}
