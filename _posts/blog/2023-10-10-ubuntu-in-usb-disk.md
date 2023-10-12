@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 将 Ubuntu 安装在 USB 移动硬盘上，随时随地使用
-categories: [Blog]
+categories: [Blog, Ubuntu]
 description: 将 Ubuntu 安装在 USB 移动硬盘上，随时随地使用
 keywords: 将 Ubuntu 安装在 USB 移动硬盘上，随时随地使用
 ---
