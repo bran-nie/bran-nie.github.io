@@ -64,9 +64,8 @@ navs:
   - href: /categories/
     label: 分类
 
-    -
-      href: /archives/
-      label: 归档
+  - href: /archives/
+    label: 归档
 
   #   -
   #     href: /open-source/
